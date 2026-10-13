@@ -3,6 +3,7 @@
 from types import SimpleNamespace
 from .prediction import components
 from .stability import DEFAULT_THRESHOLDS, reconstruct, classify
+from .evidence import admission_covers
 
 
 def evaluate_run(config, raw):
@@ -55,12 +56,14 @@ def evaluate_run(config, raw):
         config.weights,
     )
     diagnostic = arithmetic.pop("U")
+    quality_verified = admission_covers(raw)
     eligible = (
-        raw["backend"] != "mock"
+        raw.get("status") == "completed"
+        and raw["backend"] == "native"
         and memory["measured"]
         and memory["resource_valid"]
         and stability["stability_state_v2"] in {"steady", "recoverable_congested"}
-        and raw.get("quality_admission_confirmed", False)
+        and quality_verified
     )
     return {
         "stability": stability,
@@ -71,8 +74,6 @@ def evaluate_run(config, raw):
             "diagnostic_U": diagnostic,
             "eligible": bool(eligible),
             "memory_scope": memory["scope"],
-            "quality_admission_confirmed": raw.get(
-                "quality_admission_confirmed", False
-            ),
+            "quality_admission_verified": quality_verified,
         },
     }

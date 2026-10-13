@@ -6,8 +6,9 @@ import time
 
 
 class MemoryMonitor:
-    def __init__(self, runtime, budget, enabled=True):
+    def __init__(self, runtime, budget, enabled=True, device="0"):
         self.runtime, self.budget, self.enabled = runtime, budget, enabled
+        self.device = device
         self.samples = []
         self.latest = None
         self.failed = False
@@ -21,6 +22,8 @@ class MemoryMonitor:
             result = subprocess.run(
                 [
                     "nvidia-smi",
+                    "-i",
+                    self.device,
                     "--query-compute-apps=pid,used_gpu_memory",
                     "--format=csv,noheader,nounits",
                 ],
