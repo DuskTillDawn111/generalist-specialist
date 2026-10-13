@@ -1,0 +1,26 @@
+{
+  "at_utc": "2026-10-07T19:33:20.828294+00:00",
+  "gate": "HEAVY_TRANSITION_EMPIRICALLY_SUPPORTED",
+  "rule": "Multiple (>=2) feasible contexts with effective persistent NS reduction, G share increase, new GS split or NG increase; near-zero resident ties excluded.",
+  "event_counts": {
+    "NS_reduction": 10,
+    "G_share_increase": 0,
+    "new_GS_split": 0,
+    "multi_task_G_consolidation": 0,
+    "NG_increase": 0,
+    "new_second_G": 0,
+    "effective_positive_flow_NS_reduction": 10
+  },
+  "persistent_original_NS_reduction_count": 10,
+  "x3_decision": "X3_PROFILING_REQUIRED",
+  "automatic_GPU_validation_required": true,
+  "automatic_continuation_status": "COMPLETE_WITH_MANDATORY_STOP",
+  "active_unprofiled_specialists": [],
+  "Generalist_sharing_gain_supported": false,
+  "empirical_family_transfer_limitation": "For shared Whisper-medium, retain both empirical path g2; frozen family-level scalar calibration uses minimum measured path gain as conservative aggregate transfer. This does not certify an unmeasured mixed-task capacity.",
+  "automatic_GPU_validation_entered": true,
+  "downstream_stop_reason": "STOP_GPU_MEMORY_BUDGET_REJECTION",
+  "downstream_result_directories": [
+    "/root/autodl-tmp/generalist-specialist/results/module14e_heavy_gpu_validation"
+  ]
+}

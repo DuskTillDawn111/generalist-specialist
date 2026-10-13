@@ -1,0 +1,108 @@
+{
+  "frozen": true,
+  "can_enter_module_7b": true,
+  "criteria": {
+    "model_type_count_10_to_15": true,
+    "at_least_two_verified_local_generalists": true,
+    "three_main_tasks_with_two_specialists": true,
+    "all_admitted_idle_vram_measured": true,
+    "pool_idle_vram_strictly_exceeds_actual_gpu_capacity": true,
+    "verified_capabilities_match_matrix": true,
+    "source_and_environment_integrity": true
+  },
+  "formal_model_ids": [
+    "convnext_tiny",
+    "distil_whisper",
+    "distilbert",
+    "minicpm",
+    "paddleocr",
+    "paddleocr_vl",
+    "phi4mm",
+    "qwen",
+    "resnet50",
+    "roberta_sst2",
+    "whisper-small",
+    "whisper_turbo"
+  ],
+  "verified_generalists": 3,
+  "verified_specialists": 9,
+  "total_model_types": 12,
+  "task_coverage": {
+    "text": {
+      "capable_models": 5,
+      "specialists": 2,
+      "generalists": 3
+    },
+    "image": {
+      "capable_models": 5,
+      "specialists": 2,
+      "generalists": 3
+    },
+    "ocr": {
+      "capable_models": 5,
+      "specialists": 2,
+      "generalists": 3
+    },
+    "asr": {
+      "capable_models": 6,
+      "specialists": 3,
+      "generalists": 3
+    },
+    "visual_qa": {
+      "capable_models": 1,
+      "specialists": 0,
+      "generalists": 1
+    },
+    "lid": {
+      "capable_models": 3,
+      "specialists": 2,
+      "generalists": 1
+    }
+  },
+  "tasks_with_only_one_specialist": [],
+  "tasks_with_zero_specialists": [
+    "visual_qa"
+  ],
+  "gpu_capacity_mib": 49140,
+  "pool_idle_vram_mib": 63140.0,
+  "excess_over_gpu_capacity_mib": 14000.0,
+  "full_pool_all_resident_under_audited_idle_accounting": false,
+  "full_pool_joint_residency_empirically_tested": false,
+  "generalist_idle_vram_mib": {
+    "qwen": 17978.0,
+    "phi4mm": 11772.0,
+    "minicpm": 18392.0
+  },
+  "verified_generalist_sum_idle_vram_mib": 48142.0,
+  "resource_competition_established": true,
+  "accounting_note": "Sum separately measured per-process idle resident memory including worker CUDA contexts/caches. Joint load prohibited and not performed. No latency, quality ranking, replica count or optimizer input is fabricated.",
+  "audited_candidate_records": 15,
+  "excluded_or_pending_ids": [
+    "gemma3n",
+    "got_ocr",
+    "siebert_rejected"
+  ],
+  "provisional_generalist_status": {
+    "qwen": {
+      "idle_vram_mib": 17978.0,
+      "status": "verified"
+    },
+    "phi4mm": {
+      "idle_vram_mib": 11772.0,
+      "status": "verified"
+    },
+    "gemma3n": {
+      "idle_vram_mib": null,
+      "status": "pending"
+    }
+  },
+  "provisional_qwen_phi_gemma_all_resident_simultaneously": null,
+  "provisional_generalists_residency_reason": "Gemma not measured: gated access HTTP 403. Do not substitute file size for VRAM.",
+  "verified_generalists_idle_sum_fits_gpu": true,
+  "verified_generalists_all_resident_empirically_tested": false,
+  "provisional_generalists_verified_count": 2,
+  "additional_generalist_reason": "Existing local MiniCPM-o-4.5 provides overlapping task adapters already verified by historical formal inference; one minimal load audit passed. Added as a meaningful existing model choice; Gemma remains separately pending.",
+  "pool_status": "frozen",
+  "freeze_time_asia_shanghai": "2026-10-02T00:50:11.986215+08:00",
+  "allowed_module_7b_scope": "Next phase may use this frozen capability/resource inventory; this audit does not supply expanded-pool performance measurements or optimizer/predictor calibration."
+}

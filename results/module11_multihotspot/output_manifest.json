@@ -1,0 +1,140 @@
+{
+  "at_utc": "2026-10-07T08:05:23.637751+00:00",
+  "code": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/__init__.py",
+      "sha256": "543bb7eccb7042d8081211362c8b2b39cbee2454f143c64fcf6037719061aad3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/common.py",
+      "sha256": "07383c9f388807cc935b12adacc3bf0bb495feb182ffd7359e7cf8ea3cbe0123"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/envelope.py",
+      "sha256": "d1d13a6a323d1f14c983fdcd9fdf20f17290a54a0e4532b97123fe03c0987efd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/audit.py",
+      "sha256": "c30294c62cb73958b29ae04b24c2138150fe1131f1de9470a186a1c9ed9c8204"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/latency.py",
+      "sha256": "fc8445d30d1adbabe0e0c4ff9910515ed84ff4948932e1030e1aaa1630c2432b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/validation.py",
+      "sha256": "dbe905dfcacc86bed7ba377a88a829420b2da3bee05621d6985a7b221f78c3f4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/structure.py",
+      "sha256": "1139793e648c1815036eece7f4957fb2978a8b93cd55604dd594c782c4b44d32"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/report.py",
+      "sha256": "258c339b0eb869aaad717b0bcadcba26363f20d2b455802bd0d526a8c68b8d38"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/finalize.py",
+      "sha256": "14002cf676dddb2f14ed8981702bf823919042871ad92c8ce32b4256679c0716"
+    }
+  ],
+  "new_GPU_runs": 0,
+  "outputs": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/input_freeze.json",
+      "sha256": "520cdb643a13c644f0a47a68c5d0e71f9e89cc7a08779befe159d760b1131ebb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/budget_structure_audit.json",
+      "sha256": "4b8ddf1545ab620636ba48ffa0303dbea4d9edae5e35eab48306c04db3873a3c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/deployment_space.json",
+      "sha256": "d61c4d4a2a75ad9d765fab946ce6ed50a5239af159513d285b0b36fb8d0f368a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/normalized_directions.json",
+      "sha256": "e21005fc2103a90e13343574e9cf19bc58b75190a9175536ab3861cf792ded11"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/hotspot_sets.csv",
+      "sha256": "9bbe7d9fb739ed21f077b6927092ba7f72d93222f9008c05619302e2c71b7b24"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/capacity_witnesses.json",
+      "sha256": "2b3837f51ddcf7d5fa5663c5c620533b52cfb9a3c1c1b3fcb8f3c25917d0e871"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/multihotspot_capacity_envelopes.csv",
+      "sha256": "4ba4a5365c771602377543295d963c55d57a4fd2ba01db6e6d5f925da8ea1f56"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/windows.json",
+      "sha256": "32bd00ce50fcc024594dc716949a0c17a7a7ec3010b4a794c31353a97f678aa6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/second_generalist_regions.csv",
+      "sha256": "f705d889d8993cddf581f7d262665c803103e35d8ae8e14e0bff9ae84c7e15f8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/capacity_stage_status.json",
+      "sha256": "b3f43660f43b2e0e9dacf08c647fa9964275552483068109457a61132df71370"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/J_solver_diagnostics.jsonl",
+      "sha256": "e19d8a7daacad3c343a87ead82543978a41244f63745f97183fe0fa04b773714"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/latency_witnesses.json",
+      "sha256": "98927c128bfa5adf2d8e6d4833cbb8dd75e05e66cc98ce4ddf8cf665febbfd59"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/oneG_vs_twoG_j.csv",
+      "sha256": "dc194ff83e58421a96fb0c8753587f9c480116eeb291337b00978d70137c36b9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/latency_stage_status.json",
+      "sha256": "55aba732fe6009c43063dccc6d4623062be7b9a44adc14394e3be88159fb43f0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/cpu_validation.json",
+      "sha256": "5c2cea7219d7f2bdd520a1d09d1d162f7959cb26792c83623c7ce21aeb7a0982"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/structural_witnesses.json",
+      "sha256": "6fd5f7625c3efbbcb6fd52d237e8d13a5adefec4a1c3a2d4fa92470b3b764630"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/structural_failure_reasons.csv",
+      "sha256": "4c4546030101b81c659b7012a2820de744d8b62096b9864c09d8c4141cab41ed"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/budget_structure_audit.csv",
+      "sha256": "eff2b23cc186193026ee6838df98b9c57b330eaeec9bde4e9d87409fdb57e974"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/primary_multihotspot_candidate.json",
+      "sha256": "a49479ea712af00f9bfb04abc4220d9d0147c4b92854b02199fdf2a50caf7733"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/future_hotspot_points.json",
+      "sha256": "e4f85978d57139231c19fda154ff5ef1388d7ee305566dfd0f00485ae8498fec"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/module11a_gate.json",
+      "sha256": "b581ea99323492bd815e53c20cb2347d7e1a7ca7bada8ea248a7731937e3efa7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/summary_metrics.json",
+      "sha256": "0f2930d77822c0601df68ae81a71692e96c027fe09ec3b3ca673c5d696475e29"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/module11a_summary.md",
+      "sha256": "b995d9e921579e2738b1a8cf8a57aae84fdaec69cf8124e18e9b9748e3bf03b9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/completion_verification.json",
+      "sha256": "30d11dfcccc891351ab6de87cb4ceafd278b9415333a15316278632b51a54de6"
+    }
+  ]
+}

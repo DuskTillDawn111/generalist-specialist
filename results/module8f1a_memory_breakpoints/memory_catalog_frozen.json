@@ -1,0 +1,967 @@
+{
+  "frozen": true,
+  "models": {
+    "convnext_tiny": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.convnext_tiny.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "10cd0ade7d028b0c2ff1d0ab3a1e974c4d9cfaab633bcf0e234c6a1470410fee",
+          "measured": false
+        },
+        "1": {
+          "value": 610.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.convnext_tiny.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/convnext_tiny.json",
+              "sha256": "9bfc2d15ce2fd011b4dc8689339902753e202a085bd7d2fe5e5fd2f0de393b11",
+              "bytes": 13900
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.convnext_tiny.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "facc8312f606114eb1cf16d3da5d13f7e0ff166f6326621e26ad43358a1df111",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "distil_whisper": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.distil_whisper.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "fe81505ed3af743deec078f426888cb94d8688f57aec70333dc5ed1517a77344",
+          "measured": false
+        },
+        "1": {
+          "value": 3672.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.distil_whisper.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/distil_whisper.json",
+              "sha256": "bb1561218dbf1944279f2b41373f5c7873157ef972393b096bf9e9b9196027d1",
+              "bytes": 15185
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.distil_whisper.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "b66e0ea22816af9a45cfa0fc840369a4b3c2bbb35fb4c1814223f7502ab41fec",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "distilbert": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.distilbert.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "4460c1f61de5ab0b57f5ca2ee7220d87197f1db8fde1d91df1f9f16dc97ee9bf",
+          "measured": false
+        },
+        "1": {
+          "value": 750.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.distilbert.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/distilbert.json",
+              "sha256": "44711a8bf6cb9454446835a7647ef0b3a60d376ce6ebabc01f062ef1f769b744",
+              "bytes": 13144
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.distilbert.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "a1a616f3b5b4d3a45cd6e60333488c5dcad379e9729babd362cca12618072de0",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "minicpm": {
+      "role": "generalist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.minicpm.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "717b9f38884da2bbcbc66f122d1a5eb0767429c8fd56eafa98252b3dd908f272",
+          "measured": false
+        },
+        "1": {
+          "value": 18392.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.minicpm.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/minicpm.json",
+              "sha256": "b3d7e8ca0e31594279e60fc3eb65da8ff88d51adbdbb2ef09b5009d826f26ae9",
+              "bytes": 13687
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.minicpm.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "f65d4acac2ed65c385c373f4d31dc0afa18b38e90739994ffaf45b266d523343",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "paddleocr": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.paddleocr.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "d54604bf2d5228126d022b202ce4253953b93ce8a9e467f2ae9e44ec932f9db6",
+          "measured": false
+        },
+        "1": {
+          "value": 568.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.paddleocr.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/paddleocr.json",
+              "sha256": "8566b6264c072db3ff162568dad5eeb1cef5519cbdef7db6018e04ee1efdf72f",
+              "bytes": 13277
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.paddleocr.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "c01bfdc094fcb4c2014876a4ee3e9460487ffe7e051ec1ed67bd984fc5596c41",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "paddleocr_vl": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.paddleocr_vl.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "040aa35c9769568e44041c8033a36701ed5b470f238c7c9e2d599f53191a23cd",
+          "measured": false
+        },
+        "1": {
+          "value": 2308.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.paddleocr_vl.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/paddleocr_vl.json",
+              "sha256": "42f96447b06a7d08c4eb661ee0f2467bf5a64a495d0d634d55415d0462e43b8e",
+              "bytes": 13642
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.paddleocr_vl.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "1ffc9e9af7b7f0013159c9d82037c34fe44e65c09f0069e1c4491c3908aacd20",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "phi4mm": {
+      "role": "generalist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.phi4mm.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "ebb0fed8695a21cf425d14dc9b029b7271e7805abdc287cd135614f88cd8008e",
+          "measured": false
+        },
+        "1": {
+          "value": 11772.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.phi4mm.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/phi4mm.json",
+              "sha256": "2385524913d30cddb58ea55d6d4a7913cf02cd3372d7264b6de5a4ea91c52d8e",
+              "bytes": 13657
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.phi4mm.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "723c423acafb47852ea2fbbceb3c8bbb5fdaba2135dea8a143f2ea464b9c82e6",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "qwen": {
+      "role": "generalist",
+      "replica_evidence_bound": 2,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.qwen.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "df2db72552607ff2d1434e88bdcd80c940ab03bb880263700ca30e9fc3579e91",
+          "measured": false
+        },
+        "1": {
+          "value": 17978.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.qwen.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/qwen.json",
+              "sha256": "26add0c47e95115b4e16b67f2f29f43a88bef31a6dc82521511ed88505cadab4",
+              "bytes": 14053
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.qwen.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "044208d50660c3fe275548f1ecd391d53e538d31414e64a7b0e45d6cf6a52410",
+          "measured": true
+        },
+        "2": {
+          "value": 35670.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.qwen.M.2"
+          },
+          "measurement_provenance": {
+            "method": "mean of three measured high-load post-warm idle owned-VRAM observations",
+            "observations": {
+              "values": [
+                35352.0,
+                35696.0,
+                35962.0
+              ],
+              "count": 3,
+              "missing_count": 0,
+              "mean": 35670.0,
+              "sample_std": 305.8300181473362,
+              "minimum": 35352.0,
+              "maximum": 35962.0
+            },
+            "replica_evidence": {
+              "replica_scaling_status": "verified_representative_task",
+              "measured_replica_counts": [
+                1,
+                2
+              ],
+              "task": "asr",
+              "load_level": "high",
+              "precision": "bfloat16",
+              "source_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+              "model_manifest_sha256": "96421fde2829fb06a10cb7dbd030f2ad04a9e8d794d6bc6b33e838f15be18291",
+              "adapter_sha256": "9b45b5ba9ced32e232b608a99cb339b6825082cffa1a850f034fc59c3172da78",
+              "environment_hash": "f271b88bf64449dd9dbc09d29b792d3ea0b3f22e4a45acdf7f10ed62389a9414",
+              "capacity_field": "scaling_comparisons[qwen,high].paired_ratios.throughput_gain.mean",
+              "capacity_full_precision_values": [
+                1.1136363636363638,
+                1.2972972972972974,
+                1.236842105263158
+              ],
+              "capacity_sample_std": 0.09360005659444416,
+              "single_memory_source": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+                "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+                "field": "models.qwen.measured_idle_vram_mib"
+              },
+              "M1_policy": "frozen candidate pool measured single-replica idle VRAM; retain binary compatibility",
+              "observed_7c1_single_idle_mib": {
+                "values": [
+                  17726.0,
+                  17974.0,
+                  18026.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 17908.666666666668,
+                "sample_std": 160.31635391728858,
+                "minimum": 17726.0,
+                "maximum": 18026.0
+              },
+              "observed_7c1_double_idle_mib": {
+                "values": [
+                  35352.0,
+                  35696.0,
+                  35962.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 35670.0,
+                "sample_std": 305.8300181473362,
+                "minimum": 35352.0,
+                "maximum": 35962.0
+              },
+              "observed_7c1_single_peak_mib": {
+                "values": [
+                  18390.0,
+                  18178.0,
+                  18028.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 18198.666666666668,
+                "sample_std": 181.88274611225037,
+                "minimum": 18028.0,
+                "maximum": 18390.0
+              },
+              "observed_7c1_double_peak_mib": {
+                "values": [
+                  36160.0,
+                  36198.0,
+                  35964.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 36107.333333333336,
+                "sample_std": 125.57600620076008,
+                "minimum": 35964.0,
+                "maximum": 36198.0
+              },
+              "capacity_scope": "Measured representative task only; applying the factor to aggregate family demand / other tasks is a transfer surrogate, pending real mixed-workload validation.",
+              "memory_scope": "Measured single-family post-warm idle mean; not a guarantee of joint heterogeneous peak VRAM."
+            },
+            "raw_measurements": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/qwen_r2_high_rep1.json",
+                "sha256": "39e5d3ae3ac51c110f391f6cc85fdf4d416fa064014e1da5aa1a523f1785cc42",
+                "bytes": 314252,
+                "mtime_ns": 1790910184548426295
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/qwen_r2_high_rep2.json",
+                "sha256": "8b5bd0185b92f473783acd4e3a418b3eb7fd91b6a8edab73f051bc0a44c3ab6c",
+                "bytes": 319956,
+                "mtime_ns": 1790910276316789031
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/qwen_r2_high_rep3.json",
+                "sha256": "53468df2916ee29640726d655d2e0e0b77f110ec07fa5dcddbad17a402d52e5e",
+                "bytes": 326276,
+                "mtime_ns": 1790910574787486448
+              }
+            ]
+          },
+          "value_sha256": "5c0200b683fd39308d7b991acf5c34a2dd5eaa2271eb314109b6d063cd771d33",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": false
+    },
+    "resnet50": {
+      "role": "specialist",
+      "replica_evidence_bound": 2,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.resnet50.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "7a7c458f9b282d570d3f584ab6ec6ba9ca55bda90bbcd79c484a711e0e240f95",
+          "measured": false
+        },
+        "1": {
+          "value": 604.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.resnet50.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/resnet50.json",
+              "sha256": "6f50ffe1da9409748c6af8df933aede99759d5a2fae10f9fb5e0eacf2afdf1fc",
+              "bytes": 13772
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.resnet50.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "fd34292d013d02504c8ddeaecf7cfe78035ae9c64f6444a443de1c7845bb25cf",
+          "measured": true
+        },
+        "2": {
+          "value": 1208.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.resnet50.M.2"
+          },
+          "measurement_provenance": {
+            "method": "mean of three measured high-load post-warm idle owned-VRAM observations",
+            "observations": {
+              "values": [
+                1208.0,
+                1208.0,
+                1208.0
+              ],
+              "count": 3,
+              "missing_count": 0,
+              "mean": 1208.0,
+              "sample_std": 0.0,
+              "minimum": 1208.0,
+              "maximum": 1208.0
+            },
+            "replica_evidence": {
+              "replica_scaling_status": "verified_representative_task",
+              "measured_replica_counts": [
+                1,
+                2
+              ],
+              "task": "image",
+              "load_level": "high",
+              "precision": "float32",
+              "source_revision": "sha256:11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+              "model_manifest_sha256": "15ba58c9e5b467344cfb70442d7cba79f578cdcb4ef0043cf72c316888ac639f",
+              "adapter_sha256": "d8eadbb0c195397cc6187a1d9d629f36f2d57d1a5ace0b5f6c3aa058eddd1022",
+              "environment_hash": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+              "capacity_field": "scaling_comparisons[resnet50,high].paired_ratios.throughput_gain.mean",
+              "capacity_full_precision_values": [
+                1.9948895783902172,
+                1.9266607617360498,
+                2.013873873873874
+              ],
+              "capacity_sample_std": 0.04586520435981119,
+              "single_memory_source": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+                "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+                "field": "models.resnet50.measured_idle_vram_mib"
+              },
+              "M1_policy": "frozen candidate pool measured single-replica idle VRAM; retain binary compatibility",
+              "observed_7c1_single_idle_mib": {
+                "values": [
+                  604.0,
+                  604.0,
+                  604.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 604.0,
+                "sample_std": 0.0,
+                "minimum": 604.0,
+                "maximum": 604.0
+              },
+              "observed_7c1_double_idle_mib": {
+                "values": [
+                  1208.0,
+                  1208.0,
+                  1208.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 1208.0,
+                "sample_std": 0.0,
+                "minimum": 1208.0,
+                "maximum": 1208.0
+              },
+              "observed_7c1_single_peak_mib": {
+                "values": [
+                  604.0,
+                  604.0,
+                  604.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 604.0,
+                "sample_std": 0.0,
+                "minimum": 604.0,
+                "maximum": 604.0
+              },
+              "observed_7c1_double_peak_mib": {
+                "values": [
+                  1208.0,
+                  1208.0,
+                  1208.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 1208.0,
+                "sample_std": 0.0,
+                "minimum": 1208.0,
+                "maximum": 1208.0
+              },
+              "capacity_scope": "Measured representative task only; applying the factor to aggregate family demand / other tasks is a transfer surrogate, pending real mixed-workload validation.",
+              "memory_scope": "Measured single-family post-warm idle mean; not a guarantee of joint heterogeneous peak VRAM."
+            },
+            "raw_measurements": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/resnet50_r2_high_rep1.json",
+                "sha256": "3df56f9607f7b0bfa00616e952e484137118e3ec98bf30e433e7ead48d2438e5",
+                "bytes": 17935832,
+                "mtime_ns": 1790912259359832109
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/resnet50_r2_high_rep2.json",
+                "sha256": "3dc4257017ec3749e9064614cd46ff98213c1cda08192b4085605bf19ac8c132",
+                "bytes": 17935862,
+                "mtime_ns": 1790912308465488733
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/resnet50_r2_high_rep3.json",
+                "sha256": "a2e8af79388c0030e364bdffb6a7d8b4d80b5d2454ac79c24c60b43dc114ecd0",
+                "bytes": 17928542,
+                "mtime_ns": 1790912510618726231
+              }
+            ]
+          },
+          "value_sha256": "328bc111109372e9d93b46069f70d883576d010f50c5c26edad15470268bf371",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": false
+    },
+    "roberta_sst2": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.roberta_sst2.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "1253c7de969b59b4ea9ab871a0ff53b15e2d661f34047176c9fecefa2245a1e8",
+          "measured": false
+        },
+        "1": {
+          "value": 988.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.roberta_sst2.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/roberta_sst2.json",
+              "sha256": "9070cff59581bf5d2297e26fc70f13dd76e8ad5b8189e660e26fbb19780e0af5",
+              "bytes": 13358
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.roberta_sst2.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "19918af85e8976a014e51d6ac22d79318745e2f66c3d01129aa1dd9c602ef59f",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    },
+    "whisper-small": {
+      "role": "specialist",
+      "replica_evidence_bound": 2,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.whisper-small.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "f7b3d874b53debb26dc1446c5b6f3b8aac51cc00129c8b932a9c63492a3ae9f8",
+          "measured": false
+        },
+        "1": {
+          "value": 1616.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.whisper-small.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/whisper-small.json",
+              "sha256": "736bf50308ef7b53e94d6880b9077ec9cf604efc6c74ce7894fd908d99f565a6",
+              "bytes": 15068
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.whisper-small.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "66de917385c7df05990bc8aa20f5a3c52ecea206aea8e3dbb7d4f8cf202ff252",
+          "measured": true
+        },
+        "2": {
+          "value": 3240.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.whisper-small.M.2"
+          },
+          "measurement_provenance": {
+            "method": "mean of three measured high-load post-warm idle owned-VRAM observations",
+            "observations": {
+              "values": [
+                3236.0,
+                3240.0,
+                3244.0
+              ],
+              "count": 3,
+              "missing_count": 0,
+              "mean": 3240.0,
+              "sample_std": 4.0,
+              "minimum": 3236.0,
+              "maximum": 3244.0
+            },
+            "replica_evidence": {
+              "replica_scaling_status": "verified_representative_task",
+              "measured_replica_counts": [
+                1,
+                2
+              ],
+              "task": "asr",
+              "load_level": "high",
+              "precision": "float32",
+              "source_revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+              "model_manifest_sha256": "4c4de15eb6018e8dd5c8ee3f274ebd729e5dc26501d3255c403aac4286318277",
+              "adapter_sha256": "84ef368f46c55907f06921bd4ce119259e5e61209995ceb00c93b739ecec0932",
+              "environment_hash": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+              "capacity_field": "scaling_comparisons[whisper-small,high].paired_ratios.throughput_gain.mean",
+              "capacity_full_precision_values": [
+                1.2000000000000002,
+                1.2666666666666666,
+                1.2467532467532467
+              ],
+              "capacity_sample_std": 0.03422195888378922,
+              "single_memory_source": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+                "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+                "field": "models.whisper-small.measured_idle_vram_mib"
+              },
+              "M1_policy": "frozen candidate pool measured single-replica idle VRAM; retain binary compatibility",
+              "observed_7c1_single_idle_mib": {
+                "values": [
+                  1618.0,
+                  1622.0,
+                  1622.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 1620.6666666666667,
+                "sample_std": 2.309401076758503,
+                "minimum": 1618.0,
+                "maximum": 1622.0
+              },
+              "observed_7c1_double_idle_mib": {
+                "values": [
+                  3236.0,
+                  3240.0,
+                  3244.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 3240.0,
+                "sample_std": 4.0,
+                "minimum": 3236.0,
+                "maximum": 3244.0
+              },
+              "observed_7c1_single_peak_mib": {
+                "values": [
+                  1622.0,
+                  1622.0,
+                  1622.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 1622.0,
+                "sample_std": 0.0,
+                "minimum": 1622.0,
+                "maximum": 1622.0
+              },
+              "observed_7c1_double_peak_mib": {
+                "values": [
+                  3244.0,
+                  3244.0,
+                  3244.0
+                ],
+                "count": 3,
+                "missing_count": 0,
+                "mean": 3244.0,
+                "sample_std": 0.0,
+                "minimum": 3244.0,
+                "maximum": 3244.0
+              },
+              "capacity_scope": "Measured representative task only; applying the factor to aggregate family demand / other tasks is a transfer surrogate, pending real mixed-workload validation.",
+              "memory_scope": "Measured single-family post-warm idle mean; not a guarantee of joint heterogeneous peak VRAM."
+            },
+            "raw_measurements": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/whisper-small_r2_high_rep1.json",
+                "sha256": "ac5b7d992dfce5a7b3eb8e2714e9bdab8385b2f4f4d9cb5dfedb23c8faf874a3",
+                "bytes": 727459,
+                "mtime_ns": 1790911290530659366
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/whisper-small_r2_high_rep2.json",
+                "sha256": "7cf0f59efb978817b49ea2ff21e6cb5e52b1d90817e9494621858cc4bc452209",
+                "bytes": 728028,
+                "mtime_ns": 1790911363694271488
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/results/replica_scaling_real/raw_runs/whisper-small_r2_high_rep3.json",
+                "sha256": "a20fad948f822cd15807905a58189b7d15837f5f2fe99132f0d07fe746a32698",
+                "bytes": 731304,
+                "mtime_ns": 1790911602084859870
+              }
+            ]
+          },
+          "value_sha256": "e3dcb1e3c46dd56382f32a628cc101e756239f889b6740d09e80a85bd1f8e4ac",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": false
+    },
+    "whisper_turbo": {
+      "role": "specialist",
+      "replica_evidence_bound": 1,
+      "values": {
+        "0": {
+          "value": 0.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.whisper_turbo.M.0"
+          },
+          "measurement_provenance": {
+            "derivation": "absent model uses zero memory"
+          },
+          "value_sha256": "aaf9e68404c11799b268d184e3315008cbefefc01b1999912ba43580ec6e9571",
+          "measured": false
+        },
+        "1": {
+          "value": 3882.0,
+          "unit": "MiB",
+          "source": {
+            "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+            "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531",
+            "bytes": 9867,
+            "field": "models.whisper_turbo.M.1"
+          },
+          "measurement_provenance": {
+            "method": "NVML via nvidia-smi per-process quiescent samples; max observed idle across minimal audit phases; CUDA contexts and retained allocator caches included",
+            "raw_measurement": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/raw_load_tests/whisper_turbo.json",
+              "sha256": "1cca8f8d4218af8de0df6348d75e84dbe1af865e25b58094da463f5617676dc7",
+              "bytes": 20203
+            },
+            "evidence": {
+              "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+              "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+              "field": "models.whisper_turbo.measured_idle_vram_mib"
+            }
+          },
+          "value_sha256": "58a08a0008bfab72c576224df0cf7ec19d6cd0f4f1ea77cdd935c707ed72f238",
+          "measured": true
+        }
+      },
+      "unmeasured_x2": true
+    }
+  },
+  "bounds_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/evidence_replica_bounds.json",
+    "sha256": "6c2855bd2e61d745d13813f29cef9d51f6e2b5bfa2b7057856421e22f7fd4b51",
+    "bytes": 11865
+  },
+  "no_x2_extrapolation": true,
+  "formal_candidate_pool_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/candidate_pool_v2_1.json",
+    "sha256": "dbdf5bf9af541e805bc40a9f6207f6dc0cd43de22a0ea150082f3e23de219e00",
+    "bytes": 30418
+  }
+}

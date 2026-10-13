@@ -1,0 +1,50 @@
+{
+  "W1_balanced": {
+    "complete": true,
+    "reused_W2": false,
+    "influences_search": false,
+    "objective_direction_maintained": true,
+    "objective_reason": "mean_improved",
+    "relative_mean_gain": 0.604558007143142,
+    "seed_mean_e2e_ms": 253.1049432007504,
+    "final_mean_e2e_ms": 100.0883231412266,
+    "seed_weighted_task_p95_ms": 614.2267158595744,
+    "final_weighted_task_p95_ms": 151.02004281861701,
+    "source": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation_results.json",
+      "sha256": "3bd6e936843a0a3dde34f974dbc5af3c150165187d2d6f281dd32b112b63364c"
+    }
+  },
+  "W2_generalist_heavy": {
+    "complete": true,
+    "reused_W2": true,
+    "influences_search": false,
+    "objective_direction_maintained": true,
+    "objective_reason": "mean_improved",
+    "relative_mean_gain": 0.6348206339877065,
+    "seed_mean_e2e_ms": 263.21974276548843,
+    "final_mean_e2e_ms": 96.12241878502005,
+    "seed_weighted_task_p95_ms": 721.5167660348218,
+    "final_weighted_task_p95_ms": 151.32973994077386,
+    "source": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_real_pilot/confirmation_results.json",
+      "sha256": "928762d975a8fcacaefcec9a3f8f83507bb73a03e1e3f07d4fa4253979c15114"
+    }
+  },
+  "W3_specialist_friendly": {
+    "complete": true,
+    "reused_W2": false,
+    "influences_search": false,
+    "objective_direction_maintained": true,
+    "objective_reason": "mean_improved",
+    "relative_mean_gain": 0.5358533151303879,
+    "seed_mean_e2e_ms": 223.03769415755295,
+    "final_mean_e2e_ms": 103.52220634419064,
+    "seed_weighted_task_p95_ms": 652.8092291099056,
+    "final_weighted_task_p95_ms": 159.53289124622637,
+    "source": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation_results.json",
+      "sha256": "aa6a6fc005a2432aff3b5cc9f1a081aeabec8b1d22be1601f28b1b6275951636"
+    }
+  }
+}

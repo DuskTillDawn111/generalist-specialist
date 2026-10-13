@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "whisper",
+  "target_task": "lid",
+  "target_count": 30,
+  "mean_worker_latency_ms": 26.350642733333334,
+  "min_worker_latency_ms": 24.8479,
+  "max_worker_latency_ms": 36.65422,
+  "output": "benchmark/results/placement/active_single_v3_current/active_single_whisper_lid_n30.jsonl"
+}

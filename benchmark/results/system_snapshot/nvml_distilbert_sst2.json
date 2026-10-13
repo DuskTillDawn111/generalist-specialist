@@ -1,0 +1,45 @@
+{
+  "schema_version": "nvml-process-profile-v1",
+  "label": "distilbert_sst2",
+  "timestamp": "2026-09-18T13:19:25.626336+08:00",
+  "sampling_interval_ms": 50.0,
+  "command": [
+    "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+    "benchmark/scripts/probe_distilbert_nvml.py"
+  ],
+  "child_pid": 3029,
+  "return_code": 0,
+  "wall_time_s": 8.075486,
+  "gpu_baseline": {
+    "total_mib": 49140.0,
+    "used_mib": 1.0,
+    "free_mib": 48510.0
+  },
+  "peak_process_memory_mib": 750.0,
+  "max_gpu_used_mib": 760.0,
+  "peak_gpu_delta_from_baseline_mib": 759.0,
+  "markers": [
+    {
+      "marker": "post_load",
+      "elapsed_s": 3.648174,
+      "process_memory_mib": 678.0
+    },
+    {
+      "marker": "post_warmup",
+      "elapsed_s": 4.872677,
+      "process_memory_mib": 750.0
+    },
+    {
+      "marker": "post_inference",
+      "elapsed_s": 6.207601,
+      "process_memory_mib": 750.0
+    }
+  ],
+  "num_samples": 58,
+  "trace_csv": "benchmark/results/system_snapshot/nvml_distilbert_sst2.csv",
+  "notes": [
+    "Process memory is sampled from nvidia-smi compute-process accounting.",
+    "This metric is used for unified cross-framework deployment VRAM profiling.",
+    "Sampling is discrete, so extremely short transient peaks may be underestimated."
+  ]
+}

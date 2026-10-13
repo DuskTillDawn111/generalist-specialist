@@ -1,0 +1,4 @@
+import sys,runpy
+sys.path.insert(0,'/root/autodl-tmp/generalist-specialist/results/module32f_cuda_recovery')
+sys.argv=['/root/autodl-tmp/generalist-specialist/results/module32f_cuda_recovery/restricted_worker_v2.py','/root/autodl-tmp/generalist-specialist/results/module28_dynamic_split/launchers/parseq.py']+sys.argv[1:]
+runpy.run_path('/root/autodl-tmp/generalist-specialist/results/module32f_cuda_recovery/restricted_worker_v2.py',run_name='__main__')

@@ -1,0 +1,23 @@
+{
+  "tasks": 800,
+  "results": 800,
+  "errors": 0,
+  "routing": {
+    "distilbert": 160,
+    "resnet50": 160,
+    "paddleocr": 160,
+    "whisper": 160,
+    "phi4": 160
+  },
+  "completed_by_worker": {
+    "distilbert": 160,
+    "resnet50": 160,
+    "paddleocr": 160,
+    "whisper": 160,
+    "phi4": 160
+  },
+  "wall_time_s": 80.019996931,
+  "throughput_tasks_per_s": 9.997501008277064,
+  "classification_or_ocr_accuracy": 0.925,
+  "asr_corpus_wer": 0.04038590980480144
+}

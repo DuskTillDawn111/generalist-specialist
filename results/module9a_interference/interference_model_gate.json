@@ -1,0 +1,9 @@
+{
+  "status": "NOT_EVALUATED_AT_USER_REQUESTED_CHECKPOINT",
+  "reason": "User requested stop after offline profiling and Runtime Sharing Semantics Audit, before further predictor implementation/execution and new pair-validation GPU runs",
+  "runtime_spatial_pair_applicability": false,
+  "accuracy_evidence_available": false,
+  "SUPPORTED_PARTIAL_NOT_SUPPORTED_verdict": null,
+  "enter_Module9B": false,
+  "original_accuracy_gate_rules_changed": false
+}

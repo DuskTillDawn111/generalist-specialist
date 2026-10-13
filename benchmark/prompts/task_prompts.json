@@ -1,0 +1,30 @@
+{
+  "text_classification": {
+    "version": "v1",
+    "prompt": "Classify the sentiment of the following sentence. Answer with exactly one label: positive or negative. Do not provide any explanation."
+  },
+  "image_classification": {
+    "version": "v1",
+    "prompt": "Classify this image into exactly one of the following categories: tench, English springer, cassette player, chain saw, church, French horn, garbage truck, gas pump, golf ball, parachute. Output only the category name and nothing else."
+  },
+  "ocr": {
+    "version": "v1",
+    "prompt": "Read the single word shown in this image. Output only the recognized word. Do not provide any explanation."
+  },
+  "asr": {
+    "version": "v1",
+    "prompt": "Transcribe the English speech in this audio. Output only the transcription. Do not provide any explanation."
+  },
+  "text_qa": {
+    "version": "v1",
+    "prompt": "Answer the following yes-or-no question using only the provided passage. Answer with exactly one label: yes or no. Do not provide any explanation."
+  },
+  "visual_qa": {
+    "version": "v1",
+    "prompt": "Answer the visual multiple-choice question using the provided image and question. Answer with exactly one option letter (A, B, C, ...). Do not provide any explanation."
+  },
+  "lid": {
+    "version": "v1",
+    "prompt": "Identify the spoken language in the provided audio. Answer with exactly one language code and nothing else. Do not provide any explanation."
+  }
+}

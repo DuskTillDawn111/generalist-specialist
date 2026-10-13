@@ -1,0 +1,50 @@
+{
+  "model": "PP-OCRv6-medium-rec",
+  "task": "optical_character_recognition",
+  "dataset": "IIIT5K",
+  "split": "test",
+  "evaluation_mode": "recognition_only",
+  "batch_size": 1,
+  "num_samples": 200,
+  "correct": 192,
+  "exact_match_accuracy": 0.96,
+  "total_character_errors": 9,
+  "total_reference_characters": 1044,
+  "cer": 0.008621,
+  "mean_rec_score": 0.995275,
+  "parameter_file": "inference.pdiparams",
+  "parameter_file_size_mb": 72.923,
+  "model_dir_size_mb": 73.278,
+  "model_load_time_s": 0.481,
+  "warmup_runs": 10,
+  "model_latency": {
+    "mean_ms": 4.173,
+    "p50_ms": 4.057,
+    "p95_ms": 4.213,
+    "p99_ms": 10.01,
+    "min_ms": 3.87,
+    "max_ms": 11.079
+  },
+  "e2e_latency": {
+    "mean_ms": 4.849,
+    "p50_ms": 4.44,
+    "p95_ms": 6.267,
+    "p99_ms": 11.174,
+    "min_ms": 4.245,
+    "max_ms": 18.139
+  },
+  "model_throughput_qps": 239.636,
+  "e2e_throughput_qps": 206.228,
+  "paddle_peak_allocated_mb": 19.446,
+  "normalization": "lowercase; remove all non-alphanumeric characters",
+  "latency_definition": {
+    "model_latency": "PP-OCRv6 TextRecognition.predict on a pre-decoded BGR numpy image; includes recognition-module preprocessing, GPU inference and postprocessing",
+    "e2e_latency": "local image read/decode + RGB-to-BGR conversion + TextRecognition.predict + OCR normalization"
+  },
+  "memory_note": "Paddle allocator memory is framework-specific auxiliary data; cross-framework VRAM comparison will use process-level NVML later",
+  "device": "gpu:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "paddle_version": "3.2.1",
+  "paddleocr_version": "3.7.0",
+  "timestamp": "2026-09-17T21:40:39.316101+08:00"
+}

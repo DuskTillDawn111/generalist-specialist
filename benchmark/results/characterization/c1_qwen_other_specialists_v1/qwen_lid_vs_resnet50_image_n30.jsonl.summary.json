@@ -1,0 +1,21 @@
+{
+  "protocol": "active_pair_profile_v1",
+  "target_worker": "qwen",
+  "target_task": "lid",
+  "co_resident": "resnet50",
+  "co_resident_tasks": [
+    "image"
+  ],
+  "target_count": 30,
+  "co_completed_count": 898,
+  "co_submitted_count": 961,
+  "co_backlog": 64,
+  "min_overlap": 0.9,
+  "accepted_target_count": 30,
+  "accepted_fraction": 1.0,
+  "weighted_overlap_ratio": 0.9900143773997186,
+  "mean_target_latency_ms_all": 193.65124346666667,
+  "mean_target_latency_ms_accepted": 193.65124346666667,
+  "wall_time_s": 5.813081254,
+  "valid_for_gamma": true
+}

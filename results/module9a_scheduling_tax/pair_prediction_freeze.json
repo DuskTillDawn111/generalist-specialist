@@ -1,0 +1,296 @@
+{
+  "frozen_before_validation_pair_measurements": true,
+  "at_utc": "2026-10-06T16:32:14.275830+00:00",
+  "fit_sha256": "8bb087e36350e18238a04a39fe2ac2b8a7442cf170152451ae9cb9496b767db9",
+  "features_sha256": "8bb05f22b08dfb222def69ce6d5bd7b476361b849aeae9a39e21708d16f19da5",
+  "predictions": [
+    {
+      "target": [
+        "whisper_turbo",
+        "lid"
+      ],
+      "co_path": [
+        "qwen",
+        "visual_qa"
+      ],
+      "id": "whisper_turbo__lid__from__qwen__visual_qa",
+      "split": "VALIDATION",
+      "identity_sha256": "07b9809f1c89046360c8f3aca10585ca9bd76b5fcc0fa2ddd0947cf9d9482944",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 108.28438315555555,
+      "I1_mu": 0.18313725887222745,
+      "I1_latency_ms": 128.115288265334,
+      "I2_mu": 0.18313725887222745,
+      "I2_latency_ms": 128.115288265334
+    },
+    {
+      "target": [
+        "phi4mm",
+        "visual_qa"
+      ],
+      "co_path": [
+        "whisper-small",
+        "asr"
+      ],
+      "id": "phi4mm__visual_qa__from__whisper-small__asr",
+      "split": "VALIDATION",
+      "identity_sha256": "199ba57b095e4c1a7f195416387de95684000ef4d0d2787d02e5c92801ac7ca7",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 209.61693907777774,
+      "I1_mu": 0.42048250306009494,
+      "I1_latency_ms": 297.75719430499714,
+      "I2_mu": 0.3366929556090088,
+      "I2_latency_ms": 280.19348584158826
+    },
+    {
+      "target": [
+        "qwen",
+        "visual_qa"
+      ],
+      "co_path": [
+        "whisper-small",
+        "asr"
+      ],
+      "id": "qwen__visual_qa__from__whisper-small__asr",
+      "split": "CALIBRATION",
+      "identity_sha256": "251fa0b1f385c785b6082509f90b35ce7b9328e99a3cb51b6fe8f78bac6e86fe",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 154.66702336666668,
+      "I1_mu": 0.6720428256828326,
+      "I1_latency_ms": 258.6098867899541,
+      "I2_mu": 0.5381248533013138,
+      "I2_latency_ms": 237.89719262640506
+    },
+    {
+      "target": [
+        "qwen",
+        "asr"
+      ],
+      "co_path": [
+        "whisper-small",
+        "lid"
+      ],
+      "id": "qwen__asr__from__whisper-small__lid",
+      "split": "CALIBRATION",
+      "identity_sha256": "32528b1639351cfc945c602e5eeef72fc090ec2520109f0365682a83832fccb1",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 1017.4343631666665,
+      "I1_mu": 0.7790624108457377,
+      "I1_latency_ms": 1810.0792310125876,
+      "I2_mu": 0.7864344051604978,
+      "I2_latency_ms": 1817.5797513534935
+    },
+    {
+      "target": [
+        "qwen",
+        "lid"
+      ],
+      "co_path": [
+        "whisper-small",
+        "asr"
+      ],
+      "id": "qwen__lid__from__whisper-small__asr",
+      "split": "VALIDATION",
+      "identity_sha256": "34b00247359bd13a094a47f6431ff43bc571c15d611a8103479e8631df64fc01",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 443.6796556222222,
+      "I1_mu": 0.2295148657531514,
+      "I1_latency_ms": 545.5107322197609,
+      "I2_mu": 0.18377943896416826,
+      "I2_latency_ms": 525.2188538122896
+    },
+    {
+      "target": [
+        "qwen",
+        "visual_qa"
+      ],
+      "co_path": [
+        "whisper-small",
+        "lid"
+      ],
+      "id": "qwen__visual_qa__from__whisper-small__lid",
+      "split": "CALIBRATION",
+      "identity_sha256": "61ce63a30cf8389654080cf47a74a20f6751c751539a5a82071d4cdbc5910575",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 154.66702336666668,
+      "I1_mu": 0.6720428256828326,
+      "I1_latency_ms": 258.6098867899541,
+      "I2_mu": 0.6784021312034658,
+      "I2_latency_ms": 259.5934616455096
+    },
+    {
+      "target": [
+        "whisper-small",
+        "lid"
+      ],
+      "co_path": [
+        "qwen",
+        "visual_qa"
+      ],
+      "id": "whisper-small__lid__from__qwen__visual_qa",
+      "split": "CALIBRATION",
+      "identity_sha256": "6337756cadb77fe83380d8203cdbc095793d4347b22328292c8888611c3b3f2f",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 49.569978,
+      "I1_mu": 0.3491422112830125,
+      "I1_latency_ms": 66.87694973217027,
+      "I2_mu": 0.3491422112830125,
+      "I2_latency_ms": 66.87694973217027
+    },
+    {
+      "target": [
+        "qwen",
+        "lid"
+      ],
+      "co_path": [
+        "whisper-small",
+        "lid"
+      ],
+      "id": "qwen__lid__from__whisper-small__lid",
+      "split": "VALIDATION",
+      "identity_sha256": "7b2594c9d1217bed103f9ecbcef9abfcf24b3ea6e64dab73c4394a22d6968c21",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 443.6796556222222,
+      "I1_mu": 0.2295148657531514,
+      "I1_latency_ms": 545.5107322197609,
+      "I2_mu": 0.2316866844186783,
+      "I2_latency_ms": 546.4743239773559
+    },
+    {
+      "target": [
+        "qwen",
+        "asr"
+      ],
+      "co_path": [
+        "whisper-small",
+        "asr"
+      ],
+      "id": "qwen__asr__from__whisper-small__asr",
+      "split": "CALIBRATION",
+      "identity_sha256": "8fa3beb716c6caa46526d380f73415c311eab85923f984a51b7827fec5eb48db",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 1017.4343631666665,
+      "I1_mu": 0.7790624108457377,
+      "I1_latency_ms": 1810.0792310125876,
+      "I2_mu": 0.6238186459664482,
+      "I2_latency_ms": 1652.1288899570318
+    },
+    {
+      "target": [
+        "whisper_turbo",
+        "asr"
+      ],
+      "co_path": [
+        "qwen",
+        "visual_qa"
+      ],
+      "id": "whisper_turbo__asr__from__qwen__visual_qa",
+      "split": "VALIDATION",
+      "identity_sha256": "e37981760e77e5987f6826a90d5413bd4f879d684c32a35a4450061572b9471c",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 241.33651821111118,
+      "I1_mu": 0.4788836438446384,
+      "I1_latency_ms": 356.90862944482603,
+      "I2_mu": 0.4788836438446384,
+      "I2_latency_ms": 356.90862944482603
+    },
+    {
+      "target": [
+        "whisper-small",
+        "asr"
+      ],
+      "co_path": [
+        "qwen",
+        "visual_qa"
+      ],
+      "id": "whisper-small__asr__from__qwen__visual_qa",
+      "split": "CALIBRATION",
+      "identity_sha256": "eca11a040940acd06134b59757623215d0b793e1dc63235072fc13a290b8bf00",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 215.46784097777777,
+      "I1_mu": 1.086551264679511,
+      "I1_latency_ms": 449.58469608994596,
+      "I2_mu": 1.086551264679511,
+      "I2_latency_ms": 449.58469608994596
+    },
+    {
+      "target": [
+        "phi4mm",
+        "visual_qa"
+      ],
+      "co_path": [
+        "whisper-small",
+        "lid"
+      ],
+      "id": "phi4mm__visual_qa__from__whisper-small__lid",
+      "split": "VALIDATION",
+      "identity_sha256": "fd199cfcb1f52c2a9d6cb2041859be9d31cbb535587eaa8c7772bdb21326966f",
+      "repetitions": [
+        1,
+        2,
+        3
+      ],
+      "I0_mu": 0.0,
+      "I0_latency_ms": 209.61693907777774,
+      "I1_mu": 0.42048250306009494,
+      "I1_latency_ms": 297.75719430499714,
+      "I2_mu": 0.4244613814899373,
+      "I2_latency_ms": 298.5912346224233
+    }
+  ]
+}

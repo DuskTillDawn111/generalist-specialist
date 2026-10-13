@@ -1,0 +1,19 @@
+{
+  "GPU_runs": 0,
+  "Module9_modified": false,
+  "audit_execution_status": "COMPLETE_CPU_ONLY_AND_STOPPED",
+  "budget_contexts_replica_evidence_incomplete": 100,
+  "certified_S_to_1G_contexts": 4,
+  "certified_two_G_capacity_contexts": 0,
+  "certified_two_G_latency_contexts": 0,
+  "conditional_S_to_1G_contexts": 65,
+  "conditional_empirical_count_space_gate": "MULTIHOTSPOT_2G_SUPPORTED",
+  "conditional_two_G_capacity_contexts": 20,
+  "final_GPU_primary_frozen": false,
+  "formal_A0_A5_frozen": false,
+  "gate": "UNDETERMINED_REPLICA_EVIDENCE_REQUIRED",
+  "next_step_recommendation": "Resolve replica evidence and real multi-resource accounting before an exhaustion GPU benchmark; no current evidence requires Task-Rich.",
+  "no_artificial_replica_cap_used_for_claims": true,
+  "requested_gate_assignment_complete": false,
+  "why_neither_1G_ONLY_nor_NOT_SUPPORTED": "B1 supports S->1G; larger budgets contain positive conditional 2G windows and missing replica evidence. Neither universal no-2G nor no-overflow follows."
+}

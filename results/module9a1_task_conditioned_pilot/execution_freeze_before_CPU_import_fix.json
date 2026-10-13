@@ -1,0 +1,505 @@
+{
+  "frozen_at_utc": "2026-10-06T03:53:15.106791+00:00",
+  "core_files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/pilot_selection.json",
+      "sha256": "db4e86557afe2c66137a4f2d81665bbbe43366d909af8e811b6fc9edcfde4f09"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/noise_audit.json",
+      "sha256": "3543c2bea03f965e21201f4f3f3a524014f0add822a887e6a8e703594cb50792"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/measurement_protocol_freeze.json",
+      "sha256": "69ef9df1d77add7e1c0f899f0b6c9c2a2ed8c6135e6715464755184735c1904a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/development_evidence_freeze.json",
+      "sha256": "d483bb41616f76552c4c690979ec06a2f478668cbf070667e3edb1edc1650474"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/candidate_history_freeze.json",
+      "sha256": "47327cda38e309778855b83220f299f352a205598b5334d9e705503ebecc77be"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/failure_map.csv",
+      "sha256": "b96cce73d0fa497395648d02f723fcf6fb2111c7b0311ea55ca50076276a162f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/prior_art_boundary.md",
+      "sha256": "b499b5c1c95b1d0d4f537e872a4f110e967b1a571fcc4158913cb1da7d067c2a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/profiler_capability_audit.json",
+      "sha256": "237d049d056cd2bf70ad7943bec524e89073f8d3a79dd25f861832fbfb9acc72"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/pre_GPU_asset_checks.json",
+      "sha256": "eecce6489f6a6e23414bbd3dc124aabb1b890d4a72a3a137907337681e582732"
+    }
+  ],
+  "execution_sources": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/__init__.py",
+      "sha256": "1dee2e08e13a88c08d578e3d4a4f30ad40158fce364eb291c0273cae95b817ff"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/prepare.py",
+      "sha256": "9f5ddf17e09be243072b6cbef8ee4191e4a9c19a4ffea25cc2b2961d0c7c9c05"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/profile_worker.py",
+      "sha256": "72ea1e0cae6dfeb2de3b1bc8d5d25b9d1015076017b7b99d0ec8c6e1a0a817ea"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/occupancy.cpp",
+      "sha256": "1c73f2d4ed1bfa43a9c73c79265b1903eb7978411957b2b45c7954c5dd127109"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/occupancy",
+      "sha256": "86d1c59284452928715ed50e3106cb411fdbc837644dcd2f721f73bb3b092fe0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/runtime.py",
+      "sha256": "1bd0ca221c1ef9326f336faf598647709e4f9b7017c59f016dc67744f2566fda"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/analyze.py",
+      "sha256": "5199041c18fa30931cbf5e440176d396f05ab34f84bec17bb2324d159bf25178"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a1_task_conditioned_pilot/campaign.py",
+      "sha256": "8f035655b808bda8a0b9e6758a2f59086612d5b273ed77472ae12ce60f0afc2e"
+    }
+  ],
+  "plan": [
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7101,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7202,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7303,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7101,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7202,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7303,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7101,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7202,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7303,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": true,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7101,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7101,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7101,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7101,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7101,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7101,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7101,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7101,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7101,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7101,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7202,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7202,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7202,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7202,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7202,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7202,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7202,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7202,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7202,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7202,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7303,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7303,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "asr",
+      "seed": 7303,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7303,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7303,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "lid",
+      "seed": 7303,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "qwen",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7303,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7303,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "asr",
+      "seed": 7303,
+      "profile": false,
+      "co": "whisper-small"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": false,
+      "co": "paddleocr"
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": false,
+      "co": null
+    },
+    {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "seed": 7303,
+      "profile": false,
+      "co": "whisper-small"
+    }
+  ],
+  "unprofiled_runs": 45,
+  "profiled_runs": 15,
+  "model_GPU_runs_before_freeze": 0,
+  "no_8F2_heldout_validation": true,
+  "no_method_routing_candidate_rank_revision": true,
+  "no_new_benchmark_mixture_budget_or_intensity": true,
+  "profile_durations_ground_truth": false,
+  "retries": 0
+}

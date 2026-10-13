@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "capability_profile": "../benchmark/profiles/model_service_profile_6task.json",
+  "memory_snapshots": {
+    "qwen": "../benchmark/results/system_snapshot/nvml_qwen_sst2.json",
+    "distilbert": "../benchmark/results/system_snapshot/nvml_distilbert_sst2_pynvml.json",
+    "resnet50": "../benchmark/results/system_snapshot/nvml_resnet50_imagenette.json",
+    "paddleocr": "../benchmark/results/system_snapshot/nvml_paddleocr_iiit5k.json",
+    "whisper": "../benchmark/results/system_snapshot/nvml_whisper_small_librispeech.json"
+  },
+  "service_summary_dirs": [
+    "../benchmark/results/placement/active_single_v3_current",
+    "../benchmark/results/placement/active_single_v3_r2",
+    "../benchmark/results/placement/active_single_v3_r3"
+  ],
+  "hardware_snapshot": "../benchmark/results/system_snapshot/nvml_qwen_sst2.json"
+}

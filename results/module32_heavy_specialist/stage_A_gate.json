@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "candidate": "C1",
+  "quality": true,
+  "memory": true,
+  "coverage": true,
+  "raw_S_WER_recomputed": 0.03948844514247252,
+  "stage_B_not_certified_yet": true
+}

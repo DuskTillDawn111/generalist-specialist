@@ -1,0 +1,883 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-06T13:32:12.014279+00:00",
+  "existing_results_and_core_files": 1715,
+  "8F2_sources_and_dependencies": 181,
+  "8C_protected_native_source_files": 218,
+  "native_worker_references": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/__init__.py",
+      "sha256": "7bdb3db9a554480abd62f2eb78c17d53b0c1ecf3baac6737a8521c17a47d7065"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/workload.py",
+      "sha256": "c45e5daff6aa8b8dbe3406a7256a73768ab25e94ad4166931cf4845551096ec1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/models.py",
+      "sha256": "b4fb52cae82f2879b9b40535d3c155f527dc311129921aebba1c95afcb8c3b5d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/deployment.py",
+      "sha256": "73c22c2b0cfff4e67619d31622de86c72e36d5f2dd8c7314ef02dffc0f244a37"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/routing_solver.py",
+      "sha256": "4f9fe562885f17f54c3889b784db00078da5f9be4da6cb8b1ac9fa45308f8b57"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/candidate_generator.py",
+      "sha256": "ef5b394fe4b07755c1d7ee80d48a9184fc1ff478b136167cd9fc129cbd9b6198"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/solve.py",
+      "sha256": "2943b50447e9347d61177cc086dc676006fafcd9a8bb2d4d7d01dfcfbd2baf11"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/milp_seeder.py",
+      "sha256": "ab7b92aae4f4475f2b9e5daec9306f3cfc3206c212526557108d6ccdd291f39a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/seed.py",
+      "sha256": "9b27aef3c6ef07226379e9dab21517575ce4b692cc758043067eef25d71090dd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/replicas.py",
+      "sha256": "bd93ec719d2600ca9d17024b6f2787899fa835ef33e9fc73dead69bf581d5d7f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/candidate_pool_v2.py",
+      "sha256": "87126fd86973ce919ba8aea6bed3f365943f14c355089291e015c0fa09e60ccf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/replica_calibration.py",
+      "sha256": "4c35922070fdf12183d35de8b7548e4213929c561fc0111288b68295cb1fafbf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/empirical_milp.py",
+      "sha256": "8ccebe663fcabd638f47004c397083fff5d824b433c48c036ed065e059151f25"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/tests/test_feasibility.py",
+      "sha256": "976433dbdd9b60b8347380e74308065374759f9ccdd1ad77cde7326ba4c07339"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/tests/test_stage1_5_sweep.py",
+      "sha256": "17d139d4c315ab04202f6e47be673549f6cc1855bd07b235c83d0d404e81752d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/tests/test_milp_seeder.py",
+      "sha256": "7587055df8e9cf8e9ecae2325a9048c46df235fd561ffc313155689c0f7f8071"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/experiments/__init__.py",
+      "sha256": "849b8c8d6156047dd3ad70c08f6180de286a6b19750b11543dd751f92f65c6e5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/experiments/stage1_5_sweep.py",
+      "sha256": "c77a92616954323583a6e589609b4d3ec5355101db53639f569cc5d4a385c0c4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/experiments/validate_seeder.py",
+      "sha256": "77ad164a38d48c22eab9705c0ac3a7e5adc181456405274aafeba65b43fa2874"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing.py",
+      "sha256": "71bde611539e56285826e35ff5071543ac0f56d041c3d4ece3d1903a8a990d75"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/feedback.py",
+      "sha256": "9da33ac95b6fe91fae7653cf29eeb10a0fcafb57648e6eb2f9ce5220a040b93f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/neighborhood.py",
+      "sha256": "b4ea5e7962afa1c589ebd2d17e0218d9f2c34bba9fb7cba1baebf0e727934571"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/runtime.py",
+      "sha256": "2a7ce56b5544fcaaf79fd2e77dc0fb6774d6aa64c600a10cc56078b11b64f1eb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/scoring.py",
+      "sha256": "321260809b051e69f4264a6728b107d9d7e4c168aebe99f459749a5512f283a1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/result.py",
+      "sha256": "1e7bdcd9c5ee3947ebdeb46cbf187527198e7cb7bb2c26077a7d61ad846b5d4e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/search.py",
+      "sha256": "9374ecba01702cf12de33977b10ccf515062f0667571aa9302d19a88ac96085b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/__init__.py",
+      "sha256": "4c2b5bb2dccadd38f8bdf1f2895c13aec421ce07b8cd252e1ac8a83e00c742f5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/validate.py",
+      "sha256": "d660ccf705e84778c2506651d1f5a4cc4101c492ba24443fa72252841acd8b4c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/real_objective.py",
+      "sha256": "97d928034d32a5c066fcc925c16a92739fcb8df4d21bce10333a2aa2688c2175"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/runtime_cache.py",
+      "sha256": "4953babcc690ad6dd1619ab31ad9f8d4e95995dca1ce826274ff4e353d7adf6e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/measurement_runtime.py",
+      "sha256": "0ac62067e10f76268cfb52a1b7b90398e5cf8b0ff14e7a547abd6e5ae4767cfa"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/pilot_provenance.py",
+      "sha256": "b275c23e2ecf7fd421f59e192e540ea106c534d5a4f56ebc95c0312566f85a50"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/real_pilot.py",
+      "sha256": "e4bdb2d495af029258577913b679641941475efa9331bd99bb866f2600c6e86a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/pilot_resume_correction.py",
+      "sha256": "719b2c3903959f73206df3cea7acf87d31e4b94152c5eace2089b07c8b653a7a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/campaign_runtime.py",
+      "sha256": "ada645207346e9b1dc28ca45b7cbb31b3d20161e156da3087960b71456d01dae"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/multiworkload.py",
+      "sha256": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing_search.py",
+      "sha256": "90e387d7921c4b9b72b44b231f86f6b832ad472915b00f6ffbbde9036349b91b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing_foundation.py",
+      "sha256": "9664400ba535279921bf484baa800c7e3c031ceaf05f06c441a2403134907810"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing_real_pilot.py",
+      "sha256": "fb5506ec070a0dfca005a17b42f8b07a6974a05b7b64d5619c03223db0054fc1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/warm_start.py",
+      "sha256": "6bedd8518621f956a17cdd29f0d01d48dc4c6aaad8a08cd7fbc1db12b953ca55"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/dynamic_adaptation.py",
+      "sha256": "7d9ba868999baa0a741b6ef3dc91f4634c5805c4bba8dbc6386a382002c717c9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/dynamic_foundation.py",
+      "sha256": "8e37a5bc91b186ed9d08c84d663374502b0e89dca25bc18452e0369c5f128ca1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/dynamic_real_pilot.py",
+      "sha256": "e9b5a7139da374b029d9a4f47006181fd8a06f0b12e7de2b3fa3e3980188aadc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/integer_search.py",
+      "sha256": "4cf189d51fedc868f27b8072db61b7afdaec5762400a9cef26cfc4cddde15422"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/integer_foundation.py",
+      "sha256": "b5631c9520f3cf9f2922cb85434148663b9cc44ec3dc74edeaef1db4a09c96e5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/__init__.py",
+      "sha256": "7c847facb64a1369362f15ee923716e3aa71e22c398ff6bd3fb17dcb09ff52cf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/fixtures.py",
+      "sha256": "c283e28f18231a07141183698aff9bbeff938975138309d79f5b90ec06ac56bc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/small_space_baseline.py",
+      "sha256": "4467e226a63e894591dbd5f1f2c3e914e6a689e924d16f9cce8cef7ed986ec14"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_search.py",
+      "sha256": "3f2534acfdb1d8ff4910a75edebd0e0d45f13f52b82a7ffcafccbb4d568393dd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_real_runtime.py",
+      "sha256": "9a6e9500db2d42cfb6f5266fe107ebc5e78e24fdb575dd049c86dfd57ecfd9e3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_module3c.py",
+      "sha256": "cf4d79710a4ad26bddffa64df3ec90f1e8b53fbfdc496bb05238e6a4054c5bf5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_routing_search.py",
+      "sha256": "88251d0e7c77cbe75e7a5da26b1c2891b411ed4ea94aaf25bc4426a0f8c1fbd0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_routing_real_pilot.py",
+      "sha256": "cf0ed93bf40510d075c1fe5ae4ced30745ab5d493e4fbc6f0cf10ec371912ab5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_dynamic_adaptation.py",
+      "sha256": "c273d801b72f75951550bfb71aca02d892f1793f552942a54b3f6fc1434d13d8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_dynamic_real_pilot.py",
+      "sha256": "747662911be1c32c6326fb2d23033c58d2076187d791920d1a8640b20b12af9f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/small_integer_oracle.py",
+      "sha256": "0c4cbfe70f5cce13b4447d7f64b853c3d44677a8c76caf0d4a70fe0b5fe08375"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/tests/test_integer_replicas.py",
+      "sha256": "4067e51ace022251fdee10737390f3f2a2b5087171afd92067717e98f453b5e6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/__init__.py",
+      "sha256": "d923e688540e616ee899c4a4a44e8538ef5ef4d15c7824520207d09e4d144d78"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/adapter.py",
+      "sha256": "84ae7db5e96741e8a98cdbcf6da97f6a298f7c5d1b6216a78293d2524407655b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/runtime.py",
+      "sha256": "11bce38d3b08e5b4e15157bc682c52295dde29027805c8707b193829a26a4685"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/evaluator.py",
+      "sha256": "f60dd8e92c9a821a1c691405b633dd56fe4ec23339daca9638fe60438747a1c9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/prepare.py",
+      "sha256": "6957f62b24c002a11263db46d934789164638fd45c70cd05c6aa1851e137a56a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/campaign.py",
+      "sha256": "8be1c69835cecdded80502758bc81877c551db8859c96b27bb6a4fcc0c9495a0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/tests.py",
+      "sha256": "89ef109981cc255c4f492832fedea380b3159cb569989e4b4f64dd6ff45f0b16"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/report.py",
+      "sha256": "30c8f810b0910a216142c04eafa0b189d3260fdd1830d5cf5e12aeab3a82b57c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/postprocess.py",
+      "sha256": "9b55ebf6855b2a482c2447c2e6d138440afa1c5577575a43d126d1e5bcd2e9bf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_multiworkload/__init__.py",
+      "sha256": "6f1f269561b6da66e6020d4b6535a7d16037b9cbf5ac1d57e90e4c02ef5395b7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_multiworkload/prepare.py",
+      "sha256": "1e0620b25131108252d6f9d31e120ab56982dd70dbd8f5b7e533a805d514777f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_multiworkload/campaign.py",
+      "sha256": "cc78281c63ce664d40bc396fd0de921c431a1f665f6a161faab414565b48aec7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_multiworkload/report.py",
+      "sha256": "fb9a3e83660cfefe6a9d363b91ef0cdea2886f71c8c355d7a81c790ebde020bc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_multiworkload/tests.py",
+      "sha256": "01b95196f345bdab92ee415e82538c3f42bea08478f31a30e8b7f2719c51fb83"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/build_mixed_pool.py",
+      "sha256": "ae7d86da25f658562e8630707f743f129b0e03b2251d9be7bdfd3646f5797877"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/distilbert_worker.py",
+      "sha256": "854b1bfc63e95534f4095c2a5bf71cde80e6bee57e7a9ea3d0614718e33f1dce"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/minicpm_worker.py",
+      "sha256": "2992eef61d51689dfc55bdab8c8059cd9b66605e67e3583d471c13e42d21b0e6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/ocr_worker.py",
+      "sha256": "c1813518203206b2bd12f3c56ba91e845c1d650eeb9cbf197b9804c68700c560"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/phi_worker.py",
+      "sha256": "8fea2e4455b190cd2d324d4ef1b393f0678dac0cc6700608787592835bbbb8ad"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/qwen_worker.py",
+      "sha256": "9b45b5ba9ced32e232b608a99cb339b6825082cffa1a850f034fc59c3172da78"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/resnet_worker.py",
+      "sha256": "d8eadbb0c195397cc6187a1d9d629f36f2d57d1a5ace0b5f6c3aa058eddd1022"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_dynamic_hybrid.py",
+      "sha256": "a05760291bc88c899442aa798531795f2e9c31d758d6f4533b77b896f84fb32d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_online_adaptive.py",
+      "sha256": "0e09bb509369013e6f584b04d58c017b2ea3035380c43ee90967976420cfac28"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_pair_profile.py",
+      "sha256": "33323cfb6ba1837d02b5acb47cccd72e79b05c8a6422714e06000a907fd4664c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_placement_plan.py",
+      "sha256": "0853c6b05b901237d4dab0ed6e0c05afd9d1b8089f9717fb2d84365cf06c9647"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_pure_minicpm.py",
+      "sha256": "962edfc9d87c934e664002b92b4e72d7e215468dee0f5687f8749bf49850ea9d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_pure_phi4.py",
+      "sha256": "4bbac3bdf9f8cfae5bfc19cb5b80b5f0be8e9aae61d32fff52f91a58660394d6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_pure_qwen.py",
+      "sha256": "44cfe15167f2f1aa08164204f792b89338c78f4092a538efbd9b3c3e5d4b8705"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_pure_specialists.py",
+      "sha256": "2549508b382743375acbce26e48f48a298395dc6fccc0d8c12e5c921a4cc63d9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_single_specialist.py",
+      "sha256": "d6fb233d9a20c4bebf16eff1fe3d166b222f567c2307e96398a867ea3dd864b6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_static_hybrid.py",
+      "sha256": "33e91cfa4730d5ba09b479ec008467097bad3c3000c1f21633757dbb1377be76"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/summarize_online_sensitivity.py",
+      "sha256": "91adc5b004346a30ddd07d7cb1c5deabad426e4295c68e9e694c04f8e45c7dd5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/validate_resnet_worker.py",
+      "sha256": "892395e305fe10b7022198dfdb806af219d3369e583a1645ce49e8c0923c6ab8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/whisper_worker.py",
+      "sha256": "84ef368f46c55907f06921bd4ce119259e5e61209995ceb00c93b739ecec0932"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/worker_protocol.py",
+      "sha256": "cf38ea57d07fe3f0d98bfb2979da0a0b12c6ab0591826e20c55b9ddc7b36a642"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_pair_profile.py",
+      "sha256": "c31b0d584ad49a7e0698260d3f78bde4679a7f08f117c55d2d06172095c664fe"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_gamma_matrix.py",
+      "sha256": "90e623430880e1011da26e9c1fd8325ddb2890b5c2717b11c1b2b4219acb38fd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_whisper_lid_single_n30.py",
+      "sha256": "a86a288574e0f31a3ce7016f79c5b9195d37d5bc5b5670e39f548df08699d083"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_single_profile.py",
+      "sha256": "ceec71e498821750fa3dc317b286352421fbf2e6ed78b43faac8284832bd5a97"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_single_matrix.py",
+      "sha256": "e03bcb2f8b00032481c235b4fda7b7fe83dcc1a2b61c2859f3b2b5a41ffcb79a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/qwen_worker_nsys_launcher.py",
+      "sha256": "9de80bc1f373d75baa27d9aba8f69448364d739ff6df3a32727d504c44493653"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_single_profile_qwen_nsys.py",
+      "sha256": "706194870f1d375ce4828cbeadd89003381c11e615677e27dafb127f788a1532"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/nvml_sampler.py",
+      "sha256": "7223bf82533e4c25c687b412529fe087e6734c4c26c3007faf480d7f17d8f41c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_single_profile_qwen_nvml.py",
+      "sha256": "dd9bfcec6109ec7ab98dfa7565cda10147e01f4e84506229c7eaf284ff99d4b6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/specialist_worker_nsys_launcher.py",
+      "sha256": "d222ddd3576a7aa53e17dc6aa9facceb04e56fb33efcf8488ff09a3ca7210bad"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_single_profile_specialist_nsys.py",
+      "sha256": "a5733c35dfb9426e7263032902569770325c368b13d663b43f76237b21fb884a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/run_active_single_profile_specialist_nvml.py",
+      "sha256": "e3a453010b0adc7b33d168e52deefe2ecefc82d07b6a32bee22f3ac8e0eac295"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/build_c1_feature_dataset.py",
+      "sha256": "79a1cf0cf6986995da94507dd835176c31106900a1292bc1ec07d0ca4182a584"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/analyze_c1_features.py",
+      "sha256": "fd9f26c77ba1c963ea3f766619d5b73a31e9297c93eed453d4fd182b484b5b92"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/analyze_intensity_law.py",
+      "sha256": "10a1f6f87ff3bc8c1dd0b770aa2949e3eec43cfc819590f2f0b071b23b32da2c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/__init__.py",
+      "sha256": "f36c6a0c085dc9f26baa5e1a61c7b94d697ce5b207b0a6f2e105bec9c7a5e744"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/schema.py",
+      "sha256": "41b7ae114e67e566cb4f94aa720140d109f06e6e6b2400a370c59fc1ae7ca7c2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/router.py",
+      "sha256": "586447b990505564b79d120c8e541fc8498b9342e2af7182979edea46b94ab5c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/load_generator.py",
+      "sha256": "dbd4f8281e5b016b692129b4ade44bf110edc95a63dd2afae53dd8597ba5ffba"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/deployment_runtime.py",
+      "sha256": "993fa6ef03eaa6f71837d878e8ad42fa81a46de0432f49d2a3688c7915a1d392"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/metrics.py",
+      "sha256": "9792f8c2444a466e00401e2178cd342bb904cc13c88b911a1bf962cfd6d47b96"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/run_measurement.py",
+      "sha256": "6bf46ec53dbecce8079b3b0b851be9fb42c9365a84521006d037e735027d2e8e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/tests/protocol_worker.py",
+      "sha256": "bbb3154828cda7f9ec0e075a62a9e6a506c496d8120529a3af1393622a00da7c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/measurement/tests/test_measurement.py",
+      "sha256": "614722e8d470edda513faf2f51c28c0f371bd60fa563ea2795836928672ddb12"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/characterization/__init__.py",
+      "sha256": "edae448953eb186a8d23ff8394609cf26008af1eb767edb5b3161365eca8e29b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/characterization/routing_sweep.py",
+      "sha256": "32faaaea420fb86a718e0e499d3fcf4fc386772da26f111281d8b3ff535db3c6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/characterization/analyze_results.py",
+      "sha256": "503862fd1c58a15800a7d9cbbf04be5c31a78772a49cae7c6b1e320bee339739"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/characterization/validate_dataset.py",
+      "sha256": "cad7cabb0431da1d885bf0f2b9577d85d7e066b9eef61b21b7e69b13eb5e35e9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/characterization/tests/test_routing_sweep.py",
+      "sha256": "503073d7b9e68efd8f56d1739cae40c49d5948f83e7de828fa8bc7d4b12888e1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/__init__.py",
+      "sha256": "4e8082f822f9dc52606dc624f1099a37a383ac61a0e83aced62483afc5dd625e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/schema.py",
+      "sha256": "5d7fdada9a1a2488f3fee3a1704e7afc9c753cbc235c2b89dacbdec96d02c836"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/download.py",
+      "sha256": "e12edf07f3b7a1a3f4fcf0a7c1831a9726fd7d2412aee563b5f146c4ba644d5d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/new_worker.py",
+      "sha256": "a2a1d6526a3f2f1dafb3ba940d47d05982a65c30de428fa702a8aa8d8cd900d2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/registry.py",
+      "sha256": "2257682ad8f1e408b48207ded4a49080eb5b313e8f01f1ac7db0d9be8833f635"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_convnext_tiny.py",
+      "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_roberta_sst2.py",
+      "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_paddleocr_vl.py",
+      "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_whisper_turbo.py",
+      "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_distil_whisper.py",
+      "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/load_test.py",
+      "sha256": "b94c9546c0e277869b6449028126ae37a1bb2cf0d4efbe69ffe8022e6725dfab"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/inventory.py",
+      "sha256": "88d2a35e60ec1ee3c753e9c390b944cd97d9ddb5a3ff226fb6a81321ac81d0ea"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/provenance.py",
+      "sha256": "932f895482756a2c9ff377f1a0accb46adb3e3009e77d76522a9479928ed180d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/prepare.py",
+      "sha256": "43bdd864ab29cb40cd67373e01bdeb818436829f2ee28bb822d1ec3ec685b51f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/freeze.py",
+      "sha256": "389bf84971fed66961dfb736179b77d30ee30148893f7baba8eb70f094eeaa3a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/finalize.py",
+      "sha256": "2a7beec6f6de35ca0614e3ed7067d28979aa4a43f73634821a1a0407360260c2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/test_freeze.py",
+      "sha256": "3bf4d23c8e2f5b003bfc7cc6d1b13a6f998fd62c5cf961238836b3facb58ef7c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/__init__.py",
+      "sha256": "57b67c15efb2c6974ee5d740ee97655d43cba862bcc74241b85aa3b3bffbbf28"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/prepare.py",
+      "sha256": "34bb77ee88d022ae89740a79c21c41dc7a043673dbc0dda6d2ce26d7f58f7c3a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/profile.py",
+      "sha256": "c9c8b455e8af4118a1ed3cb68ef23d0a3a6723088a232acfcccf98ff39243b41"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/campaign.py",
+      "sha256": "bc3f9e8e1fc726c515175bfda09d32aae4ab6379cdeb90453b5976bcbcf0b8b3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/finalize.py",
+      "sha256": "7686d16913e920169526e842ebcebf6512ac68c5ab51e67eebe313301e32f160"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/dry_run.py",
+      "sha256": "a686ec6fc7433197f38edc6ce7071f6fb30517870bf3352c39c8a8564a82aa64"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/test_service_demand.py",
+      "sha256": "948da1a9fdce73f70325fdb7ca3023c76482f6e383aaff7442f4d0659f8fb798"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/cpu_regression.py",
+      "sha256": "abae2b6230b2e9c40f03cf45c7e1338be8a970e5b2e120fb565f83524d81a9dd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_service_demand/report.py",
+      "sha256": "f75b9b6d52bd8db2c70208541b3e36660f179492a9566fc7607656872f4bcf00"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/__init__.py",
+      "sha256": "21859de5973b2def65db8dd460cdbdaa2c9953984c95aa1c19ce95d78197c653"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/common.py",
+      "sha256": "3102c0e6d77d24ea9e6b6951c834dd3a4b704cc0d04308910f39e9e3c7ca92be"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/telemetry.py",
+      "sha256": "5c887e4a7ee9ea1c9ecd9156e7e478969ea7c8cc2d77556aa6557207bdd32fcf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/plan.py",
+      "sha256": "7b6e4bbeb0e3cf4738d2c53a0ab9ee948b6e84b5b5e36b53e2ce8aed17eeae71"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/runtime.py",
+      "sha256": "db04ccd2a456f325d7f7ea6366a8303bb27d2ede6b301edba1d1b5adeb1c2bc2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/campaign.py",
+      "sha256": "efda144b0d35669e627eaa7a80f5f694d162d7a51882dd5aabf02004289bbcd3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/test_replica_scaling.py",
+      "sha256": "56477c334fe98e5a23b64bfe46ff7049b2d9209ef5a61a4af24f2f33cf05777c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/analyze.py",
+      "sha256": "898b3aa6a02d1e93535b557a276c7b15ea68d34f2051ae3b968bcbd81568c639"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/validate.py",
+      "sha256": "c16e3bd7ee1a420478e2fa4a9009fdb088197669fdc8ae6216ebe2598cc463d0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/replica_scaling/report.py",
+      "sha256": "e58b8425ad4cda8fe08b9461cd7b18896761478ed0742f02c3975527a55944b5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/build_baseline_registry.py",
+      "sha256": "cb386fd30c2fa81e1b938c4c410d8ef95f81461e6d09515ad3c8c1933405596b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_distilbert_sst2.py",
+      "sha256": "e3491aab75aa517c7c31f7bf31bd9f6eb4e2dc5374440b0e99f90a9c96a07a58"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_minicpm_iiit5k.py",
+      "sha256": "7a919ee6dd677e0df602da88e3eab9ab7250d4973c513626ecdf2258d6cd6084"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_minicpm_imagenette.py",
+      "sha256": "cdd3fa8b0cf34d88226b4b487df0f9bce32725e08b8622392cd2309b0e753dd3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_minicpm_librispeech.py",
+      "sha256": "d32d2403c8840eb89773b733ac8b7157ee244ade66847f9c836f67d33206f54f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_minicpm_sst2.py",
+      "sha256": "3c2390f1c5ea6729fa06020a6fbee6ae63b4f4ea6d4996b9d8ed4ae674cacb9b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_minicpm_sst2_nvml_probe.py",
+      "sha256": "00f59e72470de0ed28c85afe90df1a5ea3a62de70b690b1ac570c694a76d38cc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_paddleocr_iiit5k.py",
+      "sha256": "7fb204fc7a658c3b280a3923ff73eb348942f2038882adeb16fa8083f51e3b82"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_phi4_iiit5k.py",
+      "sha256": "94e2070fd06947df13d2fbe365dfd81e52ff1d4ef9822b69ef9df2d716d13b23"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_phi4_imagenette.py",
+      "sha256": "82268a7e8fa2a5b9482dbd41564e6cac5a0536a8105760d89ea9cd5018d4207a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_phi4_librispeech.py",
+      "sha256": "63ab4aa8e3b748376eb546bfd738cfa05168a86dfde6e78b2917584ee558a4e7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_phi4_sst2.py",
+      "sha256": "e6bb97de2e63e8fc450c49884c1905070bc23cb954c2fecdfabe02a798bf6653"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_iiit5k.py",
+      "sha256": "0e4eb6342ae45defecf7dae8eb927ad54301f981fc6b020b85135748b88aaf83"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_imagenette.py",
+      "sha256": "f9fb8c2b231e0d73f1967ca855aacb0bb5b67d815860077a26d01019636f5af4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_librispeech.py",
+      "sha256": "2641bce1d2cfd6cba6123a18fa18c9d9aaca02992621d8f0bfd79f7cd9997cab"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_sst2.py",
+      "sha256": "5baeff01a76fed5bc52d7572bc85b420cbed5902cafc0e2cca2e494a26b2023b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_sst2_nvml_probe.py",
+      "sha256": "a674c472f1fe984ee7083e117ea72f17d5242bd81d8010fa89818755140983c9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_resnet_imagenette.py",
+      "sha256": "e4ca48e17850cc652187bb38a3e60c164f1044e4e4ed293e3cdc5b68b946ee25"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_whisper_librispeech.py",
+      "sha256": "693e0a715df3c9b144bfadb7698ee738d4cb83592172c6f3cfdb5a658bdf86ea"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/generate_workloads.py",
+      "sha256": "f178146188fd1cd9722c16133c79fc437b8c3ae4eb38e0153c77c75710ce5d14"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/nvml_process_sampler.py",
+      "sha256": "1765b99f7ddd3deb1b896d9be2356b6268cc9127fdefe1260317e6b1cdef02d7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_iiit5k.py",
+      "sha256": "e7ed0eb3daee50af684b35896332a1cdffa7bf181b962ce0c2c3ad9e62d9c90f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_imagenette.py",
+      "sha256": "dcf3e3c89b1e85e2f43bd02680257caa6c22e70c716eaf21fb3089eb342a6a42"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_librispeech.py",
+      "sha256": "ce50db6d9d63362d5dd2c85fbb120759bf359b9abe336a832cc5f9dfda9ae896"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_sst2.py",
+      "sha256": "2616d3ecfa87e0587a9166f054bc4a451a1d911457e0dbc04b1b6f7a0490daf0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/probe_distilbert_nvml.py",
+      "sha256": "0047e47d1fe754b5d4d0b92650739e527dc63623f144348911d8cfe63b5f8f5b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/probe_paddleocr_nvml.py",
+      "sha256": "9e18a2ef53abd31905cc2e7ffa5d15c5a5dc986e286539308d5dca4a8fca0de1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/probe_resnet50_nvml.py",
+      "sha256": "cad96c1ea37d912d23fb6c6d96357c37d914cf5ea72ba9a6bfb3c8a398097862"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/probe_whisper_nvml.py",
+      "sha256": "6299878e890a8b76a93ac91e7f45b0b9945af5d551038d555e127d40a06842db"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_minicpm.py",
+      "sha256": "6b47d96cf6c0515f7296f9961cc5804fed88b2eea06b76bc42302901e7583aed"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_paddleocr.py",
+      "sha256": "34483b346d2dba8681164289a0ea380d8bb6aa5b49e609bb06a346e6dd9ecd04"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_paddleocr_rec.py",
+      "sha256": "e435c410ac55f5cba56163be3f9169167e681a8c555876d9a6017af33bbe5c95"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_phi.py",
+      "sha256": "52cab848d1cf18d127bbe2edd1fc47358036963d3cdac3be11f70a1e3e830ea7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_phi4_sst2_nvml.py",
+      "sha256": "794d152cecd3c20eeb4a8084cf311d76c573d250cbe8847cf9402ca5d4f8dca8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_qwen.py",
+      "sha256": "dcf8f4cbfada0a565ab32a316e5778a4b35d48c17701bbb58e1c9c5ba9528824"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/profile_specialist.py",
+      "sha256": "e69e632829eeb3e65a8a9ec8258f6d45791068f091eef5da46e8d2d76c57607d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/validate_benchmarks.py",
+      "sha256": "0133c7ce57eb4848226561dbea4bf126359f405bde3c1c94bb1d2d9154ca85ba"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/gen_composition_plans.py",
+      "sha256": "8f4f2f18c4c92c23b080886ef787be0475c7b33f50284b6a7e429303091bd67b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_boolq.py",
+      "sha256": "dc238715be39fe7de78035448fc62a324d59bcde18d9476f7c39ccd7be8980b2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_boolq.py",
+      "sha256": "7f1c5075668698d7b2e79f8cb92b287637c8526a2c9f6191cebfa2c927a3df3f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_scienceqa.py",
+      "sha256": "fbb4501e1b1f368f989351726edbaa26ce150d51071f15072ed171a12bb1050d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_whisper_voxlingua.py",
+      "sha256": "77a6b28c3997077d64397f54d42f77ed23bf912fb142119acce7f34b362f906f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_voxlingua.py",
+      "sha256": "4160cdd05f573a58ce732b3e48d947b96c7d9d75a60b058f5b30efaf26ce43f9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_scienceqa_img.py",
+      "sha256": "da345466733df78c0184aee885ef7ae9e1af2fd16da44de3d5e922fea939dda1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/benchmark/scripts/prepare_voxlingua_lid.py",
+      "sha256": "cd2b4afd382df592efadd2b484f8899bf967a7842a346562c18bcf3d252715ae"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_v2_1_adapters/vqa_extension.py",
+      "sha256": "9902585438dfe8621dbddc42d1fc4f5df4e508562262af9d91434ee0f9cb5c6d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_v2_1_adapters/worker_phi4mm.py",
+      "sha256": "a56c6d0036139baf5d894a79494cf638eb3323da8d39b20498ad6be479bd22c7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_v2_1_adapters/worker_minicpm.py",
+      "sha256": "bc35d79038472c47c87a175d2710c329cfa00392d5ff0f1b8dd7da5d439e83a8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/common.py",
+      "sha256": "e7320bb309b0d99a43a0c9054a62d5a8c6cf0f64d39719e8b13d16b9db23fc89"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/prepare.py",
+      "sha256": "6c66d156edffc2909e1b253d18cfafaede1bd32635b9b228b59a7fdfaabceecf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/profile.py",
+      "sha256": "a2cf53f18848d8b60b44b0ac1646afd39ed3ec4287226cd10ee30da07df74111"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/campaign.py",
+      "sha256": "eaeca98607bb259a5e7640eff54a004d233c1ab1deb7bc80c4b4ecf4fb6f2cd8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/quality.py",
+      "sha256": "d28ef68016c10f35b48cca832ceebcf9c90b2facb0f0e80cb3b3b5408c7cfae9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/service.py",
+      "sha256": "d40feedf5f86780fbd436ab18da91d57bcf2503033f6a2643ec435b8307c6d8b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/planning.py",
+      "sha256": "e0215b8d5b5f4d81c992459e9d96a63387598575b5a6f527752f7db5eceeac44"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8b_quality_pool_finalization/report.py",
+      "sha256": "a0a35a35d194aa2812df6e625ffda2b87ad2893dec57df9c1c4327c10d4ce163"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/__init__.py",
+      "sha256": "19492a9d01a759cdedf41ca41d11c56c447004124b96589a0b5faafb3e0e4dce"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/common.py",
+      "sha256": "1d167d0c6f3dc1c6d70798d8caa53d56deec7d7753816de19fd3992a5ba0f0dd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/prepare.py",
+      "sha256": "ec3d36ee6021d5628a6f8e9450239facb09c6a798c257ff33f4384a913a840f0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/campaign.py",
+      "sha256": "6b10ba6cf78d145bb9bc69bc3cc1c49552a87ac04abe27f1a47441abb3e6867f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/report.py",
+      "sha256": "79ce3709d8221ed0e64dfe053d803ca25759f05a8c43fb25aabfe526c28c7ec4"
+    }
+  ],
+  "runtime_environment_unchanged": true,
+  "failed_hashes": []
+}

@@ -1,0 +1,525 @@
+{
+  "module": "8E-1",
+  "status": "COMPLETE",
+  "artifacts": {
+    "results/module8e1_method_revision/b2_path_compression.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/b2_path_compression.csv",
+      "sha256": "d974f78867181aa621454091e78b2c3c89cbdd4abeb0bf30aad154a7d123373f"
+    },
+    "results/module8e1_method_revision/b2_path_witnesses.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/b2_path_witnesses.json",
+      "sha256": "9354816dd7f2fff57a0a71704b838c272172bad4238839ce12cd0eeaee93d7df"
+    },
+    "results/module8e1_method_revision/candidate_class_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/candidate_class_validation.json",
+      "sha256": "2da0ae19ba785401a6953675a31c6365dd7959672c16704ecc058e9eafa86221"
+    },
+    "results/module8e1_method_revision/complexity_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/complexity_validation.json",
+      "sha256": "7d283b63b15faf3d548d47cfadb33091cb5b51271956a3d9818c383730127a5d"
+    },
+    "results/module8e1_method_revision/counterfactual_budget_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/counterfactual_budget_audit.json",
+      "sha256": "cfc012e81778e2ca262bf67fc2ae66c814e82a6defe6699e9966966848082f36"
+    },
+    "results/module8e1_method_revision/development_cache_misses.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_cache_misses.json",
+      "sha256": "f2d969463392639592d0e0a4242fc07e80d06f00b6c53dee56f209148516369a"
+    },
+    "results/module8e1_method_revision/development_replay.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_replay.json",
+      "sha256": "0212f635816a5c8f6bfe1a504008ad0815b7179332716c1f846460f921caf607"
+    },
+    "results/module8e1_method_revision/development_replay_progress.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_replay_progress.json",
+      "sha256": "0370d4fab52ff76d3c94c33baa2858832b9d9d75e7e749dbdb77d1f2a6ba1af2"
+    },
+    "results/module8e1_method_revision/development_reuse_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_reuse_validation.json",
+      "sha256": "f191609a55101f7cfa349e1455a3621982052d488d252b1ee8ad39bb42c3de16"
+    },
+    "results/module8e1_method_revision/development_workload_designation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+      "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+    },
+    "results/module8e1_method_revision/development_workload_designation.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json.sha256",
+      "sha256": "e8313ace887a1be002817415e67cb4bc4f4ce65b53db9bf4447caa5033bf23bd"
+    },
+    "results/module8e1_method_revision/final_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/final_validation.json",
+      "sha256": "18538057094f25279922aefc4430cdf6315e2d8099fbc3dafbb4f30e9c9b0d64"
+    },
+    "results/module8e1_method_revision/heldout_validation_requirements.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/heldout_validation_requirements.md",
+      "sha256": "ac15d09d7d8af8fb1ea723f0315d41e7ff6c3091db32a06722e0f7e53da7d5c4"
+    },
+    "results/module8e1_method_revision/initial_regression_execution.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/initial_regression_execution.log",
+      "sha256": "1bb1238822b20058c3f9ced1c1a82b94a3383cb3f9578dda49aca3cefe290591"
+    },
+    "results/module8e1_method_revision/initial_regression_progress.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/initial_regression_progress.log",
+      "sha256": "a29983b5fa3344f779d1315ac1f769bd535ba918d747b06f5e3d2b59be86da57"
+    },
+    "results/module8e1_method_revision/initial_regression_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/initial_regression_results.json",
+      "sha256": "272787700de78417d501b44c394ccacb4fd3a0c909ae5def3677c887133978e7"
+    },
+    "results/module8e1_method_revision/method_v1_freeze.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_freeze.json",
+      "sha256": "56e29802e680b4b7a280895419454f924d125be66f3f4ea2ed5ea6c2d4f6157c"
+    },
+    "results/module8e1_method_revision/method_v1_freeze.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_freeze.json.sha256",
+      "sha256": "cb2b4707df3ef677e29586e997ba69a533db832c43f332e6bf75da6e8564a341"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/__init__.py",
+      "sha256": "7bdb3db9a554480abd62f2eb78c17d53b0c1ecf3baac6737a8521c17a47d7065"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/candidate_generator.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/candidate_generator.py",
+      "sha256": "ef5b394fe4b07755c1d7ee80d48a9184fc1ff478b136167cd9fc129cbd9b6198"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/candidate_pool_v2.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/candidate_pool_v2.py",
+      "sha256": "87126fd86973ce919ba8aea6bed3f365943f14c355089291e015c0fa09e60ccf"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/catalog_sources.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/catalog_sources.json",
+      "sha256": "6b71f77068e9fafb05dba98c146df49c1ea2b05ebfb602a23ec03988ccf1bb01"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/deployment.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/deployment.py",
+      "sha256": "73c22c2b0cfff4e67619d31622de86c72e36d5f2dd8c7314ef02dffc0f244a37"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/empirical_milp.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/empirical_milp.py",
+      "sha256": "8ccebe663fcabd638f47004c397083fff5d824b433c48c036ed065e059151f25"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/experiments/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/experiments/__init__.py",
+      "sha256": "849b8c8d6156047dd3ad70c08f6180de286a6b19750b11543dd751f92f65c6e5"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/experiments/stage1_5_sweep.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/experiments/stage1_5_sweep.py",
+      "sha256": "c77a92616954323583a6e589609b4d3ec5355101db53639f569cc5d4a385c0c4"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/experiments/validate_seeder.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/experiments/validate_seeder.py",
+      "sha256": "77ad164a38d48c22eab9705c0ac3a7e5adc181456405274aafeba65b43fa2874"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/milp_seeder.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/milp_seeder.py",
+      "sha256": "ab7b92aae4f4475f2b9e5daec9306f3cfc3206c212526557108d6ccdd291f39a"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/models.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/models.py",
+      "sha256": "b4fb52cae82f2879b9b40535d3c155f527dc311129921aebba1c95afcb8c3b5d"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/replica_calibration.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/replica_calibration.py",
+      "sha256": "4c35922070fdf12183d35de8b7548e4213929c561fc0111288b68295cb1fafbf"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/replicas.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/replicas.py",
+      "sha256": "bd93ec719d2600ca9d17024b6f2787899fa835ef33e9fc73dead69bf581d5d7f"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/routing_solver.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/routing_solver.py",
+      "sha256": "4f9fe562885f17f54c3889b784db00078da5f9be4da6cb8b1ac9fa45308f8b57"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/seed.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/seed.py",
+      "sha256": "9b27aef3c6ef07226379e9dab21517575ce4b692cc758043067eef25d71090dd"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/solve.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/solve.py",
+      "sha256": "2943b50447e9347d61177cc086dc676006fafcd9a8bb2d4d7d01dfcfbd2baf11"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/tests/test_feasibility.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/tests/test_feasibility.py",
+      "sha256": "976433dbdd9b60b8347380e74308065374759f9ccdd1ad77cde7326ba4c07339"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/tests/test_milp_seeder.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/tests/test_milp_seeder.py",
+      "sha256": "7587055df8e9cf8e9ecae2325a9048c46df235fd561ffc313155689c0f7f8071"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/tests/test_stage1_5_sweep.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/tests/test_stage1_5_sweep.py",
+      "sha256": "17d139d4c315ab04202f6e47be673549f6cc1855bd07b235c83d0d404e81752d"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_core/workload.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_core/workload.py",
+      "sha256": "c45e5daff6aa8b8dbe3406a7256a73768ab25e94ad4166931cf4845551096ec1"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/__init__.py",
+      "sha256": "4c2b5bb2dccadd38f8bdf1f2895c13aec421ce07b8cd252e1ac8a83e00c742f5"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/campaign_runtime.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/campaign_runtime.py",
+      "sha256": "ada645207346e9b1dc28ca45b7cbb31b3d20161e156da3087960b71456d01dae"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/dynamic_adaptation.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/dynamic_adaptation.py",
+      "sha256": "7d9ba868999baa0a741b6ef3dc91f4634c5805c4bba8dbc6386a382002c717c9"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/dynamic_foundation.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/dynamic_foundation.py",
+      "sha256": "8e37a5bc91b186ed9d08c84d663374502b0e89dca25bc18452e0369c5f128ca1"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/dynamic_real_pilot.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/dynamic_real_pilot.py",
+      "sha256": "e9b5a7139da374b029d9a4f47006181fd8a06f0b12e7de2b3fa3e3980188aadc"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/feedback.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/feedback.py",
+      "sha256": "9da33ac95b6fe91fae7653cf29eeb10a0fcafb57648e6eb2f9ce5220a040b93f"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/integer_foundation.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/integer_foundation.py",
+      "sha256": "b5631c9520f3cf9f2922cb85434148663b9cc44ec3dc74edeaef1db4a09c96e5"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/integer_search.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/integer_search.py",
+      "sha256": "4cf189d51fedc868f27b8072db61b7afdaec5762400a9cef26cfc4cddde15422"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/measurement_runtime.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/measurement_runtime.py",
+      "sha256": "0ac62067e10f76268cfb52a1b7b90398e5cf8b0ff14e7a547abd6e5ae4767cfa"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/multiworkload.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/multiworkload.py",
+      "sha256": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/neighborhood.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/neighborhood.py",
+      "sha256": "b4ea5e7962afa1c589ebd2d17e0218d9f2c34bba9fb7cba1baebf0e727934571"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/pilot_provenance.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/pilot_provenance.py",
+      "sha256": "b275c23e2ecf7fd421f59e192e540ea106c534d5a4f56ebc95c0312566f85a50"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/pilot_resume_correction.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/pilot_resume_correction.py",
+      "sha256": "719b2c3903959f73206df3cea7acf87d31e4b94152c5eace2089b07c8b653a7a"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/real_objective.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/real_objective.py",
+      "sha256": "97d928034d32a5c066fcc925c16a92739fcb8df4d21bce10333a2aa2688c2175"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/real_pilot.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/real_pilot.py",
+      "sha256": "e4bdb2d495af029258577913b679641941475efa9331bd99bb866f2600c6e86a"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/result.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/result.py",
+      "sha256": "1e7bdcd9c5ee3947ebdeb46cbf187527198e7cb7bb2c26077a7d61ad846b5d4e"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/routing.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/routing.py",
+      "sha256": "71bde611539e56285826e35ff5071543ac0f56d041c3d4ece3d1903a8a990d75"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/routing_foundation.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/routing_foundation.py",
+      "sha256": "9664400ba535279921bf484baa800c7e3c031ceaf05f06c441a2403134907810"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/routing_real_pilot.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/routing_real_pilot.py",
+      "sha256": "fb5506ec070a0dfca005a17b42f8b07a6974a05b7b64d5619c03223db0054fc1"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/routing_search.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/routing_search.py",
+      "sha256": "90e387d7921c4b9b72b44b231f86f6b832ad472915b00f6ffbbde9036349b91b"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/runtime.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/runtime.py",
+      "sha256": "2a7ce56b5544fcaaf79fd2e77dc0fb6774d6aa64c600a10cc56078b11b64f1eb"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/runtime_cache.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/runtime_cache.py",
+      "sha256": "4953babcc690ad6dd1619ab31ad9f8d4e95995dca1ce826274ff4e353d7adf6e"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/scoring.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/scoring.py",
+      "sha256": "321260809b051e69f4264a6728b107d9d7e4c168aebe99f459749a5512f283a1"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/search.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/search.py",
+      "sha256": "9374ecba01702cf12de33977b10ccf515062f0667571aa9302d19a88ac96085b"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/__init__.py",
+      "sha256": "7c847facb64a1369362f15ee923716e3aa71e22c398ff6bd3fb17dcb09ff52cf"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/fixtures.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/fixtures.py",
+      "sha256": "c283e28f18231a07141183698aff9bbeff938975138309d79f5b90ec06ac56bc"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/small_integer_oracle.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/small_integer_oracle.py",
+      "sha256": "0c4cbfe70f5cce13b4447d7f64b853c3d44677a8c76caf0d4a70fe0b5fe08375"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/small_space_baseline.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/small_space_baseline.py",
+      "sha256": "4467e226a63e894591dbd5f1f2c3e914e6a689e924d16f9cce8cef7ed986ec14"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_dynamic_adaptation.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_dynamic_adaptation.py",
+      "sha256": "c273d801b72f75951550bfb71aca02d892f1793f552942a54b3f6fc1434d13d8"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_dynamic_real_pilot.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_dynamic_real_pilot.py",
+      "sha256": "747662911be1c32c6326fb2d23033c58d2076187d791920d1a8640b20b12af9f"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_integer_replicas.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_integer_replicas.py",
+      "sha256": "4067e51ace022251fdee10737390f3f2a2b5087171afd92067717e98f453b5e6"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_module3c.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_module3c.py",
+      "sha256": "cf4d79710a4ad26bddffa64df3ec90f1e8b53fbfdc496bb05238e6a4054c5bf5"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_real_runtime.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_real_runtime.py",
+      "sha256": "9a6e9500db2d42cfb6f5266fe107ebc5e78e24fdb575dd049c86dfd57ecfd9e3"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_routing_real_pilot.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_routing_real_pilot.py",
+      "sha256": "cf0ed93bf40510d075c1fe5ae4ced30745ab5d493e4fbc6f0cf10ec371912ab5"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_routing_search.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_routing_search.py",
+      "sha256": "88251d0e7c77cbe75e7a5da26b1c2891b411ed4ea94aaf25bc4426a0f8c1fbd0"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_search.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/tests/test_search.py",
+      "sha256": "3f2534acfdb1d8ff4910a75edebd0e0d45f13f52b82a7ffcafccbb4d568393dd"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/validate.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/validate.py",
+      "sha256": "d660ccf705e84778c2506651d1f5a4cc4101c492ba24443fa72252841acd8b4c"
+    },
+    "results/module8e1_method_revision/method_v1_source/deployment_search/warm_start.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/deployment_search/warm_start.py",
+      "sha256": "6bedd8518621f956a17cdd29f0d01d48dc4c6aaad8a08cd7fbc1db12b953ca55"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/__init__.py",
+      "sha256": "d923e688540e616ee899c4a4a44e8538ef5ef4d15c7824520207d09e4d144d78"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/adapter.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/adapter.py",
+      "sha256": "84ae7db5e96741e8a98cdbcf6da97f6a298f7c5d1b6216a78293d2524407655b"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/campaign.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/campaign.py",
+      "sha256": "8be1c69835cecdded80502758bc81877c551db8859c96b27bb6a4fcc0c9495a0"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/evaluator.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/evaluator.py",
+      "sha256": "f60dd8e92c9a821a1c691405b633dd56fe4ec23339daca9638fe60438747a1c9"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/postprocess.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/postprocess.py",
+      "sha256": "9b55ebf6855b2a482c2447c2e6d138440afa1c5577575a43d126d1e5bcd2e9bf"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/prepare.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/prepare.py",
+      "sha256": "6957f62b24c002a11263db46d934789164638fd45c70cd05c6aa1851e137a56a"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/report.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/report.py",
+      "sha256": "30c8f810b0910a216142c04eafa0b189d3260fdd1830d5cf5e12aeab3a82b57c"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/runtime.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/runtime.py",
+      "sha256": "11bce38d3b08e5b4e15157bc682c52295dde29027805c8707b193829a26a4685"
+    },
+    "results/module8e1_method_revision/method_v1_source/integer_replica_pilot/tests.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/integer_replica_pilot/tests.py",
+      "sha256": "89ef109981cc255c4f492832fedea380b3159cb569989e4b4f64dd6ff45f0b16"
+    },
+    "results/module8e1_method_revision/method_v1_source/module8c_final_real_search/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/module8c_final_real_search/__init__.py",
+      "sha256": "19492a9d01a759cdedf41ca41d11c56c447004124b96589a0b5faafb3e0e4dce"
+    },
+    "results/module8e1_method_revision/method_v1_source/module8c_final_real_search/campaign.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/module8c_final_real_search/campaign.py",
+      "sha256": "6b10ba6cf78d145bb9bc69bc3cc1c49552a87ac04abe27f1a47441abb3e6867f"
+    },
+    "results/module8e1_method_revision/method_v1_source/module8c_final_real_search/common.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/module8c_final_real_search/common.py",
+      "sha256": "1d167d0c6f3dc1c6d70798d8caa53d56deec7d7753816de19fd3992a5ba0f0dd"
+    },
+    "results/module8e1_method_revision/method_v1_source/module8c_final_real_search/prepare.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/module8c_final_real_search/prepare.py",
+      "sha256": "ec3d36ee6021d5628a6f8e9450239facb09c6a798c257ff33f4384a913a840f0"
+    },
+    "results/module8e1_method_revision/method_v1_source/module8c_final_real_search/report.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/module8c_final_real_search/report.py",
+      "sha256": "79ce3709d8221ed0e64dfe053d803ca25759f05a8c43fb25aabfe526c28c7ec4"
+    },
+    "results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/__init__.py",
+      "sha256": "709f5672c85e99d4148e14e8abe90a627a3fe1f203df4d6db9f2957bc1ddfda0"
+    },
+    "results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/foundation.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/foundation.py",
+      "sha256": "32715501548f8866e357023943c65c2de2fd0bfab0d323a5f131b04724ded6b2"
+    },
+    "results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/report.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/report.py",
+      "sha256": "6212603866e1f93c3c9bc8bdbb64be7cc82732bf5aec2f148f16b93a010639eb"
+    },
+    "results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/tests.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_source/replica_capacity_calibration/tests.py",
+      "sha256": "fe705c4db19b807fc6ad55b9a11a041f3286b3363d3166e9f2ae678226269b3c"
+    },
+    "results/module8e1_method_revision/method_v2_source_hashes.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_source_hashes.json",
+      "sha256": "ceba1adead255aa6dbc54f90a7ddb4ea553a106f17842073a6a395b513cac1df"
+    },
+    "results/module8e1_method_revision/method_v2_source_hashes.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_source_hashes.json.sha256",
+      "sha256": "027e476a4ff5f739607a29ec3c6d947b3da2083d998d891268b9ceffe0af07cc"
+    },
+    "results/module8e1_method_revision/method_v2_spec.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_spec.json",
+      "sha256": "7dfcb1f1c9c12badfd5d297d48247b1f693e02f5a4a73a187fd28ca932fb1462"
+    },
+    "results/module8e1_method_revision/method_v2_spec.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_spec.json.sha256",
+      "sha256": "0dac034b7138ff17e675f426dd8306efbaaab24417ca5e0348da6338cad734cf"
+    },
+    "results/module8e1_method_revision/module8e1_gate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/module8e1_gate.json",
+      "sha256": "8b4017d77913af93b18ed7580d915ea10513a9da152a1ab9319036a917099314"
+    },
+    "results/module8e1_method_revision/module8e1_summary.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/module8e1_summary.md",
+      "sha256": "ae1c824448f9b8b37164b7b83915b976ee6095b6ecfef29a796414002c4c6b00"
+    },
+    "results/module8e1_method_revision/planning_execution.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/planning_execution.log",
+      "sha256": "b11b464138baf9c516a67b93cbcfceb2a7e72d58c90beb48f491e8e5d2b3526d"
+    },
+    "results/module8e1_method_revision/reasoning_replacement_case.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/reasoning_replacement_case.json",
+      "sha256": "e13251d45ee4c5a4fe606b8b09cf9284ff162883b4d147f185f0a881a9b58e8a"
+    },
+    "results/module8e1_method_revision/regression_data_env.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_data_env.json",
+      "sha256": "c1eced19660c31d0f2c673c1ee43b09a1e7a283db8fa4a8597c77a7614a7e08e"
+    },
+    "results/module8e1_method_revision/regression_data_env.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_data_env.log",
+      "sha256": "b6d36b2df874c9a1691108ccb224f6dd2c1db64b8ac237e6371f168a18b04134"
+    },
+    "results/module8e1_method_revision/regression_data_env_stdout.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_data_env_stdout.log",
+      "sha256": "887feda18d49d51bc16b9eae324d89a3a2d4ec5a3ec56a78c14bedc5d7dc8ea4"
+    },
+    "results/module8e1_method_revision/regression_gsdeploy.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_gsdeploy.json",
+      "sha256": "528aadc229ac150f4711188d97a000bc3b68c12551e81988ba2366d8df30ee70"
+    },
+    "results/module8e1_method_revision/regression_gsdeploy.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_gsdeploy.log",
+      "sha256": "710dfb26ef368798d5473b65ad56c23af6decfe308e05302779f6d6fc25d811f"
+    },
+    "results/module8e1_method_revision/regression_gsdeploy_stdout.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_gsdeploy_stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/module8e1_method_revision/regression_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/regression_results.json",
+      "sha256": "3f4dc91f2a6c1762c168f715cb15494c97c3675cc616a7362bf3b9424b7621ce"
+    },
+    "results/module8e1_method_revision/replay_execution.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/replay_execution.log",
+      "sha256": "3c913609fd18d25f998c33dc05a774c4d48c686f1109fda26ba59fd23d2a6579"
+    },
+    "results/module8e1_method_revision/revision_attribution_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/revision_attribution_audit.json",
+      "sha256": "c9364da61e45bb1ba37972058e67592cfc3b70b540d3d778b821b015a31e6e8d"
+    },
+    "results/module8e1_method_revision/routing_revision_status.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/routing_revision_status.json",
+      "sha256": "dd360c27a668d468ccd9ef350ad7aac0e13c221182ceb21ad4835819214cfff2"
+    },
+    "results/module8e1_method_revision/shortest_path_slot_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/shortest_path_slot_audit.json",
+      "sha256": "94a8db03bc8edb26399a8ce75f82a4100ac9842f14d3a23a2eb6c9c18fc38024"
+    },
+    "results/module8e1_method_revision/swap_generation_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/swap_generation_validation.json",
+      "sha256": "106833c6af392ff5b5c49546cb6934101e7adeacecfe3a4972d9d6e3edf6ab46"
+    },
+    "results/module8e1_method_revision/synthetic_final_tests.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/synthetic_final_tests.log",
+      "sha256": "368bdd8feadb336b862598ee7e28f626b6f612e5c86d0cb0c78a357a970229d9"
+    },
+    "results/module8e1_method_revision/synthetic_revision_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/synthetic_revision_validation.json",
+      "sha256": "4a5f7ff8d9dd50436b57ea0d3459c7dbe25ee2002968ab36fb4b4c7b675c02b5"
+    },
+    "results/module8e1_method_revision/synthetic_tests.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/synthetic_tests.log",
+      "sha256": "f4a52121d9a9c3c33f30d07bcb822fb59e3487fa74756f56cd72166b2fd08068"
+    },
+    "method_v1/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v1/__init__.py",
+      "sha256": "0c6c623f7535e7b955ef828f92942a184f2b2d2a5edf6d26ad194cbcfca34b29"
+    },
+    "method_v2/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/__init__.py",
+      "sha256": "57de253575607d5db819b166db3ccb3a0e5907927ff78c45b4b6a1fae4204d68"
+    },
+    "method_v2/engine.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/engine.py",
+      "sha256": "67aa6ffb5a6eb1a0c2d10cd6bbce87152631bc082b5e8700f7051eab05676837"
+    },
+    "method_v2/integer_search.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/integer_search.py",
+      "sha256": "b64ba83492a15895fe9b8aae2bbf3ae55fa616566a0cb6cb5a91594a3d979e8b"
+    },
+    "method_v2/neighborhood.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/neighborhood.py",
+      "sha256": "8c53a7280c4aabb7280722ff5fb2fffd3c74cad8297d5f465499cc7dd721f9d1"
+    },
+    "method_v2/selection.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/selection.py",
+      "sha256": "6ce647dcf6f44fb63e95b717efd09fd592fd290ef977ab48f5caa5e2495dfae3"
+    },
+    "method_v2/tests.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/tests.py",
+      "sha256": "e6926570ed5dba0c853c61e04137ae270e96a4d87a01c37c9ccaaa9e0f62ca2b"
+    },
+    "module8e1_analysis.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8e1_analysis.py",
+      "sha256": "a2de1574cb107b986805e4419a1592569afc7dd40e589c0a25cff2682bcd139b"
+    },
+    "module8e1_budget_probe.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8e1_budget_probe.py",
+      "sha256": "366ec0b67dadefc434463c6a003111bc7fe9bb7999e555f940fc62a508656e5e"
+    },
+    "module8e1_finalize.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8e1_finalize.py",
+      "sha256": "7a7fff313f92166710f9e0e9f94092460b3b5a94020e8ec469ea9664617a19a5"
+    },
+    "module8e1_freeze.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8e1_freeze.py",
+      "sha256": "c677e272b715ffd1ccf36670463f26dce4c0d7e0aca9db370e132105f63a4aeb"
+    },
+    "module8e1_regression.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8e1_regression.py",
+      "sha256": "960023f85d54b204dd995f59dc871a63662bb0f3af26ce765c1690d6aecd6267"
+    }
+  },
+  "new_GPU_runs": 0,
+  "method_v1_overwritten": false,
+  "stop_after_module": "8E-1"
+}

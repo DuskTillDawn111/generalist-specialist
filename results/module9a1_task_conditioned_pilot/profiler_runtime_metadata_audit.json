@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "first_frozen_profile": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/task_path_kernel_profiles/kernel/phi4mm__asr__none__7101.sqlite",
+  "first_profile_sha256": "e709e641a42282c28abaeab48e896e63f2e9a506c8b2be2e6a114b60a9c42a87",
+  "kernel_occurrences": 128584,
+  "request_indices": [
+    0,
+    1,
+    2
+  ],
+  "required_launch_resource_metadata_available": true,
+  "occupancy_calculated_fraction": 1.0,
+  "counter_permissions_changed": false,
+  "CUDA_driver_changed": false
+}

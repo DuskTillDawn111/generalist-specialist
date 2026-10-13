@@ -1,0 +1,37 @@
+{
+  "frozen_at_unix_ns": 1791653751464280352,
+  "reason": "Initial probe threadCPU endpoint was after frozen wall close. Segments also extended beyond close. Initial wall/router thresholds remain valid; initial threadCPU and segment totals are not used for causal attribution. Preserve initial files and rerun a bounded instrumentation-only matrix once with CPU/segment endpoints inside wall timer.",
+  "thresholds": {
+    "router_p95_ms": 1,
+    "control_max_ms": 10
+  },
+  "policy_changed": false,
+  "source_sha256": {
+    "control_diagnosis.py": "aacf3a84ea408fe459d3c269c9f12112d5fe5009332f9ae18ba63416a65bdeaa",
+    "control_diagnosis_v2.py": "429f09e146206391d6b10e131f0a4f83c3af40c49710a678ce40d1c27cbcfd2b"
+  },
+  "cases": [
+    {
+      "id": "E7_H1_T50_original_v2",
+      "history_multiplier": 1,
+      "arrival_scale": 50,
+      "logical_seconds": 2400,
+      "legacy_scan": true
+    },
+    {
+      "id": "E8_H8_T50_original_v2",
+      "history_multiplier": 8,
+      "arrival_scale": 50,
+      "logical_seconds": 2400,
+      "legacy_scan": true
+    },
+    {
+      "id": "E9_H8_T50_deferred_v2",
+      "history_multiplier": 8,
+      "arrival_scale": 50,
+      "logical_seconds": 2400,
+      "legacy_scan": false
+    }
+  ],
+  "outlier_protocol": "Same diagnostic continuation, case fails if any control >=10ms. One run per case, no selection or deletion."
+}

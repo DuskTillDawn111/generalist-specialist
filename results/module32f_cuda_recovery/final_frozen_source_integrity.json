@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "mismatches": [],
+  "manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32f_cuda_recovery/frozen_validation_manifest_v2.json",
+    "sha256": "7ae3eb8083d859e885d5795bddb432c54c746fd3c0b82bfb2172343c6ddb3780",
+    "bytes": 456201
+  }
+}

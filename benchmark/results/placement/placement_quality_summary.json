@@ -1,0 +1,155 @@
+[
+  {
+    "name": "P2",
+    "source": "benchmark/results/placement/p2_qwen_paddle_formal_800.jsonl",
+    "num_results": 800,
+    "tasks": {
+      "text": {
+        "count": 200,
+        "correct": 189,
+        "quality": 0.945,
+        "metric": "accuracy",
+        "sla_threshold": 0.925,
+        "sla_pass": true
+      },
+      "image": {
+        "count": 200,
+        "correct": 200,
+        "quality": 1.0,
+        "metric": "accuracy",
+        "sla_threshold": 1.0,
+        "sla_pass": true
+      },
+      "ocr": {
+        "count": 200,
+        "correct": 192,
+        "quality": 0.96,
+        "metric": "exact_match",
+        "sla_threshold": 0.96,
+        "sla_pass": true
+      },
+      "asr": {
+        "count": 200,
+        "word_errors": 186,
+        "reference_words": 4457,
+        "quality": 0.04173210679829482,
+        "metric": "wer",
+        "sla_threshold": 0.042181,
+        "sla_pass": true,
+        "by_worker": {
+          "qwen": {
+            "count": 200,
+            "word_errors": 186,
+            "reference_words": 4457,
+            "wer": 0.04173210679829482
+          }
+        }
+      }
+    },
+    "all_sla_pass": true
+  },
+  {
+    "name": "P3",
+    "source": "benchmark/results/placement/p3_qwen_paddle_whisper_formal_800.jsonl",
+    "num_results": 800,
+    "tasks": {
+      "text": {
+        "count": 200,
+        "correct": 189,
+        "quality": 0.945,
+        "metric": "accuracy",
+        "sla_threshold": 0.925,
+        "sla_pass": true
+      },
+      "image": {
+        "count": 200,
+        "correct": 200,
+        "quality": 1.0,
+        "metric": "accuracy",
+        "sla_threshold": 1.0,
+        "sla_pass": true
+      },
+      "ocr": {
+        "count": 200,
+        "correct": 192,
+        "quality": 0.96,
+        "metric": "exact_match",
+        "sla_threshold": 0.96,
+        "sla_pass": true
+      },
+      "asr": {
+        "count": 200,
+        "word_errors": 188,
+        "reference_words": 4457,
+        "quality": 0.042180839129459274,
+        "metric": "wer",
+        "sla_threshold": 0.042181,
+        "sla_pass": true,
+        "by_worker": {
+          "whisper": {
+            "count": 200,
+            "word_errors": 188,
+            "reference_words": 4457,
+            "wer": 0.042180839129459274
+          }
+        }
+      }
+    },
+    "all_sla_pass": true
+  },
+  {
+    "name": "P4",
+    "source": "benchmark/results/placement/p4_qwen_3specialists_formal_800.jsonl",
+    "num_results": 800,
+    "tasks": {
+      "text": {
+        "count": 200,
+        "correct": 189,
+        "quality": 0.945,
+        "metric": "accuracy",
+        "sla_threshold": 0.925,
+        "sla_pass": true
+      },
+      "image": {
+        "count": 200,
+        "correct": 200,
+        "quality": 1.0,
+        "metric": "accuracy",
+        "sla_threshold": 1.0,
+        "sla_pass": true
+      },
+      "ocr": {
+        "count": 200,
+        "correct": 192,
+        "quality": 0.96,
+        "metric": "exact_match",
+        "sla_threshold": 0.96,
+        "sla_pass": true
+      },
+      "asr": {
+        "count": 200,
+        "word_errors": 178,
+        "reference_words": 4457,
+        "quality": 0.039937177473636974,
+        "metric": "wer",
+        "sla_threshold": 0.042181,
+        "sla_pass": true,
+        "by_worker": {
+          "whisper": {
+            "count": 170,
+            "word_errors": 162,
+            "reference_words": 3897,
+            "wer": 0.04157043879907621
+          },
+          "qwen": {
+            "count": 30,
+            "word_errors": 16,
+            "reference_words": 560,
+            "wer": 0.02857142857142857
+          }
+        }
+      }
+    },
+    "all_sla_pass": true
+  }
+]

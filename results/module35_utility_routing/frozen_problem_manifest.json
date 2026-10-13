@@ -1,0 +1,135 @@
+{
+  "module": 34,
+  "frozen_unix_ns": 1791706593358064885,
+  "space": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/candidate_space_definition.json",
+    "sha256": "42a45abb3884fb66308826be68f292e5fab91faa1b4ba9cdd8b68710ee42a34b",
+    "bytes": 4573
+  },
+  "utility_definition": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_definition.json",
+    "sha256": "3d00c2193b94e20c8b17e78fbcef68d80724be042f4b45644916f5686b60403b",
+    "bytes": 5831
+  },
+  "utility_reference": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_reference_manifest.json",
+    "sha256": "b66286b7192862556e8c8a2563a2b3c10b0b5b1d96b06ef0f21a59318de89f83",
+    "bytes": 5933
+  },
+  "quality_policy": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+    "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+    "bytes": 10083
+  },
+  "historical_profiles": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/heavy_empirical_x3_reconciled.json",
+      "sha256": "47e5c731b6c3c23fc4bbd73d47c93fda5d23f3ee2db997ecf64a2497328dcea2",
+      "bytes": 117041
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/selected_pool_catalog.json",
+      "sha256": "ab7bbac44c273bcd7a2e11c89329c014d63180b823ca4bd99d386d9859e5a87f",
+      "bytes": 122679
+    }
+  ],
+  "historical33": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/module33_gate.json",
+      "sha256": "078a7b060ad09be905632179609b9dd3148ff54e7e633f3220e8709f3bbd5ea7",
+      "bytes": 15781
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/cpu_oracles.json",
+      "sha256": "b693ecf56cc98dfb2095e69eee49a1fba9d9c88ec4b074df201f5e2a03ac7ed4",
+      "bytes": 32954
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/development_observations.json",
+      "sha256": "30b0b5f99d3453db00a62da3a0acd1dfb8ec3db818d5fc9f6e7b3c81c0aa3fd2",
+      "bytes": 799017
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/pair_observations.json",
+      "sha256": "06bd50c8ff79883977ad776dac63a7e753d6d747c22f876ecaa268af57b62944",
+      "bytes": 314989
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/formal_route_domain_audit.json",
+      "sha256": "18a520ef88faeb0f81be489099d3994e6a37037430a5fb57f0c7e47960a8f6cb",
+      "bytes": 5759
+    }
+  ],
+  "methods": [
+    "CPU_U_ORACLE",
+    "CPU_J_ORACLE",
+    "V3_NATIVE_CONTINUOUS_PRESERVED",
+    "V3_J_GRID_CONTROL",
+    "20A_U_GRID",
+    "20A_NATIVE_CONTINUOUS_PRESERVED",
+    "FASTEST_PATH_STATIC",
+    "MIN_MEMORY_COVER_FASTEST",
+    "G_ONLY_CLASS_ORACLE",
+    "S_ONLY_CLASS_ORACLE"
+  ],
+  "formal_objective": "J for route/rank; unchanged original noise-aware runtime mean/P95/memory acceptance, not a global scalarJ or U objective.",
+  "V3_domain_control": "Independent34 adapter restricting both private V3 ranker and serving J routing to exact endpoint grid. Original candidate generation, top2 selection, stopping, noise acceptance unchanged. Original continuous V3 also retained; never relabel adapter as untouched native.",
+  "U_method": "Existing20A generation schedule and U scoring; finite route units/integrality adapter only. No new U optimizer or outcome-based retuning.",
+  "predictor": "Unchanged20A predict_scenarios,120s phase.37; identical per-candidate evaluation plus commonrho.8 guard",
+  "runtime_repetitions": 3,
+  "GPU_budget": {
+    "max_distinct_development_plans": 6,
+    "development_seconds": 120,
+    "independent_seconds": 240,
+    "development_seed": 340101,
+    "independent_seeds": [
+      340201,
+      340202,
+      340203
+    ],
+    "selection": "After CPU results, choose one feasible B scenario with maximal heuristic U regret (prefer G-only Oracle if available), and C ASR32B Oracle versus fastest-service heuristic; deduplicate. GPU plans/seeds frozen before GPU observation. No new scenario scan after GPU.",
+    "full_GPU_oracle_claim": false,
+    "scope": "Independent key-competitor comparisons; only fully measured predeclared small restricted competition may get an empirical best label. No oracle over all CPU candidates.",
+    "historical_reuse": "Recompute original33 raw U with unchanged20A formula at new fixedbudget49140, retain original raw/Gate/U. Development reuse is not independent new-pool ranking validation; endpoint/replica/path membership checked."
+  },
+  "deadline_local": "2026-10-16 Asia/Shanghai",
+  "priority": "Core CPU9 cells+few independent GPU contrasts, then paper; no automaticModule35",
+  "no_algorithm_refit_after_GPU": true,
+  "source_hashes": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/common.py",
+      "sha256": "1b0525e1068a5508144d9ef647a8ce2a6fcaca7bd2234b311a546d3521d39b4e",
+      "bytes": 1520
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/history.py",
+      "sha256": "d44d60335a9836ba8093a47e5ba78637611bba2a24fae1dbd3202858c7c2a978",
+      "bytes": 1745
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/cpu_core.py",
+      "sha256": "209b7d9522df7c0130ed1f7a9100f2278236eb0b2f5443021001d7ed0a80d5c2",
+      "bytes": 7021
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/freeze.py",
+      "sha256": "61531ab63c603e08c37ac4fb079b117a0264d04568ae36cdf40409c6597dee85",
+      "bytes": 7204
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/grid_control.py",
+      "sha256": "6c1734d407b7953cdc5fe967e5ccbd6d3fd5d94e66ca614fa412c14cb420284a",
+      "bytes": 1943
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/m34/cpu.py",
+      "sha256": "9420d5785520c93b74125cfb7a3739556d5b588e0d588b33f5e808a452c9a8ec",
+      "bytes": 7795
+    }
+  ]
+}

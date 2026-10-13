@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "memory_metric": {
+    "name": "peak_target_process_memory_mib",
+    "unit": "MiB",
+    "definition": "Peak GPU memory attributed to the target inference process by NVML across post_load, post_warmup and post_inference."
+  },
+  "latency_metric": {
+    "name": "e2e_mean_ms",
+    "unit": "ms",
+    "definition": "Mean end-to-end sequential batch-1 service latency from the formal single-task benchmark.",
+    "asr_note": "ASR service latency uses the common fixed-duration [4, 6) second subset for cross-model comparability."
+  },
+  "tasks": [
+    "text",
+    "image",
+    "ocr",
+    "asr"
+  ],
+  "models": {
+    "phi4": {
+      "display_name": "Phi-4-multimodal-instruct",
+      "role": "generalist",
+      "peak_process_vram_mib": 11218.0,
+      "supported_tasks": [
+        "text",
+        "image",
+        "ocr",
+        "asr"
+      ],
+      "tasks": {
+        "text": {
+          "service_ms": 53.68,
+          "quality_metric": "accuracy",
+          "quality": 0.905
+        },
+        "image": {
+          "service_ms": 201.265,
+          "quality_metric": "accuracy",
+          "quality": 0.92
+        },
+        "ocr": {
+          "service_ms": 170.076,
+          "quality_metric": "exact_match",
+          "quality": 0.93
+        },
+        "asr": {
+          "service_ms": 569.887,
+          "quality_metric": "wer",
+          "quality": 0.01952
+        }
+      }
+    },
+    "minicpm": {
+      "display_name": "MiniCPM-o-4.5",
+      "role": "generalist",
+      "peak_process_vram_mib": 18030.0,
+      "supported_tasks": [
+        "text",
+        "image",
+        "ocr",
+        "asr"
+      ],
+      "tasks": {
+        "text": {
+          "service_ms": 59.593,
+          "quality_metric": "accuracy",
+          "quality": 0.92
+        },
+        "image": {
+          "service_ms": 234.847,
+          "quality_metric": "accuracy",
+          "quality": 1.0
+        },
+        "ocr": {
+          "service_ms": 144.897,
+          "quality_metric": "exact_match",
+          "quality": 0.97
+        },
+        "asr": {
+          "service_ms": 513.572,
+          "quality_metric": "wer",
+          "quality": 0.019295
+        }
+      }
+    },
+    "qwen": {
+      "display_name": "Qwen2.5-Omni-7B",
+      "role": "generalist",
+      "peak_process_vram_mib": 17574.0,
+      "supported_tasks": [
+        "text",
+        "image",
+        "ocr",
+        "asr"
+      ],
+      "tasks": {
+        "text": {
+          "service_ms": 41.4,
+          "quality_metric": "accuracy",
+          "quality": 0.945
+        },
+        "image": {
+          "service_ms": 122.488,
+          "quality_metric": "accuracy",
+          "quality": 1.0
+        },
+        "ocr": {
+          "service_ms": 84.766,
+          "quality_metric": "exact_match",
+          "quality": 0.94
+        },
+        "asr": {
+          "service_ms": 424.636,
+          "quality_metric": "wer",
+          "quality": 0.041732
+        }
+      }
+    },
+    "distilbert": {
+      "display_name": "DistilBERT-SST2",
+      "role": "specialist",
+      "specialized_task": "text",
+      "peak_process_vram_mib": 750.0,
+      "supported_tasks": [
+        "text"
+      ],
+      "tasks": {
+        "text": {
+          "service_ms": 1.731,
+          "quality_metric": "accuracy",
+          "quality": 0.925
+        }
+      }
+    },
+    "resnet50": {
+      "display_name": "ResNet50",
+      "role": "specialist",
+      "specialized_task": "image",
+      "peak_process_vram_mib": 604.0,
+      "supported_tasks": [
+        "image"
+      ],
+      "tasks": {
+        "image": {
+          "service_ms": 4.605,
+          "quality_metric": "accuracy",
+          "quality": 1.0
+        }
+      }
+    },
+    "paddleocr": {
+      "display_name": "PP-OCRv6-medium-rec",
+      "role": "specialist",
+      "specialized_task": "ocr",
+      "peak_process_vram_mib": 582.0,
+      "supported_tasks": [
+        "ocr"
+      ],
+      "tasks": {
+        "ocr": {
+          "service_ms": 4.849,
+          "quality_metric": "exact_match",
+          "quality": 0.96
+        }
+      }
+    },
+    "whisper": {
+      "display_name": "Whisper-small",
+      "role": "specialist",
+      "specialized_task": "asr",
+      "peak_process_vram_mib": 1626.0,
+      "supported_tasks": [
+        "asr"
+      ],
+      "tasks": {
+        "asr": {
+          "service_ms": 122.748,
+          "quality_metric": "wer",
+          "quality": 0.042181
+        }
+      }
+    }
+  }
+}

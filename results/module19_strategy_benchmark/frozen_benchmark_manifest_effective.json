@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-10-08T14:19:39.757132+00:00",
+  "status": "AMENDED_STATIC_SCOPE_COMPLETE_AND_STOPPED",
+  "original_manifest_preserved": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/frozen_benchmark_manifest.json",
+    "sha256": "7497004dec9926ff18013d21b00839bf6fcd67fd64f1eee1c3f668bd36b4e7a4",
+    "bytes": 5324026,
+    "mtime_ns": 1791459264096743034
+  },
+  "protocol_label_correction": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/benchmark_protocol_correction.json",
+    "sha256": "9fa0b592a985e474b309fd462fa52145b06970482338d8878afaa2889c8eb25d",
+    "bytes": 1630,
+    "mtime_ns": 1791464962671444578
+  },
+  "user_scope_resolution": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/user_v3_scope_resolution.json",
+    "sha256": "1363b2336a9281454398337d63e6e75afa1c95abcefc5e90ffc0e37b4c3c8500",
+    "bytes": 409,
+    "mtime_ns": 1791466140708802901
+  },
+  "user_requested_system_analysis": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/system_analysis_extension_protocol.json",
+    "sha256": "5498c16f4b0efba8916a55b586347d3f5d955a95cbb09a2fe17056c0a8731ef9",
+    "bytes": 2013,
+    "mtime_ns": 1791467861877886834
+  },
+  "full_Original_V3": "UNVERIFIED; initialization diagnostics retained separately",
+  "excluded_remaining_initializer_only_configs": [
+    "text_mid_original_v3",
+    "text_high_original_v3",
+    "lid_mid_original_v3"
+  ],
+  "static_A_B_Proposed_and_ablation_models_QPS_budgets_routes_unchanged": true,
+  "measured_original_slots": 55,
+  "skipped_original_slots": 8,
+  "no_added_GPU_slots": true,
+  "no_Module20": true
+}

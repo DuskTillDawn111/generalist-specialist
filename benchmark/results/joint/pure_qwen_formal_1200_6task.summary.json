@@ -1,0 +1,102 @@
+{
+  "policy": "pure_generalist_qwen",
+  "tasks": 1200,
+  "results": 1200,
+  "errors": 0,
+  "models": [
+    "qwen"
+  ],
+  "routing": {
+    "qwen": 1200
+  },
+  "routing_by_task": {
+    "text": {
+      "qwen": 200
+    },
+    "image": {
+      "qwen": 200
+    },
+    "ocr": {
+      "qwen": 200
+    },
+    "asr": {
+      "qwen": 200
+    },
+    "visual_qa": {
+      "qwen": 200
+    },
+    "lid": {
+      "qwen": 200
+    }
+  },
+  "wall_time_s": 302.042837985,
+  "throughput_tasks_per_s": 3.972946380736875,
+  "per_task": {
+    "text": {
+      "count": 200,
+      "routing": {
+        "qwen": 200
+      },
+      "worker_latency_mean_ms": 45.39221628499999,
+      "worker_latency_p95_ms": 47.95187705,
+      "queue_wait_mean_ms": 26799.286355014996,
+      "queue_wait_p95_ms": 33250.51624235,
+      "accuracy": 0.945
+    },
+    "image": {
+      "count": 200,
+      "routing": {
+        "qwen": 200
+      },
+      "worker_latency_mean_ms": 141.83402946999996,
+      "worker_latency_p95_ms": 167.95248375000003,
+      "queue_wait_mean_ms": 27159.613024335005,
+      "queue_wait_p95_ms": 32939.62407555,
+      "accuracy": 1.0
+    },
+    "ocr": {
+      "count": 200,
+      "routing": {
+        "qwen": 200
+      },
+      "worker_latency_mean_ms": 98.93786227500003,
+      "worker_latency_p95_ms": 147.05808655000007,
+      "queue_wait_mean_ms": 26154.478895450007,
+      "queue_wait_p95_ms": 32419.9175971,
+      "accuracy": 0.94
+    },
+    "asr": {
+      "count": 200,
+      "routing": {
+        "qwen": 200
+      },
+      "worker_latency_mean_ms": 791.5578384299998,
+      "worker_latency_p95_ms": 1452.9507060000005,
+      "queue_wait_mean_ms": 27063.843987035012,
+      "queue_wait_p95_ms": 32904.74701395001,
+      "corpus_wer": 0.04173210679829482
+    },
+    "visual_qa": {
+      "count": 200,
+      "routing": {
+        "qwen": 200
+      },
+      "worker_latency_mean_ms": 145.427790525,
+      "worker_latency_p95_ms": 256.12430850000004,
+      "queue_wait_mean_ms": 27296.653202414996,
+      "queue_wait_p95_ms": 32665.119516550003,
+      "accuracy": 0.9
+    },
+    "lid": {
+      "count": 200,
+      "routing": {
+        "qwen": 200
+      },
+      "worker_latency_mean_ms": 286.4782061249999,
+      "worker_latency_p95_ms": 324.9630978,
+      "queue_wait_mean_ms": 27725.728216765005,
+      "queue_wait_p95_ms": 33180.7342642,
+      "accuracy": 0.86
+    }
+  }
+}

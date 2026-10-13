@@ -1,0 +1,72 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "task": "text_classification",
+  "dataset": "SST-2",
+  "split": "validation",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "batch_size": 1,
+  "audio_output_enabled": false,
+  "generation": {
+    "do_sample": false,
+    "return_audio": false,
+    "max_new_tokens": 16
+  },
+  "prompt_version": "v1",
+  "prompt": "Classify the sentiment of the following sentence. Answer with exactly one label: positive or negative. Do not provide any explanation.",
+  "prompt_composition": "<task prompt>\\n\\nSentence:\\n<original SST-2 sentence>",
+  "output_normalization": "strip + lowercase only",
+  "generated_token_extraction": "output[:, input_length:] before batch_decode",
+  "num_samples": 200,
+  "correct": 189,
+  "accuracy": 0.945,
+  "invalid_closed_set_outputs": 0,
+  "valid_closed_set_output_rate": 1.0,
+  "input_tokens": {
+    "mean": 70.075,
+    "min": 50,
+    "max": 98
+  },
+  "output_tokens": {
+    "total": 400,
+    "mean": 2.0,
+    "min": 2,
+    "max": 2
+  },
+  "parameters_m": 8931.814,
+  "checkpoint_safetensors_total_mb": 21326.886,
+  "checkpoint_note": "Checkpoint disk size includes components not necessarily loaded when enable_audio_output=False; loaded parameters and runtime memory are reported separately.",
+  "model_load_time_s": 2.999,
+  "warmup_runs": 5,
+  "model_latency": {
+    "mean_ms": 40.795,
+    "p50_ms": 40.93,
+    "p95_ms": 41.405,
+    "p99_ms": 41.832,
+    "min_ms": 39.994,
+    "max_ms": 41.937
+  },
+  "e2e_latency": {
+    "mean_ms": 41.4,
+    "p50_ms": 41.521,
+    "p95_ms": 42.089,
+    "p99_ms": 42.569,
+    "min_ms": 40.535,
+    "max_ms": 42.643
+  },
+  "model_request_service_rate_proxy_qps": 24.513,
+  "e2e_request_service_rate_proxy_qps": 24.155,
+  "throughput_note": "Request QPS values are sequential batch-1 service-rate proxies (1000 / mean latency), not load-tested concurrent throughput.",
+  "torch_idle_allocated_mb": 17043.442,
+  "torch_peak_allocated_mb": 17087.698,
+  "memory_note": "Torch allocator memory is framework-specific auxiliary data; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "synchronized model.generate() only, after processor execution and H2D transfer",
+    "e2e_latency": "task prompt/message build + chat template + processor/tokenization + H2D + model.generate() + generated-token slicing + decode + closed-label normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.52.3",
+  "timestamp": "2026-09-18T01:01:48.609846+08:00"
+}

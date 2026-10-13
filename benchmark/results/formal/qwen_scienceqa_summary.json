@@ -1,0 +1,116 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "task": "visual_qa",
+  "dataset": "ScienceQA",
+  "subset": "IMG",
+  "split": "validation",
+  "evaluation_setting": "ScienceQA validation samples with image context; multiple-choice closed-set answer prediction",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "batch_size": 1,
+  "audio_output_enabled": false,
+  "generation": {
+    "do_sample": false,
+    "return_audio": false,
+    "max_new_tokens": 1
+  },
+  "multimodal_processing": {
+    "qwen_omni_utils": true,
+    "use_audio_in_video": false,
+    "required_vision_inputs": [
+      "pixel_values",
+      "image_grid_thw"
+    ]
+  },
+  "prompt_version": "v1",
+  "prompt": "Answer the visual multiple-choice question using the provided image and question. Answer with exactly one option letter (A, B, C, ...). Do not provide any explanation.",
+  "prompt_composition": "<task prompt> + optional Context + Question + enumerated Choices",
+  "output_normalization": "strip + uppercase only; prediction must exactly equal one valid option letter",
+  "generated_token_extraction": "output[:, input_length:] before batch_decode",
+  "num_samples": 200,
+  "choice_count_distribution": {
+    "2": 56,
+    "3": 52,
+    "4": 88,
+    "5": 4
+  },
+  "correct": 180,
+  "accuracy": 0.9,
+  "invalid_closed_set_outputs": 0,
+  "valid_closed_set_output_rate": 1.0,
+  "per_answer": {
+    "A": {
+      "total": 72,
+      "correct": 65,
+      "accuracy": 0.902778
+    },
+    "B": {
+      "total": 71,
+      "correct": 65,
+      "accuracy": 0.915493
+    },
+    "C": {
+      "total": 32,
+      "correct": 25,
+      "accuracy": 0.78125
+    },
+    "D": {
+      "total": 24,
+      "correct": 24,
+      "accuracy": 1.0
+    },
+    "E": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    }
+  },
+  "input_tokens": {
+    "total": 75251,
+    "mean": 376.255,
+    "min": 95,
+    "max": 683
+  },
+  "output_tokens": {
+    "total": 200,
+    "mean": 1.0,
+    "min": 1,
+    "max": 1
+  },
+  "parameters_m": 8931.814,
+  "checkpoint_safetensors_total_mb": 21326.886,
+  "checkpoint_note": "Checkpoint disk size includes components not necessarily loaded when enable_audio_output=False.",
+  "model_load_time_s": 3.794,
+  "warmup_runs": 5,
+  "model_latency": {
+    "mean_ms": 119.334,
+    "p50_ms": 119.249,
+    "p95_ms": 209.799,
+    "p99_ms": 265.74,
+    "min_ms": 51.922,
+    "max_ms": 266.919
+  },
+  "e2e_latency": {
+    "mean_ms": 136.215,
+    "p50_ms": 136.801,
+    "p95_ms": 240.085,
+    "p99_ms": 301.825,
+    "min_ms": 55.073,
+    "max_ms": 303.304
+  },
+  "model_request_service_rate_proxy_qps": 8.379841,
+  "e2e_request_service_rate_proxy_qps": 7.341335,
+  "throughput_note": "Request QPS values are sequential batch-1 service-rate proxies (1000 / mean latency), not load-tested concurrent throughput.",
+  "torch_idle_allocated_mb": 17043.442,
+  "torch_peak_allocated_mb": 17975.835,
+  "memory_note": "Torch allocator memory is framework-specific auxiliary data; final deployment VRAM comparison uses process-level NVML.",
+  "latency_definition": {
+    "model_latency": "synchronized model.generate() including visual encoding",
+    "e2e_latency": "instruction construction + local image read/decode + multimodal preprocessing + H2D + model.generate() + decode + closed-set postprocessing"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.52.3",
+  "timestamp": "2026-09-25T18:04:50.869671+08:00"
+}

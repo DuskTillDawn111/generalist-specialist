@@ -1,0 +1,252 @@
+{
+  "at_utc": "2026-10-08T14:49:39.648742+00:00",
+  "formula": "U = wQ*Q_norm - wT*T_norm - wL*L_norm - wP*P_norm - wM*M_norm",
+  "weights": {
+    "Q": 0.0,
+    "T": 0.25,
+    "L": 0.3,
+    "P": 0.3,
+    "M": 0.15
+  },
+  "sensitivity_grid": [
+    {
+      "id": "L0.15_P0.15_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.15,
+      "M": 0.05
+    },
+    {
+      "id": "L0.15_P0.15_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.15,
+      "M": 0.15
+    },
+    {
+      "id": "L0.15_P0.15_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.15,
+      "M": 0.3
+    },
+    {
+      "id": "L0.15_P0.3_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.3,
+      "M": 0.05
+    },
+    {
+      "id": "L0.15_P0.3_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.3,
+      "M": 0.15
+    },
+    {
+      "id": "L0.15_P0.3_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.3,
+      "M": 0.3
+    },
+    {
+      "id": "L0.15_P0.45_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.45,
+      "M": 0.05
+    },
+    {
+      "id": "L0.15_P0.45_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.45,
+      "M": 0.15
+    },
+    {
+      "id": "L0.15_P0.45_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.15,
+      "P": 0.45,
+      "M": 0.3
+    },
+    {
+      "id": "L0.3_P0.15_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.15,
+      "M": 0.05
+    },
+    {
+      "id": "L0.3_P0.15_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.15,
+      "M": 0.15
+    },
+    {
+      "id": "L0.3_P0.15_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.15,
+      "M": 0.3
+    },
+    {
+      "id": "L0.3_P0.3_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.3,
+      "M": 0.05
+    },
+    {
+      "id": "L0.3_P0.3_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.3,
+      "M": 0.15
+    },
+    {
+      "id": "L0.3_P0.3_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.3,
+      "M": 0.3
+    },
+    {
+      "id": "L0.3_P0.45_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.45,
+      "M": 0.05
+    },
+    {
+      "id": "L0.3_P0.45_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.45,
+      "M": 0.15
+    },
+    {
+      "id": "L0.3_P0.45_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.3,
+      "P": 0.45,
+      "M": 0.3
+    },
+    {
+      "id": "L0.45_P0.15_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.15,
+      "M": 0.05
+    },
+    {
+      "id": "L0.45_P0.15_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.15,
+      "M": 0.15
+    },
+    {
+      "id": "L0.45_P0.15_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.15,
+      "M": 0.3
+    },
+    {
+      "id": "L0.45_P0.3_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.3,
+      "M": 0.05
+    },
+    {
+      "id": "L0.45_P0.3_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.3,
+      "M": 0.15
+    },
+    {
+      "id": "L0.45_P0.3_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.3,
+      "M": 0.3
+    },
+    {
+      "id": "L0.45_P0.45_M0.05",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.45,
+      "M": 0.05
+    },
+    {
+      "id": "L0.45_P0.45_M0.15",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.45,
+      "M": 0.15
+    },
+    {
+      "id": "L0.45_P0.45_M0.3",
+      "Q": 0.0,
+      "T": 0.25,
+      "L": 0.45,
+      "P": 0.45,
+      "M": 0.3
+    }
+  ],
+  "quality": {
+    "Q_norm": null,
+    "mode": "hard_constraint_only",
+    "reason": "Accuracy, WER and OCR metrics have no direction-consistent cross-task cardinal utility calibration. wQ=0 disables quality reward; no missing scores filled."
+  },
+  "L_norm": "sum(lambda_k/sum(lambda) * mean_E2E_k/ref_ms_k); offered weights frozen, never reweighted by completions",
+  "P_norm": "sum(lambda_k/sum(lambda) * P95_E2E_k/ref_ms_k); separate raw pooled-request P95 reported",
+  "T_norm": "1 - min(1, completed/offered, completed_in_window/(fixed_offered_QPS*planned_window_seconds)); stopped measurement retains planned denominator. Positive sustained queue growth invalidates U via hard stability constraint. Drain cannot erase throughput loss.",
+  "M_norm": "max(safe_factor*postwarm_idle_mean, safe_factor*postmeasurement_idle_mean)/frozen_budget; prediction uses reconciled safe table/budget",
+  "hard_constraints": [
+    "original quality/capability admission",
+    "all offered tasks covered",
+    "route conservation",
+    "only measured replica counts",
+    "safe memory <= budget",
+    "no runtime/errors/incomplete cohort",
+    "system and worker not unstable; recoverable only if original recovery confirmed and no sustained growth"
+  ],
+  "unstable_policy": "U=null, eligible=false. Completed-only latency components retained as CENSORED diagnostic, never sortable. No artificial finite utility for unstable plans.",
+  "primary_tie_rule": "maximize predicted U, then smaller safe memory, then canonical JSON identity",
+  "positive_gain_rule": "delta_U > 0.01; positive means improvement against an explicit feasible same-workload comparator, never absolute U (cost-only U<=0)",
+  "holdout_support_rule": "At least 3 distinct independent matched workload/deployment-group contrasts across >=2 model combinations, >=80% ranking agreement, zero high-confidence reversals, >=80% stress-interval coverage. Module19 never independent validation.",
+  "selection_uncertainty": "Nominal maximum U among nominal rho<1 candidates; operational rho>0.8 and stress-unstable candidates remain visible as conditional, not certified stable or deployment-ready."
+}

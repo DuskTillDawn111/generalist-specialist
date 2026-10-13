@@ -1,0 +1,28 @@
+{
+  "files": {
+    "benchmark_workloads.json": "4b2cc94257870199d36fca03cea0b39028e05f20a5c37eabe55c5a7df9a6fbed",
+    "benchmark_config.json": "6e934bc8618a32bd7a2ec055385c184fa5564cec618c9db57b9073aff5ba7516",
+    "execution_order.json": "8d25d2a39a50390ccadb6c7779083dc957217877793051fa55415a77929d1c08",
+    "source_model_hashes.json": "915477d6b43aa071cdbe1d1fa3428f72fedd1b426a9739726add48f72f2d83b3"
+  },
+  "implementation_sha256": {
+    "deployment_search/__init__.py": "8e30298a5b01e4c446844d608da1c980c48488c49fa6ecbf2068c59549bc8ca6",
+    "deployment_search/campaign_runtime.py": "ada645207346e9b1dc28ca45b7cbb31b3d20161e156da3087960b71456d01dae",
+    "deployment_search/feedback.py": "9da33ac95b6fe91fae7653cf29eeb10a0fcafb57648e6eb2f9ce5220a040b93f",
+    "deployment_search/measurement_runtime.py": "0ac62067e10f76268cfb52a1b7b90398e5cf8b0ff14e7a547abd6e5ae4767cfa",
+    "deployment_search/multiworkload.py": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153",
+    "deployment_search/neighborhood.py": "ffc710771cda141933ee3e525de52ab6af75d36056594d225922884a75955e81",
+    "deployment_search/pilot_provenance.py": "b275c23e2ecf7fd421f59e192e540ea106c534d5a4f56ebc95c0312566f85a50",
+    "deployment_search/pilot_resume_correction.py": "719b2c3903959f73206df3cea7acf87d31e4b94152c5eace2089b07c8b653a7a",
+    "deployment_search/real_objective.py": "97d928034d32a5c066fcc925c16a92739fcb8df4d21bce10333a2aa2688c2175",
+    "deployment_search/real_pilot.py": "e4bdb2d495af029258577913b679641941475efa9331bd99bb866f2600c6e86a",
+    "deployment_search/result.py": "389145e335b1d4f9bb5530851e33ace1d43b3fe3dae8a628ddba312a0628c5af",
+    "deployment_search/routing.py": "237c1e9c0d854c2514ea3337ef3bda387aee071da7717d347075077cfaa7fbae",
+    "deployment_search/runtime.py": "8c80119b0a103417bdcbf56dcdf45d56c69c5c86c3e826302e85861d294cc833",
+    "deployment_search/runtime_cache.py": "4953babcc690ad6dd1619ab31ad9f8d4e95995dca1ce826274ff4e353d7adf6e",
+    "deployment_search/scoring.py": "321260809b051e69f4264a6728b107d9d7e4c168aebe99f459749a5512f283a1",
+    "deployment_search/search.py": "aa91f3925f0f64be097aa40f62ee61b88b101600470e49a53e702e04e4881e21",
+    "deployment_search/validate.py": "d660ccf705e84778c2506651d1f5a4cc4101c492ba24443fa72252841acd8b4c"
+  },
+  "frozen_before_first_gpu_run": true
+}

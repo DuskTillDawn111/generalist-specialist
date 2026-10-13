@@ -1,0 +1,100 @@
+{
+  "placement_source": "benchmark/results/placement/placement_specialist_baseline_g1.json",
+  "profile_source": "benchmark/profiles/model_placement_profile.json",
+  "pool": "benchmark/task_pools/workload_sweep/mixed_ocr_85_800.jsonl",
+  "budget_gib": 24.0,
+  "max_models": 2,
+  "resident_models": [
+    "qwen",
+    "paddleocr"
+  ],
+  "profile_memory_mib": 18156.0,
+  "num_tasks": 800,
+  "num_results": 800,
+  "num_errors": 0,
+  "optimizer_fractional_prediction": {
+    "makespan_ms": 117704.80000000002,
+    "throughput_tasks_per_s": 6.796664197212007,
+    "routing": {
+      "text": {
+        "qwen": {
+          "fraction": 1.0,
+          "requests": 200.0
+        }
+      },
+      "image": {
+        "qwen": {
+          "fraction": 1.0,
+          "requests": 200.0
+        }
+      },
+      "ocr": {
+        "paddleocr": {
+          "fraction": 1.0,
+          "requests": 200.0
+        }
+      },
+      "asr": {
+        "qwen": {
+          "fraction": 1.0,
+          "requests": 200.0
+        }
+      }
+    },
+    "predicted_quality": {
+      "text": 0.945,
+      "image": 1.0,
+      "ocr": 0.96,
+      "asr": 0.041732
+    }
+  },
+  "integer_route_prediction": {
+    "model_load_ms": {
+      "qwen": 23540.960000000003,
+      "paddleocr": 3297.32
+    },
+    "makespan_ms": 23540.960000000003,
+    "throughput_tasks_per_s": 33.983320986060036
+  },
+  "exact_routing_counts": {
+    "text": {
+      "qwen": 40
+    },
+    "image": {
+      "qwen": 40
+    },
+    "ocr": {
+      "paddleocr": 680
+    },
+    "asr": {
+      "qwen": 40
+    }
+  },
+  "measured": {
+    "wall_time_s": 28.98322448,
+    "throughput_tasks_per_s": 27.602173821344255,
+    "routing": {
+      "paddleocr": 680,
+      "qwen": 120
+    },
+    "routing_by_task": {
+      "text": {
+        "qwen": 40
+      },
+      "image": {
+        "qwen": 40
+      },
+      "ocr": {
+        "paddleocr": 680
+      },
+      "asr": {
+        "qwen": 40
+      }
+    }
+  },
+  "prediction_error": {
+    "wall_time_percent": 18.777291269835956,
+    "throughput_percent": 23.118277589359128
+  },
+  "errors": []
+}

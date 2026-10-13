@@ -1,0 +1,38 @@
+{
+  "module": "13A",
+  "gate": "REAL_SPECIALIST_SHORTLIST_READY",
+  "at_utc": "2026-10-07T14:39:24.133736+00:00",
+  "evidence_kind": "REAL_MODEL_CANDIDATE_DISCOVERY",
+  "candidate_task_paths": 18,
+  "legal_candidate_count_by_task": {
+    "asr": 6,
+    "lid": 6,
+    "text": 5
+  },
+  "shortlist_count_by_task": {
+    "asr": 3,
+    "lid": 3,
+    "text": 3
+  },
+  "unique_shortlist_checkpoints": 8,
+  "all_shortlisted_public_ungated": true,
+  "all_shortlisted_local_inference_paths_documented": true,
+  "local_inference_runtime_validation": "DEFERRED_TO_13B; documented reproducibility is gate evidence, not a GPU smoke test",
+  "quality_admission_frozen": true,
+  "task_mapping_checkpoint_dataset_metric_threshold_order_selection_frozen": true,
+  "all_new_gamma_mu_target_classifications": "UNKNOWN",
+  "new_operating_points_near_transition_demonstrated": false,
+  "BALANCED_SPECIALIST_REGIME_status": "PROPOSED_NOT_YET_REAL_MEASURED_OR_ADMITTED",
+  "selected_to_make_Generalist_win": "NO",
+  "selection_rule_evidence": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/specialist_selection_rule.json",
+    "sha256": "7b0bc9fbca345ceae08211d84140c5cba4f95a34e52bce62e39981c0373eb6e7",
+    "bytes": 26829
+  },
+  "GPU_runs": 0,
+  "weights_downloaded": 0,
+  "models_loaded": 0,
+  "counterfactual_values_used_as_real_performance": false,
+  "Module13B_started": false,
+  "completion_instruction": "Stop after Module13A. Do not execute the frozen measurement specification."
+}

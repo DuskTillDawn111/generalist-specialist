@@ -1,0 +1,22 @@
+{
+  "models": [
+    "distilbert",
+    "paddleocr"
+  ],
+  "routing": {
+    "text": "distilbert",
+    "ocr": "paddleocr"
+  },
+  "num_results": 400,
+  "wall_time_s": 1.238348028,
+  "paths": {
+    "distilbert:text": {
+      "count": 200,
+      "mean_worker_latency_ms": 2.78175108
+    },
+    "paddleocr:ocr": {
+      "count": 200,
+      "mean_worker_latency_ms": 6.12943715
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "gate": "HEAVY_S_NO_POSITIVE_GAIN",
+  "gate_definition": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/module32_gate_definition.json",
+    "sha256": "572d7b5abea62ff0b7425d3f74f6eef2953b96c6aea60b5891490d414793e312",
+    "bytes": 894
+  },
+  "formal_windows_attempted": 3,
+  "all_three_legal_stable": true,
+  "positive_arms": [],
+  "pairs": [
+    {
+      "arm": "A1",
+      "legal_matched_pair": true,
+      "delta_U": -0.8727565656960015,
+      "positive": false,
+      "G_ASR": 17,
+      "S_ASR": 263,
+      "actual_split": 0.060714285714285714,
+      "auxiliary_G_sample_below20": true,
+      "independent_replication": false
+    },
+    {
+      "arm": "A2",
+      "legal_matched_pair": true,
+      "delta_U": -0.3264457677268413,
+      "positive": false,
+      "G_ASR": 34,
+      "S_ASR": 246,
+      "actual_split": 0.12142857142857143,
+      "auxiliary_G_sample_below20": false,
+      "independent_replication": false
+    }
+  ],
+  "historical_integrity": true,
+  "candidate1_formal_executed": false,
+  "formal_candidate": "C2",
+  "independent_replication": false,
+  "optimizer_modified": false
+}

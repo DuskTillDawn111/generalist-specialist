@@ -1,0 +1,435 @@
+{
+  "counts": {
+    "WIN": 2,
+    "TIE": 4,
+    "LOSS": 0
+  },
+  "unclassified": 0,
+  "per_workload": [
+    {
+      "workload": "heldout_mix_01_moderate",
+      "intensity": "moderate",
+      "M2_vs_M1": {
+        "outcome": "TIE",
+        "forward_reason": "objective_tie",
+        "reverse_reason": "objective_tie",
+        "mean_difference_ms": 0.0,
+        "P95_difference_ms": 0.0,
+        "memory_difference_mib": 0.0
+      },
+      "M1_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 6.289381274749836,
+        "P95_difference_ms": 3.7572638127467,
+        "memory_difference_mib": -2324.0
+      },
+      "M2_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 6.289381274749836,
+        "P95_difference_ms": 3.7572638127467,
+        "memory_difference_mib": -2324.0
+      },
+      "gap_to_B2_v1": {
+        "mean_gap": 0.16884055206020476,
+        "P95_gap": 0.07440552302595815,
+        "reason": "frozen signed relative gap"
+      },
+      "gap_to_B2_v2": {
+        "mean_gap": 0.16884055206020476,
+        "P95_gap": 0.07440552302595815,
+        "reason": "frozen signed relative gap"
+      }
+    },
+    {
+      "workload": "heldout_mix_01_high",
+      "intensity": "high",
+      "M2_vs_M1": {
+        "outcome": "TIE",
+        "forward_reason": "objective_tie",
+        "reverse_reason": "objective_tie",
+        "mean_difference_ms": 0.0,
+        "P95_difference_ms": 0.0,
+        "memory_difference_mib": 0.0
+      },
+      "M1_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 6.135086149738278,
+        "P95_difference_ms": 12.233711594079097,
+        "memory_difference_mib": -2324.0
+      },
+      "M2_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 6.135086149738278,
+        "P95_difference_ms": 12.233711594079097,
+        "memory_difference_mib": -2324.0
+      },
+      "gap_to_B2_v1": {
+        "mean_gap": 0.174008497471283,
+        "P95_gap": 0.2411668608248836,
+        "reason": "frozen signed relative gap"
+      },
+      "gap_to_B2_v2": {
+        "mean_gap": 0.174008497471283,
+        "P95_gap": 0.2411668608248836,
+        "reason": "frozen signed relative gap"
+      }
+    },
+    {
+      "workload": "heldout_mix_02_moderate",
+      "intensity": "moderate",
+      "M2_vs_M1": {
+        "outcome": "WIN",
+        "forward_reason": "mean_improved",
+        "reverse_reason": "mean_worse",
+        "mean_difference_ms": -17.164488443271082,
+        "P95_difference_ms": -26.622561425280793,
+        "memory_difference_mib": 6206.0
+      },
+      "M1_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 17.57834398708667,
+        "P95_difference_ms": 26.563078853522384,
+        "memory_difference_mib": -9878.0
+      },
+      "M2_vs_B2": {
+        "outcome": "TIE",
+        "forward_reason": "latency_gain_below_min_relative_improvement",
+        "reverse_reason": "p95_worse",
+        "mean_difference_ms": 0.4138555438155862,
+        "P95_difference_ms": -0.05948257175840865,
+        "memory_difference_mib": -3672.0
+      },
+      "gap_to_B2_v1": {
+        "mean_gap": 0.5237753172304991,
+        "P95_gap": 0.5505465450333213,
+        "reason": "frozen signed relative gap"
+      },
+      "gap_to_B2_v2": {
+        "mean_gap": 0.012331498286121345,
+        "P95_gap": -0.0012328361690251421,
+        "reason": "frozen signed relative gap"
+      }
+    },
+    {
+      "workload": "heldout_mix_02_high",
+      "intensity": "high",
+      "M2_vs_M1": {
+        "outcome": "WIN",
+        "forward_reason": "mean_improved",
+        "reverse_reason": "mean_worse",
+        "mean_difference_ms": -3.676245824614199,
+        "P95_difference_ms": -0.9519852231245096,
+        "memory_difference_mib": 6206.0
+      },
+      "M1_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 2.8326325924784186,
+        "P95_difference_ms": 1.5024046369690751,
+        "memory_difference_mib": -9878.0
+      },
+      "M2_vs_B2": {
+        "outcome": "TIE",
+        "forward_reason": "p95_worse",
+        "reverse_reason": "latency_gain_below_min_relative_improvement",
+        "mean_difference_ms": -0.8436132321357803,
+        "P95_difference_ms": 0.5504194138445655,
+        "memory_difference_mib": -3672.0
+      },
+      "gap_to_B2_v1": {
+        "mean_gap": 0.084284193390048,
+        "P95_gap": 0.028672951330283025,
+        "reason": "frozen signed relative gap"
+      },
+      "gap_to_B2_v2": {
+        "mean_gap": -0.025101476623738073,
+        "P95_gap": 0.010504592888002984,
+        "reason": "frozen signed relative gap"
+      }
+    },
+    {
+      "workload": "heldout_mix_03_moderate",
+      "intensity": "moderate",
+      "M2_vs_M1": {
+        "outcome": "TIE",
+        "forward_reason": "objective_tie",
+        "reverse_reason": "objective_tie",
+        "mean_difference_ms": 0.0,
+        "P95_difference_ms": 0.0,
+        "memory_difference_mib": 0.0
+      },
+      "M1_vs_B2": {
+        "outcome": "TIE",
+        "forward_reason": "latency_gain_below_min_relative_improvement",
+        "reverse_reason": "p95_worse",
+        "mean_difference_ms": 0.5067194531491559,
+        "P95_difference_ms": -0.5856096156966544,
+        "memory_difference_mib": -6206.0
+      },
+      "M2_vs_B2": {
+        "outcome": "TIE",
+        "forward_reason": "latency_gain_below_min_relative_improvement",
+        "reverse_reason": "p95_worse",
+        "mean_difference_ms": 0.5067194531491559,
+        "P95_difference_ms": -0.5856096156966544,
+        "memory_difference_mib": -6206.0
+      },
+      "gap_to_B2_v1": {
+        "mean_gap": 0.020046616953381058,
+        "P95_gap": -0.016697514719145823,
+        "reason": "frozen signed relative gap"
+      },
+      "gap_to_B2_v2": {
+        "mean_gap": 0.020046616953381058,
+        "P95_gap": -0.016697514719145823,
+        "reason": "frozen signed relative gap"
+      }
+    },
+    {
+      "workload": "heldout_mix_03_high",
+      "intensity": "high",
+      "M2_vs_M1": {
+        "outcome": "TIE",
+        "forward_reason": "objective_tie",
+        "reverse_reason": "objective_tie",
+        "mean_difference_ms": 0.0,
+        "P95_difference_ms": 0.0,
+        "memory_difference_mib": 0.0
+      },
+      "M1_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 1.3760604157526224,
+        "P95_difference_ms": 1.1311293012967738,
+        "memory_difference_mib": -6206.0
+      },
+      "M2_vs_B2": {
+        "outcome": "LOSS",
+        "forward_reason": "mean_worse",
+        "reverse_reason": "mean_improved",
+        "mean_difference_ms": 1.3760604157526224,
+        "P95_difference_ms": 1.1311293012967738,
+        "memory_difference_mib": -6206.0
+      },
+      "gap_to_B2_v1": {
+        "mean_gap": 0.05489183676332332,
+        "P95_gap": 0.03330518471809785,
+        "reason": "frozen signed relative gap"
+      },
+      "gap_to_B2_v2": {
+        "mean_gap": 0.05489183676332332,
+        "P95_gap": 0.03330518471809785,
+        "reason": "frozen signed relative gap"
+      }
+    }
+  ],
+  "by_intensity": {
+    "moderate": {
+      "counts": {
+        "WIN": 1,
+        "TIE": 2,
+        "LOSS": 0
+      },
+      "mechanism": [
+        {
+          "workload": "heldout_mix_01_moderate",
+          "intensity": "moderate",
+          "status": "COMPLETE",
+          "base_candidates_generated": 30,
+          "Class_P_generated": 12,
+          "Class_R_generated": 57,
+          "targeted_swaps_generated": 39,
+          "replacement_closures_generated": 3,
+          "swaps_Top_B": 3,
+          "closures_Top_B": 3,
+          "swaps_evaluated": 2,
+          "closures_evaluated": 2,
+          "swaps_accepted": 0,
+          "closures_accepted": 0,
+          "swaps_rolled_back": 2,
+          "closures_rolled_back": 2,
+          "beneficial_states_M1_missed": 0,
+          "mechanism_activated": true,
+          "termination_reason": "RUNTIME_EVALUATION_BUDGET_REACHED"
+        },
+        {
+          "workload": "heldout_mix_02_moderate",
+          "intensity": "moderate",
+          "status": "COMPLETE",
+          "base_candidates_generated": 15,
+          "Class_P_generated": 5,
+          "Class_R_generated": 31,
+          "targeted_swaps_generated": 21,
+          "replacement_closures_generated": 1,
+          "swaps_Top_B": 1,
+          "closures_Top_B": 1,
+          "swaps_evaluated": 1,
+          "closures_evaluated": 1,
+          "swaps_accepted": 1,
+          "closures_accepted": 1,
+          "swaps_rolled_back": 0,
+          "closures_rolled_back": 0,
+          "beneficial_states_M1_missed": 1,
+          "mechanism_activated": true,
+          "termination_reason": "NO_RUNTIME_IMPROVEMENT"
+        },
+        {
+          "workload": "heldout_mix_03_moderate",
+          "intensity": "moderate",
+          "status": "COMPLETE",
+          "base_candidates_generated": 18,
+          "Class_P_generated": 7,
+          "Class_R_generated": 35,
+          "targeted_swaps_generated": 24,
+          "replacement_closures_generated": 2,
+          "swaps_Top_B": 2,
+          "closures_Top_B": 2,
+          "swaps_evaluated": 2,
+          "closures_evaluated": 2,
+          "swaps_accepted": 0,
+          "closures_accepted": 0,
+          "swaps_rolled_back": 2,
+          "closures_rolled_back": 2,
+          "beneficial_states_M1_missed": 0,
+          "mechanism_activated": true,
+          "termination_reason": "NO_RUNTIME_IMPROVEMENT"
+        }
+      ],
+      "note": "Original reference-defined intensity unchanged; report activation, not a post-hoc saturation reinterpretation."
+    },
+    "high": {
+      "counts": {
+        "WIN": 1,
+        "TIE": 2,
+        "LOSS": 0
+      },
+      "mechanism": [
+        {
+          "workload": "heldout_mix_01_high",
+          "intensity": "high",
+          "status": "COMPLETE",
+          "base_candidates_generated": 30,
+          "Class_P_generated": 12,
+          "Class_R_generated": 57,
+          "targeted_swaps_generated": 39,
+          "replacement_closures_generated": 3,
+          "swaps_Top_B": 3,
+          "closures_Top_B": 3,
+          "swaps_evaluated": 2,
+          "closures_evaluated": 2,
+          "swaps_accepted": 0,
+          "closures_accepted": 0,
+          "swaps_rolled_back": 2,
+          "closures_rolled_back": 2,
+          "beneficial_states_M1_missed": 1,
+          "mechanism_activated": true,
+          "termination_reason": "RUNTIME_EVALUATION_BUDGET_REACHED"
+        },
+        {
+          "workload": "heldout_mix_02_high",
+          "intensity": "high",
+          "status": "COMPLETE",
+          "base_candidates_generated": 15,
+          "Class_P_generated": 5,
+          "Class_R_generated": 31,
+          "targeted_swaps_generated": 21,
+          "replacement_closures_generated": 1,
+          "swaps_Top_B": 1,
+          "closures_Top_B": 1,
+          "swaps_evaluated": 1,
+          "closures_evaluated": 1,
+          "swaps_accepted": 1,
+          "closures_accepted": 1,
+          "swaps_rolled_back": 0,
+          "closures_rolled_back": 0,
+          "beneficial_states_M1_missed": 1,
+          "mechanism_activated": true,
+          "termination_reason": "NO_RUNTIME_IMPROVEMENT"
+        },
+        {
+          "workload": "heldout_mix_03_high",
+          "intensity": "high",
+          "status": "COMPLETE",
+          "base_candidates_generated": 18,
+          "Class_P_generated": 7,
+          "Class_R_generated": 35,
+          "targeted_swaps_generated": 24,
+          "replacement_closures_generated": 2,
+          "swaps_Top_B": 2,
+          "closures_Top_B": 2,
+          "swaps_evaluated": 2,
+          "closures_evaluated": 2,
+          "swaps_accepted": 0,
+          "closures_accepted": 0,
+          "swaps_rolled_back": 2,
+          "closures_rolled_back": 2,
+          "beneficial_states_M1_missed": 0,
+          "mechanism_activated": true,
+          "termination_reason": "NO_RUNTIME_IMPROVEMENT"
+        }
+      ],
+      "note": "Original reference-defined intensity unchanged; report activation, not a post-hoc saturation reinterpretation."
+    }
+  },
+  "regressions": [
+    {
+      "workload": "heldout_mix_01_moderate",
+      "relative_mean_regression": 0.0,
+      "stability_regression": false,
+      "clear_regression": false,
+      "severe_regression": false
+    },
+    {
+      "workload": "heldout_mix_01_high",
+      "relative_mean_regression": 0.0,
+      "stability_regression": false,
+      "clear_regression": false,
+      "severe_regression": false
+    },
+    {
+      "workload": "heldout_mix_02_moderate",
+      "relative_mean_regression": -0.3356425407086526,
+      "stability_regression": false,
+      "clear_regression": false,
+      "severe_regression": false
+    },
+    {
+      "workload": "heldout_mix_02_high",
+      "relative_mean_regression": -0.10088284112285029,
+      "stability_regression": false,
+      "clear_regression": false,
+      "severe_regression": false
+    },
+    {
+      "workload": "heldout_mix_03_moderate",
+      "relative_mean_regression": 0.0,
+      "stability_regression": false,
+      "clear_regression": false,
+      "severe_regression": false
+    },
+    {
+      "workload": "heldout_mix_03_high",
+      "relative_mean_regression": 0.0,
+      "stability_regression": false,
+      "clear_regression": false,
+      "severe_regression": false
+    }
+  ],
+  "protocol_valid_and_campaign_complete": true,
+  "objective": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/tie_policy.json",
+    "sha256": "4cdb8c94c973e62b523719e60a7d5d59b8423686f1d1461f97cce5169c2d84c0"
+  }
+}

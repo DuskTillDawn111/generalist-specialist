@@ -1,0 +1,118 @@
+{
+  "gate": "DYNAMIC_EVIDENCE_GAP",
+  "at_unix_ns": 1791551890209707880,
+  "completed_and_stopped": true,
+  "stage_A": "SUPPORTED_REAL_BACKLOG_AND_G_EMPTY_WINDOWS; unexecuted marginal benefit UNSUPPORTED until GPU",
+  "stage_B": "INDEPENDENT_FROZEN_PROTOTYPE",
+  "exploration_groups": [
+    {
+      "profile": "steady",
+      "repetition": 1,
+      "qualifies": false,
+      "reason": "INCOMPLETE_GROUP",
+      "arms": [
+        "s_only"
+      ]
+    }
+  ],
+  "selected_candidate": null,
+  "independent_groups": [],
+  "independent_delta_U": [],
+  "independent_t95_interval": null,
+  "independently_replicated": false,
+  "fatal": {
+    "run_id": "C_steady_s_only",
+    "reason": "ILLEGAL_UNSTABLE_OR_INFRASTRUCTURE_FAILURE",
+    "errors": [],
+    "worker_states": {
+      "qwen#0": "steady",
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e#0": "unstable",
+      "roberta_sst2#0": "steady",
+      "convnext_tiny#0": "steady",
+      "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt#0": "steady"
+    }
+  },
+  "exploration_attempts": 1,
+  "validation_attempts": 0,
+  "formal_seconds": 600.0,
+  "maximum_exploration_attempts": 6,
+  "maximum_total_attempts": 15,
+  "optimizer_modified": false,
+  "optimizer_integration_worth_studying": false,
+  "next_module_automatic": false,
+  "historical_files_checked": 16350,
+  "historical_metadata_changes": [],
+  "historical_source_hash_changes": [],
+  "small_sample_limit": "n=3: paired-t assumes normal effects; one-sided exact sign p minimum0.125; conditional single-pair block intervals are not independent CI; no cross-pool generalization",
+  "definitions_and_parameters_unchanged": true,
+  "controller_initial_gate": "DYNAMIC_NO_UTILITY_GAIN",
+  "gate_vocabulary": {
+    "NO_DYNAMIC_OPPORTUNITY": "No supported opportunity and no justified bounded measurement",
+    "DYNAMIC_NO_UTILITY_GAIN": "Legal stable dynamic comparisons executed, no qualifying utility gain",
+    "DYNAMIC_EXPLORATORY_POSITIVE_ONLY": "Positive development candidate, independent gate unpassed or not run",
+    "DYNAMIC_NOT_REPRODUCED": "Positive development candidate fails independent reproduction",
+    "DYNAMIC_POSITIVE_REPLICATED": "Frozen independent gate passes",
+    "DYNAMIC_EVIDENCE_GAP": "Missing or illegal comparisons; effect cannot be determined"
+  },
+  "evidence_status": "INCONCLUSIVE_UNSTABLE_CONTROL_DYNAMIC_NOT_MEASURED",
+  "dynamic_gpu_executed": false,
+  "fixed_split_gpu_executed": false,
+  "positive_gain_found": null,
+  "dynamic_superiority": null,
+  "independent_validation_status": "NOT_EXECUTED",
+  "Stage_E": "NOT_EXECUTED_NO_INDEPENDENT_POSITIVE_EVIDENCE",
+  "capacity_interpretation": "Frozen classifier rejects this 600s window; not proof of infinite-horizon instability or of dynamic routing failure",
+  "original_stability_thresholds_unchanged": true,
+  "reporting_amendment": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28_dynamic_split/analysis_acceptance_amendment.json",
+    "sha256": "2965f2c8e1f6a4bdc7e52c42810129e776f2d4c6d0e40e2ccca66dfc127709ea",
+    "bytes": 978
+  },
+  "stability_stop_evidence": {
+    "peak_backlog_requests": 39,
+    "end_backlog_requests": 32,
+    "final_backlog_after_drain": 0,
+    "tail_backlog_slope": 0.12014641560411113,
+    "tail_backlog_growth": 12.7758639712,
+    "tail_increasing_fraction": 0.75,
+    "drain_duration": 2.444690107,
+    "completion_ratio": 1.0
+  },
+  "planned_skipped_runs": [
+    {
+      "run_id": "C_steady_fixed10",
+      "arm": "fixed10",
+      "profile": "steady",
+      "status": "NOT_EXECUTED",
+      "reason": "Frozen stop after first unstable comparator"
+    },
+    {
+      "run_id": "C_steady_dynamic",
+      "arm": "dynamic",
+      "profile": "steady",
+      "status": "NOT_EXECUTED",
+      "reason": "Frozen stop after first unstable comparator"
+    },
+    {
+      "run_id": "C_burst_dynamic",
+      "arm": "dynamic",
+      "profile": "burst",
+      "status": "NOT_EXECUTED",
+      "reason": "Frozen stop after first unstable comparator"
+    },
+    {
+      "run_id": "C_burst_s_only",
+      "arm": "s_only",
+      "profile": "burst",
+      "status": "NOT_EXECUTED",
+      "reason": "Frozen stop after first unstable comparator"
+    },
+    {
+      "run_id": "C_burst_fixed10",
+      "arm": "fixed10",
+      "profile": "burst",
+      "status": "NOT_EXECUTED",
+      "reason": "Frozen stop after first unstable comparator"
+    }
+  ]
+}

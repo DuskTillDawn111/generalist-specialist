@@ -1,0 +1,1230 @@
+{
+  "at_utc": "2026-10-06T17:48:11.490883+00:00",
+  "scope": "9B_FIXED_DEPLOYMENT_BOUNDED_ROUTING_CPU_ONLY",
+  "selected_9A_model": "I0",
+  "selected_model_sha256": "354b205ac78ea0db03ed7ff59c1bae3a35eaaef47f6b6428d6b801b926774232",
+  "features_sha256": "8bb05f22b08dfb222def69ce6d5bd7b476361b849aeae9a39e21708d16f19da5",
+  "algorithm": "freeze current effective service coefficients; lexicographic LP minimizes peak effective utilization then weighted service time; damp proposal, re-evaluate routing-conditioned costs, accept only surrogate improvement; retain best witness",
+  "parameters": {
+    "rho_max": 0.8,
+    "max_iterations": 3,
+    "damping": 0.5,
+    "runtime_budget_seconds": 6
+  },
+  "stop_conditions": [
+    "no improvement",
+    "three iterations",
+    "runtime budget",
+    "LP timeout/infeasible surrogate",
+    "numerical cycle"
+  ],
+  "memory_g_quality_workload_deployment_unchanged": true,
+  "no_global_optimality_or_fixed_point_convergence_claim": true,
+  "no_actual_capacity_or_E2E_claim": true,
+  "9A_features_or_coefficients_refitted": false,
+  "candidate_ranking_Module9C": false,
+  "GPU_runs": 0,
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9b_routing/validate.py",
+      "sha256": "3375c67dd4377fa6c79176a383f065bf1b04841f6d155dea21d4ffe7dd61fd3b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/interference/bounded_routing.py",
+      "sha256": "2c4d429457a0104b47f248ce1a3755c653d70a74dfed0575ae2ed66742006b7d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/interference/scheduling_pressure.py",
+      "sha256": "6bcf7ab3a0ce0a9801938181e5fa6a5637786951e92558a132261ca573dbac01"
+    }
+  ],
+  "cases": [
+    {
+      "id": "C01__static_v2",
+      "cell": "C01",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 1.0783912453907343
+        },
+        "image": {
+          "resnet50": 6.477207226438948
+        },
+        "ocr": {
+          "paddleocr": 14.015976036805
+        },
+        "asr": {
+          "phi4mm": 0.03143011061104267,
+          "whisper-small": 0.33395682205101457
+        },
+        "visual_qa": {
+          "phi4mm": 0.7262769780773427
+        },
+        "lid": {
+          "whisper-small": 3.25965041648432
+        }
+      },
+      "memory_budget_mib": 17007.17405495223,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C01/static_v2/result.json",
+      "source_sha256": "3e667fab3d5cb16ad7428b9d647001dcb0af6bdd4dc5587c8ebc796be74e4c65"
+    },
+    {
+      "id": "C01__RC_SG",
+      "cell": "C01",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 0,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 1.0783912453907343
+        },
+        "image": {
+          "resnet50": 6.477207226438948
+        },
+        "ocr": {
+          "paddleocr": 14.015976036805
+        },
+        "asr": {
+          "phi4mm": 0.03143011061104267,
+          "whisper-small": 0.33395682205101457
+        },
+        "visual_qa": {
+          "phi4mm": 0.7262769780773427
+        },
+        "lid": {
+          "whisper-small": 3.25965041648432
+        }
+      },
+      "memory_budget_mib": 17007.17405495223,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C01/RC_SG/result.json",
+      "source_sha256": "21bf39957daa98a545712dbf6a6aad5a7f709b195c7927541b648db968f9e51b"
+    },
+    {
+      "id": "C02__static_v2",
+      "cell": "C02",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 4.171016847157144
+        },
+        "image": {
+          "resnet50": 25.052633336443613
+        },
+        "ocr": {
+          "paddleocr": 54.21118951840369
+        },
+        "asr": {
+          "phi4mm": 0.12156582448809812,
+          "whisper-small": 1.291682899830235
+        },
+        "visual_qa": {
+          "phi4mm": 2.8091043248087226
+        },
+        "lid": {
+          "whisper-small": 12.607721790316122
+        }
+      },
+      "memory_budget_mib": 17007.17405495223,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C02/static_v2/result.json",
+      "source_sha256": "de857134ca4c2220107eba6c8ec78a59310533ccd542f6b13727c5be97cd804a"
+    },
+    {
+      "id": "C02__RC_SG",
+      "cell": "C02",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 0,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 4.171016847157144
+        },
+        "image": {
+          "resnet50": 25.052633336443613
+        },
+        "ocr": {
+          "paddleocr": 54.21118951840369
+        },
+        "asr": {
+          "phi4mm": 0.12156582448809812,
+          "whisper-small": 1.291682899830235
+        },
+        "visual_qa": {
+          "phi4mm": 2.8091043248087226
+        },
+        "lid": {
+          "whisper-small": 12.607721790316122
+        }
+      },
+      "memory_budget_mib": 17007.17405495223,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C02/RC_SG/result.json",
+      "source_sha256": "517bd774fe9f39a3d12b62b895acb04ebb4586eef648d0bd45360cbe429771a5"
+    },
+    {
+      "id": "C03__static_v2",
+      "cell": "C03",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 17007.17405495223,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C03/static_v2/result.json",
+      "source_sha256": "a6476e66052ffe57813058fec821fb563a347a1488fab70f6dfb6c219169f613"
+    },
+    {
+      "id": "C03__RC_SG",
+      "cell": "C03",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 0,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 17007.17405495223,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C03/RC_SG/result.json",
+      "source_sha256": "3be375a8236c7cb0a5caa23228281913cd68632a1559b32936e46227346a03a5"
+    },
+    {
+      "id": "C04__static_v2",
+      "cell": "C04",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 27980.189424959943,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C04/static_v2/result.json",
+      "source_sha256": "37cf1ac79f95815cd98086e31fa7010cea2eeb612d282692efa8eccbd4763f97"
+    },
+    {
+      "id": "C04__RC_SG",
+      "cell": "C04",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "distil_whisper": 1.8505818126748586
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 27980.189424959943,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C04/RC_SG/result.json",
+      "source_sha256": "800372462369d216b2ccee2a594f2762a99122d68262232c05aaa40aac32b255"
+    },
+    {
+      "id": "C05__static_v2",
+      "cell": "C05",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 32019.254406266693,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C05/static_v2/result.json",
+      "source_sha256": "98a8edc7c926f5aa50b820f8a6af6f24324a0d5775f82ac3cfe5eae542490671"
+    },
+    {
+      "id": "C05__RC_SG",
+      "cell": "C05",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "distil_whisper": 1.8505818126748586
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 32019.254406266693,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C05/RC_SG/result.json",
+      "source_sha256": "e5c739cf888040c37c8defa8c181dc1783fb4a2b860ed8018f6ac789d9ac2f1c"
+    },
+    {
+      "id": "C06__static_v2",
+      "cell": "C06",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 1,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 1.0783912453907343
+        },
+        "image": {
+          "resnet50": 6.477207226438948
+        },
+        "ocr": {
+          "paddleocr": 14.015976036805
+        },
+        "asr": {
+          "distil_whisper": 0.36538693266205724
+        },
+        "visual_qa": {
+          "phi4mm": 0.7262769780773427
+        },
+        "lid": {
+          "whisper-small": 3.25965041648432
+        }
+      },
+      "memory_budget_mib": 34567.553379621386,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C06/static_v2/result.json",
+      "source_sha256": "4930231f0c2515673dd8d526a9b7a00ebcf2833e90b9859942d0d386ed6b9530"
+    },
+    {
+      "id": "C06__RC_SG",
+      "cell": "C06",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 1.0783912453907343
+        },
+        "image": {
+          "resnet50": 6.477207226438948
+        },
+        "ocr": {
+          "paddleocr": 14.015976036805
+        },
+        "asr": {
+          "distil_whisper": 0.36538693266205724
+        },
+        "visual_qa": {
+          "phi4mm": 0.7262769780773427
+        },
+        "lid": {
+          "whisper-small": 3.25965041648432
+        }
+      },
+      "memory_budget_mib": 34567.553379621386,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C06/RC_SG/result.json",
+      "source_sha256": "0da45d520828583a3cbbcf1572aa776a51c307c6a3543890adb4973a1e4bf6a6"
+    },
+    {
+      "id": "C07__static_v2",
+      "cell": "C07",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 1,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 4.171016847157144
+        },
+        "image": {
+          "resnet50": 25.052633336443613
+        },
+        "ocr": {
+          "paddleocr": 54.21118951840369
+        },
+        "asr": {
+          "distil_whisper": 1.4132487243183331
+        },
+        "visual_qa": {
+          "qwen": 2.8091043248087226
+        },
+        "lid": {
+          "whisper-small": 12.607721790316122
+        }
+      },
+      "memory_budget_mib": 34567.553379621386,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C07/static_v2/result.json",
+      "source_sha256": "f58c32535b3ddd3a48abd4a28de5e6ce394e0d08f11816fb9fdc7c9473a22cc1"
+    },
+    {
+      "id": "C07__RC_SG",
+      "cell": "C07",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 4.171016847157144
+        },
+        "image": {
+          "resnet50": 25.052633336443613
+        },
+        "ocr": {
+          "paddleocr": 54.21118951840369
+        },
+        "asr": {
+          "distil_whisper": 1.4132487243183331
+        },
+        "visual_qa": {
+          "phi4mm": 2.8091043248087226
+        },
+        "lid": {
+          "whisper-small": 12.607721790316122
+        }
+      },
+      "memory_budget_mib": 34567.553379621386,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C07/RC_SG/result.json",
+      "source_sha256": "1c6ca5f03c767b404a651c224070df2dc45c101b584bb23d5f804b53c703337d"
+    },
+    {
+      "id": "C08__static_v2",
+      "cell": "C08",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 34567.553379621386,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C08/static_v2/result.json",
+      "source_sha256": "710a5021a3eb124d77acfd28d64b32320853e0df184350594a6257629d6ec0e3"
+    },
+    {
+      "id": "C08__RC_SG",
+      "cell": "C08",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "distil_whisper": 1.8505818126748586
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 34567.553379621386,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C08/RC_SG/result.json",
+      "source_sha256": "0abdcb6962f9bfcc305f451be09a228ed2a57f038a5a02d17e7404a2fc7f9548"
+    },
+    {
+      "id": "C09__static_v2",
+      "cell": "C09",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 43736.54192629518,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C09/static_v2/result.json",
+      "source_sha256": "6c984a3e556e4707405fa0634ea19496d0bcf6698c150f8cea83216fded02c73"
+    },
+    {
+      "id": "C09__RC_SG",
+      "cell": "C09",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "distil_whisper": 1.8505818126748586
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 43736.54192629518,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C09/RC_SG/result.json",
+      "source_sha256": "eb1f777237b9ec7d7303808890fff65764973cbb9ae62ad41df536cb1e77cfbe"
+    },
+    {
+      "id": "C10__static_v2",
+      "cell": "C10",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 1,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 1.0783912453907343
+        },
+        "image": {
+          "resnet50": 6.477207226438948
+        },
+        "ocr": {
+          "paddleocr": 14.015976036805
+        },
+        "asr": {
+          "distil_whisper": 0.36538693266205724
+        },
+        "visual_qa": {
+          "phi4mm": 0.7262769780773427
+        },
+        "lid": {
+          "whisper-small": 3.25965041648432
+        }
+      },
+      "memory_budget_mib": 49140,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C10/static_v2/result.json",
+      "source_sha256": "57c1bec8e2a248f19f285c48d543f4b732271cdf18e0d5f6815d92ef6d6d022e"
+    },
+    {
+      "id": "C10__RC_SG",
+      "cell": "C10",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 1.0783912453907343
+        },
+        "image": {
+          "resnet50": 6.477207226438948
+        },
+        "ocr": {
+          "paddleocr": 14.015976036805
+        },
+        "asr": {
+          "distil_whisper": 0.36538693266205724
+        },
+        "visual_qa": {
+          "phi4mm": 0.7262769780773427
+        },
+        "lid": {
+          "whisper-small": 3.25965041648432
+        }
+      },
+      "memory_budget_mib": 49140,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C10/RC_SG/result.json",
+      "source_sha256": "c26510e6e3db005bbeed71e01552b1a969f052112c0ab443aca66186f93b2efd"
+    },
+    {
+      "id": "C11__static_v2",
+      "cell": "C11",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 1,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 4.171016847157144
+        },
+        "image": {
+          "resnet50": 25.052633336443613
+        },
+        "ocr": {
+          "paddleocr": 54.21118951840369
+        },
+        "asr": {
+          "distil_whisper": 1.4132487243183331
+        },
+        "visual_qa": {
+          "qwen": 2.8091043248087226
+        },
+        "lid": {
+          "whisper-small": 12.607721790316122
+        }
+      },
+      "memory_budget_mib": 49140,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C11/static_v2/result.json",
+      "source_sha256": "df2086d94b15944a5391b6f1345067310e0a0456861d3266f1588780f8da0e1a"
+    },
+    {
+      "id": "C11__RC_SG",
+      "cell": "C11",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 4.171016847157144
+        },
+        "image": {
+          "resnet50": 25.052633336443613
+        },
+        "ocr": {
+          "paddleocr": 54.21118951840369
+        },
+        "asr": {
+          "distil_whisper": 1.4132487243183331
+        },
+        "visual_qa": {
+          "phi4mm": 2.8091043248087226
+        },
+        "lid": {
+          "whisper-small": 12.607721790316122
+        }
+      },
+      "memory_budget_mib": 49140,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C11/RC_SG/result.json",
+      "source_sha256": "1a92a164b9c8760bf8ce5780abc7fcde7f3cc38aef964222b77e8d498f770cc2"
+    },
+    {
+      "id": "C12__static_v2",
+      "cell": "C12",
+      "method": "static_v2",
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "phi4mm": 0.15918465021011033,
+          "whisper-small": 1.6913971624647488
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 49140,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C12/static_v2/result.json",
+      "source_sha256": "5b26560eca399a44f4bbcd5d2dc4b72d37534cea055a77e772ba30f5c2ea0a61"
+    },
+    {
+      "id": "C12__RC_SG",
+      "cell": "C12",
+      "method": "RC_SG",
+      "deployment": {
+        "qwen": 0,
+        "phi4mm": 1,
+        "minicpm": 0,
+        "distilbert": 1,
+        "resnet50": 1,
+        "convnext_tiny": 0,
+        "paddleocr": 1,
+        "whisper-small": 1,
+        "whisper_turbo": 0,
+        "distil_whisper": 1,
+        "roberta_sst2": 0
+      },
+      "workload": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "initial_routing": {
+        "text": {
+          "distilbert": 5.461747663301471
+        },
+        "image": {
+          "resnet50": 32.805228700557755
+        },
+        "ocr": {
+          "paddleocr": 70.98696757332455
+        },
+        "asr": {
+          "distil_whisper": 1.8505818126748586
+        },
+        "visual_qa": {
+          "phi4mm": 3.678388159101113
+        },
+        "lid": {
+          "whisper-small": 16.50921047579739
+        }
+      },
+      "memory_budget_mib": 49140,
+      "source": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/C12/RC_SG/result.json",
+      "source_sha256": "495386841a31b18cac3408f3c4cf4466c63c4ce881d0a3160e350a18ce13c75e"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "active_pair_profile_v1",
+  "target_worker": "distilbert",
+  "target_task": "text",
+  "co_resident": "qwen",
+  "co_resident_tasks": [
+    "text",
+    "image",
+    "ocr",
+    "asr",
+    "visual_qa",
+    "lid"
+  ],
+  "target_count": 30,
+  "co_completed_count": 3,
+  "co_submitted_count": 66,
+  "co_backlog": 64,
+  "min_overlap": 0.9,
+  "accepted_target_count": 30,
+  "accepted_fraction": 1.0,
+  "weighted_overlap_ratio": 0.9996663523173719,
+  "mean_target_latency_ms_all": 6.9176763,
+  "mean_target_latency_ms_accepted": 6.9176763,
+  "wall_time_s": 0.21039486,
+  "valid_for_gamma": true
+}

@@ -1,0 +1,104 @@
+{
+  "at_utc": "2026-10-07T16:51:47.089539+00:00",
+  "frozen": true,
+  "before_any_new_GPU_measurement": true,
+  "selection_policy": {
+    "criteria": [
+      "published quality improvement over comparable baseline evidence preferred, never cross-dataset score substitution",
+      "architecture/model-scale diversity",
+      "reproducible native local deployment",
+      "deterministic full model ID"
+    ],
+    "Image_rationale": "All3 shortlisted official ImageNet1K checkpoints improve published ResNet50-v2 ImageNet1K quality; choose one per CNN/ViT/Swin family. No architecture can exceed frozen measured Imagenette baseline accuracy1.0. ConvNeXt-large chosen over base by same published ImageNet metric.",
+    "OCR_rationale": "No public score establishes superiority on frozen200 crops. Choose mature high-capacity multilingual document/server recognizers at distinct scales and a large Transformer directly pretrained for scene-word recognition. PP-OCRv6 has no public large tier above medium. Full-image pipeline and detection-only models are not candidates; TrOCR is compatible with actual supplied crops. All6 real candidates retained in universe.",
+    "deployment_or_V3_outcomes_used": false
+  },
+  "entries": [
+    {
+      "task": "ocr",
+      "model_id": "PaddlePaddle/PP-OCRv4_server_rec_doc",
+      "revision": "c810daf80801417895f51421f16b925c3eb4bef8",
+      "weight_files": [
+        "inference.pdiparams"
+      ],
+      "observable_weight_bytes": 94812503,
+      "published_quality_metric": "general recognition average",
+      "published_quality": 0.8658,
+      "published_quality_comparable_to_frozen_IIIT5K200": false,
+      "quality_evidence_status": "UNKNOWN_COMPARATIVE; scores/datasets differ from local baseline, no claimed local quality improvement",
+      "semantics_status": "TASK_SEMANTICS_COMPATIBLE",
+      "input": "existing IIIT5K word crop; recognition only; no detection or orientation pipeline",
+      "local_inference_path": "PaddleOCR TextRecognition native paddle_static FP32 batch1",
+      "published_source": "https://huggingface.co/PaddlePaddle/PP-OCRv4_server_rec_doc",
+      "secondary_source": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/version3.x/module_usage/text_recognition.en.md",
+      "frozen_shortlisted": true,
+      "no_required_finetuning": true,
+      "preprocessing": "same BGR file decode then checkpoint-native recognition frontend",
+      "RTX4090_feasibility": "FP32 single recognizer expected within24GiB; real memory measured separately",
+      "backend": "paddle",
+      "directory": "/root/autodl-tmp/generalist-specialist/models/module14/PaddlePaddle--PP-OCRv4_server_rec_doc",
+      "native_generation_config": null,
+      "generation_policy": "native pretrained decoder, batch1, no language-model or lexicon postprocessing"
+    },
+    {
+      "task": "ocr",
+      "model_id": "PaddlePaddle/PP-OCRv5_server_rec",
+      "revision": "b26c3587fda8da3c8ec0ce357214b4d661ff1558",
+      "weight_files": [
+        "inference.pdiparams"
+      ],
+      "observable_weight_bytes": 84390117,
+      "published_quality_metric": "general Chinese recognition average",
+      "published_quality": 0.8638,
+      "published_quality_comparable_to_frozen_IIIT5K200": false,
+      "quality_evidence_status": "UNKNOWN_COMPARATIVE; scores/datasets differ from local baseline, no claimed local quality improvement",
+      "semantics_status": "TASK_SEMANTICS_COMPATIBLE",
+      "input": "existing IIIT5K word crop; recognition only; no detection or orientation pipeline",
+      "local_inference_path": "PaddleOCR TextRecognition native paddle_static FP32 batch1",
+      "published_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_server_rec",
+      "secondary_source": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/version3.x/module_usage/text_recognition.en.md",
+      "frozen_shortlisted": true,
+      "no_required_finetuning": true,
+      "preprocessing": "same BGR file decode then checkpoint-native recognition frontend",
+      "RTX4090_feasibility": "FP32 single recognizer expected within24GiB; real memory measured separately",
+      "backend": "paddle",
+      "directory": "/root/autodl-tmp/generalist-specialist/models/module14/PaddlePaddle--PP-OCRv5_server_rec",
+      "native_generation_config": null,
+      "generation_policy": "native pretrained decoder, batch1, no language-model or lexicon postprocessing"
+    },
+    {
+      "task": "ocr",
+      "model_id": "microsoft/trocr-large-str",
+      "revision": "1105e441eaa192e99f3991d2958134348c623f4f",
+      "weight_files": [
+        "pytorch_model.bin"
+      ],
+      "observable_weight_bytes": 2233113673,
+      "published_quality_metric": "published IIIT5K-3000 word accuracy",
+      "published_quality": 0.941,
+      "published_quality_comparable_to_frozen_IIIT5K200": false,
+      "quality_evidence_status": "UNKNOWN_COMPARATIVE; scores/datasets differ from local baseline, no claimed local quality improvement",
+      "semantics_status": "TASK_SEMANTICS_COMPATIBLE",
+      "input": "existing IIIT5K word crop; recognition only; no detection or orientation pipeline",
+      "local_inference_path": "TrOCRProcessor + VisionEncoderDecoderModel FP32 native generation defaults",
+      "published_source": "https://huggingface.co/microsoft/trocr-large-str",
+      "secondary_source": "https://github.com/microsoft/unilm/blob/master/trocr/README.md",
+      "frozen_shortlisted": true,
+      "no_required_finetuning": true,
+      "preprocessing": "same existing crop decoded RGB; exact checkpoint-native TrOCRProcessor; same lowercase a-z/0-9 scorer; no crop/detection/rectification added",
+      "RTX4090_feasibility": "FP32 single recognizer expected within24GiB; real memory measured separately",
+      "backend": "trocr",
+      "directory": "/root/autodl-tmp/generalist-specialist/models/module14/microsoft--trocr-large-str",
+      "native_generation_config": {
+        "_from_model_config": true,
+        "bos_token_id": 0,
+        "decoder_start_token_id": 2,
+        "eos_token_id": 2,
+        "pad_token_id": 1,
+        "transformers_version": "4.27.0.dev0",
+        "use_cache": false
+      },
+      "generation_policy": "exact archived checkpoint generation_config defaults; do_sample=False; no extra beam/length tuning"
+    }
+  ]
+}

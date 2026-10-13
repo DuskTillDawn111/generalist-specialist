@@ -1,0 +1,21 @@
+# CUDA Error304根因诊断
+
+32E首个PARSeq在model.to(cuda:0)遇cudaGetDeviceCount Error304。32F新进程使用同一PARSeq Python环境、原LD_LIBRARY_PATH及线程设置：PyTorch2.14.0+cu130（CUDA runtime13.0），同一RTX4090 UUID，驱动595.71.05（nvidia-smi报告最高CUDA13.2支持，不是PyTorch runtime）。无残留GPU进程，NVML空闲1MiB。基础CUDA初始化及同步1024元素张量平方和357389824两次通过；初始化前initialized=false、bad_fork=false。禁止驱动重装，实际没有改驱动。
+
+分层实测：Python审计/no_new_privs通过；32E等价Landlock+seccomp失败；Landlock单独失败；seccomp单独通过；基准再次通过。各结果、完整异常栈、版本、PID、before/after显存与进程均在diagnosis_runs、minimal_cuda与CUDA_layer_comparison.json保存。不是PARSeq专属故障；无需加载模型就能复现。原worker是subprocess.Popen([python,script])+fresh exec，并按READY逐个启动；控制器不导入torch或初始化CUDA，不是fork后复用context。单模型/共置是否另有问题留待StageC，当前证据不支持声称并发context竞争。
+
+用PTRACE_GET_SYSCALL_INFO跟踪自有诊断进程及全部clone线程。旧Landlock规则在CUDA阶段openat(AT_FDCWD,"/proc/self/task/188592/comm",577,0666)返回-EACCES。577是O_WRONLY|O_CREAT|O_TRUNC；线程目录中的comm是运行时线程命名控制，不是科学数据或临时输出。旧规则只授予本Module、/dev和/dev/shm写入，遗漏procfs线程控制。初版手工entry/exit主线程tracer未正确定位具体path，完整结果仍保留；随后GET_SYSCALL_INFO全线程版本记录真实拒绝路径。mbind EPERM、clone3 ENOSYS等其它诊断返回值不能单独当作根因。
+
+最小受限修复：worker原Landlock规则额外允许自身/proc/self/task的WRITE_FILE，仍禁止在procfs创建/删除/metadata修改，普通文件只允许Module32F输出；原seccomp禁止truncate/metadata等ABI1空洞保持。修复后同一CUDA代码初始化和张量计算通过；全线程trace证明两个comm open返回FD8/32，write返回15/14字节。没有删除旧失败或放宽路由1ms/控制10ms门槛。ptrace用于故障归因，扰动明显，不计入工程时延。
+
+父进程Domain会继承且无法由子进程放宽到新PID，故supervisor提供/proc WRITE_FILE继承envelope；每个worker在导入原backend前安装第二个Landlock Domain，交集收窄至该worker自身task树。Python审计即便在supervisor也只允许自身task/<tid>/comm。没有增加procfs文件创建或任意科学目录权限。父子fresh exec最小CUDA两次通过；native子进程对自身oom_score_adj与32E Gate写打开均失败，自身comm可写；18项历史保护测试通过。第三方NVML工具继承supervisor envelope，科学输入仍不可写。Linux设备/IPC和procfs线程命名例外是运行控制，所有普通缓存/tmp/checkpoint/log仍只在Module32F。
+
+32F最早hash脚本漏复制旧incident说明、诊断结果解析重复layer关键字的工程错误均保留日志；前者发生在测试前，后者没有重跑或抹去已完成的最小CUDA样本，修正解析后继续已有日志。32B–32E和旧Gate不改；旧32D progress不可字节恢复例外仅记录，不伪称恢复。修复代码见m32f/isolation.py，原等价隔离实现副本见m32f/isolation_original_32e_semantics.py。
+
+## 首次OCR的第二个基础设施问题
+
+PARSeq已CUDA初始化成功/READY，首次原始OCR ocr_001003却在torch.bmm→原生Triton BMM→CudaUtils编译缓存发布时报OSError18 EXDEV。原始version1单模型结果与补采完整worker response/堆栈保留在single_model_runs/0.json和single_model_diagnostic/0.json。错误是triton/runtime/cache.py的FileCacheManager.put从cache/key/tmp.pid.../file rename到cache/key/file。两者是同一文件系统，不是模型算子无效；本机Landlock ABI1对不同目录间rename返回EXDEV。CPU直接重放原FileCacheManager：audit层可用，repaired Landlock层EXDEV；不依赖GPU。
+
+原32D缓存已有编译结果可能掩盖冷缓存写入路径，但本轮没有读取未记录的旧cache命中事件，不能断言历史总是命中。32F所有缓存隔离导致该问题暴露。新增SameDirectoryCacheManager只改变临时文件暂存位置，原native key/get/group/data conversion/最终文件内容保持，仍os.replace原子发布。CPU bytes/group语义及12个并发writer/reader无部分发布检查通过。没有禁用torch._native/Triton、改编译选项、改权重/dtype/算法/推理参数或改模型映射。通过Triton已存在的TRITON_CACHE_MANAGER MODULE:CLASS接口配置输出基础设施，软件安装和旧库源码均不改。
+
+version1应用回归先暂停保留；version2只增加该cache provider并补齐失败时runtime records，独立保存源码/配置freeze和工程结果。两次版本1失败（初始化已成功的OCR probe及补采诊断）都不计为成功，没有正式GPU窗口，也无U或请求轨迹/路由参数筛选。新模型/阈值/负载/时长没有搜索。版本2保留原180秒工程轨迹、seed320490、两臂原六任务模型池/驻留、300秒调理/30秒warmup/60秒排空及1ms/10ms原门槛；没有基于正式收益结果改配置。

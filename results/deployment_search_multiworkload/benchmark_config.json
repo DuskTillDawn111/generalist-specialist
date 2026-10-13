@@ -1,0 +1,53 @@
+{
+  "search": {
+    "top_b": 2,
+    "max_iterations": 3,
+    "no_improvement_patience": 1,
+    "runtime_evaluation_budget": 6,
+    "rho_max": 0.8,
+    "remove_pressure_threshold": 0.2,
+    "mean_tolerance_ms": 1.0,
+    "dry_run": false
+  },
+  "predictor": null,
+  "objective": "Module 3B NoiseAwareRuntimeObjective",
+  "min_relative_improvement": 0.05,
+  "search_repetitions_per_state": 3,
+  "search_repetition_seeds": [
+    7101,
+    7202,
+    7303
+  ],
+  "search_valid_unique_budget_per_policy": 6,
+  "search_shared_exact_cache_unique_cap": 75,
+  "valid_evaluation_budget": "per policy includes seed, max 6; only three completed repetitions form a valid evaluation",
+  "physical_attempt_budget": {
+    "search": 240,
+    "confirmation": 70
+  },
+  "confirmation_valid_repetitions_per_seed_final": 2,
+  "confirmation_repetition_seeds": [
+    8101,
+    8202
+  ],
+  "random_search_policy_seeds": {
+    "B1_seed_1103": 1103,
+    "B1_seed_2207": 2207
+  },
+  "execution_order_seed": 20260930,
+  "measurement_settings": {
+    "warmup_seconds": 10,
+    "measurement_seconds": 210,
+    "arrival_process": "deterministic_periodic",
+    "routing_source": "module3a_canonical_minmax_lp",
+    "startup_timeout_seconds": 300,
+    "drain_timeout_seconds": 60,
+    "shutdown_timeout_seconds": 10,
+    "max_pending_per_model": 10000
+  },
+  "run_status_policy": "Data Quality Audit v1: completed genuine unstable valid; external/uncertain/harness/model interruption invalid for objective but physical attempt counted",
+  "b3_transition_criterion": "positive canonical LP delta_z; runtime labels never read in transition comparison",
+  "cache_policy": "exact full identity; read only on algorithm-selected state",
+  "historical_cache_import": false,
+  "real_exhaustive_optimum": "unavailable"
+}

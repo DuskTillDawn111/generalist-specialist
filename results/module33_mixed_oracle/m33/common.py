@@ -1,0 +1,24 @@
+from pathlib import Path
+import json, csv, hashlib, os, time, math, copy, itertools
+ROOT=Path('/root/autodl-tmp/generalist-specialist')
+OUT=ROOT/'results/module33_mixed_oracle'
+def read(p): return json.loads(Path(p).read_text())
+def json_native(v):
+    if hasattr(v,'item'):return v.item()
+    if isinstance(v,Path):return str(v)
+    raise TypeError(type(v).__name__)
+def save(name,v):
+    p=OUT/name;p.parent.mkdir(parents=True,exist_ok=True)
+    tmp=p.with_name(p.name+'.tmp')
+    tmp.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False,default=json_native)+'\n');os.replace(tmp,p)
+def csvsave(name,rows,fields=()):
+    rows=list(rows);p=OUT/name;p.parent.mkdir(parents=True,exist_ok=True)
+    with p.open('w',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(dict.fromkeys([*fields,*(k for r in rows for k in r)])));w.writeheader()
+        for r in rows:w.writerow({k:json.dumps(v,ensure_ascii=False,sort_keys=True) if isinstance(v,(dict,list)) else v for k,v in r.items()})
+def ref(p):
+    p=Path(p);h=hashlib.sha256()
+    with p.open('rb') as f:
+        for b in iter(lambda:f.read(8<<20),b''):h.update(b)
+    return dict(path=str(p.absolute()),sha256=h.hexdigest(),bytes=p.stat().st_size)
+def identity(x,r):return json.dumps([x,{t:{m:round(q,10) for m,q in rr.items() if q>1e-9} for t,rr in r.items()}],sort_keys=True)

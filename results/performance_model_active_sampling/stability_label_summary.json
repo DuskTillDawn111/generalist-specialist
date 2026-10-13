@@ -1,0 +1,6018 @@
+{
+  "thresholds": {
+    "completion_ratio_min": 0.98,
+    "drain_unstable_seconds": 30.0,
+    "drain_boundary_seconds": 5.0,
+    "backlog_bins": 10,
+    "growth_min_requests": 10.0,
+    "growth_offered_fraction": 0.02,
+    "growth_increasing_fraction": 0.75,
+    "growth_end_fraction": 0.5,
+    "end_backlog_unstable_min_requests": 30,
+    "end_backlog_unstable_fraction": 0.1,
+    "end_backlog_boundary_min_requests": 3,
+    "end_backlog_boundary_fraction": 0.01,
+    "boundary_growth_min_requests": 3.0,
+    "boundary_growth_offered_fraction": 0.005
+  },
+  "definition": "stable boolean means no instability criterion. boundary is operationally complete but has backlog/drain warnings; strict stable-region latency eligibility excludes boundary and short samples.",
+  "before": {
+    "stable": 43,
+    "boundary": 2,
+    "unstable": 6
+  },
+  "new": {
+    "stable": 18
+  },
+  "after": {
+    "stable": 61,
+    "boundary": 2,
+    "unstable": 6
+  },
+  "new_by_expected": {
+    "clearly_stable": {
+      "stable": 6
+    },
+    "near_boundary": {
+      "stable": 6
+    },
+    "likely_unstable": {
+      "stable": 6
+    }
+  },
+  "run_labels": {
+    "smoke_text": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.00013227,
+        "backlog_bins": [
+          {
+            "offset_seconds": 2.0,
+            "mean_backlog": 0.072657723,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 4.0,
+            "mean_backlog": 0.0715772355,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 6.0,
+            "mean_backlog": 0.07474612,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 8.0,
+            "mean_backlog": 0.0705362735,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.0650141225,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.081584205,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 14.0,
+            "mean_backlog": 0.0820199055,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 16.0,
+            "mean_backlog": 0.075191746,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 18.0,
+            "mean_backlog": 0.0708194265,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.077598858,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.003985347,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "smoke_multitask": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000145227,
+        "backlog_bins": [
+          {
+            "offset_seconds": 2.0,
+            "mean_backlog": 0.6533769955,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 4.0,
+            "mean_backlog": 2.352853828,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 6.0,
+            "mean_backlog": 0.3974635275,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 8.0,
+            "mean_backlog": 0.574184145,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.6740325205,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.3421721045,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 14.0,
+            "mean_backlog": 0.9706053115,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 16.0,
+            "mean_backlog": 0.4989399035,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 18.0,
+            "mean_backlog": 0.843835785,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.4642686015,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.12209649699999997,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.00_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 4,
+        "drain_seconds": 0.28496247,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 3.458274053,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 3.0266160962,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 6.3338865809,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 2.8238127323,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 6.203673199,
+            "backlog_at_end": 15
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 10.9873091593,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 2.6926789271,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 1.8223259623,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 3.5273849036,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 2.3938364423,
+            "backlog_at_end": 4
+          }
+        ],
+        "second_half_backlog_growth": -8.593472717000001,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.00_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.00038902,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 2.6848919976,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 2.5948992473,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 3.5796547016,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 5.29696843,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 3.0471915872,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 2.1136423005,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 4.8768976808,
+            "backlog_at_end": 5
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 6.5586698237,
+            "backlog_at_end": 5
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 7.5832494524,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 3.4826182788,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 1.3689759783,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.00_rep_3": {
+      "stable": true,
+      "reason": "window_end_backlog_warning; queue_growth_warning",
+      "category": "boundary",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 7,
+        "drain_seconds": 1.038933555,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 2.8651656381,
+            "backlog_at_end": 6
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 3.5303613861,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 2.2024788826,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 3.0172712506,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 2.6249786027,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 2.5444187404,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 2.7773443529,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 6.7037616802,
+            "backlog_at_end": 13
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 14.3396094469,
+            "backlog_at_end": 13
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 7.8482652645,
+            "backlog_at_end": 7
+          }
+        ],
+        "second_half_backlog_growth": 5.303846524100001,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.25_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000426494,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 1.3643783311,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 1.7260663677,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 1.9671700906,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 1.8913418246,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 2.072280889,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 1.523329686,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 1.4303224729,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 1.2027073181,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 2.4698639564,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 1.6088781644,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.08554847840000002,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.25_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000355487,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 1.7734464821,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 1.3635158048,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 2.4112263624,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 1.784791662,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 1.9403528596,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 1.1855378911,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 2.8276656786,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 1.7013707757,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 2.4522230054,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 1.3787606149,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.19322272379999994,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.25_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.259853536,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 1.4923236714,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 1.3972427689,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 1.3198778862,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 1.4026044658,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 1.1845752044,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 1.1278798352,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 1.5147567047,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 2.6475258377,
+            "backlog_at_end": 9
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 2.4037333262,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 1.1493020401,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.02142220490000013,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.50_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000359184,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.9106859166,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 1.2238391579,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 1.0882877374,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 1.1135793053,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 1.147495828,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 1.0417805759,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.9359888581,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.8607067122,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 1.0559578557,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 1.0327304278,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.009050148100000044,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.50_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000335589,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.9098861919,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.6443994827,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.7575719547,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.8792795627,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 1.1145140271,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.5665390724,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 1.0128768717,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.6968334197,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 1.406926393,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.666435988,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.09989691560000002,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.50_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.036598333,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 1.0593861965,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 1.2018257649,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.9194256666,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 1.1772270564,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 0.8439397819,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 1.0443270658,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.9545388693,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 1.7872683569,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 1.0321393992,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.9898095476,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": -0.05451751819999995,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.75_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000345059,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.8386345377,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.4781908448,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.7801081242,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.4948709919,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 1.2592133664,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.4766771938,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.4701802176,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.5238347647,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.5599872329,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.4351320473,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.04154514650000002,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.75_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000402071,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.6515768167,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.8112112878,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.5610721815,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.6975407594,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 0.7289425851,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.5239490907,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.6282614599,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.5740268765,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.678949675,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.6897166993,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.16576760860000006,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_0.75_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.036638078,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.4935217153,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.6828213492,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.3728410558,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.4970498537,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 0.4780604315,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.4858049539,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.3609484497,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.6461038826,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.4953580416,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.678969864,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.19316491010000003,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_1.00_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000402849,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.283198902,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.25953707,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.2403596053,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.2384293925,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 0.3771548261,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.2183955005,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.2284945675,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.2452053072,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.2337812982,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.2021333319,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.016262168600000015,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_1.00_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.00035971,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.262876734,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.2561169501,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.2373715738,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.2795134338,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 0.2566931786,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.1995377599,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.2582192818,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.2840828488,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.2605989114,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.2409903195,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.041452559599999994,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "share_1.00_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.036654369,
+        "backlog_bins": [
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.2186410704,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.2367971815,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.2288970962,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 40.0,
+            "mean_backlog": 0.265146014,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 50.0,
+            "mean_backlog": 0.2168862331,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.2222536301,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 70.0,
+            "mean_backlog": 0.2198971948,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 80.0,
+            "mean_backlog": 0.3389810074,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.2483818831,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 100.0,
+            "mean_backlog": 0.2782926578,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.05603902770000002,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "full_deployment_smoke": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000157984,
+        "backlog_bins": [
+          {
+            "offset_seconds": 2.0,
+            "mean_backlog": 0.301285571,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 4.0,
+            "mean_backlog": 0.115881,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 6.0,
+            "mean_backlog": 0.2181217165,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 8.0,
+            "mean_backlog": 0.174886152,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 10.0,
+            "mean_backlog": 0.164029058,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.225210199,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 14.0,
+            "mean_backlog": 0.1402380505,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 16.0,
+            "mean_backlog": 0.2482866875,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 18.0,
+            "mean_backlog": 0.1615357235,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 20.0,
+            "mean_backlog": 0.2692758685,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.044065669500000015,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_distilbert_text_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.017048574,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.3914676153551913,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.1547735057923498,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 2.0704714769398906,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.184385899726776,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 1.109630449945355,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.2544765324043716,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.8754733400546448,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.2600595840437159,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.6502744774863387,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.088267186612022,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": -0.1662093457923497,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_distilbert_text_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.004254897,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.2783308168306011,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.950101362568306,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.6097323384153006,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.9100891767213115,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.9632437365027322,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.2382997403278688,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.3184168309836066,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.0247022292349728,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.006972823661202,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.1773101233333334,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.06098961699453542,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_distilbert_text_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.003656884,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.091874625737705,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.4059406995081967,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.2281202481420765,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.42004249,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 1.212808572021858,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.7346961149180329,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.157500845737705,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.1888285718032787,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.2114442839890711,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.5731679323497267,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.16152818256830614,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_no_active_contender_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000336548,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 0.8703451061748634,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.7370026097814207,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.5607127408743169,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.7576900952459016,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.6641158620218579,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 0.8088521117486339,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.3479246713661202,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.748022521147541,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.0462003669945354,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 0.6251464653005464,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.1837056464480875,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_no_active_contender_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000438422,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 0.9915880729508196,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.6310340317486339,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.1570902703825137,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.4054534673224044,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.6122147407650274,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 0.8141727590710383,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 0.9376843498907104,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.7321334153551913,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 0.6687957849726776,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 0.8144061535519126,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.00023339448087433823,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_no_active_contender_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000292735,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 0.7480109306557378,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.0272762181420765,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 0.8696390973224044,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.0456290184699453,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.8463524174863388,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.2481901584699453,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 0.7460899893442623,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.819293518852459,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 0.8715363772131147,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.125558051420765,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.12263210704918026,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_paddleocr_ocr_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.003091113,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.2077710955191256,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.02821275431694,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 2.0864783569398906,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.2173392036612023,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 1.0033626846994534,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.2070624921311475,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.6260577623497268,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.0994848368306012,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.4123805849180329,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 0.9415350939890711,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.2655273981420764,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_paddleocr_ocr_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.017356261,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.293677429453552,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.9064224432240438,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.4545230492896175,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.77105496431694,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.8952355384699453,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.1308961634972678,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.407306623989071,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.1311836378688525,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 0.9437563093989071,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.2557264803825137,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.12483031688524582,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_paddleocr_ocr_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.002628179,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.0979990109836066,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.5280632113114754,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.2206982906557378,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.544383179726776,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 1.2752327569398907,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.6782087792896174,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.0936794498360656,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.1402775315846994,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.2054737795628416,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.5509659734972678,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.1272428057923496,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_whisper_asr_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 2,
+        "drain_seconds": 0.109836846,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.1495018581420764,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.1079585770491804,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.0125056596721311,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.000878184590164,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 1.631593332295082,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 0.9775858543169399,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.0796833175956284,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.9597559026229509,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.9001522556830601,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.134603126010929,
+            "backlog_at_end": 2
+          }
+        ],
+        "second_half_backlog_growth": 0.15701727169398916,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_whisper_asr_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000529773,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.1967631667213114,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.9046333844808743,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 0.9236154978142076,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.0534689350273223,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 2.206238416885246,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.0437199207650274,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 0.7902677350819672,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.9043683159562842,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 0.9745801486338798,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.159763488797814,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.1160435680327867,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "C_whisper_asr_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000449778,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.8651388696174864,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.3311906118032786,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.3633782716393443,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.3820693981967214,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 1.5248084284153005,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.3291169504371585,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 1.4233565275409836,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 1.346679679125683,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 1.676493708579235,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 2.090257640874317,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.7611406904371585,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.10_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000272971,
+        "backlog_bins": [
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.158136902636612,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.14841136709016395,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 0.1997077218579235,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 292.8,
+            "mean_backlog": 0.14362175403005464,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 366.0,
+            "mean_backlog": 0.14225426607923497,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 439.2,
+            "mean_backlog": 0.18139576770491803,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 512.4,
+            "mean_backlog": 0.22038391225409837,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 585.6,
+            "mean_backlog": 0.15871522796448087,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 658.8,
+            "mean_backlog": 0.23258930112021858,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 732.0,
+            "mean_backlog": 0.1335312619125683,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.047864505792349715,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.10_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000683691,
+        "backlog_bins": [
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.16419431816939892,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.14536692392076503,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 0.20099726534153006,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 292.8,
+            "mean_backlog": 0.21707147892076503,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 366.0,
+            "mean_backlog": 0.1420745186748634,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 439.2,
+            "mean_backlog": 0.166576481284153,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 512.4,
+            "mean_backlog": 0.17730800662568305,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 585.6,
+            "mean_backlog": 0.15031376336065574,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 658.8,
+            "mean_backlog": 0.40797959800546446,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 732.0,
+            "mean_backlog": 0.6271658041120218,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.4605893228278688,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.10_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000414114,
+        "backlog_bins": [
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.1507721669125683,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.35542828777322405,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 0.1706228856830601,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 292.8,
+            "mean_backlog": 0.20717441863387978,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 366.0,
+            "mean_backlog": 0.18165600534153006,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 439.2,
+            "mean_backlog": 0.19991804513661202,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 512.4,
+            "mean_backlog": 0.1606423006830601,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 585.6,
+            "mean_backlog": 0.15138375004098362,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 658.8,
+            "mean_backlog": 0.17705534655737704,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 732.0,
+            "mean_backlog": 0.21474047286885245,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.014822427732240434,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.20_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000383324,
+        "backlog_bins": [
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.3135120460382514,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.2788484558469945,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 0.44068154035519125,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.2873096100546448,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 0.2468028711202186,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 0.31157990948087433,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 256.2,
+            "mean_backlog": 0.4457084768032787,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 292.8,
+            "mean_backlog": 0.28010276218579233,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 329.4,
+            "mean_backlog": 0.3928224012295082,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 366.0,
+            "mean_backlog": 0.2541738717759563,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.057406037704918034,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.20_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000492792,
+        "backlog_bins": [
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.3897905024863388,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.8171293287978142,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 5.340870012978142,
+            "backlog_at_end": 7
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 6.021672892704918,
+            "backlog_at_end": 7
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 2.226231504863388,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 1.509079111229508,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 256.2,
+            "mean_backlog": 0.38536884636612023,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 292.8,
+            "mean_backlog": 0.306059526284153,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 329.4,
+            "mean_backlog": 0.28133990524590163,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 366.0,
+            "mean_backlog": 0.3138230037978142,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -1.1952561074316939,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.20_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000592758,
+        "backlog_bins": [
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.3644370190163934,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.4444852805737705,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 0.4035194543715847,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.48005679838797816,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 0.40141525975409836,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 0.48696556341530056,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 256.2,
+            "mean_backlog": 0.353207304726776,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 292.8,
+            "mean_backlog": 0.3684604355737705,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 329.4,
+            "mean_backlog": 0.38570107647540985,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 366.0,
+            "mean_backlog": 0.49686277830601094,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.009897214890710382,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.30_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000245695,
+        "backlog_bins": [
+          {
+            "offset_seconds": 24.4,
+            "mean_backlog": 0.5967387777459017,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 48.8,
+            "mean_backlog": 0.48886299872950817,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.1040595414754097,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 97.6,
+            "mean_backlog": 0.5149725810245902,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 122.0,
+            "mean_backlog": 0.4327233142213115,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.5491794488114754,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 170.8,
+            "mean_backlog": 0.8435598819672131,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 195.2,
+            "mean_backlog": 0.48949810967213114,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 0.710289049795082,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 244.0,
+            "mean_backlog": 0.43355428778688526,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.11562516102459014,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.30_rep_2": {
+      "stable": true,
+      "reason": "window_end_backlog_warning; queue_growth_warning; drain_warning",
+      "category": "boundary",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 15,
+        "drain_seconds": 7.669407369,
+        "backlog_bins": [
+          {
+            "offset_seconds": 24.4,
+            "mean_backlog": 0.5949757032377049,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 48.8,
+            "mean_backlog": 0.4577941432377049,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.807393806147541,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 97.6,
+            "mean_backlog": 0.8971543857377049,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 122.0,
+            "mean_backlog": 0.44941078114754096,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.5880296299590164,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 170.8,
+            "mean_backlog": 0.6737779016393443,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 195.2,
+            "mean_backlog": 0.537739077295082,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 2.291427596803279,
+            "backlog_at_end": 7
+          },
+          {
+            "offset_seconds": 244.0,
+            "mean_backlog": 9.42509511295082,
+            "backlog_at_end": 15
+          }
+        ],
+        "second_half_backlog_growth": 8.837065482991802,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.30_rep_3": {
+      "stable": false,
+      "reason": "sustained_backlog_growth",
+      "category": "unstable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 17,
+        "drain_seconds": 9.428562173,
+        "backlog_bins": [
+          {
+            "offset_seconds": 24.4,
+            "mean_backlog": 0.6118354145081967,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 48.8,
+            "mean_backlog": 0.8627221673360655,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 0.7433265590163934,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 97.6,
+            "mean_backlog": 0.8194271312295082,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 122.0,
+            "mean_backlog": 0.8381407012704918,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.9615435523360656,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 170.8,
+            "mean_backlog": 1.2070770905737704,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 195.2,
+            "mean_backlog": 11.601600941311476,
+            "backlog_at_end": 17
+          },
+          {
+            "offset_seconds": 219.6,
+            "mean_backlog": 19.08988389237705,
+            "backlog_at_end": 19
+          },
+          {
+            "offset_seconds": 244.0,
+            "mean_backlog": 18.837967826065572,
+            "backlog_at_end": 17
+          }
+        ],
+        "second_half_backlog_growth": 17.876424273729505,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.40_rep_1": {
+      "stable": false,
+      "reason": "sustained_backlog_growth; large_window_end_backlog; drain_above_unstable_limit",
+      "category": "unstable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 112,
+        "drain_seconds": 56.656992137,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 2.5321206130054645,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.7537134896174863,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 2.3888185033333333,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 5.632704446666667,
+            "backlog_at_end": 8
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 11.597986622404372,
+            "backlog_at_end": 16
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 20.128756383387977,
+            "backlog_at_end": 32
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 41.12051095622951,
+            "backlog_at_end": 54
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 66.02847498508197,
+            "backlog_at_end": 78
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 94.32908423491803,
+            "backlog_at_end": 108
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 107.47927405398907,
+            "backlog_at_end": 112
+          }
+        ],
+        "second_half_backlog_growth": 87.35051767060109,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.40_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000442291,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 1.0176958167213115,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 0.662949409453552,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 1.2709465412568306,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.509060935136612,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.6275727077595629,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 0.8492355542076503,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 0.9628477578688525,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.7171861653005465,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 0.6596855818032787,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 0.8266553818579235,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.022580172349726757,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "A_u_0.40_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000443214,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.3,
+            "mean_backlog": 0.8167671414754099,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.6,
+            "mean_backlog": 1.1527238867759564,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.9,
+            "mean_backlog": 0.9985901128961748,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 73.2,
+            "mean_backlog": 1.1522261418032786,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 91.5,
+            "mean_backlog": 0.934077184863388,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 109.8,
+            "mean_backlog": 1.342399025136612,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 128.1,
+            "mean_backlog": 0.8288275975956284,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.4,
+            "mean_backlog": 0.8794547455737705,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 164.7,
+            "mean_backlog": 0.9664824015846994,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 183.0,
+            "mean_backlog": 1.3471116457377048,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": 0.004712620601092787,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_audio_dominant_rep_1": {
+      "stable": false,
+      "reason": "completion_ratio_missing_or_low; incomplete_requests; run_failed; unclean_shutdown; sustained_backlog_growth; large_window_end_backlog; drain_above_unstable_limit",
+      "category": "unstable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 0.8147208121827412,
+        "incomplete_requests": 73,
+        "request_errors": 0,
+        "window_end_backlog": 143,
+        "drain_seconds": 60.004870151,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.1,
+            "mean_backlog": 8.870626462486188,
+            "backlog_at_end": 17
+          },
+          {
+            "offset_seconds": 36.2,
+            "mean_backlog": 25.29607135961326,
+            "backlog_at_end": 34
+          },
+          {
+            "offset_seconds": 54.3,
+            "mean_backlog": 47.87252565906077,
+            "backlog_at_end": 54
+          },
+          {
+            "offset_seconds": 72.4,
+            "mean_backlog": 62.25074126127072,
+            "backlog_at_end": 66
+          },
+          {
+            "offset_seconds": 90.5,
+            "mean_backlog": 67.18338901132597,
+            "backlog_at_end": 72
+          },
+          {
+            "offset_seconds": 108.6,
+            "mean_backlog": 80.79142565933702,
+            "backlog_at_end": 93
+          },
+          {
+            "offset_seconds": 126.7,
+            "mean_backlog": 98.05003826718232,
+            "backlog_at_end": 102
+          },
+          {
+            "offset_seconds": 144.8,
+            "mean_backlog": 106.95748678104972,
+            "backlog_at_end": 114
+          },
+          {
+            "offset_seconds": 162.9,
+            "mean_backlog": 118.81865106265194,
+            "backlog_at_end": 127
+          },
+          {
+            "offset_seconds": 181.0,
+            "mean_backlog": 133.2772798144199,
+            "backlog_at_end": 143
+          }
+        ],
+        "second_half_backlog_growth": 52.485854155082876,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_audio_dominant_rep_2": {
+      "stable": false,
+      "reason": "sustained_backlog_growth; large_window_end_backlog; drain_above_unstable_limit",
+      "category": "unstable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 63,
+        "drain_seconds": 57.541835637,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.1,
+            "mean_backlog": 0.8860509173480663,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 36.2,
+            "mean_backlog": 1.328089007127072,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 54.3,
+            "mean_backlog": 1.17970458,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 72.4,
+            "mean_backlog": 1.0906982486187846,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.5,
+            "mean_backlog": 0.6163701497237569,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 108.6,
+            "mean_backlog": 1.3544382645303867,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 126.7,
+            "mean_backlog": 4.26009692198895,
+            "backlog_at_end": 10
+          },
+          {
+            "offset_seconds": 144.8,
+            "mean_backlog": 20.61252700441989,
+            "backlog_at_end": 30
+          },
+          {
+            "offset_seconds": 162.9,
+            "mean_backlog": 36.68631214110497,
+            "backlog_at_end": 44
+          },
+          {
+            "offset_seconds": 181.0,
+            "mean_backlog": 53.31736568198895,
+            "backlog_at_end": 63
+          }
+        ],
+        "second_half_backlog_growth": 51.962927417458566,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_audio_dominant_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 2,
+        "drain_seconds": 0.061914862,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.1,
+            "mean_backlog": 0.6972380539226519,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.2,
+            "mean_backlog": 0.6158162479005524,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.3,
+            "mean_backlog": 0.8654757708839779,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 72.4,
+            "mean_backlog": 0.6882673954143647,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 90.5,
+            "mean_backlog": 0.6661993791160221,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 108.6,
+            "mean_backlog": 0.9119525152486188,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 126.7,
+            "mean_backlog": 0.6777270291712707,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 144.8,
+            "mean_backlog": 1.2978367771823205,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 162.9,
+            "mean_backlog": 1.1302578888950277,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 181.0,
+            "mean_backlog": 0.8023236039779006,
+            "backlog_at_end": 2
+          }
+        ],
+        "second_half_backlog_growth": -0.10962891127071817,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_text_dominant_rep_1": {
+      "stable": false,
+      "reason": "completion_ratio_missing_or_low; incomplete_requests; run_failed; unclean_shutdown; sustained_backlog_growth; large_window_end_backlog; drain_above_unstable_limit",
+      "category": "unstable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 0.6749163879598662,
+        "incomplete_requests": 972,
+        "request_errors": 0,
+        "window_end_backlog": 1196,
+        "drain_seconds": 60.004041465,
+        "backlog_bins": [
+          {
+            "offset_seconds": 49.1,
+            "mean_backlog": 55.02810929509165,
+            "backlog_at_end": 115
+          },
+          {
+            "offset_seconds": 98.2,
+            "mean_backlog": 178.5288553365784,
+            "backlog_at_end": 252
+          },
+          {
+            "offset_seconds": 147.3,
+            "mean_backlog": 314.4376893157434,
+            "backlog_at_end": 379
+          },
+          {
+            "offset_seconds": 196.4,
+            "mean_backlog": 452.7585491374745,
+            "backlog_at_end": 537
+          },
+          {
+            "offset_seconds": 245.5,
+            "mean_backlog": 598.9824038147046,
+            "backlog_at_end": 665
+          },
+          {
+            "offset_seconds": 294.6,
+            "mean_backlog": 730.9649086233197,
+            "backlog_at_end": 803
+          },
+          {
+            "offset_seconds": 343.7,
+            "mean_backlog": 868.23919750222,
+            "backlog_at_end": 929
+          },
+          {
+            "offset_seconds": 392.8,
+            "mean_backlog": 970.8493833521792,
+            "backlog_at_end": 1015
+          },
+          {
+            "offset_seconds": 441.9,
+            "mean_backlog": 1045.2936516206314,
+            "backlog_at_end": 1083
+          },
+          {
+            "offset_seconds": 491.0,
+            "mean_backlog": 1145.6925751051529,
+            "backlog_at_end": 1196
+          }
+        ],
+        "second_half_backlog_growth": 414.7276664818331,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_text_dominant_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.153931182,
+        "backlog_bins": [
+          {
+            "offset_seconds": 49.1,
+            "mean_backlog": 44.85560972537678,
+            "backlog_at_end": 110
+          },
+          {
+            "offset_seconds": 98.2,
+            "mean_backlog": 168.57853718873727,
+            "backlog_at_end": 232
+          },
+          {
+            "offset_seconds": 147.3,
+            "mean_backlog": 298.1022989749695,
+            "backlog_at_end": 358
+          },
+          {
+            "offset_seconds": 196.4,
+            "mean_backlog": 406.60230495951123,
+            "backlog_at_end": 450
+          },
+          {
+            "offset_seconds": 245.5,
+            "mean_backlog": 508.69401476902243,
+            "backlog_at_end": 571
+          },
+          {
+            "offset_seconds": 294.6,
+            "mean_backlog": 608.4192058079022,
+            "backlog_at_end": 528
+          },
+          {
+            "offset_seconds": 343.7,
+            "mean_backlog": 314.943604490387,
+            "backlog_at_end": 119
+          },
+          {
+            "offset_seconds": 392.8,
+            "mean_backlog": 19.64232892525458,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 441.9,
+            "mean_backlog": 0.6470364446639512,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 491.0,
+            "mean_backlog": 0.7392641034826883,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": -607.6799417044195,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_text_dominant_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.001389223,
+        "backlog_bins": [
+          {
+            "offset_seconds": 49.1,
+            "mean_backlog": 0.6644256413441956,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 98.2,
+            "mean_backlog": 0.7925392197759674,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 147.3,
+            "mean_backlog": 0.6463049975152749,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 196.4,
+            "mean_backlog": 0.9549581182892057,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 245.5,
+            "mean_backlog": 0.7603455949694501,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 294.6,
+            "mean_backlog": 0.9451208632586559,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 343.7,
+            "mean_backlog": 0.6433007787576375,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 392.8,
+            "mean_backlog": 0.6584937483503055,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 441.9,
+            "mean_backlog": 0.7517601775560081,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 491.0,
+            "mean_backlog": 0.8741988149898167,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.07092204826883919,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_vision_dominant_rep_1": {
+      "stable": false,
+      "reason": "completion_ratio_missing_or_low; incomplete_requests; run_failed; unclean_shutdown; sustained_backlog_growth; large_window_end_backlog; drain_above_unstable_limit",
+      "category": "unstable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 0.7753712871287128,
+        "incomplete_requests": 363,
+        "request_errors": 0,
+        "window_end_backlog": 486,
+        "drain_seconds": 60.00557069,
+        "backlog_bins": [
+          {
+            "offset_seconds": 49.1,
+            "mean_backlog": 16.931333774317718,
+            "backlog_at_end": 37
+          },
+          {
+            "offset_seconds": 98.2,
+            "mean_backlog": 59.165049070916496,
+            "backlog_at_end": 80
+          },
+          {
+            "offset_seconds": 147.3,
+            "mean_backlog": 88.439287251833,
+            "backlog_at_end": 105
+          },
+          {
+            "offset_seconds": 196.4,
+            "mean_backlog": 116.50671467242363,
+            "backlog_at_end": 137
+          },
+          {
+            "offset_seconds": 245.5,
+            "mean_backlog": 156.09704727796333,
+            "backlog_at_end": 177
+          },
+          {
+            "offset_seconds": 294.6,
+            "mean_backlog": 204.8931391167006,
+            "backlog_at_end": 238
+          },
+          {
+            "offset_seconds": 343.7,
+            "mean_backlog": 272.5107320152546,
+            "backlog_at_end": 306
+          },
+          {
+            "offset_seconds": 392.8,
+            "mean_backlog": 333.6074778068228,
+            "backlog_at_end": 365
+          },
+          {
+            "offset_seconds": 441.9,
+            "mean_backlog": 392.28800644755603,
+            "backlog_at_end": 418
+          },
+          {
+            "offset_seconds": 491.0,
+            "mean_backlog": 454.03333529252546,
+            "backlog_at_end": 486
+          }
+        ],
+        "second_half_backlog_growth": 249.14019617582485,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_vision_dominant_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.145587342,
+        "backlog_bins": [
+          {
+            "offset_seconds": 49.1,
+            "mean_backlog": 0.7819057598370672,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 98.2,
+            "mean_backlog": 0.5963120140325866,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 147.3,
+            "mean_backlog": 0.8823652678818737,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 196.4,
+            "mean_backlog": 1.0087487043991854,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 245.5,
+            "mean_backlog": 0.5812088206313646,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 294.6,
+            "mean_backlog": 0.6934166163747454,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 343.7,
+            "mean_backlog": 0.8154777883503055,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 392.8,
+            "mean_backlog": 0.5659192897148676,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 441.9,
+            "mean_backlog": 0.551845162688391,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 491.0,
+            "mean_backlog": 0.6493550143991853,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": -0.04406160197556008,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "B_vision_dominant_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.00081697,
+        "backlog_bins": [
+          {
+            "offset_seconds": 49.1,
+            "mean_backlog": 0.46829304535641547,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 98.2,
+            "mean_backlog": 0.6709372303258656,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 147.3,
+            "mean_backlog": 0.6037210586558045,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 196.4,
+            "mean_backlog": 0.6977289506109979,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 245.5,
+            "mean_backlog": 0.5531238482484725,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 294.6,
+            "mean_backlog": 0.7201248500610998,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 343.7,
+            "mean_backlog": 0.5170868520162932,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 392.8,
+            "mean_backlog": 0.6109272131771895,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 441.9,
+            "mean_backlog": 0.6323760993890021,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 491.0,
+            "mean_backlog": 0.6702766956415479,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.04984815441955193,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_01_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.024155929,
+        "backlog_bins": [
+          {
+            "offset_seconds": 23.8,
+            "mean_backlog": 0.43324652327731095,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 47.6,
+            "mean_backlog": 0.4563563619327731,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 71.4,
+            "mean_backlog": 0.4622482901260504,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 95.2,
+            "mean_backlog": 0.4588152642016807,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 119.0,
+            "mean_backlog": 0.44902537605042014,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 142.8,
+            "mean_backlog": 0.4514198126470588,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 166.6,
+            "mean_backlog": 0.42123303357142855,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 190.4,
+            "mean_backlog": 0.4544219341176471,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 214.2,
+            "mean_backlog": 0.45318315584033614,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 238.0,
+            "mean_backlog": 0.46521938483193276,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.013799572184873932,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_01_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.015528711,
+        "backlog_bins": [
+          {
+            "offset_seconds": 23.8,
+            "mean_backlog": 0.4230601768067227,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 47.6,
+            "mean_backlog": 0.4566756395798319,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 71.4,
+            "mean_backlog": 0.46474052731092436,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 95.2,
+            "mean_backlog": 0.49023388861344536,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 119.0,
+            "mean_backlog": 0.4866773985294118,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 142.8,
+            "mean_backlog": 0.5014436945378151,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 166.6,
+            "mean_backlog": 0.45763544731092437,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 190.4,
+            "mean_backlog": 0.4532035650840336,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 214.2,
+            "mean_backlog": 0.4474192662184874,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 238.0,
+            "mean_backlog": 0.47619240474789915,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.025251289789915976,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_01_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.026543912,
+        "backlog_bins": [
+          {
+            "offset_seconds": 23.8,
+            "mean_backlog": 0.4652881307983193,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 47.6,
+            "mean_backlog": 0.4686588688655462,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 71.4,
+            "mean_backlog": 0.4854477126470588,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 95.2,
+            "mean_backlog": 0.5136071552941176,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 119.0,
+            "mean_backlog": 0.4935597031932773,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 142.8,
+            "mean_backlog": 0.5005664510504202,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 166.6,
+            "mean_backlog": 0.5074490191176471,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 190.4,
+            "mean_backlog": 0.502972266092437,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 214.2,
+            "mean_backlog": 0.5099143326890756,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 238.0,
+            "mean_backlog": 0.4698914001260504,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.030675050924369784,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_02_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.016255614,
+        "backlog_bins": [
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.73150634575,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 24.0,
+            "mean_backlog": 0.703021191,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.6926288670833334,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 48.0,
+            "mean_backlog": 0.68665391625,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.6650268423333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.6056786065,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 84.0,
+            "mean_backlog": 0.69438083475,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 96.0,
+            "mean_backlog": 0.6681706486666666,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.8053982040833333,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.7311782540833334,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.12549964758333332,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_02_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 2,
+        "drain_seconds": 0.041794104,
+        "backlog_bins": [
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.6224766863333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 24.0,
+            "mean_backlog": 0.5887499043333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.6560169255833334,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 48.0,
+            "mean_backlog": 0.6674462565,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.693644217,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.59781107075,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 84.0,
+            "mean_backlog": 0.5911384481666667,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 96.0,
+            "mean_backlog": 0.5957450630833333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.7161802629166667,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.6466262841666667,
+            "backlog_at_end": 2
+          }
+        ],
+        "second_half_backlog_growth": 0.048815213416666725,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_02_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.000648335,
+        "backlog_bins": [
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.6720047299166667,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 24.0,
+            "mean_backlog": 0.6800532019166666,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.685322781,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 48.0,
+            "mean_backlog": 0.70991663175,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.7036367659166667,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.7049811208333333,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 84.0,
+            "mean_backlog": 0.7301690845833333,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 96.0,
+            "mean_backlog": 0.7227134465833334,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.7315231983333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.6989616738333333,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.006019447000000011,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_03_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.001972895,
+        "backlog_bins": [
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.78396012475,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 24.0,
+            "mean_backlog": 0.7686838218333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.7528969015833333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 48.0,
+            "mean_backlog": 0.72401264625,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.781743062,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.7921268605833334,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 84.0,
+            "mean_backlog": 0.8104634574166667,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 96.0,
+            "mean_backlog": 0.75831491025,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.7787670980833333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.71359709625,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.07852976433333336,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_03_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.001867287,
+        "backlog_bins": [
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.64885804375,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 24.0,
+            "mean_backlog": 0.6795545751666666,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.7435091778333334,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 48.0,
+            "mean_backlog": 0.6034252990833333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.5967492549166666,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.6669222270833334,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 84.0,
+            "mean_backlog": 0.6778680271666667,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 96.0,
+            "mean_backlog": 0.6246442198333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.6781533510833333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.6079456198333333,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.05897660725000009,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_03_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 2,
+        "drain_seconds": 0.063656534,
+        "backlog_bins": [
+          {
+            "offset_seconds": 12.0,
+            "mean_backlog": 0.868211065,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 24.0,
+            "mean_backlog": 0.8444079724166667,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.8327807529166666,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 48.0,
+            "mean_backlog": 0.8606984738333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.9252483399166667,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.89717020925,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 84.0,
+            "mean_backlog": 0.86831345275,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 96.0,
+            "mean_backlog": 0.81508765175,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.8810644121666666,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.8572448214166667,
+            "backlog_at_end": 2
+          }
+        ],
+        "second_half_backlog_growth": -0.039925387833333326,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_04_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.015845883,
+        "backlog_bins": [
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.4494935285,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.4610025796,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.4396255973666667,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.4588369535,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 150.0,
+            "mean_backlog": 0.5165402689,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 180.0,
+            "mean_backlog": 0.4761576760333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 210.0,
+            "mean_backlog": 0.44824229373333335,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 240.0,
+            "mean_backlog": 0.4749740367,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 270.0,
+            "mean_backlog": 0.4719388491,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 300.0,
+            "mean_backlog": 0.42898345086666667,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.04717422516666664,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_04_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.021637342,
+        "backlog_bins": [
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.42815667613333336,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.45774570223333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.3841849757333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.43639945,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 150.0,
+            "mean_backlog": 0.3975052542333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 180.0,
+            "mean_backlog": 0.514167683,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 210.0,
+            "mean_backlog": 0.43857434883333335,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 240.0,
+            "mean_backlog": 0.43231928336666664,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 270.0,
+            "mean_backlog": 0.435671788,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 300.0,
+            "mean_backlog": 0.39892608393333334,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": -0.1152415990666667,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_04_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.013506172,
+        "backlog_bins": [
+          {
+            "offset_seconds": 30.0,
+            "mean_backlog": 0.4760967401,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 60.0,
+            "mean_backlog": 0.505160547,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.49859327636666667,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 120.0,
+            "mean_backlog": 0.4941987835,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 150.0,
+            "mean_backlog": 0.4887511233333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 180.0,
+            "mean_backlog": 0.5077574243,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 210.0,
+            "mean_backlog": 0.47361784326666667,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 240.0,
+            "mean_backlog": 0.48713969,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 270.0,
+            "mean_backlog": 0.46064461696666664,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 300.0,
+            "mean_backlog": 0.47263759006666667,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.03511983423333337,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_05_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 2,
+        "drain_seconds": 0.029768314,
+        "backlog_bins": [
+          {
+            "offset_seconds": 29.3,
+            "mean_backlog": 0.7685230820819112,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 58.6,
+            "mean_backlog": 0.722948318225256,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 87.9,
+            "mean_backlog": 0.7518593006484642,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 117.2,
+            "mean_backlog": 0.8064698174061433,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 146.5,
+            "mean_backlog": 0.6746670867235495,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 175.8,
+            "mean_backlog": 0.8265834165187713,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 205.1,
+            "mean_backlog": 0.7583534583959044,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 234.4,
+            "mean_backlog": 0.7531430323208191,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 263.7,
+            "mean_backlog": 0.7414623434470989,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 293.0,
+            "mean_backlog": 0.8044986902047782,
+            "backlog_at_end": 2
+          }
+        ],
+        "second_half_backlog_growth": -0.022084726313993164,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_05_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.021198576,
+        "backlog_bins": [
+          {
+            "offset_seconds": 29.3,
+            "mean_backlog": 0.7647914543003413,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 58.6,
+            "mean_backlog": 0.7417913904778157,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 87.9,
+            "mean_backlog": 0.8717765710580205,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 117.2,
+            "mean_backlog": 0.8470127862116041,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 146.5,
+            "mean_backlog": 0.7140880799317406,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 175.8,
+            "mean_backlog": 0.7684952451194539,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 205.1,
+            "mean_backlog": 1.3625020689761091,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 234.4,
+            "mean_backlog": 0.7826058226621161,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 263.7,
+            "mean_backlog": 0.8247777487030716,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 293.0,
+            "mean_backlog": 0.7216017748464164,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.046893470273037474,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_05_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": true,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.011187803,
+        "backlog_bins": [
+          {
+            "offset_seconds": 29.3,
+            "mean_backlog": 0.7475957530375427,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 58.6,
+            "mean_backlog": 0.8541386553583618,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 87.9,
+            "mean_backlog": 0.7185395664163823,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 117.2,
+            "mean_backlog": 0.7390659192150171,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 146.5,
+            "mean_backlog": 1.2010015458361776,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 175.8,
+            "mean_backlog": 0.8668617099317406,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 205.1,
+            "mean_backlog": 0.9680856712969284,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 234.4,
+            "mean_backlog": 0.9177329879863482,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 263.7,
+            "mean_backlog": 0.8192433233788395,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 293.0,
+            "mean_backlog": 0.7744452450511945,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.09241646488054611,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_06_rep_1": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 0,
+        "drain_seconds": 0.002455994,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.0,
+            "mean_backlog": 1.0839926196666667,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.9272727382777778,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 54.0,
+            "mean_backlog": 0.9696432560555556,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 1.0340282542222223,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 0.8609333565555556,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.9922614382777778,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 126.0,
+            "mean_backlog": 0.9237080311666667,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 144.0,
+            "mean_backlog": 0.9449342653333334,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 162.0,
+            "mean_backlog": 1.020774897111111,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 180.0,
+            "mean_backlog": 0.878215076,
+            "backlog_at_end": 0
+          }
+        ],
+        "second_half_backlog_growth": -0.11404636227777776,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_06_rep_2": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 1,
+        "drain_seconds": 0.007567892,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.0,
+            "mean_backlog": 0.9774410435555556,
+            "backlog_at_end": 4
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 0.9525458093333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 54.0,
+            "mean_backlog": 1.3197823507222222,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 0.9078454575555556,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 1.069414581388889,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 0.9341440000555555,
+            "backlog_at_end": 3
+          },
+          {
+            "offset_seconds": 126.0,
+            "mean_backlog": 0.9723009141666666,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 144.0,
+            "mean_backlog": 1.4379135512777779,
+            "backlog_at_end": 5
+          },
+          {
+            "offset_seconds": 162.0,
+            "mean_backlog": 1.6963084335555556,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 180.0,
+            "mean_backlog": 1.115605544611111,
+            "backlog_at_end": 1
+          }
+        ],
+        "second_half_backlog_growth": 0.18146154455555552,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    },
+    "AS_06_rep_3": {
+      "stable": true,
+      "reason": "complete_within_operational_limits",
+      "category": "stable",
+      "stable_region_latency_eligible": false,
+      "evidence": {
+        "completion_ratio": 1.0,
+        "incomplete_requests": 0,
+        "request_errors": 0,
+        "window_end_backlog": 4,
+        "drain_seconds": 0.417739621,
+        "backlog_bins": [
+          {
+            "offset_seconds": 18.0,
+            "mean_backlog": 0.9995025194444445,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 36.0,
+            "mean_backlog": 1.380065067611111,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 54.0,
+            "mean_backlog": 1.0880430595555555,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 72.0,
+            "mean_backlog": 1.1486032083333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 90.0,
+            "mean_backlog": 1.078721001,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 108.0,
+            "mean_backlog": 2.094030528222222,
+            "backlog_at_end": 2
+          },
+          {
+            "offset_seconds": 126.0,
+            "mean_backlog": 1.5308981598333333,
+            "backlog_at_end": 0
+          },
+          {
+            "offset_seconds": 144.0,
+            "mean_backlog": 1.3549492763333333,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 162.0,
+            "mean_backlog": 1.2609490513333332,
+            "backlog_at_end": 1
+          },
+          {
+            "offset_seconds": 180.0,
+            "mean_backlog": 1.814297904,
+            "backlog_at_end": 4
+          }
+        ],
+        "second_half_backlog_growth": -0.279732624222222,
+        "measurement_available": true,
+        "backlog_definition": "scheduled cohort requests not yet completed, including host queues"
+      },
+      "thresholds": {
+        "completion_ratio_min": 0.98,
+        "drain_unstable_seconds": 30.0,
+        "drain_boundary_seconds": 5.0,
+        "backlog_bins": 10,
+        "growth_min_requests": 10.0,
+        "growth_offered_fraction": 0.02,
+        "growth_increasing_fraction": 0.75,
+        "growth_end_fraction": 0.5,
+        "end_backlog_unstable_min_requests": 30,
+        "end_backlog_unstable_fraction": 0.1,
+        "end_backlog_boundary_min_requests": 3,
+        "end_backlog_boundary_fraction": 0.01,
+        "boundary_growth_min_requests": 3.0,
+        "boundary_growth_offered_fraction": 0.005
+      }
+    }
+  },
+  "configuration_labels": {
+    "cfg_c3ece630b85ba655": {
+      "runs": 1,
+      "categories": {
+        "stable": 1
+      },
+      "stable_repetitions": 1
+    },
+    "cfg_4d9d9fd249d2c960": {
+      "runs": 1,
+      "categories": {
+        "stable": 1
+      },
+      "stable_repetitions": 1
+    },
+    "cfg_1dd0a6ab32778731": {
+      "runs": 3,
+      "categories": {
+        "stable": 2,
+        "boundary": 1
+      },
+      "stable_repetitions": 2
+    },
+    "cfg_da700742e91a9811": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_91af40e454544937": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_47e4dd1dc4862570": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_44047c64ae9e7f37": {
+      "runs": 4,
+      "categories": {
+        "stable": 4
+      },
+      "stable_repetitions": 4
+    },
+    "cfg_8691dad6d7b3a9e4": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_48412b207f93cc5f": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_460a36d35e9b45dc": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_93f8ae2b333dba54": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_5b8ca666a062c60a": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_f080344301ca8b51": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_8f92b3bac26b1128": {
+      "runs": 3,
+      "categories": {
+        "stable": 1,
+        "boundary": 1,
+        "unstable": 1
+      },
+      "stable_repetitions": 1
+    },
+    "cfg_75d2c9b77b74fe4f": {
+      "runs": 3,
+      "categories": {
+        "unstable": 1,
+        "stable": 2
+      },
+      "stable_repetitions": 2
+    },
+    "cfg_09a45eb4392cc4ba": {
+      "runs": 3,
+      "categories": {
+        "unstable": 2,
+        "stable": 1
+      },
+      "stable_repetitions": 1
+    },
+    "cfg_1cf2a3b2aac5de08": {
+      "runs": 3,
+      "categories": {
+        "unstable": 1,
+        "stable": 2
+      },
+      "stable_repetitions": 2
+    },
+    "cfg_3dcfd5de7f220ba5": {
+      "runs": 3,
+      "categories": {
+        "unstable": 1,
+        "stable": 2
+      },
+      "stable_repetitions": 2
+    },
+    "cfg_668428f2f0f4d7eb": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_7f5395f02ae349c9": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_ebade6e111f12d61": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_b4fcd72528e06172": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_6b49ef361dd69056": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    },
+    "cfg_c63ef7234e2af531": {
+      "runs": 3,
+      "categories": {
+        "stable": 3
+      },
+      "stable_repetitions": 3
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "at_utc": "2026-10-08T04:34:58.226306+00:00",
+  "status": "PROPOSALS_ONLY_NOT_EXECUTED",
+  "directions": [
+    "HEAVY_MULTI_HOTSPOT",
+    "HEAVY_LOW_QPS_FIXED_COST"
+  ],
+  "manifests": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/next_stage_HEAVY_MULTI_HOTSPOT_manifest.json",
+      "sha256": "30a642ecad94b490b3088ef7bf815433fbb45b8a7751498edaecf421a7b63ff7",
+      "bytes": 2946,
+      "mtime_ns": 1791434098224772446
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/next_stage_HEAVY_LOW_QPS_FIXED_COST_manifest.json",
+      "sha256": "870c83a10a5ca8a21336d259a08f17c6ec36511c270617e2bfaf76d87ede9e33",
+      "bytes": 3054,
+      "mtime_ns": 1791434098224772446
+    }
+  ],
+  "automatic_execution": false
+}

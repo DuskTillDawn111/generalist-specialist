@@ -1,0 +1,23 @@
+{
+  "model": "PP-OCRv6-medium-rec",
+  "task": "optical_character_recognition",
+  "benchmark_mode": "recognition_only",
+  "parameters_m": null,
+  "weight_size_mb": 73.278,
+  "load_time_s": 0.486,
+  "idle_vram_mb": -0.007,
+  "peak_vram_mb": 14.274,
+  "mean_latency_ms": 4.81,
+  "p50_latency_ms": 4.461,
+  "p95_latency_ms": 6.138,
+  "p99_latency_ms": 6.952,
+  "throughput_qps": 207.896,
+  "warmup_runs": 3,
+  "test_runs": 10,
+  "input_dataset": "IIIT5K",
+  "sample_id": "ocr_000002",
+  "ground_truth": "salutes",
+  "device": "gpu:0",
+  "prediction": "Salutes",
+  "rec_score": 0.9999967217445374
+}

@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-08T08:24:28.448866+00:00",
+  "trained_only_on_Module16_MID_three_runs": true,
+  "bounds": [
+    {
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task": "lid",
+      "replica_count": 1,
+      "training_run_means_ms": [
+        122.89862935466947,
+        119.0117885844701,
+        122.16098631794334
+      ],
+      "proposed_service_mean_bound_ms": 124.83731814954935,
+      "rule": "max(observed repetition mean, one-sided 95% t upper confidence limit on repetition mean); diagnostic proposed bound, not a deterministic per-request upper bound",
+      "accepted": false
+    },
+    {
+      "model": "whisper_turbo",
+      "task": "asr",
+      "replica_count": 1,
+      "training_run_means_ms": [
+        385.7903325166667,
+        391.720294375,
+        394.27232860833334
+      ],
+      "proposed_service_mean_bound_ms": 397.9305811962377,
+      "rule": "max(observed repetition mean, one-sided 95% t upper confidence limit on repetition mean); diagnostic proposed bound, not a deterministic per-request upper bound",
+      "accepted": false
+    },
+    {
+      "model": "whisper_turbo",
+      "task": "lid",
+      "replica_count": 1,
+      "training_run_means_ms": [
+        164.20287256262833,
+        161.7743386529774,
+        161.2679697063655
+      ],
+      "proposed_service_mean_bound_ms": 165.05992197045626,
+      "rule": "max(observed repetition mean, one-sided 95% t upper confidence limit on repetition mean); diagnostic proposed bound, not a deterministic per-request upper bound",
+      "accepted": false
+    }
+  ],
+  "heldout_runs": [
+    "full_mid_reference_rep1",
+    "speech_only_same_residency_rep1",
+    "full_mid_reference_rep2",
+    "speech_only_same_residency_rep2"
+  ],
+  "heldout_acceptance": "Every heldout complete independent run must have each path cohort mean <= training-only bound, conserved counts, unchanged worker semantics and valid session. No refitting/raising bounds after seeing diagnostics.",
+  "transfer_limit": "At most observed original/zero non-speech background under identical six resident checkpoints/counts, ASR=1,LID=12 and unchanged speech routes. These tests do not certify arbitrary new pool selections, replica counts, different speech task mixtures or changed speech QPS. Do not authorize a new three-phase witness based solely on this fitted scope."
+}

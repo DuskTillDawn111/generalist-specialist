@@ -1,0 +1,18 @@
+{
+  "model": "ResNet50",
+  "task": "image_classification",
+  "parameters_m": 25.557032,
+  "weight_size_mb": 97.79016208648682,
+  "load_time_s": 0.4458202598616481,
+  "idle_vram_mb": 98.30224609375,
+  "peak_vram_mb": 117.92626953125,
+  "mean_latency_ms": 2.171552274376154,
+  "p50_latency_ms": 2.1685371175408363,
+  "p95_latency_ms": 2.2277196403592825,
+  "p99_latency_ms": 2.243284834548831,
+  "throughput_qps": 460.50008180773875,
+  "warmup_runs": 3,
+  "test_runs": 10,
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090"
+}

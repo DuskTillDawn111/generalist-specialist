@@ -1,0 +1,31 @@
+{
+  "module": "24A",
+  "status": "PREDICTOR_RESEARCH_COMPLETE_FORMAL_VALIDATION_NOT_READY",
+  "CPU_verification_completed": true,
+  "CPU_search_original_all_legal_counts": true,
+  "CPU_route_global_certificate": false,
+  "original_HIGH_effective_selection": "S-only numerical tie; zero G-ASR simulated requests. Tiny positive G flow is retained, not credited as useful split.",
+  "offline_validation_completed": true,
+  "independent_ranking_contrast_groups": 0,
+  "independent_ranking_supported": false,
+  "cross_combination_generalization_established": false,
+  "GPU_diagnostic_attempts": 3,
+  "GPU_probes_development_only": true,
+  "meaningful_autonomous_three_phase": false,
+  "HIGH_credible_positive_margin": false,
+  "Module24B_conditions_met": false,
+  "Module24B_plan_proposed": false,
+  "Module24B_executed": false,
+  "positive_utility_three_phase_established": false,
+  "historical_integrity_passed": true,
+  "reason": "No independent matched combination/workload ranking evidence; large utility/queue holdout errors and false-stable predictions persist. Probes cannot establish formal gains.",
+  "required_next_evidence": "Independent same-workload paired deployment contrasts across >=2 combinations (>=3 grouped contrasts), ranking agreement >=80%, no high-confidence reversals, calibrated uncertainty/stability validation. Current evidence does not justify a 24B execution plan.",
+  "stopped_after_Module24A": true,
+  "final_CPU_recalculation_passed": true,
+  "matched_probe_trace_verified": true,
+  "GPU_released": true,
+  "per_route_GPU_attempts": {
+    "S-only": 2,
+    "GS18": 1
+  }
+}

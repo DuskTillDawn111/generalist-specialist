@@ -1,0 +1,79 @@
+{
+  "model": "MiniCPM-o-4.5",
+  "task": "optical_character_recognition",
+  "dataset": "IIIT5K",
+  "split": "test",
+  "evaluation_mode": "single-word recognition",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "attention_backend": "sdpa",
+  "batch_size": 1,
+  "modalities_initialized": {
+    "vision": true,
+    "audio": true,
+    "tts": false
+  },
+  "decoding": {
+    "do_sample": false,
+    "temperature": null,
+    "top_p": null,
+    "top_k": null,
+    "enable_thinking": false,
+    "use_tts_template": false,
+    "max_new_tokens": 32
+  },
+  "prompt_version": "v1",
+  "prompt": "Read the single word shown in this image. Output only the recognized word. Do not provide any explanation.",
+  "message_format": "[PIL RGB image, OCR prompt text]",
+  "normalization": "lowercase; remove all non-alphanumeric characters",
+  "num_samples": 5,
+  "correct": 5,
+  "exact_match_accuracy": 1.0,
+  "total_character_errors": 0,
+  "total_reference_characters": 30,
+  "cer": 0.0,
+  "raw_response_length_chars": {
+    "mean": 6.0,
+    "min": 3,
+    "max": 9
+  },
+  "normalized_response_length_chars": {
+    "mean": 6.0,
+    "min": 3,
+    "max": 9
+  },
+  "parameters_m": 9024.091,
+  "checkpoint_size_mb": 17875.421,
+  "model_load_time_s": 4.182,
+  "warmup_runs": 2,
+  "chat_latency": {
+    "mean_ms": 136.06,
+    "p50_ms": 149.994,
+    "p95_ms": 150.327,
+    "p99_ms": 150.341,
+    "min_ms": 102.774,
+    "max_ms": 150.345
+  },
+  "e2e_latency": {
+    "mean_ms": 136.48,
+    "p50_ms": 150.621,
+    "p95_ms": 150.769,
+    "p99_ms": 150.793,
+    "min_ms": 103.085,
+    "max_ms": 150.799
+  },
+  "chat_request_throughput_qps": 7.35,
+  "e2e_request_throughput_qps": 7.327,
+  "torch_idle_allocated_mb": 17297.439,
+  "torch_peak_allocated_mb": 17538.966,
+  "memory_note": "Torch allocator memory is auxiliary only; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "chat_latency": "MiniCPM model.chat() on a pre-decoded PIL RGB image; includes internal visual preprocessing, visual encoding, language generation and response decoding",
+    "e2e_latency": "local image read/decode + RGB conversion + message construction + model.chat() + OCR normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.8.0+cu128",
+  "transformers_version": "4.51.0",
+  "timestamp": "2026-09-18T00:40:37.097481+08:00"
+}

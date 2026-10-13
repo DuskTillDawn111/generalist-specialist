@@ -1,0 +1,132 @@
+{
+  "model": "MiniCPM-o-4.5",
+  "task": "image_classification",
+  "dataset": "Imagenette",
+  "split": "validation",
+  "evaluation_mode": "10-class closed-set",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "attention_backend": "sdpa",
+  "batch_size": 1,
+  "modalities_initialized": {
+    "vision": true,
+    "audio": true,
+    "tts": false
+  },
+  "decoding": {
+    "do_sample": false,
+    "temperature": null,
+    "top_p": null,
+    "top_k": null,
+    "enable_thinking": false,
+    "use_tts_template": false,
+    "max_new_tokens": 16
+  },
+  "prompt_version": "v1",
+  "prompt": "Classify this image into exactly one of the following categories: tench, English springer, cassette player, chain saw, church, French horn, garbage truck, gas pump, golf ball, parachute. Output only the category name and nothing else.",
+  "message_format": "[PIL RGB image, prompt text]",
+  "output_normalization": "strip + lowercase only",
+  "target_classes": [
+    "tench",
+    "English springer",
+    "cassette player",
+    "chain saw",
+    "church",
+    "French horn",
+    "garbage truck",
+    "gas pump",
+    "golf ball",
+    "parachute"
+  ],
+  "num_samples": 200,
+  "correct": 200,
+  "accuracy": 1.0,
+  "valid_closed_set_outputs": 200,
+  "valid_closed_set_output_rate": 1.0,
+  "per_class_accuracy": {
+    "tench": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "English springer": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "cassette player": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "chain saw": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "church": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "French horn": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "garbage truck": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "gas pump": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "golf ball": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "parachute": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    }
+  },
+  "parameters_m": 9024.091,
+  "checkpoint_size_mb": 17875.421,
+  "model_load_time_s": 3.968,
+  "warmup_runs": 5,
+  "chat_latency": {
+    "mean_ms": 233.952,
+    "p50_ms": 162.991,
+    "p95_ms": 446.543,
+    "p99_ms": 502.971,
+    "min_ms": 113.948,
+    "max_ms": 579.374
+  },
+  "e2e_latency": {
+    "mean_ms": 234.847,
+    "p50_ms": 163.821,
+    "p95_ms": 447.465,
+    "p99_ms": 503.761,
+    "min_ms": 114.865,
+    "max_ms": 580.582
+  },
+  "chat_request_throughput_qps": 4.274,
+  "e2e_request_throughput_qps": 4.258,
+  "torch_idle_allocated_mb": 17297.439,
+  "torch_peak_allocated_mb": 18043.033,
+  "memory_note": "Torch allocator memory is auxiliary only; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "chat_latency": "MiniCPM model.chat() on a pre-decoded PIL RGB image; includes MiniCPM internal vision preprocessing, vision encoding, language generation and response decoding",
+    "e2e_latency": "local image read/decode + RGB conversion + message construction + model.chat() + closed-label normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.8.0+cu128",
+  "transformers_version": "4.51.0",
+  "timestamp": "2026-09-18T00:37:05.373470+08:00"
+}

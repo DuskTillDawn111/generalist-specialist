@@ -1,0 +1,36 @@
+{
+  "models": [
+    "qwen",
+    "whisper"
+  ],
+  "routing": {
+    "text": "qwen",
+    "image": "qwen",
+    "ocr": "qwen",
+    "asr": "whisper"
+  },
+  "num_results": 800,
+  "wall_time_s": 94.810896663,
+  "paths": {
+    "qwen:asr": {
+      "count": 30,
+      "mean_worker_latency_ms": 624.6235875333333
+    },
+    "qwen:image": {
+      "count": 200,
+      "mean_worker_latency_ms": 202.25879369
+    },
+    "qwen:ocr": {
+      "count": 200,
+      "mean_worker_latency_ms": 124.385738795
+    },
+    "qwen:text": {
+      "count": 200,
+      "mean_worker_latency_ms": 53.438539535
+    },
+    "whisper:asr": {
+      "count": 170,
+      "mean_worker_latency_ms": 314.4963670117647
+    }
+  }
+}

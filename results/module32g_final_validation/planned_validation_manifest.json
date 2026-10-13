@@ -1,0 +1,411 @@
+{
+  "formal_frozen": false,
+  "reason": "StageA CPU regression failed before formal configuration/trajectory freeze; no formal trajectory generated or used",
+  "model_pool_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32f_cuda_recovery/frozen_validation_manifest_v2.json",
+    "sha256": "7ae3eb8083d859e885d5795bddb432c54c746fd3c0b82bfb2172343c6ddb3780",
+    "bytes": 456201
+  },
+  "unchanged_pool_weights_quality_rates_budget_replicas": true,
+  "planned_order": [
+    "P1_S",
+    "P1_D",
+    "P2_D",
+    "P2_S",
+    "P3_S",
+    "P3_D"
+  ],
+  "seeds_chosen_once": [
+    320701,
+    320702,
+    320703
+  ],
+  "slots": [
+    {
+      "run_id": "P1_S",
+      "candidate": "C2",
+      "arm": "s_only",
+      "stage": "Module32G_PLANNED_NOT_EXECUTED",
+      "seed": 320701,
+      "repetition": 0,
+      "target_task": "asr",
+      "Generalist": "phi4mm",
+      "Specialist": "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "deployment": {
+        "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+        "phi4mm": 1,
+        "whisper-small": 1
+      },
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "lid": {
+          "whisper-small": 0.2
+        },
+        "visual_qa": {
+          "phi4mm": 0.2
+        },
+        "asr": {
+          "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 0.46
+        }
+      },
+      "measurement_seconds": 2400.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "frozen_G_fraction": 0,
+      "trajectories": null,
+      "frozen_offered_counts": null,
+      "pair": 1,
+      "status": "NOT_EXECUTED_STAGE_A_CONTROL_FAILURE",
+      "U": null
+    },
+    {
+      "run_id": "P1_D",
+      "candidate": "C2",
+      "arm": "dynamic",
+      "stage": "Module32G_PLANNED_NOT_EXECUTED",
+      "seed": 320701,
+      "repetition": 0,
+      "target_task": "asr",
+      "Generalist": "phi4mm",
+      "Specialist": "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "deployment": {
+        "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+        "phi4mm": 1,
+        "whisper-small": 1
+      },
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "lid": {
+          "whisper-small": 0.2
+        },
+        "visual_qa": {
+          "phi4mm": 0.2
+        },
+        "asr": {
+          "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 0.437,
+          "phi4mm": 0.023000000000000003
+        }
+      },
+      "measurement_seconds": 2400.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "frozen_G_fraction": null,
+      "trajectories": null,
+      "frozen_offered_counts": null,
+      "pair": 1,
+      "status": "NOT_EXECUTED_STAGE_A_CONTROL_FAILURE",
+      "U": null
+    },
+    {
+      "run_id": "P2_S",
+      "candidate": "C2",
+      "arm": "s_only",
+      "stage": "Module32G_PLANNED_NOT_EXECUTED",
+      "seed": 320702,
+      "repetition": 0,
+      "target_task": "asr",
+      "Generalist": "phi4mm",
+      "Specialist": "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "deployment": {
+        "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+        "phi4mm": 1,
+        "whisper-small": 1
+      },
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "lid": {
+          "whisper-small": 0.2
+        },
+        "visual_qa": {
+          "phi4mm": 0.2
+        },
+        "asr": {
+          "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 0.46
+        }
+      },
+      "measurement_seconds": 2400.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "frozen_G_fraction": 0,
+      "trajectories": null,
+      "frozen_offered_counts": null,
+      "pair": 2,
+      "status": "NOT_EXECUTED_STAGE_A_CONTROL_FAILURE",
+      "U": null
+    },
+    {
+      "run_id": "P2_D",
+      "candidate": "C2",
+      "arm": "dynamic",
+      "stage": "Module32G_PLANNED_NOT_EXECUTED",
+      "seed": 320702,
+      "repetition": 0,
+      "target_task": "asr",
+      "Generalist": "phi4mm",
+      "Specialist": "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "deployment": {
+        "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+        "phi4mm": 1,
+        "whisper-small": 1
+      },
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "lid": {
+          "whisper-small": 0.2
+        },
+        "visual_qa": {
+          "phi4mm": 0.2
+        },
+        "asr": {
+          "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 0.437,
+          "phi4mm": 0.023000000000000003
+        }
+      },
+      "measurement_seconds": 2400.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "frozen_G_fraction": null,
+      "trajectories": null,
+      "frozen_offered_counts": null,
+      "pair": 2,
+      "status": "NOT_EXECUTED_STAGE_A_CONTROL_FAILURE",
+      "U": null
+    },
+    {
+      "run_id": "P3_S",
+      "candidate": "C2",
+      "arm": "s_only",
+      "stage": "Module32G_PLANNED_NOT_EXECUTED",
+      "seed": 320703,
+      "repetition": 0,
+      "target_task": "asr",
+      "Generalist": "phi4mm",
+      "Specialist": "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "deployment": {
+        "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+        "phi4mm": 1,
+        "whisper-small": 1
+      },
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "lid": {
+          "whisper-small": 0.2
+        },
+        "visual_qa": {
+          "phi4mm": 0.2
+        },
+        "asr": {
+          "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 0.46
+        }
+      },
+      "measurement_seconds": 2400.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "frozen_G_fraction": 0,
+      "trajectories": null,
+      "frozen_offered_counts": null,
+      "pair": 3,
+      "status": "NOT_EXECUTED_STAGE_A_CONTROL_FAILURE",
+      "U": null
+    },
+    {
+      "run_id": "P3_D",
+      "candidate": "C2",
+      "arm": "dynamic",
+      "stage": "Module32G_PLANNED_NOT_EXECUTED",
+      "seed": 320703,
+      "repetition": 0,
+      "target_task": "asr",
+      "Generalist": "phi4mm",
+      "Specialist": "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "deployment": {
+        "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+        "phi4mm": 1,
+        "whisper-small": 1
+      },
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "lid": {
+          "whisper-small": 0.2
+        },
+        "visual_qa": {
+          "phi4mm": 0.2
+        },
+        "asr": {
+          "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 0.437,
+          "phi4mm": 0.023000000000000003
+        }
+      },
+      "measurement_seconds": 2400.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "frozen_G_fraction": null,
+      "trajectories": null,
+      "frozen_offered_counts": null,
+      "pair": 3,
+      "status": "NOT_EXECUTED_STAGE_A_CONTROL_FAILURE",
+      "U": null
+    }
+  ],
+  "router_P95_max_ms": 1.0,
+  "control_max_ms": 10.0,
+  "original_monitor_abort_at_ge10ms": true,
+  "conditioning_seconds": 300.0,
+  "warmup_seconds": 30.0,
+  "measurement_seconds": 2400.0,
+  "drain_seconds": 60.0,
+  "thermal_protocol": {
+    "prelaunch_temperature_max_c": 38.0,
+    "consecutive_idle_samples_required": 3,
+    "max_wait_seconds": 300.0,
+    "between_samples_seconds": 2.0,
+    "resident_premeasurement_temperature_max_c": 40.0,
+    "resident_cool_timeout_seconds": 180.0,
+    "resident_consecutive_samples": 3,
+    "postwarm_pair_temperature_difference_max_c": 5.0,
+    "clocks_power_not_modified": true
+  },
+  "environment_control": {
+    "conditioning_seconds": 300.0,
+    "conditioning_route": "S-only in both arms, same pair trace and original six-task load; actual useful inference only",
+    "original_warmup_seconds": 30.0,
+    "original_thermal_protocol": {
+      "prelaunch_temperature_max_c": 38.0,
+      "consecutive_idle_samples_required": 3,
+      "max_wait_seconds": 300.0,
+      "between_samples_seconds": 2.0,
+      "resident_premeasurement_temperature_max_c": 40.0,
+      "resident_cool_timeout_seconds": 180.0,
+      "resident_consecutive_samples": 3,
+      "postwarm_pair_temperature_difference_max_c": 5.0,
+      "clocks_power_not_modified": true
+    },
+    "reload_all_models_each_arm": true,
+    "no_clocks_power_fan_changes": true,
+    "sensor_interval_seconds": 0.5,
+    "journal_interval_seconds": 10,
+    "postwarm_pair_temperature_difference_max_c": 5.0,
+    "measurement_mean_temperature_difference_max_c": 5.0,
+    "measurement_mean_sm_clock_relative_difference_max": 0.15,
+    "power_limit_must_equal_frozen": true,
+    "any_hw_or_sw_thermal_slowdown_invalid": true,
+    "fan_and_clock_events_logged": true
+  },
+  "failure_policy": "STOP_NO_RETRY; no strategy repair or formal GPU launch after StageA failure",
+  "retry_count": 0,
+  "new_seeds_screened": false,
+  "seeds_replaced": false,
+  "original_utility_context": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32g_final_validation/frozen_utility_context.json",
+    "sha256": "4b0a92a18dc9519d10a957db400411ac02c723efcea8c640d2f02b8d4ff19581",
+    "bytes": 6889
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "models": [
+    "qwen",
+    "distilbert"
+  ],
+  "routing": {
+    "text": "distilbert",
+    "image": "qwen",
+    "ocr": "qwen",
+    "asr": "qwen"
+  },
+  "num_results": 800,
+  "wall_time_s": 360.520043777,
+  "paths": {
+    "distilbert:text": {
+      "count": 80,
+      "mean_worker_latency_ms": 6.2588717
+    },
+    "qwen:asr": {
+      "count": 560,
+      "mean_worker_latency_ms": 611.5761096017857
+    },
+    "qwen:image": {
+      "count": 80,
+      "mean_worker_latency_ms": 135.325636425
+    },
+    "qwen:ocr": {
+      "count": 80,
+      "mean_worker_latency_ms": 89.293715225
+    }
+  }
+}

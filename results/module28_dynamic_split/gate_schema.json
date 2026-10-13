@@ -1,0 +1,8 @@
+{
+  "NO_DYNAMIC_OPPORTUNITY": "No supported opportunity and no justified bounded measurement",
+  "DYNAMIC_NO_UTILITY_GAIN": "Legal stable dynamic comparisons executed, no qualifying utility gain",
+  "DYNAMIC_EXPLORATORY_POSITIVE_ONLY": "Positive development candidate, independent gate unpassed or not run",
+  "DYNAMIC_NOT_REPRODUCED": "Positive development candidate fails independent reproduction",
+  "DYNAMIC_POSITIVE_REPLICATED": "Frozen independent gate passes",
+  "DYNAMIC_EVIDENCE_GAP": "Missing or illegal comparisons; effect cannot be determined"
+}

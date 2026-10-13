@@ -1,0 +1,21 @@
+{
+  "at_unix_ns": 1791717186175215197,
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/u_aligned_optimizer.py",
+      "sha256": "c6727f4f4a4b18bdfd4e8767b9914f19f65fdf8e0ef8a1a5179c54aab53fb1a3",
+      "bytes": 12706
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/run_cpu.py",
+      "sha256": "c4f1e38c4fe824080901b7fa731f700461dfdc25b878e85e900cd53c93568aaa",
+      "bytes": 12251
+    }
+  ],
+  "holdout": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/frozen_holdout_manifest.json",
+    "sha256": "1427c61d7fd390ef7fa809f603a02a7296cb3dfe2357717755c70ffac9aa4cac",
+    "bytes": 511
+  },
+  "no_oracle_route_injection": true
+}

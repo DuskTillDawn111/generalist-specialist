@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Pure Qwen",
+    "models": "Qwen",
+    "slots": 1,
+    "memory_mib": 17574,
+    "pred_qps": null,
+    "wall_s": 179.474929083,
+    "measured_qps": 4.457447087944143,
+    "qps_prediction_error_pct": null
+  },
+  {
+    "name": "P2",
+    "models": "Qwen + PaddleOCR",
+    "slots": 2,
+    "memory_mib": 18156,
+    "pred_qps": 6.796664197212007,
+    "wall_s": 160.87760998,
+    "measured_qps": 4.972724297056965,
+    "qps_prediction_error_pct": 36.67888648551288
+  },
+  {
+    "name": "P3",
+    "models": "Qwen + PaddleOCR + Whisper",
+    "slots": 3,
+    "memory_mib": 19782,
+    "pred_qps": 24.40691203748902,
+    "wall_s": 66.442108682,
+    "measured_qps": 12.04055704837571,
+    "qps_prediction_error_pct": 102.7058377733574
+  },
+  {
+    "name": "P4",
+    "models": "Qwen + ResNet50 + PaddleOCR + Whisper",
+    "slots": 4,
+    "memory_mib": 20386,
+    "pred_qps": 38.061,
+    "wall_s": 52.572,
+    "measured_qps": 15.217,
+    "qps_prediction_error_pct": 150.12157455477427
+  },
+  {
+    "name": "4 Specialists",
+    "models": "DistilBERT + ResNet50 + PaddleOCR + Whisper",
+    "slots": 4,
+    "memory_mib": 3562,
+    "pred_qps": 32.587,
+    "wall_s": 38.017917335,
+    "measured_qps": 21.042709755789414,
+    "qps_prediction_error_pct": 54.861234024455655
+  }
+]

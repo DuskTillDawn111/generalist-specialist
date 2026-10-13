@@ -1,0 +1,97 @@
+{
+  "policy": "predicted_load_balance_v1",
+  "tasks": 800,
+  "results": 800,
+  "errors": 0,
+  "routing": {
+    "distilbert": 200,
+    "resnet50": 200,
+    "paddleocr": 200,
+    "whisper": 165,
+    "phi4": 35
+  },
+  "routing_by_task": {
+    "text": {
+      "distilbert": 200
+    },
+    "image": {
+      "resnet50": 200
+    },
+    "ocr": {
+      "paddleocr": 200
+    },
+    "asr": {
+      "whisper": 165,
+      "phi4": 35
+    }
+  },
+  "wall_time_s": 60.05196451,
+  "throughput_tasks_per_s": 13.32179565693945,
+  "per_task": {
+    "text": {
+      "count": 200,
+      "routing": {
+        "distilbert": 200
+      },
+      "worker_latency_mean_ms": 9.759410659999993,
+      "worker_latency_p95_ms": 19.941201500000002,
+      "queue_wait_mean_ms": 352.7229865350001,
+      "queue_wait_p95_ms": 958.7577074500001,
+      "accuracy": 0.925
+    },
+    "image": {
+      "count": 200,
+      "routing": {
+        "resnet50": 200
+      },
+      "worker_latency_mean_ms": 7.741662445000003,
+      "worker_latency_p95_ms": 9.865582000000003,
+      "queue_wait_mean_ms": 221.20322258499974,
+      "queue_wait_p95_ms": 673.93419765,
+      "accuracy": 0.89
+    },
+    "ocr": {
+      "count": 200,
+      "routing": {
+        "paddleocr": 200
+      },
+      "worker_latency_mean_ms": 8.330853085000003,
+      "worker_latency_p95_ms": 15.217911750000003,
+      "queue_wait_mean_ms": 269.82435129499993,
+      "queue_wait_p95_ms": 776.2172188500001,
+      "accuracy": 0.96
+    },
+    "asr": {
+      "count": 200,
+      "routing": {
+        "whisper": 165,
+        "phi4": 35
+      },
+      "worker_latency_mean_ms": 483.06121891000026,
+      "worker_latency_p95_ms": 2129.0055859999998,
+      "queue_wait_mean_ms": 15966.502265990002,
+      "queue_wait_p95_ms": 39131.928630200004,
+      "corpus_wer": 0.036347318824321295
+    }
+  },
+  "service_time_prior_ms": {
+    "distilbert": {
+      "text": 1.731
+    },
+    "resnet50": {
+      "image": 4.605
+    },
+    "paddleocr": {
+      "ocr": 4.849
+    },
+    "whisper": {
+      "asr": 122.748
+    },
+    "phi4": {
+      "text": 53.68,
+      "image": 201.265,
+      "ocr": 170.076,
+      "asr": 569.887
+    }
+  }
+}

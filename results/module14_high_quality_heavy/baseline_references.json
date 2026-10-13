@@ -1,0 +1,67 @@
+{
+  "fixed_anchors": "Original13B ratio references, plus original ResNet50 Image / PP-OCRv6_medium_rec OCR; no deployment outcome used; 13B representative selection does not redefine ASR anchor",
+  "safe_factor": 1.110853955254881,
+  "tasks": {
+    "asr": {
+      "planning_id": "distil_whisper",
+      "model_id": "distil-whisper/distil-large-v3",
+      "revision": "8031d2e6ce6631b7fc45629dddfc00271116d981",
+      "quality": 0.037693515817814674,
+      "metric": "wer",
+      "s0_ms": 146.22366614444445,
+      "idle_memory_mib": 3672.0,
+      "safe_memory_mib": 4079.0557236959235,
+      "provenance": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/baseline_references.json"
+    },
+    "lid": {
+      "planning_id": "whisper-small",
+      "model_id": "openai/whisper-small",
+      "revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+      "quality": 0.98,
+      "metric": "accuracy",
+      "s0_ms": 27.084134877777778,
+      "idle_memory_mib": 1616.0,
+      "safe_memory_mib": 1795.1399916918879,
+      "provenance": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/baseline_references.json"
+    },
+    "text": {
+      "planning_id": "distilbert",
+      "model_id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+      "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+      "quality": 0.925,
+      "metric": "accuracy",
+      "s0_ms": 3.7693092222222226,
+      "idle_memory_mib": 750.0,
+      "safe_memory_mib": 833.1404664411608,
+      "provenance": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/baseline_references.json"
+    },
+    "image": {
+      "planning_id": "resnet50",
+      "model_id": "torchvision.models.ResNet50_Weights.IMAGENET1K_V2",
+      "revision": "sha256:11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "quality": 1.0,
+      "metric": "accuracy",
+      "s0_ms": 5.4978217888888885,
+      "idle_memory_mib": 604.0,
+      "safe_memory_mib": 670.9557889739482,
+      "provenance": {
+        "service": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+        "quality": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_admission_matrix.json"
+      }
+    },
+    "ocr": {
+      "planning_id": "paddleocr",
+      "model_id": "PaddlePaddle/PP-OCRv6_medium_rec",
+      "revision": null,
+      "quality": 0.96,
+      "metric": "exact_match",
+      "s0_ms": 6.0675248999999996,
+      "idle_memory_mib": 568.0,
+      "safe_memory_mib": 630.9650465847725,
+      "provenance": {
+        "service": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+        "quality": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_admission_matrix.json"
+      }
+    }
+  }
+}

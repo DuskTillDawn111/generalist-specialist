@@ -1,0 +1,185 @@
+{
+  "at_utc": "2026-10-08T05:22:23.386924+00:00",
+  "module": "15",
+  "test": "CAPACITY_CONSTRAINED_THREE_PHASE_EXISTENCE_TEST",
+  "gate": "THREE_PHASE_REAL_VALIDATED",
+  "theoretical_witness_exists": true,
+  "theory_ref": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module15_three_phase/theoretical_witness.json",
+    "sha256": "d1e1369c2c6149a184fd3128ee419204511db1c18518d68ef5910fbdba7b9083",
+    "bytes": 543392,
+    "mtime_ns": 1791435363607510530
+  },
+  "phases": [
+    {
+      "stage": "LOW",
+      "valid_repetitions": 3,
+      "steady_repetitions": 3,
+      "phase_passed_repetitions": 3,
+      "actual_target_G_fraction": {
+        "n": 3,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "sample_std": 0.0
+      },
+      "target_mean_E2E_ms": {
+        "n": 3,
+        "mean": 1207.5404449642858,
+        "median": 1213.643080857143,
+        "min": 1144.11944675,
+        "max": 1264.8588072857146,
+        "sample_std": 60.6005768889531
+      },
+      "target_P95_E2E_ms": {
+        "n": 3,
+        "mean": 2438.9706388333334,
+        "median": 2432.217873,
+        "min": 2388.19884,
+        "max": 2496.4952035,
+        "sample_std": 54.463065205980776
+      },
+      "system_mean_E2E_ms": {
+        "n": 3,
+        "mean": 747.4304328643099,
+        "median": 738.9478051111114,
+        "min": 685.3109586818181,
+        "max": 818.0325348,
+        "sample_std": 66.76616225321843
+      },
+      "pooled_system_P95_E2E_ms": {
+        "n": 3,
+        "mean": 2030.4675261166665,
+        "median": 2075.2828732,
+        "min": 1937.2156667999993,
+        "max": 2078.90403835,
+        "sample_std": 80.77877294668751
+      },
+      "budget_passed_repetitions": 3,
+      "stability_states": [
+        "steady",
+        "steady",
+        "steady"
+      ]
+    },
+    {
+      "stage": "MID",
+      "valid_repetitions": 3,
+      "steady_repetitions": 3,
+      "phase_passed_repetitions": 3,
+      "actual_target_G_fraction": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "sample_std": 0.0
+      },
+      "target_mean_E2E_ms": {
+        "n": 3,
+        "mean": 210.16472264902134,
+        "median": 205.6534394539247,
+        "min": 200.29908098293515,
+        "max": 224.54164751020417,
+        "sample_std": 12.735354922695993
+      },
+      "target_P95_E2E_ms": {
+        "n": 3,
+        "mean": 415.5766703833333,
+        "median": 424.63744315,
+        "min": 386.96733900000004,
+        "max": 435.1252289999999,
+        "sample_std": 25.325260011693818
+      },
+      "system_mean_E2E_ms": {
+        "n": 3,
+        "mean": 210.49054822945055,
+        "median": 207.2163093375392,
+        "min": 200.7760195583596,
+        "max": 223.4793157924529,
+        "sample_std": 11.700444231490849
+      },
+      "pooled_system_P95_E2E_ms": {
+        "n": 3,
+        "mean": 413.0306211333333,
+        "median": 420.88903339999996,
+        "min": 386.1709946,
+        "max": 432.0318354,
+        "sample_std": 23.919033472015734
+      },
+      "budget_passed_repetitions": 3,
+      "stability_states": [
+        "steady",
+        "steady",
+        "steady"
+      ]
+    },
+    {
+      "stage": "HIGH",
+      "valid_repetitions": 3,
+      "steady_repetitions": 3,
+      "phase_passed_repetitions": 3,
+      "actual_target_G_fraction": {
+        "n": 3,
+        "mean": 0.07989860583016477,
+        "median": 0.07984790874524715,
+        "min": 0.07984790874524715,
+        "max": 0.08,
+        "sample_std": 8.780992687294635e-05
+      },
+      "target_mean_E2E_ms": {
+        "n": 3,
+        "mean": 555.4885924625988,
+        "median": 542.1540479809526,
+        "min": 539.7757297300382,
+        "max": 584.5359996768057,
+        "sample_std": 25.183883712140705
+      },
+      "target_P95_E2E_ms": {
+        "n": 3,
+        "mean": 1621.4993689833339,
+        "median": 1663.805836200001,
+        "min": 1471.9230430000002,
+        "max": 1728.76922775,
+        "sample_std": 133.54725205493358
+      },
+      "system_mean_E2E_ms": {
+        "n": 3,
+        "mean": 589.3565118658719,
+        "median": 591.8864646885246,
+        "min": 565.210215178182,
+        "max": 610.972855730909,
+        "sample_std": 22.98598080468093
+      },
+      "pooled_system_P95_E2E_ms": {
+        "n": 3,
+        "mean": 1910.315106649999,
+        "median": 1875.5914694999988,
+        "min": 1734.2045964499978,
+        "max": 2121.1492540000004,
+        "sample_std": 195.79540401734627
+      },
+      "budget_passed_repetitions": 3,
+      "stability_states": [
+        "steady",
+        "steady",
+        "steady"
+      ]
+    }
+  ],
+  "GPU_sessions": 9,
+  "successful_three_phase_instance": true,
+  "latency_SLO_defined_or_claimed": false,
+  "E2E_metrics_descriptive_only": true,
+  "memory_rho_quality_admission_frozen": true,
+  "full_pool_CPU_optimization_used": true,
+  "original_V3_sources_unchanged": true,
+  "original_V3_CPU_baseline_only": true,
+  "GPU_QPS_or_routing_moved_after_outcome": false,
+  "new_model_search": 0,
+  "new_replica_profiling": 0,
+  "stop": true,
+  "rejections": [],
+  "scope": "Three fixed development operating points with 120s cohorts and three fresh process repetitions each; no continuous stable-window guarantee, no held-out/global optimum claim, and no invented latency SLO."
+}

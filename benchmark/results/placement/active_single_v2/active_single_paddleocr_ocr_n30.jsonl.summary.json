@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "paddleocr",
+  "target_task": "ocr",
+  "target_count": 30,
+  "mean_worker_latency_ms": 5.861346766666666,
+  "min_worker_latency_ms": 4.980671,
+  "max_worker_latency_ms": 13.125132,
+  "output": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v2/active_single_paddleocr_ocr_n30.jsonl"
+}

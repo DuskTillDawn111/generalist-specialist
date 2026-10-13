@@ -1,0 +1,80 @@
+{
+  "module": "5B",
+  "predictor": null,
+  "search": {
+    "top_b": 2,
+    "max_iterations": 3,
+    "no_improvement_patience": 1,
+    "runtime_evaluation_budget": 6,
+    "rho_max": 0.8,
+    "remove_pressure_threshold": 0.2,
+    "mean_tolerance_ms": 1.0,
+    "dry_run": false
+  },
+  "warm": {
+    "top_b": 2,
+    "max_adaptation_iterations": 3,
+    "max_runtime_evaluations": 6,
+    "rho_max": 0.8,
+    "remove_pressure_threshold": 0.2,
+    "mean_tolerance_ms": 1.0,
+    "dry_run": false
+  },
+  "max_valid_unique_runtime_evaluations": 6,
+  "repetitions_per_state": 3,
+  "search_repetition_seeds": [
+    7101,
+    7202,
+    7303
+  ],
+  "confirmation_repetitions": 2,
+  "confirmation_seeds": [
+    8101,
+    8202
+  ],
+  "confirmation_influences_search": false,
+  "measurement_settings": {
+    "warmup_seconds": 10,
+    "measurement_seconds": 210,
+    "arrival_process": "deterministic_periodic",
+    "routing_source": "module3a_canonical_minmax_lp",
+    "startup_timeout_seconds": 300,
+    "drain_timeout_seconds": 60,
+    "shutdown_timeout_seconds": 10,
+    "max_pending_per_model": 10000
+  },
+  "objective": "Unchanged Module 3 NoiseAwareRuntimeObjective",
+  "min_relative_improvement": 0.05,
+  "routing": "canonical_only; no routing search",
+  "sequence_sha256": "4ecab3fa3aa5129669e766f957550fc7078cc0ddfa8a44398b5bb53d8d30a754",
+  "initial_deployment": {
+    "distilbert": 0,
+    "paddleocr": 1,
+    "qwen": 1,
+    "resnet50": 1,
+    "whisper": 1
+  },
+  "initial_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/deployment_search_multiworkload/algorithm_runs/W1_balanced__B2/run_result.json",
+    "sha256": "2520f9331d205824d5fe60112351ee83fb2615d8d531cbc1d896709938e5e8cf"
+  },
+  "strategy_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "close_to_cold_relative_gap": 0.05,
+  "cost_equal_relative_tolerance": 0.05,
+  "decision_rule": "PASS: >=2 close+cheaper transitions; PARTIAL: mixed; NEUTRAL: all costs/performance similar; FAIL: consistently >5% worse or audit fails",
+  "runtime_cache": "strict exact identity; lazy import only upon selected state access",
+  "reconfiguration": "accepted path live-worker execution after search; cold seed reset starts from the same actual old deployment",
+  "physical_caps": {
+    "search": 150,
+    "confirmation": 40
+  },
+  "continuous_live_arrivals_during_switch": false,
+  "adaptation_wall_clock_time_ms": null,
+  "adaptation_time_note": "Probe search, counterfactual runs and later accepted-path activation are isolated; elapsed orchestration time is not online time-to-adapt.",
+  "execution_status_policy": "Data Quality Audit: only completed measurements receive serving labels",
+  "scope": "pilot only; no forecasting/change detection/prewarming/multi-replica/routing search/final benchmark"
+}

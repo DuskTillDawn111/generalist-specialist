@@ -1,0 +1,579 @@
+{
+  "at_unix_ns": 1791636604355286049,
+  "recursive": true,
+  "gate": "DYNAMIC_EXPLORATORY_POSITIVE",
+  "artifacts": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/CPU_model_definition_revision.json",
+      "sha256": "870f5b9a9ee6d33dee43141ac017ba8539c97f3b642a2656ea61dd10ff0a5577",
+      "bytes": 689
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/CPU_router_acceptance.json",
+      "sha256": "197f50e9a7a404e9d42d0f6933df641b7045c0fb72b60180a36e084c265a07e1",
+      "bytes": 440
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/Phi_ASR_arrival_state.csv",
+      "sha256": "0c9faf507dda333de501322df6b834de39775c5b30a8b1077536f1979e12388a",
+      "bytes": 7387
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/Phi_ASR_state_clock_basis.csv",
+      "sha256": "0b3f93c9cc4f99fbb4143d17edc6a87db057937a1b9235ff06032496e1ce4f73",
+      "bytes": 29212
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/README.md",
+      "sha256": "a9ccc2fbdea9dfb59fe4e6b3753cfb22ac9f17740ce5c4cda9fb1210e0769a66",
+      "bytes": 3814
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/VQA_tail_requests.csv",
+      "sha256": "f954576f4febfb887c9d25e3e2568e81cf32736001a6c92b9e506d6d0dbb020a",
+      "bytes": 4159
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/all_historical_GPU_CPU_telemetry.csv",
+      "sha256": "4a1a075805d49eadc31bc374822eb96ea2b99a745705e3a728a28c212e12da34",
+      "bytes": 10434861
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/all_historical_request_timings.csv",
+      "sha256": "1f00cbde8872672c5f8cf4665f5af0fc62cd6cd8ff48bf9c4d9772d4a883c8b2",
+      "bytes": 1387200
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/analyze_history.log",
+      "sha256": "7286a0bae9093245d6e9ceb0a07fa8282ba0cebcfc4924bb7694b832c444cd5e",
+      "bytes": 2221
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/analyze_history.py",
+      "sha256": "4fce12af6606289ca67813467778ea4000de7f10e927c9557cb0c117f5283bd2",
+      "bytes": 15691
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/artifact_index.py",
+      "sha256": "b2bb0033f2ece39fe8246828cbb3b5e182a0cf0ec9f32b810e5584f629d1f9a7",
+      "bytes": 5363
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/assess_opportunity.log",
+      "sha256": "c6b2017980e406bb7e5a1a4038d525ed342f559c143247d820a52a59bfa55313",
+      "bytes": 859
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/assess_opportunity.py",
+      "sha256": "5402935dbe0995b3421d250fd4207ba0f5a00f2553ffffa2caa8d51913e355ad",
+      "bytes": 7371
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/attribution_summary.json",
+      "sha256": "04fa2637da69b4016e16ec61979a23c9fae301094d39b1165aa8ec1edf8aa039",
+      "bytes": 2841
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/audio_metadata_cache.json",
+      "sha256": "7e335a83ac40fc2b53c656821360f3ffaa2b425fb0b1b2cf05e6a92438e7dbc7",
+      "bytes": 3928
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/audit_current_service_drift.py",
+      "sha256": "02d3cf922e4c947e65c721859867e15a5268076cc7c399a04f06aef443caee82",
+      "bytes": 1828
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/campaign.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/campaign.log",
+      "sha256": "fbd6cd90739d6567121c8691f384769ff45bb61d5a6056b12c043f3205bb562d",
+      "bytes": 21021
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/campaign_status.json",
+      "sha256": "30a0b3f3378c63acb84d1611285d3e57f28bbe76ce5d88d3f45768917ff720f5",
+      "bytes": 179
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/causal_router_replay_audit.json",
+      "sha256": "c0c9fb15d3e77e8e1ad3d83ba2b2fecc44dc7b400d0e44014e4c5dc3b5bfcf65",
+      "bytes": 41688
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/clock_and_cuda_timing_audit.json",
+      "sha256": "275bd107742d74ef8a6bd98c425d219ed7088c0e061ff20241ce57532aa3fde0",
+      "bytes": 2617
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cpu_draft_variants/v1_tail_squared_upper_risk/assess_opportunity.log",
+      "sha256": "4bf096972c1cf0c49c749682f4aa47b4260aea52274b561a4b54699536cc417c",
+      "bytes": 685
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cpu_draft_variants/v1_tail_squared_upper_risk/assess_opportunity.py",
+      "sha256": "7f57ae9ad2f157ed1fa0a7723ab15cd97fd3cbe1e90278c69db2976716e6e6ed",
+      "bytes": 7154
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cpu_draft_variants/v1_tail_squared_upper_risk/draft_routing_parameters.json",
+      "sha256": "6f9b313ff986a86e2e1b5e74ebc51ac90ef94c7560d20e6eccd3a4df7948f5f8",
+      "bytes": 1693
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cpu_draft_variants/v1_tail_squared_upper_risk/dynamic_opportunity_gate.json",
+      "sha256": "e708deb951b4ca8d74c6e92cc6ec53e95efd39336ba8dc062df489f154f4da09",
+      "bytes": 1258
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cpu_draft_variants/v1_tail_squared_upper_risk/historical_observable_opportunities.csv",
+      "sha256": "f8ed98f669af40b4a591a58778e2d7077ee224a8afcdf9d04ea994a0eda47ba3",
+      "bytes": 62141
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cross_run_same_input_service_drift.csv",
+      "sha256": "d20bd10b376453c339f3fb68c883b132d820e90513599899538166d5caa517fa",
+      "bytes": 86632
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cross_run_same_input_service_drift.json",
+      "sha256": "a3d6bf78647238edfaaa8ffce7b7720c05789a7b31e447d2e1dff8db3ab1f7b3",
+      "bytes": 5662
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cross_run_service_drift.log",
+      "sha256": "b750870d4ce025de346093e8f003f94afe7d8840b2680eacb4aff6f147250b7e",
+      "bytes": 588
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cross_worker_overlap_group_summary.csv",
+      "sha256": "6d97d3e143b224b13dd4f0a60522374dc82b2cce5762c2b6c62a89f95c5fa98f",
+      "bytes": 2677
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/cross_worker_service_overlap.csv",
+      "sha256": "d31ebebd6c22b4d951f70b03d4cd7118d6d6e76fc43e51490ce0b157837729c7",
+      "bytes": 296944
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/draft_routing_parameters.json",
+      "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+      "bytes": 1992
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/dynamic_decision_log.csv",
+      "sha256": "75b252fe7a6ca86de8ba04998019dfdf1214a32ee2b703987b208809f9a36ac0",
+      "bytes": 73451
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/dynamic_opportunity_gate.json",
+      "sha256": "d7fe212ed11ac362db4da5e84cab19b12031fc3509f1f25406c49d4053aea4a8",
+      "bytes": 1295
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/dynamic_prediction_diagnostics.csv",
+      "sha256": "5a3b9c05d113dc101850422cafd9942c5458ce0bd668876117469702894e466a",
+      "bytes": 60174
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/experiment_manifest.json",
+      "sha256": "d76206bee721440eeab8c25416c8eebf493be33b2e147c8b766a4d6f69289ee9",
+      "bytes": 516945
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/final_artifact_review.json",
+      "sha256": "367399d27bf45b245595244656b9a1632b2b3a239b85f85b5bc8cd524fa30cd4",
+      "bytes": 290
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/final_audit.log",
+      "sha256": "572f6e9b39c106e85e5e9ac73a93d325b472f7fa8d9eb5bc2798938b495d897f",
+      "bytes": 560
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/final_audit.py",
+      "sha256": "e6602c2479fb288e2c4d1e788377f6dd0f0ef781e5306fb41cf83a86ffedb6a0",
+      "bytes": 3746
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/final_data_acceptance.json",
+      "sha256": "cc026ba289398868bc923c0aa781c41c8a345d0ae063368573275e7835334ed2",
+      "bytes": 1580
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/final_environment_identity.json",
+      "sha256": "36107ba661b3a560fe2e68ba5d906cde7902bbe747472df58aebcbeada6ca524",
+      "bytes": 10472
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/finish_report.log",
+      "sha256": "9721c20f95646ab0247d9617a3ffac77e85738dc860fd70f1a16ff3730170253",
+      "bytes": 180
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/finish_report.py",
+      "sha256": "eefccce79331905696c5d962544c0800219e06e09cddab4336b7d5dbe72ffbe5",
+      "bytes": 14116
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/formal_acceptance/A0.json",
+      "sha256": "1b41592781c4bf956bcd24d63a4d1835ef0975b3a832ddbfd5297885ced3209b",
+      "bytes": 118213
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/formal_acceptance/A1.json",
+      "sha256": "33c552cd5bc79def0c369b100aacb6b81dfa34155ff008439a6f249cae182239",
+      "bytes": 118301
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/formal_acceptance/A2.json",
+      "sha256": "b1272b36ff9ab8c4aa20e5ffdd9c110208a17759b71dd269ad43acf1641b335d",
+      "bytes": 118417
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/freeze_exploration.log",
+      "sha256": "4ccec3752d62c2a1b657087b8f16755b73412cac0e5e4931b68dcfbb4418e97c",
+      "bytes": 67
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/freeze_exploration.py",
+      "sha256": "76b897908c51f9f97b413b977d78329eec719e343782f7b2cd1c267a6ef63799",
+      "bytes": 4218
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_exploratory_positive_candidate.json",
+      "sha256": "cdc2cb95637d2a5bc93b369affa0d14e8f6a75bbcc8d4af3844b44f3253835f8",
+      "bytes": 1889
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_gpu_manifest.json",
+      "sha256": "d76206bee721440eeab8c25416c8eebf493be33b2e147c8b766a4d6f69289ee9",
+      "bytes": 516945
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_routing_manifest.json",
+      "sha256": "3e6cb453aea51ac99b323c8e6bf14162c0888a45137456b850edfe81583ecf4b",
+      "bytes": 10315
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_routing_parameters.json",
+      "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+      "bytes": 1992
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_utility_context.json",
+      "sha256": "4b0a92a18dc9519d10a957db400411ac02c723efcea8c640d2f02b8d4ff19581",
+      "bytes": 6889
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gate_decision.md",
+      "sha256": "f3019f110b6917d368766082b5d88a203988e7bbc178026e473afcca4f10d5e2",
+      "bytes": 297
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_Phi_VQA_overlap.csv",
+      "sha256": "154b3f1ee4bb8e8700b2fdc08327aa7885983f73cfef4fd6c4a9ea4216c2154c",
+      "bytes": 29895
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_VQA_tail_source.csv",
+      "sha256": "1bf4286894096e899ce6dc7e3792c16d2c62ede9ddffe4251471e3351ace7a2e",
+      "bytes": 30910
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_backlog_timeseries.csv",
+      "sha256": "a230cc8d8718e867b5e5abbb152fb6236d00772f6bc7d2816bdb3865f9f50563",
+      "bytes": 495395
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_cross_worker_service_overlap.csv",
+      "sha256": "65eb70f9e2ff0e00cfd39464faab414f4953309fe05f2511ffc328d82510df4d",
+      "bytes": 160688
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_exploration_comparison.csv",
+      "sha256": "1d2edaf47942f8a7fd1f9805be75029a1c6882ca75a2a3892dfab6d82d059440",
+      "bytes": 1268
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_native_ASR_decomposition.csv",
+      "sha256": "eb22826b8a9284cc0d09b969a910837a490afc7c8590d66f672c5b0324906907",
+      "bytes": 456
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_per_task_latency.csv",
+      "sha256": "d347235c0a853026bec5f104d6f1a960ecf4580b0378673ed7d4f7a1a5ac8e98",
+      "bytes": 2093
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_phi_ASR_future_VQA.csv",
+      "sha256": "493b84b5ca88352e09a251cfefe209e00009292592c9022e4390e64ba477ad5c",
+      "bytes": 3204
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_resource_comparison.csv",
+      "sha256": "7e6e12678500199282655ad07c52cf84064b1d5518cb58ea6725afd0e0388378",
+      "bytes": 2080
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_sensor_samples.csv",
+      "sha256": "c2fedaa678c9d8f6e465d5e9b14a2aac1a61a73c373e51b3fc4e9b0bee666ec1",
+      "bytes": 4880433
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_task_utility_decomposition.csv",
+      "sha256": "0953fc22a2f2b4471ce698c6e28cb048263ffcb3b0c084487ddd9248cddf9da4",
+      "bytes": 4846
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/gpu_worker_service_wait.csv",
+      "sha256": "834d05e79d4df733a110c5bc47345a01808ec7dfc157630d39559b85350163fb",
+      "bytes": 7186
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/historical_module32_file_hashes.json",
+      "sha256": "7b55e15caa10bb60ae8240004521c53e88fea4eb98432b1ea5f2089921fd1a65",
+      "bytes": 61606
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/historical_observable_opportunities.csv",
+      "sha256": "77e8bc22007c6e8dfe3bb54db10ecfe8f65352455d54bcbb1bdf6d6ed1b4dacc",
+      "bytes": 62203
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/historical_path_probe_inventory.json",
+      "sha256": "94eddb9ddfa4b0c63a73de8900d43432c77ed6e4c930896e6704628d830b4e13",
+      "bytes": 2304
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/historical_path_probe_timings.csv",
+      "sha256": "e3c8da8ea60f34d50f102d33956ef9fe3fe3f13c3733db1942c258336f5e81a3",
+      "bytes": 62246
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/historical_supplement.py",
+      "sha256": "b74c4589c26a56cc45a8f2d09b5e7bfba405c146512c7e96eeb0d010f34099d9",
+      "bytes": 2829
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/live_progress.json",
+      "sha256": "6e99031f3ecf258b825baf232ead947115831933f699bd3ceba027c6f7588d84",
+      "bytes": 213
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/m32b/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/m32b/campaign.py",
+      "sha256": "958d12ad963d45c3a1de24e42390d58a2a93b717ac554224207eecad20b8c9a2",
+      "bytes": 3089
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/m32b/common.py",
+      "sha256": "e4fa239df0c873b0872b12af5e3e07de7f197f38bd9336f8c84b3f324595e1a4",
+      "bytes": 1951
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/m32b/harness.py",
+      "sha256": "906aab6f42fc0f751187ae4034c9aeaefeb139da98a248306f30fd3a299dc050",
+      "bytes": 4885
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/m32b/report.py",
+      "sha256": "e7ede4cc0afff67bd3053ae830c51873f1bf9bb1a3a0cd39a1764294f39475a5",
+      "bytes": 5120
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/m32b/runtime.py",
+      "sha256": "b9cd1af62320dac6d06a2b83bf3ba6fc426310b2cc1664a55533424b7db3a871",
+      "bytes": 4706
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/module32_complete_log_inventory.json",
+      "sha256": "0c1564239aee342fe0d513e806fbd877448fadb901da599257d9853b07cea6bb",
+      "bytes": 101979
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/module32b_gate.json",
+      "sha256": "a708af1bcb438e2d221f98af98ef3733e06adea59f72f68567970361dd0a9b24",
+      "bytes": 602
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/module32b_summary.json",
+      "sha256": "d8adac9de1fec9523c0ea59a0240d35d4a1a1bdef6d47ef36cc4c6a38ab5643c",
+      "bytes": 2633
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/module32b_summary.md",
+      "sha256": "4bc45df8bff735df65c10b4d999983ac485ff4504b314f2016d2dfe62062e329",
+      "bytes": 6380
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/original_frozen_context.json",
+      "sha256": "8dc6d874f243992e7c31f3e6c87c2db7d6482af61c17647a455b8d234699899e",
+      "bytes": 1035
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/per_task_utility_decomposition.csv",
+      "sha256": "3463de7d8ecf8db40f5bd3db345acb6ac196b920ed5d4ea6a70921561d9cb471",
+      "bytes": 8094
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/phi_execution_overlap_analysis.csv",
+      "sha256": "03fd5057edae8ffb5d6b720953a57ba100fc786a4bf5e1f228daae563d563816",
+      "bytes": 64352
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/plot_results.log",
+      "sha256": "1f073699b6a67f1ec2ad6e1cf630b585d1dbd1a8e86958786f8cede51e1277ca",
+      "bytes": 12
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/plot_results.py",
+      "sha256": "7dfdcb2371f8b1a76092e53aa8bffd5c1115ee52e1126d0c29d906dca34104f7",
+      "bytes": 2531
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/positive_evidence_audit.log",
+      "sha256": "ba9d3b923d13b642da78641b84f2fd3745f32fa46450987c676b58d44c8d5926",
+      "bytes": 1381
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/positive_evidence_audit.py",
+      "sha256": "5bc9d6efc4c368efaddc6a33fa41c3a20e92f2499525bbbb653718c101c7532c",
+      "bytes": 4700
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/positive_evidence_limitations.md",
+      "sha256": "c9421ccffcdaa0b2105b3dd18e759f79655660186bf225cd6001f952533ff69e",
+      "bytes": 1601
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/positive_gain_sensitivity.json",
+      "sha256": "ce5add1b01ec82d750d47ca390449e5a1753956079fdc985b189335b30db0fd5",
+      "bytes": 653
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/prepare.py",
+      "sha256": "12d331345d0d8837da82b9ff6b9445f9aa7090b90cd9128d47e73840f49b4894",
+      "bytes": 798
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/protected_before.json",
+      "sha256": "c496449d407f618f6e84ca1a9a9b4d3a0cb7021b9adfaa25c82555e757c5b564",
+      "bytes": 4629304
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/raw_runs/A0.json",
+      "sha256": "ff0c769afe8a1a1dc8f60a67b9c9769064e01c42387b1439afb79580d923678c",
+      "bytes": 5229659
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/raw_runs/A1.json",
+      "sha256": "568fbdd9442454a4292c222dcc823dec0abf19e9a651abe7db2d28608a195e8a",
+      "bytes": 4804999
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/raw_runs/A2.json",
+      "sha256": "3be9f0a7fb8d97b6800163856fdfa1c236e9575e4a3262a25e863a9e2435f46b",
+      "bytes": 5428337
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/request_journals/A0.jsonl",
+      "sha256": "7a95d2a0a4d14bdc050047c95e7351f91a6c0cfd8fc893fe1e2655c9d7043b0d",
+      "bytes": 1412701
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/request_journals/A1.jsonl",
+      "sha256": "92546288b7dc2a1f7b0fa1882937a12917b764370ad1a40921c15f301d95fb91",
+      "bytes": 1416138
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/request_journals/A2.jsonl",
+      "sha256": "3af13ce31d7db9b4d331dbdbfa5632eef6f83bd57162c310050bb9d0c92f6108",
+      "bytes": 1413355
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/routing_design.md",
+      "sha256": "4c31183d5295c8d1d0ef47e94943956260b23f6606bcf2ce7d77a2935940c4d7",
+      "bytes": 3013
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/run_attempts/A0.json",
+      "sha256": "48f9847a2b3c27684ad990ab772f466da6f71f77bfadf4b6715fb19a9c59a4f1",
+      "bytes": 2078
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/run_attempts/A1.json",
+      "sha256": "fcef73f7f724fde289e853d2484694422319e28e91a9e9993f49093247c7bac0",
+      "bytes": 2153
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/run_attempts/A2.json",
+      "sha256": "1bad10b1d2b295f9a9949f7d1a0e2b8fb502c0ec57f81e9ca8cbb8771ff91695",
+      "bytes": 2127
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/run_observations.json",
+      "sha256": "a97009658f120829b240e595bd762f338104c24866bc5373a45c4b3f2ffc0676",
+      "bytes": 375747
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/selected_pool_catalog.json",
+      "sha256": "ab7bbac44c273bcd7a2e11c89329c014d63180b823ca4bd99d386d9859e5a87f",
+      "bytes": 122679
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/test_router_cpu.py",
+      "sha256": "81beafda0773d870c03412c3374e3e13aff85cf3d24b373393121be04f703e5f",
+      "bytes": 1910
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/thermal_prelaunch/A0.json",
+      "sha256": "31f827fae8c3dd862bc65b6b722ac89bd636765395dbb46f075f1d317eba01f2",
+      "bytes": 23264
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/thermal_prelaunch/A1.json",
+      "sha256": "69277f00fab4ac55c9e740b36cd2b7d2f07fae3072b66965abbb2381b573d1f0",
+      "bytes": 1736
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/thermal_prelaunch/A2.json",
+      "sha256": "129482775fb2fc3b789e8e1c8a45e989673d9080ec6c321438614b178856747e",
+      "bytes": 22698
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/vqa_aware_dynamic_router.py",
+      "sha256": "d85aef6d99d3c79dec6b0ca430e847224b6df42dc2c358bca0b21544d5f2f3f2",
+      "bytes": 2982
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/vqa_aware_exploration.pdf",
+      "sha256": "796f6a53b0139d257c7b9522c1e9f4eeed46bf5c29949fa6de35a5cb87f7a44e",
+      "bytes": 25023
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/vqa_aware_exploration.png",
+      "sha256": "01195a2a9ae4177e89a806d5d3716c6bcf348d16701691c81fdabaa4a11c2558",
+      "bytes": 146034
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/vqa_interference_attribution.md",
+      "sha256": "1d619bf5123f418cc76bc2932176554e4255afd7e08fb55b0be43b03e0470d38",
+      "bytes": 5141
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/within_trace_block_bootstrap_diagnostics.json",
+      "sha256": "901fd6300b98ec0fd11ba5a2d53d4ae76c23043b066a9af040407f33015e8500",
+      "bytes": 1026
+    }
+  ],
+  "history_preserved": true,
+  "independent_replication": false
+}

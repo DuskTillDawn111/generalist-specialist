@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "paths": 20,
+  "thresholds_unchanged": true,
+  "whisper_small_ASR": "Original full-precision8B threshold pass restored, not a new quality grant."
+}

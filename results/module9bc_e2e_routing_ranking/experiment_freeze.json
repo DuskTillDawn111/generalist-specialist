@@ -1,0 +1,1529 @@
+{
+  "at_utc": "2026-10-06T18:05:56.972435+00:00",
+  "protected_references": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/candidate_pool_v2_1.json",
+      "sha256": "dbdf5bf9af541e805bc40a9f6207f6dc0cd43de22a0ea150082f3e23de219e00"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+      "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_admission_matrix.json",
+      "sha256": "d224ba2c389a923cc95ebaf630be2858171ec5e6347ef474b8dd925fcb425409"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+      "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/final_benchmark_workload_matrix.json",
+      "sha256": "f3a358baec6dfed5fe1d24496e388996d42a33f245814fa52f7dea577593e22f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_capacity_factors.json",
+      "sha256": "62d6c25ba30111bb812a00d42df1e3a1f113d66c654f139b68413009d838b28a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+      "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/evidence_replica_bounds.json",
+      "sha256": "6c2855bd2e61d745d13813f29cef9d51f6e2b5bfa2b7057856421e22f7fd4b51"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/quality_workload_audit/quality_matrix.json",
+      "sha256": "342684280d15ba8da17011aeb072a0edb01238b46d1412c2a019df625a1a61e5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/quality_workload_audit/quality_matrix.csv",
+      "sha256": "6ab22e37e4a88a793d207191cc276e72c68fb517fc6c9f0389c03c9b67386fc7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/environment_manifest.json",
+      "sha256": "15786b0997a93af6a11d27a4783876b94708e850294dc37643820e510e165d88"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/model_source_hashes.json",
+      "sha256": "d592979b29c138fad7d3517a7ef8baccbe1886fa05890566fbf4d5839be8e36e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/multiworkload.py",
+      "sha256": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/__init__.py",
+      "sha256": "57de253575607d5db819b166db3ccb3a0e5907927ff78c45b4b6a1fae4204d68"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/engine.py",
+      "sha256": "67aa6ffb5a6eb1a0c2d10cd6bbce87152631bc082b5e8700f7051eab05676837"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/integer_search.py",
+      "sha256": "b64ba83492a15895fe9b8aae2bbf3ae55fa616566a0cb6cb5a91594a3d979e8b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/neighborhood.py",
+      "sha256": "8c53a7280c4aabb7280722ff5fb2fffd3c74cad8297d5f465499cc7dd721f9d1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/selection.py",
+      "sha256": "6ce647dcf6f44fb63e95b717efd09fd592fd290ef977ab48f5caa5e2495dfae3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/tests.py",
+      "sha256": "e6926570ed5dba0c853c61e04137ae270e96a4d87a01c37c9ccaaa9e0f62ca2b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/budget_selection_rule.json",
+      "sha256": "bacb5367058e3a5457c8fa2119f71d3cd8256f2ceb81a4c71ab0d54547a0fe41"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/candidate_memory_budgets.json",
+      "sha256": "c21af19f3a3564e75a9deff3821b5c61a3b481532ab4bf8233af490d6f10c67a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/capacity_feasibility_certificates.json",
+      "sha256": "065989ae6073efa98ff2c603e9e4d63c7db1f847c6ffc728656d04aea582ff9e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/deployment_memory_states.csv",
+      "sha256": "043d5775094395eeb701aca75b772fe42c44e6e0d68738671e97ff4bbcd08a40"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/deployment_space_manifest.json",
+      "sha256": "55f373da590e79605c976c488c354e8039a26839a730fd7e5f1d53595a67cb86"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/memory_breakpoint_curve.csv",
+      "sha256": "f20932b441111fb6b7ef325e464dda30ded082892b07ee78cdfdfa43221d5b18"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/memory_catalog_frozen.json",
+      "sha256": "0fc80c1886c3f4cce939f3d403bd83fa4a626a47ae392e051cc1d8d53a730b8a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/memory_error_audit.json",
+      "sha256": "97bb89dd898f37d5d1ae0528a7491089a716f631af4ff13501d1fd2015ccdc7c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/memory_safety_factor.json",
+      "sha256": "f4c6353fa4e5a0048cf0178100618b8b35f2449c596b7df3ba85e039cc6e8b01"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/minimum_feasible_budgets.json",
+      "sha256": "b6e73068c166e33ee9085ae9eeef8f9f4322c91c1762deb72f2c83359e5e8583"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/module8f1a_summary.md",
+      "sha256": "b989d6055fe18f6f3565cb213c2a4e2414196049e53bfd8ed84dd2f6bb0c4fcd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/replica_memory_breakpoints.json",
+      "sha256": "1f008e2deb9da08c32e8046faefb0587f1ec6f51a78626181b5d63a2b873f817"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/resource_regime_audit.csv",
+      "sha256": "5e9419dacd3cc34b19e79dcd65b011b9e7143d7594bb67d6ec0a6ecef4d0e6c3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/run_audit.py",
+      "sha256": "542ea6843bba4d3065b6a4031c285c1bb8272f1240378d7f63eee0d76c0d21c1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/specialist_greedy_thresholds.json",
+      "sha256": "e707af98330ea08967f79de080fe6b8ea53072fab6ce13e751c7a57ed869ed83"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/validation_results.json",
+      "sha256": "ca9ae8b3fbc8abd619866160425b391bc89942d5613e65da7a0706d3f23a05b1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/verify_audit.py",
+      "sha256": "a52ad01d6f0fb7e27e7342c7868b2ee9830dbfa70ac2440f94bcb20e7f3ee39b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/workload_feasibility_summary.csv",
+      "sha256": "1bf9d79256ffeac2b8b206e0dc827f56721d6c0d771956c99088cb14cfa5a1ac"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/alpha_capacity_boundaries.json",
+      "sha256": "b232518463a97a5b71517f3072aa6f54668c3c5783bebbb297804075bf8d3406"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/base_mixture_freeze.json",
+      "sha256": "85afab21c9e80dc064e1f682012f0ff54baf6aaba4873aca0ab9de541f8589b5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/baseline_deployments.json",
+      "sha256": "9b632e9081417bb1589ccb293e32fff8a46d7539fc6d46b1669f417f323f7529"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/campaign_cells.json",
+      "sha256": "8a85d99c0bc0df4069a8ea4570a5a83035b8c3010f7ac7f71c6ccfbe812b4fe9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/deployment_capacity_limits.csv",
+      "sha256": "069c77b9303ddc6c458462562272d1c95ebba68b7d743ec48a7eab80607a3e5e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/final_memory_budgets.json",
+      "sha256": "610821927fdb0dfeb4a309c44d6a8e843db36038fed35727d626bc86437c16b4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/finalize_freeze.py",
+      "sha256": "bd22a22d99af8dac79fe7a482feb532655722d36bc1bd570d52b728b21216254"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/frozen_intensity_levels.json",
+      "sha256": "7d59c4818498567b006ede4ba966b0b8ece35f7298809cac41476a49e5aa63c1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/gpu_budget_estimate.json",
+      "sha256": "f8a3880d59353db7a6a0be1f5dbdde4926c618a0a14168eb39285c60924844d8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/intensity_breakpoint_curve.csv",
+      "sha256": "57a43c503a1050ec59782c901ca04657211d8e7997145669795f8c218aa82e97"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/intensity_selection_rule.json",
+      "sha256": "c20365814ec2c66d71ab1e8203bd27a98a36d10074d852abd564690a7793ffc0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/intensity_sweep_design.json",
+      "sha256": "980df2db95172916edc737fc6ab98e63b8bcf8133dc6c7f96d87aa56c350d677"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/memory_budget_dedup_rule.json",
+      "sha256": "2a7f89f996fa74b7ea76b5fa696f3bec024dee05ad7ad38a2c3cb17bd5bc5aae"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/memory_sweep_design.json",
+      "sha256": "5b70d423a4e2baecef8d5537dc7be78e8bb6c8474feb66e7c3841f2a5d83dc6d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/module8f1b_summary.md",
+      "sha256": "dadd886e111adc08411d2804095c45f5cc34c63d975b7413bef4e700d9d708c3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/replica_activation_thresholds.json",
+      "sha256": "a45104b6272a9491e57a3685cb61b0bc50297eb0e303f0d991b54b11c6a82a1c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/replica_useful_intervals.csv",
+      "sha256": "442880aa4a86ac73ab84891124ed42ed4e094c82542fefd9b738b7d149fbf07d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/resource_campaign_gate.json",
+      "sha256": "ed69c7f170fe3bdb97b17e53e24dfc9348dfead972da982a1469d5cbe165d766"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/resource_constrained_sg_spec.json",
+      "sha256": "162bf9088829bf63d73f4e539496431248db4e4daa944c20820aef2cebd5837c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/reuse_opportunities.json",
+      "sha256": "50677ae64f042c93d9bf44c4f76c68ea5ab9442c32076954a258b86fbee94e2a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/run_audit.py",
+      "sha256": "3e88925cf43f8fa598b395c672a0998e5e5109676b1e5e6f0a0385a5adc607d8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/selection_maximality_verification.json",
+      "sha256": "a0e48c838fb48f5ee6a993a40c7060b4e3fd2a16e9595f87b0567c2e8d86c126"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/success_hypotheses.json",
+      "sha256": "150e0c4a0e8dc366cf62b72f1b70e40195b67a46b869b40b01cca6ce881acc9c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/validation_results.json",
+      "sha256": "c6182c719b978a83754c97b2b98c8b591b304bdbe47d99ded5d4fc5898417482"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/verify_audit.py",
+      "sha256": "cf26f184e62cb8a3e6da872ed7c27248193594a4a29428d80c8142adf0e1be48"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f1a_memory_breakpoints/artifact_hashes.json",
+      "sha256": "22bdbd339ee9aecb6df9a6985905afd10870b8f1a826910655fc243395ff9abc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/method_comparison_freeze.json",
+      "sha256": "6bebcd11185f00834d511e89808239c4a98b77faf07a98c2f330216b22136ee5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_source_hashes.json",
+      "sha256": "ceba1adead255aa6dbc54f90a7ddb4ea553a106f17842073a6a395b513cac1df"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/__init__.py",
+      "sha256": "7bdb3db9a554480abd62f2eb78c17d53b0c1ecf3baac6737a8521c17a47d7065"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/candidate_generator.py",
+      "sha256": "ef5b394fe4b07755c1d7ee80d48a9184fc1ff478b136167cd9fc129cbd9b6198"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/candidate_pool_v2.py",
+      "sha256": "87126fd86973ce919ba8aea6bed3f365943f14c355089291e015c0fa09e60ccf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/deployment.py",
+      "sha256": "73c22c2b0cfff4e67619d31622de86c72e36d5f2dd8c7314ef02dffc0f244a37"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/empirical_milp.py",
+      "sha256": "8ccebe663fcabd638f47004c397083fff5d824b433c48c036ed065e059151f25"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/milp_seeder.py",
+      "sha256": "ab7b92aae4f4475f2b9e5daec9306f3cfc3206c212526557108d6ccdd291f39a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/models.py",
+      "sha256": "b4fb52cae82f2879b9b40535d3c155f527dc311129921aebba1c95afcb8c3b5d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/replica_calibration.py",
+      "sha256": "4c35922070fdf12183d35de8b7548e4213929c561fc0111288b68295cb1fafbf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/replicas.py",
+      "sha256": "bd93ec719d2600ca9d17024b6f2787899fa835ef33e9fc73dead69bf581d5d7f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/routing_solver.py",
+      "sha256": "4f9fe562885f17f54c3889b784db00078da5f9be4da6cb8b1ac9fa45308f8b57"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/seed.py",
+      "sha256": "9b27aef3c6ef07226379e9dab21517575ce4b692cc758043067eef25d71090dd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/solve.py",
+      "sha256": "2943b50447e9347d61177cc086dc676006fafcd9a8bb2d4d7d01dfcfbd2baf11"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/workload.py",
+      "sha256": "c45e5daff6aa8b8dbe3406a7256a73768ab25e94ad4166931cf4845551096ec1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/__init__.py",
+      "sha256": "4c2b5bb2dccadd38f8bdf1f2895c13aec421ce07b8cd252e1ac8a83e00c742f5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/campaign_runtime.py",
+      "sha256": "ada645207346e9b1dc28ca45b7cbb31b3d20161e156da3087960b71456d01dae"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/dynamic_adaptation.py",
+      "sha256": "7d9ba868999baa0a741b6ef3dc91f4634c5805c4bba8dbc6386a382002c717c9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/dynamic_foundation.py",
+      "sha256": "8e37a5bc91b186ed9d08c84d663374502b0e89dca25bc18452e0369c5f128ca1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/dynamic_real_pilot.py",
+      "sha256": "e9b5a7139da374b029d9a4f47006181fd8a06f0b12e7de2b3fa3e3980188aadc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/feedback.py",
+      "sha256": "9da33ac95b6fe91fae7653cf29eeb10a0fcafb57648e6eb2f9ce5220a040b93f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/integer_foundation.py",
+      "sha256": "b5631c9520f3cf9f2922cb85434148663b9cc44ec3dc74edeaef1db4a09c96e5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/integer_search.py",
+      "sha256": "4cf189d51fedc868f27b8072db61b7afdaec5762400a9cef26cfc4cddde15422"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/measurement_runtime.py",
+      "sha256": "0ac62067e10f76268cfb52a1b7b90398e5cf8b0ff14e7a547abd6e5ae4767cfa"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/neighborhood.py",
+      "sha256": "b4ea5e7962afa1c589ebd2d17e0218d9f2c34bba9fb7cba1baebf0e727934571"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/pilot_provenance.py",
+      "sha256": "b275c23e2ecf7fd421f59e192e540ea106c534d5a4f56ebc95c0312566f85a50"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/pilot_resume_correction.py",
+      "sha256": "719b2c3903959f73206df3cea7acf87d31e4b94152c5eace2089b07c8b653a7a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/real_objective.py",
+      "sha256": "97d928034d32a5c066fcc925c16a92739fcb8df4d21bce10333a2aa2688c2175"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/real_pilot.py",
+      "sha256": "e4bdb2d495af029258577913b679641941475efa9331bd99bb866f2600c6e86a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/result.py",
+      "sha256": "1e7bdcd9c5ee3947ebdeb46cbf187527198e7cb7bb2c26077a7d61ad846b5d4e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing.py",
+      "sha256": "71bde611539e56285826e35ff5071543ac0f56d041c3d4ece3d1903a8a990d75"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing_foundation.py",
+      "sha256": "9664400ba535279921bf484baa800c7e3c031ceaf05f06c441a2403134907810"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing_real_pilot.py",
+      "sha256": "fb5506ec070a0dfca005a17b42f8b07a6974a05b7b64d5619c03223db0054fc1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/routing_search.py",
+      "sha256": "90e387d7921c4b9b72b44b231f86f6b832ad472915b00f6ffbbde9036349b91b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/runtime.py",
+      "sha256": "2a7ce56b5544fcaaf79fd2e77dc0fb6774d6aa64c600a10cc56078b11b64f1eb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/runtime_cache.py",
+      "sha256": "4953babcc690ad6dd1619ab31ad9f8d4e95995dca1ce826274ff4e353d7adf6e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/scoring.py",
+      "sha256": "321260809b051e69f4264a6728b107d9d7e4c168aebe99f459749a5512f283a1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/search.py",
+      "sha256": "9374ecba01702cf12de33977b10ccf515062f0667571aa9302d19a88ac96085b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/validate.py",
+      "sha256": "d660ccf705e84778c2506651d1f5a4cc4101c492ba24443fa72252841acd8b4c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/warm_start.py",
+      "sha256": "6bedd8518621f956a17cdd29f0d01d48dc4c6aaad8a08cd7fbc1db12b953ca55"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v1/__init__.py",
+      "sha256": "0c6c623f7535e7b955ef828f92942a184f2b2d2a5edf6d26ad194cbcfca34b29"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/planning_catalog.json",
+      "sha256": "413f5f1dba0fa17a6cd528d3d87aab73a6461386d55a7b36c38ad6fa15e1bda4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_workloads.json",
+      "sha256": "13e763d1a9f4b21ef65c3ad6cc54090134b9fbb0d1348e1d7772371d75d2cc84"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_generation_spec.json",
+      "sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_definitions.json",
+      "sha256": "4e010f910ffb47a6da3306abb07d93f2dcb0bd2c91820e976df6cff20d364c1f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+      "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/campaign_manifest.json",
+      "sha256": "62bdf481f83f213c75ce3313e8ab4af26684ce74721744ef205d76cd57729c99"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/reuse_audit.json",
+      "sha256": "73a42704f93cd5325cbb4cd1d07c1ca3302856efb558a456c294ac45b667a991"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/reuse_manifest.csv",
+      "sha256": "c31c952bfd1e91c96499da6df22cbaeed27a5d0e435c2e093b4236df3ebec1c7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/hardware_identity_exception.json",
+      "sha256": "b2853cad2ef4bcd6e628d8cfc149b2ac7ab85b13f8f28c84042c0a1a89613656"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/planning_execution_verification.json",
+      "sha256": "be433a87daeebaa5a472b5a9140680dcf0b2dbb8f90caa2a3ad3204c1b1b0780"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C01.json",
+      "sha256": "e00750b155b6f9301f592e7560314149f3c4bf5e79f5b82ea876df2c6508ba89"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C02.json",
+      "sha256": "e00750b155b6f9301f592e7560314149f3c4bf5e79f5b82ea876df2c6508ba89"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C03.json",
+      "sha256": "e00750b155b6f9301f592e7560314149f3c4bf5e79f5b82ea876df2c6508ba89"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C04.json",
+      "sha256": "c8380202746098a512aacfd8c6b293b48d12af866f14074d3e10df5d1320e614"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C05.json",
+      "sha256": "7bb2ac831e116ac5889c7b613503159106d8979d03c7bf1ee0e480f5c0ab5ab6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C06.json",
+      "sha256": "f8153eb94bcfbaf6a3bf01af10656af151a06ca0aa6b73ff523062a7d4300d02"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C07.json",
+      "sha256": "f8153eb94bcfbaf6a3bf01af10656af151a06ca0aa6b73ff523062a7d4300d02"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C08.json",
+      "sha256": "f8153eb94bcfbaf6a3bf01af10656af151a06ca0aa6b73ff523062a7d4300d02"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C09.json",
+      "sha256": "96c7818122f629a383938994669e451bcf8982c52ffa21a35bafbc786d70914d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C10.json",
+      "sha256": "5272e0b0b100710e4f21de953df409fda6e298434a23ba409e0ed0def101cc87"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C11.json",
+      "sha256": "5272e0b0b100710e4f21de953df409fda6e298434a23ba409e0ed0def101cc87"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f2_resource_static/contexts/C12.json",
+      "sha256": "5272e0b0b100710e4f21de953df409fda6e298434a23ba409e0ed0def101cc87"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/evaluator.py",
+      "sha256": "f60dd8e92c9a821a1c691405b633dd56fe4ec23339daca9638fe60438747a1c9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/runtime.py",
+      "sha256": "11bce38d3b08e5b4e15157bc682c52295dde29027805c8707b193829a26a4685"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/common.py",
+      "sha256": "1d167d0c6f3dc1c6d70798d8caa53d56deec7d7753816de19fd3992a5ba0f0dd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/demand_balanced/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8f2_resource_static/__init__.py",
+      "sha256": "97240759aa9377da3ae13406226f500f3e915c356556d30d1346cfa44fc65515"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8f2_resource_static/bank.py",
+      "sha256": "e104f79ac8723cf2d82e3b181f33f5b5eb1496dd6341023b6ffb1d5b0b34a4ae"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8f2_resource_static/campaign.py",
+      "sha256": "d03f1042d976894c9c1d0bd4644c6b785a09e07dbc46efdac97a84eca1c7d7f8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8f2_resource_static/common.py",
+      "sha256": "b7ce918f664602cdf4327e2a7466a707460ba2863ddbd0e176302dfc37fea626"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8f2_resource_static/planning.py",
+      "sha256": "c8a7831a852590dafd8cf8f1734b756836a587122ac48c082f8b54277d4f0e97"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module8f2_resource_static/report.py",
+      "sha256": "0d481d5cdd4a535c14dc09eb4c3810075daea84baae130e092b1a3202dfb5785"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/protected_references.json",
+      "sha256": "a935ece037b9fe4a178319ab6eb964ccccf44d817032e153a6242f0beea5068c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_catalog.csv",
+      "sha256": "a1048631ed4c8f5f4fc784b9ad4ad92b85263d84d7bcd22702d58a63c514c38f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/catalog.json",
+      "sha256": "9bad842e9c123edc9cbe6fc3be3383957690bd226d4f20f196f175bffb3ab420"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/hardware_metric_audit.json",
+      "sha256": "d7b25062735be4a0d07a4d7c44743c46b6c44248385a8a13938d9ae19988518a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/profile_protocol.json",
+      "sha256": "074caa23366b4e95500b5643d992b65618a336da61ad8d1bd34065d14c1704c8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/campaign_state.json",
+      "sha256": "2f609f4ba00694ee17eca108b7ea0a633e9ab04e897d611bbb6f2254c1175429"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/prior_art_boundary.md",
+      "sha256": "01d447aa3d4b41b22d0cc1ca7e684d6e7a95d03687eee494477b6dc9fa907d8b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/roomie_formula_audit.md",
+      "sha256": "e40653a500841389b964e1d2fd508f97c42adfc27f57aec10d2773cd14175544"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/routing_conditioned_model.md",
+      "sha256": "989b83f375ccb32e39cc420d0bc4bc16b89075684c64b8ffa88e30fb37340ddb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/prelaunch_adapter_repair.json",
+      "sha256": "d2ee2f9854b6f886e3d0951d9276f822d2bc86ed49d477ee3c442bb4e0fdc8b9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/profile_protocol_before_import_repair.json",
+      "sha256": "8585a979b9f2522f5f93eb0c8eb51a6c9ffbbd1b42a7f2190481226e0bccb4b9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/predictor_hold.json",
+      "sha256": "bd8913349505e7147cbe799d82f6188b5eac7699ef9f88a09ff51b7b61e013a8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/paddle_profiler_adapter_repair.json",
+      "sha256": "2e0e61653054971924864521e8e1bcf7e12d98514a3693cb00d21c2726009ff3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/profile_protocol_before_paddle_adapter_repair.json",
+      "sha256": "308d5aa9f4805454091a3af87a6ab82b6db793a87630b26a254ccf0611046874"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/runtime_sharing_semantics_audit.json",
+      "sha256": "19d102b0e48915ec0c0dc0f1ca236e60fb87f8c9b112ce62ccfccebd816696fe"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/roomie_mechanism_applicability.csv",
+      "sha256": "74cfa01ca118df560c60535843bc1cff1030db08b94bb4856016e66b2fdcf3b7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/scheduler_policy_audit.json",
+      "sha256": "8e7b486049e14d0838188a223be2ab3986798cbb20a05c6a6e414772f68d8550"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/kernel_profile_summary.csv",
+      "sha256": "ecdae8cc8baf9d7db5e6268f1ad9e7956c83ee549b4db7c2125a4f1a1ef4fff9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/duration_reconstruction_audit.json",
+      "sha256": "66a6ebd2ea473087278376b892a51ac6aedd1213d08babc5c5cb1bc06ee0bb36"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_kernel_catalog.csv",
+      "sha256": "0649eaa5c85226cbc241ee44f9293261ed30e97f4a99089d2fad21aecce37289"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/runtime_sharing_semantics_audit.md",
+      "sha256": "e7889320e71fd74eb8388fc4916e3c98b82707fcefb9bc73f8d231a57bcf0bbb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/module9a_summary.md",
+      "sha256": "b86f5d893818ffe478714f7061033ad96279cbd01aa32c2d8bb9c19835f65b1a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/post_profile_environment_audit.json",
+      "sha256": "1e60b9ecab5aef9a86ae4cf7db5e7661b47321c5b3ca4bc81761d170f2894ed4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/validation_results.json",
+      "sha256": "a34800616ca376c9358340ead05378305a74957b7efaa30c8efaccc87710c1e6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/interference_model_gate.json",
+      "sha256": "3934d99c744f8c802aa56acbb5c4d30b3e61b8d19f5c335e6e29ffb57c2b2fd1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/run_accounting.json",
+      "sha256": "2f64ba3100fa876db3b82505916060b210ea49e4283372ca1a4798455e741bfb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/checkpoint_source_hashes.json",
+      "sha256": "9ae2f0d1cfb3617873fb009c2f85b05584a5c61e41b5946e99725b61af3c446c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/frozen_reference_verification.json",
+      "sha256": "e275424fa113debb8d6d722c1d651e0e8e56d9eea01704756aee4c46174ea10c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/artifact_hashes.json",
+      "sha256": "c380636594516ea138b5d07d9053890d875a0b8f6e136716eb9cbf69313c25e2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/convnext_tiny__image.json",
+      "sha256": "ee5900102df25e2e470b79080c21d6e3e84f29b850c323727ab45e85ab03df34"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/distil_whisper__asr.json",
+      "sha256": "9250c214a44f9b4bfa18034d529974b43a817ce46a403af95cb8eb9fd25dfb2d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/distilbert__text.json",
+      "sha256": "26a27b30694f051be638f08340056cde5634606b47043ed302e16c6f18a6489a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/minicpm__asr.json",
+      "sha256": "096207b3d34d31b1d5587872e5287ab0aceb01df03424e6925a0a94fbfa221b9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/minicpm__image.json",
+      "sha256": "c243e2a2ef3ef34c3d693550e7be3e83dacc21f42ab75c58f6372a5193e92b02"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/minicpm__ocr.json",
+      "sha256": "b09220769983bdfd07a2f4e7ed15525152b7e730a1b1253d8beccf1168cfff16"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/minicpm__visual_qa.json",
+      "sha256": "c5b6e3e03609dbbf87e1307d3eb251c4650767390c0013a41bc4c29da4d76d63"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/paddleocr__ocr.json",
+      "sha256": "e64bd83cf8508877baf655cf518d6fb1e8eaf2d71be5cffe84f1f3e4255497bd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/phi4mm__asr.json",
+      "sha256": "e0a1bf0d9f1c82ab5be34e0f84b6793d6852d5acd641cce467cf328afd0e922c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/phi4mm__visual_qa.json",
+      "sha256": "fb272c3ff549b5816be8e3f29d0077747848c191d3f4bea0124caecb7c60fd05"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/qwen__asr.json",
+      "sha256": "f015aee2ee4150ce5d51ec648a06815d0762a418582327e2fac8ec9831ab1613"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/qwen__image.json",
+      "sha256": "263c68ac5541c4c02e9b6c30c841ff46b7d8d8a8beef66120b69c3eafdf0e396"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/qwen__lid.json",
+      "sha256": "5542508c2ff62431ece31d5fb4eaaef938c6dc094a6678b3ec992bdfb244566b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/qwen__text.json",
+      "sha256": "1223dfea7ba5eb7fabf93b7c04a07ccdd2c6b9654d484b192a8d695eec3a263f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/qwen__visual_qa.json",
+      "sha256": "6f9fc6d38535e16d9b8745efd397262f2d44494b107c0e791928d42fae9952d4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/resnet50__image.json",
+      "sha256": "775a7bfe5cb07057ccb460067d7cc4afafbda536e22ef1fe49b94b19d46b776d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/roberta_sst2__text.json",
+      "sha256": "24f09a29c44312ab7b2591f8d043d90870a161920d79406ce6da98d4aa9e2607"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/whisper-small__asr.json",
+      "sha256": "747a60969e169c11503339d430ac9c04d19f89af1d15c729ee339bb4946a5aee"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/whisper-small__lid.json",
+      "sha256": "bc673c7652d89f7b17a4985eb84de720f8dc12908e8507da45cdbab51c29a5c7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/whisper_turbo__asr.json",
+      "sha256": "dc512c2377dbbcb476ef59aa7b09698b09dbf188fbb9a61d2ca6bb23d5d98a1f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/task_path_profiles/whisper_turbo__lid.json",
+      "sha256": "4d4e2c385523bbc046dfb614d4d04bc030cd2eddf539d8fd4886a697123b9ad3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/convnext_tiny__image.nsys-rep",
+      "sha256": "8175c34f44f2fc3d1a6839fb6562edfeea20318c544371cd0ee575daa17e77d5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/convnext_tiny__image.json",
+      "sha256": "bcdfac9c01b05012314b9cf854ae58162e81b809b40bc4f4d6ebe26f9280b7ab"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/convnext_tiny__image.sqlite",
+      "sha256": "21e2a4de01e15f73e323d2fbbe2fcd53d42d1705a33350aec8e4582acfb2e329"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/distil_whisper__asr.nsys-rep",
+      "sha256": "b9834d5f29ff9755db89e6422b9ebce0f600a1d50c20b4ead451c740b106d457"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/distil_whisper__asr.json",
+      "sha256": "58256349c1efac6231dc48e0ae68be7adb5e9358bb15759cac6b0a3fa4fba3f6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/distil_whisper__asr.sqlite",
+      "sha256": "20e0c2bc88d2ef35b9161df8dd395605a46c96bad9a0acb8a6e75a899a36f76b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/distilbert__text.nsys-rep",
+      "sha256": "9928151ba1b2c16c1f8b6d12def2e19c23dd4e19dab569efb3b5978195deb6f2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/distilbert__text.json",
+      "sha256": "8b12f122cef349c00b8809288c0b706a5f0d4cc73e370ebd0a84d6c076f627cd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/distilbert__text.sqlite",
+      "sha256": "89ded0b9805f8503b38577c457850957068c6c63b9beab0e3ed0a56f1c4bdaca"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__asr.nsys-rep",
+      "sha256": "266c5897a4d7f97971862b895b7784ba185b9af468fef59f5a7a7ff4ea142dfe"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__asr.json",
+      "sha256": "fb2be17360e578caf056ac31d72b9e2e5ce9efef7add0f58f2fcce257d9e84ee"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__asr.sqlite",
+      "sha256": "5004c666d5888c08dbd67f252682ff1f3eef1df516266fa4090c165fe086589b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__image.nsys-rep",
+      "sha256": "b48264a16e0643121c066594d59e8fadddb0c7a84c516c0f083df8faa3010007"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__image.json",
+      "sha256": "136c07382b5b16bd37a7f52686f453ff4dbee6e17b3cdaa58cc68e5708ed9992"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__image.sqlite",
+      "sha256": "06ea28b97945c1cf98276fe07889ccdf16ec748300db5f4d32987ad371df655e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__ocr.nsys-rep",
+      "sha256": "2bc0b59ade39c419df56eface8f619ed331685cd29c30d31871e8a99c8451969"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__ocr.json",
+      "sha256": "00f504277c2330edb7af93fb83546aa064a3a77e500dd95784b30a2527298774"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__ocr.sqlite",
+      "sha256": "c8ba59beadaf7566eba2ad7a0eb7f37f61bd932b98d7a37f6b119979a04999fd"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__visual_qa.nsys-rep",
+      "sha256": "40c2c4a8175a04abb5de311e8390975406d82b0ee2fc5c998c65b021a6e51109"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__visual_qa.json",
+      "sha256": "d723845df2b333c5aeb764c73190ebd329dfcac863474404527dafbe7edd5469"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/minicpm__visual_qa.sqlite",
+      "sha256": "5e661520b642bd9aac8922fe2b90dec6db192272da13ea4f71301dfb18c622fa"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/paddleocr__ocr.nsys-rep",
+      "sha256": "056e0101de4f61b6511453152afc4a38b99963af208c59adaf0cc807f1eff168"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/paddleocr__ocr.json",
+      "sha256": "bb0baa7bfe05f269db70984d593a9695b99c127d5b32334c06079c8b970cc1f3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/paddleocr__ocr.sqlite",
+      "sha256": "ddfdcccf376943ace726db128e59cd253f7a69e1da3120650325053a6e472fa5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/phi4mm__asr.nsys-rep",
+      "sha256": "bc2b94fc5c9fef2cb7a587b9a8365cad3a6e880dfabc7166486cc827733a3dba"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/phi4mm__asr.json",
+      "sha256": "3c0ebcea92ea77efdc8fd80be4c0b3157df4716cdbc50179285980b8b6fe20a9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/phi4mm__asr.sqlite",
+      "sha256": "0f997d75aaff3b2d012a50a2b6ba4644007acd6301e28e24e43e0d4de5d78ce9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/phi4mm__visual_qa.nsys-rep",
+      "sha256": "b310d4d46e262813b08288505871fc778be7111aa3640c0d04d82399acc521e9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/phi4mm__visual_qa.json",
+      "sha256": "39f263555d0bc354410da56c8c98dd4e8597af93c751d7c8e069c9b5f0d77ef3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/phi4mm__visual_qa.sqlite",
+      "sha256": "1e59186e2e3716bb3528df3a9b115bd89c0c028a8d8afd11500f832f866dabee"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__asr.nsys-rep",
+      "sha256": "543d241b8b59ebdfb48355ef261827b3e6dece4c427fbbde5b687a0401674dcc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__asr.json",
+      "sha256": "12a6986defcc417a5867994b50502e917296543e82b4c4f7fa0af6578bf73d8d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__asr.sqlite",
+      "sha256": "cce53218267313f72c266d647dd84b38a22e2ee0ee93ab990d34d4a4bd896b47"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__image.nsys-rep",
+      "sha256": "55bd3da8bc75f93b623f9464d2e6a5b31dbb9a653898c552e5912d25c1d62035"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__image.json",
+      "sha256": "c96916d13de2582bb4818fac0101005eb54407288f24f3dc87d4795c8c11b6b8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__image.sqlite",
+      "sha256": "e3ebe8c7c2f7dcaf35a595cfeb69e348eb5706d9ed70e04800d5ffb9c99a6faa"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__lid.nsys-rep",
+      "sha256": "4638faee11c1ca37b1586ecb86f3a66d1cec1e8ba5064d0f76c605700631ef9f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__lid.json",
+      "sha256": "9824d8edd499eb016e578b9fd9081c5f42ce3bab8de6c7e61fe552f2b48d7b19"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__lid.sqlite",
+      "sha256": "55b52bde0d06a23f6b41a2b3fcd97fb0c7a9bc0fe2a9b86c79a9e7ad2493eeb2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__text.nsys-rep",
+      "sha256": "a5be3f24e5734818a46a2ed458679dfc8e4cfeca97f14b45090d555ce2a6d3bc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__text.json",
+      "sha256": "2925f18ea7897431815d48613e66dc51d4fb4ea1d2eafd7563df684325231601"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__text.sqlite",
+      "sha256": "34e63f5a6f871d7c6d9b8a18f60ea8fde44ec95a00336559b9a47d1f88e36bb3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__visual_qa.nsys-rep",
+      "sha256": "fdb361e214a58c6c00e6202f38ff92d28ad5155ef6ade602d11eacb1d42f8f03"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__visual_qa.json",
+      "sha256": "5cf79e70c3cc8666142ea9ac96dfcb2523d484c79a1c57ee75b4be2b4f71db2a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/qwen__visual_qa.sqlite",
+      "sha256": "7c3055c55718d78a837566c9148e100ae92d17d65cf64028dde4668bc34493c2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/resnet50__image.nsys-rep",
+      "sha256": "6008da7c98da854cc815050e525f38e8cb3d748e24c239670840320cd5a2abe8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/resnet50__image.json",
+      "sha256": "5f7468d901d6d3fe33fdb957f45fa1f66bec6f7cb81ece473a04a9b5f6bb340b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/resnet50__image.sqlite",
+      "sha256": "c5842f0ddbfa34dea55602af2f2d17eae52219ae370b1dd3ebdd9352195ace90"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/roberta_sst2__text.nsys-rep",
+      "sha256": "d2579f74751365db2b0b374e474371bfd52af3ff12469ed21cd90bed79a06f9c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/roberta_sst2__text.json",
+      "sha256": "fb3b1c354105ab22b0777e03142150ea87f12fbedf81f3cb7d2ad938cfbe0071"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/roberta_sst2__text.sqlite",
+      "sha256": "d59e240aade0116f204f760f558b77660e7e95de201dabd25c961092a87951e0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper-small__asr.nsys-rep",
+      "sha256": "9cbb4d2013f0a15c69c8dbc0bd88db862b53e3eccaee25fda97d08dd52a8e82a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper-small__asr.json",
+      "sha256": "ccf1ee25c9a27ccb4402bcff5b44b869734f0b10b2b772f7f5fab6cae06b0d0c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper-small__asr.sqlite",
+      "sha256": "bb4601279364ce246cd8926c4bd6f065a89c3407caa2c9b6b8fbfab942628859"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper-small__lid.nsys-rep",
+      "sha256": "270c1c2d46cfaed241b3f8875a3a0a37b561156bb18baa83022b8cc5126a236b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper-small__lid.json",
+      "sha256": "e21e42914148ee71322ae298354f4d063c50e5d86795bdff46b88b5dbcbe675d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper-small__lid.sqlite",
+      "sha256": "04220d32aa509be99542b5f3864168680cf0d0a13da2addd0d450152c240ae1b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper_turbo__asr.nsys-rep",
+      "sha256": "c8a08f41e7f58c0b653b6dcb281ae4d462caeee8ce7162e0646eb2f6ad7f8278"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper_turbo__asr.json",
+      "sha256": "3b1688eb5cd90efbf2b0fdd348393bc0b88f2a52039be9f4c833dfd347d0d507"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper_turbo__asr.sqlite",
+      "sha256": "d0b400d35989a39fedb3e7ca9dd488760a1d5c246d04766db5df81bd9ad15bd7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper_turbo__lid.nsys-rep",
+      "sha256": "b130cee7e750cfbfc955e8fe1fa89a9d5272a75f029a16558cf817d812dda7b9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper_turbo__lid.json",
+      "sha256": "4e89e9b96355e3a93aba69cc0fedbf4d5eaffac3273a9e0527600647e6940646"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/raw_profiles/whisper_turbo__lid.sqlite",
+      "sha256": "20fe7ef5fe211c7842a8132dcf7773b2cf5b982d7abe347653a4a56aa81fcaf2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/prelaunch_failures/convnext_tiny__image.json",
+      "sha256": "64cab30cc4384eef0fd6a42fe27269c1a05cb00dc26edf5bdbeb749ee4795081"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/prelaunch_failures/convnext_tiny__image__stdlib_shadow.json",
+      "sha256": "146345c5dc038669ada100d8c36302b13240d14dcb85f9415758c0b03c3c3395"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/prelaunch_failures/paddleocr__ocr__torch_only_adapter.json",
+      "sha256": "625eb125611b6d10884fe4cec3dbb1634deeed7210ebc1488cd803075c87f978"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/path_features.json",
+      "sha256": "8bb05f22b08dfb222def69ce6d5bd7b476361b849aeae9a39e21708d16f19da5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/pair_split_manifest.json",
+      "sha256": "e31713a9d2f8d0386e9dde00eb694187a148cc75a5d91317c0cc649ee51de87c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/protocol_identity.json",
+      "sha256": "820c97d8d3affa3170db7adacb0d90162e79f68faaaa1b7e369d96c6ec241201"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/model_comparison_freeze.json",
+      "sha256": "2158917c448090a6f37b4f765c1a49302bd27cb8aeec4bfebcb389dbff513576"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/protected_references.json",
+      "sha256": "f84c7685bbd072a11cd012dec57f1b5786fa35dd5134c5d7b8047e0036913369"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/prior_art_and_model.md",
+      "sha256": "9a58bf2e3ea784f0087d0c1bcff6eec5691548a4c045f01ac9bf48f1ab70f422"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/campaign_state.json",
+      "sha256": "91e4031fafeeafbc14c3e034e4d7439cd409bdf64587d0c0be4475b20c0a0101"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/preflight_cpu_validation.json",
+      "sha256": "00977196a051c0c5f1cceda425236b395141f54bf72e453b9f32725e50b137c0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/measurement_execution_freeze.json",
+      "sha256": "0aaa174ef802f23b836447ae9fc177bd2a8275473bb9b99210bf279c8aa05bee"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/calibration_fit_freeze.json",
+      "sha256": "8bb087e36350e18238a04a39fe2ac2b8a7442cf170152451ae9cb9496b767db9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/calibration_pressure.csv",
+      "sha256": "37ca4ccc920ecc19f520b63358c456b075159aba845ce1c483c598971a6f84bb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/pair_prediction_freeze.json",
+      "sha256": "f50fe799456466165b162234674b62cf0c2797ef7271cff902b06445328c5a70"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/fitted_model.json",
+      "sha256": "354b205ac78ea0db03ed7ff59c1bae3a35eaaef47f6b6428d6b801b926774232"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/pair_ground_truth.csv",
+      "sha256": "626b9529ff6e605bbe2399247f9eb5cfacf1dab45ae2ea9ed75143438b63a6c9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/pair_predictions.csv",
+      "sha256": "a1ae2182fae273fe879ce7e1a0888dccdc8740de3b25d1d30aa40d8b0ef80ff5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/pair_validation_metrics.json",
+      "sha256": "c385eb5031f58a746d5ac6247b6c3a1984c07410db398cc8a713564425b0ca76"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/paired_bootstrap_model_comparison.json",
+      "sha256": "0684dc988d94b91e591a20a85a826c112b13c612147f823ff8104f9d6734cd28"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/task_conditioned_ordering.csv",
+      "sha256": "82bca26537da22246f3afcd53383bbf8b72066e16a9890362ab0cfcbf3442215"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/model_selection.json",
+      "sha256": "6b5a690b42b06fad27a726852f1e76caca21e3d35dffef6000e07ea55a238e7b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/uncertainty_sensitivity.json",
+      "sha256": "765d09f282e37eee6dc6b1685644264dd0afe97fcf82a278731488857bfa3c62"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/runtime_overhead.json",
+      "sha256": "c28485dc3af3f356d356b269c1add039f38bec2dc7eb728375174812171da531"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/validation_results.json",
+      "sha256": "73ab95e8ad916cd85db6f86ad428ff84ec20f0c286634564dc66a9129d601eb9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/module9a_summary.md",
+      "sha256": "fa10f93c17e8f4a455e63fcec35a1ff5cbf0269a99f92d1596f12d8e267504bc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/run_accounting.json",
+      "sha256": "a7dbfd99515a35dae2317b573f367ca35f41e1f89ab1e6d3af0786e2a6fa160d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/interference_model_gate.json",
+      "sha256": "d1f3c2ed610119982c08e25fbfe6d5b9f17e999faf347292e07e60d1d4d9d024"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/artifact_hashes.json",
+      "sha256": "a22fdc5840c627c99c0c5837fdd27c1e503d2e667a70714af40bec73da0f3827"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/native_runtime_integrity.json",
+      "sha256": "6ba96d61de4a7eb67e34aef2dfa24daebe08ebc314bcd12294fc41d3076985a2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/handoff_status.json",
+      "sha256": "b20696f204d61a413a120c7c1280ebfd853870699587cf990c694ad42ff09b51"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__none__rep1.json",
+      "sha256": "7b7ec1e1c6f446ca0d22382df679c083bc07cd1ace50e7352ea36d387e4c83d1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__asr__none__rep1.json",
+      "sha256": "96143eb8509845bcc1a42d1adc5054ac83b508cdc3bad4db4852c91e759c499f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__asr__none__rep1.json",
+      "sha256": "1fe22a2e5af201e443feb95d7c89b9fd7bb75aee5c4079c4aacc82a14262bb7f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__lid__none__rep1.json",
+      "sha256": "ed2d4601f2e4f97110d2e8b671394bd97b8a8ced0beb9378fcff4ca050272ef8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__none__rep1.json",
+      "sha256": "a9b793a60af6ecd9a3f931617f427dc7b558dcb2075b15f5fa7949fcd5dff656"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__lid__none__rep1.json",
+      "sha256": "486245b101defdc0f8ac587774e19278b8626bd9b643d29cd86d39188ef6b292"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__none__rep1.json",
+      "sha256": "3fdd7e08c48197ac19115a68c27d31d055736fef38768b1ad8e01d89851ab618"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__none__rep1.json",
+      "sha256": "eae635dc4ffda29e23378a7ea19585c6345510e4d533f95846663f3fea2194d2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__none__rep2.json",
+      "sha256": "d44de4a21d2597fe2c21c92feac70f5a6cb473169a327783696fe8917afc181b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__asr__none__rep2.json",
+      "sha256": "d7514fd26872c20346fa547b0ead8bb1a22136998e281d0b7ad71a8adc3c8157"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__asr__none__rep2.json",
+      "sha256": "94c056accf3fcfdb62bc2d4883991c165e15b5aff8cc070f660d6555f36ad200"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__lid__none__rep2.json",
+      "sha256": "68d84fe69126fb95a1b5b88f96e4bd472aef6cef0915c9a6361dd7c62d09f6b0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__lid__none__rep2.json",
+      "sha256": "687c227b07f0143b6b968af854431883c791164a8bc863f913f9b6ebf4a8ee1e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__none__rep2.json",
+      "sha256": "04c8df88c011b0972d411f162570da89eeae6f3c97211d45dab1d04b370cad78"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__none__rep2.json",
+      "sha256": "e1b9a0a8c07759a97b19383a8e6f77fadf8677b1033497ec89f46dfbddba0220"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__none__rep2.json",
+      "sha256": "ae451f50f1ea173c69ba0f3c860e8bc049fec527c93409d545b989cf5659525a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__none__rep3.json",
+      "sha256": "5365af733f80a442fa7dbdc0364fdfb6c6617739485ef4405d20f9e179724c43"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__lid__none__rep3.json",
+      "sha256": "7c4e89b5f5786794baac7de42cda45c117c49cc0ec0d77a47d494326b92f3d18"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__none__rep3.json",
+      "sha256": "8f757e39ab6ddb745e28da2575951b00c1561e071adb321bffff46f74b01925c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__asr__none__rep3.json",
+      "sha256": "6d8759f278208e6f5171aa8ad74f3f9c28a896ab8d486645a3ee7d999241b9cf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__lid__none__rep3.json",
+      "sha256": "d990fca57c2050bd460c1cc1135e1e0bccb27678cbe285ad00ebc4cc11a0cb34"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__none__rep3.json",
+      "sha256": "1083e172172dfa4ea1f4e80ba9b1e2c49cf958b6aa82b1cdb86e5ba283bd2baf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__none__rep3.json",
+      "sha256": "f6dce25044ce01bd1ef3bd1e2926e72f1d894700935140648260c5cd2ca9fec6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__asr__none__rep3.json",
+      "sha256": "65843a4cea15a2124830696dcb9dac5bbb89e1866169e1fa1d6fe83cafa6b988"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__from__whisper-small__lid__rep1.json",
+      "sha256": "0417f60697942a1a7cd12eeb0a4a045bd09f5b7bb65a80ed7eadb85fa0f6a389"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__from__whisper-small__asr__rep1.json",
+      "sha256": "553e23897165ee638dfbf03d83e38970cc31aabbce9bca9bdd65d540bcf6aba6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__lid__from__qwen__visual_qa__rep1.json",
+      "sha256": "9cc65e7b93a2ba96d2509f0e542090e64e9380a1416e25c2c0115bd9ba04c287"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__from__whisper-small__lid__rep1.json",
+      "sha256": "7aeb643b0d60d05fb50b6ac879120a4a65116e55fb1179aea18761ec46ddb6e4"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__asr__from__qwen__visual_qa__rep1.json",
+      "sha256": "45fe4745d0676c7a03c35bfa6ce4dd2d24048dc2741b7d0ebf71839ca32e97e7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__from__whisper-small__asr__rep1.json",
+      "sha256": "b805b49425d7ba7e6f4272cfe3e9ac24c8590f24df7fdce0df57cdc5e82ae9d9"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__from__whisper-small__asr__rep2.json",
+      "sha256": "76a9048f8785c17c7d13e856e109f015ce5419a6dce9c9162682965eb96bec37"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__asr__from__qwen__visual_qa__rep2.json",
+      "sha256": "43b6de73c1d9ea97f878c51f8a29c86ccc0b09bf8c3093737d06d35437b4dc4e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__from__whisper-small__lid__rep2.json",
+      "sha256": "9e70bbd8de0c1b6e868207dbd269ac6a476fd8cd399812fb02aefd0175f2b62a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__from__whisper-small__asr__rep2.json",
+      "sha256": "8d7a5743e88388df9462c9d7bd850560924d880267795825c448bd16e941534f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__lid__from__qwen__visual_qa__rep2.json",
+      "sha256": "9bfda57ba629b434515947446ed7ef05d141fc68c2cc5bc5db92740af9d2e87d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__from__whisper-small__lid__rep2.json",
+      "sha256": "7df6a3d64d04b9d5aadd25566d2059144d46e4c9eb5fe7bda1936ba4d880fc2b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__lid__from__qwen__visual_qa__rep3.json",
+      "sha256": "a01bb5baaa1196a8e518addc13545badbc2853643b3851219e95d8da9b737d05"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__from__whisper-small__asr__rep3.json",
+      "sha256": "b9c4452e1c7eba777b134b0358880f99600f4b56ac8cbe204dea5f974969e437"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__from__whisper-small__asr__rep3.json",
+      "sha256": "94f78d95ea4474a03ac17f169c3fec2a7a79545383a76492b0b98d3d06b89f39"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__asr__from__whisper-small__lid__rep3.json",
+      "sha256": "3ac338e27c5a0b242ba7df07d0f58331f445b3710af7874889e8b34d96ada483"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__visual_qa__from__whisper-small__lid__rep3.json",
+      "sha256": "2bf2c6757f72bd8ad3a86fe1131c41b88705c9a5ac1302c0882eb37369c9b51f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper-small__asr__from__qwen__visual_qa__rep3.json",
+      "sha256": "77b23aaa3ad3832c2eafb1df831a2ef7f8fc951726a2c697b9b076256a3a83ad"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__asr__from__qwen__visual_qa__rep1.json",
+      "sha256": "11f5f3a399b98d15eff53da9f53de73d97849a23ce76657045c7160f4ccfe62f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__from__whisper-small__lid__rep1.json",
+      "sha256": "dd0b550b072ea893931f124006d7d3d32ba6c771b5fb2bd8547afaa84c70ca9b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__from__whisper-small__asr__rep1.json",
+      "sha256": "61eb88aebc2a02caae46642f3f3630e6670167e177e7f820821e9e3f68fdba9b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__lid__from__qwen__visual_qa__rep1.json",
+      "sha256": "2bb03fc5aae38f995dc5b4a00263754b294721f776169e245f699082f96d4e85"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__from__whisper-small__asr__rep1.json",
+      "sha256": "f11096f89b8cdf124bba61f1f149f004e8663dbf7fad183c3363438c25111c18"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__from__whisper-small__lid__rep1.json",
+      "sha256": "2bc539a0c5d5becf325dbd4c37221c29d8fcad5d9157bfb0e5f6f9fc1cad8148"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__from__whisper-small__asr__rep2.json",
+      "sha256": "2606ee4e2badb6eb13f017b000fdcdfc1b51f17d1e0dd74dcec8379cce0689ab"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__from__whisper-small__lid__rep2.json",
+      "sha256": "3dfecf7257a36e166fa405e1fffa58e85615f14ca03a4d11d800e660385029ae"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__lid__from__qwen__visual_qa__rep2.json",
+      "sha256": "e9fbfa4b8b5ec46a1d01f8b9552b66baf678931e49b06299117cac8f7080b33e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__from__whisper-small__asr__rep2.json",
+      "sha256": "a73eadff1c09a35b240083ed9f01864385097f2d2cf48e87c57a023b4d28c000"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__from__whisper-small__lid__rep2.json",
+      "sha256": "f210e53fadb5bd10587f850707e0eaa863f60c05efa8a4a033b8367cda7da49b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__asr__from__qwen__visual_qa__rep2.json",
+      "sha256": "09f9dcf0aa8d03c9658ca305ae03c055d0ac95b5c6ee9893a431644c42ce1c49"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__from__whisper-small__asr__rep3.json",
+      "sha256": "f013c18eb35ee5d4b1df30720894294df6d604d166549549ba897d534dc01560"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__lid__from__qwen__visual_qa__rep3.json",
+      "sha256": "5ca59865148709ff70a1a5d036cef7452ef4df4fa34aa85103c3550a11a8ea2d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/whisper_turbo__asr__from__qwen__visual_qa__rep3.json",
+      "sha256": "a94da7fa248703ca44952da7c0c8e49cfbd45163b4f4a0e2b38b91844ba0cd8c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/qwen__lid__from__whisper-small__lid__rep3.json",
+      "sha256": "7b1c8c124daac940283c829c2b5a03d38d2813b37f2ec98534a297ed9347d2dc"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__from__whisper-small__asr__rep3.json",
+      "sha256": "f31e60a1ac5b866eb1d37295b0699992b71e5af89b420accf9f0af032d395b8d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/raw_runs/phi4mm__visual_qa__from__whisper-small__lid__rep3.json",
+      "sha256": "40c12f93d1956f82c9d902328af07af9beb715c965720f2309eea3ee44e3ccbf"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/audit_manifest.json",
+      "sha256": "0fbaab4395d136a569f250f251bea7e3676c540c665a4a88d7eeea43a053957a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/model_pool_audit.csv",
+      "sha256": "312507eaec4de9605f9a7d792d575300823ddcf2337de5287e0f34c75ac42b14"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/task_level_dominance.csv",
+      "sha256": "c5fca64b24fc5078172f81db34bae0ae0a34dc3fd2eb7037be695e4d6dea3cc3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/all_deployments_structural.csv",
+      "sha256": "c11a3fbfa5d9b75eda95982e09d2dabf7df5a300d829b421eeba3ff61ca965e1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/lp_states_cache.json",
+      "sha256": "e21fb07a1f99012a4e0cf738ba14f84cc6e4f552b50c9458300951803767e425"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/pareto_all_states.csv",
+      "sha256": "0a1a22531f500b59c0a703a920318e7a2d4ea94b4466528ee708019c346f3da0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/pareto_front_by_cell.csv",
+      "sha256": "8584a063fe4376b61a65155eed96c65448fb0295e822033f1430cafe1456f649"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/pareto_composition_summary.csv",
+      "sha256": "cbb1f66e615055fd8bec5ab2390d3945c6b14a12bc459f6045919887c8a504c5"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/structural_oracle_12cells.csv",
+      "sha256": "3fd19e7955f5262d1f336f31357de5472ff860708df8e8afafaf5bacf6aa1161"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/structural_stage_results.json",
+      "sha256": "9c7c2b53c690fe22e76ff88108f5bb669dff21ea9c21d11538200603707a925e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/specialist_removal_cost.csv",
+      "sha256": "7550123313697333a21f03d1659f1390a75481d317b8c8b1fd09a2b611a7ade7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/rcsg_greedy_optimality.csv",
+      "sha256": "741681b7b8f16242f217a5f5965cd84cc2c023f4f13e6906a17f29d8473c13f2"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/intensity_capacity_decomposition.csv",
+      "sha256": "64641a965053c8d46525717e278d21240acda56fd0b3436a8a8e6f4a4aaeb0eb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/local_audit_results.json",
+      "sha256": "05170ac75f00d1744fae98035aa061c44f2b10de71a62cd3c9deedea8e7819a1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_pareto_memory_intervals.csv",
+      "sha256": "6b26909f1688d9dc5b28c8d2306adff7fd56a2f5da289dfd6c33dc03149a164b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_memory_breakpoints.csv",
+      "sha256": "f475c97dcbc783bf358efe2534f4c5accbd1e3fe71cce83411a34efc78c6f316"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_memory_oracle_path.csv",
+      "sha256": "bef766d1ddf2f394212645d7fd99bb515c105e2dc0b0366816cee2c80461b201"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/memory_counterfactual_results.json",
+      "sha256": "4015c10568e0a5481afded46b5e6ca6d63ad892f7a6ba6d1d6a7d65def367a26"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/speed_alpha_screen.npz",
+      "sha256": "c6cb4412b6c038422caa6b379cc362d34e6dfa1d314c19f173825bc4dd4f6fa7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_speed_breakpoints.csv",
+      "sha256": "e5dc33efc0108dea81650536935eff7c12ae1052e7ff1fc2a8acdf6c1dca73eb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_speed_screen.csv",
+      "sha256": "5b2b8df94bff8c9bb0a1e6f93cffa33e806ff825432d7e2084e70194fa28b173"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_tradeoff_map.csv",
+      "sha256": "e5cae0c5614823cdd104ea80680217d0d3084fa3da29c76bba4981c0c3d26085"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/speed_alpha_all_evaluations.npz",
+      "sha256": "5b14ac20384fb39a12cb9d522a4ba243bd47315cc1f54f5fc65ac33077d47f39"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/speed_counterfactual_results.json",
+      "sha256": "a945664cc5f7eb8d09a45fc7189ace20d582034cd09c5bd2990ce72695980555"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/search_structural_gap_audit.csv",
+      "sha256": "c832cde243d47094d421bd0aa1b47c6bf44de80830a59f57052284b1bee99c17"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/structural_diagnosis.json",
+      "sha256": "9e5e465d7bc842477d6e5f13a91715c7b64fa25db799c2304b9f5af1889de267"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/module8f3_summary.md",
+      "sha256": "642be36cc7e5c6b182da13118d0a4045cee50da8b96a4c2def6710a86a4c1b9b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/validation_results.json",
+      "sha256": "5bf79c69d0ae15d8936cd2cfd93f41cceb1d4319db624a939e36c538fbc0e44f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/execution_source_hashes.json",
+      "sha256": "4c38800648b824f126136d1de82ac711f92bb330994012af7576f7fe59cce005"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/artifact_hashes.json",
+      "sha256": "c9ffd3cc0a09e3b6fb6d48eec6f7c7228e35f915a2d8a55c8f40cc27ee91ada8"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/independent_verification.json",
+      "sha256": "bb7375cc39749823aac65ff68ee87c180eb634a0598063e41dafab4c1f2256bb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/counterfactual_scope.json",
+      "sha256": "79eacb6d4dcb89ffb1c3d7e07d29da252d245bd6297d8f214512745490a3ce3a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/run_accounting.json",
+      "sha256": "eba352b623815b8d747acd7aaa9c824aab59c3713a53c7585097ee3dd9507246"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8f3_structural_dominance/generalist_specialist_interactions.csv",
+      "sha256": "e0e77ff39ce060a0c28bfea0a01681feb886c0c9126d911a843155db53bb08b2"
+    }
+  ],
+  "development_evidence": [
+    "module8f2_resource_static"
+  ],
+  "excluded": [
+    "module8e3 heldout labels",
+    "future final heldout",
+    "9A pair labels"
+  ],
+  "s0": "frozen candidate_pool_v2_1/service_demand_v2_1.json; no 9A matched-anchor substitution",
+  "interference_model": "I0",
+  "objective": "sum_m D_m/(1-D_m/g_m) / sum_k lambda_k",
+  "formula_weights": null,
+  "solver": "SLSQP analytic gradient; objective expressed in ms for conditioning; canonical initial point, fixed maxiter=1000, ftol=1e-12 ms, epsilon=1e-9; convex linearization gap <=1e-8 seconds",
+  "routing_state_selection": "four distinct exact historical states: minimum-z I1 routing-changing 1G; minimum-z I2 routing-changing 1G; maximum-z I3 routing-changing RC-SG-owned if available otherwise 1G; minimum-z historical multi-G routing-changing state. Deterministic cell/vector tie-break. Slots without routing-changing states use same category with no change. No new GPU labels used.",
+  "routing_repetitions": 3,
+  "routing_seeds": [
+    7101,
+    7202,
+    7303
+  ],
+  "routing_order": "per state rep1 R0,R1; rep2 R1,R0; rep3 R0,R1",
+  "routing_gate_rule": "NOT_SUPPORTED on more state-level stability degradations than improvements, or more matched-steady mean regressions than improvements, or at least two states R0 steady and R1 nonsteady; SUPPORTED requires no stability degradation, nonnegative aggregate matched-steady ordering, and one all-three matched-steady improvement; otherwise PARTIAL. No magnitude threshold.",
+  "ranking_gate_rule": "compare equal-iteration measured-only rank correlation and Top-2 hit; SUPPORTED if improvements without conflicting degradation and GPU sanity no worse frozen objective; NOT_SUPPORTED on consistent replay regression or systematic sanity regression; otherwise PARTIAL. No formula tuning.",
+  "ranking_sanity_selection": "at most two cells sorted by descending count of iterations with changed class-diversified Top-2, then cell id; exact frozen budget per search. Canonical routing in both arms to isolate ranking.",
+  "generation": "unchanged frozen method_v2",
+  "Top_B": 2,
+  "runtime_objective": "unchanged NoiseAwareRuntimeObjective(1ms,.05); this existing accept/rollback rule is separate from new gate with no 5/10 percent threshold",
+  "new_GPU_before_freeze": 0
+}

@@ -1,0 +1,42 @@
+{
+  "enabled": true,
+  "identity_exact_no_rounding": [
+    "full integer deployment vector",
+    "exact routing rates/identity",
+    "model revisions/weight hashes/adapters/precision/backend",
+    "environment/hardware/context hash",
+    "workload hash and exact lambda",
+    "full protocol/settings/aggregation",
+    "phase contract",
+    "repetition seed"
+  ],
+  "identity_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/evaluator.py",
+    "sha256": "f60dd8e92c9a821a1c691405b633dd56fe4ec23339daca9638fe60438747a1c9"
+  },
+  "search_phase": "M1/M2/B2 may share identical search raw runs only for seeds 7101/7202/7303 with full identity match.",
+  "confirmation_phase": "M1/M2 may share across methods within the SAME role (seed or final) and repetition seed. Never share seed with final within a method, even if deployment/routing coincide. B2 fixed confirmations remain a separate fixed role. No search-confirmation sharing.",
+  "logical_records": [
+    "method",
+    "workload_hash",
+    "logical_slot",
+    "phase",
+    "role",
+    "repetition_seed",
+    "deployment",
+    "routing_hash",
+    "measurement_identity_hash",
+    "physical_raw_id",
+    "raw_sha256",
+    "shared_with",
+    "cache_hit",
+    "budget_charge"
+  ],
+  "cached_logical_budget_charge": "Every selected logical search evaluation consumes one of the method's six slots, including shared/cache hits; no freed slots or repetitions.",
+  "raw_donor_rule": "Earliest compatible scheduled slot, then physical ID lexically; never select donors by metrics.",
+  "candidate_information_firewall": "Each method commits its own candidates/ranks/Top-B using its own prior returned measurements. At each round both Top-B lists are hash-committed before any round runtime values are released. Another method's cached state/value is invisible until this method independently selects that exact state.",
+  "shared_raw_is_one_sample": true,
+  "sample_reporting": "Report logical references and distinct physical runs separately; do not treat shared method measurements as independent evidence.",
+  "invalid_measurement": "Preserve raw/error, stop campaign; no reuse as valid runtime, no automatic retry or budget growth.",
+  "cross_workload_sharing_allowed": false
+}

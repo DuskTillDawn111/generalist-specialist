@@ -1,0 +1,44 @@
+[
+  {
+    "slots": 1,
+    "v1": "infeasible",
+    "v2": "infeasible",
+    "actual_qps": null
+  },
+  {
+    "slots": 2,
+    "v1": "qwen+paddleocr",
+    "v2": "qwen+paddleocr",
+    "v1_pred_qps": 6.796664197212007,
+    "v2_pred_qps": 4.974441691578526,
+    "actual_qps": 4.972724297056965,
+    "actual_wall_s": 160.87760998,
+    "v1_qps_error_pct": 36.67888648551288,
+    "v2_qps_error_pct": 0.03453629075267485
+  },
+  {
+    "slots": 3,
+    "v1": "qwen+paddleocr+whisper",
+    "v2": "qwen+paddleocr+whisper",
+    "v1_pred_qps": 24.40691203748902,
+    "v2_pred_qps": 13.91586251032021,
+    "actual_qps": 12.04055704837571,
+    "actual_wall_s": 66.442108682,
+    "note": "same placement; v2 LP has a tiny Qwen-ASR fraction",
+    "v1_qps_error_pct": 102.7058377733574,
+    "v2_qps_error_pct": 15.57490616430808
+  },
+  {
+    "slots": 4,
+    "v1": "qwen+resnet50+paddleocr+whisper",
+    "v2": "distilbert+resnet50+paddleocr+whisper",
+    "v1_selected_actual_qps": 15.217282495898527,
+    "v1_selected_actual_wall_s": 52.571804474,
+    "v2_pred_qps": 20.551909236090065,
+    "v2_selected_actual_qps": 21.042709755789414,
+    "v2_selected_actual_wall_s": 38.017917335,
+    "throughput_gain_v2_vs_v1_selected_pct": 38.281652860561664,
+    "wall_reduction_v2_vs_v1_selected_pct": 27.683826500948417,
+    "v2_selected_qps_error_pct": 2.332401698238109
+  }
+]

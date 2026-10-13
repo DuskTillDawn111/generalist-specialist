@@ -1,0 +1,61 @@
+{
+  "duration_cuts_seconds": [
+    5.46,
+    9.440000000006972
+  ],
+  "cost_bins": [
+    {
+      "bin": 0,
+      "G_n": 11,
+      "S_n": 102,
+      "G_second_moment_seconds2": 2.7511930648666016,
+      "G_mean_ms": 1488.744635,
+      "G_p75_ms": 2046.018794,
+      "G_p95_ms": 2610.1009955,
+      "S_p75_ms": 957.63197675,
+      "S_mean_ms": 767.6128074803921
+    },
+    {
+      "bin": 1,
+      "G_n": 17,
+      "S_n": 85,
+      "G_second_moment_seconds2": 6.55830432382261,
+      "G_mean_ms": 2263.478361,
+      "G_p75_ms": 3398.308982,
+      "G_p95_ms": 4076.4149083999996,
+      "S_p75_ms": 1331.65769,
+      "S_mean_ms": 1104.3173770352942
+    },
+    {
+      "bin": 2,
+      "G_n": 23,
+      "S_n": 93,
+      "G_second_moment_seconds2": 27.583629629075,
+      "G_mean_ms": 4770.640552565218,
+      "G_p75_ms": 5522.244301500001,
+      "G_p95_ms": 9045.367477299997,
+      "S_p75_ms": 2426.01513,
+      "S_mean_ms": 1951.5080259569893
+    }
+  ],
+  "metadata_lookup": "current input audio header, statically cached; no labels/reference words/request identity",
+  "S_pressure_on_ms": 2500.0,
+  "S_pressure_off_ms": 1250.0,
+  "Phi_max_ASR_inflight": 1,
+  "Phi_total_inflight_required": 0,
+  "VQA_arrival_rate_qps": 0.2,
+  "ASR_arrival_rate_qps": 0.46,
+  "ASR_ref_ms": 574.4954926166666,
+  "VQA_ref_ms": 160.11645761111112,
+  "future_VQA_mean_risk_multiplier": 1.5,
+  "future_VQA_mean_risk_model": "lambda_VQA * E[ASR_duration^2]/2, with 1.5 uncertainty multiplier; p95 separate admission and exposure cap",
+  "positive_margin_ms": 100.0,
+  "expected_VQA_blocked_fraction_budget": 0.03,
+  "max_G_ASR_share": 0.05,
+  "max_G_burst": 1,
+  "min_G_cooldown_seconds": 10.0,
+  "G_tail_max_ms": 2610.1009955,
+  "freeze_reason": "Queue-major mechanism; gate conservative tail-estimated future-VQA risk and preserve only high-S-pressure opportunities. Thresholds chosen once from historical demand, not per-request IDs; no GPU outcomes used.",
+  "nonpreemptive": true,
+  "no_future_information": true
+}

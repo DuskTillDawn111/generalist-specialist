@@ -1,0 +1,672 @@
+{
+  "files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/CPU_phase_transition_acceptance.json",
+      "sha256": "57cad6d11dd82306379966b74b55fb8e453f041090e0019a24e4133677d6a80e",
+      "bytes": 381
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/CPU_runtime_acceptance.json",
+      "sha256": "bb54bcc4943d660fc2ba913c6fcf0facad143f6f36daf248ef829e5e46726dc1",
+      "bytes": 3442
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/Whisper_paired_queue_service.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/audio_metadata_cache.json",
+      "sha256": "7e335a83ac40fc2b53c656821360f3ffaa2b425fb0b1b2cf05e6a92438e7dbc7",
+      "bytes": 3928
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/campaign.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/campaign.log",
+      "sha256": "053f06e0e05b8e7c914ff3d73caf88fd00a2ea400c789ea544e21071e35f1ba0",
+      "bytes": 6843
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/campaign_failure.json",
+      "sha256": "a0b621f903732dc83e259ba265e004ac3368bd55ee9388d9bb3d7de0cac3e98b",
+      "bytes": 390
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/campaign_status.json",
+      "sha256": "509561ff988eba07b6b08bb995d42660ab5739dac4cba4fc9945122fb4d36b48",
+      "bytes": 638
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/causal_router_replay_audit.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_fixture_initial_failure/CPU_validation_failure.json",
+      "sha256": "124bd779fea41b39f44fd42419b29f979fefbdf2f949f4b77c8bf04f3554857a",
+      "bytes": 645
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_fixture_initial_failure/cpu_validation.log",
+      "sha256": "b09a46b744e8841bf5294cad696c0b127e9aa27ae25f9ccfa1f9b5f465148d4c",
+      "bytes": 2541
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_output_namespace_incident/CPU_CONCURRENT_1.jsonl",
+      "sha256": "9fd0ccf0bcf2b502fdf2d813cf38c7d50a1b048645cbcac1aa7759038743fac8",
+      "bytes": 9289579
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_output_namespace_incident/CPU_CONCURRENT_8.jsonl",
+      "sha256": "a195a7d57071ee8728b500cc39a846868784038aecf640d2f0d743cf58a0daa6",
+      "bytes": 3471122
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_output_namespace_incident/incident.json",
+      "sha256": "cff87c71f90a08a94650a8f9cbf5ba165d41f9c0204faca6cdf019122a88c82c",
+      "bytes": 928
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_output_namespace_incident/misdirected_CPU_progress.json",
+      "sha256": "0676d166befc4b092551c434885097b038f9735bda0f5837ec864306ee08c17f",
+      "bytes": 225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/CPU_runtime_acceptance.json",
+      "sha256": "20eeb60b0ca01694056f865ccd032c7743f43366cf7df602442f0a9f2b1ce1ce",
+      "bytes": 4014
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/historical_decision_equivalence.csv",
+      "sha256": "eda749a4b5e9de81d303fdd36bb5a88a662d680ca18a683fbba28402277fbdb3",
+      "bytes": 150661
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/live_progress.json",
+      "sha256": "0004006b3d6a4a6d5a6efb252597cad3dfec6394906021eebbb884e3b34f7767",
+      "bytes": 225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/request_journals/CPU_CONCURRENT_1.jsonl",
+      "sha256": "dd3c1f6ea58ecc1ddb9fbfdf9a9315b70cf08da4ee3d5ab0b6afb23080c6598b",
+      "bytes": 3470718
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/request_journals/CPU_CONCURRENT_8.jsonl",
+      "sha256": "ee1f701810d34b13db405f199176f1f05b00aedaae3701a1da105f8a918e1f09",
+      "bytes": 3470873
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/router_performance_benchmark.csv",
+      "sha256": "8502189edfe7a3fc33501b52c399250c0f4efc7788015feedfe1e0ebad1daf26",
+      "bytes": 2261
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/router_performance_by_300s.csv",
+      "sha256": "90faeda50a4abde44912751596f51e9fdf5c84ceb9ce265acdd40cbe239b8121",
+      "bytes": 1744
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2.log",
+      "sha256": "5a80e9bd40226250803001176e8909ee13119f33493a9468d6e08520187fc3eb",
+      "bytes": 4729
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2.py",
+      "sha256": "ad5a9b572c04ad56e49292616fc7843b8441ff76200a899c68226499e9070fa0",
+      "bytes": 12492
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/CPU_runtime_acceptance.json",
+      "sha256": "eb8dbb3e52a1172ad5f259b2915cd55add17beff5eb254f2b3bac182b10832d2",
+      "bytes": 4025
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/historical_decision_equivalence.csv",
+      "sha256": "eda749a4b5e9de81d303fdd36bb5a88a662d680ca18a683fbba28402277fbdb3",
+      "bytes": 150661
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/live_progress.json",
+      "sha256": "72ff50ec79682586cc07df614138cb3d5106958bb653479d8dc51f45a73b6c54",
+      "bytes": 225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/request_journals/CPU_CONCURRENT_1.jsonl",
+      "sha256": "e1f97603fc107fc27266f63a0cd2eceee725c2cfe930260b9c7102aa1f987a5d",
+      "bytes": 3470718
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/request_journals/CPU_CONCURRENT_8.jsonl",
+      "sha256": "72697ba998c1ac607323ba972e363084880c943df29b57a663c2269352508306",
+      "bytes": 3470718
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/router_performance_benchmark.csv",
+      "sha256": "493e0a52f3ee7def74b5f900942cb5158935aab50ecaa4d977e7ecc6a07c4c91",
+      "bytes": 2272
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/router_performance_by_300s.csv",
+      "sha256": "791d7de6bcc65c24a76fb4aea5b744a22cea8ef832236a6873c6284bca172de5",
+      "bytes": 1688
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2_initial.log",
+      "sha256": "02ac7cee9a3a121209e1e559688aab362a4011175162eeaa285aac1fa45b2ead",
+      "bytes": 4740
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/CPU_runtime_acceptance.json",
+      "sha256": "c7b8cfba78cf6fac7422d65367c2e500a1af79645b7458f71a017d3de5ae53f0",
+      "bytes": 3442
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/historical_decision_equivalence.csv",
+      "sha256": "eda749a4b5e9de81d303fdd36bb5a88a662d680ca18a683fbba28402277fbdb3",
+      "bytes": 150661
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/live_progress.json",
+      "sha256": "0f2084c64de70a60460e733fd9714a179f91331904d45a13747094582af783dc",
+      "bytes": 225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/request_journals/CPU_CONCURRENT_1.jsonl",
+      "sha256": "9fdf7612a52b798595c9d37efbb3a68de75c7241395c84239b33876d9cec0bd8",
+      "bytes": 3470718
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/request_journals/CPU_CONCURRENT_8.jsonl",
+      "sha256": "16b62c27f527a20c7c21306fe555ec0463f76dfe50aee9d7556f39786caaaec8",
+      "bytes": 3470386
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/router_performance_benchmark.csv",
+      "sha256": "21f3fd36392a1f60028cdfe38385e75e7db71254e8c2d244063ac44cb7c1f3b0",
+      "bytes": 1867
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/router_performance_by_300s.csv",
+      "sha256": "2b4288624d0512ed2b979917b95314ce7b89ba60c3f7bf1792e45345076949a9",
+      "bytes": 1703
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_safe_revalidation.log",
+      "sha256": "26d68da9940514a9c193365db2c3f6964808a991e7e387f42a9bc29176895630",
+      "bytes": 4331
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_validation.log",
+      "sha256": "520c713123392823c67bdd6de0bbd8f4665ea923050caaac46558363bcded59b",
+      "bytes": 4317
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_validation.py",
+      "sha256": "70c8c4aa79a3fc4ce74bfb2d9e10a0f3a3e158e25e33ffb53198d2a2a762d379",
+      "bytes": 11898
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/dynamic_Phi_ASR_trigger_execution.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/dynamic_decision_log.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/engineering_acceptance/E0_S.json",
+      "sha256": "e9b32af92fe9729dd0ee1d899f63a45e621206163f7bf4ff8a122676dc09b600",
+      "bytes": 105196
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/engineering_all_requests.csv",
+      "sha256": "b177da793639491941bf32ce765e428c6c603248de9475a91d85c5a816b6ad37",
+      "bytes": 748503
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/engineering_per_task_latency.csv",
+      "sha256": "dc809908144ecf92ee3c02e7fea3f4afc6ba54399f2f5ed1d7abfdadf9d94349",
+      "bytes": 741
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/engineering_resource_comparison.csv",
+      "sha256": "8c003b6207c1d05612591f54c56f171e5cd72d9796f73075bd0d76df6d1043c9",
+      "bytes": 2185
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/engineering_router_decisions.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/engineering_worker_service_wait.csv",
+      "sha256": "b2570d34c550a9dce5de4f1563a1cb0cf7807982df43aa3b795ed746fcf93f2e",
+      "bytes": 2361
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/experiment_manifest.json",
+      "sha256": "3b9d5d52a7d6ae95c091fdc86ce9783babec849ebb25a6512d5e9462532eb452",
+      "bytes": 547183
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/final_audit.log",
+      "sha256": "6ae0f07e8d984d072dfa5476f906dc82a1ba5b0ca7a77090d586247a17d36d46",
+      "bytes": 2031
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/final_audit_render.log",
+      "sha256": "efff34be50251521171c129369a5e94df4cf958dfe0994b020a8f2679ffa8bc4",
+      "bytes": 597
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/final_data_acceptance.json",
+      "sha256": "0b7599a1f9c355b28b7e40cac819e99c1fd6a8952bea2cc631525c7ff8d90686",
+      "bytes": 2248
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/final_environment_identity.json",
+      "sha256": "36107ba661b3a560fe2e68ba5d906cde7902bbe747472df58aebcbeada6ca524",
+      "bytes": 10472
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/finalize_module32d.py",
+      "sha256": "2019b8db3795db6cc74a3b75b31f9914e4a3d46bf1efc310b8db8f9e10d28f7f",
+      "bytes": 13428
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/freeze_validation.log",
+      "sha256": "95db3601276d12071403fba56a8b679ea8ba9f274c134702a1ae7825b3380325",
+      "bytes": 81
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/freeze_validation.py",
+      "sha256": "3a79b7d17b9dbd022c83275a49a5c368d97e0bfdfaf3b1ed7c04eb5cd88c1fb6",
+      "bytes": 6260
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_CPU_repair_v2_manifest.json",
+      "sha256": "8f1736530109a0fbaf20858f6912a0313d0fc3ad817ecaaeec0e3e845372c467",
+      "bytes": 2619
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_gpu_manifest.json",
+      "sha256": "3b9d5d52a7d6ae95c091fdc86ce9783babec849ebb25a6512d5e9462532eb452",
+      "bytes": 547183
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_routing_manifest.json",
+      "sha256": "b4da96deb6584122b37065557a58760d74c36ca5891ea78deeeb85327df77805",
+      "bytes": 1034
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_routing_parameters.json",
+      "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+      "bytes": 1992
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_utility_context.json",
+      "sha256": "4b0a92a18dc9519d10a957db400411ac02c723efcea8c640d2f02b8d4ff19581",
+      "bytes": 6889
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_validation_manifest.json",
+      "sha256": "3b9d5d52a7d6ae95c091fdc86ce9783babec849ebb25a6512d5e9462532eb452",
+      "bytes": 547183
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_VQA_execution_overlap.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_all_requests.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_backlog_timeseries.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_clock_audit.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_environment_control.md",
+      "sha256": "444d9ffd36f6a790a6089ac89e775e5a54277eed2d17b724ba263ac5b7c84cd7",
+      "bytes": 3608
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_independent_pairs.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_independent_runs.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_paired_runs.csv",
+      "sha256": "e4fad7b7cbd42519b67d0fb4eabeb65c7bde24c320ad50bb9e23645cb137596d",
+      "bytes": 252
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_per_task_latency.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_resource_comparison.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_sensor_samples.csv",
+      "sha256": "6bab24baaf37dd85ff290e76a6be4011934864b5519783e6affa204fca2663a9",
+      "bytes": 1786969
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_text_VQA_quantile_support.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_text_VQA_tail_requests.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/gpu_worker_service_wait.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/historical_decision_equivalence.csv",
+      "sha256": "eda749a4b5e9de81d303fdd36bb5a88a662d680ca18a683fbba28402277fbdb3",
+      "bytes": 150661
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/historical_gate_preservation.json",
+      "sha256": "c69832b62faa34bbaffd98549ce41f2a752f62f8eeae1b338733a3183501607e",
+      "bytes": 9102
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/initial_environment_identity.json",
+      "sha256": "759738cc4008d748031c3cda860cd01d05864899cc97832274391aa7b1965603",
+      "bytes": 9668
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/live_progress.json",
+      "sha256": "2a7905e1325a5505c0e204c9e6f54785963b9e35cc2bcf118d1867c59bbdb3bd",
+      "bytes": 217
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/campaign.py",
+      "sha256": "79f2efa8f49a0b2e096e43b342e6a33921389394a12339373dd58ebeb621042d",
+      "bytes": 6718
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/common.py",
+      "sha256": "d213e788570eb6a0913ed07d4fb844a1190c025db7d14a88de11eb308535d6a0",
+      "bytes": 1949
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/environment.py",
+      "sha256": "e4ff1046d1abda14d6e6b5d953ed8d5bae2f2e5467da68479b8b390cdce1b87c",
+      "bytes": 872
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/harness.py",
+      "sha256": "c26f5a7dbe75d86a67a995aac6d8dd1747ad0e136ddacb44e982311d2698ac55",
+      "bytes": 5910
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/monitor.py",
+      "sha256": "2df73de3b869d083b196a059b298c157661cb4034fc50dbe30580e16c1888efe",
+      "bytes": 2229
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/monitor_cpu_revision.py",
+      "sha256": "58a4ad307d4a089af5e1762da8db81797b3ba66a8bffcc50e0722e72be2f4b9c",
+      "bytes": 1357
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/observation.py",
+      "sha256": "ad85341c51a73e0b45179c3a2dd494ce878cc25026e002370c08ab7a733ce78b",
+      "bytes": 9776
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/report.py",
+      "sha256": "4056a561b1f1d5770f79975ed9b1da318cb10643f78663c9dfaba073af3b479c",
+      "bytes": 13893
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/runtime.py",
+      "sha256": "c61d87abad61d675f205907da70d6577b46b9b8e7ccbb8b854768fe9cd5a2d24",
+      "bytes": 4364
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/validation.py",
+      "sha256": "b7e99b571b926703fa1f3ee10f1e63d647eb144d8dfe751b0c0d4ccca26b886a",
+      "bytes": 2269
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/module32d_gate.json",
+      "sha256": "66feced4d31ba6fda74d67de09dce46b5f3d340f5bea0ad690d436b8ae4a1a9e",
+      "bytes": 3761
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/module32d_summary.json",
+      "sha256": "66feced4d31ba6fda74d67de09dce46b5f3d340f5bea0ad690d436b8ae4a1a9e",
+      "bytes": 3761
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/module32d_summary.md",
+      "sha256": "a0ec5f04d956a417e633d814fdfae3db76a797f46629fe3f422dc47bdf9348fa",
+      "bytes": 4483
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/module32d_summary_english.md",
+      "sha256": "39126eed3324a8ca377464906b2bb7116093d257bb970688d159164a209ec64e",
+      "bytes": 3506
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/pair_level_statistics.json",
+      "sha256": "eb0517b342376289bcf68e251c602ebf9b56f76ccff11b61b1aa48039db5e3ba",
+      "bytes": 80
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/paired_request_latency_decomposition.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/per_task_utility_decomposition.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/planned_run_disposition.json",
+      "sha256": "1fb61e9e5dfb3629ec9b41a211cfbd44d6b935d7fe6cc81559909f68073049f2",
+      "bytes": 3419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/protected_history_before.json",
+      "sha256": "9de549547517ff07b85ef0896ed9c85cfe187dbbf4f06374d6911fe74755df89",
+      "bytes": 3575832
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/raw_runs/E0_S.json",
+      "sha256": "8aa889de3577872cf9ae77c66691dce3caf1c020a2a23584abe4194ad30151c8",
+      "bytes": 5356649
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/request_journals/E0_S.jsonl",
+      "sha256": "f986c08fb92e95bd550acf68dc47635052e52f542e6dfa4308d16da4e3e59178",
+      "bytes": 1224642
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/revalidate_cpu_safe.py",
+      "sha256": "b4f7e2e3442a8b715a330fbbaa13a16cffaedd3d0c230b36e3a22737b4c5a3fb",
+      "bytes": 990
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/router_optimized.py",
+      "sha256": "c11086bf9660ef72c26f11574e51971bec513f2489f48a625cd379f463fff23f",
+      "bytes": 11927
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/router_performance_benchmark.csv",
+      "sha256": "3ee50afa2fc2734eb2a2575346b0d79ca84ebb894b0ed5778c293f36c6705ea2",
+      "bytes": 5377
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/router_performance_by_300s.csv",
+      "sha256": "cfddc83b399277ab7c96f22f00262a90d7f0230f7a47d2cf67e295b484c376a0",
+      "bytes": 5606
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/run_attempts/E0_S.json",
+      "sha256": "8d031acb476e96d6c4ed565721f72ebbbb108a74bb05ac3ceaac52c598d5da57",
+      "bytes": 2371
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/run_observations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/runtime_bottleneck_analysis.md",
+      "sha256": "4992cba979d603f9ae07d8a466cb2bfc40afe74d429fdf1535a71c1c0922bb05",
+      "bytes": 6308
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/selected_pool_catalog.json",
+      "sha256": "ab7bbac44c273bcd7a2e11c89329c014d63180b823ca4bd99d386d9859e5a87f",
+      "bytes": 122679
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/test_monitor_phase_transition.py",
+      "sha256": "41f01ce3c657ddba18dce21aa1d72372459830c315642f4e5247be1d5f33381e",
+      "bytes": 2062
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/thermal_prelaunch/E0_S.json",
+      "sha256": "2100e95d38f2639f591e4d5a0765d136f6a51baaa0da74293212c36480132986",
+      "bytes": 1735
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/E0_conditioning_320490.json",
+      "sha256": "20b0379535d5af72fa74892f822313a2030576a5f55710386842f6917a632887",
+      "bytes": 437215
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/E0_measurement_320490.json",
+      "sha256": "b960ff015d1a80bcbf93388dc4357283160575e50cbf497300fce2b675a33e3b",
+      "bytes": 267907
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/E0_warmup_320490.json",
+      "sha256": "c2dea8d5ebe87e1e6a28eef7d73140993e829000ef3e0a465679b30b918fef45",
+      "bytes": 39608
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P1_conditioning_320401.json",
+      "sha256": "6a20450c621a843a93250178cb158f3c3b6d4b65e37158a9636bf44e9ebcb661",
+      "bytes": 420110
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P1_measurement_320401.json",
+      "sha256": "01a55306fe1774435e661c4f14ece706e988d0c43d46463672945d0c7ba16432",
+      "bytes": 3403596
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P1_warmup_320401.json",
+      "sha256": "35ed8865052488ff40fa7bee53b661e6eda61c53f51c1e06f1b7c19464709858",
+      "bytes": 37143
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P2_conditioning_320402.json",
+      "sha256": "571abbcf4e54af048560819796b23067e73d5dd7abc7c8aee9fa03875bb0c56e",
+      "bytes": 428940
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P2_measurement_320402.json",
+      "sha256": "ac29a707bf4d274f960f4a1bdfce0d046b83c87664a2101547d33384e1353528",
+      "bytes": 3331883
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P2_warmup_320402.json",
+      "sha256": "bbcef4c3ece3a8b3e5be5746958662eb24a976843cdfc4ba048ecb41eb955113",
+      "bytes": 44424
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P3_conditioning_320403.json",
+      "sha256": "9a8bf2508a0afa38dcaca5b044215fa94bf386669845058717e408c78352ce96",
+      "bytes": 411237
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P3_measurement_320403.json",
+      "sha256": "3de12a9555886b8a80fade1b09dd15b57d6130d518fd4f3d50645abddae7a3f7",
+      "bytes": 3276953
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/trajectories/P3_warmup_320403.json",
+      "sha256": "5b330683bcbfda6a8371970d7fa1cdbfb2a407a997ddf278c4981188d344f8f1",
+      "bytes": 41761
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/utility_comparison.csv",
+      "sha256": "a2162ff8b6c73cb3d7de3315b441e56e05821043e5a7a5931c70dce5a89b6353",
+      "bytes": 297
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/utility_sensitivity_diagnostic.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/vqa_aware_dynamic_router.py",
+      "sha256": "d85aef6d99d3c79dec6b0ca430e847224b6df42dc2c358bca0b21544d5f2f3f2",
+      "bytes": 2982
+    }
+  ],
+  "count": 133,
+  "history_file_preservation_exception": true,
+  "formal_runs": 0
+}

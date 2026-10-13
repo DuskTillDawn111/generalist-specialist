@@ -1,0 +1,42 @@
+{
+  "label": "DYNAMIC_EXPLORATORY_POSITIVE",
+  "at_unix_ns": 1791635272251046317,
+  "routing_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_routing_manifest.json",
+    "sha256": "3e6cb453aea51ac99b323c8e6bf14162c0888a45137456b850edfe81583ecf4b",
+    "bytes": 10315
+  },
+  "parameters": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_routing_parameters.json",
+    "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+    "bytes": 1992
+  },
+  "router_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/vqa_aware_dynamic_router.py",
+    "sha256": "d85aef6d99d3c79dec6b0ca430e847224b6df42dc2c358bca0b21544d5f2f3f2",
+    "bytes": 2982
+  },
+  "original_module32b_gate": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/module32b_gate.json",
+    "sha256": "a708af1bcb438e2d221f98af98ef3733e06adea59f72f68567970361dd0a9b24",
+    "bytes": 602
+  },
+  "data_acceptance": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/final_data_acceptance.json",
+    "sha256": "cc026ba289398868bc923c0aa781c41c8a345d0ae063368573275e7835334ed2",
+    "bytes": 1580
+  },
+  "real_dynamic_G_ASR": 4,
+  "real_dynamic_G_fraction": 0.014285714285714285,
+  "measured_delta_U_vs_S_only": 0.033221857655500564,
+  "measured_delta_U_vs_Fixed10": 0.40110134943237497,
+  "inference_settings_unchanged": true,
+  "causal_gain_unproven": true,
+  "Text_tail_sensitivity": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/positive_gain_sensitivity.json",
+    "sha256": "ce5add1b01ec82d750d47ca390449e5a1753956079fdc985b189335b30db0fd5",
+    "bytes": 653
+  },
+  "independent_replication": false,
+  "optimizer_modified": false
+}

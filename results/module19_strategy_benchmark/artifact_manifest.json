@@ -1,0 +1,838 @@
+{
+  "at_utc": "2026-10-08T14:21:20.461670+00:00",
+  "gate": "BENCHMARK_COMPLETED_WITH_FAILURES_AND_UNVERIFIED_V3",
+  "artifacts": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/actual_task_worker_routing.csv",
+      "sha256": "3af5fb9e4347fb3c3888d6cfd6dcfcf0c891a16bc03558b8b30d15e04f8e9ec8",
+      "bytes": 32766,
+      "mtime_ns": 1791469068169319751
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/initial_cpu_comparison_before_V3_definition_correction.json",
+      "sha256": "048a33d542fff70fb62340eecc3e931f3273cb5050ce4ca41164c4f1c1151aa1",
+      "bytes": 84569,
+      "mtime_ns": 1791469124341560143
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/initial_gpu_comparison_before_V3_definition_correction.json",
+      "sha256": "c3a81a29d4455ee5a2f824cf4ef2ef27520d1ca1a27b97bf5c13ff2a7fb98cbc",
+      "bytes": 383917,
+      "mtime_ns": 1791469124353560195
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/initial_import_failure.log",
+      "sha256": "7bbc3c6c5c9e99e2381e6fca81ca2bf3cb139c44a2c8844261b559542d7dce5d",
+      "bytes": 975,
+      "mtime_ns": 1791457644854980643
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/initial_import_failure_protocol.json",
+      "sha256": "5cc58b51d2d3670af4cde34849a28eae1e019c4e841e665f46a5dadb79ac0767",
+      "bytes": 4382435,
+      "mtime_ns": 1791457595496879304
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/initial_import_failure_solver.py",
+      "sha256": "a40d9567aada38058c88424c2905d6e6322083c195e37645ef8ae772bcd1c9a8",
+      "bytes": 5353,
+      "mtime_ns": 1791457595488879630
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/initial_paired_analyses_before_V3_definition_correction.json",
+      "sha256": "23e28f343a56bd3f0340f4a9149a399de4b9eacce6e91506e8a99717c693bb27",
+      "bytes": 113991,
+      "mtime_ns": 1791469124361560230
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/policy_view_bounds_failure.log",
+      "sha256": "ca731f6bc9991b484da74df9e691bed07f4ca7fcab571816a8b08049af1cc730",
+      "bytes": 3573,
+      "mtime_ns": 1791457726992273233
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/policy_view_bounds_failure_protocol.json",
+      "sha256": "47daa356609c46138a6de8b3a4bd76bfe7acfcfe45ff3922e52737c70c4f9458",
+      "bytes": 4383658,
+      "mtime_ns": 1791457727000272994
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/policy_view_bounds_failure_solver.py",
+      "sha256": "a2ef053180d305d6947aed5f923eb29a0a64287849b8738d712becea5bbc2646",
+      "bytes": 5354,
+      "mtime_ns": 1791457726992273233
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/system_analysis_initial_extension_protocol.json",
+      "sha256": "92096e78b42be45cf4aa60c23a9eb888ca3f191b21ffd163645e09ddf008248f",
+      "bytes": 1579,
+      "mtime_ns": 1791467635226441383
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/audit/v3_definition_export_failure.json",
+      "sha256": "70ae21204c8e97bce0b1f6a708c56cdbce3308cca9dddb20cf518f137cbd5c1f",
+      "bytes": 484,
+      "mtime_ns": 1791469104049471979
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/benchmark_protocol_correction.json",
+      "sha256": "9fa0b592a985e474b309fd462fa52145b06970482338d8878afaa2889c8eb25d",
+      "bytes": 1630,
+      "mtime_ns": 1791464962671444578
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/campaign.log",
+      "sha256": "f9eccb8733c65504fcb79c2cd55250bacc40ab86d969631e693168c6f760b992",
+      "bytes": 873814,
+      "mtime_ns": 1791464922151128035
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/campaign_resume.log",
+      "sha256": "f6ea2138639332577e95539ceae533e5e3d2f04642134e11b607f4dd79561033",
+      "bytes": 1191598,
+      "mtime_ns": 1791469002849055623
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/campaign_status.json",
+      "sha256": "3c558b021976493631b06dc676e8aaaf228aca8e87da86779ef1e3e2f1cb2b88",
+      "bytes": 5468,
+      "mtime_ns": 1791469002849055623
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/completion_audit.json",
+      "sha256": "a2d1f1342a6afa2e0530319e8057a483631b7807063fb866aaba7f5aeaf50798",
+      "bytes": 51180,
+      "mtime_ns": 1791469068157319701
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/asr_high.json",
+      "sha256": "1851861e3240c685b0372c434197719cfc7990357ef7ce02b457b02000f062be",
+      "bytes": 528445,
+      "mtime_ns": 1791457728624224693
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/asr_low.json",
+      "sha256": "302207708bf0982bada4b987d8f91fd4eb6ae79c92c5d8391b4928fba1bcf4c8",
+      "bytes": 562889,
+      "mtime_ns": 1791457728516227900
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/asr_mid.json",
+      "sha256": "d24b33812ec985886c6f0b9a2b31178089adcec249a8ec4b10bfa5a0b2c73720",
+      "bytes": 534061,
+      "mtime_ns": 1791457728572226237
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/image_high.json",
+      "sha256": "870aa666922570a4cab6b60728b2bc7a0c06fcfc7f4c5253e47c3ec824dcd813",
+      "bytes": 913403,
+      "mtime_ns": 1791457729752191249
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/image_low.json",
+      "sha256": "8d7913394a7d7a106ef8b03c0e3cbfc68250854d297e7e5e1f2db79f6e83fcd5",
+      "bytes": 924709,
+      "mtime_ns": 1791457729388202032
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/image_mid.json",
+      "sha256": "14bb2a7e86b6706c5bb1d6457aa1eeee8d67464e46e96937ea227f2c0fbeaca3",
+      "bytes": 868300,
+      "mtime_ns": 1791457729548197292
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/lid_high.json",
+      "sha256": "06c7b66ef41da524588596f6c303f1ee0d83900f8838b37494b4e17c2e5b1c64",
+      "bytes": 439399,
+      "mtime_ns": 1791457730300175036
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/lid_low.json",
+      "sha256": "92e91099c1cf29ec353a5dd27257524b2513be8385e084fed72a64a4f2999b3c",
+      "bytes": 926370,
+      "mtime_ns": 1791457729956185205
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/lid_mid.json",
+      "sha256": "10345e2f5385f7491acec100d4c96dfdfe9322c51193222a0eabde92617775d9",
+      "bytes": 914264,
+      "mtime_ns": 1791457730136179883
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/text_high.json",
+      "sha256": "d5344d89c220e02eb59396d5674f3c985e25b19de83a65523b74db155d3f8296",
+      "bytes": 968250,
+      "mtime_ns": 1791457729184208075
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/text_low.json",
+      "sha256": "a359c0cedc4656a50e574ef47c496ba6396b90301e1f76a2087ba7aaee1f9f79",
+      "bytes": 926560,
+      "mtime_ns": 1791457728824218754
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu/text_mid.json",
+      "sha256": "3ec5c72948d259801794f10887f9e76951a9c6fb5f344561cc3406cb654dbc90",
+      "bytes": 965826,
+      "mtime_ns": 1791457729008213290
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu.log",
+      "sha256": "fa320e966da44a63b1a51df62c2eae791bd6c0b2d9c1a85a9821ea217b20a505",
+      "bytes": 5586,
+      "mtime_ns": 1791457730612165816
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu_baseline_comparison.csv",
+      "sha256": "70ec1ee2ddbbf4168f814728e096e909c4d3f93ce0201a2219eff215657fcac8",
+      "bytes": 66300,
+      "mtime_ns": 1791469124345560160
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu_results.json",
+      "sha256": "0d16f451c009ec7105c6bda56b160fa4b3d1917f1903485e4f7fbf3490dc635d",
+      "bytes": 10293308,
+      "mtime_ns": 1791457730608165934
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/cpu_routing_ablation.json",
+      "sha256": "cdb35bccbc90baaf62690665924b147a971ffd0156cd45998d6fe7441bc5e4ec",
+      "bytes": 6282,
+      "mtime_ns": 1791457730612165816
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/final_integrity_audit.json",
+      "sha256": "ac92bc257d0fe147f073ca6426ad540fe745f8c0fe8cb87883f7b779acd834a4",
+      "bytes": 1437,
+      "mtime_ns": 1791469179757807998
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/frozen_benchmark_manifest.json",
+      "sha256": "7497004dec9926ff18013d21b00839bf6fcd67fd64f1eee1c3f668bd36b4e7a4",
+      "bytes": 5324026,
+      "mtime_ns": 1791459264096743034
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/frozen_benchmark_manifest_effective.json",
+      "sha256": "3609fb702380f4afb60cbd1421c65ebf055453fbd9a505cc856d516163e3178b",
+      "bytes": 1729,
+      "mtime_ns": 1791469179757807998
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/gpu_strategy_comparison.csv",
+      "sha256": "2521aebeabe3281dbd2a16896b8a2ca52cd5db33aef1b77848fe64123e7e887c",
+      "bytes": 195989,
+      "mtime_ns": 1791469124357560213
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/high_route_latency_decomposition.csv",
+      "sha256": "464ed73a842387ae9f4fc2f335b616f639812b35c1ef5ae2fe3efd49c9ca3173",
+      "bytes": 11841,
+      "mtime_ns": 1791469068169319751
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/historical_runtime_drift.csv",
+      "sha256": "e3729238b30a09285f74700938de262bb6ec0ce2dd8f04511c1351bffc7d87f0",
+      "bytes": 59944,
+      "mtime_ns": 1791469068157319701
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/input_protocol_freeze.json",
+      "sha256": "232eb8c3b494e601a13de1307316ab94401a33933dfc52131fc7cf5078a0da35",
+      "bytes": 4385140,
+      "mtime_ns": 1791457727612254775
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/memory_observations.csv",
+      "sha256": "031086215096fcd1ea20401ebe89ec669bf353392c44b53fef86c4fab81f47cd",
+      "bytes": 11441,
+      "mtime_ns": 1791469124465560686
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/mid_descriptive_summary.csv",
+      "sha256": "a332ee848eae316d5051bb8a4a42f633e4d6c4d869e128bc1a3302a6d8cf0832",
+      "bytes": 2793,
+      "mtime_ns": 1791469133301599528
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/module19_gate.json",
+      "sha256": "fa4d239c1d1a0377ba60d8f570d4175df69d8fb284ce4bf982b69454927b7b61",
+      "bytes": 27494,
+      "mtime_ns": 1791469179757807998
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/module19_summary.md",
+      "sha256": "e2722acdce3c95bfe75af5c57d4fa43160ed892541c5e4c208c1eb384b1dfdb0",
+      "bytes": 33744,
+      "mtime_ns": 1791469280454282080
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/paired_comparison_analysis.json",
+      "sha256": "e80da124d61c1a0f92cbfc4b30ace0d6515c28560c202222b242dd6fb199619f",
+      "bytes": 116727,
+      "mtime_ns": 1791469124365560248
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/paired_comparison_summary.csv",
+      "sha256": "73b4755ff1995ed82195163c27860e9ace6b69cb7fc408d2323d523272e6468c",
+      "bytes": 38412,
+      "mtime_ns": 1791469124365560248
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/per_task_e2e.csv",
+      "sha256": "3ff6f0e86bcbd60dc41568d03805b1804856cebb6234f61e647b15a6eb3fa0bb",
+      "bytes": 164626,
+      "mtime_ns": 1791469124381560318
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/physical_gpu_rows.json",
+      "sha256": "77d88e1e20bf4c0ce4eba00a6cf99d0acd5b172f61483b61e6bc41347df54db7",
+      "bytes": 178922,
+      "mtime_ns": 1791469124373560283
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/physical_gpu_runs.csv",
+      "sha256": "d1cc7b08cd0aec8be67cb6b8507feb44718856da715923127df20ebc64420907",
+      "bytes": 103905,
+      "mtime_ns": 1791469124377560300
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/protected_before.json",
+      "sha256": "7b30a43c796f8e7e4d381d18dad5cad69e28dafbd76192300a1e7b0f55b807f7",
+      "bytes": 2635578,
+      "mtime_ns": 1791457519196273899
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_high_fixed_s_only_rep1.json",
+      "sha256": "469fdb3210ef90952d79f6c8eac9e713f4a96f390c1b57f0adbd00bad06f0cd1",
+      "bytes": 1671468,
+      "mtime_ns": 1791461317407776094
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_high_proposed_rep1.json",
+      "sha256": "7e43b56250083ccadd95ff09b06a9786d969450b80b11f74fc9850fcf1a1fcef",
+      "bytes": 1796647,
+      "mtime_ns": 1791461070599457732
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_low_proposed_rep1.json",
+      "sha256": "85eb0a849cbd7e7531273f7f46f71aec6917c801dafb28089ecd3e373e6187f2",
+      "bytes": 658632,
+      "mtime_ns": 1791459725584887676
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_low_proposed_rep2.json",
+      "sha256": "67a1f906f88283e0d631e266426ea812a42992a464016e56daf04a9e30ef7f78",
+      "bytes": 615394,
+      "mtime_ns": 1791460386033064714
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_low_proposed_rep3.json",
+      "sha256": "d73f74d6935dd601061372ab7bfc4df2bb0cdfc0302b976d400aa160fb4001d5",
+      "bytes": 518455,
+      "mtime_ns": 1791460765172472307
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_low_s_oriented_rep1.json",
+      "sha256": "76f199de618a29989198147c5ca0beb78dfc7c82af9c6bc09923bc0679965d7b",
+      "bytes": 744370,
+      "mtime_ns": 1791459956319687152
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_low_s_oriented_rep2.json",
+      "sha256": "f04c5dedec363172cc882846add7f03867e5ad52bf34de5e5c2b3225cb15f044",
+      "bytes": 700583,
+      "mtime_ns": 1791460168598986322
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/asr_low_s_oriented_rep3.json",
+      "sha256": "ce1323a38cb890552b5d7a53eef294f8379b353ce0232a31184c725cc4421098",
+      "bytes": 732949,
+      "mtime_ns": 1791460604974210670
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_fixed_s_only_rep1.json",
+      "sha256": "70b85634256a1246cfd9d9b646455b28ee851d51243131005e0fb875c7d927bc",
+      "bytes": 29419279,
+      "mtime_ns": 1791466100891710977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_fixed_s_only_rep2.json",
+      "sha256": "db0495f5facf2c9df088c8d33e5cf28303df5d9a01aae74ce5205465ca56eb4b",
+      "bytes": 29419012,
+      "mtime_ns": 1791466260623940639
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_fixed_s_only_rep3.json",
+      "sha256": "5d1ceae36f51abb4a8ddcbe53b51338cb90629a84bc34800a541b6bb015a6165",
+      "bytes": 29424455,
+      "mtime_ns": 1791466910622507700
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_proposed_rep1.json",
+      "sha256": "2b0755c6158739bf1d4f11ed13d7c3e41de224098fd9a32b456d5ead5f05dad6",
+      "bytes": 29420016,
+      "mtime_ns": 1791465778505598068
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_proposed_rep2.json",
+      "sha256": "1860ae288e7667b7984c0e5b929c2f4875a22d292236a3d7da69520171295767",
+      "bytes": 29410629,
+      "mtime_ns": 1791466584891586673
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_proposed_rep3.json",
+      "sha256": "9abcecc6f18509e65bfae3df1339cbbd4163822b879964dca9b96c39a65c9f4a",
+      "bytes": 29424622,
+      "mtime_ns": 1791467071233757328
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_s_oriented_rep1.json",
+      "sha256": "b879fe0c4adae5cb4e55f3761f5593d796fdc8d7e64fb51259882f5dcc76aa53",
+      "bytes": 29555798,
+      "mtime_ns": 1791465941979046666
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_s_oriented_rep2.json",
+      "sha256": "c25a3233034f44e397dfe09147fe35cd6c67b763851c2cd379ba78f0550c0c9d",
+      "bytes": 29553372,
+      "mtime_ns": 1791466424791937808
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_high_s_oriented_rep3.json",
+      "sha256": "3cba4cf583074f6791d11138501409c70bed3cf73c65a852a2ab6d9ca3d545e6",
+      "bytes": 29555659,
+      "mtime_ns": 1791466750007162440
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_low_s_oriented_rep1.json",
+      "sha256": "7b936cada0cd5e50ffc8fc521bb74f337409ef1c5eb54f0603aa92bc536cf674",
+      "bytes": 807150,
+      "mtime_ns": 1791461911496918039
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_low_s_oriented_rep2.json",
+      "sha256": "1795708c57409023d5e4f3eedd9b381296ad87593ab4c388124a6239fac9e9da",
+      "bytes": 796625,
+      "mtime_ns": 1791462407058904027
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/image_low_s_oriented_rep3.json",
+      "sha256": "b494fb1017415eaff8ed7e203b096c5b10fe7c15c53ad81de70ad4ebae11975b",
+      "bytes": 818735,
+      "mtime_ns": 1791463035648366690
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_high_proposed_rep1.json",
+      "sha256": "18c5db825d447e672d739c234d05042ce22523c9cac07caf9842014a05150b33",
+      "bytes": 3238664,
+      "mtime_ns": 1791468195864500916
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_high_proposed_rep2.json",
+      "sha256": "99a1db5fdf596b39154ba378ae059e81d3aefa8e4dc80ce88d1446face29b793",
+      "bytes": 3254842,
+      "mtime_ns": 1791468678172075961
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_high_proposed_rep3.json",
+      "sha256": "25415dfa6bfa3c7819da7c690c458282db998376edc2c79d2b6d08f62041fb04",
+      "bytes": 3260029,
+      "mtime_ns": 1791469002829055544
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_high_s_oriented_rep1.json",
+      "sha256": "0da216871ce74bcad97993b1c6b725671fe9894b080735145b6da3afa9381d5d",
+      "bytes": 3353039,
+      "mtime_ns": 1791468355943992902
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_high_s_oriented_rep2.json",
+      "sha256": "fc5035968b7c1722a13368d63c0986cc7602dbaa87f3e51a688138e0f0984d6c",
+      "bytes": 3356009,
+      "mtime_ns": 1791468517295886290
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_high_s_oriented_rep3.json",
+      "sha256": "12d1ef4f6727c7763853269f8d5d35b9d398b4b31e6c1af5c0c4c08ccc6c4d4f",
+      "bytes": 3365197,
+      "mtime_ns": 1791468840308485204
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_low_s_oriented_rep1.json",
+      "sha256": "adf56d1ffaa9ef756774e96f363f544b390a45e7f6966bf36ac2daf8be72df17",
+      "bytes": 851419,
+      "mtime_ns": 1791462087329049822
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_low_s_oriented_rep2.json",
+      "sha256": "753a540d1d086774ec9b3820966f1d1f8b536917a7fff9368cff9a5b0b5f1df1",
+      "bytes": 816749,
+      "mtime_ns": 1791462247972130043
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_low_s_oriented_rep3.json",
+      "sha256": "a2cf22c2a08af8be51c41ee91da51a61d3fcb62ac9048a39728854ff3d1b7ae8",
+      "bytes": 848593,
+      "mtime_ns": 1791463196290519679
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_mid_proposed_rep1.json",
+      "sha256": "249a7ea81af973e66c73127d49d361deb78c2b4c5bbbec1ce7f630cd610ab8a8",
+      "bytes": 2324948,
+      "mtime_ns": 1791467230956919734
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_mid_proposed_rep2.json",
+      "sha256": "e2e52034dad9cf717db28fa127f5ab3a69cdf67973d4a01102528eb45e52b26f",
+      "bytes": 2329627,
+      "mtime_ns": 1791467713836557566
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_mid_proposed_rep3.json",
+      "sha256": "09ed84ec4febeda47b00af0aeae822f01ab4bc8e9c6f5c89f34ee6cffb73ffa1",
+      "bytes": 2325062,
+      "mtime_ns": 1791468036442650249
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_mid_s_oriented_rep1.json",
+      "sha256": "a04e58ccc6f33bda672db1c843fff7ebcc440f4d468b07d572cb0dfa78d3670e",
+      "bytes": 2335933,
+      "mtime_ns": 1791467390383137494
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_mid_s_oriented_rep2.json",
+      "sha256": "df02c82a6c7033db69e7c49fa91f47f8786d7706048a6c06ebf3bd0a24842706",
+      "bytes": 2350947,
+      "mtime_ns": 1791467552588846863
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/lid_mid_s_oriented_rep3.json",
+      "sha256": "61e66c15bc9925f08d7f1cadeb6c9b6d8c54b7c1cd413d6caa258dbd62b3dd95",
+      "bytes": 2346786,
+      "mtime_ns": 1791467875025696940
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_original_v3_rep1.json",
+      "sha256": "ca44391f26c28fa9c9a299c4004aa02ca8e91bf97771d709e3b4c5e58b8a4761",
+      "bytes": 13467353,
+      "mtime_ns": 1791464770394083353
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_original_v3_rep2.json",
+      "sha256": "bf21166b7bf665cbfc62917f95e6f1e46b652047dcd2df92b086135fc1b7e836",
+      "bytes": 13463022,
+      "mtime_ns": 1791464928227174592
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_proposed_rep1.json",
+      "sha256": "cfc79a96d57c0d8cdb6b05244ebda32f92e6a64438414d8386c95d53bb43d472",
+      "bytes": 13461693,
+      "mtime_ns": 1791464455035338448
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_proposed_rep2.json",
+      "sha256": "8a9f8ab2f63e5f8dbfef1426de82b18dad54ec5ef2cc8837bb50c01beb722a78",
+      "bytes": 13470450,
+      "mtime_ns": 1791465300031078669
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_proposed_rep3.json",
+      "sha256": "61bfe88064bd812767f4760c36044179257b8896594aa3db9a9d40fd6b259214",
+      "bytes": 13471369,
+      "mtime_ns": 1791465618979410489
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_s_oriented_rep1.json",
+      "sha256": "3136b29b8d25edff3f9e2c3967ffae7d71ecf9fe55f6664d9295f9d1f6a64730",
+      "bytes": 13488041,
+      "mtime_ns": 1791464612445293970
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_s_oriented_rep2.json",
+      "sha256": "6696279616042b6d68f4cabd3f673b44d8edcaa6428f24610ee013e9115d5141",
+      "bytes": 13493663,
+      "mtime_ns": 1791465141012985885
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_high_s_oriented_rep3.json",
+      "sha256": "fb014644bece28625634cf483445846aa783e15035b536b2d1e3df452e3a2925",
+      "bytes": 13504485,
+      "mtime_ns": 1791465459724059208
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_low_proposed_rep1.json",
+      "sha256": "a9960d4d6a48772a4918f61367d0f6e3b8419a38c27a82f56124a4a0727358e4",
+      "bytes": 764491,
+      "mtime_ns": 1791461515700213550
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_low_proposed_rep2.json",
+      "sha256": "b8a5216ed4c2fd1b4ee5e48c51960a1348bdf971c4cd74c5fe996a4d71dd0660",
+      "bytes": 701678,
+      "mtime_ns": 1791462719319740232
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_low_proposed_rep3.json",
+      "sha256": "99de23767efae52511802ef42a403e96190e3d978e2b5659c822a107352858f2",
+      "bytes": 726879,
+      "mtime_ns": 1791463350474610440
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_low_s_oriented_rep1.json",
+      "sha256": "5dd07711d11d5d2d6cf4c04b2c46145175b09d0e38d68fedd926fc25736b5ae6",
+      "bytes": 881281,
+      "mtime_ns": 1791461726571759685
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_low_s_oriented_rep2.json",
+      "sha256": "95e007d25353a8551908eb12a95143c78114c0ff299a734fd19b52ad2a6feedd",
+      "bytes": 795544,
+      "mtime_ns": 1791462565157464356
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_low_s_oriented_rep3.json",
+      "sha256": "9b9cc10959af562f2e6cab071097bc9fec8fe28c6dfc023dc5c0d995ac38e461",
+      "bytes": 825491,
+      "mtime_ns": 1791462877502088278
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_mid_original_v3_rep1.json",
+      "sha256": "54fe5b2d4a63f5447d7f731810ade56c8ca27aa942452dea80ac0e7508f15173",
+      "bytes": 5046213,
+      "mtime_ns": 1791463664739233625
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_mid_original_v3_rep2.json",
+      "sha256": "5dcfe456909380d7f381399c8daa10bb2c5d9f91653186cce94a6c1b9acd9d45",
+      "bytes": 5050570,
+      "mtime_ns": 1791463822565897826
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_mid_original_v3_rep3.json",
+      "sha256": "640b9d82b0176bf1e6335da6422d75bd5ab52ad1b915f33eb78afe4423ef2224",
+      "bytes": 5057536,
+      "mtime_ns": 1791464139216490537
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_mid_proposed_rep1.json",
+      "sha256": "2f9a9ff9d62600164ba1e7777d2ce317423dfa9e67dee4b9635e5996f65110bb",
+      "bytes": 5044597,
+      "mtime_ns": 1791463507359167901
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_mid_proposed_rep2.json",
+      "sha256": "502030918622fb6b44f5582eb9bdf27a06ff23c50e1d11366ca793a0e34413a9",
+      "bytes": 5048442,
+      "mtime_ns": 1791463981026479902
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/raw_runs/text_mid_proposed_rep3.json",
+      "sha256": "672b78a0dbbaea7ffd59a73c86f191c6050f2160dc471d870cd80e5bb265a240",
+      "bytes": 5051906,
+      "mtime_ns": 1791464297859542800
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/request_accounting.csv",
+      "sha256": "beebfa626e20c106b0963e56036df472107b46a7e6f0d023f7b1789c708b1b50",
+      "bytes": 163508,
+      "mtime_ns": 1791469068165319734
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/resource_latency_tradeoff.csv",
+      "sha256": "9da00f17102e8f14bd7c423f4e25e6cfaf9f8e2f2b2df70f0af0bc2bcccc374b",
+      "bytes": 7070,
+      "mtime_ns": 1791469133297599510
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_ablation.csv",
+      "sha256": "e7aa0c3b8fd16cd69f2d97ecf64d7a70cc81c861619c24c46307f16d7bae0ac9",
+      "bytes": 6019,
+      "mtime_ns": 1791469110501499854
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_analysis.json",
+      "sha256": "774f49cc27c37ab951fc118c0356a40a527abe2d691b59d0ed6ada19435ce1ff",
+      "bytes": 52846,
+      "mtime_ns": 1791469145321652790
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_comparison.csv",
+      "sha256": "9796ca77c75ca68e493a6180b3d325232374667e588250c848e995a0559a5f11",
+      "bytes": 11690,
+      "mtime_ns": 1791469145317652773
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_pair_differences.csv",
+      "sha256": "9379c328df6d2ed074c9a1c78526b10c196e94f6621bbec9516031a3b6c05246",
+      "bytes": 8115,
+      "mtime_ns": 1791469145317652773
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_runs.csv",
+      "sha256": "d3770f572f3612b4cc7d844009ab606afe66620bbb02d9cbd7bade030a38a3d4",
+      "bytes": 38037,
+      "mtime_ns": 1791469145237652416
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_task_metrics.csv",
+      "sha256": "2279299892f96155db334c4ebfd3604e4fc3271579b71e50f09e4b3007bce355",
+      "bytes": 54929,
+      "mtime_ns": 1791469145241652435
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_task_pair_differences.csv",
+      "sha256": "6218b5e667a8ec727695c2d5771bd6cef82fe652fd40bca81b257a19b55659aa",
+      "bytes": 11152,
+      "mtime_ns": 1791469145317652773
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/routing_system_worker_backlog.csv",
+      "sha256": "ff3f5013de535f6e26838b2bfd20f54c79de012be1be94a858b5986db2e5bae1",
+      "bytes": 2422020,
+      "mtime_ns": 1791469145317652773
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/runtime_context_snapshot.json",
+      "sha256": "1093769e6b2b9426698d009c35e735fdc77ab3b731f1a257f34cfdef8fa07678",
+      "bytes": 3955,
+      "mtime_ns": 1791460542527681521
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/system_analysis_extension_protocol.json",
+      "sha256": "5498c16f4b0efba8916a55b586347d3f5d955a95cbb09a2fe17056c0a8731ef9",
+      "bytes": 2013,
+      "mtime_ns": 1791467861877886834
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/user_v3_scope_resolution.json",
+      "sha256": "1363b2336a9281454398337d63e6e75afa1c95abcefc5e90ffc0e37b4c3c8500",
+      "bytes": 409,
+      "mtime_ns": 1791466140708802901
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/v3_definition_audit.json",
+      "sha256": "959976de930c0ed138317ed57410ccc218af3e55902c470aaedf6c9dc56dcfa8",
+      "bytes": 2135,
+      "mtime_ns": 1791469124465560686
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/worker_queue_evidence.json",
+      "sha256": "7133bf43bfc47076147e57bec786f0873fbdde61fc65c682430e561dcf4b7401",
+      "bytes": 6889977,
+      "mtime_ns": 1791469110477499750
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/worker_stability.csv",
+      "sha256": "1ebd975981b689a26c27259fb9825e7f5b220eb50ddb6d5868e81e68f1b467d5",
+      "bytes": 4328194,
+      "mtime_ns": 1791469124453560633
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/worker_task_service.csv",
+      "sha256": "72bfc10a65102236a4452305d3c510285c4feab216720a697a825667a81d0737",
+      "bytes": 86879,
+      "mtime_ns": 1791469124465560686
+    }
+  ],
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/__init__.py",
+      "sha256": "5c41ab87fa9867ad690ad11a7729d3dd7ecf09c7dec9627b62e8a96b69669140",
+      "bytes": 80,
+      "mtime_ns": 1791457342004310657
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/close.py",
+      "sha256": "ff4be07feae93612439f9a33f18387d9f4aa166d9717559376e9e1245a6e926e",
+      "bytes": 5390,
+      "mtime_ns": 1791467283820694044
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/common.py",
+      "sha256": "ed494787c35f858083091882de0cabf9aaaeb9cb5ced737682c90252921661a3",
+      "bytes": 616,
+      "mtime_ns": 1791457342008308371
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/completion_audit.py",
+      "sha256": "ac5745acd72d05e42661533e1115d436ca309d51b5211935f47d4f0120fbe7f1",
+      "bytes": 11432,
+      "mtime_ns": 1791466357082325361
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/cpu.py",
+      "sha256": "201323458cbb644b9823759bdbc00bd7131c58a9f76bd84e765ea7a4412fe32a",
+      "bytes": 5076,
+      "mtime_ns": 1791457503605042802
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/finalize.py",
+      "sha256": "dff75ba4418bdabd2f57d77a3ba633b2729f172e73f19163e70b363581e5aa70",
+      "bytes": 20895,
+      "mtime_ns": 1791459105549853219
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/freeze_gpu.py",
+      "sha256": "e848fdb01de85ed69d337cc968cca90eb1e5a14df1b612ea48aee72570fd770e",
+      "bytes": 8005,
+      "mtime_ns": 1791458726863335089
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/gpu.py",
+      "sha256": "d7cdab9a97d549210edfc8cab3efc139a94952b7df04a12791a8fdcf4a18a435",
+      "bytes": 5196,
+      "mtime_ns": 1791458726883335132
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/metrics.py",
+      "sha256": "6b611dc54ec4b036716986a5b54c3390a63eabd0a59fc4c643a71684180272e2",
+      "bytes": 7308,
+      "mtime_ns": 1791458726863335089
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/prepare.py",
+      "sha256": "ca71c7cdcdeea779525fd457a66150076b1ef3578da33ea406d6310a6b718656",
+      "bytes": 6441,
+      "mtime_ns": 1791457503665039790
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/report_addendum.py",
+      "sha256": "6e320291ed646b2439346260be67f5f377a283bdc5d839bb4e71dc169f7ae45f",
+      "bytes": 8939,
+      "mtime_ns": 1791465330344932070
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/resume.py",
+      "sha256": "ca542cf18e26d3f8ef277ca774cd4926d363ff2c9ce7357694130bb00b212451",
+      "bytes": 3964,
+      "mtime_ns": 1791464962587443907
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/solver.py",
+      "sha256": "67101b1fa4f90914ac9d94d1bd4a3a9fe6b7b0368c3a6ee6ec3028b728b66f0a",
+      "bytes": 5670,
+      "mtime_ns": 1791457727004272875
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/system_analysis.py",
+      "sha256": "11fa65db38e933f677512dc5b19cbc4ebfa4b9b568e6e94b859746890a25b86f",
+      "bytes": 27183,
+      "mtime_ns": 1791467861817887717
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/v3_definition_audit.py",
+      "sha256": "571035f7699ec8bb73e4965a32e86da49c979e75df74b62f65ca7b88dc703b3e",
+      "bytes": 8627,
+      "mtime_ns": 1791469103997471755
+    }
+  ],
+  "status": "COMPLETE_AND_STOPPED",
+  "no_Module20": true,
+  "post_analysis_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/module19/report_addendum.py",
+    "sha256": "6e320291ed646b2439346260be67f5f377a283bdc5d839bb4e71dc169f7ae45f",
+    "bytes": 8939,
+    "mtime_ns": 1791465330344932070
+  }
+}

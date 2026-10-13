@@ -1,0 +1,111 @@
+{
+  "at_utc": "2026-10-08T16:20:37.917959+00:00",
+  "files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/cpu_fullpool_optimization.json",
+      "sha256": "45d9a48edfd0fe2715aa5ac5d0b00de6c6c36c6cbf39658e73d98bb7af36d1f2",
+      "bytes": 764509
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/frozen_manifest.json",
+      "sha256": "bd10500d3673e07c93918daf5d3cb7b00773153557eaaf010e528bcdceac03d1",
+      "bytes": 366216
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/gpu_paired_runs.csv",
+      "sha256": "f611d600f2fe344e9333205fcc8594ccf4bde9e6b69fd771e754d0308ef77e5e",
+      "bytes": 8902
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/system_utility_comparison.csv",
+      "sha256": "54f259128bb58b9aba4f0c8c133a451b9a59f8b739354845f086cbbc9cb39211",
+      "bytes": 1644
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/per_task_metrics.csv",
+      "sha256": "2a98cd7c800052d3021b8230a7efce0860ed25183867932a0cddda9ef0a6aaa0",
+      "bytes": 12589
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/worker_stability.csv",
+      "sha256": "0853f8ac78cf83b8ebfba107098aeed0738f4b5043bb2e1d2794215c928ca271",
+      "bytes": 6530
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/module21_gate.json",
+      "sha256": "4bb44a93627ba370409d332fd6d7460e57cf18288129d37536f2ebf03ab7b880",
+      "bytes": 2564
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/module21_summary.md",
+      "sha256": "087b96ad4930d8bc64744c87da40115cf37d7ea3804b213088b5f762e37b83ff",
+      "bytes": 5938
+    }
+  ],
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/__init__.py",
+      "sha256": "c7934797d080d681bdbb826b548bf55e3cf2f9d9f99d6a783e7acaf23356e8a6",
+      "bytes": 65
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/common.py",
+      "sha256": "2d7fcd8bd503decab42037d749302d0eccc8722a02b04c68b9720b498e5ef8ab",
+      "bytes": 923
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/cpu.py",
+      "sha256": "588aaa42bb6b4fb6093dda574b95ad97610c8875e2d8ca9290be054a10110f1a",
+      "bytes": 7011
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/finalize.py",
+      "sha256": "6176c5186d4398d909b771eb93f9d45e86b2626be28ab96475c8b4a27c4ef102",
+      "bytes": 5995
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/freeze.py",
+      "sha256": "b42abcc0adeed5a149e62a70a7055eba3952b9d05417dbcb82fb2cc36d935293",
+      "bytes": 4346
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/freeze_gpu.py",
+      "sha256": "7dcb84a430f8fe30c643ed836be15dd6f09ef78d05e83c0a7feb3bc121116a25",
+      "bytes": 4124
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/gpu.py",
+      "sha256": "2597239d5ea5c1819dcb75416ef59c5f0f7bef818994acce1a5216d70446fefe",
+      "bytes": 8637
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/optimizer.py",
+      "sha256": "f5bb12e00695fc65629dbb714b16c2db3c37159e0156d0e25fd85ec4a612409b",
+      "bytes": 6544
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/report.py",
+      "sha256": "8e37b77856f1c44771f261532a7414093592179c468e9d93f7e4acd91e90d751",
+      "bytes": 10074
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/test_cpu.py",
+      "sha256": "90dd1fe24d07bf3449791a7f8551866996c978af9b097e76b39635b87f94fb65",
+      "bytes": 1948
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module21/trajectory.py",
+      "sha256": "365918b442cd645cdb260c8ea7e55472e9e70ec59d92923319fe6b01d716e5f2",
+      "bytes": 1052
+    }
+  ],
+  "input_freeze_hash_unchanged": true,
+  "original_utility_hash_unchanged": true,
+  "original_references_hash_unchanged": true,
+  "final_runtime_audit": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/final_runtime_audit.json",
+    "sha256": "1783fcee7b81a3c1f4c6482c98bfaa90ff5b5fbb1ba325de389b0a008a43f1b6",
+    "bytes": 878
+  },
+  "summary_presentation_finalized": true
+}

@@ -1,0 +1,53 @@
+{
+  "search": {
+    "routing_step_fraction": 0.1,
+    "routing_top_b": 2,
+    "max_iterations": 3,
+    "no_improvement_patience": 1,
+    "runtime_evaluation_budget": 6,
+    "rho_max": 0.8,
+    "mean_tolerance_ms": 1.0,
+    "dry_run": false
+  },
+  "top_b": 2,
+  "max_iterations": 3,
+  "no_improvement_patience": 1,
+  "routing_step_fraction": 0.1,
+  "predictor": null,
+  "max_valid_unique_runtime_evaluations": 6,
+  "repetitions_per_state": 3,
+  "max_valid_search_runs": 18,
+  "search_physical_attempt_cap": 18,
+  "confirmation_physical_attempt_cap": 8,
+  "confirmation_repetitions_per_changed_state": 2,
+  "confirmation_seeds": [
+    84101,
+    84202
+  ],
+  "measurement_settings": {
+    "warmup_seconds": 10,
+    "measurement_seconds": 210,
+    "arrival_process": "deterministic_periodic",
+    "routing_source": "module3a_canonical_minmax_lp",
+    "startup_timeout_seconds": 300,
+    "drain_timeout_seconds": 60,
+    "shutdown_timeout_seconds": 10,
+    "max_pending_per_model": 10000
+  },
+  "repetition_seeds": [
+    7101,
+    7202,
+    7303
+  ],
+  "runtime_objective": "Module 3C NoiseAwareRuntimeObjective(1 ms, 5%)",
+  "confirmation_influences_search": false,
+  "deployment_mutation_allowed": false,
+  "baseline": "canonical routing only",
+  "serving_stability_priority": [
+    "steady",
+    "recoverable_congested",
+    "unstable"
+  ],
+  "run_status_policy": "Data Quality Audit v1: only completed measurements aggregate; completed genuine unstable retained; interruptions count as physical attempts only",
+  "routing_source_annotation": "Retained Module 3 measurement annotation for exact compatibility; actual explicit routing_rps and full identity determine cache eligibility."
+}

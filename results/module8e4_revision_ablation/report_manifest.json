@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "ablation_spec.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/ablation_spec.json",
+      "sha256": "e29e7b86054fb1e3796a3b7bb3c9626b5d4ba4b8debd05d9591c92fb3b194d06"
+    },
+    "feature_flag_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/feature_flag_validation.json",
+      "sha256": "4f8614d82ec65ed43f85b9883234d72cbaf17634e41ee2a80d093c7041e86792"
+    },
+    "validation_harness_correction.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/validation_harness_correction.json",
+      "sha256": "f43bccfdbbd9d3524b042c4b064a2a93eaccf65cac01812778ff54a928418444"
+    },
+    "regression_equivalence.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/regression_equivalence.json",
+      "sha256": "8061ea8dbf4550fa5fe76c39ee356c5f809e18d60444888ac3e052fdace1b4b1"
+    },
+    "reuse_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/reuse_audit.json",
+      "sha256": "1d0b84ea607f1dc1869a450d6340810f296e9714ae685a8b41727403d0498bdc"
+    },
+    "adapter_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/adapter_validation.json",
+      "sha256": "5b8d25a4c5f0935dcc274e461191e4fd300e354970887023302eaa17043d97fb"
+    },
+    "execution_order.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/execution_order.json",
+      "sha256": "52133f429e38358fd08821e45ed1d04b5cfffc6794b307e1cef078debb49dbf4"
+    },
+    "campaign_manifest.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/campaign_manifest.json",
+      "sha256": "2e30603a4f9e336a74bce85284629ada42c3cc8fa41b9c5275b8a9d2fd22ed92"
+    },
+    "physical_measurements.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/physical_measurements.json",
+      "sha256": "7124f10e2dc73b21a5c7eec8b5858487ac3f016760d4368da620f423d803aea2"
+    },
+    "measurement_sharing_log.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/measurement_sharing_log.json",
+      "sha256": "45b9f5980c3ac1f2b151330f62338c38ee41b46209f359ba8523eaaf1271ad0f"
+    },
+    "runtime_failure_log.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/runtime_failure_log.json",
+      "sha256": "5dec857a234cb5afecfc36eb57cec5e11443467e9d6321537c4ed3acd4d4f403"
+    },
+    "execution_log.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/execution_log.json",
+      "sha256": "2d4817ceca5c6413cdd623ed884f5268a542b6475c7f899e6051828cf65dfb8d"
+    },
+    "run_accounting.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/run_accounting.json",
+      "sha256": "03ecdf93d7c1def59265bde788ae36e7ed98bee3353f01d5ca9a5aa0f12f671a"
+    },
+    "new_measurement_manifest.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/new_measurement_manifest.json",
+      "sha256": "66746b633ceb0e5c60f8180a0cc41c38937ba9e434566973c296d9726e98171a"
+    },
+    "campaign_status.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/campaign_status.json",
+      "sha256": "1c23599c7798fb4e8bfd9c0850852ff9212a6eaf28227bae5a6f3e1e9efa63d8"
+    },
+    "m00_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/m00_results.json",
+      "sha256": "a86b49267f604bacb99e3c0c1c7b610d1cf8e2f1a439c919d43264dafedcd9e7"
+    },
+    "m10_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/m10_results.json",
+      "sha256": "770c229ab6f99c40b4b1a7ad25ac5ef2b540eff571556851cdffd169dbe2231e"
+    },
+    "m01_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/m01_results.json",
+      "sha256": "8b696150987ba46c22852c20cc6c1c200d6bf302fbc1f0b1a96e502118cc8d97"
+    },
+    "m11_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/m11_results.json",
+      "sha256": "67685e42ac2867a87c8763fcab8e8f1e5126766ee3b2ff3f88f1c64f0d55b042"
+    },
+    "ablation_comparison.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/ablation_comparison.csv",
+      "sha256": "d486159c8b137288b51dc7cee4c008cca99da42338a7b030433e9dc8f2f10147"
+    },
+    "mechanism_comparison.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/mechanism_comparison.csv",
+      "sha256": "3f0fe8f7c58cf635d82feb6beb10d72e446133034871c75c8ceaa42683abfc1c"
+    },
+    "factorial_effects.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/factorial_effects.json",
+      "sha256": "26199a7a587c834d366899a05ac163c60c846471dfcb9da1fa975273b7dc51c5"
+    },
+    "replica_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/replica_audit.json",
+      "sha256": "33b0ecb0551a499dda5cf6a1ea64e01cff6caccaafddebf1308fba2b70f22bd4"
+    },
+    "ablation_claim_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/ablation_claim_audit.json",
+      "sha256": "530f636ae37d305b71f1526fe834b06129545d39235bf29ed0f1823d8771126b"
+    },
+    "mix02_case_study.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/mix02_case_study.md",
+      "sha256": "18a1fb72125529bb3368e7fcabb270bd2d053d23e34be64780d428b467eb105d"
+    },
+    "module8e4_summary.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/module8e4_summary.md",
+      "sha256": "67fdd012188be3bceee2b794dddc9a771cc1d9ebd13bb5c72f36a3602c4bd013"
+    },
+    "final_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8e4_revision_ablation/final_validation.json",
+      "sha256": "b5bb4138b18b182445ca6640ac3b162df28faf5134ba03a10ecf01f0424db167"
+    }
+  },
+  "source_hashes_unchanged": true,
+  "all_valid_repetitions_retained": true,
+  "new_revisions": 0,
+  "auditor_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/module8e4_final_audit.py",
+    "sha256": "dd56a0c3fdf81347875cfd4adfaa78a2c04576b3b74dac386b88679225adbd4d"
+  }
+}

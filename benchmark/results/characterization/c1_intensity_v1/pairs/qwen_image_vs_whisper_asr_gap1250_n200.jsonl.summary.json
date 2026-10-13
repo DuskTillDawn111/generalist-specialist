@@ -1,0 +1,21 @@
+{
+  "protocol": "active_pair_profile_v1",
+  "target_worker": "qwen",
+  "target_task": "image",
+  "co_resident": "whisper",
+  "co_resident_tasks": [
+    "asr"
+  ],
+  "target_count": 200,
+  "co_completed_count": 15,
+  "co_submitted_count": 15,
+  "co_backlog": 1,
+  "min_overlap": 0.0,
+  "accepted_target_count": 200,
+  "accepted_fraction": 1.0,
+  "weighted_overlap_ratio": 0.1270843743096551,
+  "mean_target_latency_ms_all": 152.090625185,
+  "mean_target_latency_ms_accepted": 152.090625185,
+  "wall_time_s": 30.496503516,
+  "valid_for_gamma": true
+}

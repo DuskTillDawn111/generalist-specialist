@@ -1,0 +1,48 @@
+{
+  "at_utc": "2026-10-08T14:18:44.468731+00:00",
+  "correction": {
+    "at_utc": "2026-10-08T13:09:22.674375+00:00",
+    "reason": "Implementation audit: dry_run=True exits original V3 after initialization and ranking, without feedback acceptance/rollback. Initial wrapper was mislabeled as full Original V3.",
+    "original_V3_implementation": {
+      "path": "/root/autodl-tmp/generalist-specialist/method_v2/engine.py",
+      "sha256": "67aa6ffb5a6eb1a0c2d10cd6bbce87152631bc082b5e8700f7051eab05676837",
+      "bytes": 14841,
+      "mtime_ns": 1791095257352209509
+    },
+    "incorrect_benchmark_wrapper_preserved": {
+      "path": "/root/autodl-tmp/generalist-specialist/module19/solver.py",
+      "sha256": "67101b1fa4f90914ac9d94d1bd4a3a9fe6b7b0368c3a6ee6ec3028b728b66f0a",
+      "bytes": 5670,
+      "mtime_ns": 1791457727004272875
+    },
+    "full_Original_V3_status": "UNRESOLVED_RUNTIME_FEEDBACK_REQUIRED_UNDER_CPU_ONLY_FREEZE",
+    "initialization_measurements_status": "DIAGNOSTIC_ONLY_NOT_FULL_ALGORITHM_BENCHMARK",
+    "no_further_seed_only_configurations": [
+      "text_mid_original_v3",
+      "text_high_original_v3",
+      "lid_mid_original_v3"
+    ],
+    "controller_implementation": [
+      {
+        "path": "/root/autodl-tmp/generalist-specialist/module19/resume.py",
+        "sha256": "ca542cf18e26d3f8ef277ca774cd4926d363ff2c9ce7357694130bb00b212451",
+        "bytes": 3964,
+        "mtime_ns": 1791464962587443907
+      }
+    ],
+    "no_workload_budget_pool_admission_model_route_capacity_threshold_changes": true,
+    "stop_controller_only_after_current_run_saved_and_GPU_released": true,
+    "user_clarification_requested": true,
+    "no_fake_predicted_P95_or_synthetic_runtime_oracle": true,
+    "historical_modules_unchanged": true
+  },
+  "full_V3_not_benchmarked": true,
+  "no_CPU_P95_or_runtime_oracle_invented": true,
+  "no_historical_source_modified": true,
+  "source": {
+    "path": "/root/autodl-tmp/generalist-specialist/module19/v3_definition_audit.py",
+    "sha256": "571035f7699ec8bb73e4965a32e86da49c979e75df74b62f65ca7b88dc703b3e",
+    "bytes": 8627,
+    "mtime_ns": 1791469103997471755
+  }
+}

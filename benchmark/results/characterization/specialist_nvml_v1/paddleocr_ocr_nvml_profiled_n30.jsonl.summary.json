@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "paddleocr",
+  "target_task": "ocr",
+  "target_count": 30,
+  "mean_worker_latency_ms": 6.1456049,
+  "min_worker_latency_ms": 5.18012,
+  "max_worker_latency_ms": 13.771997,
+  "output": "benchmark/results/characterization/specialist_nvml_v1/paddleocr_ocr_nvml_profiled_n30.jsonl"
+}

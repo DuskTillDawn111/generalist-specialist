@@ -1,0 +1,753 @@
+{
+  "module": "7C-4",
+  "artifacts": {
+    "before_hashes.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/before_hashes.json",
+      "sha256": "e55e75ca9f086bb18e1757a94ebebdc521f119953f0986e1e55017b8fd7ae43d"
+    },
+    "campaign_status.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/campaign_status.json",
+      "sha256": "570924b9dbd403a90ca8585a45f09bc824861b76b9e6b7f1122525c39365cbc8"
+    },
+    "confirmation_summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/confirmation_summary.json",
+      "sha256": "4c483a19c9b67f8c727fbe8c04eadbbb0c90ec0752e664932b61e7dd424bc4bd"
+    },
+    "cpu_regression_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/cpu_regression_validation.json",
+      "sha256": "26a6c666822e78ba4691cc260f16718acc2685b83a9190fd5ce8d340f0cba24f"
+    },
+    "deployment_count_table.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/deployment_count_table.csv",
+      "sha256": "c7cdb206456187cc275aa21d3e2d142af429faa0e6b44c56f64ef12420488e12"
+    },
+    "environment_manifest.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/environment_manifest.json",
+      "sha256": "e6ff18f1e18edb0cb524fbd9d1398f470fd3bfad98a7c2ed53563aab4510c9a0"
+    },
+    "experiment_freeze.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/experiment_freeze.json",
+      "sha256": "4b03a82b93e22899bb2f4e2cdfe0b3bffbd4fce4bf520b14f4b830700c8aee17"
+    },
+    "generalist_specialist_competition.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/generalist_specialist_competition.csv",
+      "sha256": "43d351d1f7176e97d0bd303bfb556a8639b32091b07ac575da885a5a1838d007"
+    },
+    "module7c4_summary.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/module7c4_summary.md",
+      "sha256": "ae2e494b131db5e870004b9206e663528f0271473c80e33b3986ea93406e39c5"
+    },
+    "multiworkload_summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/multiworkload_summary.json",
+      "sha256": "df76f7fb16fcc55d212e52ff8261d4b2e7e9033f77d1feb8667af6bd61ca3c36"
+    },
+    "replica_activation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/replica_activation.json",
+      "sha256": "3222d8df0e0eb8ec4e0ca0c9aee817ba89d9bd4408e2f59b01299390112389e6"
+    },
+    "source_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/source_validation.json",
+      "sha256": "f2edd7e2f897264d8fe4668385f9ee4ffde1f9fea5d7eb9edcb222f0d463d445"
+    },
+    "validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/validation.json",
+      "sha256": "ea883bbf8e0a3372941ff4ba3edf900c85b1a67d2b5596af3300664cb5834033"
+    },
+    "w1/confirmation/final_aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_aggregate.json",
+      "sha256": "ae97c9c9811cf79a6534cf0e92ba9ea8feea8b5a9d9dbf7a4f4505f3f9056382"
+    },
+    "w1/confirmation/final_rep1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep1.config.json",
+      "sha256": "12d9c38426761d7db96d311dd26f738ec0cc46c709901ee50f8e02ea8902a41e"
+    },
+    "w1/confirmation/final_rep1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep1.json",
+      "sha256": "d73745668ae3f258540de311543e2d290ef1cbf6907ab66b45c10412ea75f294"
+    },
+    "w1/confirmation/final_rep1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep1.process.json",
+      "sha256": "1e1ef1c090318eb3401920b0068ce7f552c0db3711c957269b03bb827b4f5755"
+    },
+    "w1/confirmation/final_rep1.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep1.summary.json",
+      "sha256": "07512396f92ca857e70ecfb96dbebd5a054f308dda786986a4d48274198b7895"
+    },
+    "w1/confirmation/final_rep2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep2.config.json",
+      "sha256": "62cb8bdc9a25eaf1e0197b404112f7ef873744828f93485fe623ba32567e6a86"
+    },
+    "w1/confirmation/final_rep2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep2.json",
+      "sha256": "2bebe8a35d47d759850e64903b7d1a12737f8c1e2308b5caa58a0457ec8296f8"
+    },
+    "w1/confirmation/final_rep2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep2.process.json",
+      "sha256": "9e09483e1812a06115354ca61731a1ddd8774a62a31f37d449dcef58a51e3aaa"
+    },
+    "w1/confirmation/final_rep2.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/final_rep2.summary.json",
+      "sha256": "e8157eb856f8d4edc98ff5834e2d5c4dcde23aa9d4f9c885df6000c9722fc61c"
+    },
+    "w1/confirmation/seed_aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_aggregate.json",
+      "sha256": "2c3912624ecd39c2fa4ea71881cfc18e7cf06c8e457119991bb63fa30d4d6d5d"
+    },
+    "w1/confirmation/seed_rep1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep1.config.json",
+      "sha256": "fdd4c132cadb47038c77ae4aa4b684d1563f6a4369ce1b258c0bcf561ec8c436"
+    },
+    "w1/confirmation/seed_rep1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep1.json",
+      "sha256": "4cf395370c72637c1f6780f83c3e3e7a86044ef72e49c25842693057b7280f5a"
+    },
+    "w1/confirmation/seed_rep1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep1.process.json",
+      "sha256": "458e8bd7ded7264e6231662f013ded109764a6ea8633a71d47ba59002e2cb77c"
+    },
+    "w1/confirmation/seed_rep1.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep1.summary.json",
+      "sha256": "a90daaf34de1be2a7a6bb266bd547d2428752cf2811ecbefd7e50162124c5828"
+    },
+    "w1/confirmation/seed_rep2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep2.config.json",
+      "sha256": "fbe5a5f249e1568093e5aab3e3e9bd07fb641cf7491ef8c41a880c8b8239cfcc"
+    },
+    "w1/confirmation/seed_rep2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep2.json",
+      "sha256": "888b7a60a6312dab1a7462638b491dff33ff95b6926eb02caedf1c64fa9a6a82"
+    },
+    "w1/confirmation/seed_rep2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep2.process.json",
+      "sha256": "fbba49cab6d4bc24161cfd57a8eb72213c244128e5f9bc626b9fbabc12ea3190"
+    },
+    "w1/confirmation/seed_rep2.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation/seed_rep2.summary.json",
+      "sha256": "3f88404d44bfaccf8286be5483e01487cdba7d7f05b3db55d149376a9f353e27"
+    },
+    "w1/confirmation_attempts.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation_attempts.json",
+      "sha256": "d7d1aae2daf549470c06fa57821726d00da43d62c3796bb8ef11889d7a4da716"
+    },
+    "w1/confirmation_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/confirmation_results.json",
+      "sha256": "3bd6e936843a0a3dde34f974dbc5af3c150165187d2d6f281dd32b112b63364c"
+    },
+    "w1/integer_replica_decisions.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/integer_replica_decisions.json",
+      "sha256": "1e2da2063393d24b18a33e890f8ea9a191cd157ed0e4febe37b720a5c5c2e0ad"
+    },
+    "w1/linear_counterfactual.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/linear_counterfactual.json",
+      "sha256": "0fcb749d09d8f3b5d28dcbd94a8336b1629698c609baae1686cd24cbccebb524"
+    },
+    "w1/memory_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/memory_validation.json",
+      "sha256": "9eb57294fd1478ff853b6fdfe37edc1317679eedf40c22127a38838e3e641d4f"
+    },
+    "w1/planning_preflight.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/planning_preflight.json",
+      "sha256": "c05529925374dffb22267c2d0b8dc98bcf65a1dc0b783e50757158c589f58949"
+    },
+    "w1/post_search_freeze.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/post_search_freeze.json",
+      "sha256": "d2c84552971891294b92ef5152da413a5dcb32949923bd0c1eec8b16b13adf83"
+    },
+    "w1/protocol.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/protocol.json",
+      "sha256": "f4d4c23a4be610cf44ca895ad70324121a627577c30665b97a6e6ce99c67fbee"
+    },
+    "w1/result_summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/result_summary.json",
+      "sha256": "3cfa58a97f10ee447824292426babe5d61b48768bc7417a6395918313408ccf5"
+    },
+    "w1/runtime_context.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/runtime_context.json",
+      "sha256": "a7be2cb114d5487b9f6ccbf6190efc482f8972d3075d04d311605a286b58574a"
+    },
+    "w1/runtime_context.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/runtime_context.json.sha256",
+      "sha256": "9615d283027e8f8c62c45ccceb1eedf865bb83e922bfa7619a7a2c33b15e1bc0"
+    },
+    "w1/runtime_evaluations.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/runtime_evaluations.json",
+      "sha256": "bb4fd8b5d5c857f14e3930b7754eed2bce12002201b97eb39f2e5f6079263e29"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/aggregate.json",
+      "sha256": "830f76187a09150eb976913380abcee24ab7a7d7283a5246ce7504ac201b9f4c"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_1.config.json",
+      "sha256": "26b6c0576f2ffb4e710bf149b075d3cec0cf0b4be1f3887c63a3a053557cc5e7"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_1.json",
+      "sha256": "4d934cd0f74b8af51fc69ab5cea88da9cd9227bfe34cd9ad7fead4e8554ab550"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_1.process.json",
+      "sha256": "0fde209c3691aee74d26bb86a9d623b394aaab9d3c333090f5560f63d8bcb279"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_2.config.json",
+      "sha256": "cf55949554e58913773a591743c01ccadcf545e09f8c34559fb64bddcde900a4"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_2.json",
+      "sha256": "62cb062d91c9a2a06fd620dc677b6205b41550d85f6e26689b467fc38e078334"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_2.process.json",
+      "sha256": "615140d89953f58c4c31913b69d5c10c4652f4feac9c1d5fc2398fb070c73885"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_3.config.json",
+      "sha256": "a689b48ed4c8bdcc99258dcd7f9501b9885735ff2a031d15cb1046d5e54d8cb5"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_3.json",
+      "sha256": "fbee24b41ed98164d8d27d5dc145cd63d5eb55e9b3697ad8e4c4e6687a50f3ca"
+    },
+    "w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/3f98301de5a5d7756759ccc89bae1d2fc497478d374c0545d50c943d53403db8/rep_3.process.json",
+      "sha256": "23b9825f5ce09a03845417caff7c0c33e41d06bc7f08d7b0aac8788ae98f49d4"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/aggregate.json",
+      "sha256": "5d6644ba7c28abf694601e99f005e95252521d52736cc01ad06ab70c67323372"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_1.config.json",
+      "sha256": "731d597b6e519c6afaa3c0ae82d2a5eb8b5a3b52182c532fd0d010392c31cfbe"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_1.json",
+      "sha256": "7825d2588a776dd353f5abb01902557130b65ead1a8f90c4bceba390d0616cba"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_1.process.json",
+      "sha256": "c25ecf9a6e168c6b24f509ae02c590cb3c0854e675268670ddf2d314769a5dec"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_2.config.json",
+      "sha256": "4cd2ce62b3f4436e13f41bf546d41cb0cbf069c5dc1cbbe99de522bb3720f959"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_2.json",
+      "sha256": "bd188ce815c863428928f32b44572c43506dab1d345628b1c54b1d87447da4d0"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_2.process.json",
+      "sha256": "7027d44ea8d7579073de66ffb95d37667b230e64848cbfb5fcea59e29dd7f2ca"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_3.config.json",
+      "sha256": "b5b7f8da81d6af215e1a88ea6fa933d032a72930937df9270b63605cc63fb539"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_3.json",
+      "sha256": "577ddcd89652f0e274ca972ccc33dc226377ecd8280e09baa6ed12d573d70c79"
+    },
+    "w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/5947c137147e9c61bfddce1aca77b85abe06123b6aa42f5411df8f516d2fe8e8/rep_3.process.json",
+      "sha256": "3daec3ec6e8020ea72a5a15c02586d6443227b9cfbd3b480589b8cda29cc1499"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/aggregate.json",
+      "sha256": "da31fa53ae1450b3929d2bdacc883dd74ef4b29c616fe331d0dc4ee84a8cb414"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_1.config.json",
+      "sha256": "5f58f599b303082e6de8b0d7be6bca5a0e50bf221888125125a5be8be6f09ad4"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_1.json",
+      "sha256": "bfd858ce551293fe02d0482d04a09514801be6080dad78646b10e54e155b3ffd"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_1.process.json",
+      "sha256": "cf62b8e45e8aa9da3b380b67cbd6c156022c7d779035fdb8ba5f5758fdee5313"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_2.config.json",
+      "sha256": "6885de4b91c453af984f7a893d1f39501cceda773a8a8077f405d23df31e0e7f"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_2.json",
+      "sha256": "2ed4b6b6c27602c92f2819c42ca8ac026711bff4ad91e2fc25eabb807eeae787"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_2.process.json",
+      "sha256": "97993984be4639383a6a95fc5885e941cd7246be77a3522e3445486c17d2f477"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_3.config.json",
+      "sha256": "b45dad77bd2edb1096459ca2b1bf52cd647d2df024489948c6471c46224ed280"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_3.json",
+      "sha256": "8572ce7acd7f33f187afde25a5f93ed702ac9ae662af9ae0e4c63d0aa7553bb4"
+    },
+    "w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/600dc4b6a41e471f11b43da5e0e7cdd4d8ba6d85b5c82b32e5d796a51639346f/rep_3.process.json",
+      "sha256": "e939c31f55d8f558fe04d3b82153e241a3b8d75b399a2c4fa0ef15a6678f259b"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/aggregate.json",
+      "sha256": "78a3a781a8a98511f78dc9a2e4668c09742880d4d5ed62c2d369ae595fbd98c4"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_1.config.json",
+      "sha256": "6bbf6ea6a82165def425adb06a7aeb1f434012c1e2941ae86eb777ac5570e1de"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_1.json",
+      "sha256": "98ce52274773ddb75422e5ba362a503e2ae2647ef77f199df068734be2c7e70e"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_1.process.json",
+      "sha256": "cf5d1f37dd0b8b6d464d75fe35382366623ac92cb8dc257e732428cae3d46f88"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_2.config.json",
+      "sha256": "5ad8b13987b9b6162310a23f25d19d9767be35445e84cb86701427cdc7982230"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_2.json",
+      "sha256": "4f20af83c954a77708976a7fcd65c18a48093cec696f2b8bbe2b8df67099d544"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_2.process.json",
+      "sha256": "3f169d3970fc6bb0aac16c6b430a2c193ab5a4cae1d756af41e9f7678e8e5c07"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_3.config.json",
+      "sha256": "cde7697c7c8b3b6d67f3bbb5f9ad3b6a5b34e3eaeb05e0b1d372e9eed9400baa"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_3.json",
+      "sha256": "d8027199e80a304348f36d4db873f0d8501328295142582b61d6e297848771ce"
+    },
+    "w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/a986ec157bbb3dbb6461a22ac7ed6444fd2685b602ffc01b48c84e6689c54428/rep_3.process.json",
+      "sha256": "98fdde0f9e474b02855acbfafe8946966a3e6882c148629cf1d54cbe741da0d8"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/aggregate.json",
+      "sha256": "2733c9855c257e2a348e8c51fa4340e456a5b0744e9d1e780c3007c9c16254d9"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_1.config.json",
+      "sha256": "69ba3bb1cb7e935504f1ac3afb94fe6ea5fcdda51a54d49cc1ee4be5e8f76c89"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_1.json",
+      "sha256": "30b02cbb2692bcb0b6a14e55884ff47b9a21a86a85e02a976b9483d39b8bd145"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_1.process.json",
+      "sha256": "2e34114c479ae3c4b538c110e5a9e5e979a7bd037d22c21595b24d1b886a7b4b"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_2.config.json",
+      "sha256": "2453c3a4871de968ec57c042d636289a94cefe788b78b8b5871b9825088e89ae"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_2.json",
+      "sha256": "9cef778922bc0013164617b696372ac614ed44e96d97711489fd2e58c78bfcbf"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_2.process.json",
+      "sha256": "2099665344f9401e9648fc610f43b3b2bff73aaa5f34caab8c847e237b53cd39"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_3.config.json",
+      "sha256": "fa5f3885af882cc847386a07ab83c08a8d5147be3b7cd13a3dce5a627ae99859"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_3.json",
+      "sha256": "2c10a1fe213eb91fda5e378995777b6cbe70cb58a591032ef9222786a7c6c75d"
+    },
+    "w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/raw_runs/b937d79da80486a4fa75c42d37388574281b4bba41b7d2ab29379840e0f85404/rep_3.process.json",
+      "sha256": "ffc7060a35eacd7d70628d764ce692e5de2cdd833e97bb41c6e7b9d0c63cd206"
+    },
+    "w1/search_cache/runtime_cache_manifest.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_cache/runtime_cache_manifest.json",
+      "sha256": "71d9e9fe2d27da18ef0b8fa58c2c0643ba471d32f4c1d4679d621d4df7900687"
+    },
+    "w1/search_complete.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_complete.json",
+      "sha256": "68e74b8d6f869f36b838683ba6d5c00272ed16854561f0bd3a55ab0d2af2d2f5"
+    },
+    "w1/search_trace.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/search_trace.json",
+      "sha256": "68e74b8d6f869f36b838683ba6d5c00272ed16854561f0bd3a55ab0d2af2d2f5"
+    },
+    "w1/status.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w1/status.json",
+      "sha256": "ef966664ac26b8adc8c26b59251ae17b06d6c6c1c9303a86a428fa0cf03eda84"
+    },
+    "w2/integer_replica_decisions.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w2/integer_replica_decisions.json",
+      "sha256": "8f2d5ff4038655c590c7fb87fe8dfef3efe6e53ce14d93b0110f65ce1100574b"
+    },
+    "w2/linear_counterfactual.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w2/linear_counterfactual.json",
+      "sha256": "186cff1934e30987b73456ddc2e691d5e517f5cf8ee107a99c44d922725aafb6"
+    },
+    "w2/memory_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w2/memory_validation.json",
+      "sha256": "b7baa2abe6e7bfde4ff925f9bec5adc0f422f7337df602155f275b2692f627b2"
+    },
+    "w2/reference.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w2/reference.json",
+      "sha256": "684190f31ff65db89ae02ebb4d8cb9c7c1e1d805c7f2717c8d4efe6824fbe0ce"
+    },
+    "w2/result_summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w2/result_summary.json",
+      "sha256": "e3224d11a5a88db3a04093a71e80894f1d723d9791df99b800c4c4fd5cb0332b"
+    },
+    "w2/runtime_evaluations.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w2/runtime_evaluations.json",
+      "sha256": "2442245cdc2d527f058f68555b102ec87090c3211509f14dabe1de06f21f5b8c"
+    },
+    "w3/confirmation/final_aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_aggregate.json",
+      "sha256": "e890837fbb5bfbc483e31da98302b1fd56a25c41177a29c14fd01196008239b1"
+    },
+    "w3/confirmation/final_rep1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep1.config.json",
+      "sha256": "9bfaf017dd5e6fcb81e80f6c5985b92622840a20c769be8c1d1024d7afe1f693"
+    },
+    "w3/confirmation/final_rep1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep1.json",
+      "sha256": "ce9bc25213ff1841ef3565fceb59da752d759b3be0266a5202e6929b4b1081e7"
+    },
+    "w3/confirmation/final_rep1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep1.process.json",
+      "sha256": "fce6c39389dbf13c9beb2a2d4eb78750827f06822031a6beda0d0df97e30f161"
+    },
+    "w3/confirmation/final_rep1.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep1.summary.json",
+      "sha256": "d974475c2e7d486b8fd07106b29a4d004c53e9de8e1cde422ea0bee4181847e2"
+    },
+    "w3/confirmation/final_rep2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep2.config.json",
+      "sha256": "17e4ca74921fc31d0e99085c09aa9c43c9c40c37cdebf5744115f7105e339748"
+    },
+    "w3/confirmation/final_rep2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep2.json",
+      "sha256": "e8b50d0d003daec4764131bc4542848c3ada1094aa2f731f3310ebb2278e0d7d"
+    },
+    "w3/confirmation/final_rep2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep2.process.json",
+      "sha256": "7e4ef93d3b0615dc2ef6f582ac92f4295ba8ead706c00a5642f6d87d96125edc"
+    },
+    "w3/confirmation/final_rep2.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/final_rep2.summary.json",
+      "sha256": "e176ff5ac4f9d295e868601011691dfa2e2670a6b10283c2ae92e676fa5cbbb4"
+    },
+    "w3/confirmation/seed_aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_aggregate.json",
+      "sha256": "97572dfcbf7fb590d48bece5ecaf472b2f0b1216ac7d1cb5590bd705dde5be8e"
+    },
+    "w3/confirmation/seed_rep1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep1.config.json",
+      "sha256": "b5710c239f13a209f9c73e7843d7dbb998a3f743f17e250b8b3c8d2569d07dcd"
+    },
+    "w3/confirmation/seed_rep1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep1.json",
+      "sha256": "5f162da3f41fddffc2157b5679e0ae306b6a2c0116729d78ddbdae517a9a7978"
+    },
+    "w3/confirmation/seed_rep1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep1.process.json",
+      "sha256": "2a2cbfbaca2276b9144d74f948bd95399d475a3074eace0e19db37aec4887d51"
+    },
+    "w3/confirmation/seed_rep1.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep1.summary.json",
+      "sha256": "cb17fd4500c71d107e85d8fe6d0f9927511e88e7ee60ca603b4543b82c8552be"
+    },
+    "w3/confirmation/seed_rep2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep2.config.json",
+      "sha256": "4a7aa27817b8427daf05646ca3a82207939a29f68ecc7fd6614c26d37c6a2f26"
+    },
+    "w3/confirmation/seed_rep2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep2.json",
+      "sha256": "d5cb8971a0abf5419a7ca4833e1ffa731c2ef71dccd56126ab54559ce69a344f"
+    },
+    "w3/confirmation/seed_rep2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep2.process.json",
+      "sha256": "2d671abf907e69db4be240a19e2695a079e913591dc2f51f6d9f7fd0db4bddf0"
+    },
+    "w3/confirmation/seed_rep2.summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation/seed_rep2.summary.json",
+      "sha256": "53f02abfa3bba21398479d9f26a84f548d23950638a6a5408d2aae4a29b4eeb1"
+    },
+    "w3/confirmation_attempts.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation_attempts.json",
+      "sha256": "6b913589930abfea49656641ff873a4401aa7fff754a319ffb2ef5c86aa87e54"
+    },
+    "w3/confirmation_results.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/confirmation_results.json",
+      "sha256": "aa6a6fc005a2432aff3b5cc9f1a081aeabec8b1d22be1601f28b1b6275951636"
+    },
+    "w3/integer_replica_decisions.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/integer_replica_decisions.json",
+      "sha256": "9aa4c1981106cadbd852c4924b7f0fbdfde8d48032e8443acfcf8df1c7d47aa4"
+    },
+    "w3/linear_counterfactual.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/linear_counterfactual.json",
+      "sha256": "cbabfe1bea816dbb4ece7836ae71b2e845b06a3535ca0aa53fa572d92e9873c9"
+    },
+    "w3/memory_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/memory_validation.json",
+      "sha256": "028203243596697823eb055477da1609f83d2d1bad7c0f60b50f1b454003ae10"
+    },
+    "w3/planning_preflight.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/planning_preflight.json",
+      "sha256": "00447afa102e5fb0b04953037ffeff51b99ecb0b64eb4dc9ae9535620dbf7307"
+    },
+    "w3/post_search_freeze.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/post_search_freeze.json",
+      "sha256": "2e05b289e7c5094753299331fba0a798386beae56ce83a6af0f29e7384837bf1"
+    },
+    "w3/protocol.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/protocol.json",
+      "sha256": "82b6ac15bd2c0be5c66ddf18bd59a3ddea2a6b1dbae491090b7b48ab0975fad8"
+    },
+    "w3/result_summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/result_summary.json",
+      "sha256": "4267958106dfdfcf4657cb5ab1b2a79b05d078f7e55da81e280ea4c98f69983f"
+    },
+    "w3/runtime_context.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/runtime_context.json",
+      "sha256": "a7be2cb114d5487b9f6ccbf6190efc482f8972d3075d04d311605a286b58574a"
+    },
+    "w3/runtime_context.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/runtime_context.json.sha256",
+      "sha256": "9615d283027e8f8c62c45ccceb1eedf865bb83e922bfa7619a7a2c33b15e1bc0"
+    },
+    "w3/runtime_evaluations.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/runtime_evaluations.json",
+      "sha256": "a89e8e6c6c656c329747749c74b302412a6ba02581a3457d411954072af0a840"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/aggregate.json",
+      "sha256": "d6e8e3561d4b9d7564698d6ac30400cfb5a7656790650888f7addf73e564fd54"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_1.config.json",
+      "sha256": "fa5b25763a97fb145ffe5870ec747642f8d1c56d6a3497b916331883473bad26"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_1.json",
+      "sha256": "a547382353521c0c9e98848f5a1647a25b9fcfe9ed5db9b3fc60a4bbb44b2c99"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_1.process.json",
+      "sha256": "af2093f6f16b170a3a79fc470759fb98d3ddf05dc9149d600ae72823775ea157"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_2.config.json",
+      "sha256": "872b94c3aba05843376e9cc8c9fa7ac47a9ecad5237b321628dd0b3442008d04"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_2.json",
+      "sha256": "835df79a4cb9dd25f93ababee06eeba2adb8751e9675b6da073d2eb0aa457172"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_2.process.json",
+      "sha256": "614445818cde0e5f25032e959d56263f9e23889332e96627572592d277bf9204"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_3.config.json",
+      "sha256": "257a3d5ca75ebdaec6edac8f0eef59751b08fc50a014fb0918afa2e4a761ef12"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_3.json",
+      "sha256": "07e72beaea0b49b550de09b4a3e3f1f7687b7d0bb35e3396385adf9185ed440f"
+    },
+    "w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/48ae0a713a688af90eb383ed736168bc521781f69f04bdc3a23d0e06b9fbf50b/rep_3.process.json",
+      "sha256": "00780b1fc96d2c61de54cbf10f116366cf4b292388097234c63d3e07741e4457"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/aggregate.json",
+      "sha256": "ca5475b8fbf4cd00601c6f9e463c80d8be5afe32a1fd4931cbd9d107ce76735e"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_1.config.json",
+      "sha256": "b368eedd823d2ebc8a1b7638e4a6947a54e94238f556ff76d7929c8a482bfd2f"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_1.json",
+      "sha256": "7c6432b2e5c012ab97fd5fa9caf9811b5bf058f5eec2bb3f6b8d2d0deec27596"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_1.process.json",
+      "sha256": "5e0765ecad851ecf93b1514902f606252be340934ef2657987798e92cc37641c"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_2.config.json",
+      "sha256": "cfa077592dbb5bd010ca0fbc4f5580930c266e7b4f069e68510d9fd3a7a7116f"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_2.json",
+      "sha256": "4f9d376dc75e727aaa74a8d4bbc4b9244a78ce82d0dfd69ebd0973b3fdb38f90"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_2.process.json",
+      "sha256": "7f28ab860344b66004f6309964ddf68e770330676c65990148bca2e6c7b8e205"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_3.config.json",
+      "sha256": "ba11cbbb3e2b0fbbf264d829a929c9a80194bdaf3e798dc2ca0cafc32c5fa98c"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_3.json",
+      "sha256": "70038620388259c9993e93366a2aa8bfa1262468c9711ab00377837ac1116216"
+    },
+    "w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/76ddabc0e3f7d07fabc3d5f03082bcd0635173b32a2b7595912afd13c6d2e116/rep_3.process.json",
+      "sha256": "176fd0363e8d2e7d9575014369f34f9c0c439a12c74db5cd8040c03c4c3b55fa"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/aggregate.json",
+      "sha256": "ceb97e7412da18a78fe9dfce7bd00cb2b6d5e00020c51743a23cb140a68cbc02"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_1.config.json",
+      "sha256": "543dc301e22d0696349c2d8915060ec378476edef9a70e6d91493161f523ab49"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_1.json",
+      "sha256": "0bcc24a02163b289e562bbdcca1391ef89f23469dbc8d4238a53051757951061"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_1.process.json",
+      "sha256": "0923b1aca5e3468c9776df65711516878e6df1c3af8e22af81b0ac40eb9822e8"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_2.config.json",
+      "sha256": "b519fddf381ea65e049a5147efc2d1792a3415245deb8c6ca70980512cc1f3b4"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_2.json",
+      "sha256": "015194894d6858b2e2bef8eaff03827e1056a73e4da43776bddade88a8cd1683"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_2.process.json",
+      "sha256": "e5cc5507c2fcc19fcf5cd040ba405043ae77dac3e4ff587579229f70f7de7d38"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_3.config.json",
+      "sha256": "44f7e5fafc0b648caf9dda52cc4c28cae83f294714b22e8729806d04e0cfc12c"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_3.json",
+      "sha256": "254607f62b288cc618d7d1c348a672725c5b8b104674296b4e501c6fc718b2e5"
+    },
+    "w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/81e061da5a7ce43129d0103adf4c6fd07add9701c96328c567f20e82d2de244b/rep_3.process.json",
+      "sha256": "d5a6529e50c11c0d0b7398769cbdbc2bc5fe888ff847dc202f6daa2f2971ca7d"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/aggregate.json",
+      "sha256": "db4b675efafa34a262f11306feea7c1c6273851700997bf0e51585379cd0ad8d"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_1.config.json",
+      "sha256": "6a817dce3e20cb82c821d4b70a3b48c20528cf14284dc4131841265779be2b9b"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_1.json",
+      "sha256": "189f0f05f9e5845930c415f976b4fe1112956b2e2b93c5a27af08b890c71abd7"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_1.process.json",
+      "sha256": "918ed17524ee2ba6a3443dfbee01a75defd1d214c4769fca2e2f02df2bd5f8cf"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_2.config.json",
+      "sha256": "4ede51dff2b0a00e893ee6271580481ba10f3219aa4d2fb5209dff600155727c"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_2.json",
+      "sha256": "daefbdfd620ac4c61b056609ba4c410ff33a464b74ea98ca48acd701d30081fc"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_2.process.json",
+      "sha256": "68b1da0c060b782538cd9293e6a3b6734868e8cdcd525b39084f45b81bff5de8"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_3.config.json",
+      "sha256": "a4bf85f1085714d72214fbe67343f93653090747ff1e72164aa5a0af9bf55aad"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_3.json",
+      "sha256": "3212404b5991a2448f16441fdd264e3ae6694f7b08270f67c699e8ce6d492032"
+    },
+    "w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/9a6048f4e2ff3839e4e53531ebf336af97a94cc5428a78dc794e07e2ac1e6ec4/rep_3.process.json",
+      "sha256": "8d409fb7d5541f3fb5cb5ad29ad0c832a1f5d3fbc0324940c55c7c4629808810"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/aggregate.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/aggregate.json",
+      "sha256": "dc70c7a010c19d7ed338399c25747d6a3bd900e488591495369ad7b5fca9096b"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_1.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_1.config.json",
+      "sha256": "95c23db9fb30e8d24837e2ac7a900a955632761f5b9bfa7ac7a58143eb0e8a02"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_1.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_1.json",
+      "sha256": "91a0872261d27cf13859e6b06628c3faf88d25e2532298a44947a0478b1f7a5b"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_1.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_1.process.json",
+      "sha256": "3dd98216904d5bfb0a9fb5a42b6ba562d2c4188f68f00ad2814baa0add1eefa0"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_2.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_2.config.json",
+      "sha256": "3b716d72ed68915d3570ebbf479886831493b8200f34c4e67c2f6a403cd9995f"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_2.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_2.json",
+      "sha256": "b23255518a07fac32eaf0739de7421e214efc156f035032161491ef355f44c37"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_2.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_2.process.json",
+      "sha256": "90ba9e7acfae0a2b78bb5a0f7a5ca227e1a95703e9ebebd2a986adcfa61cac56"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_3.config.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_3.config.json",
+      "sha256": "6175ee2f9998af1a25339bd8b4360c801b5cd411e4b639c947685fc681bc402c"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_3.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_3.json",
+      "sha256": "03c23c8a3bffeb5a70ecb8a2ecba5a34796bed113ff0c9e97ce11ffb97020a26"
+    },
+    "w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_3.process.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/raw_runs/ed95ee3501d1615b18637e93de1a2625702c3eff92adce57ce23fea49ba822d0/rep_3.process.json",
+      "sha256": "7d3dc3f1c6136e9dba22dfcdee77b182d9cdca53d6f64cf9084525a9ca4a85a8"
+    },
+    "w3/search_cache/runtime_cache_manifest.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_cache/runtime_cache_manifest.json",
+      "sha256": "e521e1c8d506ac027b27e19621c6f591d45ba36fc8732999423e197d457b8175"
+    },
+    "w3/search_complete.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_complete.json",
+      "sha256": "720127fd0f241e45eafa28995a085afb419b11a9b35aaa0c60329f5f04dc469e"
+    },
+    "w3/search_trace.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/search_trace.json",
+      "sha256": "720127fd0f241e45eafa28995a085afb419b11a9b35aaa0c60329f5f04dc469e"
+    },
+    "w3/status.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_multiworkload/w3/status.json",
+      "sha256": "43c1bcf1c6ea3dad0291a9f278ab058705599a75daa35041cc7ba5c6fe0336bd"
+    }
+  }
+}

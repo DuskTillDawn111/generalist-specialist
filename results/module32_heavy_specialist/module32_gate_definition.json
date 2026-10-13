@@ -1,0 +1,12 @@
+{
+  "frozen_unix_ns": 1791627185539116287,
+  "formal_windows_started": 0,
+  "source": "User Module32 Stage C/D and unchanged Module20A utility/stability",
+  "positive": "At least one G/S arm and its matched S-only control are both eligible under Module20A, actual G and S both execute ASR, delta_U > +0.01, inputs/load/pool/budget/utility identical; freeze that legal exploratory configuration.",
+  "no_positive": "All three requested routing arms completed valid matched comparisons, no legal G/S delta_U > +0.01.",
+  "inconclusive": "No legal positive comparator and memory/quality/capacity/logs prevent valid full three-arm comparison.",
+  "U_for_ineligible": null,
+  "legacy_module30_sample_and_environment_checks": "Recorded auxiliary diagnostics, not extra hard constraints requested for the Module32 exploratory gate",
+  "independent_replication": false,
+  "optimizer_modified": false
+}

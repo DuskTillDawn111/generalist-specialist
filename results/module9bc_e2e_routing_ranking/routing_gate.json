@@ -1,0 +1,110 @@
+{
+  "gate": "ROUTING_SUPPORTED",
+  "comparisons": [
+    {
+      "state_index": 1,
+      "cell": "C06",
+      "selection_slot": "low_pressure_1G",
+      "R0_tier": "steady",
+      "R1_tier": "steady",
+      "tier_change": 0,
+      "R0_mean_ms": 28.440438868613825,
+      "R1_mean_ms": 27.411190294775583,
+      "matched_steady_repetitions": 3,
+      "paired_steady_improvement_ms": 1.0292485738382335,
+      "all_three_steady_improve": true,
+      "paired_steady_differences_ms": [
+        1.8157631031546089,
+        0.6221746917066113,
+        0.6498079266534802
+      ],
+      "per_task_mean_change_ms": {
+        "text": 0.5153058327810504,
+        "image": -1.5588343546568624,
+        "ocr": 0.19238013017336067,
+        "asr": -30.520537718785544,
+        "visual_qa": -10.775781537753735,
+        "lid": -0.2633080204678559
+      }
+    },
+    {
+      "state_index": 2,
+      "cell": "C07",
+      "selection_slot": "moderate_pressure_1G",
+      "R0_tier": "unstable",
+      "R1_tier": "steady",
+      "tier_change": 2,
+      "R0_mean_ms": 323.150778485702,
+      "R1_mean_ms": 60.81671679470412,
+      "matched_steady_repetitions": 0,
+      "paired_steady_improvement_ms": null,
+      "all_three_steady_improve": false,
+      "paired_steady_differences_ms": [],
+      "per_task_mean_change_ms": {
+        "text": -0.6511225414764041,
+        "image": 0.1333475450167967,
+        "ocr": -0.478308789144364,
+        "asr": -821.9150246937921,
+        "visual_qa": -8881.909964116378,
+        "lid": -13.1518923286741
+      }
+    },
+    {
+      "state_index": 3,
+      "cell": "C03",
+      "selection_slot": "pressured_RC_SG_like",
+      "R0_tier": "unstable",
+      "R1_tier": "unstable",
+      "tier_change": 0,
+      "R0_mean_ms": 10881.000227309107,
+      "R1_mean_ms": 8594.98434931321,
+      "matched_steady_repetitions": 0,
+      "paired_steady_improvement_ms": null,
+      "all_three_steady_improve": false,
+      "paired_steady_differences_ms": [],
+      "per_task_mean_change_ms": {
+        "text": 0.9467916309212363,
+        "image": -0.004059091353401693,
+        "ocr": -6393.0586527108035,
+        "asr": 14623.479148145221,
+        "visual_qa": -30535.279670167296,
+        "lid": 14473.22967210975
+      }
+    },
+    {
+      "state_index": 4,
+      "cell": "C10",
+      "selection_slot": "historical_multi_G",
+      "R0_tier": "steady",
+      "R1_tier": "steady",
+      "tier_change": 0,
+      "R0_mean_ms": 30.78685674866955,
+      "R1_mean_ms": 26.38721804808772,
+      "matched_steady_repetitions": 3,
+      "paired_steady_improvement_ms": 4.399638700581822,
+      "all_three_steady_improve": true,
+      "paired_steady_differences_ms": [
+        4.591817893240361,
+        3.9468192717541797,
+        4.660278936750927
+      ],
+      "per_task_mean_change_ms": {
+        "text": -0.6629773312801367,
+        "image": 0.05864377499998833,
+        "ocr": 0.12886678687551031,
+        "asr": -6.603928255980804,
+        "visual_qa": -14.645388114035123,
+        "lid": -31.436757712962976
+      }
+    }
+  ],
+  "stability_degradations": 0,
+  "stability_improvements": 1,
+  "matched_steady_states_better": 2,
+  "matched_steady_states_worse": 0,
+  "equal_state_mean_steady_improvement_ms": 2.714443637210028,
+  "rule": "NOT_SUPPORTED on more state-level stability degradations than improvements, or more matched-steady mean regressions than improvements, or at least two states R0 steady and R1 nonsteady; SUPPORTED requires no stability degradation, nonnegative aggregate matched-steady ordering, and one all-three matched-steady improvement; otherwise PARTIAL. No magnitude threshold.",
+  "magnitude_threshold": null,
+  "new_GPU_runs": 24,
+  "statistical_limit": "three independent repeats per state; finite development states; no general-runtime queueing accuracy claim"
+}

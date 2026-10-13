@@ -1,0 +1,21 @@
+{
+  "protocol": "active_pair_profile_v1",
+  "target_worker": "distilbert",
+  "target_task": "text",
+  "co_resident": "paddleocr",
+  "co_resident_tasks": [
+    "ocr"
+  ],
+  "target_count": 30,
+  "co_completed_count": 21,
+  "co_submitted_count": 84,
+  "co_backlog": 64,
+  "min_overlap": 0.9,
+  "accepted_target_count": 30,
+  "accepted_fraction": 1.0,
+  "weighted_overlap_ratio": 0.9919137216048585,
+  "mean_target_latency_ms_all": 4.1251115,
+  "mean_target_latency_ms_accepted": 4.1251115,
+  "wall_time_s": 0.126226587,
+  "valid_for_gamma": true
+}

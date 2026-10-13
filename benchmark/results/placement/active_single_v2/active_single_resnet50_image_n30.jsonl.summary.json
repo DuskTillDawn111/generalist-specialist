@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "resnet50",
+  "target_task": "image",
+  "target_count": 30,
+  "mean_worker_latency_ms": 5.473244566666667,
+  "min_worker_latency_ms": 4.797195,
+  "max_worker_latency_ms": 7.107642,
+  "output": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v2/active_single_resnet50_image_n30.jsonl"
+}

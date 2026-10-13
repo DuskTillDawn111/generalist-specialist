@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "pool": "SMALL6",
+      "load": "LOW18",
+      "equal": true
+    },
+    {
+      "pool": "SMALL6",
+      "load": "ASR32B",
+      "equal": true
+    },
+    {
+      "pool": "LARGE7",
+      "load": "LOW18",
+      "equal": true
+    },
+    {
+      "pool": "LARGE7",
+      "load": "ASR32B",
+      "equal": true
+    }
+  ],
+  "reproduction": "reproductions/frozen_replay_1",
+  "GPU_launched": false,
+  "original_results_not_overwritten": true
+}

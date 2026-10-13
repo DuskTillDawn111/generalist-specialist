@@ -1,0 +1,33 @@
+{
+  "candidate_pool_and_workloads_unchanged": true,
+  "frozen_files_checked": 78,
+  "new_GPU_measurements": 0,
+  "real_multi_replica_workers_started": 0,
+  "python": "3.11.16 (main, Aug 27 2026, 14:44:21) [GCC 14.3.0]",
+  "python_executable": "/root/autodl-tmp/generalist-specialist/envs/data_env/bin/python",
+  "scipy_version": "1.17.1",
+  "W1_W2_W3_complete_12_model_planning": "passed: restored by Module 7A-2 with real frozen Stage-1 demand",
+  "synthetic_formulation_validation": "passed",
+  "acceptance_14": "passed: W1/W2/W3 12-model integer dry-runs completed",
+  "numpy_version": "2.4.6",
+  "python_executable_sha256": "d1387b832994e865352886d6dbb88fa7e73b5337b04f31f4279fc0c2b05eff84",
+  "cpu_regression_report": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_foundation/cpu_regression_validation.json",
+    "sha256": "c60c5929778602d1af84641a542d43b4972de799c5e5c9bdb6369c3492566c0a"
+  },
+  "source_hashes": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/integer_replica_search_foundation/source_hashes.json",
+    "sha256": "c800811299224c88710d267d4b9ede7528b2498b6bf843f22074544267ce6e2d"
+  },
+  "service_demand_completion": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/measurement_validation.json",
+    "sha256": "83b2f335bc0f0704e713d0e990090c49cbc7c76a63e6ee8c826f8dbd6113bdeb",
+    "bytes": 2537
+  },
+  "updated_service_demand_catalog": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/updated_service_demand_catalog.json",
+    "sha256": "089420d9966afbb4017ba3db97a79d4ed98a8ef04b6dd24607e398612a5dd5b7",
+    "bytes": 94069
+  },
+  "foundation_synthetic_campaigns_rerun": false
+}

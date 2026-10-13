@@ -1,0 +1,97 @@
+{
+  "policy": "queue_aware_dynamic_v1",
+  "tasks": 20,
+  "results": 20,
+  "errors": 0,
+  "routing": {
+    "resnet50": 5,
+    "distilbert": 5,
+    "whisper": 4,
+    "paddleocr": 5,
+    "phi4": 1
+  },
+  "routing_by_task": {
+    "text": {
+      "distilbert": 5
+    },
+    "image": {
+      "resnet50": 5
+    },
+    "ocr": {
+      "paddleocr": 5
+    },
+    "asr": {
+      "whisper": 4,
+      "phi4": 1
+    }
+  },
+  "wall_time_s": 0.856484287,
+  "throughput_tasks_per_s": 23.35127486115808,
+  "per_task": {
+    "text": {
+      "count": 5,
+      "routing": {
+        "distilbert": 5
+      },
+      "worker_latency_mean_ms": 3.5490586,
+      "worker_latency_p95_ms": 4.1681822,
+      "queue_wait_mean_ms": 7.768750799999999,
+      "queue_wait_p95_ms": 14.071516799999998,
+      "accuracy": 1.0
+    },
+    "image": {
+      "count": 5,
+      "routing": {
+        "resnet50": 5
+      },
+      "worker_latency_mean_ms": 6.9743938,
+      "worker_latency_p95_ms": 7.561961,
+      "queue_wait_mean_ms": 14.503452399999997,
+      "queue_wait_p95_ms": 26.604602399999997,
+      "accuracy": 1.0
+    },
+    "ocr": {
+      "count": 5,
+      "routing": {
+        "paddleocr": 5
+      },
+      "worker_latency_mean_ms": 6.8825158,
+      "worker_latency_p95_ms": 7.625823200000001,
+      "queue_wait_mean_ms": 14.363414599999999,
+      "queue_wait_p95_ms": 26.6109408,
+      "accuracy": 1.0
+    },
+    "asr": {
+      "count": 5,
+      "routing": {
+        "whisper": 4,
+        "phi4": 1
+      },
+      "worker_latency_mean_ms": 315.7904436,
+      "worker_latency_p95_ms": 634.2800751999998,
+      "queue_wait_mean_ms": 261.1261802,
+      "queue_wait_p95_ms": 554.8962196,
+      "corpus_wer": 0.0
+    }
+  },
+  "service_time_prior_ms": {
+    "distilbert": {
+      "text": 1.731
+    },
+    "resnet50": {
+      "image": 4.605
+    },
+    "paddleocr": {
+      "ocr": 4.849
+    },
+    "whisper": {
+      "asr": 122.748
+    },
+    "phi4": {
+      "text": 53.68,
+      "image": 201.265,
+      "ocr": 170.076,
+      "asr": 569.887
+    }
+  }
+}

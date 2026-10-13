@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "resnet50",
+  "target_task": "image",
+  "target_count": 30,
+  "mean_worker_latency_ms": 5.626752633333333,
+  "min_worker_latency_ms": 4.724122,
+  "max_worker_latency_ms": 7.686337,
+  "output": "benchmark/results/placement/active_single_v3_r2/active_single_resnet50_image_n30.jsonl"
+}

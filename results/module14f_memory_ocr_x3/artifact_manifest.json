@@ -1,0 +1,741 @@
+{
+  "at_utc": "2026-10-08T04:36:41.982194+00:00",
+  "module": "14F",
+  "status": "COMPLETE_STOPPED",
+  "artifacts": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/campaign.log",
+      "sha256": "36548b086a6dd92283f58a6ebb9b6c4929e5e12bd906eb59f1c0447bf1b8abe8",
+      "bytes": 69156,
+      "mtime_ns": 1791434083336382372
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/closed_loop_protocol.json",
+      "sha256": "cda5070ab5827c5a09802e236feba1350d1be37f7d603e874aec1a09f1ba4d49",
+      "bytes": 4528,
+      "mtime_ns": 1791431988801759681
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/closed_loop_source_revision_v2.json",
+      "sha256": "3b482bb43436a6309d2ced471fa93a9a8f00a19305b606b3b2059f806e1167a3",
+      "bytes": 273,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/completion_verification.json",
+      "sha256": "e0d7889aa7c30b5c918005818ff39f2e3f1a9e2f0a6d2147e447870fc5dadcda",
+      "bytes": 413,
+      "mtime_ns": 1791434111525120205
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/cpu_memory_breakdown.csv",
+      "sha256": "2465dfc715e54029291e4f9016c2f8abf9efc45ecd5f061b6f5df6dbbc526225",
+      "bytes": 3589,
+      "mtime_ns": 1791431988509754266
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/existing_postwarm_memory_observations.json",
+      "sha256": "89698d9dd665b7e0a7a9c2deb87e45b27a62a4bf02c29e27bd8e46618093d825",
+      "bytes": 168985,
+      "mtime_ns": 1791432003442030270
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/final_closure_audit.json",
+      "sha256": "970528fc136c1b891358d648eb210d357f9e3212f4072ee0a5b746f6ca5c7e39",
+      "bytes": 5778,
+      "mtime_ns": 1791434201595458930
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/gpu_memory_comparison.csv",
+      "sha256": "a4637eca136665af12e2af59a5e2f57f955b78d22d018a8c67b18255966a0468",
+      "bytes": 10883,
+      "mtime_ns": 1791431988509754266
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/gpu_memory_totals.csv",
+      "sha256": "d69cb801451ab790aab7546a61da17f3e5f15c015be14e5dbf8c3d5496a607a0",
+      "bytes": 1952,
+      "mtime_ns": 1791431988509754266
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/heavy_empirical_x3_reconciled.json",
+      "sha256": "47e5c731b6c3c23fc4bbd73d47c93fda5d23f3ee2db997ecf64a2497328dcea2",
+      "bytes": 117041,
+      "mtime_ns": 1791434095792708784
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/input_freeze.json",
+      "sha256": "6fead302bff55283c6be00689c6b46ce93dc0f4913618c897756450eca157399",
+      "bytes": 2557852,
+      "mtime_ns": 1791432003474030860
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/measurement_plan.json",
+      "sha256": "526f88fec109b35133247049b6288aef52c4db10d39e171b50da308bbe882c53",
+      "bytes": 294172,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/memory_reconciliation.json",
+      "sha256": "c42f53928a247a7b2da7b2e2d1a63939ac06e5db4c10990695d3c09990c6f158",
+      "bytes": 34332,
+      "mtime_ns": 1791431988509754266
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/memory_semantics_corrections.csv",
+      "sha256": "b47fd26544c8b75eb820c0d6af8ee939de6f0332e04a74b23f40c5380d755dd2",
+      "bytes": 130392,
+      "mtime_ns": 1791434095800708993
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/memory_semantics_corrections.json",
+      "sha256": "9668c1fbe30e34197c33b3f16ea85427836e1b4bb1e7ec0e2f463705ad071d59",
+      "bytes": 285453,
+      "mtime_ns": 1791434095800708993
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/memory_semantics_freeze.json",
+      "sha256": "07d561272b01342d235780ed62f0f1040def95f8a349d3afc0455280293a7447",
+      "bytes": 1785,
+      "mtime_ns": 1791432003442030270
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/module14f_gate.json",
+      "sha256": "939c051f00c344fedbb032ac19dc268f93e952d10017ae5055d866ee44c13e32",
+      "bytes": 838,
+      "mtime_ns": 1791434098224772446
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/module14f_summary.md",
+      "sha256": "74fa50daf1fcfd53203cb7ec49ab029aa99a26e0e1411e462e6bf1eb4688f261",
+      "bytes": 5088,
+      "mtime_ns": 1791434201595458930
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/next_stage_HEAVY_LOW_QPS_FIXED_COST_manifest.json",
+      "sha256": "870c83a10a5ca8a21336d259a08f17c6ec36511c270617e2bfaf76d87ede9e33",
+      "bytes": 3054,
+      "mtime_ns": 1791434098224772446
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/next_stage_HEAVY_MULTI_HOTSPOT_manifest.json",
+      "sha256": "30a642ecad94b490b3088ef7bf815433fbb45b8a7751498edaecf421a7b63ff7",
+      "bytes": 2946,
+      "mtime_ns": 1791434098224772446
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/next_stage_manifest_index.json",
+      "sha256": "505193973a876439f846b7c0ad1a4f633cec6c085b6924bb4bcde224b847618b",
+      "bytes": 811,
+      "mtime_ns": 1791434098224772446
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/ocr_x3_empirical_points.json",
+      "sha256": "ce72a4f0ba6d30e357a72270d62bdb9d81a572fe38a6863f77f3f4692a821b21",
+      "bytes": 9914,
+      "mtime_ns": 1791434095792708784
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/ocr_x3_measurement_rows.json",
+      "sha256": "7f2e23e5d8151b29e2a5d7fd96fdcce97eb3dd4721b6d6caa104d4d274b487b8",
+      "bytes": 29087,
+      "mtime_ns": 1791434095784708574
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/ocr_x3_measurements.csv",
+      "sha256": "54f72247107cba046ad007d45aaecf3ec4412f7695686192d70b953da6eaa65f",
+      "bytes": 17904,
+      "mtime_ns": 1791434095780708470
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/pipeline.log",
+      "sha256": "8976d3c04b6b7ca109ef4180f861d0bca7b635d931157ea5a4ed0d2f0836c633",
+      "bytes": 3117,
+      "mtime_ns": 1791434111573121459
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/profiling_freeze.json",
+      "sha256": "444c10ab75be0665539d6c469f5184eb7d7094b9b0b9e59f85ececefe357ddb2",
+      "bytes": 21601,
+      "mtime_ns": 1791432003482031007
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/protected_before.json",
+      "sha256": "682152b36a2afee97074fbb606ba3ce28d33b34ae5f03ace093f502c7f89a05a",
+      "bytes": 2554888,
+      "mtime_ns": 1791431988069746108
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr0_x2_rep1.json",
+      "sha256": "01632a89146c17b0902b808584efddb9167e8152f094ba063c1de5336f63c1d1",
+      "bytes": 11710768,
+      "mtime_ns": 1791432188362502756
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr0_x2_rep2.json",
+      "sha256": "a4d92083b1100320e25b5120cc2ce49fea63c04736ad75bdb66da86be913dda5",
+      "bytes": 11891566,
+      "mtime_ns": 1791432436756049027
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr0_x2_rep3.json",
+      "sha256": "ddfe094a0d7d799007e8bf6e00df763076935795fbef6a30a0b28736dcf75b68",
+      "bytes": 11985707,
+      "mtime_ns": 1791432515841610077
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr0_x3_rep1.json",
+      "sha256": "e547cdc5a687ceaf8710b3d8d0a2f82e2e377e8588b30e339f96ef23394e6b70",
+      "bytes": 14640179,
+      "mtime_ns": 1791432273247946952
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr0_x3_rep2.json",
+      "sha256": "b0cfa6f5b68fde8f2244a41b06d5f5ee2099e2501b5938f46ffbe55c28446bec",
+      "bytes": 14884557,
+      "mtime_ns": 1791432357949355268
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr0_x3_rep3.json",
+      "sha256": "df3fecaa428b486286239ef34da1773e562f343e70a3138f6a977defc510d0a4",
+      "bytes": 14641695,
+      "mtime_ns": 1791432600606992985
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr1_x2_rep1.json",
+      "sha256": "66c8c128982b2224165dbf3a9ee5901e8d80a56d963e061e519e6e6f6bf41f30",
+      "bytes": 13192057,
+      "mtime_ns": 1791432680707611233
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr1_x2_rep2.json",
+      "sha256": "3b54a85914a1c1ee13fdd5117604ffd38deb62d277e9b941557a58febb61b6de",
+      "bytes": 13154342,
+      "mtime_ns": 1791432931003788155
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr1_x2_rep3.json",
+      "sha256": "25c05cd6fd524d0e9e09484ab8b03ae4e0412245c6ff661f5ea510b6a9271e27",
+      "bytes": 13130336,
+      "mtime_ns": 1791433010955126769
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr1_x3_rep1.json",
+      "sha256": "5051593c139ff0d8c34425a5f83eb072f4870a3711fcb698ee6d355f5ddfcd80",
+      "bytes": 16486909,
+      "mtime_ns": 1791432766336120613
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr1_x3_rep2.json",
+      "sha256": "98adb7f9afd1fcc964712ec75fa029bbab8753a12ab8677858143662f18e4545",
+      "bytes": 16460133,
+      "mtime_ns": 1791432851340225915
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr1_x3_rep3.json",
+      "sha256": "b1e16a775218471c2d741796dc5ff4659bf3c585921d52dd4d964939532a133e",
+      "bytes": 16401395,
+      "mtime_ns": 1791433095822449600
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr2_x2_rep1.json",
+      "sha256": "58c34c4afddcf01ff8d91984c4af535af79030982e863262c541d4054bca78d5",
+      "bytes": 13801126,
+      "mtime_ns": 1791433175477391738
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr2_x2_rep2.json",
+      "sha256": "e3310e7e39898846dbe8935c86fdc54a920264bd38cdbf5f5a03fbf9c011baad",
+      "bytes": 13545446,
+      "mtime_ns": 1791433426141792866
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr2_x2_rep3.json",
+      "sha256": "00167040932cdd751e506636993857535e0501483750a4bcf1e63aa575902162",
+      "bytes": 13296120,
+      "mtime_ns": 1791433506212266499
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr2_x3_rep1.json",
+      "sha256": "4d4707539ef7c548f6f9c4445b406687cea5107ef122819782fa0f30c04d4830",
+      "bytes": 17044180,
+      "mtime_ns": 1791433260744380119
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr2_x3_rep2.json",
+      "sha256": "4dda7f4f9f41958e732edd28d3dfe6a0fb4ac701b7d2a986ac9e36df17b14a38",
+      "bytes": 16861316,
+      "mtime_ns": 1791433346719250105
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr2_x3_rep3.json",
+      "sha256": "e4708440f2aa85a681eb868271decc162604e055120b034fd450da54b23a0413",
+      "bytes": 16930779,
+      "mtime_ns": 1791433591050803457
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr3_x2_rep1.json",
+      "sha256": "b9256dea627a8880ba9e9b6af4c750c601667438e0afa1f41bf27f4bf1201fd7",
+      "bytes": 13684469,
+      "mtime_ns": 1791433670657116948
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr3_x2_rep2.json",
+      "sha256": "7a13227764bb263411539a71f83b33af4c6a6b46b405b550babd1a0e3f003084",
+      "bytes": 13689206,
+      "mtime_ns": 1791433918872010000
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr3_x2_rep3.json",
+      "sha256": "c528b9a3b99e13e839262c429e09a741420532ee1b08c03bec19ed874c0f696f",
+      "bytes": 13645908,
+      "mtime_ns": 1791433998462141427
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr3_x3_rep1.json",
+      "sha256": "0a3281c48ade4a5498a138ccd5a13529adf054e0230e59bafd8270002dc021af",
+      "bytes": 17897272,
+      "mtime_ns": 1791433754907505325
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr3_x3_rep2.json",
+      "sha256": "e55275acb377f6dbf3b4d5b85672b6a5be514cf9a14bfaa04c79b80dd6220de4",
+      "bytes": 18142974,
+      "mtime_ns": 1791433839393847602
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/raw_runs/ocr3_x3_rep3.json",
+      "sha256": "77b88d79c29b55d2c70a3c96fae4d9e0ebee9feed6e5a3fb82e3d84102596009",
+      "bytes": 18005073,
+      "mtime_ns": 1791434083308381637
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/regime_e_reconciled.json",
+      "sha256": "06749c1afe9459b861a9794422dfc3e1e86196770f007ddd6925bba581bfef38",
+      "bytes": 78866,
+      "mtime_ns": 1791434095788708679
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/replay.log",
+      "sha256": "b91a7ca5e7ac30e7f75c8038c5aa2563b8de500b49cb33460260012135631a77",
+      "bytes": 726,
+      "mtime_ns": 1791434097824761977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/resident_set_manifest.json",
+      "sha256": "e1ebe0b9c236eae2496a0b81b638ca2f17e62f0c9a479962ba9fe5b21fc0f6ce",
+      "bytes": 19622,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr0_x2_rep1.json",
+      "sha256": "5360d7a22905ad6bf85077436c22aa377e8086f1d650c2199a08f1e81b8d07d8",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr0_x2_rep2.json",
+      "sha256": "c97829e80321ca0c489e9d77e78c87c45dfec31ebc75512ccdcd8256a7cc712d",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr0_x2_rep3.json",
+      "sha256": "c5acb413f045d6a699543f4b8cf02a51bfaa4deadb0a3bdc5cedaccb9fae901b",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr0_x3_rep1.json",
+      "sha256": "b702c0f75d1d621374106678f9b6a7d6062844f3f55f41f9e95a2335266d1f17",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr0_x3_rep2.json",
+      "sha256": "fd7f2af0308e725cf1c4b9037e01d1111e58cb8cec13a3417d18afa1998a8b23",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr0_x3_rep3.json",
+      "sha256": "94598afba5661b8912f397fa8f57d4a86bedcdca98460ef94519b3317dd91a8c",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr1_x2_rep1.json",
+      "sha256": "3be234bbde9842d1e8fab69f1805710e8f127b0d8e6ad47fb332f80e5e3f0ea7",
+      "bytes": 786,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr1_x2_rep2.json",
+      "sha256": "ccfdac6de23d27b445fac8ea963464bcf0116fced5b67f8f12805de08c511446",
+      "bytes": 786,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr1_x2_rep3.json",
+      "sha256": "f44da233cfcfcaf613e10b875820827f9468b188f2471959471d503a4c93d9cc",
+      "bytes": 786,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr1_x3_rep1.json",
+      "sha256": "01f63627484eb92ca44a2c9df19bb05b9e895ee9fe4eda3ee507ffb3e8ad8af5",
+      "bytes": 786,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr1_x3_rep2.json",
+      "sha256": "7db37b77051dc7fe431883cf2f31f66962efdaac9d1e5e1514c175a0a80855c3",
+      "bytes": 786,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr1_x3_rep3.json",
+      "sha256": "a89189e1fa26df788a9979c960b9ec05a8492c8b844d9570b16da0eedab0f0a8",
+      "bytes": 786,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr2_x2_rep1.json",
+      "sha256": "b74872d832b73cd2e574e039aa81bbc1d6caf8283fb42029ad80f0b222ed86f2",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr2_x2_rep2.json",
+      "sha256": "c7a9a9f0118db8967531302979c7377a66690e29b9d033c8a389cb151547c5b2",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr2_x2_rep3.json",
+      "sha256": "41499615deac75913c59c93ad5fb595e279f966afc80f4482d3515dc7fa32d36",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr2_x3_rep1.json",
+      "sha256": "e594fa0f8714148147941d924dde093977846bda1ae91d8f5c329300e749efe9",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr2_x3_rep2.json",
+      "sha256": "e375662df5603df33c35febd1aab420486c9329610dd54aa4835c8cab670e029",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr2_x3_rep3.json",
+      "sha256": "88dcedf4b64a2bc94d130a66beb7cfe8dd634f06fa18fb43d111acfaff876e3d",
+      "bytes": 666,
+      "mtime_ns": 1791431988813759903
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr3_x2_rep1.json",
+      "sha256": "9320e56d0b9daaa7b90626bc44d49da40ef345e810e046b9216dd9b55e85fff3",
+      "bytes": 650,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr3_x2_rep2.json",
+      "sha256": "9533c2034517242cf8f753e9daee1d234dc0becfa2fb17acb15d277149459304",
+      "bytes": 650,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr3_x2_rep3.json",
+      "sha256": "18fe421c35b85c2e3a1cf3bc91c4dcf0e0c5d00dd0a6b6d0cadedaf69ca390ee",
+      "bytes": 650,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr3_x3_rep1.json",
+      "sha256": "d234d58776ca902f4ff3ef89777ccc4bd7983b51a692b6001a3a4c4aa3c8597c",
+      "bytes": 650,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr3_x3_rep2.json",
+      "sha256": "4e50ea21c88da89f9802477a03ce83d5b368259ed772efaf17a6b8830b6b7ddc",
+      "bytes": 650,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/slots/ocr3_x3_rep3.json",
+      "sha256": "c99a8a1de3295553532a4ee7820bbdb1bf2bbf94d67e8a754ff5d943981e25a2",
+      "bytes": 650,
+      "mtime_ns": 1791431988817759977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/structural_replay_empirical.csv",
+      "sha256": "6ca762d6dff856cbed0ea525a0b493f29b516ac9323f1bb04c754d5e47457658",
+      "bytes": 160059,
+      "mtime_ns": 1791434097824761977
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/structural_replay_freeze.json",
+      "sha256": "ad3c3b3ab77113a5669f1920eee56bd9407811a4b425e41695e757c9bc119ddf",
+      "bytes": 6988,
+      "mtime_ns": 1791434096200719466
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/structural_replay_rows.json",
+      "sha256": "f9316a37299b7d4c021490d5b2c9149f8094286260386246e3a1009cb9ee46a3",
+      "bytes": 222722,
+      "mtime_ns": 1791434097804761454
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/structural_transition_comparison.json",
+      "sha256": "92d72514510209506ae1162c07cbc66bc91da6e65ad7dc98c49af9d3b0438893",
+      "bytes": 62359,
+      "mtime_ns": 1791434098220772342
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/demand_balanced__B1.json",
+      "sha256": "547ffb95713d6f15fcc077a26edd8d3df153849a59267458dd7a50f8ca5ebcfd",
+      "bytes": 2165,
+      "mtime_ns": 1791434096236720408
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/demand_balanced__B3.json",
+      "sha256": "91f3a57f27f0cce16461ce85f0ba350fa7f81ebdb47ab2c83efe86e9019c2633",
+      "bytes": 31719,
+      "mtime_ns": 1791434096564728995
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/demand_balanced__B6.json",
+      "sha256": "5ac7e903f01d7d597cd570652501618351c0723c9b98b56964cd9bba8675117d",
+      "bytes": 30000,
+      "mtime_ns": 1791434096420725225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I1__B1.json",
+      "sha256": "657c1f5b4d95252ca0258661c0d389392232a5bfa57d7092c8db1f57b2bc5d5d",
+      "bytes": 2163,
+      "mtime_ns": 1791434096828735906
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I1__B3.json",
+      "sha256": "a7f8011fb307d5e4c869c1df0f858876e1ed64c6f7fefbd6f2d180ef9e5bdb7f",
+      "bytes": 32606,
+      "mtime_ns": 1791434097092742817
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I1__B6.json",
+      "sha256": "0ab5dd81cd80f7530d5a6c65ec0ca329151615a943e98b84f79b10b56aa93b5e",
+      "bytes": 35702,
+      "mtime_ns": 1791434097204745749
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I2__B1.json",
+      "sha256": "0e0b5e308511e3b575ed2cbbe2020aa89fbb2f3a91ddffdaf8f7f529a198f558",
+      "bytes": 2155,
+      "mtime_ns": 1791434096880737267
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I2__B3.json",
+      "sha256": "2951a864bc1ba848086e9d8d783f0c5d34f75e19dbea9c408e5c4530b700cde4",
+      "bytes": 38394,
+      "mtime_ns": 1791434097240746691
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I2__B6.json",
+      "sha256": "6d937f274078ac0e8de900b8453433875eca2293636a2d14df51e3712687807d",
+      "bytes": 40630,
+      "mtime_ns": 1791434097688758417
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I3__B1.json",
+      "sha256": "44d59128626d2100518f181eb616fe908b9a084a9b39b026878a809351661038",
+      "bytes": 2187,
+      "mtime_ns": 1791434097108743235
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I3__B3.json",
+      "sha256": "b45d6f87dab3a3f3052bab152f7a2576987f8dc4933928d8c42b18ac51906384",
+      "bytes": 33446,
+      "mtime_ns": 1791434097452752240
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/mix_03_I3__B6.json",
+      "sha256": "175c995a08bbfa95b7f664369e8d3cc7b00c8d882ea43f02a40341442b34b200",
+      "bytes": 40645,
+      "mtime_ns": 1791434097780760825
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/no_vqa_phase__B1.json",
+      "sha256": "969ffe14ba971c3b7c9ac5a0bfb90a2e05dc6e5e331602cd1fe2fb934b9ef03b",
+      "bytes": 27100,
+      "mtime_ns": 1791434096724733184
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/no_vqa_phase__B3.json",
+      "sha256": "c9d424e94b6f0e867fed186806de5c5b086b72dfc3511447d19fda5cea80029e",
+      "bytes": 26242,
+      "mtime_ns": 1791434096812735487
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/no_vqa_phase__B6.json",
+      "sha256": "38de2f376620e07d23449b0e1d7b8635efc44aaefd84fe99b1a09707fdb05bf3",
+      "bytes": 26228,
+      "mtime_ns": 1791434096864736848
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/reasoning_vqa_heavy__B1.json",
+      "sha256": "adf82554468ea89809bca5af19d5c9c1534daf060631ef29ed2b2a4020df96a8",
+      "bytes": 2173,
+      "mtime_ns": 1791434096584729518
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/reasoning_vqa_heavy__B3.json",
+      "sha256": "70c1997393d74ce595543e59bca34625a666ffa6818b49d0aeee76a843feb6ad",
+      "bytes": 30480,
+      "mtime_ns": 1791434096780734649
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/reasoning_vqa_heavy__B6.json",
+      "sha256": "ee6ce2090ebee69908287d565104b873899cf8a5ee6b4f4a17a8c2b03fd095d8",
+      "bytes": 31858,
+      "mtime_ns": 1791434096864736848
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/speech_heavy__B1.json",
+      "sha256": "ec733d59228f8008704053ffa0b8ba501b4d4c0e4eb7024fa5bb587465ef9e6a",
+      "bytes": 2159,
+      "mtime_ns": 1791434096236720408
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/speech_heavy__B3.json",
+      "sha256": "43b5afaaaf1420af05bd04af90c5a3c4b8cff686f5133fed649af13d0c9380d1",
+      "bytes": 30121,
+      "mtime_ns": 1791434096420725225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/speech_heavy__B6.json",
+      "sha256": "3949a19bbe38e6eae242687eeaca8f55c34e8510f951e465d99fd74b1e83d95c",
+      "bytes": 29439,
+      "mtime_ns": 1791434096372723968
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/text_ocr_heavy__B1.json",
+      "sha256": "0b80e53f6d29f10328226980c7c01066d154d2a1bd24d90e4de5077de2022072",
+      "bytes": 2163,
+      "mtime_ns": 1791434096440725749
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/text_ocr_heavy__B3.json",
+      "sha256": "9e4cb7bbb9c6f67fe7981034d59a0ad3e1258b9ad1d88b15f64bfe40629825c9",
+      "bytes": 29013,
+      "mtime_ns": 1791434096580729413
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/text_ocr_heavy__B6.json",
+      "sha256": "2840864b98d38fbd3adbfa724f6c49a644de0ae929c5e679582a525012cf2765",
+      "bytes": 29451,
+      "mtime_ns": 1791434096824735801
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/vision_heavy__B1.json",
+      "sha256": "6b706ea74be1bfdf1a8a22e9cde7759c81c006a073a25b259dc5487149d86996",
+      "bytes": 2159,
+      "mtime_ns": 1791434096388724387
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/vision_heavy__B3.json",
+      "sha256": "942ded73afd2b82b7d394e83ea06f6cd5cb368197a9c30e25682a7b6a0060628",
+      "bytes": 29273,
+      "mtime_ns": 1791434096568729099
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/witnesses/vision_heavy__B6.json",
+      "sha256": "698d128eb8c38c29f95c90a21846ab889189c1e176fd1db5ff70a37343ef7908",
+      "bytes": 29688,
+      "mtime_ns": 1791434096568729099
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/x4_profiling_decision.json",
+      "sha256": "b23f41583197e6579d076215a4d40d8b6c2265b3f2c1558dda25064f231d504e",
+      "bytes": 5590,
+      "mtime_ns": 1791434098224772446
+    }
+  ],
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1791431960709235657
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/analyze.py",
+      "sha256": "ff3d5f85f86430bfcede9d9b00509b0ddd870d0cff7c0d3177417da4af1c37fd",
+      "bytes": 6586,
+      "mtime_ns": 1791432108837492950
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/audit_final.py",
+      "sha256": "19c784fb8024bb9769734ba8bb67565a4cb353b6c64828c783273e0493cad2f9",
+      "bytes": 5527,
+      "mtime_ns": 1791434201039444575
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/campaign.py",
+      "sha256": "8a025d39f4ecc0e192123bcd1fcc03ce3f4cbc98006a4638e2ebc4e2280ed659",
+      "bytes": 845,
+      "mtime_ns": 1791431960713235732
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/common.py",
+      "sha256": "0cc65ab8ff4b984a899942f555cd5edcabb3fb3e6e26a9c6889f00ce04ab4cc9",
+      "bytes": 1325,
+      "mtime_ns": 1791431960709235657
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/finalize.py",
+      "sha256": "8b126f02d2c1b831986aa8b1947027802841c343aa4a9e03d64518930af7da5b",
+      "bytes": 16200,
+      "mtime_ns": 1791432332968943014
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/pipeline.py",
+      "sha256": "913830e7af91b5468e5f72819007e71036b4711b4843d71ec562a3016985a16e",
+      "bytes": 1063,
+      "mtime_ns": 1791432332972943079
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/prepare.py",
+      "sha256": "2d880be6fdab8c3b148ab3bd421fd035ad0650dca11c77e52d302c8e971c4fb0",
+      "bytes": 6555,
+      "mtime_ns": 1791431960709235657
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/reconcile.py",
+      "sha256": "0293cf8d38a9b798710e72eac73a6665ce496afc88b52b406463b93a3da16384",
+      "bytes": 7501,
+      "mtime_ns": 1791431960709235657
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/replay.py",
+      "sha256": "3e3ef50e6d24c382d801a385d307910e26e0bb9988369cdbc68eb62c6fdc6a96",
+      "bytes": 2895,
+      "mtime_ns": 1791432108841491021
+    }
+  ],
+  "historical_integrity_check": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/completion_verification.json",
+    "sha256": "e0d7889aa7c30b5c918005818ff39f2e3f1a9e2f0a6d2147e447870fc5dadcda",
+    "bytes": 413,
+    "mtime_ns": 1791434111525120205
+  },
+  "final_gate": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/module14f_gate.json",
+    "sha256": "939c051f00c344fedbb032ac19dc268f93e952d10017ae5055d866ee44c13e32",
+    "bytes": 838,
+    "mtime_ns": 1791434098224772446
+  }
+}

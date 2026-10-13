@@ -1,0 +1,51 @@
+{
+  "audited_at_utc": "2026-10-06T03:52:37.822062+00:00",
+  "ncu_audit": [
+    {
+      "binary": "/usr/bin/ncu",
+      "version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2021 NVIDIA Corporation\nVersion 2021.3.1.0 (build 30610069) (public-release)\n",
+      "query_exit_code": 255,
+      "query_output": "==WARNING== Could not deploy stock section files to \"/root/Documents/NVIDIA Nsight Compute/2021.3.1/Sections\".\nSet the HOME environment variable to a writable directory.\n==WARNING== Using \"/usr/lib/x86_64-linux-gnu/nsight-compute/target/linux-desktop-glibc_2_11_3-x64/../../sections\" instead.\n==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.\n==ERROR== Driver could not be loaded.\n"
+    },
+    {
+      "binary": "/opt/nvidia/nsight-compute/2026.1.1/ncu",
+      "version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2026 NVIDIA Corporation\nVersion 2026.1.1.0 (build 37634170) (public-release)\n",
+      "query_exit_code": 0,
+      "query_output": "Device NVIDIA GeForce RTX 4090 (AD102)\n==ERROR== ERR_NVGPUCTRPERM - The user does not have permission to access NVIDIA GPU Performance Counters on the target device 0. For instructions on enabling permissions and to get more information see https://developer.nvidia.com/ERR_NVGPUCTRPERM\n\n"
+    }
+  ],
+  "nsys_version": "NVIDIA Nsight Systems version 2025.6.3.541-256337736014v0",
+  "device_attributes": {
+    "major": 8,
+    "minor": 9,
+    "max_threads_per_block": 1024,
+    "max_threads_per_sm": 1536,
+    "regs_per_block": 65536,
+    "regs_per_sm": 65536,
+    "warp_size": 32,
+    "shared_per_block": 49152,
+    "shared_per_sm": 102400,
+    "sm_count": 128,
+    "shared_optin_per_block": 101376,
+    "reserved_shared_per_block": 1024
+  },
+  "official_occupancy_calculator_header": {
+    "path": "/usr/local/cuda-11.8/targets/x86_64-linux/include/cuda_occupancy.h",
+    "sha256": "2abf47c8e7be865463040cdb20dc146243606db220223baf2acd3d51984c610a"
+  },
+  "metadata_backend": "Nsight Systems CUDA/NVTX tracing and CUPTI activity SQLite, no hardware performance counters",
+  "preexisting_trace_schema_audited": "benchmark/results/characterization/qwen_nsys_v1/qwen_asr_n30.sqlite",
+  "metadata_fields_expected": [
+    "kernel order/name",
+    "registersPerThread",
+    "staticSharedMemory",
+    "dynamicSharedMemory",
+    "blockX/Y/Z",
+    "gridX/Y/Z"
+  ],
+  "theoretical_occupancy": "NVIDIA standalone CUDA occupancy calculator, driver device limits and traced launch resources; optional unknown function attributes disclosed, not achieved occupancy.",
+  "achieved_occupancy_available": false,
+  "SM_DRAM_L2_counter_model_implemented": false,
+  "CUDA_or_driver_changed": false,
+  "new_model_GPU_measurements_at_audit": 0
+}

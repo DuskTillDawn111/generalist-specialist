@@ -1,0 +1,594 @@
+{
+  "definition_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_definitions.json",
+    "sha256": "4e010f910ffb47a6da3306abb07d93f2dcb0bd2c91820e976df6cff20d364c1f",
+    "bytes": 11088,
+    "field": "B2"
+  },
+  "workloads": [
+    {
+      "workload": "demand_balanced",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+        "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a",
+        "bytes": 892832
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.004396423504293219,
+        "resnet50": 0.0020502821884851715,
+        "paddleocr": 0.003337710342684031,
+        "distil_whisper": 0.011639578470432385,
+        "qwen": 0.052065426408240745,
+        "whisper-small": 0.010078998868241
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "speech_heavy",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+        "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a",
+        "bytes": 892832
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.001978390576931949,
+        "resnet50": 0.0009226269848183273,
+        "paddleocr": 0.001501969654207814,
+        "distil_whisper": 0.031426861870167445,
+        "qwen": 0.023429441883708334,
+        "whisper-small": 0.015118498302361505
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "vision_heavy",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+        "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a",
+        "bytes": 892832
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0021102832820607455,
+        "resnet50": 0.007381015878546619,
+        "paddleocr": 0.0016021009644883353,
+        "distil_whisper": 0.005586997665807545,
+        "qwen": 0.02499140467595556,
+        "whisper-small": 0.0048379194567556814
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "text_ocr_heavy",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+        "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a",
+        "bytes": 892832
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.009232489359015758,
+        "resnet50": 0.0009226269848183273,
+        "paddleocr": 0.007009191719636466,
+        "distil_whisper": 0.005237810311694574,
+        "qwen": 0.023429441883708334,
+        "whisper-small": 0.004535549490708451
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "reasoning_vqa_heavy",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+        "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a",
+        "bytes": 892832
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0021102832820607455,
+        "resnet50": 0.0009841354504728824,
+        "paddleocr": 0.0016021009644883353,
+        "distil_whisper": 0.005586997665807545,
+        "qwen": 0.18743553506966668,
+        "whisper-small": 0.0048379194567556814
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "no_vqa_phase",
+      "B_SG_mib": 8009.257017387692,
+      "B_SG_gib": 7.821540056042668,
+      "state": {
+        "state_id": 5630,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 7210.0,
+        "M_safe_mib": 8009.257017387692
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+        "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a",
+        "bytes": 892832
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.005275708205151863,
+        "resnet50": 0.0024603386261822066,
+        "paddleocr": 0.004005252411220839,
+        "distil_whisper": 0.013967494164518864,
+        "whisper-small": 0.012094798641889205
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "heldout_mix_01_moderate",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e3_heldout_validation/heldout_mix_01_moderate/B2/search_cache/runtime_cache_manifest.json",
+        "sha256": "86251dc3635c7bad65760a8ed925aedbef6053c1ad65cd8cec2ac36a739a119f",
+        "bytes": 150628,
+        "field": "configurations.*.identity.deployment"
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0008234845208271998,
+        "resnet50": 0.0020631889654122706,
+        "paddleocr": 0.007389606782086913,
+        "distil_whisper": 0.03185821346855415,
+        "qwen": 0.009251779290023522,
+        "whisper-small": 0.013710555809041689
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "heldout_mix_01_high",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e3_heldout_validation/heldout_mix_01_high/B2/search_cache/runtime_cache_manifest.json",
+        "sha256": "9bd507177ae506df820036d300d2abeb446c4b0a0d5c162235ee2b889d590eb3",
+        "bytes": 150957,
+        "field": "configurations.*.identity.deployment"
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0014822721374889599,
+        "resnet50": 0.003713740137742087,
+        "paddleocr": 0.013301292207756442,
+        "distil_whisper": 0.05734478424339747,
+        "qwen": 0.01665320272204234,
+        "whisper-small": 0.024679000456275038
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "heldout_mix_02_moderate",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e3_heldout_validation/heldout_mix_02_moderate/B2/search_cache/runtime_cache_manifest.json",
+        "sha256": "f769ba96ebe5a74a3544e273487d94cae0d195d02bda672cf5dec7276c1642e9",
+        "bytes": 150261,
+        "field": "configurations.*.identity.deployment"
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0023486729156224173,
+        "resnet50": 0.010738259317330294,
+        "paddleocr": 0.0002788950911636079,
+        "distil_whisper": 0.0016640377849528834,
+        "qwen": 0.05583554367989602,
+        "whisper-small": 0.00616864791530339
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "heldout_mix_02_high",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e3_heldout_validation/heldout_mix_02_high/B2/search_cache/runtime_cache_manifest.json",
+        "sha256": "4b59cd18f172fd9251747ca0b8f85d91dec715fe26a4f9f2eaa4dfeb486c7a50",
+        "bytes": 150551,
+        "field": "configurations.*.identity.deployment"
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.004227611248120351,
+        "resnet50": 0.01932886677119453,
+        "paddleocr": 0.000502011164094494,
+        "distil_whisper": 0.0029952680129151895,
+        "qwen": 0.10050397862381284,
+        "whisper-small": 0.0111035662475461
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "heldout_mix_03_moderate",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e3_heldout_validation/heldout_mix_03_moderate/B2/search_cache/runtime_cache_manifest.json",
+        "sha256": "ebee76beff7e714644e2d4e80ca8e0425e0a909c290300440ca34aceb94d4534",
+        "bytes": 150784,
+        "field": "configurations.*.identity.deployment"
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0005280613861291442,
+        "resnet50": 0.004626203583535121,
+        "paddleocr": 0.011047937390183794,
+        "distil_whisper": 0.006940918913385842,
+        "qwen": 0.013634486926817688,
+        "whisper-small": 0.011469177790566009
+      },
+      "canonical_capacity_feasible": true
+    },
+    {
+      "workload": "heldout_mix_03_high",
+      "B_SG_mib": 27980.189424959943,
+      "B_SG_gib": 27.324403735312444,
+      "state": {
+        "state_id": 5666,
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "M_plan_mib": 25188.0,
+        "M_safe_mib": 27980.189424959943
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e3_heldout_validation/heldout_mix_03_high/B2/search_cache/runtime_cache_manifest.json",
+        "sha256": "337dc140f74e631e9ca3152cb8d8a1f4a37da71bafaea4e11be029b076c10f08",
+        "bytes": 151233,
+        "field": "configurations.*.identity.deployment"
+      },
+      "selected_task_paths": {
+        "text": "distilbert",
+        "image": "resnet50",
+        "ocr": "paddleocr",
+        "asr": "distil_whisper",
+        "visual_qa": "qwen",
+        "lid": "whisper-small"
+      },
+      "frozen_fixed_routing_capacity_feasible": true,
+      "fixed_route_utilization": {
+        "distilbert": 0.0009505104950324596,
+        "resnet50": 0.008327166450363218,
+        "paddleocr": 0.019886287302330833,
+        "distil_whisper": 0.012493654044094514,
+        "qwen": 0.024542076468271834,
+        "whisper-small": 0.020644520023018812
+      },
+      "canonical_capacity_feasible": true
+    }
+  ],
+  "distribution_statistics_mib": {
+    "n": 12,
+    "min": 8009.257017387692,
+    "mean": 26315.945057662255,
+    "median": 27980.189424959943,
+    "p95": 27980.189424959943,
+    "max": 27980.189424959943
+  },
+  "distribution_counts": {
+    "27980.189424959943": 11,
+    "8009.257017387692": 1
+  },
+  "B_SG_global_mib": 27980.189424959943,
+  "B_SG_global_gib": 27.324403735312444,
+  "meaning": "At this budget every frozen SG deployment satisfies the memory budget; fixed-route capacity is reported separately.",
+  "runtime_performance_used": false
+}

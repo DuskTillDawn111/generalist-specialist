@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "module": "4B",
+  "decision": "NEUTRAL",
+  "files": {
+    "pilot_freeze.json": "1f952c8e2eab307649b12ec4df4028798dd31d457e133740f7edf659909aa2d5",
+    "routing_search_config.json": "803709a3fca2a8bf64aca12982bab35830f52f6bdeebe118af60edf758109289",
+    "runtime_cache_manifest.json": "2a8d870b7d19d844ae97e79272d677fb4a0c9460d1de103513f3e38293215b3f",
+    "routing_search_trace.json": "0afd8485193e889d7b6dcdc8affe5c602286b625194064b6cf0801aa7a4cd12f",
+    "routing_search_trace.md": "02dd0029c115abdece84511e5e0e6ad94bfb040b203277f04e5fc419ca858647",
+    "runtime_evaluations.json": "66eeb1e6e6f850f721f0d88c256f5adcbd1b589e441b4793714cab97303e610f",
+    "decision_audit.json": "8c284f764030171b840bf318222f0d7ed176a26a2c12ab1418dbcb7ba50b52af",
+    "confirmation_results.json": "cdb9c44457826fab18e352137c9e18121742fe99f7d6271b6f50189ae8b6a6ae",
+    "module4b_summary.md": "6043b9db4ebfb705c172593e8a9d2719f29f8ff8ca0cdc682b09bc143a94e71f",
+    "post_run_verification.json": "5963d73e0488662d08124ca2e152fd074c3fde64dcaf1e4e9c91093bfeb61bff",
+    "post_run_provenance.json": "ff32ccc6b453e018fbadde61513e39f550f305eb2fdce04250f3ffef26c8bcb5",
+    "implementation_repair_audit.json": "8679f033cea91035877ce698d733f4bbb971eb914c3aabdfad6698fd534dc228"
+  },
+  "stopped_after_module4b": true
+}

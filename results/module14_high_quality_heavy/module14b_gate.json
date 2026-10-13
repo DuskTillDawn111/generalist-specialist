@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-10-07T17:57:49.655337+00:00",
+  "gate": "HEAVY_SPECIALIST_POOL_READY",
+  "selected_task_count": 5,
+  "missing_tasks": [],
+  "OCR_status": "SELECTED_HEAVY_OCR",
+  "OCR_final_gap_round_completed": true,
+  "third_OCR_round_allowed": false,
+  "Image_ceiling_exception_authorized": true,
+  "other_four_tasks_quality_rule_relaxed": false,
+  "deployment_or_V3_outcome_used": "NO",
+  "stop_after_Module14B": true
+}

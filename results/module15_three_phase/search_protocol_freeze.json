@@ -1,0 +1,142 @@
+{
+  "at_utc": "2026-10-08T04:53:14.617218+00:00",
+  "module": "15",
+  "name": "CAPACITY_CONSTRAINED_THREE_PHASE_EXISTENCE_TEST",
+  "scope": "Full frozen measured E/H identity union, original task-quality admission and Module14F memory unchanged; first reproducible witness only.",
+  "catalog": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module15_three_phase/existing_empirical_catalog.json",
+    "sha256": "d0f344caf0b3daee3b38072093d728ea515626a8f6ad0c4aa19c922679c8538b",
+    "bytes": 136678,
+    "mtime_ns": 1791435033319397792
+  },
+  "quality_policy": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+    "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+    "bytes": 10083,
+    "mtime_ns": 1790999416678434743
+  },
+  "budgets": [
+    {
+      "id": "B1",
+      "safe_memory_budget_mib": 17007.17405495223
+    },
+    {
+      "id": "B3",
+      "safe_memory_budget_mib": 32019.254406266693
+    },
+    {
+      "id": "B6",
+      "safe_memory_budget_mib": 49140
+    }
+  ],
+  "task_priority": [
+    "asr",
+    "lid",
+    "text",
+    "ocr",
+    "image"
+  ],
+  "background_task": "visual_qa",
+  "background_rps": 0.2,
+  "background_rule": "Independently required VQA request every5s; all three admitted G paths compete, no Specialist VQA exists. Background unchanged at every stage.",
+  "rho_max": 0.8,
+  "latency_SLO": null,
+  "latency_metrics_not_constraints": [
+    "E2E mean",
+    "E2E P95"
+  ],
+  "primary_objective": "minimum measured safe residency over full model pool and all available measured counts",
+  "secondary_objective": "among ALL equal minimum-safe-memory states, unchanged frozen J-router; no preceding replica-count objective and no artificial G/S forcing",
+  "baseline": "Original V3 full-pool J-first discrete solver, same rates/budget/empirical catalog; CPU comparison only",
+  "candidate_CG": "(.8*g_G(1) - background_rps*s_G,bg/1000)/(s_G,target/1000)",
+  "candidate_CS": ".8*g_S(1)/(s_S,target/1000)",
+  "candidate_requirements": "0<CG<CS, real G task and background measurements, real S task measurement, G1+S1 measured memory fits unchanged budget",
+  "candidate_order": [
+    "task priority",
+    "existing budget ascending",
+    "G1+S1 safe memory ascending",
+    "Generalist identity",
+    "Specialist identity"
+  ],
+  "point_fraction_order": {
+    "LOW": [
+      0.25,
+      0.5
+    ],
+    "MID": [
+      0.5,
+      0.25,
+      0.75
+    ],
+    "HIGH": [
+      0.25,
+      0.1,
+      0.5
+    ]
+  },
+  "point_definition": {
+    "LOW": "fraction*CG",
+    "MID": "CG+fraction*(CS-CG)",
+    "HIGH": "CS+fraction*CG"
+  },
+  "point_checks": {
+    "LOW": "full-pool optimum has exactly candidate G1 and no target S",
+    "MID": "same G1 present, exactly candidate S1, target S fraction>=.8",
+    "HIGH": "same G1/S1 are optimum, both routes strictly positive, target rate>CS, max predicted rho<=.78 (selection margin only; operational gate remains .8)"
+  },
+  "acceptance": "All three globally minimum-memory full-pool states with accepted unmodified J-routing; same G, S, budget, background; rejects any point where competitors replace G or choose other measured count/family. Missing replica counts not treated as impossible.",
+  "witness_choice": "First complete candidate under declared order; first acceptable fraction for each stage; no GPU results consulted.",
+  "GPU_protocol": {
+    "points": 3,
+    "repetitions": 3,
+    "seeds": [
+      15101,
+      15202,
+      15303
+    ],
+    "measurement_seconds": 120.0,
+    "warmup_seconds": 10.0,
+    "point_order": [
+      "LOW",
+      "MID",
+      "HIGH"
+    ],
+    "fresh_processes_per_repetition": true,
+    "no_outcome_retries_or_point_movement": true,
+    "stability": "unchanged stability_v2 DEFAULT_THRESHOLDS; all9 must be steady and memory-budget-valid; HIGH all3 must contain actual G and S target completions",
+    "E2E_latency": "report target/background/system mean and P95, no undefined SLO claims",
+    "new_replica_capacity_profiling": 0
+  },
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module15/solver.py",
+      "sha256": "098ce3c5fd4b9c020bedb255d5b0e33503127c99c95b5dfe73c2a45228be0d7e",
+      "bytes": 5209,
+      "mtime_ns": 1791435194584543600
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module15/freeze.py",
+      "sha256": "4e658da77a1adb144412a70b140aec9ad694f8d31e3043f9a5f6aa16f0f650fe",
+      "bytes": 3306,
+      "mtime_ns": 1791435194584543600
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/routing/e2e_router.py",
+      "sha256": "cf72a43d69303ca01d8366c1d14cf2c84264cafb6e50080515b55e008e978677",
+      "bytes": 4375,
+      "mtime_ns": 1791309953480422186
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11/latency.py",
+      "sha256": "fc8445d30d1adbabe0e0c4ff9910515ed84ff4948932e1030e1aaa1630c2432b",
+      "bytes": 10730,
+      "mtime_ns": 1791359911178665757
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/solver.py",
+      "sha256": "f4739a74a47d6696844de0fcabf790b8e4219ade6951c3e5ca9e99195de6e883",
+      "bytes": 4215,
+      "mtime_ns": 1791378115199691305
+    }
+  ]
+}

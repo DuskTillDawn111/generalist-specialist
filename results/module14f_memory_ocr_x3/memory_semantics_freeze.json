@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-10-08T04:00:03.447218+00:00",
+  "name": "EMPIRICAL_POSTWARM_IDLE_GROUP_ENVELOPE",
+  "definition": "For each already-measured family/count, retain historical M and take max with the arithmetic mean of each complete THREE-independent-repetition postwarm-idle observation group. No sample maxima, peak memory, device overhead, extrapolated next counts or synthetic padding are inserted. All groups use the same owned worker-family NVML sum and frozen safe factor.",
+  "why": "Historical one-sample pre-cohort M1 may understate warmed residency; an empirical envelope across existing measured warmup/task scopes reconciles both regimes without shrinking costs to fit outcomes. Same rule applied to E/H shared identities.",
+  "group_rule": "Dataset/run-series/task or existing 14E context/regime, exactly repetitions1/2/3 with independent PIDs/seeds; exclude invalid/missing/non-isolated sessions.",
+  "single_replica_catalog_policy": "Update local memory attribute to reconciled M1 solely to satisfy existing loader identity M1==profile.memory; identity/capability/role/quality/s0 and original files unchanged.",
+  "safe_factor": 1.110853955254881,
+  "new_x3_memory": "Arithmetic mean of three x3 postwarm-idle family observations; same empirical envelope definition; existing counts may include newly measured auxiliary x2 group, g2 frozen.",
+  "unmeasured_memory": "UNKNOWN; no linear next-count inference",
+  "budgets_unchanged": true,
+  "latency_unchanged": true,
+  "source_observations": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/existing_postwarm_memory_observations.json",
+    "sha256": "89698d9dd665b7e0a7a9c2deb87e45b27a62a4bf02c29e27bd8e46618093d825",
+    "bytes": 168985,
+    "mtime_ns": 1791432003442030270
+  }
+}

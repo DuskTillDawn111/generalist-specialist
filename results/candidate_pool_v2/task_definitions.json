@@ -1,0 +1,265 @@
+{
+  "text": {
+    "task": "text",
+    "definition": "Sentence sentiment classification; no passage QA or generic text generation.",
+    "input_schema": {
+      "transport": "existing worker request: request_id,pool_id,arrival_index,task_type,sample,submit_ns",
+      "sample": {
+        "id": "stable sample identifier",
+        "task": "text_classification",
+        "dataset": "sst2",
+        "split": "validation",
+        "input_type": "text",
+        "input": "sentence string",
+        "label": "negative|positive",
+        "label_id": "integer 0|1"
+      },
+      "annotation_policy": "Labels are used only to score output; never included in the model input."
+    },
+    "output_schema": {
+      "prediction": "normalized recognized text or task label",
+      "reference": "normalized reference",
+      "correct": "boolean"
+    },
+    "dataset": "sst2",
+    "split": "validation",
+    "source": "https://huggingface.co/datasets/stanfordnlp/sst2",
+    "evaluation_manifest": "/root/autodl-tmp/generalist-specialist/benchmark/manifests/text_classification.jsonl",
+    "manifest_sha256": "ae85cf831653ee00b6f3252107644485e624e9126a8037bb472746a6f9633928",
+    "sample_count": 200,
+    "metric": "accuracy",
+    "label_space": {
+      "0": "negative",
+      "1": "positive"
+    },
+    "existing_adapter": [
+      "/root/autodl-tmp/generalist-specialist/joint_deploy/distilbert_worker.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_distilbert_sst2.py"
+    ],
+    "service_pool": "/root/autodl-tmp/generalist-specialist/benchmark/task_pools/mixed_formal_1200_6task.jsonl",
+    "preprocessing": "Sentence sentiment classification; no passage QA or generic text generation.",
+    "scope_note": "Historical datasets and metrics frozen. Sanity calls establish interface compatibility, not benchmark quality."
+  },
+  "image": {
+    "task": "image",
+    "definition": "Closed-set 10-class Imagenette; gather matching ImageNet-1K logits before argmax.",
+    "input_schema": {
+      "transport": "existing worker request: request_id,pool_id,arrival_index,task_type,sample,submit_ns",
+      "sample": {
+        "id": "stable sample identifier",
+        "task": "image_classification",
+        "dataset": "imagenette",
+        "split": "validation",
+        "input_type": "image",
+        "input": "existing local RGB-convertible image path",
+        "label": "Imagenette name",
+        "label_id": "integer 0..9"
+      },
+      "annotation_policy": "Labels are used only to score output; never included in the model input."
+    },
+    "output_schema": {
+      "prediction": "normalized recognized text or task label",
+      "reference": "normalized reference",
+      "correct": "boolean"
+    },
+    "dataset": "imagenette",
+    "split": "validation",
+    "source": "https://github.com/fastai/imagenette",
+    "evaluation_manifest": "/root/autodl-tmp/generalist-specialist/benchmark/manifests/image_classification.jsonl",
+    "manifest_sha256": "c397c506707d35750720c7605b312f90fea1682d4c7f8d6b588bddc77346150d",
+    "sample_count": 200,
+    "metric": "accuracy",
+    "label_space": {
+      "0": "tench",
+      "1": "English springer",
+      "2": "cassette player",
+      "3": "chain saw",
+      "4": "church",
+      "5": "French horn",
+      "6": "garbage truck",
+      "7": "gas pump",
+      "8": "golf ball",
+      "9": "parachute"
+    },
+    "existing_adapter": [
+      "/root/autodl-tmp/generalist-specialist/joint_deploy/resnet_worker.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_resnet_imagenette.py"
+    ],
+    "service_pool": "/root/autodl-tmp/generalist-specialist/benchmark/task_pools/mixed_formal_1200_6task.jsonl",
+    "preprocessing": "Decode same RGB images and same closed-set mapping. Use each official pretrained weight transform; ConvNeXt uses its own officially prescribed resize/crop/normalization.",
+    "scope_note": "Historical datasets and metrics frozen. Sanity calls establish interface compatibility, not benchmark quality."
+  },
+  "ocr": {
+    "task": "ocr",
+    "definition": "Recognize the single word in a supplied image crop. Output recognized text; lowercase and retain only a-z/0-9 for scoring.",
+    "input_schema": {
+      "transport": "existing worker request: request_id,pool_id,arrival_index,task_type,sample,submit_ns",
+      "sample": {
+        "id": "stable sample identifier",
+        "task": "ocr",
+        "dataset": "iiit5k",
+        "split": "test",
+        "input_type": "image",
+        "input": "existing local word-crop image path",
+        "label": "recognized reference word",
+        "normalized_label": "optional normalized word"
+      },
+      "annotation_policy": "Labels are used only to score output; never included in the model input."
+    },
+    "output_schema": {
+      "prediction": "normalized recognized text or task label",
+      "reference": "normalized reference",
+      "correct": "boolean"
+    },
+    "dataset": "iiit5k",
+    "split": "test",
+    "source": "https://cvit.iiit.ac.in/research/projects/cvit-projects/the-iiit-5k-word-dataset",
+    "evaluation_manifest": "/root/autodl-tmp/generalist-specialist/benchmark/manifests/ocr.jsonl",
+    "manifest_sha256": "b2a785e560a20d2256b6ef6cb938f2d7541fe32a927a57dc37d8e858f91e4602",
+    "sample_count": 200,
+    "metric": "exact_match",
+    "label_space": null,
+    "existing_adapter": [
+      "/root/autodl-tmp/generalist-specialist/joint_deploy/ocr_worker.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_paddleocr_iiit5k.py"
+    ],
+    "service_pool": "/root/autodl-tmp/generalist-specialist/benchmark/task_pools/mixed_formal_1200_6task.jsonl",
+    "preprocessing": "Recognize the single word in a supplied image crop. Output recognized text; lowercase and retain only a-z/0-9 for scoring.",
+    "scope_note": "Historical datasets and metrics frozen. Sanity calls establish interface compatibility, not benchmark quality."
+  },
+  "asr": {
+    "task": "asr",
+    "definition": "English audio transcription. Decode mono 16kHz; lowercase, retain apostrophes, remove other punctuation and collapse whitespace. WER=sum(word errors)/sum(reference words).",
+    "input_schema": {
+      "transport": "existing worker request: request_id,pool_id,arrival_index,task_type,sample,submit_ns",
+      "sample": {
+        "id": "stable sample identifier",
+        "task": "asr",
+        "dataset": "librispeech",
+        "split": "test-clean",
+        "input_type": "audio",
+        "input": "existing local audio path",
+        "label": "reference transcript",
+        "duration_s": "positive float",
+        "sample_rate": "16000",
+        "normalized_label": "optional normalized reference"
+      },
+      "annotation_policy": "Labels are used only to score output; never included in the model input."
+    },
+    "output_schema": {
+      "prediction": "normalized recognized text or task label",
+      "reference": "normalized reference",
+      "word_errors": "nonnegative integer",
+      "reference_words": "positive integer",
+      "wer": "word_errors/reference_words"
+    },
+    "dataset": "librispeech",
+    "split": "test-clean",
+    "source": "https://www.openslr.org/12",
+    "evaluation_manifest": "/root/autodl-tmp/generalist-specialist/benchmark/manifests/asr.jsonl",
+    "manifest_sha256": "c503b754c72f7aa3aee7f1861c7903d5b2870aa56296a08c48ede742fafcfaa0",
+    "sample_count": 200,
+    "metric": "corpus_word_error_rate",
+    "label_space": null,
+    "existing_adapter": [
+      "/root/autodl-tmp/generalist-specialist/joint_deploy/whisper_worker.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_whisper_librispeech.py"
+    ],
+    "service_pool": "/root/autodl-tmp/generalist-specialist/benchmark/task_pools/mixed_formal_1200_6task.jsonl",
+    "preprocessing": "English audio transcription. Decode mono 16kHz; lowercase, retain apostrophes, remove other punctuation and collapse whitespace. WER=sum(word errors)/sum(reference words).",
+    "scope_note": "Historical datasets and metrics frozen. Sanity calls establish interface compatibility, not benchmark quality.",
+    "historical_latency_subset": "[4,6) seconds; sanity ASR selected from the same subset; service supports general durations."
+  },
+  "visual_qa": {
+    "task": "visual_qa",
+    "definition": "ScienceQA-IMG multiple-choice question + choices + hint + image; answer one option letter.",
+    "input_schema": {
+      "transport": "existing worker request: request_id,pool_id,arrival_index,task_type,sample,submit_ns",
+      "sample": {
+        "id": "stable sample identifier",
+        "task": "visual_qa",
+        "dataset": "scienceqa",
+        "split": "validation",
+        "input_type": "image",
+        "input": "existing local image path",
+        "question": "string",
+        "choices": "list[string]",
+        "hint": "string",
+        "label": "option letter",
+        "label_id": "zero-based choice index"
+      },
+      "annotation_policy": "Labels are used only to score output; never included in the model input."
+    },
+    "output_schema": {
+      "prediction": "normalized recognized text or task label",
+      "reference": "normalized reference",
+      "correct": "boolean"
+    },
+    "dataset": "scienceqa",
+    "split": "validation",
+    "source": "https://github.com/lupantech/ScienceQA",
+    "evaluation_manifest": "/root/autodl-tmp/generalist-specialist/benchmark/manifests/visual_qa.jsonl",
+    "manifest_sha256": "64cfc7ed03695ba56d46aead35786802d38d5512a4b04ee2a07313c83f06fb1f",
+    "sample_count": 200,
+    "metric": "accuracy",
+    "label_space": "Per-sample option letters A..chr(64+len(choices))",
+    "existing_adapter": [
+      "/root/autodl-tmp/generalist-specialist/joint_deploy/qwen_worker.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_scienceqa.py"
+    ],
+    "service_pool": "/root/autodl-tmp/generalist-specialist/benchmark/task_pools/mixed_formal_1200_6task.jsonl",
+    "preprocessing": "ScienceQA-IMG multiple-choice question + choices + hint + image; answer one option letter.",
+    "scope_note": "Historical datasets and metrics frozen. Sanity calls establish interface compatibility, not benchmark quality."
+  },
+  "lid": {
+    "task": "lid",
+    "definition": "Spoken-language identification from audio, independent of transcription. Output current language code; trim and lowercase only.",
+    "input_schema": {
+      "transport": "existing worker request: request_id,pool_id,arrival_index,task_type,sample,submit_ns",
+      "sample": {
+        "id": "stable sample identifier",
+        "task": "lid",
+        "dataset": "voxlingua107",
+        "split": "dev",
+        "input_type": "audio",
+        "input": "existing local audio path",
+        "label": "language code",
+        "duration_s": "positive float",
+        "sample_rate": "16000"
+      },
+      "annotation_policy": "Labels are used only to score output; never included in the model input."
+    },
+    "output_schema": {
+      "prediction": "normalized recognized text or task label",
+      "reference": "normalized reference",
+      "correct": "boolean"
+    },
+    "dataset": "voxlingua107",
+    "split": "dev",
+    "source": "https://bark.phon.ioc.ee/voxlingua107/",
+    "evaluation_manifest": "/root/autodl-tmp/generalist-specialist/benchmark/manifests/lid.jsonl",
+    "manifest_sha256": "b70382fca14f088aadac64591287943145e5a4764f796a2d587094b22bfb6432",
+    "sample_count": 200,
+    "metric": "accuracy",
+    "label_space": [
+      "ar",
+      "de",
+      "en",
+      "es",
+      "fa",
+      "fr",
+      "ja",
+      "ru",
+      "tr",
+      "zh"
+    ],
+    "existing_adapter": [
+      "/root/autodl-tmp/generalist-specialist/joint_deploy/whisper_worker.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_whisper_voxlingua.py",
+      "/root/autodl-tmp/generalist-specialist/benchmark/scripts/eval_qwen_voxlingua.py"
+    ],
+    "service_pool": "/root/autodl-tmp/generalist-specialist/benchmark/task_pools/mixed_formal_1200_6task.jsonl",
+    "preprocessing": "Spoken-language identification from audio, independent of transcription. Output current language code; trim and lowercase only.",
+    "scope_note": "Historical datasets and metrics frozen. Sanity calls establish interface compatibility, not benchmark quality."
+  }
+}

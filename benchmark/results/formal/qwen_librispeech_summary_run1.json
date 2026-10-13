@@ -1,0 +1,148 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "task": "asr",
+  "dataset": "LibriSpeech",
+  "split": "test-clean",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "batch_size": 1,
+  "audio_output_enabled": false,
+  "generation": {
+    "do_sample": false,
+    "return_audio": false,
+    "max_new_tokens": 256,
+    "max_new_tokens_hits": 0
+  },
+  "multimodal_processing": {
+    "qwen_omni_utils": true,
+    "qwen_omni_utils_version": "0.0.9",
+    "use_audio_in_video": false,
+    "required_audio_inputs": [
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  "prompt_version": "v1",
+  "prompt": "Transcribe the English speech in this audio. Output only the transcription. Do not provide any explanation.",
+  "normalization": "lowercase + remove punctuation except apostrophe + normalize spaces",
+  "reference_source": "raw manifest label; normalized_label field is not used for WER",
+  "generated_token_extraction": "output[:, input_length:] before batch_decode",
+  "num_samples": 200,
+  "total_audio_duration_s": 1629.4,
+  "long_utterances_gt_30s": 2,
+  "corpus_word_errors": 186,
+  "corpus_reference_words": 4457,
+  "wer": 0.041732,
+  "mean_utterance_wer": 0.041948,
+  "input_tokens": {
+    "mean": 244.62,
+    "min": 90,
+    "max": 889
+  },
+  "output_tokens": {
+    "total": 5591,
+    "mean": 27.955,
+    "min": 5,
+    "max": 131
+  },
+  "parameters_m": 8931.814,
+  "checkpoint_safetensors_total_mb": 21326.886,
+  "checkpoint_note": "Checkpoint disk size includes components not necessarily loaded when enable_audio_output=False.",
+  "model_load_time_s": 3.373,
+  "warmup_runs": 5,
+  "all_samples": {
+    "model_latency": {
+      "mean_ms": 552.005,
+      "p50_ms": 475.679,
+      "p95_ms": 1202.091,
+      "p99_ms": 1717.122,
+      "min_ms": 108.916,
+      "max_ms": 2465.323
+    },
+    "e2e_latency": {
+      "mean_ms": 602.89,
+      "p50_ms": 528.712,
+      "p95_ms": 1266.825,
+      "p99_ms": 1772.206,
+      "min_ms": 151.759,
+      "max_ms": 2514.613
+    },
+    "model_rtf": {
+      "mean": 0.070071,
+      "p50": 0.068968,
+      "p95": 0.092039,
+      "p99": 0.102644,
+      "min": 0.031118,
+      "max": 0.214749
+    },
+    "e2e_rtf": {
+      "mean": 0.079033,
+      "p50": 0.077144,
+      "p95": 0.102882,
+      "p99": 0.121641,
+      "min": 0.038247,
+      "max": 0.219043
+    },
+    "aggregate_model_rtf": 0.067756,
+    "aggregate_e2e_rtf": 0.074001,
+    "model_request_service_rate_proxy_qps": 1.812,
+    "e2e_request_service_rate_proxy_qps": 1.659
+  },
+  "fixed_latency_subset": {
+    "duration_range_s": [
+      4.0,
+      6.0
+    ],
+    "interval": "[min, max)",
+    "num_samples": 38,
+    "model_latency": {
+      "mean_ms": 374.17,
+      "p50_ms": 377.642,
+      "p95_ms": 523.248,
+      "p99_ms": 564.485,
+      "min_ms": 147.549,
+      "max_ms": 571.307
+    },
+    "e2e_latency": {
+      "mean_ms": 424.636,
+      "p50_ms": 427.616,
+      "p95_ms": 570.194,
+      "p99_ms": 610.102,
+      "min_ms": 208.99,
+      "max_ms": 615.87
+    },
+    "model_rtf": {
+      "mean": 0.076237,
+      "p50": 0.07645,
+      "p95": 0.096628,
+      "p99": 0.120286,
+      "min": 0.036477,
+      "max": 0.133867
+    },
+    "e2e_rtf": {
+      "mean": 0.086677,
+      "p50": 0.08556,
+      "p95": 0.106041,
+      "p99": 0.133203,
+      "min": 0.051666,
+      "max": 0.145346
+    },
+    "aggregate_model_rtf": 0.075822,
+    "aggregate_e2e_rtf": 0.086048,
+    "model_request_service_rate_proxy_qps": 2.673,
+    "e2e_request_service_rate_proxy_qps": 2.355
+  },
+  "throughput_note": "Request QPS values are sequential batch-1 service-rate proxies (1000 / mean latency), not load-tested concurrent throughput.",
+  "torch_idle_allocated_mb": 17043.442,
+  "torch_peak_allocated_mb": 17392.352,
+  "memory_note": "Torch allocator memory is framework-specific auxiliary data; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "synchronized model.generate() after local audio loading, process_mm_info, processor execution and H2D; includes audio encoder and autoregressive text generation",
+    "e2e_latency": "message construction + local FLAC read/decode in process_mm_info + chat template + audio processor + H2D + model.generate() + generated token slicing + decode + ASR normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.52.3",
+  "timestamp": "2026-09-18T01:26:52.371191+08:00"
+}

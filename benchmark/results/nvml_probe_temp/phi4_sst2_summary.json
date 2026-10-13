@@ -1,0 +1,68 @@
+{
+  "model": "Phi-4-multimodal-instruct",
+  "task": "text_classification",
+  "dataset": "SST-2",
+  "split": "validation",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "attention_backend": "sdpa",
+  "batch_size": 1,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 16
+  },
+  "prompt_version": "v1",
+  "prompt": "Classify the sentiment of the following sentence. Answer with exactly one label: positive or negative. Do not provide any explanation.",
+  "prompt_composition": "<task prompt>\\n\\nSentence:\\n<original SST-2 sentence>",
+  "output_normalization": "strip + lowercase only",
+  "num_samples": 200,
+  "correct": 181,
+  "accuracy": 0.905,
+  "parameters_m": 5574.46,
+  "checkpoint_size_mb": 10632.732,
+  "processor_load_time_s": 1.105,
+  "model_load_time_s": 13.471,
+  "warmup_runs": 5,
+  "input_tokens": {
+    "mean": 53.62,
+    "min": 34,
+    "max": 81
+  },
+  "output_tokens": {
+    "total": 400,
+    "mean": 2.0,
+    "min": 2,
+    "max": 2
+  },
+  "model_latency": {
+    "mean_ms": 67.022,
+    "p50_ms": 66.899,
+    "p95_ms": 68.65,
+    "p99_ms": 70.228,
+    "min_ms": 65.273,
+    "max_ms": 71.587
+  },
+  "e2e_latency": {
+    "mean_ms": 67.906,
+    "p50_ms": 67.774,
+    "p95_ms": 69.485,
+    "p99_ms": 71.184,
+    "min_ms": 66.167,
+    "max_ms": 72.446
+  },
+  "model_request_throughput_qps": 14.921,
+  "e2e_request_throughput_qps": 14.726,
+  "generation_output_tokens_per_s": 29.841,
+  "torch_idle_allocated_mb": 10666.682,
+  "torch_peak_allocated_mb": 10713.86,
+  "memory_note": "Torch allocator memory is framework-specific auxiliary data; cross-model deployment VRAM will later use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "autoregressive model.generate only, after tokenization and H2D",
+    "e2e_latency": "task/chat prompt construction + tokenization + H2D + autoregressive generation + generated-text decoding + label normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.48.2",
+  "timestamp": "2026-09-18T13:51:24.150136+08:00"
+}

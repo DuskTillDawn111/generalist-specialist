@@ -1,0 +1,44 @@
+{
+  "module": 27,
+  "at_utc": "2026-10-09T11:45:25.355443+00:00",
+  "status": "NO_POSITIVE_EXPLORATORY_CANDIDATE",
+  "Stage_A_passed": true,
+  "Stage_B_GPU_attempts": 5,
+  "Stage_B_budget": 6,
+  "Stage_B_user_maximum": 12,
+  "Stage_C_GPU_attempts": 0,
+  "positive_exploratory_candidate": null,
+  "independently_replicated": false,
+  "autonomously_selected": false,
+  "all_gpu_runs_preserved": true,
+  "no_outcome_retry": true,
+  "no_budget_expansion": true,
+  "original_utility_quality_references_unchanged": true,
+  "historical_integrity": {
+    "metadata_unchanged": true,
+    "historical_files": 16226,
+    "consumed_scientific_SHA256_unchanged": true,
+    "changed": []
+  },
+  "remaining_work": false,
+  "next_Module_automatic": false,
+  "completed_and_stopped": true,
+  "failure": null,
+  "queue_failure": null,
+  "initial_pre_inference_identity_failure_preserved": true,
+  "initial_identity_check_not_GPU_measurement": true,
+  "B_budget_checks_used": 6,
+  "remaining_exploration_cap_after_check": 5,
+  "historical_GPU_UUID_difference_explicit": true,
+  "hardware_identity_amendment": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module27_positive_split_discovery/hardware_identity_amendment.json",
+    "sha256": "fecafa94298ae4970435e90c915e50596430c55f80099e691cb31dd50831c531",
+    "bytes": 23146
+  },
+  "CPU_acceptance_passed": true,
+  "CPU_acceptance_amendment": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module27_positive_split_discovery/analysis_acceptance_amendment.json",
+    "sha256": "e4a67274ad297c83bd874bfde522be76b3382c9fca28f0726cc2a9a75a544370",
+    "bytes": 2517
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "module": "24B",
+  "status": "HIGH_NO_UTILITY_GAIN",
+  "reason": "At least one comparable independent pair failed the required positive-utility criterion",
+  "HIGH_CPU_autonomous_GS_reproduced": true,
+  "frozen_ASR_G_fraction": 0.13183320461827497,
+  "HIGH_GS_executed_in_preflight": true,
+  "HIGH_GS_executed_formally": true,
+  "real_replica_colocation_capacity_supported": true,
+  "formal_GPU_runs": 2,
+  "independent_comparable_pairs": 1,
+  "independent_positive_HIGH_utility_supported": false,
+  "all_three_delta_U_above_001": false,
+  "actual_nonzero_GS": true,
+  "aggregate": {
+    "kind": "INDEPENDENT_PAIR_SUMMARY",
+    "pairs": 1,
+    "delta_U_mean": -0.10671055642208183,
+    "paired_t_95_CI": null,
+    "t_CI_assumptions": "Independent fresh session pairs, approximately normal paired differences; n<=3 cannot validate normality",
+    "no_request_random_split": true,
+    "sign_test_one_sided_p": null,
+    "uncertainty": "Three pairs give limited distribution-free evidence; no cross-combination predictor generalization is established",
+    "gate": "HIGH_NO_UTILITY_GAIN"
+  },
+  "pairs": [
+    {
+      "kind": "PAIRED_COMPARISON",
+      "repetition": 1,
+      "proposed_U": -1.625463080094763,
+      "control_U": -1.518752523672681,
+      "delta_U": -0.10671055642208183,
+      "status": "COMPARABLE",
+      "independent_pair": true,
+      "matched": true,
+      "above_positive_threshold": false,
+      "conditional_temporal_sensitivity": {
+        "available": true,
+        "method": "Matched 20s arrival-block resampling, 1000 draws, empirical percentile 95%",
+        "conditional_percentile_95": [
+          -0.17894853354322127,
+          -0.05204527084244898
+        ],
+        "valid_draws": 992,
+        "missing_task_draws": 8,
+        "block_count": 6,
+        "block_seconds": 20,
+        "scope": "Temporal sensitivity conditional on one GPU session per arm. Carryover queues, sparse LID and six blocks limit validity. Not independent-session confidence or extra test samples."
+      },
+      "independent_per_pair_CI": "Not identifiable: one GPU session per arm; repeat-level CI uses original independent pairs only",
+      "delta_T_contribution": 0.00016339869281045694,
+      "delta_L_contribution": -0.030519393755143676,
+      "delta_P_contribution": -0.07634492063734288,
+      "delta_M_contribution": -9.64072240577929e-06
+    },
+    {
+      "kind": "PAIRED_COMPARISON",
+      "repetition": 2,
+      "proposed_U": null,
+      "control_U": null,
+      "delta_U": null,
+      "status": "NOT_EXECUTED_OR_INCOMPLETE_PAIR",
+      "independent_pair": true
+    },
+    {
+      "kind": "PAIRED_COMPARISON",
+      "repetition": 3,
+      "proposed_U": null,
+      "control_U": null,
+      "delta_U": null,
+      "status": "NOT_EXECUTED_OR_INCOMPLETE_PAIR",
+      "independent_pair": true
+    }
+  ],
+  "historical_Module24A_gate": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module24_utility_calibration/module24a_gate.json",
+    "sha256": "c8da4b4f1140d8538adf4e755c78349ddc4369c57df7bb9970667f69959fb337",
+    "bytes": 1602
+  },
+  "historical_files_unchanged": true,
+  "historical_file_count": 16039,
+  "Module24A_gate_modified": false,
+  "preflight_used_as_independent_gain_evidence": false,
+  "development_probe_used_as_success_evidence": false,
+  "predictor_refit_on_this_experiment": false,
+  "independent_ranking_across_combinations_established": false,
+  "LOW_MID_both_G_only_not_failure": true,
+  "Module24C_worth_continuing": false,
+  "Module24C_executed": false,
+  "stop_after_Module24B": true,
+  "formal_stop": {
+    "repetition": 1,
+    "reason": "NEGATIVE_UTILITY_GAIN",
+    "delta_U": -0.10671055642208183
+  },
+  "early_stop_negative_result_is_not_three_pair_effect_estimate": true
+}

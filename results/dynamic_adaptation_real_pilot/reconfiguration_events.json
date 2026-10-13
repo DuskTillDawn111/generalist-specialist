@@ -1,0 +1,1453 @@
+{
+  "events": [
+    {
+      "event_index": 0,
+      "mode": "cold_milp_initialization",
+      "iteration": null,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 0
+      },
+      "models_to_unload": [
+        "paddleocr",
+        "resnet50",
+        "whisper"
+      ],
+      "models_to_load": [],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T09:24:04.294624+00:00",
+        "unix_ns": 1790846644294645082,
+        "monotonic_ns": 3799339559405638
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790846638095041959,
+          "monotonic_ns": 3799333359800550,
+          "timestamp": "2026-10-01T09:23:58.095042+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 37521,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 37521
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T09:24:05.838632+00:00",
+        "unix_ns": 1790846645838643184,
+        "monotonic_ns": 3799341103403582
+      },
+      "measured_switch_time_ms": 1543.997944,
+      "cost": {
+        "models_added": 0,
+        "models_removed": 3,
+        "added_vram_mib": 0,
+        "removed_vram_mib": 2812.0,
+        "measured_switch_time_ms": 1543.997944
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 37521
+      },
+      "unload_evidence": {
+        "paddleocr": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T09:24:04.709600+00:00",
+            "unix_ns": 1790846644709635118,
+            "monotonic_ns": 3799339974396590
+          }
+        },
+        "resnet50": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T09:24:05.223993+00:00",
+            "unix_ns": 1790846645224033044,
+            "monotonic_ns": 3799340488794336
+          }
+        },
+        "whisper": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T09:24:05.838488+00:00",
+            "unix_ns": 1790846645838522404,
+            "monotonic_ns": 3799341103283824
+          }
+        }
+      },
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w1_w2",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 0,
+      "models_removed": 3,
+      "VRAM_added_mib": 0,
+      "VRAM_removed_mib": 2812.0,
+      "VRAM_moved_mib": 2812.0
+    },
+    {
+      "event_index": 1,
+      "mode": "normal",
+      "iteration": 0,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 0
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "whisper"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T09:24:05.839873+00:00",
+        "unix_ns": 1790846645839890023,
+        "monotonic_ns": 3799341104650627
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790846638095041959,
+          "monotonic_ns": 3799333359800550,
+          "timestamp": "2026-10-01T09:23:58.095042+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 37521,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 37521
+        },
+        "whisper": {
+          "unix_ns": 1790846649484731126,
+          "monotonic_ns": 3799344749489386,
+          "timestamp": "2026-10-01T09:24:09.484731+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 37558,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 37558
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T09:24:09.484990+00:00",
+        "unix_ns": 1790846649485004233,
+        "monotonic_ns": 3799344749765620
+      },
+      "measured_switch_time_ms": 3645.114993,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 1626.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 3645.114993
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 37521
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w1_w2",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 1626.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 1626.0
+    },
+    {
+      "event_index": 2,
+      "mode": "normal",
+      "iteration": 1,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "resnet50"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T09:24:09.486703+00:00",
+        "unix_ns": 1790846649486723529,
+        "monotonic_ns": 3799344751484257
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790846638095041959,
+          "monotonic_ns": 3799333359800550,
+          "timestamp": "2026-10-01T09:23:58.095042+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 37521,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 37521
+        },
+        "whisper": {
+          "unix_ns": 1790846649484731126,
+          "monotonic_ns": 3799344749489386,
+          "timestamp": "2026-10-01T09:24:09.484731+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 37558,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 37558
+        },
+        "resnet50": {
+          "unix_ns": 1790846651914491775,
+          "monotonic_ns": 3799347179249744,
+          "timestamp": "2026-10-01T09:24:11.914492+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 37570,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 37570
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T09:24:11.914789+00:00",
+        "unix_ns": 1790846651914803448,
+        "monotonic_ns": 3799347179564711
+      },
+      "measured_switch_time_ms": 2428.080454,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 604.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 2428.080454
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 37521,
+        "whisper": 37558
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w1_w2",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 604.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 604.0
+    },
+    {
+      "event_index": 3,
+      "mode": "normal",
+      "iteration": 2,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 1,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "distilbert"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T09:24:11.916825+00:00",
+        "unix_ns": 1790846651916844837,
+        "monotonic_ns": 3799347181605449
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790846638095041959,
+          "monotonic_ns": 3799333359800550,
+          "timestamp": "2026-10-01T09:23:58.095042+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 37521,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 37521
+        },
+        "whisper": {
+          "unix_ns": 1790846649484731126,
+          "monotonic_ns": 3799344749489386,
+          "timestamp": "2026-10-01T09:24:09.484731+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 37558,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 37558
+        },
+        "resnet50": {
+          "unix_ns": 1790846651914491775,
+          "monotonic_ns": 3799347179249744,
+          "timestamp": "2026-10-01T09:24:11.914492+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 37570,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 37570
+        },
+        "distilbert": {
+          "unix_ns": 1790846655247143692,
+          "monotonic_ns": 3799350511901758,
+          "timestamp": "2026-10-01T09:24:15.247144+00:00",
+          "payload": {
+            "worker": "distilbert",
+            "pid": 37579,
+            "model": "DistilBERT-SST2",
+            "tasks": [
+              "text"
+            ]
+          },
+          "pid": 37579
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T09:24:15.247438+00:00",
+        "unix_ns": 1790846655247453432,
+        "monotonic_ns": 3799350512214708
+      },
+      "measured_switch_time_ms": 3330.609259,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 750.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 3330.609259
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 37521,
+        "whisper": 37558,
+        "resnet50": 37570
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w1_w2",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 750.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 750.0
+    },
+    {
+      "event_index": 0,
+      "mode": "normal",
+      "iteration": 0,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 1,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "distilbert"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T09:48:55.145599+00:00",
+        "unix_ns": 1790848135145605552,
+        "monotonic_ns": 3800830410365863
+      },
+      "workers_ready_timestamp": {
+        "paddleocr": {
+          "unix_ns": 1790848120488273053,
+          "monotonic_ns": 3800815753031736,
+          "timestamp": "2026-10-01T09:48:40.488273+00:00",
+          "payload": {
+            "worker": "paddleocr",
+            "pid": 42590,
+            "model": "PP-OCRv6-medium-rec",
+            "tasks": [
+              "ocr"
+            ]
+          },
+          "pid": 42590
+        },
+        "qwen": {
+          "unix_ns": 1790848128983709555,
+          "monotonic_ns": 3800824248468137,
+          "timestamp": "2026-10-01T09:48:48.983709+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 43165,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 43165
+        },
+        "resnet50": {
+          "unix_ns": 1790848131417192514,
+          "monotonic_ns": 3800826681951199,
+          "timestamp": "2026-10-01T09:48:51.417192+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 43175,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 43175
+        },
+        "whisper": {
+          "unix_ns": 1790848135144150730,
+          "monotonic_ns": 3800830408909405,
+          "timestamp": "2026-10-01T09:48:55.144151+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 43184,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 43184
+        },
+        "distilbert": {
+          "unix_ns": 1790848138489134205,
+          "monotonic_ns": 3800833753892646,
+          "timestamp": "2026-10-01T09:48:58.489134+00:00",
+          "payload": {
+            "worker": "distilbert",
+            "pid": 43199,
+            "model": "DistilBERT-SST2",
+            "tasks": [
+              "text"
+            ]
+          },
+          "pid": 43199
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T09:48:58.489459+00:00",
+        "unix_ns": 1790848138489472083,
+        "monotonic_ns": 3800833754233630
+      },
+      "measured_switch_time_ms": 3343.867767,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 750.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 3343.867767
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "paddleocr": 42590,
+        "qwen": 43165,
+        "resnet50": 43175,
+        "whisper": 43184
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w1_w2",
+      "strategy": "D2",
+      "drives_primary_sequence": true,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 750.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 750.0
+    },
+    {
+      "event_index": 0,
+      "mode": "cold_milp_initialization",
+      "iteration": null,
+      "old_deployment": {
+        "distilbert": 1,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 0
+      },
+      "models_to_unload": [
+        "distilbert",
+        "paddleocr",
+        "resnet50",
+        "whisper"
+      ],
+      "models_to_load": [],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T11:28:57.876826+00:00",
+        "unix_ns": 1790854137876838199,
+        "monotonic_ns": 3806833141598489
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790854131754334037,
+          "monotonic_ns": 3806827019092472,
+          "timestamp": "2026-10-01T11:28:51.754334+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 55667,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 55667
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T11:29:00.085176+00:00",
+        "unix_ns": 1790854140085188808,
+        "monotonic_ns": 3806835349949209
+      },
+      "measured_switch_time_ms": 2208.35072,
+      "cost": {
+        "models_added": 0,
+        "models_removed": 4,
+        "added_vram_mib": 0,
+        "removed_vram_mib": 3562.0,
+        "measured_switch_time_ms": 2208.35072
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 55667
+      },
+      "unload_evidence": {
+        "distilbert": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T11:28:58.542103+00:00",
+            "unix_ns": 1790854138542131670,
+            "monotonic_ns": 3806833806892704
+          }
+        },
+        "paddleocr": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T11:28:58.956318+00:00",
+            "unix_ns": 1790854138956370148,
+            "monotonic_ns": 3806834221131415
+          }
+        },
+        "resnet50": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T11:28:59.470624+00:00",
+            "unix_ns": 1790854139470653192,
+            "monotonic_ns": 3806834735414388
+          }
+        },
+        "whisper": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T11:29:00.085037+00:00",
+            "unix_ns": 1790854140085071574,
+            "monotonic_ns": 3806835349832770
+          }
+        }
+      },
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w2_w3",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 0,
+      "models_removed": 4,
+      "VRAM_added_mib": 0,
+      "VRAM_removed_mib": 3562.0,
+      "VRAM_moved_mib": 3562.0
+    },
+    {
+      "event_index": 1,
+      "mode": "normal",
+      "iteration": 0,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 0
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "whisper"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T11:29:00.086480+00:00",
+        "unix_ns": 1790854140086497150,
+        "monotonic_ns": 3806835351257656
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790854131754334037,
+          "monotonic_ns": 3806827019092472,
+          "timestamp": "2026-10-01T11:28:51.754334+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 55667,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 55667
+        },
+        "whisper": {
+          "unix_ns": 1790854143740784314,
+          "monotonic_ns": 3806839005543035,
+          "timestamp": "2026-10-01T11:29:03.740784+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 55704,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 55704
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T11:29:03.741022+00:00",
+        "unix_ns": 1790854143741036384,
+        "monotonic_ns": 3806839005797660
+      },
+      "measured_switch_time_ms": 3654.540004,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 1626.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 3654.540004
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 55667
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w2_w3",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 1626.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 1626.0
+    },
+    {
+      "event_index": 2,
+      "mode": "normal",
+      "iteration": 1,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "resnet50"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T11:29:03.742719+00:00",
+        "unix_ns": 1790854143742737336,
+        "monotonic_ns": 3806839007498097
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790854131754334037,
+          "monotonic_ns": 3806827019092472,
+          "timestamp": "2026-10-01T11:28:51.754334+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 55667,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 55667
+        },
+        "whisper": {
+          "unix_ns": 1790854143740784314,
+          "monotonic_ns": 3806839005543035,
+          "timestamp": "2026-10-01T11:29:03.740784+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 55704,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 55704
+        },
+        "resnet50": {
+          "unix_ns": 1790854146178512648,
+          "monotonic_ns": 3806841443271257,
+          "timestamp": "2026-10-01T11:29:06.178513+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 55720,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 55720
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T11:29:06.178689+00:00",
+        "unix_ns": 1790854146178696339,
+        "monotonic_ns": 3806841443457381
+      },
+      "measured_switch_time_ms": 2435.959284,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 604.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 2435.959284
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 55667,
+        "whisper": 55704
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w2_w3",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 604.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 604.0
+    },
+    {
+      "event_index": 3,
+      "mode": "normal",
+      "iteration": 2,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "paddleocr"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T11:29:06.179838+00:00",
+        "unix_ns": 1790854146179848593,
+        "monotonic_ns": 3806841444608979
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790854131754334037,
+          "monotonic_ns": 3806827019092472,
+          "timestamp": "2026-10-01T11:28:51.754334+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 55667,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 55667
+        },
+        "whisper": {
+          "unix_ns": 1790854143740784314,
+          "monotonic_ns": 3806839005543035,
+          "timestamp": "2026-10-01T11:29:03.740784+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 55704,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 55704
+        },
+        "resnet50": {
+          "unix_ns": 1790854146178512648,
+          "monotonic_ns": 3806841443271257,
+          "timestamp": "2026-10-01T11:29:06.178513+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 55720,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 55720
+        },
+        "paddleocr": {
+          "unix_ns": 1790854148439135015,
+          "monotonic_ns": 3806843703893910,
+          "timestamp": "2026-10-01T11:29:08.439135+00:00",
+          "payload": {
+            "worker": "paddleocr",
+            "pid": 55729,
+            "model": "PP-OCRv6-medium-rec",
+            "tasks": [
+              "ocr"
+            ]
+          },
+          "pid": 55729
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T11:29:08.439335+00:00",
+        "unix_ns": 1790854148439342122,
+        "monotonic_ns": 3806843704103388
+      },
+      "measured_switch_time_ms": 2259.494409,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 582.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 2259.494409
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 55667,
+        "whisper": 55704,
+        "resnet50": 55720
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w2_w3",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 582.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 582.0
+    },
+    {
+      "event_index": 0,
+      "mode": "cold_milp_initialization",
+      "iteration": null,
+      "old_deployment": {
+        "distilbert": 1,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 0
+      },
+      "models_to_unload": [
+        "distilbert",
+        "paddleocr",
+        "resnet50",
+        "whisper"
+      ],
+      "models_to_load": [],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T13:09:51.010977+00:00",
+        "unix_ns": 1790860191010983040,
+        "monotonic_ns": 3812886275743243
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790860184535475679,
+          "monotonic_ns": 3812879800233949,
+          "timestamp": "2026-10-01T13:09:44.535476+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 68841,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 68841
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T13:09:53.569492+00:00",
+        "unix_ns": 1790860193569495331,
+        "monotonic_ns": 3812888834255479
+      },
+      "measured_switch_time_ms": 2558.512236,
+      "cost": {
+        "models_added": 0,
+        "models_removed": 4,
+        "added_vram_mib": 0,
+        "removed_vram_mib": 3562.0,
+        "measured_switch_time_ms": 2558.512236
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 68841
+      },
+      "unload_evidence": {
+        "distilbert": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T13:09:51.726154+00:00",
+            "unix_ns": 1790860191726183809,
+            "monotonic_ns": 3812886990945017
+          }
+        },
+        "paddleocr": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T13:09:52.190190+00:00",
+            "unix_ns": 1790860192190207265,
+            "monotonic_ns": 3812887454968374
+          }
+        },
+        "resnet50": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T13:09:52.854462+00:00",
+            "unix_ns": 1790860192854482028,
+            "monotonic_ns": 3812888119242900
+          }
+        },
+        "whisper": {
+          "forced": false,
+          "exit_code": 0,
+          "exited_timestamp": {
+            "timestamp": "2026-10-01T13:09:53.569405+00:00",
+            "unix_ns": 1790860193569436969,
+            "monotonic_ns": 3812888834197833
+          }
+        }
+      },
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w3_w1",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 0,
+      "models_removed": 4,
+      "VRAM_added_mib": 0,
+      "VRAM_removed_mib": 3562.0,
+      "VRAM_moved_mib": 3562.0
+    },
+    {
+      "event_index": 1,
+      "mode": "normal",
+      "iteration": 0,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 0
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "whisper"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T13:09:53.570067+00:00",
+        "unix_ns": 1790860193570072585,
+        "monotonic_ns": 3812888834832755
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790860184535475679,
+          "monotonic_ns": 3812879800233949,
+          "timestamp": "2026-10-01T13:09:44.535476+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 68841,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 68841
+        },
+        "whisper": {
+          "unix_ns": 1790860197396732642,
+          "monotonic_ns": 3812892661490565,
+          "timestamp": "2026-10-01T13:09:57.396733+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 68874,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 68874
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T13:09:57.396903+00:00",
+        "unix_ns": 1790860197396909334,
+        "monotonic_ns": 3812892661670304
+      },
+      "measured_switch_time_ms": 3826.837549,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 1626.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 3826.837549
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 68841
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w3_w1",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 1626.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 1626.0
+    },
+    {
+      "event_index": 2,
+      "mode": "normal",
+      "iteration": 1,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 0,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "resnet50"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T13:09:57.397531+00:00",
+        "unix_ns": 1790860197397536285,
+        "monotonic_ns": 3812892662296437
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790860184535475679,
+          "monotonic_ns": 3812879800233949,
+          "timestamp": "2026-10-01T13:09:44.535476+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 68841,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 68841
+        },
+        "whisper": {
+          "unix_ns": 1790860197396732642,
+          "monotonic_ns": 3812892661490565,
+          "timestamp": "2026-10-01T13:09:57.396733+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 68874,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 68874
+        },
+        "resnet50": {
+          "unix_ns": 1790860199992437802,
+          "monotonic_ns": 3812895257196039,
+          "timestamp": "2026-10-01T13:09:59.992438+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 68891,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 68891
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T13:09:59.992665+00:00",
+        "unix_ns": 1790860199992672175,
+        "monotonic_ns": 3812895257433633
+      },
+      "measured_switch_time_ms": 2595.137196,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 604.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 2595.137196
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 68841,
+        "whisper": 68874
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w3_w1",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 604.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 604.0
+    },
+    {
+      "event_index": 3,
+      "mode": "normal",
+      "iteration": 2,
+      "old_deployment": {
+        "distilbert": 0,
+        "paddleocr": 0,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "new_deployment": {
+        "distilbert": 0,
+        "paddleocr": 1,
+        "qwen": 1,
+        "resnet50": 1,
+        "whisper": 1
+      },
+      "models_to_unload": [],
+      "models_to_load": [
+        "paddleocr"
+      ],
+      "switch_start_timestamp": {
+        "timestamp": "2026-10-01T13:09:59.993735+00:00",
+        "unix_ns": 1790860199993744379,
+        "monotonic_ns": 3812895258504650
+      },
+      "workers_ready_timestamp": {
+        "qwen": {
+          "unix_ns": 1790860184535475679,
+          "monotonic_ns": 3812879800233949,
+          "timestamp": "2026-10-01T13:09:44.535476+00:00",
+          "payload": {
+            "worker": "qwen",
+            "pid": 68841,
+            "model": "Qwen2.5-Omni-7B",
+            "tasks": [
+              "text",
+              "image",
+              "ocr",
+              "asr",
+              "visual_qa",
+              "lid",
+              "text_qa"
+            ]
+          },
+          "pid": 68841
+        },
+        "whisper": {
+          "unix_ns": 1790860197396732642,
+          "monotonic_ns": 3812892661490565,
+          "timestamp": "2026-10-01T13:09:57.396733+00:00",
+          "payload": {
+            "worker": "whisper",
+            "pid": 68874,
+            "model": "Whisper-small",
+            "tasks": [
+              "asr",
+              "lid"
+            ]
+          },
+          "pid": 68874
+        },
+        "resnet50": {
+          "unix_ns": 1790860199992437802,
+          "monotonic_ns": 3812895257196039,
+          "timestamp": "2026-10-01T13:09:59.992438+00:00",
+          "payload": {
+            "worker": "resnet50",
+            "pid": 68891,
+            "model": "ResNet50",
+            "evaluation_mode": "closed_set_10_class",
+            "tasks": [
+              "image"
+            ]
+          },
+          "pid": 68891
+        },
+        "paddleocr": {
+          "unix_ns": 1790860202350158135,
+          "monotonic_ns": 3812897614917063,
+          "timestamp": "2026-10-01T13:10:02.350158+00:00",
+          "payload": {
+            "worker": "paddleocr",
+            "pid": 68898,
+            "model": "PP-OCRv6-medium-rec",
+            "tasks": [
+              "ocr"
+            ]
+          },
+          "pid": 68898
+        }
+      },
+      "switch_ready_timestamp": {
+        "timestamp": "2026-10-01T13:10:02.350316+00:00",
+        "unix_ns": 1790860202350320886,
+        "monotonic_ns": 3812897615082159
+      },
+      "measured_switch_time_ms": 2356.577509,
+      "cost": {
+        "models_added": 1,
+        "models_removed": 0,
+        "added_vram_mib": 582.0,
+        "removed_vram_mib": 0,
+        "measured_switch_time_ms": 2356.577509
+      },
+      "measurement_context": "post-search accepted-path execution; no concurrent request arrivals",
+      "retained_worker_pids": {
+        "qwen": 68841,
+        "whisper": 68874,
+        "resnet50": 68891
+      },
+      "unload_evidence": {},
+      "status": "applied_all_workers_ready",
+      "transition": "transition_w3_w1",
+      "strategy": "D1",
+      "drives_primary_sequence": false,
+      "models_added": 1,
+      "models_removed": 0,
+      "VRAM_added_mib": 582.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 582.0
+    }
+  ],
+  "setup_teardown_and_candidate_profiling_excluded": true
+}

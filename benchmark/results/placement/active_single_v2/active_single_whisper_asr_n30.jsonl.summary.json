@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "whisper",
+  "target_task": "asr",
+  "target_count": 30,
+  "mean_worker_latency_ms": 192.7349739,
+  "min_worker_latency_ms": 82.641062,
+  "max_worker_latency_ms": 463.28831,
+  "output": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v2/active_single_whisper_asr_n30.jsonl"
+}

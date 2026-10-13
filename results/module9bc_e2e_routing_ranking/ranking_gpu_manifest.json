@@ -1,0 +1,37 @@
+{
+  "frozen_before_new_GPU": true,
+  "at_utc": "2026-10-06T18:05:58.820507+00:00",
+  "selection_rule": "at most two cells sorted by descending count of iterations with changed class-diversified Top-2, then cell id; exact frozen budget per search. Canonical routing in both arms to isolate ranking.",
+  "selected_cells": [
+    "C07",
+    "C06"
+  ],
+  "changed_iteration_counts": {
+    "C01": 0,
+    "C02": 0,
+    "C03": 0,
+    "C04": 0,
+    "C05": 0,
+    "C06": 1,
+    "C07": 2,
+    "C08": 0,
+    "C09": 1,
+    "C10": 0,
+    "C11": 1,
+    "C12": 1
+  },
+  "status": "PLANNED",
+  "same_routing_both_arms": "canonical",
+  "search_budget": {
+    "top_b": 2,
+    "max_iterations": 3,
+    "max_unique_runtime_states": 6,
+    "patience": 1,
+    "search_repetitions": 3,
+    "seed_confirmation_repetitions": 2,
+    "final_confirmation_repetitions": 2
+  },
+  "max_new_states": 24,
+  "max_new_runs": 72,
+  "reuse": "none across ranking arms; independently evaluate both arms; no confirmations added"
+}

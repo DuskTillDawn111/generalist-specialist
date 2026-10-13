@@ -1,0 +1,242 @@
+[
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/final_benchmark_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module22_mid_high_utility/module22_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/memory_surrogate_diagnostic.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/aggregate_reference_workload.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d3_failure_diagnosis/crossover_stage2_gate_policy.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/module8e1_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_campaign_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/resource_campaign_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/pilot_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9a1_task_conditioned_pilot/partial_gate_reason_audit.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9a2_repeatability/repeatability_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9a_interference/interference_model_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9a_scheduling_tax/interference_model_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module11_replica_and_cost/replica_evidence_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9bc_preflight_numerical_failure_001/surrogate_audit.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9bc_e2e_routing_ranking/surrogate_audit.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9bc_e2e_routing_ranking/routing_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module9bc_e2e_routing_ranking/ranking_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module10_specialist_saturation/gpu_aggregate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module10_specialist_saturation/module10_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module11_multihotspot/module11a_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/module13a_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/module13b_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/module14a_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/module14b_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14_heavy_structural/module14c_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14_heavy_replica/module14d_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14e_heavy_gpu_validation/module14e_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/module14f_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module15_three_phase/module15_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module16_fullpool_gpu/module16_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/module17_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/module18_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module19_strategy_benchmark/module19_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/module20a_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module21_positive_utility/module21_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module24b_high_validation/module24b_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module23_positive_three_phase/module23_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module24_utility_calibration/module24a_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module25_utility_difference/module25_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module26_positive_probe/module26_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module27_positive_split_discovery/module27_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28_dynamic_split/module28_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28_dynamic_split/gate_schema.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module29_offline_opportunity/offline_audit_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_stability_diagnosis/module30_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/module28r_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module29_dynamic_replication/module29_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/module30_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/telemetry_fix_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module31a_qwen_whisper_legal_control/gate_decision.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/stage_A_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/module32_gate_definition.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/stage_B_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/module32_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/pair_comparisons_user_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/dynamic_opportunity_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/module32b_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/module32c_gate.json",
+    "metadata_unchanged": true
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/stage_A_gate.json",
+    "metadata_unchanged": true
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "at_utc": "2026-10-06T13:46:24.115116+00:00",
+  "CPU_validation": {
+    "status": "PASS",
+    "checks": [
+      "co-path coefficient identity",
+      "unseen target uses kernel count, no fitted target tax",
+      "routing immutability",
+      "busy scaling units",
+      "idle co-model zero tax",
+      "replicas only empirical g",
+      "uncalibrated explicit fallback",
+      "unsupported/absent/conservation/replica-bound rejection",
+      "per-co-path target disjoint splits",
+      "all admitted profiles preserved"
+    ]
+  },
+  "protocol_sha256": "820c97d8d3affa3170db7adacb0d90162e79f68faaaa1b7e369d96c6ec241201",
+  "split_sha256": "e31713a9d2f8d0386e9dde00eb694187a148cc75a5d91317c0cc649ee51de87c",
+  "comparison_sha256": "2158917c448090a6f37b4f765c1a49302bd27cb8aeec4bfebcb389dbff513576",
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/common.py",
+      "sha256": "6d2c31a8a6e93d01374fcd6e9aa734811a2bfa39bea3273c60ff174ed28a9890"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/pair_runtime.py",
+      "sha256": "445c4a19ffbcbb5d32d99b830dc2455888c0064ca63ff71c8c3971c5a02200e7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/__init__.py",
+      "sha256": "710d492b696108243d9ac6c23f4d3a707990248103a9954de699755862cbc512"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/prepare.py",
+      "sha256": "446a4a9a82d837de6da476386c0928898c822d70527f7a1e6080a539ec1b09f6"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/campaign.py",
+      "sha256": "638fb91c9cea67532503e7737fb5835e5efeae33cfc84970b1092c7594ea435b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/analysis.py",
+      "sha256": "9cbeff5af5d2b46e586eb1463c40a24ca0bceb919d090e9f4d6e2075d3529878"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/validation.py",
+      "sha256": "dcb99dca7f4f9c66da335293f270eb6e5c2e62e9bfdf6373ab5540fafc2a2fcb"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module9a_scheduling_tax/uncertainty_audit.py",
+      "sha256": "c255b8e6e50dcd0fddc0073f02d723f089e24ff68c682e8ba6c08fac44a2af4f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/interference/task_path_profile.py",
+      "sha256": "f53822e31a1fca032a06b83ea357c93e7ae3089810e4805eb302a14e3538e195"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/interference/__init__.py",
+      "sha256": "515bc592eb3804524d5bfd2e64ecb5279dcadf3874863f3ba52630703782cf3f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/interference/scheduling_pressure.py",
+      "sha256": "6bcf7ab3a0ce0a9801938181e5fa6a5637786951e92558a132261ca573dbac01"
+    }
+  ],
+  "native_workers_runtime_modified": false,
+  "MPS_enabled": false,
+  "profile_checkpoint_preserved": true,
+  "source_amendment": {
+    "at_utc": "2026-10-06T13:49:24.129374+00:00",
+    "previous_freeze_sha256": "49fe9828daaeee7eebffa69de4ce7fe5d9b0c38d38f313d6ad28435e2be63cb6",
+    "reason": "Pre-pair CPU bootstrap correction: jointly resample matched request IDs; declare separate process/refit and shared-target/co-path cluster robustness audit. No measurement, coefficient formula, features or primary model selection changed.",
+    "new_pair_runs_started": 0
+  }
+}

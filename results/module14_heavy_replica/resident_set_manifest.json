@@ -1,0 +1,1265 @@
+{
+  "states": [
+    {
+      "run_id": "path0_ocr_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 34.78402308908829
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      },
+      "low_lambda": {
+        "ocr": 34.78402308908829
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      }
+    },
+    {
+      "run_id": "path0_ocr_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 34.78402308908829
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      },
+      "low_lambda": {
+        "ocr": 34.78402308908829
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      }
+    },
+    {
+      "run_id": "path0_ocr_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 34.78402308908829
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      },
+      "low_lambda": {
+        "ocr": 34.78402308908829
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      }
+    },
+    {
+      "run_id": "path0_ocr_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 34.78402308908829
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      },
+      "low_lambda": {
+        "ocr": 34.78402308908829
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      }
+    },
+    {
+      "run_id": "path0_ocr_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 34.78402308908829
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      },
+      "low_lambda": {
+        "ocr": 34.78402308908829
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      }
+    },
+    {
+      "run_id": "path0_ocr_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 34.78402308908829
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      },
+      "low_lambda": {
+        "ocr": 34.78402308908829
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt": 34.78402308908829
+        }
+      }
+    },
+    {
+      "run_id": "path1_ocr_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 38.17991654430215
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      },
+      "low_lambda": {
+        "ocr": 38.17991654430215
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      }
+    },
+    {
+      "run_id": "path1_ocr_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 38.17991654430215
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      },
+      "low_lambda": {
+        "ocr": 38.17991654430215
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      }
+    },
+    {
+      "run_id": "path1_ocr_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 38.17991654430215
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      },
+      "low_lambda": {
+        "ocr": 38.17991654430215
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      }
+    },
+    {
+      "run_id": "path1_ocr_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 38.17991654430215
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      },
+      "low_lambda": {
+        "ocr": 38.17991654430215
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      }
+    },
+    {
+      "run_id": "path1_ocr_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 38.17991654430215
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      },
+      "low_lambda": {
+        "ocr": 38.17991654430215
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      }
+    },
+    {
+      "run_id": "path1_ocr_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 38.17991654430215
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      },
+      "low_lambda": {
+        "ocr": 38.17991654430215
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt": 38.17991654430215
+        }
+      }
+    },
+    {
+      "run_id": "path2_ocr_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 43.121000165896604
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      },
+      "low_lambda": {
+        "ocr": 43.121000165896604
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      }
+    },
+    {
+      "run_id": "path2_ocr_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 43.121000165896604
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      },
+      "low_lambda": {
+        "ocr": 43.121000165896604
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      }
+    },
+    {
+      "run_id": "path2_ocr_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 43.121000165896604
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      },
+      "low_lambda": {
+        "ocr": 43.121000165896604
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      }
+    },
+    {
+      "run_id": "path2_ocr_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 43.121000165896604
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      },
+      "low_lambda": {
+        "ocr": 43.121000165896604
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      }
+    },
+    {
+      "run_id": "path2_ocr_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 43.121000165896604
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      },
+      "low_lambda": {
+        "ocr": 43.121000165896604
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      }
+    },
+    {
+      "run_id": "path2_ocr_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 43.121000165896604
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      },
+      "low_lambda": {
+        "ocr": 43.121000165896604
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 43.121000165896604
+        }
+      }
+    },
+    {
+      "run_id": "path3_ocr_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 37.878448241036956
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      },
+      "low_lambda": {
+        "ocr": 37.878448241036956
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      }
+    },
+    {
+      "run_id": "path3_ocr_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 37.878448241036956
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      },
+      "low_lambda": {
+        "ocr": 37.878448241036956
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      }
+    },
+    {
+      "run_id": "path3_ocr_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 37.878448241036956
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      },
+      "low_lambda": {
+        "ocr": 37.878448241036956
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      }
+    },
+    {
+      "run_id": "path3_ocr_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 37.878448241036956
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      },
+      "low_lambda": {
+        "ocr": 37.878448241036956
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      }
+    },
+    {
+      "run_id": "path3_ocr_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 37.878448241036956
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      },
+      "low_lambda": {
+        "ocr": 37.878448241036956
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      }
+    },
+    {
+      "run_id": "path3_ocr_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+      "primary_task": "ocr",
+      "task_path": "ocr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "ocr": 37.878448241036956
+      },
+      "routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      },
+      "low_lambda": {
+        "ocr": 37.878448241036956
+      },
+      "low_routing": {
+        "ocr": {
+          "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt": 37.878448241036956
+        }
+      }
+    },
+    {
+      "run_id": "path4_lid_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 8.609842031261348
+      },
+      "routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      },
+      "low_lambda": {
+        "lid": 8.609842031261348
+      },
+      "low_routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      }
+    },
+    {
+      "run_id": "path4_lid_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 8.609842031261348
+      },
+      "routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      },
+      "low_lambda": {
+        "lid": 8.609842031261348
+      },
+      "low_routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      }
+    },
+    {
+      "run_id": "path4_lid_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 8.609842031261348
+      },
+      "routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      },
+      "low_lambda": {
+        "lid": 8.609842031261348
+      },
+      "low_routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      }
+    },
+    {
+      "run_id": "path4_lid_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 8.609842031261348
+      },
+      "routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      },
+      "low_lambda": {
+        "lid": 8.609842031261348
+      },
+      "low_routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      }
+    },
+    {
+      "run_id": "path4_lid_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 8.609842031261348
+      },
+      "routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      },
+      "low_lambda": {
+        "lid": 8.609842031261348
+      },
+      "low_routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      }
+    },
+    {
+      "run_id": "path4_lid_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 8.609842031261348
+      },
+      "routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      },
+      "low_lambda": {
+        "lid": 8.609842031261348
+      },
+      "low_routing": {
+        "lid": {
+          "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a": 8.609842031261348
+        }
+      }
+    },
+    {
+      "run_id": "path5_asr_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "asr",
+      "task_path": "asr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "asr": 1.266880194253802
+      },
+      "routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      },
+      "low_lambda": {
+        "asr": 1.266880194253802
+      },
+      "low_routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      }
+    },
+    {
+      "run_id": "path5_asr_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "asr",
+      "task_path": "asr",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "asr": 1.266880194253802
+      },
+      "routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      },
+      "low_lambda": {
+        "asr": 1.266880194253802
+      },
+      "low_routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      }
+    },
+    {
+      "run_id": "path5_asr_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "asr",
+      "task_path": "asr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "asr": 1.266880194253802
+      },
+      "routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      },
+      "low_lambda": {
+        "asr": 1.266880194253802
+      },
+      "low_routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      }
+    },
+    {
+      "run_id": "path5_asr_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "asr",
+      "task_path": "asr",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "asr": 1.266880194253802
+      },
+      "routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      },
+      "low_lambda": {
+        "asr": 1.266880194253802
+      },
+      "low_routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      }
+    },
+    {
+      "run_id": "path5_asr_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "asr",
+      "task_path": "asr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "asr": 1.266880194253802
+      },
+      "routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      },
+      "low_lambda": {
+        "asr": 1.266880194253802
+      },
+      "low_routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      }
+    },
+    {
+      "run_id": "path5_asr_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "asr",
+      "task_path": "asr",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "asr": 1.266880194253802
+      },
+      "routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      },
+      "low_lambda": {
+        "asr": 1.266880194253802
+      },
+      "low_routing": {
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1.266880194253802
+        }
+      }
+    },
+    {
+      "run_id": "path6_lid_x1_rep1",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 6.490395608492177
+      },
+      "routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      },
+      "low_lambda": {
+        "lid": 6.490395608492177
+      },
+      "low_routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      }
+    },
+    {
+      "run_id": "path6_lid_x2_rep1",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 1,
+      "seed": 7101,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 6.490395608492177
+      },
+      "routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      },
+      "low_lambda": {
+        "lid": 6.490395608492177
+      },
+      "low_routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      }
+    },
+    {
+      "run_id": "path6_lid_x2_rep2",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 6.490395608492177
+      },
+      "routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      },
+      "low_lambda": {
+        "lid": 6.490395608492177
+      },
+      "low_routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      }
+    },
+    {
+      "run_id": "path6_lid_x1_rep2",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 2,
+      "seed": 7202,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 6.490395608492177
+      },
+      "routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      },
+      "low_lambda": {
+        "lid": 6.490395608492177
+      },
+      "low_routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      }
+    },
+    {
+      "run_id": "path6_lid_x1_rep3",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 6.490395608492177
+      },
+      "routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      },
+      "low_lambda": {
+        "lid": 6.490395608492177
+      },
+      "low_routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      }
+    },
+    {
+      "run_id": "path6_lid_x2_rep3",
+      "kind": "closed_loop_profile",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "primary_task": "lid",
+      "task_path": "lid",
+      "required_x": 2,
+      "repetition": 3,
+      "seed": 7303,
+      "deployment": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 2
+      },
+      "measurement_seconds": 30.0,
+      "lambda_rps": {
+        "lid": 6.490395608492177
+      },
+      "routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      },
+      "low_lambda": {
+        "lid": 6.490395608492177
+      },
+      "low_routing": {
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 6.490395608492177
+        }
+      }
+    }
+  ],
+  "scope": "only requested models; each count is independently launched workers"
+}

@@ -1,0 +1,9 @@
+# 遥测与窗口合法性
+
+正式窗口完成 3/3；三臂同轨迹=True；历史保护=True（16573 文件 metadata 与核心/Gate SHA256 核验）。
+
+- A0: VALID；journal=True；check 最大=0.0001293271780014038s；publish 最大=1.3107433915138245e-05s；采样最大间隙=1.041668952s；检查={'valid_session': True, 'durable_journal': True, 'nonblocking_control': True, 'exact_600s': True, 'trace_matched': True, 'native_timestamps': True, 'full_cohort': True, 'sensor_values': True, 'monotonic_timestamps': True, 'no_external_GPU': True, 'telemetry_coverage': np.True_, 'bounded_drain': True, 'unix_perf_alignment': True, 'utility_recomputed': True}。
+- A1: VALID；journal=True；check 最大=0.0002066008746623993s；publish 最大=9.359791874885559e-06s；采样最大间隙=1.28470068s；检查={'valid_session': True, 'durable_journal': True, 'nonblocking_control': True, 'exact_600s': True, 'trace_matched': True, 'native_timestamps': True, 'full_cohort': True, 'sensor_values': True, 'monotonic_timestamps': True, 'no_external_GPU': True, 'telemetry_coverage': np.True_, 'bounded_drain': True, 'unix_perf_alignment': True, 'utility_recomputed': True}。
+- A2: VALID；journal=True；check 最大=0.00016133207827806473s；publish 最大=1.4670193195343018e-05s；采样最大间隙=1.142401927s；检查={'valid_session': True, 'durable_journal': True, 'nonblocking_control': True, 'exact_600s': True, 'trace_matched': True, 'native_timestamps': True, 'full_cohort': True, 'sensor_values': True, 'monotonic_timestamps': True, 'no_external_GPU': True, 'telemetry_coverage': np.True_, 'bounded_drain': True, 'unix_perf_alignment': True, 'utility_recomputed': True}。
+
+只使用 SafeMonitorV2；250ms 慢传感器控制检查证据见 nonblocking_control_acceptance.json，三组 GPU smoke 见 smoke_acceptance*.json。完整预热与正式 journal 终态逐请求对照，不截尾补算；原始 perf/unix/worker 时间戳、完整请求、采样、关闭/释放证据见 raw_runs。窗口内吞吐与完整排空 cohort 吞吐分开，预热/path probe 排除。完整效用由原 optimizer.components 与独立 arithmetic 复算，误差要求 <1e-12。INVALID 的合法 U=NULL。

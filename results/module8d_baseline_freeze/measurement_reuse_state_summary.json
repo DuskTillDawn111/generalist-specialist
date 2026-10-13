@@ -1,0 +1,784 @@
+{
+  "states": [
+    {
+      "baseline": "B0",
+      "workload": "demand_balanced",
+      "random_seed": null,
+      "state_sha256": "bfd9ada8e45f81a8355f52e0080e475353c82de91f44c5dec3f8f5367a27e79b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B1",
+      "workload": "demand_balanced",
+      "random_seed": null,
+      "state_sha256": "9ea1d2fa80f2ad4248e5cc8b8ee6e0c47b1dbc15abc8a7c8542b66b8c8188b3f",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B2",
+      "workload": "demand_balanced",
+      "random_seed": null,
+      "state_sha256": "c390ed59c9caabbe737b31e3c79816d3cbd5c98f9d9230929e54889dcd677efd",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B3",
+      "workload": "demand_balanced",
+      "random_seed": null,
+      "state_sha256": "bfd9ada8e45f81a8355f52e0080e475353c82de91f44c5dec3f8f5367a27e79b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "demand_balanced",
+      "random_seed": 1103,
+      "state_sha256": "bfd9ada8e45f81a8355f52e0080e475353c82de91f44c5dec3f8f5367a27e79b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "demand_balanced",
+      "random_seed": 1103,
+      "state_sha256": "8abf11ea28eb593747aa5600b5b7231fb957306bad123b0104e4d180ab4e18b8",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "demand_balanced",
+      "random_seed": 1103,
+      "state_sha256": "682c1c9011467f246224a19bf865c3ec021ed13da60ed1227e97e6668aab7391",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "demand_balanced",
+      "random_seed": 2207,
+      "state_sha256": "bfd9ada8e45f81a8355f52e0080e475353c82de91f44c5dec3f8f5367a27e79b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "demand_balanced",
+      "random_seed": 2207,
+      "state_sha256": "8abf11ea28eb593747aa5600b5b7231fb957306bad123b0104e4d180ab4e18b8",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "demand_balanced",
+      "random_seed": 2207,
+      "state_sha256": "682c1c9011467f246224a19bf865c3ec021ed13da60ed1227e97e6668aab7391",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "demand_balanced",
+      "random_seed": 47,
+      "state_sha256": "bfd9ada8e45f81a8355f52e0080e475353c82de91f44c5dec3f8f5367a27e79b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "demand_balanced",
+      "random_seed": 47,
+      "state_sha256": "8abf11ea28eb593747aa5600b5b7231fb957306bad123b0104e4d180ab4e18b8",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "demand_balanced",
+      "random_seed": 47,
+      "state_sha256": "682c1c9011467f246224a19bf865c3ec021ed13da60ed1227e97e6668aab7391",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B0",
+      "workload": "speech_heavy",
+      "random_seed": null,
+      "state_sha256": "1448616bdd790b3a771a1047e0a1a1cab106661f172829085a0a46edf481e727",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B1",
+      "workload": "speech_heavy",
+      "random_seed": null,
+      "state_sha256": "1cca30d883bdfdd31e538d3b6fd9a515d78824bd3057b27ab82bc75b9d899bb2",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B2",
+      "workload": "speech_heavy",
+      "random_seed": null,
+      "state_sha256": "d7711026124d68a216284baedb319b69a3a294de1052e78dd0e1007e391f758a",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B3",
+      "workload": "speech_heavy",
+      "random_seed": null,
+      "state_sha256": "1448616bdd790b3a771a1047e0a1a1cab106661f172829085a0a46edf481e727",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "speech_heavy",
+      "random_seed": 1103,
+      "state_sha256": "1448616bdd790b3a771a1047e0a1a1cab106661f172829085a0a46edf481e727",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "speech_heavy",
+      "random_seed": 1103,
+      "state_sha256": "c905fe1efa67664ecdb00360b7d0e5c6349ab502cf814d2ca7b4a8425a5423f3",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "speech_heavy",
+      "random_seed": 1103,
+      "state_sha256": "6c06d929e8fca26e912e72a7596a2646998942d704ca8b1e4ac0acad61300ec7",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "speech_heavy",
+      "random_seed": 2207,
+      "state_sha256": "1448616bdd790b3a771a1047e0a1a1cab106661f172829085a0a46edf481e727",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "speech_heavy",
+      "random_seed": 2207,
+      "state_sha256": "4cc88b59bc71e634cf5b2679638e93811f1e675ba19170870bd577c4b4813d97",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "speech_heavy",
+      "random_seed": 2207,
+      "state_sha256": "6c06d929e8fca26e912e72a7596a2646998942d704ca8b1e4ac0acad61300ec7",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "speech_heavy",
+      "random_seed": 47,
+      "state_sha256": "1448616bdd790b3a771a1047e0a1a1cab106661f172829085a0a46edf481e727",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "speech_heavy",
+      "random_seed": 47,
+      "state_sha256": "4cc88b59bc71e634cf5b2679638e93811f1e675ba19170870bd577c4b4813d97",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "speech_heavy",
+      "random_seed": 47,
+      "state_sha256": "5c6843193ba3e5ebf30054b0eceaf4ed6ced40df50200917564ac2665daf3562",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B0",
+      "workload": "vision_heavy",
+      "random_seed": null,
+      "state_sha256": "b00a7f348695f5131d3652440e685d3c1d3c4537bc6352b5a7f57c607a147dc6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B1",
+      "workload": "vision_heavy",
+      "random_seed": null,
+      "state_sha256": "8b4c52e4dfb8dce1871d0d9b145fe93908f36d3296d230b95d48af876f5e830b",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B2",
+      "workload": "vision_heavy",
+      "random_seed": null,
+      "state_sha256": "7222417b3f60acfbad932e6e89640159e2ce752847b4247a19d094938e60bca4",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B3",
+      "workload": "vision_heavy",
+      "random_seed": null,
+      "state_sha256": "b00a7f348695f5131d3652440e685d3c1d3c4537bc6352b5a7f57c607a147dc6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "vision_heavy",
+      "random_seed": 1103,
+      "state_sha256": "b00a7f348695f5131d3652440e685d3c1d3c4537bc6352b5a7f57c607a147dc6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "vision_heavy",
+      "random_seed": 1103,
+      "state_sha256": "f2ea1cc0f8caa3a9d0ddf763b88b0de2f8cf760519c7b41a5aceaa352e7a36bb",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "vision_heavy",
+      "random_seed": 1103,
+      "state_sha256": "08126fae45659e7c519df7b15888c90df7ae1cb75832e8d0527195bad6914cb5",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "vision_heavy",
+      "random_seed": 2207,
+      "state_sha256": "b00a7f348695f5131d3652440e685d3c1d3c4537bc6352b5a7f57c607a147dc6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "vision_heavy",
+      "random_seed": 2207,
+      "state_sha256": "f2ea1cc0f8caa3a9d0ddf763b88b0de2f8cf760519c7b41a5aceaa352e7a36bb",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "vision_heavy",
+      "random_seed": 2207,
+      "state_sha256": "08126fae45659e7c519df7b15888c90df7ae1cb75832e8d0527195bad6914cb5",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "vision_heavy",
+      "random_seed": 47,
+      "state_sha256": "b00a7f348695f5131d3652440e685d3c1d3c4537bc6352b5a7f57c607a147dc6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "vision_heavy",
+      "random_seed": 47,
+      "state_sha256": "f2ea1cc0f8caa3a9d0ddf763b88b0de2f8cf760519c7b41a5aceaa352e7a36bb",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "vision_heavy",
+      "random_seed": 47,
+      "state_sha256": "08126fae45659e7c519df7b15888c90df7ae1cb75832e8d0527195bad6914cb5",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B0",
+      "workload": "text_ocr_heavy",
+      "random_seed": null,
+      "state_sha256": "f3e1d9f4837421a07e10270d21e2b3ae977a27e748c55ea6991bc92f83d31abe",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B1",
+      "workload": "text_ocr_heavy",
+      "random_seed": null,
+      "state_sha256": "3cb086e965f591bcf92ce2eb8f744616f153c9de1a0f6c02113c5da877f53c80",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B2",
+      "workload": "text_ocr_heavy",
+      "random_seed": null,
+      "state_sha256": "7c57d6f716acaa2980023e98154b46e18b92f7c9b61c877eab3029e79661a188",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B3",
+      "workload": "text_ocr_heavy",
+      "random_seed": null,
+      "state_sha256": "f3e1d9f4837421a07e10270d21e2b3ae977a27e748c55ea6991bc92f83d31abe",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "text_ocr_heavy",
+      "random_seed": 1103,
+      "state_sha256": "f3e1d9f4837421a07e10270d21e2b3ae977a27e748c55ea6991bc92f83d31abe",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "text_ocr_heavy",
+      "random_seed": 1103,
+      "state_sha256": "16f16d8e32b6ae6aa8adb420e2262d63fda792b94bf886033cf983401356482a",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "text_ocr_heavy",
+      "random_seed": 1103,
+      "state_sha256": "a5dfac8c745a551f7e6a36195e5ff2e32f9a54cd3677e9bd3bacb8b9d760f12f",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "text_ocr_heavy",
+      "random_seed": 2207,
+      "state_sha256": "f3e1d9f4837421a07e10270d21e2b3ae977a27e748c55ea6991bc92f83d31abe",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "text_ocr_heavy",
+      "random_seed": 2207,
+      "state_sha256": "16f16d8e32b6ae6aa8adb420e2262d63fda792b94bf886033cf983401356482a",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "text_ocr_heavy",
+      "random_seed": 2207,
+      "state_sha256": "a5dfac8c745a551f7e6a36195e5ff2e32f9a54cd3677e9bd3bacb8b9d760f12f",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "text_ocr_heavy",
+      "random_seed": 47,
+      "state_sha256": "f3e1d9f4837421a07e10270d21e2b3ae977a27e748c55ea6991bc92f83d31abe",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "text_ocr_heavy",
+      "random_seed": 47,
+      "state_sha256": "16f16d8e32b6ae6aa8adb420e2262d63fda792b94bf886033cf983401356482a",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "text_ocr_heavy",
+      "random_seed": 47,
+      "state_sha256": "a5dfac8c745a551f7e6a36195e5ff2e32f9a54cd3677e9bd3bacb8b9d760f12f",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B0",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": null,
+      "state_sha256": "840d04b65c3a2fc516b67a5220d9c1c7c85fa41272a495d30cb56076ce25a544",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B1",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": null,
+      "state_sha256": "565a773cb5e1832e328f219cb4910eb0c0f86338b6b105bf73890267e1969096",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B2",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": null,
+      "state_sha256": "1e5dce9c8e1a32d69be707ba595be210ac13cc2e1e3652652ca5daf2acc6566c",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B3",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": null,
+      "state_sha256": "840d04b65c3a2fc516b67a5220d9c1c7c85fa41272a495d30cb56076ce25a544",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 1103,
+      "state_sha256": "840d04b65c3a2fc516b67a5220d9c1c7c85fa41272a495d30cb56076ce25a544",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 1103,
+      "state_sha256": "53e30e20141b40f732b40586bbaa5ab50925c3906516c22549336b3765dad3dd",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 1103,
+      "state_sha256": "9f7f9356462a2c9cf15393032e514f1c56863e0f2308bd16882d0f3cd24ae77b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 2207,
+      "state_sha256": "840d04b65c3a2fc516b67a5220d9c1c7c85fa41272a495d30cb56076ce25a544",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 2207,
+      "state_sha256": "53e30e20141b40f732b40586bbaa5ab50925c3906516c22549336b3765dad3dd",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 2207,
+      "state_sha256": "9f7f9356462a2c9cf15393032e514f1c56863e0f2308bd16882d0f3cd24ae77b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 47,
+      "state_sha256": "840d04b65c3a2fc516b67a5220d9c1c7c85fa41272a495d30cb56076ce25a544",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 47,
+      "state_sha256": "53e30e20141b40f732b40586bbaa5ab50925c3906516c22549336b3765dad3dd",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "reasoning_vqa_heavy",
+      "random_seed": 47,
+      "state_sha256": "9f7f9356462a2c9cf15393032e514f1c56863e0f2308bd16882d0f3cd24ae77b",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B0",
+      "workload": "no_vqa_phase",
+      "random_seed": null,
+      "state_sha256": "3304d7db07d6f9db28cca422bbbbd1faa76b07b8e8f66b280d464244aac2bfb6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B1",
+      "workload": "no_vqa_phase",
+      "random_seed": null,
+      "state_sha256": "fd0ed483d9766a32fca60c9016811b86edaa0cd0ee3041fd2b506085cee8a589",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B2",
+      "workload": "no_vqa_phase",
+      "random_seed": null,
+      "state_sha256": "7537dcb2525ab73b03bb05e30ecc8085c597cf030a1ada7de1536817d308439f",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B3",
+      "workload": "no_vqa_phase",
+      "random_seed": null,
+      "state_sha256": "64c473c1071fa9a6fd219fd701cb13763ea4c6e237c3aa0984f532a79a7be335",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": false
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "no_vqa_phase",
+      "random_seed": 1103,
+      "state_sha256": "3304d7db07d6f9db28cca422bbbbd1faa76b07b8e8f66b280d464244aac2bfb6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "no_vqa_phase",
+      "random_seed": 1103,
+      "state_sha256": "f6a61e8e25b68a2edd37c669668edd1d35434f0fe34ad1e38597dd5504f0f16b",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "no_vqa_phase",
+      "random_seed": 1103,
+      "state_sha256": "64bea4254536a28b9e61474201fdaa2f1555bf762849e3bcb03cd3cfd8a3d8fc",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "no_vqa_phase",
+      "random_seed": 2207,
+      "state_sha256": "3304d7db07d6f9db28cca422bbbbd1faa76b07b8e8f66b280d464244aac2bfb6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "no_vqa_phase",
+      "random_seed": 2207,
+      "state_sha256": "64bea4254536a28b9e61474201fdaa2f1555bf762849e3bcb03cd3cfd8a3d8fc",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "no_vqa_phase",
+      "random_seed": 2207,
+      "state_sha256": "64c473c1071fa9a6fd219fd701cb13763ea4c6e237c3aa0984f532a79a7be335",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_SEED",
+      "workload": "no_vqa_phase",
+      "random_seed": 47,
+      "state_sha256": "3304d7db07d6f9db28cca422bbbbd1faa76b07b8e8f66b280d464244aac2bfb6",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 2,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": true
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "no_vqa_phase",
+      "random_seed": 47,
+      "state_sha256": "64c473c1071fa9a6fd219fd701cb13763ea4c6e237c3aa0984f532a79a7be335",
+      "search_reused_runs": 0,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": false,
+      "confirmation_state_reusable": null
+    },
+    {
+      "baseline": "B4_INITIAL_CANDIDATE",
+      "workload": "no_vqa_phase",
+      "random_seed": 47,
+      "state_sha256": "db6ead699ea382fff7c6b2ef3448d7eb264778bd9d84206aef9054f9b938f3a3",
+      "search_reused_runs": 3,
+      "confirmation_reused_runs": 0,
+      "search_state_reusable": true,
+      "confirmation_state_reusable": null
+    }
+  ]
+}

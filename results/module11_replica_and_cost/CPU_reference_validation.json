@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "budget": "B1",
+      "lambda": {
+        "asr": 0.36538693266205724,
+        "image": 6.477207226438948,
+        "lid": 3.25965041648432,
+        "ocr": 14.015976036805,
+        "text": 1.0783912453907343,
+        "visual_qa": 0.7262769780773427
+      },
+      "independent_enumeration_feasible_optima": 1,
+      "enumeration_J_seconds": 0.017469800124778355,
+      "tangent_MILP_J_seconds": 0.017469800124778355,
+      "global_gap_seconds": 0.0,
+      "passed": true,
+      "seconds": 0.03254298307001591
+    },
+    {
+      "budget": "B1",
+      "lambda": {
+        "asr": 1.7162729992926073,
+        "image": 6.477207226438948,
+        "lid": 13.770825193560007,
+        "ocr": 14.015976036805,
+        "text": 1.0783912453907343,
+        "visual_qa": 0.7262769780773427
+      },
+      "independent_enumeration_feasible_optima": 1,
+      "enumeration_J_seconds": 0.06773902508202458,
+      "tangent_MILP_J_seconds": 0.06773902508202458,
+      "global_gap_seconds": 1.7445905831081632e-11,
+      "passed": true,
+      "seconds": 0.026432196609675884
+    }
+  ],
+  "GPU_runs": 0,
+  "original_count_space": true,
+  "scope": "independent enumerate-all B1 measured states and fixed-state convex solves vs tangent discrete MILP at baseline/pressure; unchanged J/rho<=.8"
+}

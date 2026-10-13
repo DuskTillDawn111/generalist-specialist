@@ -1,0 +1,136 @@
+{
+  "policy": "online_adaptive_v2",
+  "alpha": 0.5,
+  "max_outstanding": 32,
+  "tasks": 800,
+  "results": 800,
+  "errors": 0,
+  "routing": {
+    "distilbert": 200,
+    "resnet50": 200,
+    "paddleocr": 200,
+    "whisper": 177,
+    "phi4": 23
+  },
+  "routing_by_task": {
+    "text": {
+      "distilbert": 200
+    },
+    "image": {
+      "resnet50": 200
+    },
+    "ocr": {
+      "paddleocr": 200
+    },
+    "asr": {
+      "whisper": 177,
+      "phi4": 23
+    }
+  },
+  "wall_time_s": 43.765082575,
+  "throughput_tasks_per_s": 18.279412557466195,
+  "per_task": {
+    "text": {
+      "count": 200,
+      "routing": {
+        "distilbert": 200
+      },
+      "worker_latency_mean_ms": 10.886162889999998,
+      "worker_latency_p95_ms": 18.783261700000004,
+      "worker_queue_wait_mean_ms": 8.695156335000005,
+      "worker_queue_wait_p95_ms": 73.52211940000002,
+      "batch_admission_wait_mean_ms": 13865.639990239995,
+      "batch_admission_wait_p95_ms": 31045.7796114,
+      "batch_response_time_mean_ms": 13885.221309464996,
+      "batch_response_time_p95_ms": 31058.934977200002,
+      "accuracy": 0.925
+    },
+    "image": {
+      "count": 200,
+      "routing": {
+        "resnet50": 200
+      },
+      "worker_latency_mean_ms": 13.120101495000007,
+      "worker_latency_p95_ms": 20.047796700000006,
+      "worker_queue_wait_mean_ms": 2.5884305200000006,
+      "worker_queue_wait_p95_ms": 13.324524000000011,
+      "batch_admission_wait_mean_ms": 14808.299077305004,
+      "batch_admission_wait_p95_ms": 31627.88267825,
+      "batch_response_time_mean_ms": 14824.007609319997,
+      "batch_response_time_p95_ms": 31640.37072965,
+      "accuracy": 1.0
+    },
+    "ocr": {
+      "count": 200,
+      "routing": {
+        "paddleocr": 200
+      },
+      "worker_latency_mean_ms": 12.720585129999993,
+      "worker_latency_p95_ms": 19.420117050000005,
+      "worker_queue_wait_mean_ms": 5.460996244999998,
+      "worker_queue_wait_p95_ms": 51.33822455,
+      "batch_admission_wait_mean_ms": 13864.263052525,
+      "batch_admission_wait_p95_ms": 30591.438342750003,
+      "batch_response_time_mean_ms": 13882.444633900006,
+      "batch_response_time_p95_ms": 30604.3704365,
+      "accuracy": 0.96
+    },
+    "asr": {
+      "count": 200,
+      "routing": {
+        "whisper": 177,
+        "phi4": 23
+      },
+      "worker_latency_mean_ms": 419.8276976499999,
+      "worker_latency_p95_ms": 1762.1472000000024,
+      "worker_queue_wait_mean_ms": 5526.196090939997,
+      "worker_queue_wait_p95_ms": 8502.483844350003,
+      "batch_admission_wait_mean_ms": 14364.111388889996,
+      "batch_admission_wait_p95_ms": 31665.952001550002,
+      "batch_response_time_mean_ms": 20310.135177480006,
+      "batch_response_time_p95_ms": 38594.630644900004,
+      "corpus_wer": 0.03903971281130805
+    }
+  },
+  "initial_service_estimate_ms": {
+    "distilbert": {
+      "text": 1.731
+    },
+    "resnet50": {
+      "image": 4.605
+    },
+    "paddleocr": {
+      "ocr": 4.849
+    },
+    "whisper": {
+      "asr": 122.748
+    },
+    "phi4": {
+      "text": 53.68,
+      "image": 201.265,
+      "ocr": 170.076,
+      "asr": 569.887
+    }
+  },
+  "final_service_estimate_ms": {
+    "distilbert": {
+      "text": 9.29111814836094
+    },
+    "resnet50": {
+      "image": 18.635749772948458
+    },
+    "paddleocr": {
+      "ocr": 14.280156082013388
+    },
+    "whisper": {
+      "asr": 146.48041570341962
+    },
+    "phi4": {
+      "text": 53.68,
+      "image": 201.265,
+      "ocr": 170.076,
+      "asr": 2109.484108454828
+    }
+  },
+  "num_estimate_updates": 800
+}

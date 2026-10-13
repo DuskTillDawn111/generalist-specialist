@@ -1,0 +1,72 @@
+{
+  "at_utc": "2026-10-08T09:00:09.172838+00:00",
+  "full_pool": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/heavy_empirical_x3_reconciled.json",
+    "sha256": "47e5c731b6c3c23fc4bbd73d47c93fda5d23f3ee2db997ecf64a2497328dcea2",
+    "bytes": 117041,
+    "mtime_ns": 1791434095792708784
+  },
+  "full_model_list": [
+    "qwen",
+    "phi4mm",
+    "minicpm",
+    "baudm/parseq:abinet@v1.0.0:abinet-1d1e373e.pt",
+    "baudm/parseq:parseq-patch16-224@v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+    "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+    "baudm/parseq:trba@v1.0.0:trba-cfaed284.pt",
+    "convnext_tiny",
+    "facebook/mms-lid-256@edc73fd00996e671dfc59d16436a29b12b10588a",
+    "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+    "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+    "philschmid/roberta-large-sst2@7d2599d698b7a805b6831e15e830e60a0b07bdb4",
+    "roberta_sst2",
+    "textattack/facebook-bart-large-SST-2@8a4baa9662afa056a97a2e9441ae665a06504979",
+    "textattack/xlnet-base-cased-SST-2@9ceeb077dcd5cf5ae790572b2bd6aec755a263be",
+    "torchvision.models.ConvNeXt_Large_Weights.IMAGENET1K_V1@torchvision0.29.0:convnext_large-ea097f82.pth",
+    "torchvision.models.Swin_V2_B_Weights.IMAGENET1K_V1@torchvision0.29.0:swin_v2_b-781e5279.pth",
+    "torchvision.models.ViT_L_16_Weights.IMAGENET1K_SWAG_E2E_V1@torchvision0.29.0:vit_l_16_swag-4f3808c9.pth",
+    "whisper_turbo"
+  ],
+  "controlled_pool": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/controlled_common_G_pool.json",
+    "sha256": "a01dfd51334ec225b75d0feb08c7cff4eb7ef28c5287a877c946dbbb813c79a6",
+    "bytes": 107223,
+    "mtime_ns": 1791450009168387756
+  },
+  "controlled_G_criterion": "A single common Generalist must have original quality/capability admission and real task-path measurement for ALL Text/Image/LID comparison targets, and the mandatory ASR/VQA background. No Specialist is removed, no measured count suppressed.",
+  "excluded": [
+    {
+      "model": "phi4mm",
+      "admitted_tasks": [
+        "asr",
+        "visual_qa"
+      ],
+      "missing_common_comparison_targets": [
+        "image",
+        "lid",
+        "text"
+      ],
+      "reason": "Predeclared cross-task common-Generalist admission criterion, independent of any optimum, QPS or observed phase outcome."
+    },
+    {
+      "model": "minicpm",
+      "admitted_tasks": [
+        "asr",
+        "image",
+        "ocr",
+        "visual_qa"
+      ],
+      "missing_common_comparison_targets": [
+        "lid",
+        "text"
+      ],
+      "reason": "Predeclared cross-task common-Generalist admission criterion, independent of any optimum, QPS or observed phase outcome."
+    }
+  ],
+  "kept_G": [
+    "qwen"
+  ],
+  "all_Heavy_Specialists_retained": true,
+  "count_tables_unchanged": true,
+  "not_excluded_to_force_a_transition": true
+}

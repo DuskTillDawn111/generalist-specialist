@@ -1,0 +1,335 @@
+{
+  "paths": {
+    "convnext_tiny__image": {
+      "model": "convnext_tiny",
+      "task": "image",
+      "standalone_ms": 5.847736,
+      "kernel_count": 175.0,
+      "kernel_count_samples": [
+        175,
+        175,
+        175
+      ],
+      "role": "specialist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "distil_whisper__asr": {
+      "model": "distil_whisper",
+      "task": "asr",
+      "standalone_ms": 146.22366614444445,
+      "kernel_count": 3304.0,
+      "kernel_count_samples": [
+        3664,
+        2719,
+        3529
+      ],
+      "role": "specialist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "distilbert__text": {
+      "model": "distilbert",
+      "task": "text",
+      "standalone_ms": 3.7693092222222226,
+      "kernel_count": 128.0,
+      "kernel_count_samples": [
+        132,
+        132,
+        120
+      ],
+      "role": "specialist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "minicpm__asr": {
+      "model": "minicpm",
+      "task": "asr",
+      "standalone_ms": 777.2589822555556,
+      "kernel_count": 50147.666666666664,
+      "kernel_count_samples": [
+        56567,
+        39690,
+        54186
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "minicpm__image": {
+      "model": "minicpm",
+      "task": "image",
+      "standalone_ms": 221.70457001111112,
+      "kernel_count": 30171.333333333332,
+      "kernel_count_samples": [
+        39992,
+        39990,
+        10532
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "minicpm__ocr": {
+      "model": "minicpm",
+      "task": "ocr",
+      "standalone_ms": 160.37148515555555,
+      "kernel_count": 11243.666666666666,
+      "kernel_count_samples": [
+        15279,
+        8015,
+        10437
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "minicpm__visual_qa": {
+      "model": "minicpm",
+      "task": "visual_qa",
+      "standalone_ms": 195.6905769222222,
+      "kernel_count": 3417.0,
+      "kernel_count_samples": [
+        3450,
+        3580,
+        3221
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "paddleocr__ocr": {
+      "model": "paddleocr",
+      "task": "ocr",
+      "standalone_ms": 6.0675248999999996,
+      "kernel_count": 232.0,
+      "kernel_count_samples": [
+        234,
+        231,
+        231
+      ],
+      "role": "specialist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "phi4mm__asr": {
+      "model": "phi4mm",
+      "task": "asr",
+      "standalone_ms": 1129.588914977778,
+      "kernel_count": 42861.333333333336,
+      "kernel_count_samples": [
+        51180,
+        31274,
+        46130
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "phi4mm__visual_qa": {
+      "model": "phi4mm",
+      "task": "visual_qa",
+      "standalone_ms": 209.61693907777774,
+      "kernel_count": 3283.3333333333335,
+      "kernel_count_samples": [
+        3280,
+        3290,
+        3280
+      ],
+      "role": "generalist",
+      "frozen_catalog_standalone_ms": 160.11645761111112,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "qwen__asr": {
+      "model": "qwen",
+      "task": "asr",
+      "standalone_ms": 1017.4343631666665,
+      "kernel_count": 29527.0,
+      "kernel_count_samples": [
+        32922,
+        24197,
+        31462
+      ],
+      "role": "generalist",
+      "frozen_catalog_standalone_ms": 654.0784572333333,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "qwen__image": {
+      "model": "qwen",
+      "task": "image",
+      "standalone_ms": 139.61318952222226,
+      "kernel_count": 7704.0,
+      "kernel_count_samples": [
+        8246,
+        6704,
+        8162
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "qwen__lid": {
+      "model": "qwen",
+      "task": "lid",
+      "standalone_ms": 443.6796556222222,
+      "kernel_count": 3793.3333333333335,
+      "kernel_count_samples": [
+        3827,
+        3782,
+        3771
+      ],
+      "role": "generalist",
+      "frozen_catalog_standalone_ms": 139.90943443333333,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "qwen__text": {
+      "model": "qwen",
+      "task": "text",
+      "standalone_ms": 44.63871411111111,
+      "kernel_count": 2961.0,
+      "kernel_count_samples": [
+        2961,
+        2961,
+        2961
+      ],
+      "role": "generalist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "qwen__visual_qa": {
+      "model": "qwen",
+      "task": "visual_qa",
+      "standalone_ms": 154.66702336666668,
+      "kernel_count": 3872.0,
+      "kernel_count_samples": [
+        3648,
+        4180,
+        3788
+      ],
+      "role": "generalist",
+      "frozen_catalog_standalone_ms": 144.5074479,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "resnet50__image": {
+      "model": "resnet50",
+      "task": "image",
+      "standalone_ms": 5.4978217888888885,
+      "kernel_count": 221.0,
+      "kernel_count_samples": [
+        221,
+        221,
+        221
+      ],
+      "role": "specialist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "roberta_sst2__text": {
+      "model": "roberta_sst2",
+      "task": "text",
+      "standalone_ms": 5.506413722222223,
+      "kernel_count": 257.0,
+      "kernel_count_samples": [
+        265,
+        265,
+        241
+      ],
+      "role": "specialist",
+      "standalone_anchor": "FROZEN_UNPROFILED_CATALOG"
+    },
+    "whisper-small__asr": {
+      "model": "whisper-small",
+      "task": "asr",
+      "standalone_ms": 215.46784097777777,
+      "kernel_count": 9739.666666666666,
+      "kernel_count_samples": [
+        11033,
+        7638,
+        10548
+      ],
+      "role": "specialist",
+      "frozen_catalog_standalone_ms": 190.16587112222223,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "whisper-small__lid": {
+      "model": "whisper-small",
+      "task": "lid",
+      "standalone_ms": 49.569978,
+      "kernel_count": 720.0,
+      "kernel_count_samples": [
+        720,
+        720,
+        720
+      ],
+      "role": "specialist",
+      "frozen_catalog_standalone_ms": 27.084134877777778,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "whisper_turbo__asr": {
+      "model": "whisper_turbo",
+      "task": "asr",
+      "standalone_ms": 241.33651821111118,
+      "kernel_count": 4808.0,
+      "kernel_count_samples": [
+        5628,
+        3783,
+        5013
+      ],
+      "role": "specialist",
+      "frozen_catalog_standalone_ms": 170.52229172222223,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    },
+    "whisper_turbo__lid": {
+      "model": "whisper_turbo",
+      "task": "lid",
+      "standalone_ms": 108.28438315555555,
+      "kernel_count": 825.0,
+      "kernel_count_samples": [
+        825,
+        825,
+        825
+      ],
+      "role": "specialist",
+      "frozen_catalog_standalone_ms": 83.17856548888889,
+      "standalone_anchor": "MATCHED_UNPROFILED_3_PROCESS_30_REQUEST"
+    }
+  },
+  "capacity_factors": {
+    "qwen": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.2159252553989397
+    },
+    "phi4mm": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "minicpm": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "distilbert": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "resnet50": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.978474738000047
+    },
+    "convnext_tiny": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "paddleocr": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "whisper-small": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.237806637806638
+    },
+    "whisper_turbo": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "distil_whisper": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "roberta_sst2": {
+      "0": 0.0,
+      "1": 1.0
+    }
+  },
+  "source_catalog_sha256": "9bad842e9c123edc9cbe6fc3be3383957690bd226d4f20f196f175bffb3ab420"
+}

@@ -1,0 +1,216 @@
+{
+  "module": "8D-1",
+  "frozen": true,
+  "BASELINE_FREEZE_PASS": true,
+  "definition_random_seed_aggregate_hashes_written_before_CPU_planning": true,
+  "before_first_baseline_GPU_experiment": true,
+  "GPU_experiments_performed": 0,
+  "inputs": {
+    "candidate_pool": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/candidate_pool_v2_1.json",
+      "sha256": "dbdf5bf9af541e805bc40a9f6207f6dc0cd43de22a0ea150082f3e23de219e00"
+    },
+    "quality_policy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+      "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e"
+    },
+    "quality_admission": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_admission_matrix.json",
+      "sha256": "d224ba2c389a923cc95ebaf630be2858171ec5e6347ef474b8dd925fcb425409"
+    },
+    "service_demand": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+      "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e"
+    },
+    "workload_matrix": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/final_benchmark_workload_matrix.json",
+      "sha256": "f3a358baec6dfed5fe1d24496e388996d42a33f245814fa52f7dea577593e22f"
+    },
+    "capacity": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_capacity_factors.json",
+      "sha256": "62d6c25ba30111bb812a00d42df1e3a1f113d66c654f139b68413009d838b28a"
+    },
+    "memory": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+      "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531"
+    },
+    "bounds": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/evidence_replica_bounds.json",
+      "sha256": "6c2855bd2e61d745d13813f29cef9d51f6e2b5bfa2b7057856421e22f7fd4b51"
+    },
+    "quality_matrix": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/quality_workload_audit/quality_matrix.json",
+      "sha256": "342684280d15ba8da17011aeb072a0edb01238b46d1412c2a019df625a1a61e5"
+    },
+    "admission_quality_matrix_csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/quality_workload_audit/quality_matrix.csv",
+      "sha256": "6ab22e37e4a88a793d207191cc276e72c68fb517fc6c9f0389c03c9b67386fc7"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/environment_manifest.json",
+      "sha256": "15786b0997a93af6a11d27a4783876b94708e850294dc37643820e510e165d88"
+    },
+    "model_sources": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/model_source_hashes.json",
+      "sha256": "d592979b29c138fad7d3517a7ef8baccbe1886fa05890566fbf4d5839be8e36e"
+    },
+    "historical_random_policy": {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/multiworkload.py",
+      "sha256": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153"
+    }
+  },
+  "artifacts": {
+    "aggregate_reference_workload.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/aggregate_reference_workload.json",
+      "sha256": "ff0eaafdd005e5b29d1a3b204ac5aa59b997611aa8b993241a6d6480224e0777"
+    },
+    "aggregate_reference_workload.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/aggregate_reference_workload.json.sha256",
+      "sha256": "3315f724b95f921a8bf8485633b59b9b8bbe7edbc76016fe6eca60c19ee045b7"
+    },
+    "baseline_definitions.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_definitions.json",
+      "sha256": "4e010f910ffb47a6da3306abb07d93f2dcb0bd2c91820e976df6cff20d364c1f"
+    },
+    "baseline_definitions.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_definitions.json.sha256",
+      "sha256": "7ac64c8c17878129b31c2fcd1469414db47037f08aebd348c90f10a618a490ba"
+    },
+    "baseline_deployments.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json",
+      "sha256": "65f7fdc4b9f227e0347e96922f48a8c4ac12855e3b4037eaad42aa0743b41f3a"
+    },
+    "baseline_deployments.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_deployments.json.sha256",
+      "sha256": "f6ab79e71c740ac54ff965222adbd57265f38da268dc24a74d0d8d4de05c4250"
+    },
+    "baseline_fairness_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_fairness_audit.json",
+      "sha256": "8b273e6e79b3d333283beabd9d949b0cb194bb16fb0a854ff53b6cec64490686"
+    },
+    "baseline_fairness_audit.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_fairness_audit.json.sha256",
+      "sha256": "01160b864000acf5b697563f65296b1b8df60847ffc4fe8e15ce770249b0605f"
+    },
+    "baseline_routing_rules.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_routing_rules.json",
+      "sha256": "219056dd31be31394cbc5c9699a44f723d71d898a6f4750aadb71732e902e822"
+    },
+    "baseline_routing_rules.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_routing_rules.json.sha256",
+      "sha256": "a5dde54ba0ef96a7467c45df1fd6306b5fbad94435646946b3c7981f3161483c"
+    },
+    "fixed_baseline_state_summary.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/fixed_baseline_state_summary.csv",
+      "sha256": "6b485fe96ea6a17a6c872f2875f4c9c5e09730274ea8427bfb3e0aa042c47db1"
+    },
+    "gpu_campaign_budget.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/gpu_campaign_budget.json",
+      "sha256": "dd2d60c353c98e9ac479596431f56980d208ad44d4d63283a0ca71dbaddc9cb4"
+    },
+    "gpu_campaign_budget.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/gpu_campaign_budget.json.sha256",
+      "sha256": "ce2890c79478ee4d083f68a0ba6d333af69612a909206f3bc225af670ee97b0e"
+    },
+    "measurement_reuse_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/measurement_reuse_audit.json",
+      "sha256": "71d6291f9b88a01e801b1d0432dd035e1fd8a5d562cb7e04495cf769e979853d"
+    },
+    "measurement_reuse_audit.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/measurement_reuse_audit.json.sha256",
+      "sha256": "5ef87d2deb2da2a84a470f6e9667387416f1091202dec1cc2f316306ec9346f2"
+    },
+    "measurement_reuse_state_summary.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/measurement_reuse_state_summary.json",
+      "sha256": "e9bd597fab840819572e27e62528e66419a9a00f24362413d9edc9196ef1eb5d"
+    },
+    "measurement_reuse_state_summary.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/measurement_reuse_state_summary.json.sha256",
+      "sha256": "f81f1e4e135bc594d255f818e3ebb223922241595a4f0efa0e8b38632e9d00a4"
+    },
+    "missing_measurements.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/missing_measurements.csv",
+      "sha256": "d30a8f25e6bec9e7774074b3d37004e3d0c796c3a23b4f6cc3186da74203da2b"
+    },
+    "module8d1_summary.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/module8d1_summary.md",
+      "sha256": "0444e88ddc628af1baeda543de782cb5b6abc273fbb5b9c423c73dfbb0e6ff51"
+    },
+    "module8d1_summary.md.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/module8d1_summary.md.sha256",
+      "sha256": "05a872593ea5a6cf2f65756018be4ba5793405e60f8bc087d6872530466b1266"
+    },
+    "quality_path_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/quality_path_audit.json",
+      "sha256": "e564a662337ccf7bccc4a1ed86e7387703dc9cb73ece096a9be91a8ee6513b5f"
+    },
+    "quality_path_audit.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/quality_path_audit.json.sha256",
+      "sha256": "4fa1ace8d43c28c0f8250ce51a6be1bcbebbbd0ccd7567ae1d006df4e8b8b355"
+    },
+    "random_initial_planning_audit.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/random_initial_planning_audit.json",
+      "sha256": "b0d06e2d868d4415e7de8b6303423684bfe8ae77e56c9e5fc5529c55411f4bd9"
+    },
+    "random_initial_planning_audit.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/random_initial_planning_audit.json.sha256",
+      "sha256": "a9768b1db6198c7b92e3a7881a93a84c3405b160d7964c999dcc658b3b9d028d"
+    },
+    "random_seed_freeze.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/random_seed_freeze.json",
+      "sha256": "89b7f6815f515d351118661db5a772d07fdf723c5b34b5aa560010962fd51c3d"
+    },
+    "random_seed_freeze.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/random_seed_freeze.json.sha256",
+      "sha256": "3691c0f08504bdfc8441d0c8e530538ff3db5c82a1276274fa7eedf4f74d2f36"
+    },
+    "reuse_manifest.csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/reuse_manifest.csv",
+      "sha256": "e0cbc09079ec6752155ada77f2569c50f49666338316650b748c8843a242b4be"
+    },
+    "runtime_reuse_execution_contract.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/runtime_reuse_execution_contract.json",
+      "sha256": "1f891a40f9a7c0277812a588334905c8d9c01c5687b07b32f05b56a0715783bc"
+    },
+    "runtime_reuse_execution_contract.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/runtime_reuse_execution_contract.json.sha256",
+      "sha256": "f9e50f3f45763dbf224b35ad8a744db56ac12f2165ab16f0d800c9f649d4fef8"
+    },
+    "source_identity_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/source_identity_validation.json",
+      "sha256": "3fcedc94e999e5a14817e10d482f1320e279f811b11808a7be35664ca86e7607"
+    },
+    "source_identity_validation.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/source_identity_validation.json.sha256",
+      "sha256": "4fda7ac4428b07d41ac77802dc9cdfd49cf23db0bfeee7f591577bd9dc40bbd3"
+    },
+    "static_hybrid_planning_witness.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/static_hybrid_planning_witness.json",
+      "sha256": "8f5a878c9e37bbf2a0e699998688f98b114e5070548395d1f0916d464d4379ec"
+    },
+    "static_hybrid_planning_witness.json.sha256": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/static_hybrid_planning_witness.json.sha256",
+      "sha256": "728b438d1a1fff3be21b8e78d508abdfe60dcb7e00bda8b3bad27fd4c63976c8"
+    }
+  },
+  "implementation_files": {
+    "module8d_baseline_freeze/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_baseline_freeze/__init__.py",
+      "sha256": "1b0a7b960737d039e99b86945b659a1c7f37b6ce6aded840932baf6e1051ea04"
+    },
+    "module8d_baseline_freeze/audit.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_baseline_freeze/audit.py",
+      "sha256": "9789da466e116347941bd6cee2c0bbe39abb909c1f33c56bd372c37deff63115"
+    },
+    "module8d_baseline_freeze/definitions.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_baseline_freeze/definitions.py",
+      "sha256": "21021e810c3eb3ffce8ebdb97b6cff590ca289f59adeb70dd6e1284a1c696301"
+    },
+    "module8d_baseline_freeze/report.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_baseline_freeze/report.py",
+      "sha256": "9af354f8b7fec92c12893421abde31f23fd42254670a8017355149224d42f520"
+    }
+  },
+  "hash_algorithm": "SHA256; artifact hashes are exact file bytes; lambda/state digests are canonical JSON",
+  "self_hash": "External baseline_freeze_hashes.json.sha256 avoids recursive self-hashing"
+}

@@ -1,0 +1,594 @@
+{
+  "at_utc": "2026-10-07T17:36:56.593943+00:00",
+  "before_any_new_OCR_GPU_measurement": true,
+  "files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/ocr_gapfill_shortlist.json",
+      "sha256": "9fc238d874561f38c1c779c5c2ddd7427dac601265bf30fb28d4ca18116c9613",
+      "bytes": 20321
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/ocr_gapfill_candidate_universe.csv",
+      "sha256": "852e2896999a43a046e6e55f797f82a5ed3a0bf669a21c2b69c9c83f65cd6c24",
+      "bytes": 7184
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/image_ceiling_exception.json",
+      "sha256": "4f3c2e50c3fddb4ae4b9df7815962428401b9f558a54026e921285a9341bb2d0",
+      "bytes": 1146
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/image_heavy_selection.json",
+      "sha256": "07167cca4ec335cd3ddaf69e319e385a0795c881c70c12e038afca0f710a9462",
+      "bytes": 2752
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/module14b_protected_before.json",
+      "sha256": "f8027a6d269205cb78b12c482207afc73b5b702eb7bbf9c81d4460285fb18202",
+      "bytes": 2153719
+    }
+  ],
+  "native_source": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/.git-blame-ignore-revs",
+      "sha256": "1dbdbba7c7219f3b6580840a9b4294909099541860a8ef4e74a4414a1fece61a",
+      "bytes": 71
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/.github/contexts-example.png",
+      "sha256": "8851e04ca8cdb9abfa123dab199e5ff3036a7cb51bded680421f78f4e6cb7cab",
+      "bytes": 157692
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/.github/gh-teaser.png",
+      "sha256": "b7362256432d565c07b98e3154e534d78f60d560b9d4a68b7797185e2a512478",
+      "bytes": 97079
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/.github/system.png",
+      "sha256": "e860d1cc77e3342e1ae2b0648d3ba00b82681e71d1d8e5dea6eaf75d6882fa4a",
+      "bytes": 123536
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/.gitignore",
+      "sha256": "be4fc5c9036eb61115babbda7e8025d1520a1c059bfbf303c5d5b8a13935193f",
+      "bytes": 2143
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/.pre-commit-config.yaml",
+      "sha256": "1f12a6cbdc73a732b64cd9db6805b3cc57bfed0cfba08b5d6cd62f29e3b977a2",
+      "bytes": 373
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/Datasets.md",
+      "sha256": "5c327bf65f4685034999c97ec0ac27c8d828e11b9abe27f1b8e2de1449fb13b0",
+      "bytes": 5012
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/Makefile",
+      "sha256": "512c881b0754b145a8bf7ed2a1ebd5b91cc9dbffade8ac5f7b152d7fab22ee1d",
+      "bytes": 1395
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/NOTICE",
+      "sha256": "0b0a09b6a5321a43a7cf06e5194ce51e3855e42297930f7bad9421fcb39a93b5",
+      "bytes": 712
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/README.md",
+      "sha256": "19cc072c0a8bb200e13ef635b4b4b4e53c20e1baaf19f09477ab42bd0709a8fc",
+      "bytes": 17875
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/bench.py",
+      "sha256": "a249528fd93f4fdb12cdae74a80798ce824a3a2b94cc0a4194267d195e13057a",
+      "bytes": 1888
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/bench.yaml",
+      "sha256": "0baf6742c5f6d8483b28708aefa2177983fcbe7b7b0e736ee8fc7d2d9838227d",
+      "bytes": 151
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/charset/36_lowercase.yaml",
+      "sha256": "5db68cdca47d94acf71529a213870d577794475533e77a0f5437fdbab93d7380",
+      "bytes": 83
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/charset/62_mixed-case.yaml",
+      "sha256": "9462eeaca84b99775f4fb7d1897b278a8e2961dae6b10efa085fa809663129fd",
+      "bytes": 109
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/charset/94_full.yaml",
+      "sha256": "073479c34d305113ff41459ecff0e27e3a711b3787e63537d078ab81eb5ce511",
+      "bytes": 143
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/dataset/real.yaml",
+      "sha256": "d966ab348e0404b4b6811b2dc0af2ed5a87624addedc9d04a35a2df3cfbeb329",
+      "bytes": 44
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/dataset/synth.yaml",
+      "sha256": "75aa984566f4f5b405ee3bbf8b5a2ca9f369b574abf1455a3c2ab7859795acf4",
+      "bytes": 145
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/abinet-sv.yaml",
+      "sha256": "034d5bf67fc9422a7e6b87c01c3defeee8ba8741fbeb9d2eb2ad5f6336a1edf2",
+      "bytes": 127
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/abinet.yaml",
+      "sha256": "75bbaec90a1e248e6b575f9b295525bc389f3b8af33fc4e15414c41613e145ca",
+      "bytes": 58
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/crnn.yaml",
+      "sha256": "26654eec0846ffaa2ad7e2a73e27e2cd33d37b596b08a3f800db4192a22ef2f3",
+      "bytes": 80
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/parseq-patch16-224.yaml",
+      "sha256": "917257f73620ffbbce931b42f9d10f783a84b00e3efdfe0545e32455694e62f9",
+      "bytes": 158
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/parseq-tiny.yaml",
+      "sha256": "e1a0d9a3423ac9a2221584cfbc3a0298c76ddc109a7ba5af24ec90f37b2d42ba",
+      "bytes": 141
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/parseq.yaml",
+      "sha256": "00c290ab96ba3e092d2fcdcc211c3579f3e7f17dcbb72ca0d507f0c2cc7e8b20",
+      "bytes": 58
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/trba.yaml",
+      "sha256": "bd1f7453b59cc6fbf9f7dcdab01b2abe9bb7bdb50782d53e03e0957a36979813",
+      "bytes": 80
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/trbc.yaml",
+      "sha256": "4b4b4195a3f55759ce718ec546365e233a722b1442f028a44d987d803f64a92a",
+      "bytes": 155
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/tune_abinet-lm.yaml",
+      "sha256": "8f16ab3ec71cbb6c96379fef646c8d193c44259be8e15899d9d16994636aaf8e",
+      "bytes": 204
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/experiment/vitstr.yaml",
+      "sha256": "10fcd3d9bf92229f52ad993154d7d72bf0a3e584df95488662a99a59b1dbce85",
+      "bytes": 155
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/main.yaml",
+      "sha256": "6ef8cbff80a0f41a3c9017cc9088bb1581957026e9707f7a300c2097bdf5d53b",
+      "bytes": 1352
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/model/abinet.yaml",
+      "sha256": "a7df3a08e0c5da65d3ed8577508829ec7120915ab0bbf3513485ea678ae852d8",
+      "bytes": 419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/model/crnn.yaml",
+      "sha256": "dab57e57ba7235b73e8f012904b9488b873026d7e330253ee0f55a28c41a6044",
+      "bytes": 126
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/model/parseq.yaml",
+      "sha256": "022d231e939c28fd34ca50d9ca6e3eec268680c047f37ce7f06362e8aaa88f45",
+      "bytes": 376
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/model/trba.yaml",
+      "sha256": "ecbde49007efd324223274c57109cf5e6dd10c226294089b4a34c07a09c6dc1e",
+      "bytes": 145
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/model/vitstr.yaml",
+      "sha256": "194d40ca03494225d402160798a7b51d8a22e805ebab41ddf59f21be45d68e28",
+      "bytes": 221
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/configs/tune.yaml",
+      "sha256": "3d7f64e5b1986659b2d1d55d0d0cf301f3bc474651816c8c1ef3fea86d5e6233",
+      "bytes": 274
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/demo_images/art-01107.jpg",
+      "sha256": "541a071a52c6b8f0c36df0754e6e40261c83e70f279ad788934d31fb6a0d7ad6",
+      "bytes": 182385
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/demo_images/coco-1166773.jpg",
+      "sha256": "453755db65e3de86e1d76d57cd16bd9533977e3192ef31ffb3d8bd3b984d14ae",
+      "bytes": 3398
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/demo_images/cute-184.jpg",
+      "sha256": "83022a6ee8a7af1aa7619e43986dfbafbe465774312c6cc7963b1d65a0d49ee9",
+      "bytes": 18355
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/demo_images/ic13_word_256.png",
+      "sha256": "ad14e77792e67e9196cad3d9e61ad3edea9d5dda97ac8a3efd60559e35a190b0",
+      "bytes": 59337
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/demo_images/ic15_word_26.png",
+      "sha256": "bab8c4c31f0a22b77f4b183e9f0068d7bc0bb024b61fc09c6bb57c33f7b1d2d1",
+      "bytes": 12271
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/demo_images/uber-27491.jpg",
+      "sha256": "9a0675ac5f21ad07e5f5a4f7bad1c4c101c919b799d2b98b0800c53be21a9c86",
+      "bytes": 1278
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/hubconf.py",
+      "sha256": "1ecb24721ca4c7b7df3600d71b715a391d65d0f2a6b9bed3d5deaa06189d3c15",
+      "bytes": 2470
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/pyproject.toml",
+      "sha256": "eb9307be88eef95bcc11db5085df483ddc8f0db5aa9e0029c20d919fea562e6b",
+      "bytes": 1528
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/read.py",
+      "sha256": "ee02f3b093efcf20daa9b6d83efda1746e51dfe8644a437f8f6e670145bfa60e",
+      "bytes": 1754
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/bench.in",
+      "sha256": "6f1c3419c73187e8fc507735174adb2e199f67a5e955a35adc92c0948592b380",
+      "bytes": 45
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/bench.txt",
+      "sha256": "6eac28d5f326da9e9cc8090595ef6061088dfe8d884811849dc32feb55747e2e",
+      "bytes": 268
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/constraints.txt",
+      "sha256": "82849d72e7193d24252bdb41f70a22e100287f8b0dc236ed9dbef2b6d1c4343e",
+      "bytes": 7454
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/core.in",
+      "sha256": "44aef2da54389c14707022dda8f11c9e69899c4ac81e9ba1b0451ded4da5261c",
+      "bytes": 291
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/core.txt",
+      "sha256": "c011d27893c166035d029ef0f0973f55d80bfdb3a4e36961af7cba3869aea11f",
+      "bytes": 791
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/dev.in",
+      "sha256": "3b8be2b255fcb1cd02bdd72ad66835e4c6a84e050128581a0f7ae7332531b205",
+      "bytes": 30
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/dev.txt",
+      "sha256": "d8db7b976a6edeaad8f2e7d20d94e8f4633aa1e3740234ba9281df3531f552e0",
+      "bytes": 244
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/test.in",
+      "sha256": "21c8e9d05a9a7e41a94b61d328628ee45aec0a086c016ab700d2b6253e919322",
+      "bytes": 36
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/test.txt",
+      "sha256": "9c5367f338b8b8eaa073894c0cdeedbcacc5361a8c7fa49d9c29516db9cd5bde",
+      "bytes": 40
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/train.in",
+      "sha256": "e10f2ea2800865f024b7d61f956c213c82757540065d9c0752e055cc4a2d4261",
+      "bytes": 70
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/train.txt",
+      "sha256": "5ff31916b9722171e6b2f7b6f2fef1b1f06410cb424bac37827ca13c61050045",
+      "bytes": 510
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/tune.in",
+      "sha256": "dc60edfc4c2c7ccd87993c6e9f2db3e8d49d2a45c83daad2c59a66c7795bdb61",
+      "bytes": 87
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/requirements/tune.txt",
+      "sha256": "5eb9def9956f81242e6cac9f0f3083fb5679f16f9592092cefdbd3d25e688f4b",
+      "bytes": 1673
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/data/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/data/aa_overrides.py",
+      "sha256": "a781df496ad8f32c8d7e7f788d8134ec6ff07a8f95c5abae9f7eef2924a7ec81",
+      "bytes": 1717
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/data/augment.py",
+      "sha256": "2f20241a8a4a9488f16126b0a050debf4c2f9d6aa9ef7a70883cab97562e1fda",
+      "bytes": 3604
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/data/dataset.py",
+      "sha256": "4dd443229d03f11e0df96b13a104d1c3e3c1ab2278787e8e64244595a671b69a",
+      "bytes": 5379
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/data/module.py",
+      "sha256": "aaa15e9f8bf42983b431e03ab3e38994756bfb797258e9e6e7c6e5cf280190fc",
+      "bytes": 5384
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/data/utils.py",
+      "sha256": "75b5e7e66b20d490e4aa00ca0d2dbbc415d693312a803f06e36c269ccd6226c8",
+      "bytes": 5755
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/LICENSE",
+      "sha256": "1a9fef14b4e657458b67479648ec427d0b431ddbfa9c8fba17398a43f625ff9c",
+      "bytes": 1328
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/__init__.py",
+      "sha256": "46f6345de9ec3928050e77e6ad39c847f0eca0c902f54c875de5b07cb297c1aa",
+      "bytes": 595
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/attention.py",
+      "sha256": "694e3afd1e7e42ea54a94da0d876b861745765ca32935b5d6e2ed003de4b3750",
+      "bytes": 4082
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/backbone.py",
+      "sha256": "849208173a39431a06309714a3fde1799e945554bf0aa7340a2667a0df946d22",
+      "bytes": 1032
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/model.py",
+      "sha256": "7b7518d6815802bb4d1c614e3f91f313f58d8033f0258a7bfeff6a44c666933e",
+      "bytes": 1064
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/model_abinet_iter.py",
+      "sha256": "37a59e1f719e534b4ce085087db108a267e5294af65ddb0c7643a16f798975d5",
+      "bytes": 1931
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/model_alignment.py",
+      "sha256": "96c292b70c2b2f5a2a40325bcc377ade4ac35c1fc38a5da71a8aa42cd9d9b8fa",
+      "bytes": 1010
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/model_language.py",
+      "sha256": "0559d1e561bee5ce6f415a3a858103c193ff5400fc857ab34ff09270ca95d8ef",
+      "bytes": 2284
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/model_vision.py",
+      "sha256": "4a7a55318ecb5a6b9ec3e99e1a8af8c1c2bd0092b95ab011d4687dd805b78e40",
+      "bytes": 1746
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/resnet.py",
+      "sha256": "f13be36b82fdf833dbcbb3cc59b8e9581f1d69da42c208c5c64522d7bc19a1f9",
+      "bytes": 2637
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/system.py",
+      "sha256": "31acbf8990df6a65b6b5b3d168eede721e42e3f67294910bafcec5bdb36341ff",
+      "bytes": 8706
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/abinet/transformer.py",
+      "sha256": "b31b19ce389f9dc811245f33aa4ca7fb9bef29913001012072018dfd5323331c",
+      "bytes": 8754
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/base.py",
+      "sha256": "fb77f7e6384572628f20369a5b501ad9a83eabf2b6a0379467318f967f241b1d",
+      "bytes": 8902
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/crnn/LICENSE",
+      "sha256": "ca3d53e04088c5752274d53d981c321db6f962a8d6740fcde7d1a0789532d1f8",
+      "bytes": 1097
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/crnn/__init__.py",
+      "sha256": "b3095fd45abd128c279bbd5b441341138741a4ee53924f6b1ee767b668da3474",
+      "bytes": 543
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/crnn/model.py",
+      "sha256": "1bbc8c6f0fdafeba8c652b0190cdcf4504e13d90f852f558c18cecddd3d8a85d",
+      "bytes": 2023
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/crnn/system.py",
+      "sha256": "dee0fd11e593eba7c2c8bfa9eb17985964a405c94b982a507ce582a4810bb58c",
+      "bytes": 1812
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/modules.py",
+      "sha256": "371531706f5047ffed1e6405415441fea6b9adcc950c15078c034ecd46f32d23",
+      "bytes": 859
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/parseq/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/parseq/model.py",
+      "sha256": "27420f5b51887fd8763e4902019beb4d09303c82fde2a959e3e21dc84bad791b",
+      "bytes": 7215
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/parseq/modules.py",
+      "sha256": "923dad8df6aa1e379a12794866c96f1133d82fd09ca856c8e3dbfdcf03421680",
+      "bytes": 6038
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/parseq/system.py",
+      "sha256": "680704c9bf865834cbbaff5da552ba953c9c5e74409243fdf01ce3f7fe995118",
+      "bytes": 8456
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/trba/__init__.py",
+      "sha256": "084e741527933c5db5bbd2c852b26e7d9d5c500ae89e89d384fac798886ff922",
+      "bytes": 620
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/trba/feature_extraction.py",
+      "sha256": "b14907ec4a723548a541cdba620b5115e58b2328bfa72ac1b19be7e9425aa93d",
+      "bytes": 4430
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/trba/model.py",
+      "sha256": "841119d22d4224c9c75502807a63bb356cf4030b3fb97b5c172208ad4a29993e",
+      "bytes": 2417
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/trba/prediction.py",
+      "sha256": "20e89010c9846165530f10fd9a9e791a0dce123f4b0c1436c87d7d3e7e20ba00",
+      "bytes": 3608
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/trba/system.py",
+      "sha256": "02d027e633b24be8cbbd6d08ccec1128f7d17f41534a083f2da1fa40f491bd1d",
+      "bytes": 4331
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/trba/transformation.py",
+      "sha256": "b70488f4638c09a2e92d0205ece19260ffd33fbab5890eb21460f35409b7040a",
+      "bytes": 8265
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/utils.py",
+      "sha256": "2c6ac08edeeb8585ca78f7d8c655ee9b2c68589f96e240c2f0b36907eb13e747",
+      "bytes": 4936
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/vitstr/__init__.py",
+      "sha256": "d8a3d418ce458542bbfb4ea9feb0db55a722cff10312303bad3dad7f7ec999a0",
+      "bytes": 483
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/vitstr/model.py",
+      "sha256": "951bfbeadb2c5ec67afa43a34ae2e9fb4e6bf2a5839f3e82e20a6c5062b1da97",
+      "bytes": 665
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/strhub/models/vitstr/system.py",
+      "sha256": "1ba3a45e6a5b799d55d230c4ec2dc7cc05dae2053ee3a4825ffd44c7b47e2234",
+      "bytes": 2788
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/test.py",
+      "sha256": "8ffad045010dce3ac429395f777bc9c59d5c0874f42c6d94f753d0474226af73",
+      "bytes": 5657
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/art_converter.py",
+      "sha256": "4f406145a55cc27de417f5d6c5fb35dfe6cc73e578cd6efb0d2718528e47d6b3",
+      "bytes": 806
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/case_sensitive_str_datasets_converter.py",
+      "sha256": "59ca7479bef380f94cfe9c6b809d9c717c8bb22b2f2b4769c1716baa91284af5",
+      "bytes": 701
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/coco_2_converter.py",
+      "sha256": "46211f1609159873127cd5ac20297dc5d534c214aeaa1b25bf2acfed0f43d226",
+      "bytes": 4197
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/coco_text_converter.py",
+      "sha256": "c55121b2505a31fb2cb569720643ffb9d20dd0575006d7fa144c4c5b4b17247c",
+      "bytes": 533
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/create_lmdb_dataset.py",
+      "sha256": "0f955d688d1be68f30e56bf1335a81cb26be5d68a398979bd7bcdc5767c79629",
+      "bytes": 2381
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/filter_lmdb.py",
+      "sha256": "58d03f1d5ae8c3388cde9437adbb50c9dfa74d2b9622996daf8294875534398f",
+      "bytes": 2556
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/lsvt_converter.py",
+      "sha256": "25f1a1a569bc1a6c136c411ac3ae3d4cab61bb062acf4d9955e364e0b1004a2a",
+      "bytes": 3376
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/mlt19_converter.py",
+      "sha256": "c026c0e70ee1321fa63cf39c40be0c3b20aa74b1e248dbca8b154e5754dfd160",
+      "bytes": 370
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/openvino_converter.py",
+      "sha256": "fcc33a4d7c7650517058aad26ce3ad3416823fe8336e4ea655e679ec51ed3b16",
+      "bytes": 3740
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/test_abinet_lm_acc.py",
+      "sha256": "b43cc767b2290dc106960a61cb8cc9ae28e73260dd425e41bca8de50b5a4f094",
+      "bytes": 3929
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tools/textocr_converter.py",
+      "sha256": "0c80bce9b62b3dd51fe7ed6741d6feac3569a95bfb1f3b6f0e4f33299be5beee",
+      "bytes": 4627
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/train.py",
+      "sha256": "babf8e55e77bb608589d7a32ddc4b11c76bafad3ef30c810e4206c5d9ac4ff79",
+      "bytes": 4523
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-1902db043c029a7e03a3818c616c06600af574be/tune.py",
+      "sha256": "84b9fff86c353e2adaa207ab2b79ecc2c1fff31f27e9a8f4838ccd38e801fa32",
+      "bytes": 7910
+    }
+  ],
+  "source_archive": {
+    "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq_source.tar.gz",
+    "sha256": "f57289cb1fc7fe41f488a52ea48f8a7f114252ef405b0b64efc1d528c29b48ef",
+    "bytes": 692996
+  },
+  "no_outcome_conditioning": true
+}

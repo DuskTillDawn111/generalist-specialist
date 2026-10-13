@@ -1,0 +1,94 @@
+{
+  "status": "COMPLETE_CPU_ONLY",
+  "at_utc": "2026-10-07T13:12:21.218275+00:00",
+  "global_points": 1512,
+  "per_task_rows": 1890,
+  "refined_first_global_axis_brackets": 27,
+  "per_task_2D_queries": 0,
+  "GPU_runs": 0,
+  "source_files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/__init__.py",
+      "sha256": "6cbd9f1f2aa17e1a10f1c4098d4bfd44222a5badf112fa6eaac5f1fd3c5c626a"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/common.py",
+      "sha256": "9ad55ca04d8edbc4afaeddf400ab12d68b6d859da3f15ba8edcd410d815f8ad1"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/prepare.py",
+      "sha256": "cccdfd81df977a9777381e637a3c0eccdd196c42e4dc6b6907f26bc0f90a4003"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/solver.py",
+      "sha256": "f4739a74a47d6696844de0fcabf790b8e4219ade6951c3e5ca9e99195de6e883"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/metrics.py",
+      "sha256": "d3d96a9e6ad045f3e55d06f476e23ad1eff34e70d36b89e3e0df1941944492b3"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/run.py",
+      "sha256": "a9436433eb75a65fd7fc9d973dabcdcb5701f0cc30427abbcc4ec0a3ce9f520c"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/frontiers.py",
+      "sha256": "725dca6371aab4f6c1364c0dc6121d8e9753b1e1162397a2338bd140e5502579"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/finish.py",
+      "sha256": "a99be957b4a1cdc1691660f2dd9c3b784a610ec364c825fa76c435d10c02d531"
+    }
+  ],
+  "required_outputs": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/global_sensitivity_grid.csv",
+      "sha256": "f3422dea22ffdef74c001e216024bf022ddd8c33be457968a080130a351c2f81"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/phase_map.csv",
+      "sha256": "991d2196e8dabc3c9157060731a0ee40e5a9376dfb96bd33d282edd102b3f33b"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/transition_frontiers.json",
+      "sha256": "9a8d3fdcd5d174482bc94277280629dbcb259ddadaa80d792fa213862d45318e"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/transition_refinement.csv",
+      "sha256": "cb9302c294444f9a4ffd5bffbbdab58c26d4469f4e658fdb1bdc6e0703316a44"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/per_task_sensitivity.csv",
+      "sha256": "3f842cb786a37d3c077cef857607bcb06a4687bf96269e892a356efec3cd79b0"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/speed_vs_memory_attribution.json",
+      "sha256": "e095604fd0fbbc487d76e2751dad4645cd9ec018938075df38b0212c0adcf9f7"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/real_model_search_targets.json",
+      "sha256": "fd42bfd72859911da2b157d2084a5825a4305113f17db4c955d233f344a15f6f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/specialist_selection_rule.json",
+      "sha256": "3fc9b7075f39e4bd4f1a18461bfbd6dc9eeb28538de3abcf5d79ddc7d53b1855"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module12_specialist_sensitivity/module12_summary.md",
+      "sha256": "0e8fe2d3f336bd5fd8100e9167d22614a0ff2b22cb99b8ae061f68187a0e235a"
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "counterfactual_scaling_checks": "PASS",
+    "Generalists_g_quality_capability_original_data_unchanged": true,
+    "independent_small_discrete_exhaustive_check": "PASS",
+    "fresh_vs_reused_tangent_agreement": "PASS",
+    "certified_feasible_cached_queries": 2593,
+    "max_global_gap_seconds": 9.278305061755088e-09,
+    "protected_file_hashes_verified": 3329,
+    "GPU_runs": 0,
+    "scope": "Known empirical counts only; incomplete physical replica frontier is not filled or claimed"
+  },
+  "stop": "Completed Module12; no real-model search, downloads, profiling or deferred GPU campaigns launched"
+}

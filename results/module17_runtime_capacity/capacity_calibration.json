@@ -1,0 +1,267 @@
+{
+  "at_utc": "2026-10-08T08:40:58.350809+00:00",
+  "status": "LOCAL_EMPIRICAL_SERVICE_ENVELOPE_SUPPORTED_FULLPOOL_TRANSFER_INSUFFICIENT",
+  "local_envelope_holdout_passed": true,
+  "holdout_checks": [
+    {
+      "run_id": "full_mid_reference_rep1",
+      "condition": "FULL_MID_REFERENCE",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 122.44202556977964,
+      "frozen_training_only_bound_ms": 124.83731814954935,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/full_mid_reference_rep1.json",
+        "sha256": "ee0168551b60f49d84f7ba3e448fbe3f852d3567c80e87485b4d79b4690d5972",
+        "bytes": 15737974,
+        "mtime_ns": 1791448078423305222
+      }
+    },
+    {
+      "run_id": "full_mid_reference_rep1",
+      "condition": "FULL_MID_REFERENCE",
+      "model": "whisper_turbo",
+      "task": "asr",
+      "observed_cohort_service_mean_ms": 387.1691441,
+      "frozen_training_only_bound_ms": 397.9305811962377,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/full_mid_reference_rep1.json",
+        "sha256": "ee0168551b60f49d84f7ba3e448fbe3f852d3567c80e87485b4d79b4690d5972",
+        "bytes": 15737974,
+        "mtime_ns": 1791448078423305222
+      }
+    },
+    {
+      "run_id": "full_mid_reference_rep1",
+      "condition": "FULL_MID_REFERENCE",
+      "model": "whisper_turbo",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 163.31259595687885,
+      "frozen_training_only_bound_ms": 165.05992197045626,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/full_mid_reference_rep1.json",
+        "sha256": "ee0168551b60f49d84f7ba3e448fbe3f852d3567c80e87485b4d79b4690d5972",
+        "bytes": 15737974,
+        "mtime_ns": 1791448078423305222
+      }
+    },
+    {
+      "run_id": "speech_only_same_residency_rep1",
+      "condition": "SPEECH_ONLY_SAME_RESIDENCY",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 117.43357720986359,
+      "frozen_training_only_bound_ms": 124.83731814954935,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/speech_only_same_residency_rep1.json",
+        "sha256": "2ed468a20f41e35c505ed99c2e75aa76b2e1e24317ea5b9847df06797dd797d8",
+        "bytes": 14728320,
+        "mtime_ns": 1791448263986959543
+      }
+    },
+    {
+      "run_id": "speech_only_same_residency_rep1",
+      "condition": "SPEECH_ONLY_SAME_RESIDENCY",
+      "model": "whisper_turbo",
+      "task": "asr",
+      "observed_cohort_service_mean_ms": 361.8548912,
+      "frozen_training_only_bound_ms": 397.9305811962377,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/speech_only_same_residency_rep1.json",
+        "sha256": "2ed468a20f41e35c505ed99c2e75aa76b2e1e24317ea5b9847df06797dd797d8",
+        "bytes": 14728320,
+        "mtime_ns": 1791448263986959543
+      }
+    },
+    {
+      "run_id": "speech_only_same_residency_rep1",
+      "condition": "SPEECH_ONLY_SAME_RESIDENCY",
+      "model": "whisper_turbo",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 157.11513344147843,
+      "frozen_training_only_bound_ms": 165.05992197045626,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/speech_only_same_residency_rep1.json",
+        "sha256": "2ed468a20f41e35c505ed99c2e75aa76b2e1e24317ea5b9847df06797dd797d8",
+        "bytes": 14728320,
+        "mtime_ns": 1791448263986959543
+      }
+    },
+    {
+      "run_id": "full_mid_reference_rep2",
+      "condition": "FULL_MID_REFERENCE",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 123.20849473871984,
+      "frozen_training_only_bound_ms": 124.83731814954935,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/full_mid_reference_rep2.json",
+        "sha256": "032b461e4ca7a6e97ef4c88e61e21ea4710f2c6be9634351edc3cb29a943434f",
+        "bytes": 15720026,
+        "mtime_ns": 1791448456122594542
+      }
+    },
+    {
+      "run_id": "full_mid_reference_rep2",
+      "condition": "FULL_MID_REFERENCE",
+      "model": "whisper_turbo",
+      "task": "asr",
+      "observed_cohort_service_mean_ms": 391.14764735,
+      "frozen_training_only_bound_ms": 397.9305811962377,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/full_mid_reference_rep2.json",
+        "sha256": "032b461e4ca7a6e97ef4c88e61e21ea4710f2c6be9634351edc3cb29a943434f",
+        "bytes": 15720026,
+        "mtime_ns": 1791448456122594542
+      }
+    },
+    {
+      "run_id": "full_mid_reference_rep2",
+      "condition": "FULL_MID_REFERENCE",
+      "model": "whisper_turbo",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 163.94264702053388,
+      "frozen_training_only_bound_ms": 165.05992197045626,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/full_mid_reference_rep2.json",
+        "sha256": "032b461e4ca7a6e97ef4c88e61e21ea4710f2c6be9634351edc3cb29a943434f",
+        "bytes": 15720026,
+        "mtime_ns": 1791448456122594542
+      }
+    },
+    {
+      "run_id": "speech_only_same_residency_rep2",
+      "condition": "SPEECH_ONLY_SAME_RESIDENCY",
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 114.10199269779643,
+      "frozen_training_only_bound_ms": 124.83731814954935,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/speech_only_same_residency_rep2.json",
+        "sha256": "876973c1fc12f97f30d5bc7472776159b94f1282104485de36824e775d59bf7b",
+        "bytes": 14753813,
+        "mtime_ns": 1791448641913782791
+      }
+    },
+    {
+      "run_id": "speech_only_same_residency_rep2",
+      "condition": "SPEECH_ONLY_SAME_RESIDENCY",
+      "model": "whisper_turbo",
+      "task": "asr",
+      "observed_cohort_service_mean_ms": 344.94678596666665,
+      "frozen_training_only_bound_ms": 397.9305811962377,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/speech_only_same_residency_rep2.json",
+        "sha256": "876973c1fc12f97f30d5bc7472776159b94f1282104485de36824e775d59bf7b",
+        "bytes": 14753813,
+        "mtime_ns": 1791448641913782791
+      }
+    },
+    {
+      "run_id": "speech_only_same_residency_rep2",
+      "condition": "SPEECH_ONLY_SAME_RESIDENCY",
+      "model": "whisper_turbo",
+      "task": "lid",
+      "observed_cohort_service_mean_ms": 159.0843396078029,
+      "frozen_training_only_bound_ms": 165.05992197045626,
+      "passed": true,
+      "raw": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module17_runtime_capacity/raw_runs/speech_only_same_residency_rep2.json",
+        "sha256": "876973c1fc12f97f30d5bc7472776159b94f1282104485de36824e775d59bf7b",
+        "bytes": 14753813,
+        "mtime_ns": 1791448641913782791
+      }
+    }
+  ],
+  "bounds": [
+    {
+      "model": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task": "lid",
+      "replica_count": 1,
+      "training_run_means_ms": [
+        122.89862935466947,
+        119.0117885844701,
+        122.16098631794334
+      ],
+      "proposed_service_mean_bound_ms": 124.83731814954935,
+      "rule": "max(observed repetition mean, one-sided 95% t upper confidence limit on repetition mean); diagnostic proposed bound, not a deterministic per-request upper bound",
+      "accepted": false,
+      "standalone_s0_ms": 69.3332159,
+      "empirical_scope_holdout_passed": true,
+      "service_mean_ratio_bound": 1.8005412922083908,
+      "equivalent_path_gain_bound": 0.5553885402836194,
+      "scope": "Only the measured fixed six resident checkpoints at count1 with fixed ASR/LID traffic and original speech routes, non-speech background either frozen MID or disabled; no new replica count or speech mixture transfer is certified.",
+      "new_fullpool_constraint_accepted": false
+    },
+    {
+      "model": "whisper_turbo",
+      "task": "asr",
+      "replica_count": 1,
+      "training_run_means_ms": [
+        385.7903325166667,
+        391.720294375,
+        394.27232860833334
+      ],
+      "proposed_service_mean_bound_ms": 397.9305811962377,
+      "rule": "max(observed repetition mean, one-sided 95% t upper confidence limit on repetition mean); diagnostic proposed bound, not a deterministic per-request upper bound",
+      "accepted": false,
+      "standalone_s0_ms": 170.52229172222223,
+      "empirical_scope_holdout_passed": true,
+      "service_mean_ratio_bound": 2.3335985997916304,
+      "equivalent_path_gain_bound": 0.42852271169912903,
+      "scope": "Only the measured fixed six resident checkpoints at count1 with fixed ASR/LID traffic and original speech routes, non-speech background either frozen MID or disabled; no new replica count or speech mixture transfer is certified.",
+      "new_fullpool_constraint_accepted": false
+    },
+    {
+      "model": "whisper_turbo",
+      "task": "lid",
+      "replica_count": 1,
+      "training_run_means_ms": [
+        164.20287256262833,
+        161.7743386529774,
+        161.2679697063655
+      ],
+      "proposed_service_mean_bound_ms": 165.05992197045626,
+      "rule": "max(observed repetition mean, one-sided 95% t upper confidence limit on repetition mean); diagnostic proposed bound, not a deterministic per-request upper bound",
+      "accepted": false,
+      "standalone_s0_ms": 83.17856548888889,
+      "empirical_scope_holdout_passed": true,
+      "service_mean_ratio_bound": 1.98440452778072,
+      "equivalent_path_gain_bound": 0.5039295093316284,
+      "scope": "Only the measured fixed six resident checkpoints at count1 with fixed ASR/LID traffic and original speech routes, non-speech background either frozen MID or disabled; no new replica count or speech mixture transfer is certified.",
+      "new_fullpool_constraint_accepted": false
+    }
+  ],
+  "calibrated_local_speech_worker_demands": {
+    "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.991648086421598,
+    "whisper_turbo": 1.0674923867947355
+  },
+  "frozen_operational_rho_gate": 0.8,
+  "original_MID_speech_route_has_operational_margin_under_local_envelope": false,
+  "why_original_rho_fails": "D_pred aggregates frozen standalone task means with empirical relative replica gains. It does not measure same-checkpoint mixed-task queue capacity or co-resident process losses. Medium/turbo g1=1 is a normalization, not proof those standalone service costs remain valid concurrently. Full MID cohort worker service demand is roughly twice predicted for turbo, and its serial task-shared worker approaches continuous busy duty.",
+  "what_is_measured": "Native handler duration, queue delay, scheduled-arrival E2E, scheduler and GPU/CPU telemetry. The failed-run throughput is not asserted to equal a maximum capacity. Proposed bounds were fixed using old repetition means and a one-sided t confidence bound, then checked on independent matched controls.",
+  "cheap_implementation_if_scope_supported": "A separate scoped linear service-demand guard, keeping historical s0/g/M, J and V3 untouched. No uniform interference factor.",
+  "transfer_to_new_ASR_QPS_or_routes_proven": false,
+  "transfer_to_other_fullpool_deployments_proven": false,
+  "transfer_to_x2_or_x3_proven": false,
+  "runtime_implementation_bug_found": false,
+  "runtime_bug_fixed": false,
+  "unsupported_conditions": [
+    "New ASR task QPS/mixture and G/S routing",
+    "Whisper-medium ASR path under concurrent serving",
+    "A different resident Generalist/Specialist combination",
+    "Different measured replica counts under new co-residency"
+  ],
+  "stop_condition": "Existing evidence and the four permitted diagnostic sessions do not establish transferable capacity guards for new fullpool witnesses. Do not extrapolate local bounds or use unmeasured co-resident states as calibrated."
+}

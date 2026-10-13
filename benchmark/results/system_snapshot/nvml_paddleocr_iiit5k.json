@@ -1,0 +1,78 @@
+{
+  "schema_version": "nvml-process-profile-v2",
+  "backend": "nvidia-ml-py",
+  "label": "paddleocr_iiit5k",
+  "timestamp": "2026-09-18T13:40:42.106104+08:00",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "driver": "595.71.05",
+  "requested_sampling_interval_ms": 50.0,
+  "actual_sampling_interval": {
+    "mean_ms": 50.0,
+    "min_ms": 49.969,
+    "max_ms": 50.067
+  },
+  "command": [
+    "env",
+    "LD_LIBRARY_PATH=/root/miniconda3/envs/ocr_env/lib/python3.11/site-packages/nvidia/cu13/lib",
+    "/root/miniconda3/envs/ocr_env/bin/python",
+    "benchmark/scripts/probe_paddleocr_nvml.py"
+  ],
+  "child_pid": 4652,
+  "return_code": 0,
+  "wall_time_s": 7.751255,
+  "gpu_baseline": {
+    "total_mib": 49140.0,
+    "used_mib": 630.875,
+    "free_mib": 48509.125
+  },
+  "baseline_compute_processes": {},
+  "peak_target_process_memory_mib": 582.0,
+  "peak_all_compute_process_memory_mib": 582.0,
+  "max_device_used_mib": 1221.062,
+  "peak_device_delta_from_baseline_mib": 590.187,
+  "markers": [
+    {
+      "marker": "post_load",
+      "elapsed_s": 2.437646,
+      "target_process_memory_mib": 510.0,
+      "all_compute_process_memory_mib": 510.0,
+      "compute_pids": [
+        4652
+      ],
+      "device_used_mib": 1149.062
+    },
+    {
+      "marker": "post_warmup",
+      "elapsed_s": 3.958102,
+      "target_process_memory_mib": 568.0,
+      "all_compute_process_memory_mib": 568.0,
+      "compute_pids": [
+        4652
+      ],
+      "device_used_mib": 1207.062
+    },
+    {
+      "marker": "post_inference",
+      "elapsed_s": 6.182604,
+      "target_process_memory_mib": 582.0,
+      "all_compute_process_memory_mib": 582.0,
+      "compute_pids": [
+        4652
+      ],
+      "device_used_mib": 1221.062
+    }
+  ],
+  "marker_names": [
+    "post_load",
+    "post_warmup",
+    "post_inference"
+  ],
+  "num_samples": 156,
+  "trace_csv": "benchmark/results/system_snapshot/nvml_paddleocr_iiit5k.csv",
+  "notes": [
+    "Primary deployment VRAM metric is per-process usedGpuMemory obtained through NVML.",
+    "Device-level used memory may include driver or vGPU reserved memory and is therefore retained only as a cross-check.",
+    "peak_device_delta_from_baseline_mib subtracts the pre-launch device-level baseline.",
+    "Sampling is discrete; extremely short transient peaks between samples may still be underestimated."
+  ]
+}

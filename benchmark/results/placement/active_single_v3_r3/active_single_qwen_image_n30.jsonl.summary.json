@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "qwen",
+  "target_task": "image",
+  "target_count": 30,
+  "mean_worker_latency_ms": 137.59145293333333,
+  "min_worker_latency_ms": 93.617187,
+  "max_worker_latency_ms": 191.568429,
+  "output": "benchmark/results/placement/active_single_v3_r3/active_single_qwen_image_n30.jsonl"
+}

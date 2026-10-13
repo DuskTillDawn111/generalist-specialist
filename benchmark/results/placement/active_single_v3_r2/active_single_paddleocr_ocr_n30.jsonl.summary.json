@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "paddleocr",
+  "target_task": "ocr",
+  "target_count": 30,
+  "mean_worker_latency_ms": 5.972571233333333,
+  "min_worker_latency_ms": 5.068412,
+  "max_worker_latency_ms": 13.575696,
+  "output": "benchmark/results/placement/active_single_v3_r2/active_single_paddleocr_ocr_n30.jsonl"
+}

@@ -1,0 +1,9 @@
+{
+  "task": "image",
+  "worker": "resnet50",
+  "num_results": 200,
+  "wall_time_s": 1.128490324,
+  "throughput_tasks_per_s": 177.2279263246922,
+  "mean_worker_latency_ms": 5.58187836,
+  "p95_worker_latency_ms": 6.756722350000001
+}

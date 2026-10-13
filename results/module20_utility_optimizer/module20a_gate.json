@@ -1,0 +1,80 @@
+{
+  "at_utc": "2026-10-08T14:59:09.534381+00:00",
+  "module": "20A",
+  "CPU_only": true,
+  "GPU_started": false,
+  "independent_dimensions": {
+    "UTILITY_MODEL_HOLDOUT_SUPPORTED": false,
+    "UTILITY_MODEL_INSUFFICIENT": true,
+    "UTILITY_POSITIVE_THREE_PHASE_CPU_CANDIDATE": false,
+    "NO_POSITIVE_THREE_PHASE_CANDIDATE": true
+  },
+  "A": {
+    "known_negative_mixed_cases": 4,
+    "still_selects_mixed": 0,
+    "development_only": true,
+    "capacity_uncertainty_retained": true
+  },
+  "B": {
+    "independent_real_system_utility_gain_contrasts": 0,
+    "status": "INSUFFICIENT_MATCHED_UTILITY_EVIDENCE",
+    "memory_and_capacity_benefits_preserved_separately": true
+  },
+  "C": {
+    "independent_ranking_groups": 0,
+    "holdout_ranking_accuracy": null,
+    "holdout_ranking_reversals": null,
+    "retrospective_holdout_runs": 6,
+    "holdout_eligible_U_runs": 5,
+    "holdout_absolute_U_MAE": 15.342507980951197,
+    "nominal_false_feasible_runs": [
+      "mid_rep3"
+    ],
+    "stress_scenario_fully_finite_runs": 0,
+    "finite_scenario_coverage_fraction": null,
+    "all_holdout_stress_rejects": true,
+    "scope": "Module16 full-pool grouped holdout; not a blind prospective test. Zero independent matched ranking pairs."
+  },
+  "D": {
+    "at_utc": "2026-10-08T14:54:06.526623+00:00",
+    "cells": 210,
+    "unique_candidates": 1118,
+    "generation_attempts": 8820,
+    "generation_seconds": 42.08356595039368,
+    "prediction_seconds": 12.043941331095994,
+    "wall_seconds": 66.07819521613419,
+    "nominal_feasible_cells": 140,
+    "nominal_infeasible_or_unresolved_cells": 70,
+    "naive_state_counts_by_pool": {
+      "FULL_HEAVY_19": 286654464,
+      "COMMON_G_17": 31850496
+    },
+    "measured_exhaustive_walltime_speedup": null,
+    "comparison_limit": "State reduction compares unique visited deployment states with full zero-or-measured-count Cartesian enumeration. MILP branch work is not counted as visited deployments; no measured exhaustive time speedup claim. No complete optimality claim.",
+    "main_selection_stability_fraction": 0.7756613756613756
+  },
+  "E": {
+    "main_selection_same_candidate_fraction": 0.7756613756613756,
+    "negative_routing_same_fraction_across_weights": 1.0,
+    "not_weight_invariant": true
+  },
+  "F": {
+    "cells": 210,
+    "natural_structural_triples": 0,
+    "positive_three_phase_candidates": 0,
+    "selected_mixed_cells": 12,
+    "search_is_heuristic_and_grid_limited": true
+  },
+  "module20b": {
+    "positive_three_phase_efficacy_campaign_ready": false,
+    "reason": "No positive three-phase witness; independent utility-ranking evidence insufficient and nominal holdout capacity fails. New controlled matched GPU data required before efficacy claims.",
+    "next_data_can_support_calibration_campaign": true,
+    "automatic_GPU_launch": false
+  },
+  "history_integrity": {
+    "protected_files": 15036,
+    "changed_files": [],
+    "passed": true
+  },
+  "tests_passed": true
+}

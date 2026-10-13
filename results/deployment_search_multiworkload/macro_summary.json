@@ -1,0 +1,20 @@
+{
+  "proposed_seed_improvement_workloads": 3,
+  "proposed_random_advantage_workloads": 3,
+  "proposed_random_trial_wins": 4,
+  "real_random_trials": 6,
+  "proposed_mean_valid_evaluations": 6,
+  "lp_positive_runtime_worse": 0,
+  "b2_rollbacks_avoiding_worse": 0,
+  "b3_wrong_acceptances": 0,
+  "support": "PARTIAL SUPPORT",
+  "search_physical_attempts": 84,
+  "confirmation_physical_attempts": 60,
+  "search_run_status_counts": {
+    "completed": 84
+  },
+  "confirmation_noncompleted_counts": {},
+  "enumeration_calls": 0,
+  "real_exhaustive_optimum": "unavailable",
+  "module3b_9935pct_sample_improvement_reproduced_workloads": 0
+}

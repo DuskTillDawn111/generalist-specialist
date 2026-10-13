@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "distilbert",
+  "target_task": "text",
+  "target_count": 30,
+  "mean_worker_latency_ms": 3.6470314333333334,
+  "min_worker_latency_ms": 1.966916,
+  "max_worker_latency_ms": 47.35194,
+  "output": "benchmark/results/placement/active_single_v3_r3/active_single_distilbert_text_n30.jsonl"
+}

@@ -1,0 +1,134 @@
+{
+  "module": "Module30",
+  "gate": "NO_POSITIVE_FEASIBILITY_CANDIDATE",
+  "infrastructure_passed": true,
+  "formal_runs_attempted": 6,
+  "formal_runs_completed": 6,
+  "legal_stable_runs": 4,
+  "candidate_count": 2,
+  "positive_candidates": [],
+  "limited_legal_positive_signals": [],
+  "winner": null,
+  "independent_validation": false,
+  "optimizer_modified": false,
+  "Stage_D": "NOT_EXECUTED_NO_EXPLORATORY_POSITIVE",
+  "stopped": true,
+  "campaign": {
+    "attempted": [
+      "C1_split05",
+      "C1_s_only",
+      "C1_split10",
+      "C2_split10",
+      "C2_s_only",
+      "C2_split05"
+    ],
+    "stop": null,
+    "skipped": [],
+    "maximum_formal_runs": 6,
+    "no_retries": true,
+    "infrastructure_amendments": 1,
+    "original_points_seeds_routes_unchanged": true,
+    "previous_prelaunch_stop": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/before_unmeasured_slot_completion/campaign_completed.json",
+      "sha256": "e07f2a0ca12936a73abb38134ea3db60c179774ee2b1cdd6ec548c3b7891b1ed",
+      "bytes": 380
+    },
+    "same_frozen_slot_setup_attempts": 2,
+    "actual_maximum_formal_windows": 6,
+    "actual_formal_windows": 6,
+    "measured_window_retries": 0,
+    "methodological_deviation": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/frozen_gpu_manifest_unmeasured_slot_completion.json",
+      "sha256": "575c20fe5ea783742235fd453f4606886b4439a86822e41de24678148a2e2613",
+      "bytes": 221535
+    }
+  },
+  "historical_integrity": true,
+  "negative_results_retained": true,
+  "no_seed_retries": true,
+  "next_module_automatic": false,
+  "legal_U_policy": "NULL for unstable/incomplete/technical failure; no positive comparison from censored latency",
+  "infrastructure_final_version": "v2_nonblocking_check",
+  "v1_observer_fault": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/telemetry_observer_lock_reproduction.json",
+    "sha256": "ce0690bcff4e13722c4ebd14359c49fd5d3609841c9804630e4e0918f91dfd41",
+    "bytes": 1158
+  },
+  "corrected_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/frozen_gpu_manifest_v2.json",
+    "sha256": "67fdb713adf1ba08471759db5d3824cc1d475ac58cbf9d945e95900391474ff8",
+    "bytes": 330113
+  },
+  "observer_affected_runs": [
+    "C1_s_only",
+    "C1_split05"
+  ],
+  "C1_controls_comparable": false,
+  "C1_status": "TECHNICALLY_INCONCLUSIVE_OBSERVER_EFFECT",
+  "formal_budget_includes_two_v1_attempts": true,
+  "formal_retry_count": 0,
+  "unmeasured_slot_completion": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/frozen_gpu_manifest_unmeasured_slot_completion.json",
+    "sha256": "575c20fe5ea783742235fd453f4606886b4439a86822e41de24678148a2e2613",
+    "bytes": 221535
+  },
+  "formal_window_retries": 0,
+  "failed_prelaunch_attempts": 1,
+  "measured_window_cap_respected": true,
+  "final_CPU_review_passed": true,
+  "latency_decomposition": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/native_latency_decomposition.csv",
+    "sha256": "3e86ad046b41435e11339801693649ed6e4d9d0c32b651c45566ee2445bba46a",
+    "bytes": 6562
+  },
+  "utility_additivity": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/final_cpu_analysis_acceptance.json",
+    "sha256": "d37f8322f27048b947e9ad9e1d7977a53bb7c0e069315f4c70e3fbb26e580ed3",
+    "bytes": 915
+  },
+  "report_summary": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/module30_summary.md",
+    "sha256": "b4585193b1fda5625a52e37a5c89f37bcc6243d280be03e3d474cf7de4e20d10",
+    "bytes": 7054
+  },
+  "provisional": false,
+  "completion_in_progress": false,
+  "unexecuted_formal_windows": [],
+  "C2_all_three_legal_stable": true,
+  "actual_formal_windows_started": 6,
+  "actual_completed_formal_windows": 6,
+  "screening_complete": false,
+  "all_candidate_routes_ruled_out": false,
+  "methodological_preparation_deviation": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/frozen_gpu_manifest_unmeasured_slot_completion.json",
+    "sha256": "575c20fe5ea783742235fd453f4606886b4439a86822e41de24678148a2e2613",
+    "bytes": 221535
+  },
+  "nonmeasurement_preparation_result": {
+    "started_measurement": true,
+    "raw": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/raw_runs/C2_split05.json",
+      "sha256": "ed7a9769be9e14b367546991e6a458f18934b792611a62bbb5d1ca75fa9f1216",
+      "bytes": 5206498
+    },
+    "full_measurement": true,
+    "eligible": true,
+    "U": -1.0770317667533706,
+    "errors": [],
+    "no_more_recovery": true
+  },
+  "measured_window_retry_count": 0,
+  "final_data_acceptance": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module30_positive_split_feasibility/final_data_acceptance.json",
+    "sha256": "cbd5882f2aea7b5642fe041a13842f1a63f32027238b365b8a877288bd0e62b6",
+    "bytes": 2846
+  },
+  "formal_windows_started": 6,
+  "formal_windows_completed": 6,
+  "formal_window_retry_count": 0,
+  "prelaunch_failure_count": 1,
+  "additional_idle_preparation": true,
+  "C2_status": "COMPLETE_LEGAL_STABLE_NONPOSITIVE",
+  "Stage_B_execution_complete": true,
+  "C1_technical_limitation_preserved": true
+}

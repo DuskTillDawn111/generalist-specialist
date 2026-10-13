@@ -1,0 +1,642 @@
+{
+  "at_unix_ns": 1791648118636606251,
+  "files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/CPU_phase_transition_acceptance.json",
+      "sha256": "9b4e07f91c0737ae76c25913435de1c893b9c939183ae576d3c192125d65baab",
+      "bytes": 376
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/GPU_startup_failure_audit.json",
+      "sha256": "3ed0618a3add9884c40d049d47f3ec446685500846d5d6b6ae38a711a1afc0a7",
+      "bytes": 1739
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/audio_metadata_cache.json",
+      "sha256": "7e335a83ac40fc2b53c656821360f3ffaa2b425fb0b1b2cf05e6a92438e7dbc7",
+      "bytes": 3928
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/control_attribution.py",
+      "sha256": "3d34f26ebdc0d6db9624117f78fba38386cb23fb4b47c8c76e3e46f3731c152c",
+      "bytes": 3953
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/control_probe_attribution.json",
+      "sha256": "6bbc3b122b0db6ba27119e6ebd9536ef1648c226d037e96930d57d7fd954af62",
+      "bytes": 1235
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/control_probe_attribution.md",
+      "sha256": "7d0e7a58df486c8789afc71882818d1f3efd5eeb7d8cd95f29aaed15cd390865",
+      "bytes": 2959
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/control_probe_reproduction.csv",
+      "sha256": "bdcf95e565e2ca58287849aabe6700f0fca698172fd2d059e0c663496f1f838c",
+      "bytes": 3617
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/control_probe_reproduction_32d_cohort.csv",
+      "sha256": "738b638b86f815a4b3f3613d23870cc6f25260d16b56668ee4d9a1921f3586f5",
+      "bytes": 2780
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_engineering_regression.md",
+      "sha256": "cf35825c9b8fac4e09f882ea047cd3eedb84dd45f2c99547073724a2669ed775",
+      "bytes": 1470
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/CPU_runtime_acceptance.json",
+      "sha256": "1509b98e8bf6b31ea074865f9995841b7a596bb9abd69f20c8670bf8015a1cd1",
+      "bytes": 4046
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/historical_decision_equivalence.csv",
+      "sha256": "eda749a4b5e9de81d303fdd36bb5a88a662d680ca18a683fbba28402277fbdb3",
+      "bytes": 150661
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/live_progress.json",
+      "sha256": "79f7846103ee1549c6c918dcc04c668b624e8d9c3daa1007269fa0c32ca6236a",
+      "bytes": 225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/raw_control_probes_1.csv",
+      "sha256": "86f4f63afee9e977c2ec9420cdbc042a37de3e661b1a2b5b3c6d68ce8ae96040",
+      "bytes": 282097
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/raw_control_probes_8.csv",
+      "sha256": "5ba8e9569a6a70ae9f4afb6a4f8ebb1d015c9aedd879628f7a48e5e9d1579a1c",
+      "bytes": 284628
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/raw_router_times_1.csv",
+      "sha256": "167bf7514842c0b05e5d41f49693da4112cd1d42c5996fc97915a29e06ff3c86",
+      "bytes": 65101
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/raw_router_times_8.csv",
+      "sha256": "fc4d1f1e8f74240e0f75b8aff126ff569bbe6c712978f8d6a9c8c57135518053",
+      "bytes": 65144
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/request_journals/CPU_CONCURRENT_1.jsonl",
+      "sha256": "dd2bde0b5c6d0cf306ca7a9d3611b12a7f11d1cbec2212e6c034866c27a4aa4d",
+      "bytes": 3471536
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/request_journals/CPU_CONCURRENT_8.jsonl",
+      "sha256": "9f10a1502267e07a1d118688c29450934794f6db9d5ccc716709f431f3fabec5",
+      "bytes": 3471821
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/router_performance_benchmark.csv",
+      "sha256": "0647fdbdc836c6468e3454bd1468510948b2ac3784be00cd69daaffbfb1c1530",
+      "bytes": 2293
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/router_performance_by_300s.csv",
+      "sha256": "6e440bdeaf55d163ea424fb540b235e057b4630994052b7269314b18f8fbfa10",
+      "bytes": 1724
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/write_guard_1.json",
+      "sha256": "fcf8364b2bb1f9e0c21ab048d7a7f5fb60e58abc70e579b8e733f557c10ba259",
+      "bytes": 52
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_regression/write_guard_8.json",
+      "sha256": "fcf8364b2bb1f9e0c21ab048d7a7f5fb60e58abc70e579b8e733f557c10ba259",
+      "bytes": 52
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_validation.log",
+      "sha256": "c6be86223d4006b89da015c0ce5e1b427aa84f2262e9f398db9e06c0f641f04a",
+      "bytes": 4761
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/cpu_validation.py",
+      "sha256": "23ced82c66f752bb1cfd3a4fc99bb62eb28ac9c0c33107c7a4ad24e27d79a330",
+      "bytes": 12922
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/environment_identity.json",
+      "sha256": "759738cc4008d748031c3cda860cd01d05864899cc97832274391aa7b1965603",
+      "bytes": 9668
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/final_artifact_review.json",
+      "sha256": "c01cace27237868dcec43ebfb8d16034d1a0b8c7f3b612cc86b933d1a39581d4",
+      "bytes": 1185
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/final_review.log",
+      "sha256": "7284794d615e0bb67d583a0bc1137569710807d289a8884f1932a241a21c0c24",
+      "bytes": 43
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/final_review.py",
+      "sha256": "3ec075534215ab79f46aed5588bfb8034a4fd843b272fba0c6b4cd9b4d709a64",
+      "bytes": 3796
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/final_review_initial.log",
+      "sha256": "4776ebb19b679ced35cb1b6118e55867229225f6b7782430b37549f62a24a12b",
+      "bytes": 264
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/finalize_module32e.py",
+      "sha256": "54ad7ce5573de3ed6bd2089e6608bf31b13c0df540a5d4bb9d60b848bc958c63",
+      "bytes": 7850
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/finalize_startup_failure.py",
+      "sha256": "04bc658749263f8f09badb6675f5a38ce99d307cb26f40c9b209e6b4af14293a",
+      "bytes": 8404
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/freeze_preflight.log",
+      "sha256": "da069d8b20d29353bc7a43fbd9a22ad43d13f3e9105074ede93327da656658e3",
+      "bytes": 115
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/freeze_preflight.py",
+      "sha256": "56771d62ff82200551373fe95087d2a470c879e2b2064948e7e85a5d4802c4f8",
+      "bytes": 6683
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/frozen_gpu_manifest.json",
+      "sha256": "4a252ecdf8e479f8dc5c7f4247dc35312708bb2131d659b92cce92bdb8e21803",
+      "bytes": 504860
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/frozen_routing_parameters.json",
+      "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+      "bytes": 1992
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/frozen_utility_context.json",
+      "sha256": "4b0a92a18dc9519d10a957db400411ac02c723efcea8c640d2f02b8d4ff19581",
+      "bytes": 6889
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/frozen_validation_manifest.json",
+      "sha256": "4a252ecdf8e479f8dc5c7f4247dc35312708bb2131d659b92cce92bdb8e21803",
+      "bytes": 504860
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_control_probes.csv",
+      "sha256": "4bf6f44d2ee62c97dbd40354d664fa11bcad36bd2b7e9618bc0a481850374161",
+      "bytes": 78
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_environment_control.md",
+      "sha256": "1bee35f9a33653df5e1ec1fae6bba7324045c2c918016fb38907b5d6809419a9",
+      "bytes": 2441
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_environment_report.json",
+      "sha256": "71a4f8eb0f4b997ebefff58729022173e6bdaf4221840925ba5c1a00dd5174b4",
+      "bytes": 829
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_environment_report.md",
+      "sha256": "6ddc2d661c7223133a12a70505d8422648cc102a45be84fc6efcb8fdd27a8bb6",
+      "bytes": 1176
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_preflight.log",
+      "sha256": "e0f26b4c908009d1da6607242fe37fa95e8c5a4d4abaf494be5cce8770c28630",
+      "bytes": 6887
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_preflight.py",
+      "sha256": "b4b9da0b0d010ad861ea4368f714f10877947daf1dc715ed328616dbe95d752e",
+      "bytes": 7295
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_preflight_acceptance.json",
+      "sha256": "369c55c38b400e91d9160cea290e7f4682e15f1520e232d106fc2391c599ebc4",
+      "bytes": 3547
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_preflight_failure.json",
+      "sha256": "f2bbb08fb248ce8b7d26a251ea1d8fab2b6a821e39a516ae44fd5c7ce285547a",
+      "bytes": 1324
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_preflight_failure_report.md",
+      "sha256": "dc0491f08e728976b46cffcd383bdb8a835452bfcea53a7a8d7a47962ce0b674",
+      "bytes": 1648
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/gpu_sensor_samples.csv",
+      "sha256": "af163b9de2259e33b6cb2f2bd2da31bbe72bdac9c72e1ea1d41730d964f73471",
+      "bytes": 5703
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hash_after_CPU.log",
+      "sha256": "db416bb33fb6b5de2ec2772ffaef7bae0a9acfe2971fa0c0f9d68310e9acdf66",
+      "bytes": 65
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hash_after_GPU.log",
+      "sha256": "ac01141b09533f4721a3a0d709724a8f8ac1d725bf7204125a103f87e3d74d91",
+      "bytes": 65
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hash_before_CPU.log",
+      "sha256": "5ccf144d915647f977dffe7bf1c3d6bbf68a5192f52aaa1663df562a985708df",
+      "bytes": 67
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hash_before_GPU.log",
+      "sha256": "6b6ccf635adc1fccbf5f142a27ec3a3130a5ca9ec4394e128fb7b65f04eb633a",
+      "bytes": 67
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/after_CPU.json",
+      "sha256": "9237a6b0ef7ac23b43b1bfbcbee28631eb268dee49d96418af59e3e85ce0ad1d",
+      "bytes": 5651366
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/after_CPU_pre_dirfd_correction.json",
+      "sha256": "ac7353fc1f241a011b14497ef9525dda74b9f9392c8be8a9a5ea07e5999acadf",
+      "bytes": 5651366
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/after_CPU_vs_before_GPU.json",
+      "sha256": "cd597bdb2574d0fc448ffe6c2c4cf10269079b616c9a97cf0cbd34060cf205d9",
+      "bytes": 601
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/after_GPU.json",
+      "sha256": "fe99be86af478a6bf38f408a4cab81f988e6cfeee7a5692bdaab8334ea5f75ad",
+      "bytes": 5651366
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_CPU.json",
+      "sha256": "742bf9ef4866844a3879a1a6c508a3722289b900da46a5808a5cfeb1c8c00e15",
+      "bytes": 5651367
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_CPU_vs_after_CPU.json",
+      "sha256": "545d6ab712a8410e65bc783abf1ca946af9e725d262bd8b29515021c9208b90e",
+      "bytes": 601
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_CPU_vs_after_CPU_pre_dirfd_correction.json",
+      "sha256": "543ba5a3dcaf3244b5e5a3298ef842700f53133e7904ba57a65192e8ee36f10a",
+      "bytes": 601
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_CPU_vs_after_GPU.json",
+      "sha256": "ef90a87aa037fe0ccb45c9d8bd85018bd1acd0f03007741d0a9f8677d16bdbef",
+      "bytes": 601
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_GPU.json",
+      "sha256": "cd0eb312d277b7c552ada83cbd9c05a077107fd33b9b64c20c05130116150d49",
+      "bytes": 5651367
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_GPU_pre_dirfd_correction.json",
+      "sha256": "699ac05572484493b7d134f8c6cb19657d63db5b0f0c591994bb3b306673e285",
+      "bytes": 5651367
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes/before_GPU_vs_after_GPU.json",
+      "sha256": "8e582edc5a0e978b42af45fc307a63d7f7cc6e8e5f0feabb6f97a1d38d2bc8a6",
+      "bytes": 601
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_hashes.py",
+      "sha256": "e6f189562deda6c16462aaa2a1ecfb795f84bc831ee392313c51ad5aa7d715be",
+      "bytes": 2221
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_write_isolation_audit.md",
+      "sha256": "0a0a7083582d307d18bc9a6bfd3ca699c7ce33116a1afdd4e66a522c59c8c359",
+      "bytes": 2726
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/history_write_protection_tests.json",
+      "sha256": "bd5a1608fa9d99347e5a2b62e366616e3e5ce19e299ccd5018b08d1253422ba2",
+      "bytes": 8417
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/isolated_cache_CPU.log",
+      "sha256": "78e00f5432aa4796d700beaa8519ca86c58a14d78eef1d2a04d3ba89715bbc9b",
+      "bytes": 24
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/isolated_cache_CPU_acceptance.json",
+      "sha256": "886eba1b5cee2270f1e5753e2ba9e37852613ee3a37a0937677e4a69df81ebca",
+      "bytes": 339
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/isolated_dynamic_code_cache.json",
+      "sha256": "5f62962f0323b60a4cf2c288d154b39a18b10265f1a34f08d30de85dff036508",
+      "bytes": 4792
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/launchers/worker_0.py",
+      "sha256": "cb759710a34ca20a4230ba3ce55a6a57d1fc82ae0bfbbbf5c93f703aa477a7b1",
+      "bytes": 491
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/launchers/worker_1.py",
+      "sha256": "00bd092620533ca4bdcbd4d55c57c3708acbe7f00ca762ff42da5b0b20d95b67",
+      "bytes": 492
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/launchers/worker_2.py",
+      "sha256": "7749414316e68b61854961c84dc9a9fabcae774e4d24d89995bf52863197780d",
+      "bytes": 498
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/launchers/worker_3.py",
+      "sha256": "bdeff6280950e7bec3008c71ec3d0cdb7ab9ed6840e341e65ec842f89d48290e",
+      "bytes": 511
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/launchers/worker_4.py",
+      "sha256": "58b70d35a54734a18f40de1008657bcec93cdb0ec67a39a403a9960527a2b8e2",
+      "bytes": 493
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/launchers/worker_5.py",
+      "sha256": "fd8bbf8fe1c9fd6960db4c6e3a72127af195a459394f06c44ff9376bf5859a3a",
+      "bytes": 478
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/common.py",
+      "sha256": "d9103176f4a56e4784c17c7d3c42107637d58e136624c249b1872990198d7811",
+      "bytes": 1957
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/environment.py",
+      "sha256": "e4ff1046d1abda14d6e6b5d953ed8d5bae2f2e5467da68479b8b390cdce1b87c",
+      "bytes": 872
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/harness.py",
+      "sha256": "c6c7feaa307e98106b0401e7a9985ef1dc79c5ca8e5128e02cc7534fdd9f6ff7",
+      "bytes": 6477
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/isolation.py",
+      "sha256": "3556b531a6c37a31acce6a93bae74a9d853466a9240aab723b98ad66b23c9c9b",
+      "bytes": 5312
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/monitor.py",
+      "sha256": "01d95e906c2c6d966ba491605dd7c719940fbddb5b867f4c29955bd6389132ea",
+      "bytes": 7283
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/m32e/runtime.py",
+      "sha256": "e882237db1c4df87e5bb2cccf670fc9c0cd8b70ba6c5a260a568725f6f4fe490",
+      "bytes": 4231
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/module32e_gate.json",
+      "sha256": "b7ec8990b8fddeaa9e4f26736c23ae468db92fb45ec2d08da844aa605289f72b",
+      "bytes": 1967
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/module32e_summary.json",
+      "sha256": "fa0a3f768074a1046a9ca21b252fa8034a83c8b1fbbee4bcd56c2f5126d94831",
+      "bytes": 8274
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/module32e_summary.md",
+      "sha256": "4a8936f1c780cbb5f9bf30553463552c429f5bdf38277eee2c98dbf97b6cdee8",
+      "bytes": 2069
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/post_failure_acceptance.py",
+      "sha256": "368164e53518b19f67ea1f2f2528167a04ff93dffb288af9a48b2bf9b6604ccf",
+      "bytes": 2986
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_cache_setup/freeze_preflight.log",
+      "sha256": "da069d8b20d29353bc7a43fbd9a22ad43d13f3e9105074ede93327da656658e3",
+      "bytes": 115
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_cache_setup/frozen_gpu_manifest.json",
+      "sha256": "a394500f227e0c0c6dd6166494bd1da35dfec0542b1d3f8f9ceba28b98b70995",
+      "bytes": 500817
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_cache_setup/frozen_validation_manifest.json",
+      "sha256": "a394500f227e0c0c6dd6166494bd1da35dfec0542b1d3f8f9ceba28b98b70995",
+      "bytes": 500817
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/control_probe_attribution.json",
+      "sha256": "0f08511547b381c4da3bed686af83b6d0bf1987876528f5fc4f9b1f6fccbdff4",
+      "bytes": 1232
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/control_probe_reproduction.csv",
+      "sha256": "3de95267e599b62f2444aeb97ea306cd1289329a742160b44407c5d1653cb851",
+      "bytes": 3620
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/CPU_runtime_acceptance.json",
+      "sha256": "f88c014456533455e557d5c23c9d4f15766dd1908ea067fd4c191ef382862b4c",
+      "bytes": 4045
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/historical_decision_equivalence.csv",
+      "sha256": "eda749a4b5e9de81d303fdd36bb5a88a662d680ca18a683fbba28402277fbdb3",
+      "bytes": 150661
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/live_progress.json",
+      "sha256": "710356e4d3cdbadb4be57cbfb33bce59828b0006e18053d4b7e999194a1a00fe",
+      "bytes": 225
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/raw_control_probes_1.csv",
+      "sha256": "2bb5d1372c759432705d79f562cea6d4f371faffff506613bbbbd1be947a97e2",
+      "bytes": 282407
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/raw_control_probes_8.csv",
+      "sha256": "3b2ea9633a428e6afe2eec30e34e75bf181be7f234f22c7e71be02b9e720f453",
+      "bytes": 284658
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/raw_router_times_1.csv",
+      "sha256": "97a6f81964fa7e4180392aabecb51e63da14e6d6096e822dde8bb83a4dda9cc1",
+      "bytes": 65104
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/raw_router_times_8.csv",
+      "sha256": "8260307089618f5af285d59de0e67f5b92c5949f12b405c7feea61c0eb516c90",
+      "bytes": 65168
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/request_journals/CPU_CONCURRENT_1.jsonl",
+      "sha256": "feaed2c7a73e86c6f38f7a5486ebfc90029ce77feb265cd3d8c9ad7210c13130",
+      "bytes": 3471788
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/request_journals/CPU_CONCURRENT_8.jsonl",
+      "sha256": "92f8d5b04f5666fd128690a78823d32962da8adaf8db0c9281d86e0fb26db18e",
+      "bytes": 3470580
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/router_performance_benchmark.csv",
+      "sha256": "f89d943155ae17854c1283bfbef97ef445e817cb9ea580bff75d996905795a3b",
+      "bytes": 2292
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/router_performance_by_300s.csv",
+      "sha256": "ad1829a91247dd50eb39914db137e2096cb1e94ef355c7058d58785cb2a00348",
+      "bytes": 1668
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/write_guard_1.json",
+      "sha256": "fcf8364b2bb1f9e0c21ab048d7a7f5fb60e58abc70e579b8e733f557c10ba259",
+      "bytes": 52
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_regression/write_guard_8.json",
+      "sha256": "fcf8364b2bb1f9e0c21ab048d7a7f5fb60e58abc70e579b8e733f557c10ba259",
+      "bytes": 52
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/cpu_validation.log",
+      "sha256": "bcc9d2fbb995951ae290f84bc52b2ad4801cb6839a1d57f817b1d03943d74965",
+      "bytes": 4760
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/freeze_preflight.log",
+      "sha256": "da069d8b20d29353bc7a43fbd9a22ad43d13f3e9105074ede93327da656658e3",
+      "bytes": 115
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/frozen_gpu_manifest.json",
+      "sha256": "f3118c3ae52bbb08210762ff0ac16849494b9fa997bcb1ed5d777586461fad75",
+      "bytes": 503443
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/frozen_validation_manifest.json",
+      "sha256": "f3118c3ae52bbb08210762ff0ac16849494b9fa997bcb1ed5d777586461fad75",
+      "bytes": 503443
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/history_write_protection_tests.json",
+      "sha256": "6e65a12f2517f2b9f8e9d3b07fba5633514cdfdce8aac8d1d7e16df8bd5b92db",
+      "bytes": 8048
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_dirfd_correction/isolated_cache_CPU_acceptance.json",
+      "sha256": "a50932c6bc31714562efdb55432928af9bd84f79d7a671c8b7620a9c41137306",
+      "bytes": 416
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/pre_GPU_infrastructure_corrections.json",
+      "sha256": "e5152f435e9c240073f013b88a12a9d4fb779a1a48d15668acd38df2cd4347a2",
+      "bytes": 855
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/preflight.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/prior_incident_record.json",
+      "sha256": "cff87c71f90a08a94650a8f9cbf5ba165d41f9c0204faca6cdf019122a88c82c",
+      "bytes": 928
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/protection_tests.py",
+      "sha256": "d68667f8493edf822fdb5d7bbb96535ca519a93ee0a2c292ba0e7a09f05f05f3",
+      "bytes": 3194
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/raw_runs/E0_DYNAMIC.json",
+      "sha256": "ce4b7d79812bb3e18cb53e0c792c5c79b6840e6dda0436a0f1905e8bb9072d99",
+      "bytes": 21981
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/restricted_worker.py",
+      "sha256": "54ba50cc582da7d3f1eb154bfe7006866e3d74da18b2bf56b0341afabdd6c464",
+      "bytes": 539
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/router_optimized.py",
+      "sha256": "c11086bf9660ef72c26f11574e51971bec513f2489f48a625cd379f463fff23f",
+      "bytes": 11927
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/router_performance_benchmark.csv",
+      "sha256": "0647fdbdc836c6468e3454bd1468510948b2ac3784be00cd69daaffbfb1c1530",
+      "bytes": 2293
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/router_performance_by_300s.csv",
+      "sha256": "6e440bdeaf55d163ea424fb540b235e057b4630994052b7269314b18f8fbfa10",
+      "bytes": 1724
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/routing_equivalence_report.json",
+      "sha256": "266ecb43673942ebe680a52a1c06ea0432c96f338dd0f34077a32513e45bfb58",
+      "bytes": 2419
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/run_attempts/E0_DYNAMIC.json",
+      "sha256": "d0e822c4ad8fc10100594496b1ce7db86ae3009505dff1c8127d97524236d1d7",
+      "bytes": 2434
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/selected_pool_catalog.json",
+      "sha256": "ab7bbac44c273bcd7a2e11c89329c014d63180b823ca4bd99d386d9859e5a87f",
+      "bytes": 122679
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/test_isolated_cache.py",
+      "sha256": "85a0dfcf133c6aa682965370fc0cc09972054df03a7824c3909e5cdf64b61316",
+      "bytes": 799
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/test_monitor_phase_transition.py",
+      "sha256": "c73ba2849fdea8f5983781eaf0ccdfc4aa761db1751269c3840cf873fda6d59a",
+      "bytes": 2024
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/thermal_prelaunch/E0_DYNAMIC.json",
+      "sha256": "cb7c6712a5ea92d1e60cfe8daa3c97aff2b9b0001e599024e22fa1cecbc599dd",
+      "bytes": 1734
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32e_infrastructure_repair/vqa_aware_dynamic_router.py",
+      "sha256": "d85aef6d99d3c79dec6b0ca430e847224b6df42dc2c358bca0b21544d5f2f3f2",
+      "bytes": 2982
+    }
+  ],
+  "history_unchanged_since32E_baseline": true,
+  "old32D_byte_restore_not_claimed": true
+}

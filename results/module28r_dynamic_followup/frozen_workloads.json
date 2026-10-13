@@ -1,0 +1,232 @@
+{
+  "status": "FROZEN_BEFORE_GPU",
+  "at_unix_ns": 1791568199981206708,
+  "module": "28R",
+  "model_pool": [
+    "qwen",
+    "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+    "roberta_sst2",
+    "convnext_tiny",
+    "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt"
+  ],
+  "deployment": {
+    "qwen": 1,
+    "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+    "roberta_sst2": 1,
+    "convnext_tiny": 1,
+    "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+  },
+  "budget_mib": 34567.5534,
+  "safe_factor": 1.110853955254881,
+  "catalog": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/selected_pool_catalog.json",
+    "sha256": "ef2241db5325a891d60028d20a676acec0b675a386e6f95d8fb1372a67ff4f35",
+    "bytes": 61343
+  },
+  "quality_policy": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+    "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+    "bytes": 10083
+  },
+  "utility_definition": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_definition.json",
+    "sha256": "3d00c2193b94e20c8b17e78fbcef68d80724be042f4b45644916f5686b60403b",
+    "bytes": 5831
+  },
+  "utility_reference": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_reference_manifest.json",
+    "sha256": "b66286b7192862556e8c8a2563a2b3c10b0b5b1d96b06ef0f21a59318de89f83",
+    "bytes": 5933
+  },
+  "weights": {
+    "Q": 0.0,
+    "T": 0.25,
+    "L": 0.3,
+    "P": 0.3,
+    "M": 0.15
+  },
+  "refs": {
+    "text": 10.026380266666667,
+    "image": 27.71673651111111,
+    "ocr": 11.880106522222222,
+    "asr": 574.4954926166666,
+    "lid": 76.25589069444445,
+    "visual_qa": 160.11645761111112
+  },
+  "router_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/dynamic_router.py",
+    "sha256": "b9120755641a7c5bb4b51d3ac882a5d7919f50db79f45255711ecc54b56196c8",
+    "bytes": 4046
+  },
+  "router_parameters": {
+    "G_worker": "qwen#0",
+    "S_worker": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e#0",
+    "target": "lid",
+    "S_lower_by_task_ms": {
+      "lid": 65.31921059999999,
+      "asr": 169.22661
+    },
+    "G_upper_by_task_ms": {
+      "lid": 505.6366968,
+      "visual_qa": 691.1807333999999
+    },
+    "G_service_ms": 505.6366968,
+    "S_inflation_per_pending_ms": 9.574873183869613,
+    "background_cost_ms": 99.68604101585545,
+    "G_max_target_inflight": 1,
+    "G_token_rate_rps": 0.5750000000000001,
+    "cooldown_seconds": 0.5056366968,
+    "entry_margin_ms": 65.31921059999999,
+    "exit_margin_ms": 32.659605299999996,
+    "ewma_alpha": 0.1,
+    "prediction_error_ratio": 1.5,
+    "fallback_seconds": 30.0,
+    "S_service_alarm_ms": 118.06190725244267
+  },
+  "fixed_G_fraction": 0.1,
+  "fixed_fraction_source": {
+    "fraction": 0.1,
+    "reason": "Module27 10% beats20% at10.5; only tested nonzero fraction11.5; best measured nonzero prior. S-only0% is stronger prior and included. Not exhaustive optimum."
+  },
+  "low_selection_rule": {
+    "rule": "One-shot: reuse the highest already measured lower S-only LID point from Module27 with steady classification and projected native S mean demand <=0.85. No new QPS grid, seed search, or subsequent load adjustment.",
+    "selected_lid_qps": 10.5,
+    "projected_S_demand_ratio": 0.8121785165773054,
+    "target_max": 0.85
+  },
+  "scenarios": {
+    "HIGH": {
+      "rates": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 11.5,
+        "visual_qa": 0.2
+      },
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_warmup.json",
+          "sha256": "c16c510aadd9f94b578486a7c7090fa17b58d1aa09cee24d0b4f4b83e56fb428",
+          "bytes": 318304
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_measurement.json",
+          "sha256": "9194fd5dbbd5cce1fa84ef24a97d89a9e53aa3874457388b082e38b5f6d1f3c2",
+          "bytes": 6663180
+        }
+      },
+      "seed": 28101,
+      "measurement_seconds": 600,
+      "warmup_seconds": 30,
+      "drain_timeout_seconds": 60,
+      "all_tasks_positive": true
+    },
+    "LOW": {
+      "rates": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 10.5,
+        "visual_qa": 0.2
+      },
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_warmup.json",
+          "sha256": "6a716ebaedbd2c818fcff8bedd69fd709d29a7e2abe150e3ae2ebef702769b45",
+          "bytes": 289518
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_measurement.json",
+          "sha256": "20fa045ae56cb1b0312f1d2da2f07d716236b3aa4cdfcb0d3fc5a95174d5ef46",
+          "bytes": 6085914
+        }
+      },
+      "seed": 28101,
+      "measurement_seconds": 600,
+      "warmup_seconds": 30,
+      "drain_timeout_seconds": 60,
+      "all_tasks_positive": true
+    }
+  },
+  "order": [
+    [
+      "HIGH",
+      "s_only"
+    ],
+    [
+      "LOW",
+      "dynamic"
+    ],
+    [
+      "HIGH",
+      "fixed10"
+    ],
+    [
+      "LOW",
+      "s_only"
+    ],
+    [
+      "HIGH",
+      "dynamic"
+    ],
+    [
+      "LOW",
+      "fixed10"
+    ]
+  ],
+  "safety": {
+    "max_host_outstanding_total": 256,
+    "max_host_outstanding_per_worker": 192,
+    "max_owned_gpu_mib": 34567.5534,
+    "max_total_gpu_mib": 34567.5534,
+    "min_host_available_ram_gib": 4,
+    "max_gpu_temperature_c": 85,
+    "max_scheduled_dispatch_lag_seconds": 5,
+    "max_formal_overrun_seconds": 10,
+    "max_worker_no_completion_seconds": 30,
+    "watchdog_check_seconds": 0.5,
+    "drain_timeout_seconds": 60,
+    "campaign_policy": "Continue on original finite-window unstable classifier if complete/error-free/fully drained/memory legal. Stop entire campaign on safety, infrastructure, malformed/invalid output or unclean release. No retry or replacement."
+  },
+  "original_stability_thresholds": {
+    "completion_ratio_min": 0.98,
+    "timeline_bins": 20,
+    "tail_fraction": 0.25,
+    "tail_slope_min_requests_per_second": 0.02,
+    "tail_growth_min_requests": 5.0,
+    "tail_increasing_fraction": 0.6,
+    "tail_end_min_requests": 5,
+    "warning_peak_backlog_requests": 30.0,
+    "warning_peak_service_seconds": 5.0,
+    "warning_queue_wait_ms": 1000.0,
+    "warning_queue_episode_min_requests": 10,
+    "warning_queue_episode_fraction": 0.05,
+    "warning_drain_seconds": 5.0
+  },
+  "original_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28_dynamic_split/frozen_candidate_manifest.json",
+    "sha256": "d65a492654c9fba7eebfb59db9ce057c2608be7fda85b9e584bf7b90d85cd58e",
+    "bytes": 358252
+  },
+  "G_only": {
+    "executed": false,
+    "legal_stable_not_demonstrated": true,
+    "HIGH_native_mean_demand_lower_estimate": 4.41048,
+    "LOW_native_mean_demand_lower_estimate": 4.02696,
+    "reason": "Module27 observed G LID mean ~383.52ms implies target alone ~4.41/4.03 handler-s/s, plus VQA. Capacity screen rejects same single-G residency. This is a historical screen, not a measured G-only outcome; no superiority over all legal routes."
+  },
+  "thermal_protocol": {
+    "prelaunch_temperature_max_c": 38.0,
+    "consecutive_idle_samples_required": 3,
+    "max_wait_seconds": 300.0,
+    "between_samples_seconds": 2.0,
+    "resident_premeasurement_temperature_max_c": 40.0,
+    "resident_cool_timeout_seconds": 180.0,
+    "resident_consecutive_samples": 3,
+    "postwarm_pair_temperature_difference_max_c": 5.0,
+    "clocks_power_not_modified": true
+  },
+  "no_QPS_or_parameter_changes_after_freeze": true
+}

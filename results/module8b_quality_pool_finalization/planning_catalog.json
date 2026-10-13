@@ -1,0 +1,650 @@
+{
+  "models": {
+    "qwen": {
+      "name": "qwen",
+      "supported_tasks": [
+        "asr",
+        "image",
+        "lid",
+        "text",
+        "visual_qa"
+      ],
+      "memory_mib": 17978.0,
+      "service_time_ms": {
+        "visual_qa": 144.5074479,
+        "image": 139.61318952222226,
+        "text": 44.63871411111111,
+        "asr": 654.0784572333333,
+        "lid": 139.90943443333333
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "phi4mm": {
+      "name": "phi4mm",
+      "supported_tasks": [
+        "asr",
+        "visual_qa"
+      ],
+      "memory_mib": 11772.0,
+      "service_time_ms": {
+        "visual_qa": 160.11645761111112,
+        "asr": 1129.588914977778
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "minicpm": {
+      "name": "minicpm",
+      "supported_tasks": [
+        "asr",
+        "image",
+        "ocr",
+        "visual_qa"
+      ],
+      "memory_mib": 18392.0,
+      "service_time_ms": {
+        "visual_qa": 195.6905769222222,
+        "image": 221.70457001111112,
+        "ocr": 160.37148515555555,
+        "asr": 777.2589822555556
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "distilbert": {
+      "name": "distilbert",
+      "supported_tasks": [
+        "text"
+      ],
+      "memory_mib": 750.0,
+      "service_time_ms": {
+        "text": 3.7693092222222226
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "resnet50": {
+      "name": "resnet50",
+      "supported_tasks": [
+        "image"
+      ],
+      "memory_mib": 604.0,
+      "service_time_ms": {
+        "image": 5.4978217888888885
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "convnext_tiny": {
+      "name": "convnext_tiny",
+      "supported_tasks": [
+        "image"
+      ],
+      "memory_mib": 610.0,
+      "service_time_ms": {
+        "image": 5.847736
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "paddleocr": {
+      "name": "paddleocr",
+      "supported_tasks": [
+        "ocr"
+      ],
+      "memory_mib": 568.0,
+      "service_time_ms": {
+        "ocr": 6.0675248999999996
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "whisper-small": {
+      "name": "whisper-small",
+      "supported_tasks": [
+        "asr",
+        "lid"
+      ],
+      "memory_mib": 1616.0,
+      "service_time_ms": {
+        "asr": 190.16587112222223,
+        "lid": 27.084134877777778
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "whisper_turbo": {
+      "name": "whisper_turbo",
+      "supported_tasks": [
+        "asr",
+        "lid"
+      ],
+      "memory_mib": 3882.0,
+      "service_time_ms": {
+        "asr": 170.52229172222223,
+        "lid": 83.17856548888889
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "distil_whisper": {
+      "name": "distil_whisper",
+      "supported_tasks": [
+        "asr"
+      ],
+      "memory_mib": 3672.0,
+      "service_time_ms": {
+        "asr": 146.22366614444445
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    },
+    "roberta_sst2": {
+      "name": "roberta_sst2",
+      "supported_tasks": [
+        "text"
+      ],
+      "memory_mib": 988.0,
+      "service_time_ms": {
+        "text": 5.506413722222223
+      },
+      "sources": {
+        "completed_catalog": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+          "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e",
+          "bytes": 105222
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+          "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+          "bytes": 3325
+        },
+        "quality_policy": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+          "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+          "bytes": 10083
+        }
+      }
+    }
+  },
+  "formal_model_ids": [
+    "convnext_tiny",
+    "distil_whisper",
+    "distilbert",
+    "minicpm",
+    "paddleocr",
+    "paddleocr_vl",
+    "phi4mm",
+    "qwen",
+    "resnet50",
+    "roberta_sst2",
+    "whisper-small",
+    "whisper_turbo"
+  ],
+  "quality_disabled_model_variables": [
+    "paddleocr_vl"
+  ],
+  "note": "Models remain in v2.1 inventory; model with no admitted routing edges has fixed zero count in all output vectors",
+  "bounds": {
+    "convnext_tiny": 1,
+    "distil_whisper": 1,
+    "distilbert": 1,
+    "minicpm": 1,
+    "paddleocr": 1,
+    "phi4mm": 1,
+    "qwen": 2,
+    "resnet50": 2,
+    "roberta_sst2": 1,
+    "whisper-small": 2,
+    "whisper_turbo": 1
+  },
+  "bound_provenance": {
+    "convnext_tiny": {
+      "memory_mib": 610.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 80,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "distil_whisper": {
+      "memory_mib": 3672.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 13,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "distilbert": {
+      "memory_mib": 750.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 65,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "minicpm": {
+      "memory_mib": 18392.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 2,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "paddleocr": {
+      "memory_mib": 568.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 86,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "phi4mm": {
+      "memory_mib": 11772.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 4,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "qwen": {
+      "memory_mib": 17978.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 2,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 2,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 2,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "verified_representative_task"
+    },
+    "resnet50": {
+      "memory_mib": 604.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 81,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 2,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 2,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "verified_representative_task"
+    },
+    "roberta_sst2": {
+      "memory_mib": 988.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 49,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    },
+    "whisper-small": {
+      "memory_mib": 1616.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 30,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 2,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 2,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "verified_representative_task"
+    },
+    "whisper_turbo": {
+      "memory_mib": 3882.0,
+      "memory_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+        "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+        "bytes": 3325
+      },
+      "gpu_capacity_mib": 49140,
+      "R_mem": 12,
+      "worker_process_limit": null,
+      "binary_compatibility_limit": null,
+      "R": 1,
+      "bound_source": "floor(GPU capacity / per-replica memory) intersect measured replica evidence",
+      "R_evidence": 1,
+      "capacity_mode": "empirical",
+      "memory_mode": "empirical",
+      "replica_scaling_status": "pending"
+    }
+  },
+  "capacity_factors": {
+    "qwen": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.2159252553989397
+    },
+    "phi4mm": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "minicpm": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "distilbert": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "resnet50": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.978474738000047
+    },
+    "convnext_tiny": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "paddleocr": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "whisper-small": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.237806637806638
+    },
+    "whisper_turbo": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "distil_whisper": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "roberta_sst2": {
+      "0": 0.0,
+      "1": 1.0
+    }
+  },
+  "memory_table_mib": {
+    "qwen": {
+      "0": 0.0,
+      "1": 17978.0,
+      "2": 35670.0
+    },
+    "phi4mm": {
+      "0": 0.0,
+      "1": 11772.0
+    },
+    "minicpm": {
+      "0": 0.0,
+      "1": 18392.0
+    },
+    "distilbert": {
+      "0": 0.0,
+      "1": 750.0
+    },
+    "resnet50": {
+      "0": 0.0,
+      "1": 604.0,
+      "2": 1208.0
+    },
+    "convnext_tiny": {
+      "0": 0.0,
+      "1": 610.0
+    },
+    "paddleocr": {
+      "0": 0.0,
+      "1": 568.0
+    },
+    "whisper-small": {
+      "0": 0.0,
+      "1": 1616.0,
+      "2": 3240.0
+    },
+    "whisper_turbo": {
+      "0": 0.0,
+      "1": 3882.0
+    },
+    "distil_whisper": {
+      "0": 0.0,
+      "1": 3672.0
+    },
+    "roberta_sst2": {
+      "0": 0.0,
+      "1": 988.0
+    }
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "frozen": true,
+  "mixtures": [
+    {
+      "id": "mix_01",
+      "lambda_base_rps": {
+        "text": 0.5461773446260988,
+        "image": 0.9381847232580277,
+        "ocr": 3.0447369000854505,
+        "asr": 0.5446829215231749,
+        "visual_qa": 0.16005713588592693,
+        "lid": 1.2655523123512282
+      },
+      "base_reference_demand_L": 1.0,
+      "composition_reference_demand_share": {
+        "text": 0.024380654340730237,
+        "image": 0.13098296157507666,
+        "ocr": 0.28817886260105363,
+        "asr": 0.3562653649912231,
+        "visual_qa": 0.023129448225058802,
+        "lid": 0.17706270826685758
+      },
+      "composition_raw_request_share": {
+        "text": 0.08403515286969417,
+        "image": 0.14434962822006572,
+        "ocr": 0.468464928771147,
+        "asr": 0.08380522009210489,
+        "visual_qa": 0.02462648078394235,
+        "lid": 0.19471858926304592
+      },
+      "legacy_moderate_high_provenance": [
+        {
+          "id": "heldout_mix_01_moderate",
+          "mixture_id": 1,
+          "intensity": "moderate",
+          "lambda_rps": {
+            "text": 0.21847093785043953,
+            "image": 0.3752738893032111,
+            "ocr": 1.2178947600341803,
+            "asr": 0.21787316860926997,
+            "visual_qa": 0.06402285435437077,
+            "lid": 0.5062209249404913
+          },
+          "total_rps": 2.599756535091963,
+          "raw_request_share": {
+            "text": 0.08403515286969417,
+            "image": 0.14434962822006572,
+            "ocr": 0.468464928771147,
+            "asr": 0.08380522009210489,
+            "visual_qa": 0.02462648078394235,
+            "lid": 0.19471858926304592
+          },
+          "reference_demand_share": {
+            "text": 0.024380654340730237,
+            "image": 0.13098296157507666,
+            "ocr": 0.28817886260105363,
+            "asr": 0.3562653649912231,
+            "visual_qa": 0.023129448225058802,
+            "lid": 0.17706270826685758
+          },
+          "recomputed_reference_demand_share": {
+            "text": 0.024380654340730237,
+            "image": 0.13098296157507666,
+            "ocr": 0.28817886260105363,
+            "asr": 0.356265364991223,
+            "visual_qa": 0.023129448225058802,
+            "lid": 0.17706270826685758
+          },
+          "raw_dirichlet_share": {
+            "text": 0.01529856844758536,
+            "image": 0.12870527827135816,
+            "ocr": 0.2959349602138868,
+            "asr": 0.3683674095651309,
+            "visual_qa": 0.013967498111764686,
+            "lid": 0.17772628539027402
+          },
+          "total_reference_demand_seconds_per_second": 0.4,
+          "reference_normalized_load_L": 0.4,
+          "s_ref_seconds": {
+            "text": 0.044638714111111116,
+            "image": 0.13961318952222226,
+            "ocr": 0.09464819853333334,
+            "asr": 0.6540784572333334,
+            "visual_qa": 0.14450744789999997,
+            "lid": 0.13990943443333334
+          },
+          "RNG_seed": 20261004,
+          "generation_formula": "D_ref=L*1.0; lambda[k]=D_ref*alpha[k]/s_ref[k]; raw_request_share[k]=lambda[k]/sum(lambda); reference_share[k]=lambda[k]*s_ref[k]/sum(lambda*s_ref)",
+          "generation_spec_sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+          "development_collisions": [],
+          "planning_used_to_generate": false
+        },
+        {
+          "id": "heldout_mix_01_high",
+          "mixture_id": 1,
+          "intensity": "high",
+          "lambda_rps": {
+            "text": 0.3932476881307912,
+            "image": 0.6754930007457799,
+            "ocr": 2.1922105680615243,
+            "asr": 0.392171703496686,
+            "visual_qa": 0.1152411378378674,
+            "lid": 0.9111976648928843
+          },
+          "total_rps": 4.679561763165533,
+          "raw_request_share": {
+            "text": 0.08403515286969418,
+            "image": 0.14434962822006572,
+            "ocr": 0.4684649287711469,
+            "asr": 0.0838052200921049,
+            "visual_qa": 0.02462648078394235,
+            "lid": 0.19471858926304592
+          },
+          "reference_demand_share": {
+            "text": 0.024380654340730237,
+            "image": 0.13098296157507666,
+            "ocr": 0.28817886260105363,
+            "asr": 0.3562653649912231,
+            "visual_qa": 0.023129448225058802,
+            "lid": 0.17706270826685758
+          },
+          "recomputed_reference_demand_share": {
+            "text": 0.02438065434073024,
+            "image": 0.13098296157507666,
+            "ocr": 0.28817886260105363,
+            "asr": 0.35626536499122313,
+            "visual_qa": 0.023129448225058805,
+            "lid": 0.17706270826685758
+          },
+          "raw_dirichlet_share": {
+            "text": 0.01529856844758536,
+            "image": 0.12870527827135816,
+            "ocr": 0.2959349602138868,
+            "asr": 0.3683674095651309,
+            "visual_qa": 0.013967498111764686,
+            "lid": 0.17772628539027402
+          },
+          "total_reference_demand_seconds_per_second": 0.72,
+          "reference_normalized_load_L": 0.72,
+          "s_ref_seconds": {
+            "text": 0.044638714111111116,
+            "image": 0.13961318952222226,
+            "ocr": 0.09464819853333334,
+            "asr": 0.6540784572333334,
+            "visual_qa": 0.14450744789999997,
+            "lid": 0.13990943443333334
+          },
+          "RNG_seed": 20261004,
+          "generation_formula": "D_ref=L*1.0; lambda[k]=D_ref*alpha[k]/s_ref[k]; raw_request_share[k]=lambda[k]/sum(lambda); reference_share[k]=lambda[k]*s_ref[k]/sum(lambda*s_ref)",
+          "generation_spec_sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+          "development_collisions": [],
+          "planning_used_to_generate": false
+        }
+      ],
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_workloads.json",
+        "sha256": "13e763d1a9f4b21ef65c3ad6cc54090134b9fbb0d1348e1d7772371d75d2cc84",
+        "bytes": 13477,
+        "field": "workloads[mixture_id=1]"
+      },
+      "scaling": "lambda(alpha)=alpha*lambda_base; old L=.4/.72 are provenance only, not final levels"
+    },
+    {
+      "id": "mix_02",
+      "lambda_base_rps": {
+        "text": 1.5577608370359042,
+        "image": 4.882960802327362,
+        "ocr": 0.11491303940244559,
+        "asr": 0.028450213102116675,
+        "visual_qa": 0.9659630782237353,
+        "lid": 0.5693968021445549
+      },
+      "base_reference_demand_L": 1.0,
+      "composition_reference_demand_share": {
+        "text": 0.06953644065793088,
+        "image": 0.6817257319249124,
+        "ocr": 0.010876312167431425,
+        "asr": 0.018608671493792042,
+        "visual_qa": 0.13958885919974004,
+        "lid": 0.07966398455619328
+      },
+      "composition_raw_request_share": {
+        "text": 0.19185558627882537,
+        "image": 0.601390974297197,
+        "ocr": 0.01415281988189424,
+        "asr": 0.0035039604185005627,
+        "visual_qa": 0.11896910507067916,
+        "lid": 0.07012755405290372
+      },
+      "legacy_moderate_high_provenance": [
+        {
+          "id": "heldout_mix_02_moderate",
+          "mixture_id": 2,
+          "intensity": "moderate",
+          "lambda_rps": {
+            "text": 0.6231043348143617,
+            "image": 1.9531843209309447,
+            "ocr": 0.045965215760978236,
+            "asr": 0.01138008524084667,
+            "visual_qa": 0.38638523128949415,
+            "lid": 0.22775872085782198
+          },
+          "total_rps": 3.2477779088944474,
+          "raw_request_share": {
+            "text": 0.19185558627882537,
+            "image": 0.601390974297197,
+            "ocr": 0.01415281988189424,
+            "asr": 0.0035039604185005627,
+            "visual_qa": 0.11896910507067916,
+            "lid": 0.07012755405290372
+          },
+          "reference_demand_share": {
+            "text": 0.06953644065793088,
+            "image": 0.6817257319249124,
+            "ocr": 0.010876312167431425,
+            "asr": 0.018608671493792042,
+            "visual_qa": 0.13958885919974004,
+            "lid": 0.07966398455619328
+          },
+          "recomputed_reference_demand_share": {
+            "text": 0.06953644065793087,
+            "image": 0.6817257319249124,
+            "ocr": 0.010876312167431425,
+            "asr": 0.01860867149379204,
+            "visual_qa": 0.13958885919974,
+            "lid": 0.07966398455619327
+          },
+          "raw_dirichlet_share": {
+            "text": 0.06333663899779882,
+            "image": 0.714601842473311,
+            "ocr": 0.0009322469866291755,
+            "asr": 0.009158161163608555,
+            "visual_qa": 0.13786048851036173,
+            "lid": 0.07411062186829073
+          },
+          "total_reference_demand_seconds_per_second": 0.4,
+          "reference_normalized_load_L": 0.4,
+          "s_ref_seconds": {
+            "text": 0.044638714111111116,
+            "image": 0.13961318952222226,
+            "ocr": 0.09464819853333334,
+            "asr": 0.6540784572333334,
+            "visual_qa": 0.14450744789999997,
+            "lid": 0.13990943443333334
+          },
+          "RNG_seed": 20261004,
+          "generation_formula": "D_ref=L*1.0; lambda[k]=D_ref*alpha[k]/s_ref[k]; raw_request_share[k]=lambda[k]/sum(lambda); reference_share[k]=lambda[k]*s_ref[k]/sum(lambda*s_ref)",
+          "generation_spec_sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+          "development_collisions": [],
+          "planning_used_to_generate": false
+        },
+        {
+          "id": "heldout_mix_02_high",
+          "mixture_id": 2,
+          "intensity": "high",
+          "lambda_rps": {
+            "text": 1.121587802665851,
+            "image": 3.5157317776757,
+            "ocr": 0.0827373883697608,
+            "asr": 0.020484153433524006,
+            "visual_qa": 0.6954934163210895,
+            "lid": 0.4099656975440795
+          },
+          "total_rps": 5.8460002360100045,
+          "raw_request_share": {
+            "text": 0.1918555862788254,
+            "image": 0.601390974297197,
+            "ocr": 0.014152819881894239,
+            "asr": 0.003503960418500563,
+            "visual_qa": 0.11896910507067918,
+            "lid": 0.07012755405290372
+          },
+          "reference_demand_share": {
+            "text": 0.06953644065793088,
+            "image": 0.6817257319249124,
+            "ocr": 0.010876312167431425,
+            "asr": 0.018608671493792042,
+            "visual_qa": 0.13958885919974004,
+            "lid": 0.07966398455619328
+          },
+          "recomputed_reference_demand_share": {
+            "text": 0.06953644065793088,
+            "image": 0.6817257319249124,
+            "ocr": 0.010876312167431424,
+            "asr": 0.018608671493792042,
+            "visual_qa": 0.13958885919974007,
+            "lid": 0.07966398455619328
+          },
+          "raw_dirichlet_share": {
+            "text": 0.06333663899779882,
+            "image": 0.714601842473311,
+            "ocr": 0.0009322469866291755,
+            "asr": 0.009158161163608555,
+            "visual_qa": 0.13786048851036173,
+            "lid": 0.07411062186829073
+          },
+          "total_reference_demand_seconds_per_second": 0.72,
+          "reference_normalized_load_L": 0.72,
+          "s_ref_seconds": {
+            "text": 0.044638714111111116,
+            "image": 0.13961318952222226,
+            "ocr": 0.09464819853333334,
+            "asr": 0.6540784572333334,
+            "visual_qa": 0.14450744789999997,
+            "lid": 0.13990943443333334
+          },
+          "RNG_seed": 20261004,
+          "generation_formula": "D_ref=L*1.0; lambda[k]=D_ref*alpha[k]/s_ref[k]; raw_request_share[k]=lambda[k]/sum(lambda); reference_share[k]=lambda[k]*s_ref[k]/sum(lambda*s_ref)",
+          "generation_spec_sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+          "development_collisions": [],
+          "planning_used_to_generate": false
+        }
+      ],
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_workloads.json",
+        "sha256": "13e763d1a9f4b21ef65c3ad6cc54090134b9fbb0d1348e1d7772371d75d2cc84",
+        "bytes": 13477,
+        "field": "workloads[mixture_id=2]"
+      },
+      "scaling": "lambda(alpha)=alpha*lambda_base; old L=.4/.72 are provenance only, not final levels"
+    },
+    {
+      "id": "mix_03",
+      "lambda_base_rps": {
+        "text": 0.35023750705827067,
+        "image": 2.1036529380075075,
+        "ocr": 4.552077483103446,
+        "asr": 0.11866955425890803,
+        "visual_qa": 0.23587861949255434,
+        "lid": 1.0586620028960514
+      },
+      "base_reference_demand_L": 1.0,
+      "composition_reference_demand_share": {
+        "text": 0.015634151948562408,
+        "image": 0.29369769632302184,
+        "ocr": 0.4308459333598913,
+        "asr": 0.07761919897023391,
+        "visual_qa": 0.03408621731704421,
+        "lid": 0.14811680208124645
+      },
+      "composition_raw_request_share": {
+        "text": 0.041599964117387485,
+        "image": 0.24986440621846168,
+        "ocr": 0.5406795564164553,
+        "asr": 0.014095147148747858,
+        "visual_qa": 0.028016822610939265,
+        "lid": 0.12574410348800852
+      },
+      "legacy_moderate_high_provenance": [
+        {
+          "id": "heldout_mix_03_moderate",
+          "mixture_id": 3,
+          "intensity": "moderate",
+          "lambda_rps": {
+            "text": 0.14009500282330828,
+            "image": 0.8414611752030031,
+            "ocr": 1.8208309932413784,
+            "asr": 0.047467821703563215,
+            "visual_qa": 0.09435144779702175,
+            "lid": 0.42346480115842056
+          },
+          "total_rps": 3.367671241926695,
+          "raw_request_share": {
+            "text": 0.041599964117387485,
+            "image": 0.24986440621846168,
+            "ocr": 0.5406795564164553,
+            "asr": 0.014095147148747858,
+            "visual_qa": 0.028016822610939265,
+            "lid": 0.12574410348800852
+          },
+          "reference_demand_share": {
+            "text": 0.015634151948562408,
+            "image": 0.29369769632302184,
+            "ocr": 0.4308459333598913,
+            "asr": 0.07761919897023391,
+            "visual_qa": 0.03408621731704421,
+            "lid": 0.14811680208124645
+          },
+          "recomputed_reference_demand_share": {
+            "text": 0.015634151948562405,
+            "image": 0.2936976963230218,
+            "ocr": 0.4308459333598912,
+            "asr": 0.0776191989702339,
+            "visual_qa": 0.03408621731704421,
+            "lid": 0.14811680208124642
+          },
+          "raw_dirichlet_share": {
+            "text": 0.005993778668683412,
+            "image": 0.3018060599181083,
+            "ocr": 0.4477084397445652,
+            "asr": 0.07193531805344033,
+            "visual_qa": 0.025623635443664056,
+            "lid": 0.14693276817153877
+          },
+          "total_reference_demand_seconds_per_second": 0.4,
+          "reference_normalized_load_L": 0.4,
+          "s_ref_seconds": {
+            "text": 0.044638714111111116,
+            "image": 0.13961318952222226,
+            "ocr": 0.09464819853333334,
+            "asr": 0.6540784572333334,
+            "visual_qa": 0.14450744789999997,
+            "lid": 0.13990943443333334
+          },
+          "RNG_seed": 20261004,
+          "generation_formula": "D_ref=L*1.0; lambda[k]=D_ref*alpha[k]/s_ref[k]; raw_request_share[k]=lambda[k]/sum(lambda); reference_share[k]=lambda[k]*s_ref[k]/sum(lambda*s_ref)",
+          "generation_spec_sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+          "development_collisions": [],
+          "planning_used_to_generate": false
+        },
+        {
+          "id": "heldout_mix_03_high",
+          "mixture_id": 3,
+          "intensity": "high",
+          "lambda_rps": {
+            "text": 0.2521710050819549,
+            "image": 1.5146301153654054,
+            "ocr": 3.2774957878344813,
+            "asr": 0.08544207906641378,
+            "visual_qa": 0.1698326060346391,
+            "lid": 0.7622366420851568
+          },
+          "total_rps": 6.061808235468051,
+          "raw_request_share": {
+            "text": 0.041599964117387485,
+            "image": 0.24986440621846165,
+            "ocr": 0.5406795564164553,
+            "asr": 0.014095147148747857,
+            "visual_qa": 0.028016822610939254,
+            "lid": 0.1257441034880085
+          },
+          "reference_demand_share": {
+            "text": 0.015634151948562408,
+            "image": 0.29369769632302184,
+            "ocr": 0.4308459333598913,
+            "asr": 0.07761919897023391,
+            "visual_qa": 0.03408621731704421,
+            "lid": 0.14811680208124645
+          },
+          "recomputed_reference_demand_share": {
+            "text": 0.015634151948562405,
+            "image": 0.2936976963230218,
+            "ocr": 0.43084593335989124,
+            "asr": 0.0776191989702339,
+            "visual_qa": 0.034086217317044205,
+            "lid": 0.14811680208124642
+          },
+          "raw_dirichlet_share": {
+            "text": 0.005993778668683412,
+            "image": 0.3018060599181083,
+            "ocr": 0.4477084397445652,
+            "asr": 0.07193531805344033,
+            "visual_qa": 0.025623635443664056,
+            "lid": 0.14693276817153877
+          },
+          "total_reference_demand_seconds_per_second": 0.72,
+          "reference_normalized_load_L": 0.72,
+          "s_ref_seconds": {
+            "text": 0.044638714111111116,
+            "image": 0.13961318952222226,
+            "ocr": 0.09464819853333334,
+            "asr": 0.6540784572333334,
+            "visual_qa": 0.14450744789999997,
+            "lid": 0.13990943443333334
+          },
+          "RNG_seed": 20261004,
+          "generation_formula": "D_ref=L*1.0; lambda[k]=D_ref*alpha[k]/s_ref[k]; raw_request_share[k]=lambda[k]/sum(lambda); reference_share[k]=lambda[k]*s_ref[k]/sum(lambda*s_ref)",
+          "generation_spec_sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+          "development_collisions": [],
+          "planning_used_to_generate": false
+        }
+      ],
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_workloads.json",
+        "sha256": "13e763d1a9f4b21ef65c3ad6cc54090134b9fbb0d1348e1d7772371d75d2cc84",
+        "bytes": 13477,
+        "field": "workloads[mixture_id=3]"
+      },
+      "scaling": "lambda(alpha)=alpha*lambda_base; old L=.4/.72 are provenance only, not final levels"
+    }
+  ],
+  "generation_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8e2_heldout_freeze/heldout_generation_spec.json",
+    "sha256": "a66d7f19700a2778f336d87fb8fda6cb7ee36c542fa1b498ae066496305e9333",
+    "bytes": 3665
+  },
+  "composition_changed": false,
+  "new_rng_draws": 0,
+  "legacy_intensities_reused_as_final": false
+}

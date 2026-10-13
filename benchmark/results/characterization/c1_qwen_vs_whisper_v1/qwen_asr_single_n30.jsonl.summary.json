@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "qwen",
+  "target_task": "asr",
+  "target_count": 30,
+  "mean_worker_latency_ms": 629.3824432333333,
+  "min_worker_latency_ms": 232.836906,
+  "max_worker_latency_ms": 1697.073378,
+  "output": "benchmark/results/characterization/c1_qwen_vs_whisper_v1/qwen_asr_single_n30.jsonl"
+}

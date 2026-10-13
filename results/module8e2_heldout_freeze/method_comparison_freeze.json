@@ -1,0 +1,268 @@
+{
+  "methods": {
+    "M1": {
+      "method": "method_v1",
+      "entrypoint": "method_v1.create",
+      "definition": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v1_freeze.json",
+        "sha256": "56e29802e680b4b7a280895419454f924d125be66f3f4ea2ed5ea6c2d4f6157c"
+      },
+      "neighborhood": "original x±1",
+      "Top_B": "original exact delta_z order"
+    },
+    "M2": {
+      "method": "method_v2",
+      "entrypoint": "method_v2.MethodV2",
+      "definition": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_spec.json",
+        "sha256": "7dfcb1f1c9c12badfd5d297d48247b1f693e02f5a4a73a187fd28ca932fb1462"
+      },
+      "sources": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/method_v2_source_hashes.json",
+        "sha256": "ceba1adead255aa6dbc54f90a7ddb4ea553a106f17842073a6a395b513cac1df"
+      },
+      "neighborhood": "targeted SWAP / prospective replacement closure plus unchanged base",
+      "Top_B": "candidate-class diversified Top-2"
+    },
+    "B2": {
+      "definition_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_definitions.json",
+        "sha256": "4e010f910ffb47a6da3306abb07d93f2dcb0bd2c91820e976df6cff20d364c1f"
+      },
+      "rule_exact_copy": {
+        "name": "Specialist-greedy + Minimal Generalist",
+        "active_task_rule": "Specialist argmin s0 among admitted paths; if absent, Generalist argmin s0; exact ties by model ID",
+        "replicas": "One replica for each distinct selected model",
+        "routing": "100% task traffic to selected model; not canonical redistribution",
+        "inactive_tasks": "Excluded from selection; N_G=0 allowed if all active tasks have Specialist coverage"
+      },
+      "implementation_source": {
+        "path": "/root/autodl-tmp/generalist-specialist/module8d_baseline_freeze/definitions.py",
+        "sha256": "21021e810c3eb3ffce8ebdb97b6cff590ca289f59adeb70dd6e1284a1c696301"
+      },
+      "search_allowed": false
+    }
+  },
+  "same_M1_M2": [
+    "workload",
+    "cold MILP seed generation",
+    "MILP witness/deployment",
+    "candidate pool",
+    "quality admission",
+    "empirical replica capacity",
+    "memory model",
+    "canonical routing",
+    "RuntimeEvaluator",
+    "runtime objective",
+    "measurement seeds and settings",
+    "failure policy"
+  ],
+  "search_config": {
+    "top_b": 2,
+    "max_iterations": 3,
+    "no_improvement_patience": 1,
+    "runtime_evaluation_budget": 6,
+    "rho_max": 0.8,
+    "remove_pressure_threshold": 0.2,
+    "mean_tolerance_ms": 1.0,
+    "dry_run": false
+  },
+  "search_budget": {
+    "top_b": 2,
+    "max_iterations": 3,
+    "max_unique_runtime_states": 6,
+    "patience": 1,
+    "search_repetitions": 3,
+    "seed_confirmation_repetitions": 2,
+    "final_confirmation_repetitions": 2
+  },
+  "predictor": null,
+  "deployment_enumeration": 0,
+  "seeder": {
+    "source": {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/milp_seeder.py",
+      "sha256": "ab7b92aae4f4475f2b9e5daec9306f3cfc3206c212526557108d6ccdd291f39a"
+    },
+    "backend_source": {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_core/empirical_milp.py",
+      "sha256": "8ccebe663fcabd638f47004c397083fff5d824b433c48c036ed065e059151f25"
+    },
+    "RNG_seed": null,
+    "rule": "Existing deterministic SciPy/HiGHS minimum empirical memory then minimum count; no extra solver seed introduced.",
+    "campaign_rule": "Both cold entry points must reproduce the frozen witness exactly; mismatch blocks execution without choosing a preferred seed."
+  },
+  "frozen_inputs": {
+    "candidate_pool": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/candidate_pool_v2_1.json",
+      "sha256": "dbdf5bf9af541e805bc40a9f6207f6dc0cd43de22a0ea150082f3e23de219e00"
+    },
+    "quality_policy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+      "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e"
+    },
+    "quality_admission": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_admission_matrix.json",
+      "sha256": "d224ba2c389a923cc95ebaf630be2858171ec5e6347ef474b8dd925fcb425409"
+    },
+    "service_demand": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_1/service_demand_v2_1.json",
+      "sha256": "78a027117af20b589e3082aca71deb4e949faa618bc5ec88a512149a6e0f1d8e"
+    },
+    "workload_matrix": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/final_benchmark_workload_matrix.json",
+      "sha256": "f3a358baec6dfed5fe1d24496e388996d42a33f245814fa52f7dea577593e22f"
+    },
+    "capacity": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_capacity_factors.json",
+      "sha256": "62d6c25ba30111bb812a00d42df1e3a1f113d66c654f139b68413009d838b28a"
+    },
+    "memory": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+      "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531"
+    },
+    "bounds": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/evidence_replica_bounds.json",
+      "sha256": "6c2855bd2e61d745d13813f29cef9d51f6e2b5bfa2b7057856421e22f7fd4b51"
+    },
+    "quality_matrix": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/quality_workload_audit/quality_matrix.json",
+      "sha256": "342684280d15ba8da17011aeb072a0edb01238b46d1412c2a019df625a1a61e5"
+    },
+    "admission_quality_matrix_csv": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/quality_workload_audit/quality_matrix.csv",
+      "sha256": "6ab22e37e4a88a793d207191cc276e72c68fb517fc6c9f0389c03c9b67386fc7"
+    },
+    "environment": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/environment_manifest.json",
+      "sha256": "15786b0997a93af6a11d27a4783876b94708e850294dc37643820e510e165d88"
+    },
+    "model_sources": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/model_source_hashes.json",
+      "sha256": "d592979b29c138fad7d3517a7ef8baccbe1886fa05890566fbf4d5839be8e36e"
+    },
+    "historical_random_policy": {
+      "path": "/root/autodl-tmp/generalist-specialist/deployment_search/multiworkload.py",
+      "sha256": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153"
+    }
+  },
+  "catalog_loader": {
+    "path": "/root/autodl-tmp/generalist-specialist/module8c_final_real_search/common.py",
+    "sha256": "1d167d0c6f3dc1c6d70798d8caa53d56deec7d7753816de19fd3992a5ba0f0dd"
+  },
+  "runtime_context_template": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/demand_balanced/runtime_context.json",
+    "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+  },
+  "runtime_evaluator": {
+    "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/evaluator.py",
+    "sha256": "f60dd8e92c9a821a1c691405b633dd56fe4ec23339daca9638fe60438747a1c9"
+  },
+  "runtime_harness": {
+    "path": "/root/autodl-tmp/generalist-specialist/integer_replica_pilot/runtime.py",
+    "sha256": "11bce38d3b08e5b4e15157bc682c52295dde29027805c8707b193829a26a4685"
+  },
+  "runtime_objective": {
+    "path": "/root/autodl-tmp/generalist-specialist/deployment_search/real_objective.py",
+    "sha256": "97d928034d32a5c066fcc925c16a92739fcb8df4d21bce10333a2aa2688c2175"
+  },
+  "runtime_objective_base": {
+    "path": "/root/autodl-tmp/generalist-specialist/deployment_search/scoring.py",
+    "sha256": "321260809b051e69f4264a6728b107d9d7e4c168aebe99f459749a5512f283a1"
+  },
+  "measurement_settings": {
+    "warmup_seconds": 10,
+    "measurement_seconds": 210,
+    "arrival_process": "deterministic_periodic",
+    "routing_source": "module7C3_empirical_canonical_family_then_replica_round_robin",
+    "startup_timeout_seconds": 300,
+    "drain_timeout_seconds": 60,
+    "shutdown_timeout_seconds": 10,
+    "max_pending_per_model": 10000
+  },
+  "search_seeds": [
+    7101,
+    7202,
+    7303
+  ],
+  "confirmation_seeds": [
+    8101,
+    8202
+  ],
+  "confirmation_order": [
+    [
+      "seed",
+      1
+    ],
+    [
+      "final",
+      1
+    ],
+    [
+      "final",
+      2
+    ],
+    [
+      "seed",
+      2
+    ]
+  ],
+  "confirmation_influences_search": false,
+  "failure_policy": "Prelaunch calibrated memory/evidence gate; postlaunch resource infeasible preserved and pilot stops without silent replacement or budget growth.",
+  "DQA": "Same completed-timed measurement / stability_v2 semantics; completed unstable remains valid. External/uncertain/model/harness interruptions retained without serving label; no auto retry.",
+  "execution_environment_overrides": {
+    "LD_LIBRARY_PATH": "/root/miniconda3/envs/ocr_env/lib/python3.11/site-packages/nvidia/cu13/lib"
+  },
+  "hardware": "Same frozen RTX 4090, 49140 MiB; verify recorded hardware/environment/weights/adapters before launch. Drift closes gate; no second hardware.",
+  "equal_budget_static_verified": true,
+  "fresh_AST_equality_checks": {
+    "_seed": true,
+    "_routing": true,
+    "_key": true,
+    "_memory": true,
+    "_memory_increment": true,
+    "_candidate_rejection": true,
+    "_warm_start": true,
+    "runtime_evaluation_accept_rollback_stopping": true,
+    "same_config": true
+  },
+  "ROUTING_REVISION_PENDING": true,
+  "routing_scope": "M1/M2 retain identical canonical routing. B2 retains its 8D-1 fixed task-selected routing. No routing revision.",
+  "secondary_reporting": [
+    "weighted mean E2E",
+    "weighted task P95 (not pooled P95)",
+    "stability",
+    "completion ratio",
+    "peak VRAM",
+    "N_G",
+    "N_S",
+    "full deployment vector",
+    "gap_to_B2_v1",
+    "gap_to_B2_v2"
+  ],
+  "mechanism_reporting": {
+    "M2_each_iteration": [
+      "all base candidates including infeasible/tabu",
+      "targeted swaps and origins",
+      "exact replacement closures",
+      "Class P",
+      "Class R",
+      "Top-B composition and rank",
+      "runtime evaluated with logical and raw IDs",
+      "accepted",
+      "rollback reason",
+      "budget/stopping"
+    ],
+    "beneficial_replacement_definition": "An actually evaluated SWAP/replacement that passes the frozen objective against its pre-transition incumbent; separately flag actual acceptance and final-confirmation improvement.",
+    "M1_attribution": "Match exact deployment AND routing against all v1 traces; record not_generated, generated_later (iteration indices), rank_too_low, or budget/stopping_missed. Multiple applicable flags allowed; do not invent v1 runtime for unmatched states.",
+    "scope_caution": "Different incumbent paths limit causal attribution. Structural access and accepted improvement are evidence, not proof of an unmeasured v1 counterfactual.",
+    "no_extra_runtime_for_mechanism": true
+  },
+  "analysis_data_source": "Independent final confirmations (two reps), never choose best repetition; search aggregates separately support transition/mechanism evidence.",
+  "aggregation": "Unchanged evaluator aggregate: worst stability across reps; equal-repetition arrival-weighted means and weighted task P95; memory objective uses frozen planning memory; observed peak VRAM reported separately.",
+  "campaign_scope": [
+    "M1",
+    "M2",
+    "frozen B2 only"
+  ],
+  "GPU_campaign_started": false
+}

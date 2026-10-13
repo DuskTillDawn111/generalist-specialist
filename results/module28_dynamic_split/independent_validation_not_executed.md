@@ -1,0 +1,1 @@
+Stage D NOT_EXECUTED：没有合法稳定的完整探索比较，动态目标G/S路径尚未在本Module正式GPU窗口执行。没有独立ΔU或置信区间，不生成伪造independent_validation.csv。

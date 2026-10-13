@@ -1,0 +1,24 @@
+{
+  "at_unix_ns": 1791632011126347461,
+  "Module32_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/experiment_manifest.json",
+    "sha256": "20205b90c4eb6ba73686569ffff2e3708030c3a8e7711343d8570ae0e2137d75",
+    "bytes": 512777
+  },
+  "Module32_gate": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/module32_gate.json",
+    "sha256": "11f6396fccfeca6ee5e1653825bbceb23d70cbc4d0a9dd71bdf01a0a3817c713",
+    "bytes": 1145
+  },
+  "Module20A_utility": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_definition.json",
+    "sha256": "3d00c2193b94e20c8b17e78fbcef68d80724be042f4b45644916f5686b60403b",
+    "bytes": 5831
+  },
+  "Module32_final_audit": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/final_data_acceptance.json",
+    "sha256": "4b95fde4eb072c1f5e1f5914cc6c63dad804203d84805a5371733129ffd2dfb0",
+    "bytes": 2983
+  },
+  "no_GPU_started": true
+}

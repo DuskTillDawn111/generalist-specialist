@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "whisper",
+  "target_task": "asr",
+  "target_count": 30,
+  "mean_worker_latency_ms": 188.41047593333334,
+  "min_worker_latency_ms": 76.080354,
+  "max_worker_latency_ms": 463.92589,
+  "output": "benchmark/results/placement/active_single_v3_current/active_single_whisper_asr_n30.jsonl"
+}

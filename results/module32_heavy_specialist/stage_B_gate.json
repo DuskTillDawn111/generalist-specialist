@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "observed_S_mean_wait_ms": 697.9490152653061,
+  "selected_ASR_qps": 0.46,
+  "formal_candidate": "C2",
+  "candidate1_GPU_formal_executed": false,
+  "candidate2_GPU_executed": true
+}

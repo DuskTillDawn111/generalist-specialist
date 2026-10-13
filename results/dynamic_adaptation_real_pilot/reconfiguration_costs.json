@@ -1,0 +1,188 @@
+{
+  "totals": {
+    "D1": {
+      "runtime_evaluations": 18,
+      "physical_attempts": 51,
+      "accepted_switches": 12,
+      "models_loaded": 9,
+      "models_unloaded": 11,
+      "VRAM_added_mib": 8604.0,
+      "VRAM_removed_mib": 9936.0,
+      "VRAM_moved_mib": 18540.0,
+      "measured_switch_time_ms": 32843.211556999995
+    },
+    "D2": {
+      "runtime_evaluations": 11,
+      "physical_attempts": 12,
+      "accepted_switches": 1,
+      "models_loaded": 1,
+      "models_unloaded": 0,
+      "VRAM_added_mib": 750.0,
+      "VRAM_removed_mib": 0,
+      "VRAM_moved_mib": 750.0,
+      "measured_switch_time_ms": 3343.867767
+    },
+    "runtime_evaluations_saved": 7,
+    "Saving_eval": 0.38888888888888884,
+    "Saving_switch": 0.9166666666666666,
+    "endpoint_structural_sensitivity": {
+      "D1": {
+        "models_loaded": 1,
+        "models_unloaded": 3,
+        "VRAM_moved_mib": 2832.0,
+        "switches": 3
+      },
+      "D2": {
+        "models_loaded": 1,
+        "models_unloaded": 0,
+        "VRAM_moved_mib": 750.0,
+        "switches": 1
+      }
+    }
+  },
+  "transitions": [
+    {
+      "transition": "transition_w1_w2",
+      "strategies": {
+        "D0": {
+          "accepted_switches": 0,
+          "local_search_switches": 0,
+          "cold_seed_resets": 0,
+          "models_loaded": 0,
+          "models_unloaded": 0,
+          "VRAM_added_mib": 0,
+          "VRAM_removed_mib": 0,
+          "VRAM_moved_mib": 0,
+          "measured_switch_time_ms": null,
+          "individual_switch_times_ms": []
+        },
+        "D1": {
+          "accepted_switches": 4,
+          "local_search_switches": 3,
+          "cold_seed_resets": 1,
+          "models_loaded": 3,
+          "models_unloaded": 3,
+          "VRAM_added_mib": 2980.0,
+          "VRAM_removed_mib": 2812.0,
+          "VRAM_moved_mib": 5792.0,
+          "measured_switch_time_ms": 10947.80265,
+          "individual_switch_times_ms": [
+            1543.997944,
+            3645.114993,
+            2428.080454,
+            3330.609259
+          ]
+        },
+        "D2": {
+          "accepted_switches": 1,
+          "local_search_switches": 1,
+          "cold_seed_resets": 0,
+          "models_loaded": 1,
+          "models_unloaded": 0,
+          "VRAM_added_mib": 750.0,
+          "VRAM_removed_mib": 0,
+          "VRAM_moved_mib": 750.0,
+          "measured_switch_time_ms": 3343.867767,
+          "individual_switch_times_ms": [
+            3343.867767
+          ]
+        }
+      }
+    },
+    {
+      "transition": "transition_w2_w3",
+      "strategies": {
+        "D0": {
+          "accepted_switches": 0,
+          "local_search_switches": 0,
+          "cold_seed_resets": 0,
+          "models_loaded": 0,
+          "models_unloaded": 0,
+          "VRAM_added_mib": 0,
+          "VRAM_removed_mib": 0,
+          "VRAM_moved_mib": 0,
+          "measured_switch_time_ms": null,
+          "individual_switch_times_ms": []
+        },
+        "D1": {
+          "accepted_switches": 4,
+          "local_search_switches": 3,
+          "cold_seed_resets": 1,
+          "models_loaded": 3,
+          "models_unloaded": 4,
+          "VRAM_added_mib": 2812.0,
+          "VRAM_removed_mib": 3562.0,
+          "VRAM_moved_mib": 6374.0,
+          "measured_switch_time_ms": 10558.344417,
+          "individual_switch_times_ms": [
+            2208.35072,
+            3654.540004,
+            2435.959284,
+            2259.494409
+          ]
+        },
+        "D2": {
+          "accepted_switches": 0,
+          "local_search_switches": 0,
+          "cold_seed_resets": 0,
+          "models_loaded": 0,
+          "models_unloaded": 0,
+          "VRAM_added_mib": 0,
+          "VRAM_removed_mib": 0,
+          "VRAM_moved_mib": 0,
+          "measured_switch_time_ms": null,
+          "individual_switch_times_ms": []
+        }
+      }
+    },
+    {
+      "transition": "transition_w3_w1",
+      "strategies": {
+        "D0": {
+          "accepted_switches": 0,
+          "local_search_switches": 0,
+          "cold_seed_resets": 0,
+          "models_loaded": 0,
+          "models_unloaded": 0,
+          "VRAM_added_mib": 0,
+          "VRAM_removed_mib": 0,
+          "VRAM_moved_mib": 0,
+          "measured_switch_time_ms": null,
+          "individual_switch_times_ms": []
+        },
+        "D1": {
+          "accepted_switches": 4,
+          "local_search_switches": 3,
+          "cold_seed_resets": 1,
+          "models_loaded": 3,
+          "models_unloaded": 4,
+          "VRAM_added_mib": 2812.0,
+          "VRAM_removed_mib": 3562.0,
+          "VRAM_moved_mib": 6374.0,
+          "measured_switch_time_ms": 11337.06449,
+          "individual_switch_times_ms": [
+            2558.512236,
+            3826.837549,
+            2595.137196,
+            2356.577509
+          ]
+        },
+        "D2": {
+          "accepted_switches": 0,
+          "local_search_switches": 0,
+          "cold_seed_resets": 0,
+          "models_loaded": 0,
+          "models_unloaded": 0,
+          "VRAM_added_mib": 0,
+          "VRAM_removed_mib": 0,
+          "VRAM_moved_mib": 0,
+          "measured_switch_time_ms": null,
+          "individual_switch_times_ms": []
+        }
+      }
+    }
+  ],
+  "primary_sequence_strategy": "D2",
+  "cold_comparison": "same actual old state; includes explicit reset to MILP seed",
+  "vram_basis": "frozen catalog model peak VRAM; structural values, not measured bytes transferred"
+}

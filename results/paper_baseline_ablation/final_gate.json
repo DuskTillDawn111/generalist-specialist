@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETE_WITH_EXPLICIT_COMPONENT_LIMITATIONS",
+  "completed_local": "2026-10-11T21:50:23.421067+08:00",
+  "stages": {
+    "A": "COMPLETE",
+    "B": "COMPLETE_REUSED_12_CELLS",
+    "C": "FIXED_DEPLOYMENT_DIAGNOSTICS_COMPLETE; GLOBAL_A_B_SWITCHES_UNAVAILABLE; C_SKIPPED",
+    "D": "COMPLETE_RAW_AUDITED_REUSE; NO_NEW_GPU",
+    "E": "COMPLETE_U_ONLY_SAME_DOMAIN",
+    "F": "COMPLETE"
+  },
+  "CPU_ORACLE_MATCHED_12_OF_12": true,
+  "FASTEST_HEURISTIC_ALSO_OPTIMAL_COUNT": 2,
+  "GPU_RELATIVE_FASTEST_SUPPORTED_SCENARIOS": [
+    "A_TEXT_HALF_MID18"
+  ],
+  "GPU_COMPARISON_INCONCLUSIVE_SCENARIOS": [
+    "B_TEXT_HALF_MID18",
+    "C_ASR32B"
+  ],
+  "STRICT_GLOBAL_SINGLE_VARIABLE_ABLATION_A_EXECUTED": false,
+  "STRICT_GLOBAL_SINGLE_VARIABLE_ABLATION_B_EXECUTED": false,
+  "FIXED_DEPLOYMENT_ROUTE_DIAGNOSTICS_LEGAL": true,
+  "COLOCATION_ABLATION_AVAILABLE": false,
+  "COLOCATION_ABLATION_SKIPPED": true,
+  "NO_NEW_OPTIMIZER": true,
+  "FROZEN_35_CODE_UNCHANGED": true,
+  "HISTORICAL_RESULTS_GATES_UNCHANGED": true,
+  "UTILITY_WEIGHTS_FORMULA_UNCHANGED": true,
+  "CANDIDATE_POOL_UNCHANGED": true,
+  "NO_WORKLOAD_RETUNING": true,
+  "NEW_GPU_SCENARIOS": 0,
+  "HISTORY_INTEGRITY": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/paper_baseline_ablation/history_integrity_after.json",
+    "sha256": "408be1d8d59af26539602937dd9b89b4ac6b0fa838470f1cbefcfe1511fa5d81",
+    "bytes": 261,
+    "mtime_ns": 1791726623415899904
+  },
+  "ORIGINAL_20A_UTILITY_MODEL_INSUFFICIENT": true,
+  "REAL_GPU_GLOBAL_OPTIMALITY_PROVEN": false,
+  "ALL_SCENARIOS_INCLUDED": true,
+  "CORE_EVIDENCE_READY": true,
+  "PAPER_ASSETS_READY": true,
+  "stop": true,
+  "no_next_experiment": true,
+  "deadline_local": "2026-10-16 Asia/Shanghai",
+  "figure_formats": [
+    "PNG",
+    "PDF",
+    "CSV",
+    "complete_raw_data_index"
+  ]
+}

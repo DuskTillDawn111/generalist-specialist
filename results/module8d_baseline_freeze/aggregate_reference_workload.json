@@ -1,0 +1,17 @@
+{
+  "lambda_rps": {
+    "text": 1.1099990621409004,
+    "image": 0.446268439835414,
+    "ocr": 0.5235063272869256,
+    "asr": 0.08371392274703819,
+    "visual_qa": 0.35909481304236596,
+    "lid": 0.3169363691396675
+  },
+  "lambda_sha256": "a958f9e03d5d50d11c9143a9de0563db356fa4a2c4fc9ee96b05672d94677990",
+  "source_workload_matrix": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/final_benchmark_workload_matrix.json",
+    "sha256": "f3a358baec6dfed5fe1d24496e388996d42a33f245814fa52f7dea577593e22f"
+  },
+  "operation": "Per-task arithmetic mean of all six frozen workloads, including no-VQA zero",
+  "selected_without_runtime_results": true
+}

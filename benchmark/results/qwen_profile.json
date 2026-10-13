@@ -1,0 +1,23 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "task": "multimodal_generalist",
+  "benchmark_task": "text_generation",
+  "parameters_m": 8931.813888,
+  "checkpoint_parameters_m": 10732.22544,
+  "weight_size_mb": 21326.886360168457,
+  "dtype": "bfloat16",
+  "audio_output_enabled": false,
+  "max_new_tokens": 16,
+  "load_time_s": 3.243185476399958,
+  "idle_vram_mb": 17043.44189453125,
+  "peak_vram_mb": 17065.91015625,
+  "mean_latency_ms": 40.14241105566422,
+  "p50_latency_ms": 39.914255030453205,
+  "p95_latency_ms": 40.592807810753584,
+  "p99_latency_ms": 40.65312361344695,
+  "throughput_qps": 24.911308855198843,
+  "warmup_runs": 1,
+  "test_runs": 3,
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090"
+}

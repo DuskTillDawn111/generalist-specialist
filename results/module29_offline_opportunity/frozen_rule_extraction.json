@@ -1,0 +1,75 @@
+{
+  "router_sha256": "b9120755641a7c5bb4b51d3ac882a5d7919f50db79f45255711ecc54b56196c8",
+  "config_sha256": "d65a492654c9fba7eebfb59db9ce057c2608be7fda85b9e584bf7b90d85cd58e",
+  "parameters": {
+    "G_worker": "qwen#0",
+    "S_worker": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e#0",
+    "target": "lid",
+    "S_lower_by_task_ms": {
+      "lid": 65.31921059999999,
+      "asr": 169.22661
+    },
+    "G_upper_by_task_ms": {
+      "lid": 505.6366968,
+      "visual_qa": 691.1807333999999
+    },
+    "G_service_ms": 505.6366968,
+    "S_inflation_per_pending_ms": 9.574873183869613,
+    "background_cost_ms": 99.68604101585545,
+    "G_max_target_inflight": 1,
+    "G_token_rate_rps": 0.5750000000000001,
+    "cooldown_seconds": 0.5056366968,
+    "entry_margin_ms": 65.31921059999999,
+    "exit_margin_ms": 32.659605299999996,
+    "ewma_alpha": 0.1,
+    "prediction_error_ratio": 1.5,
+    "fallback_seconds": 30.0,
+    "S_service_alarm_ms": 118.06190725244267
+  },
+  "estimate_source": "def estimate(self,pending):\n  p=self.p;g=pending.get(p['G_worker'],[]);s=pending.get(p['S_worker'],[])\n  # The oldest S job may still be in service; exclude it instead of guessing\n  # its start/completion. Remaining backlog gets conservative P10 path costs.\n  swait=sum(p['S_lower_by_task_ms'][r['task']] for r in s[1:])\n  sexec=p['S_lower_by_task_ms'][p['target']]\n  gexec=max(p['G_service_ms'],self.service.get((p['G_worker'],p['target']),0.))\n  gwait=sum(p['G_upper_by_task_ms'][r['task']] for r in g)\n  inflation=p['S_inflation_per_pending_ms']*len(s)\n  # Arrival-rate normalized aggregate-latency externality from development.\n  # Fixed estimates, not a look-ahead or a forecast of specific future jobs.\n  background=p['background_cost_ms']\n  return dict(S_pending=len(s),G_pending=len(g),G_target_inflight=sum(r['task']==p['target'] for r in g),S_wait_est_ms=swait,S_exec_est_ms=sexec,G_wait_est_ms=gwait,G_exec_est_ms=gexec,S_interference_est_ms=inflation,background_externality_est_ms=background,S_system_cost_proxy_ms=swait+sexec,G_system_cost_proxy_ms=gwait+gexec+inflation+background)",
+  "decide_source": "def decide(self,request_id,now,pending,admitted=True,capacity_ok=True):\n  p=self.p\n  if self.last_time is not None:self.tokens=min(1.,self.tokens+max(0.,now-self.last_time)*p['G_token_rate_rps'])\n  self.last_time=now;e=self.estimate(pending)\n  advantage=e['S_system_cost_proxy_ms']-e['G_system_cost_proxy_ms']\n  if self.mode and advantage<p['exit_margin_ms']:self.mode=False\n  elif not self.mode and advantage>p['entry_margin_ms']:self.mode=True\n  reason='S_LOWER_MARGINAL_COST'\n  if not admitted or not capacity_ok:reason='G_NOT_ADMITTED_OR_CAPACITY'\n  elif now<self.fallback_until:reason='PREDICTION_ERROR_FALLBACK'\n  elif e['G_target_inflight']>=p['G_max_target_inflight']:reason='G_INFLIGHT_BACKPRESSURE'\n  elif e['G_pending']>0:reason='G_BACKGROUND_OR_OTHER_WORK_PENDING'\n  elif now<self.next_g_time:reason='G_COMPLETION_COOLDOWN'\n  elif self.tokens<1.:reason='G_TOKEN_BACKPRESSURE'\n  elif self.mode and advantage>p['exit_margin_ms']:\n   reason='G_LOWER_SYSTEM_MARGINAL_COST';self.tokens-=1.;self.predictions[request_id]=e['G_exec_est_ms']\n  route=p['G_worker'] if reason=='G_LOWER_SYSTEM_MARGINAL_COST' else p['S_worker']\n  return route,dict(**e,reason=reason,route=route,margin_ms=advantage,hysteresis_mode=self.mode,tokens=self.tokens,fallback_until_seconds=self.fallback_until,capacity_ok=capacity_ok,admitted=admitted)",
+  "completion_update_source": "def observe_completion(self,record,now):\n  key=(record['model'],record['task']);value=record.get('worker_latency_ms')\n  if value is None:return\n  old=self.service.get(key,value);self.service[key]=(1-self.p['ewma_alpha'])*old+self.p['ewma_alpha']*value\n  estimate=self.predictions.pop(record['request_id'],None)\n  if estimate:\n   ratio=value/estimate;self.prediction_errors.append(dict(request_id=record['request_id'],observed_service_ms=value,predicted_service_ms=estimate,ratio=ratio,observed_at_seconds=now))\n   if ratio>self.p['prediction_error_ratio']:\n    self.fallback_until=max(self.fallback_until,now+self.p['fallback_seconds']);self.mode=False\n  if record['model']==self.p['G_worker'] and record['task']==self.p['target']:\n   self.next_g_time=max(self.next_g_time,now+self.p['cooldown_seconds'])\n  if record['model']==self.p['S_worker'] and record['task']==self.p['target'] and self.service[key]>self.p['S_service_alarm_ms']:\n   self.fallback_until=max(self.fallback_until,now+self.p['fallback_seconds']);self.mode=False",
+  "decide_conditions": [
+    {
+      "line": 41,
+      "expression": "self.last_time is not None"
+    },
+    {
+      "line": 44,
+      "expression": "self.mode and advantage < p['exit_margin_ms']"
+    },
+    {
+      "line": 47,
+      "expression": "not admitted or not capacity_ok"
+    },
+    {
+      "line": 45,
+      "expression": "not self.mode and advantage > p['entry_margin_ms']"
+    },
+    {
+      "line": 48,
+      "expression": "now < self.fallback_until"
+    },
+    {
+      "line": 49,
+      "expression": "e['G_target_inflight'] >= p['G_max_target_inflight']"
+    },
+    {
+      "line": 50,
+      "expression": "e['G_pending'] > 0"
+    },
+    {
+      "line": 51,
+      "expression": "now < self.next_g_time"
+    },
+    {
+      "line": 52,
+      "expression": "self.tokens < 1.0"
+    },
+    {
+      "line": 53,
+      "expression": "self.mode and advantage > p['exit_margin_ms']"
+    }
+  ],
+  "note": "Literal original code, no replacement by a 13-request rule. cost values are proxies, not E2E or delta-U predictions."
+}

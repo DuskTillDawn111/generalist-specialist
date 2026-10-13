@@ -1,0 +1,411 @@
+{
+  "status": "FROZEN_BEFORE_GPU",
+  "at_unix_ns": 1791568199981206708,
+  "GPU": {
+    "time_ns": 4520895245117806,
+    "unix_ns": 1791568199980358788,
+    "uuid": "GPU-31f2671b-99c5-ef57-be45-5c9a871e11f4",
+    "name": "NVIDIA GeForce RTX 4090",
+    "driver": "595.71.05",
+    "total_mib": 49140.0,
+    "used_mib": 1.0,
+    "gpu_util_percent": 0.0,
+    "memory_util_percent": 0.0,
+    "power_w": 18.36,
+    "processes": []
+  },
+  "slots": [
+    {
+      "run_id": "R1_HIGH_s_only",
+      "stage": "C",
+      "arm": "s_only",
+      "arrival_profile": "HIGH",
+      "point_id": "HIGH",
+      "seed": 28101,
+      "repetition": 1,
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 11.5,
+        "visual_qa": 0.2
+      },
+      "deployment": {
+        "qwen": 1,
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.2
+        },
+        "visual_qa": {
+          "qwen": 0.2
+        },
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 11.5
+        }
+      },
+      "target_task": "lid",
+      "measurement_seconds": 600.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_warmup.json",
+          "sha256": "c16c510aadd9f94b578486a7c7090fa17b58d1aa09cee24d0b4f4b83e56fb428",
+          "bytes": 318304
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_measurement.json",
+          "sha256": "9194fd5dbbd5cce1fa84ef24a97d89a9e53aa3874457388b082e38b5f6d1f3c2",
+          "bytes": 6663180
+        }
+      },
+      "G_fraction": 0,
+      "scenario": "HIGH",
+      "run_order": 1
+    },
+    {
+      "run_id": "R2_LOW_dynamic",
+      "stage": "C",
+      "arm": "dynamic",
+      "arrival_profile": "LOW",
+      "point_id": "LOW",
+      "seed": 28101,
+      "repetition": 1,
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 10.5,
+        "visual_qa": 0.2
+      },
+      "deployment": {
+        "qwen": 1,
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.2
+        },
+        "visual_qa": {
+          "qwen": 0.2
+        },
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 9.975,
+          "qwen": 0.525
+        }
+      },
+      "target_task": "lid",
+      "measurement_seconds": 600.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_warmup.json",
+          "sha256": "6a716ebaedbd2c818fcff8bedd69fd709d29a7e2abe150e3ae2ebef702769b45",
+          "bytes": 289518
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_measurement.json",
+          "sha256": "20fa045ae56cb1b0312f1d2da2f07d716236b3aa4cdfcb0d3fc5a95174d5ef46",
+          "bytes": 6085914
+        }
+      },
+      "G_fraction": 0.05,
+      "scenario": "LOW",
+      "run_order": 2
+    },
+    {
+      "run_id": "R3_HIGH_fixed10",
+      "stage": "C",
+      "arm": "fixed10",
+      "arrival_profile": "HIGH",
+      "point_id": "HIGH",
+      "seed": 28101,
+      "repetition": 1,
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 11.5,
+        "visual_qa": 0.2
+      },
+      "deployment": {
+        "qwen": 1,
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.2
+        },
+        "visual_qa": {
+          "qwen": 0.2
+        },
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 10.35,
+          "qwen": 1.1500000000000001
+        }
+      },
+      "target_task": "lid",
+      "measurement_seconds": 600.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_warmup.json",
+          "sha256": "c16c510aadd9f94b578486a7c7090fa17b58d1aa09cee24d0b4f4b83e56fb428",
+          "bytes": 318304
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_measurement.json",
+          "sha256": "9194fd5dbbd5cce1fa84ef24a97d89a9e53aa3874457388b082e38b5f6d1f3c2",
+          "bytes": 6663180
+        }
+      },
+      "G_fraction": 0.1,
+      "scenario": "HIGH",
+      "run_order": 3
+    },
+    {
+      "run_id": "R4_LOW_s_only",
+      "stage": "C",
+      "arm": "s_only",
+      "arrival_profile": "LOW",
+      "point_id": "LOW",
+      "seed": 28101,
+      "repetition": 1,
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 10.5,
+        "visual_qa": 0.2
+      },
+      "deployment": {
+        "qwen": 1,
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.2
+        },
+        "visual_qa": {
+          "qwen": 0.2
+        },
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 10.5
+        }
+      },
+      "target_task": "lid",
+      "measurement_seconds": 600.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_warmup.json",
+          "sha256": "6a716ebaedbd2c818fcff8bedd69fd709d29a7e2abe150e3ae2ebef702769b45",
+          "bytes": 289518
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_measurement.json",
+          "sha256": "20fa045ae56cb1b0312f1d2da2f07d716236b3aa4cdfcb0d3fc5a95174d5ef46",
+          "bytes": 6085914
+        }
+      },
+      "G_fraction": 0,
+      "scenario": "LOW",
+      "run_order": 4
+    },
+    {
+      "run_id": "R5_HIGH_dynamic",
+      "stage": "C",
+      "arm": "dynamic",
+      "arrival_profile": "HIGH",
+      "point_id": "HIGH",
+      "seed": 28101,
+      "repetition": 1,
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 11.5,
+        "visual_qa": 0.2
+      },
+      "deployment": {
+        "qwen": 1,
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.2
+        },
+        "visual_qa": {
+          "qwen": 0.2
+        },
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 10.924999999999999,
+          "qwen": 0.5750000000000001
+        }
+      },
+      "target_task": "lid",
+      "measurement_seconds": 600.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_warmup.json",
+          "sha256": "c16c510aadd9f94b578486a7c7090fa17b58d1aa09cee24d0b4f4b83e56fb428",
+          "bytes": 318304
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/HIGH_measurement.json",
+          "sha256": "9194fd5dbbd5cce1fa84ef24a97d89a9e53aa3874457388b082e38b5f6d1f3c2",
+          "bytes": 6663180
+        }
+      },
+      "G_fraction": 0.05,
+      "scenario": "HIGH",
+      "run_order": 5
+    },
+    {
+      "run_id": "R6_LOW_fixed10",
+      "stage": "C",
+      "arm": "fixed10",
+      "arrival_profile": "LOW",
+      "point_id": "LOW",
+      "seed": 28101,
+      "repetition": 1,
+      "lambda_rps": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.2,
+        "lid": 10.5,
+        "visual_qa": 0.2
+      },
+      "deployment": {
+        "qwen": 1,
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+        "roberta_sst2": 1,
+        "convnext_tiny": 1,
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1
+      },
+      "routing": {
+        "text": {
+          "roberta_sst2": 0.2
+        },
+        "image": {
+          "convnext_tiny": 0.2
+        },
+        "ocr": {
+          "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+        },
+        "asr": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.2
+        },
+        "visual_qa": {
+          "qwen": 0.2
+        },
+        "lid": {
+          "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 9.450000000000001,
+          "qwen": 1.05
+        }
+      },
+      "target_task": "lid",
+      "measurement_seconds": 600.0,
+      "safe_memory_budget_mib": 34567.5534,
+      "trajectories": {
+        "warmup": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_warmup.json",
+          "sha256": "6a716ebaedbd2c818fcff8bedd69fd709d29a7e2abe150e3ae2ebef702769b45",
+          "bytes": 289518
+        },
+        "measurement": {
+          "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/trajectories/LOW_measurement.json",
+          "sha256": "20fa045ae56cb1b0312f1d2da2f07d716236b3aa4cdfcb0d3fc5a95174d5ef46",
+          "bytes": 6085914
+        }
+      },
+      "G_fraction": 0.1,
+      "scenario": "LOW",
+      "run_order": 6
+    }
+  ],
+  "maximum_attempts": 6,
+  "measurement_seconds_each": 600,
+  "total_formal_max_seconds": 3600,
+  "workloads": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/frozen_workloads.json",
+    "sha256": "56183888fb1fb9f420dad166e97de7f616652a761d74dc3d3859c389d6ccb3b3",
+    "bytes": 7994
+  },
+  "protocol": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module28r_dynamic_followup/frozen_candidate_manifest.json",
+    "sha256": "cd186ec0902b1bc8be90a52c901364e2242cea050161cbbf9e8862c1d4579295",
+    "bytes": 326954
+  },
+  "no_outcome_retry": true,
+  "no_automatic_next_module": true,
+  "no_optimizer_modification": true
+}

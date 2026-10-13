@@ -1,0 +1,36 @@
+{
+  "module": 35,
+  "gates": {
+    "ROUTING_DIAGNOSIS_INCOMPLETE": false,
+    "U_ROUTING_SEARCH_GAP": false,
+    "CPU_ORACLE_MATCHED": true,
+    "HOLDOUT_GENERALIZATION_FAILED": false,
+    "GPU_COMPARISON_INCONCLUSIVE": true,
+    "CORE_EVIDENCE_READY": true
+  },
+  "stages": {
+    "A": "COMPLETE",
+    "B": "COMPLETE",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "COMPLETED",
+    "F": "COMPLETE"
+  },
+  "GPU_inconclusive_reason": "TEXT10/B old20A versus Oracle/U aligned: existing paired95CI crosses0. A->B expansionCI also crosses0. New C contrast verdicts retained separately.",
+  "unresolved_new_GPU_contrasts": [
+    "C_SELECTED_minus_A_ORACLE"
+  ],
+  "holdout_scope": "One independently frozen six-task workload across three pools; never tuned on holdout. Does not establish universal workload/general continuous domain generalization.",
+  "core_evidence_scope": "Finite CPU correctness, actual nested-pool decisions, isolated CPU timings and limited comparable GPU chain; includes unresolved micro-differences.",
+  "historical_predictor_gate": "Original20A UTILITY_MODEL_INSUFFICIENT remains unchanged",
+  "history_integrity": {
+    "passed": true,
+    "files": 22556,
+    "changed": [],
+    "seconds": 133.86972522828728,
+    "full_SHA256": true,
+    "model_weights_included": true
+  },
+  "deadline_local": "2026-10-16 Asia/Shanghai",
+  "no_next_module": true
+}

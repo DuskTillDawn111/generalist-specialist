@@ -1,0 +1,15 @@
+{
+  "figures": {
+    "fig_static_search": "figure_static_search_data.csv",
+    "fig_search_efficiency": "figure_search_efficiency_data.csv",
+    "fig_lp_vs_runtime": "figure_lp_vs_runtime_data.csv",
+    "fig_dynamic_adaptation": "figure_dynamic_adaptation_data.csv",
+    "fig_dynamic_trace": "figure_dynamic_trace_data.csv"
+  },
+  "no_fitted_regression": true,
+  "error_bars": "sample std, not confidence intervals",
+  "primary_static_presentation": "search and confirmation separately displayed",
+  "primary_dynamic_presentation": "search and confirmation separately displayed",
+  "routing_percentile_semantics": "weighted task P95, not pooled percentile",
+  "pdf_versions_available": true
+}

@@ -1,0 +1,303 @@
+{
+  "module": "8D-2",
+  "frozen_before_first_GPU_measurement": true,
+  "baseline_freeze": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_freeze_hashes.json",
+    "sha256": "9a535b67020bba82468535053f86fb6f65c70d37dbb50133eaff64507e3c1c01"
+  },
+  "baseline_definitions": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/baseline_definitions.json",
+    "sha256": "4e010f910ffb47a6da3306abb07d93f2dcb0bd2c91820e976df6cff20d364c1f"
+  },
+  "reuse_audit": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/measurement_reuse_audit.json",
+    "sha256": "71d6291f9b88a01e801b1d0432dd035e1fd8a5d562cb7e04495cf769e979853d"
+  },
+  "reuse_contract": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_baseline_freeze/runtime_reuse_execution_contract.json",
+    "sha256": "1f891a40f9a7c0277812a588334905c8d9c01c5687b07b32f05b56a0715783bc"
+  },
+  "analysis_policy": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_real_baselines/analysis_policy_freeze.json",
+    "sha256": "95b2254d17aa4f338258d82103c68961587b347add8956853faaa2892c7a32c1"
+  },
+  "source_preflight": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d_real_baselines/source_preflight.json",
+    "sha256": "91596975357a0688f4a8edfc75e8e953428b790798d44d018ec01ff13ff3b0bf"
+  },
+  "phase_A": [
+    {
+      "baseline": "B0",
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B0",
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B0",
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B0",
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B0",
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B0",
+      "workload": "no_vqa_phase"
+    },
+    {
+      "baseline": "B1",
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B1",
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B1",
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B1",
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B1",
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B1",
+      "workload": "no_vqa_phase"
+    },
+    {
+      "baseline": "B2",
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B2",
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B2",
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B2",
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B2",
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B2",
+      "workload": "no_vqa_phase"
+    },
+    {
+      "baseline": "B3",
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B3",
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B3",
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B3",
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B3",
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B3",
+      "workload": "no_vqa_phase"
+    }
+  ],
+  "phase_B": [
+    {
+      "baseline": "B4",
+      "random_seed": 1103,
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 2207,
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 47,
+      "workload": "demand_balanced"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 1103,
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 2207,
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 47,
+      "workload": "speech_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 1103,
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 2207,
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 47,
+      "workload": "vision_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 1103,
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 2207,
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 47,
+      "workload": "text_ocr_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 1103,
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 2207,
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 47,
+      "workload": "reasoning_vqa_heavy"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 1103,
+      "workload": "no_vqa_phase"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 2207,
+      "workload": "no_vqa_phase"
+    },
+    {
+      "baseline": "B4",
+      "random_seed": 47,
+      "workload": "no_vqa_phase"
+    }
+  ],
+  "random_seeds": [
+    1103,
+    2207,
+    47
+  ],
+  "runtime_config": {
+    "top_b": 2,
+    "max_iterations": 3,
+    "no_improvement_patience": 1,
+    "runtime_evaluation_budget": 6,
+    "rho_max": 0.8,
+    "remove_pressure_threshold": 0.2,
+    "mean_tolerance_ms": 1.0,
+    "dry_run": false
+  },
+  "measurement_settings": {
+    "warmup_seconds": 10,
+    "measurement_seconds": 210,
+    "arrival_process": "deterministic_periodic",
+    "routing_source": "module7C3_empirical_canonical_family_then_replica_round_robin",
+    "startup_timeout_seconds": 300,
+    "drain_timeout_seconds": 60,
+    "shutdown_timeout_seconds": 10,
+    "max_pending_per_model": 10000
+  },
+  "same_original_frozen_context_paths": {
+    "demand_balanced": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/demand_balanced/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    },
+    "speech_heavy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/speech_heavy/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    },
+    "vision_heavy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/vision_heavy/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    },
+    "text_ocr_heavy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/text_ocr_heavy/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    },
+    "reasoning_vqa_heavy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/reasoning_vqa_heavy/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    },
+    "no_vqa_phase": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8c_final_real_search/no_vqa_phase/runtime_context.json",
+      "sha256": "8d8c81384a087b52fba2fe6ba6005673f0345c19bcdf2f2c52b5808e8e9e5d73"
+    }
+  },
+  "implementation_files": {
+    "module8d_real_baselines/__init__.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_real_baselines/__init__.py",
+      "sha256": "a1baadfbb7129d28456b07c4f44cce78884d68962fba504056ed6f979d6b6d51"
+    },
+    "module8d_real_baselines/campaign.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_real_baselines/campaign.py",
+      "sha256": "404863a700385bac945043b3b3795c019227553fa2c90159a1e0ef1b72c2d4d2"
+    },
+    "module8d_real_baselines/common.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_real_baselines/common.py",
+      "sha256": "846c10dc15ce076de3c5391529deb8f4bdf6d87b40bab40894b4513705687fe9"
+    },
+    "module8d_real_baselines/evidence.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_real_baselines/evidence.py",
+      "sha256": "84acc1d7c4b4687efc5821d16fffde713df05f8f764044f6cd4c6d88a2d4ab3e"
+    },
+    "module8d_real_baselines/report.py": {
+      "path": "/root/autodl-tmp/generalist-specialist/module8d_real_baselines/report.py",
+      "sha256": "6d3ea093e46033230344d190f164ff5cb5a553ce16737b451726b3c20b08e77d"
+    }
+  },
+  "physical_run_cap": 281,
+  "cross_job_exact_cache_reuse_required": true,
+  "Phase_A_results_modify_Phase_B": false,
+  "Proposed_rerun": false,
+  "baseline_definitions_modified": false,
+  "core_search_or_runtime_algorithm_modified": false,
+  "new_predictor": false,
+  "new_routing_optimizer": false,
+  "ablation": false,
+  "dynamic": false,
+  "second_hardware": false,
+  "stop_after_module": "8D-2"
+}

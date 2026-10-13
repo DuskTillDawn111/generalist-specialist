@@ -1,0 +1,572 @@
+{
+  "module": "4B",
+  "workload_name": "W1_balanced",
+  "workload_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/deployment_search_multiworkload/benchmark_workloads.json",
+    "sha256": "4b2cc94257870199d36fca03cea0b39028e05f20a5c37eabe55c5a7df9a6fbed"
+  },
+  "frozen_workload": {
+    "name": "W1_balanced",
+    "arrival_rates_rps": {
+      "text": 0.8,
+      "image": 0.4,
+      "ocr": 0.4,
+      "asr": 0.15,
+      "visual_qa": 0.2,
+      "lid": 0.4
+    },
+    "scale_from_historical": 1.0,
+    "historical_rates_rps": {
+      "text": 0.8,
+      "image": 0.4,
+      "ocr": 0.4,
+      "asr": 0.15,
+      "visual_qa": 0.2,
+      "lid": 0.4
+    },
+    "measurement_seconds": 210,
+    "warmup_seconds": 10,
+    "routing_protocol": "module3a_canonical_minmax_lp",
+    "workload_source": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/performance_model_comparable_groups/workload_groups.json",
+      "sha256": "4787a42537fbaa80c2bd64147ea2f3e6a69fa1e01f28b8e4a63ef6a7b342378a"
+    },
+    "correction_source": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/data_quality_audit/audit_counts.json",
+      "sha256": "dd79a80c0472f34886cb64e45c7e1e030fcc42cfee61a1968ef8b1356d0c72ae"
+    },
+    "rationale": "Existing W1 pilot workload, unchanged."
+  },
+  "fixed_deployment": {
+    "distilbert": 0,
+    "paddleocr": 1,
+    "qwen": 1,
+    "resnet50": 1,
+    "whisper": 1
+  },
+  "deployment_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/deployment_search_multiworkload/algorithm_runs/W1_balanced__B2/run_result.json",
+    "sha256": "2520f9331d205824d5fe60112351ee83fb2615d8d531cbc1d896709938e5e8cf"
+  },
+  "canonical_routing": {
+    "text::distilbert": 0.0,
+    "text::paddleocr": 0.0,
+    "text::qwen": 0.8,
+    "text::resnet50": 0.0,
+    "text::whisper": 0.0,
+    "image::distilbert": 0.0,
+    "image::paddleocr": 0.0,
+    "image::qwen": -0.0,
+    "image::resnet50": 0.4,
+    "image::whisper": 0.0,
+    "ocr::distilbert": 0.0,
+    "ocr::paddleocr": 0.4,
+    "ocr::qwen": 0.0,
+    "ocr::resnet50": 0.0,
+    "ocr::whisper": 0.0,
+    "asr::distilbert": 0.0,
+    "asr::paddleocr": 0.0,
+    "asr::qwen": -0.0,
+    "asr::resnet50": 0.0,
+    "asr::whisper": 0.15,
+    "visual_qa::distilbert": 0.0,
+    "visual_qa::paddleocr": 0.0,
+    "visual_qa::qwen": 0.2,
+    "visual_qa::resnet50": 0.0,
+    "visual_qa::whisper": 0.0,
+    "lid::distilbert": 0.0,
+    "lid::paddleocr": 0.0,
+    "lid::qwen": -0.0,
+    "lid::resnet50": 0.0,
+    "lid::whisper": 0.4
+  },
+  "canonical_initialization": "solve_canonical_routing only",
+  "model_pressure": {
+    "paddleocr": 0.00242700996,
+    "qwen": 0.06461246086888889,
+    "resnet50": 0.0021991287155555556,
+    "whisper": 0.03935853461944445
+  },
+  "routing_freedom": {
+    "text": [
+      "qwen"
+    ],
+    "image": [
+      "qwen",
+      "resnet50"
+    ],
+    "ocr": [
+      "paddleocr",
+      "qwen"
+    ],
+    "asr": [
+      "qwen",
+      "whisper"
+    ],
+    "visual_qa": [
+      "qwen"
+    ],
+    "lid": [
+      "qwen",
+      "whisper"
+    ]
+  },
+  "tasks_with_routing_freedom": [
+    "image",
+    "ocr",
+    "asr",
+    "lid"
+  ],
+  "catalog": {
+    "qwen": {
+      "service_time_ms": {
+        "text": 44.63871411111111,
+        "image": 139.61318952222226,
+        "ocr": 94.64819853333334,
+        "asr": 654.0784572333333,
+        "visual_qa": 144.5074479,
+        "lid": 139.90943443333333
+      },
+      "memory_mib": 17574.0,
+      "sources": {
+        "capability": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/profiles/model_service_profile_6task.json",
+          "sha256": "abebb9f603217299447511bde159488c1411ecf0dc7cbc16f1e8869271c30051",
+          "field": "models.qwen.supported_tasks"
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/system_snapshot/nvml_qwen_sst2.json",
+          "sha256": "3a6de80fa79b352c1712170797dfefd835cbdcfa589deb434a314d2e8ba9e3f4",
+          "field": "peak_target_process_memory_mib"
+        },
+        "service_time": {
+          "text": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_text_n30.jsonl.summary.json",
+                "sha256": "81b3a54c9a0e0b87ac9e1dd8db5c69a842f9c1fbcd3c4b88bb41f0a2e1da5162",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 44.71088126666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_text_n30.jsonl.summary.json",
+                "sha256": "201a84ed169e1db57d939c266f3b4d91c9d6841c973c78e0571db00c6a140c19",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 44.03728446666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_text_n30.jsonl.summary.json",
+                "sha256": "c0ed8f7f028813c9996a98c4967ef5521bea4bef02bb06467cd62e6e2833d525",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 45.1679766,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          },
+          "image": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_image_n30.jsonl.summary.json",
+                "sha256": "528cd3a7410999b3b44a6a33322c3df85afb4ee851c0396f620b5f0d07d0893e",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 141.82340440000002,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_image_n30.jsonl.summary.json",
+                "sha256": "44a78b55921b38778664dd38493a2a2d44fe26067eafece580189866c96d8650",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 139.42471123333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_image_n30.jsonl.summary.json",
+                "sha256": "ee96da13ee9b73adb689d8d8612c6ec496d919b44a776bcb45bbc6cc4c0bcb30",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 137.59145293333333,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          },
+          "ocr": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_ocr_n30.jsonl.summary.json",
+                "sha256": "7d3c09b2e46f9a357c5b7434b81a86af8ab4c54387a6cd63768e296515635101",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 96.9419628,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_ocr_n30.jsonl.summary.json",
+                "sha256": "eb3a523d17438efff6de2920be8c982f6e6212848300c3e6ceabf046e62bf6a5",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 94.78574203333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_ocr_n30.jsonl.summary.json",
+                "sha256": "cef76bf238fd29aaf8b9f6f88d017a07e9bab11ee396e9b6f05f459d2bcfb5f9",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 92.21689076666667,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          },
+          "asr": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_asr_n30.jsonl.summary.json",
+                "sha256": "bfcce158a38bad099090b42155f7a6735d1b413f56d307d71ef7d63621da4592",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 652.2948964333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_asr_n30.jsonl.summary.json",
+                "sha256": "620249988e31b8e8ab23504bbe60498429f5221a123f539603a76923fa338094",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 656.7569879666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_asr_n30.jsonl.summary.json",
+                "sha256": "f7be1cb3bed6b1db681c1a86ef33d55b0216f9660c6bdf77177c47288e9c83bc",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 653.1834873,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          },
+          "visual_qa": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_visual_qa_n30.jsonl.summary.json",
+                "sha256": "08c78777bb99bad7fab179f85f9cf58b59565d96b1cd1702078c58e4436d0ba2",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 143.12989866666666,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_visual_qa_n30.jsonl.summary.json",
+                "sha256": "5f1d036b0c07c480b3cc509c3111a6aad481a3eb32550ac5f881c289b6818a07",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 147.2274014,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_visual_qa_n30.jsonl.summary.json",
+                "sha256": "97f1008b434a4859f17561095f4066f2133cd0f71b5d3d93257f6ccaad34e9c5",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 143.16504363333334,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          },
+          "lid": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_lid_n30.jsonl.summary.json",
+                "sha256": "6e5ec4092dcb7e3460a687ad8f6f8bbde20ccdef3930e1d2716933af6b2ba8b1",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 127.6954586,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_lid_n30.jsonl.summary.json",
+                "sha256": "a272bfc5f196ad6b5a0bddd91022c2325411d4bec64a7fe570edd86b795f84af",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 129.82686876666668,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_lid_n30.jsonl.summary.json",
+                "sha256": "9e33d54423b0bcff8df492ae11646850bbae474b361b640cca548d7ee6158b5f",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 162.20597593333332,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "distilbert": {
+      "service_time_ms": {
+        "text": 3.7693092222222226
+      },
+      "memory_mib": 750.0,
+      "sources": {
+        "capability": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/profiles/model_service_profile_6task.json",
+          "sha256": "abebb9f603217299447511bde159488c1411ecf0dc7cbc16f1e8869271c30051",
+          "field": "models.distilbert.supported_tasks"
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/system_snapshot/nvml_distilbert_sst2_pynvml.json",
+          "sha256": "c294a14b5e72a7e38dca15bbab9d2b499a851124353adcd42ef5d3d5c288f2ce",
+          "field": "peak_target_process_memory_mib"
+        },
+        "service_time": {
+          "text": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_distilbert_text_n30.jsonl.summary.json",
+                "sha256": "40d31dbbf243a0c5237b30fd1c745b24d38a32be72c3ba2718830090ff7642cb",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 3.882281633333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_distilbert_text_n30.jsonl.summary.json",
+                "sha256": "ee018d421ec2aad4aee46d9f755602bab32b41c3863351e31671346c5f1f9db0",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 3.7786146,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_distilbert_text_n30.jsonl.summary.json",
+                "sha256": "83461b5a27eb12a61cf5041209dcfd901b2ac213fd9c92941c8cf833ae7068ee",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 3.6470314333333334,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "resnet50": {
+      "service_time_ms": {
+        "image": 5.4978217888888885
+      },
+      "memory_mib": 604.0,
+      "sources": {
+        "capability": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/profiles/model_service_profile_6task.json",
+          "sha256": "abebb9f603217299447511bde159488c1411ecf0dc7cbc16f1e8869271c30051",
+          "field": "models.resnet50.supported_tasks"
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/system_snapshot/nvml_resnet50_imagenette.json",
+          "sha256": "66a6d93909f549f46f03b6d60914d0c071e0e64fbac0a3296bee77a8db4158d8",
+          "field": "peak_target_process_memory_mib"
+        },
+        "service_time": {
+          "image": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_resnet50_image_n30.jsonl.summary.json",
+                "sha256": "fffd76adf33e2dbee1d7c9538a613b24fd3e16f8a93cb191fbb38fba1a702fac",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.5884934,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_resnet50_image_n30.jsonl.summary.json",
+                "sha256": "e925ebbdba417725772c81dc796190be9696a5857af54b1a2c6c729a36c9f30c",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.626752633333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_resnet50_image_n30.jsonl.summary.json",
+                "sha256": "19ea81d71a78570aee3b5cc291d7cd03d4bf0a7c3776f5e88fc39f6e36e0327f",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.278219333333333,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "paddleocr": {
+      "service_time_ms": {
+        "ocr": 6.0675248999999996
+      },
+      "memory_mib": 582.0,
+      "sources": {
+        "capability": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/profiles/model_service_profile_6task.json",
+          "sha256": "abebb9f603217299447511bde159488c1411ecf0dc7cbc16f1e8869271c30051",
+          "field": "models.paddleocr.supported_tasks"
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/system_snapshot/nvml_paddleocr_iiit5k.json",
+          "sha256": "cf84202baba819007b70fdba58119a8754b6c14483535a9b7263e5a11616bfd6",
+          "field": "peak_target_process_memory_mib"
+        },
+        "service_time": {
+          "ocr": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_paddleocr_ocr_n30.jsonl.summary.json",
+                "sha256": "dd280180768a6e687623a3e6855b00aad526585c9e705e98136bf69d0fbd2f04",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 6.050120266666666,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_paddleocr_ocr_n30.jsonl.summary.json",
+                "sha256": "dec5548ad7ee583a5252b064b2dd17935fbaea4ac2503d4d30510710a62fdeb6",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.972571233333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_paddleocr_ocr_n30.jsonl.summary.json",
+                "sha256": "f0fe368fefdc0918f783a3b81ed4311d3205a53d5b128f902c7810c185df7265",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 6.1798832,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "whisper": {
+      "service_time_ms": {
+        "asr": 190.16587112222223,
+        "lid": 27.084134877777778
+      },
+      "memory_mib": 1626.0,
+      "sources": {
+        "capability": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/profiles/model_service_profile_6task.json",
+          "sha256": "abebb9f603217299447511bde159488c1411ecf0dc7cbc16f1e8869271c30051",
+          "field": "models.whisper.supported_tasks"
+        },
+        "memory": {
+          "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/system_snapshot/nvml_whisper_small_librispeech.json",
+          "sha256": "46afc837df6894798dd703f02d56a8dc6b57c8f1847d20ba2f693add6fce96a5",
+          "field": "peak_target_process_memory_mib"
+        },
+        "service_time": {
+          "asr": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "ef34fd21a601c01e2a1944e074566a64cf56e408a661069186d7d52b38ed565d",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 188.41047593333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "a90ae49b29e84da6acfa3bf383108cd113bd110d6bb30d2efe4a66da47014444",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 189.05162276666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "f14f2c5519d0cb00f5a028bce47661e402fd5e1814170d60fd146f8f9640b700",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 193.03551466666667,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          },
+          "lid": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_whisper_lid_n30.jsonl.summary.json",
+                "sha256": "df2aea0b3f3fb6678aa0015aa5059f2af45ba02ec0491475a035619b6ac68dc2",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 26.350642733333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_whisper_lid_n30.jsonl.summary.json",
+                "sha256": "abd79a4796e2e25488b8d94e26c682a2298579dfbbaa502dcd8443ed4b0279bc",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 27.670926566666665,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_whisper_lid_n30.jsonl.summary.json",
+                "sha256": "de190bdfd25f1fe442b27663d4ffb5780dfef2711ddeeaabd8fa05680b8ee354",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 27.23083533333333,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "hardware_identity": "GPU-011dad14-9680-4374-06d9-c6186fa3fa47, NVIDIA GeForce RTX 4090, 595.71.05, 49140 MiB",
+  "source_model_hashes_sha256": "5d28ea1d9425a573e3d065759d6a66429593f0dc922b15ed19d6d9f17a75ae8d",
+  "asset_manifest_sha256": "73c9178219e2f5fe945e738ea492be934acb1b028b8e91f2ad89dc010176cbc6",
+  "config_sha256": "803709a3fca2a8bf64aca12982bab35830f52f6bdeebe118af60edf758109289",
+  "implementation_sha256": {
+    "deployment_search/routing_real_pilot.py": "fb5506ec070a0dfca005a17b42f8b07a6974a05b7b64d5619c03223db0054fc1",
+    "deployment_search/routing_search.py": "90e387d7921c4b9b72b44b231f86f6b832ad472915b00f6ffbbde9036349b91b",
+    "deployment_search/real_objective.py": "97d928034d32a5c066fcc925c16a92739fcb8df4d21bce10333a2aa2688c2175",
+    "deployment_search/scoring.py": "321260809b051e69f4264a6728b107d9d7e4c168aebe99f459749a5512f283a1",
+    "deployment_search/runtime_cache.py": "4953babcc690ad6dd1619ab31ad9f8d4e95995dca1ce826274ff4e353d7adf6e"
+  },
+  "frozen_before_first_gpu_run": true,
+  "deployment_changed": false,
+  "cache_reuse_policy": "Only canonical exact full identity imported from Module 3C; no routing equivalence or historical latency selection"
+}

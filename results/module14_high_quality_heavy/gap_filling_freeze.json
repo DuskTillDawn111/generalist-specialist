@@ -1,0 +1,26 @@
+{
+  "at_utc": "2026-10-07T16:51:47.291673+00:00",
+  "frozen": true,
+  "rounds_allowed": 1,
+  "rounds_used": 0,
+  "eligible_existing_paths": {
+    "asr": [
+      "openai/whisper-large-v3-turbo"
+    ],
+    "lid": [
+      "openai/whisper-medium",
+      "openai/whisper-large-v3-turbo"
+    ],
+    "text": [
+      "philschmid/roberta-large-sst2",
+      "textattack/facebook-bart-large-SST-2",
+      "textattack/xlnet-base-cased-SST-2",
+      "textattack/roberta-base-SST-2"
+    ]
+  },
+  "scope": "Complete13B operating-point table including its real legacy alternatives; canonical denominator references fixed",
+  "user_preference_question": "No answer at freeze; use stated default allowing reuse of real existing checkpoint. Two regimes remain independent, baseline intact.",
+  "missing_tasks": [],
+  "entries": [],
+  "no_iterative_search_or_deployment_conditioning": true
+}

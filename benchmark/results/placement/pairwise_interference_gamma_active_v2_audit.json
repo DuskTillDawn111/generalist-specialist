@@ -1,0 +1,96 @@
+{
+  "matrix_rows": 44,
+  "unique_rows": 44,
+  "expected_rows": 44,
+  "structural_ok": true,
+  "duplicates": [],
+  "missing": [],
+  "extra": [],
+  "missing_fields": [],
+  "nonfinite": [],
+  "overlap_fail": [],
+  "accepted_fail": [],
+  "co_task_fail": [],
+  "baseline_inconsistent": [],
+  "formula_fail": [],
+  "negative_gamma_count": 3,
+  "severe_negative_count": 3,
+  "high_gamma_count": 9,
+  "very_high_gamma_count": 5,
+  "negative_rows": [
+    {
+      "worker": "qwen",
+      "task": "lid",
+      "co_resident": "paddleocr",
+      "gamma": -0.12382540091642713
+    },
+    {
+      "worker": "qwen",
+      "task": "lid",
+      "co_resident": "resnet50",
+      "gamma": -0.11628514417201818
+    },
+    {
+      "worker": "qwen",
+      "task": "lid",
+      "co_resident": "distilbert",
+      "gamma": -0.08124217101225939
+    }
+  ],
+  "high_rows": [
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "qwen",
+      "gamma": 2.0428869189988093
+    },
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "whisper",
+      "gamma": 2.0192681935330863
+    },
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "resnet50",
+      "gamma": 1.5295133741020672
+    },
+    {
+      "worker": "qwen",
+      "task": "visual_qa",
+      "co_resident": "whisper",
+      "gamma": 1.428905347190819
+    },
+    {
+      "worker": "qwen",
+      "task": "image",
+      "co_resident": "whisper",
+      "gamma": 1.0067945302925447
+    },
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "paddleocr",
+      "gamma": 0.8145179505958606
+    },
+    {
+      "worker": "qwen",
+      "task": "ocr",
+      "co_resident": "whisper",
+      "gamma": 0.7161375415280413
+    },
+    {
+      "worker": "whisper",
+      "task": "asr",
+      "co_resident": "qwen",
+      "gamma": 0.568060165907244
+    },
+    {
+      "worker": "whisper",
+      "task": "lid",
+      "co_resident": "qwen",
+      "gamma": 0.5606092218071363
+    }
+  ]
+}

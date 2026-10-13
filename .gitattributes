@@ -1,0 +1,3 @@
+# Preserve byte-for-byte historical source and frozen metadata.
+* -text
+*.py diff=python

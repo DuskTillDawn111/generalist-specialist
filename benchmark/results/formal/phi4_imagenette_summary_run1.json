@@ -1,0 +1,135 @@
+{
+  "model": "Phi-4-multimodal-instruct",
+  "task": "image_classification",
+  "dataset": "Imagenette",
+  "split": "validation",
+  "evaluation_mode": "10-class closed-set",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "attention_backend": "sdpa",
+  "batch_size": 1,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 16
+  },
+  "prompt_version": "v1",
+  "prompt": "Classify this image into exactly one of the following categories: tench, English springer, cassette player, chain saw, church, French horn, garbage truck, gas pump, golf ball, parachute. Output only the category name and nothing else.",
+  "prompt_composition": "<|image_1|>\\n<image classification prompt>",
+  "output_normalization": "strip + lowercase only",
+  "target_classes": [
+    "tench",
+    "English springer",
+    "cassette player",
+    "chain saw",
+    "church",
+    "French horn",
+    "garbage truck",
+    "gas pump",
+    "golf ball",
+    "parachute"
+  ],
+  "num_samples": 200,
+  "correct": 184,
+  "accuracy": 0.92,
+  "valid_closed_set_outputs": 188,
+  "valid_closed_set_output_rate": 0.94,
+  "per_class_accuracy": {
+    "tench": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "English springer": {
+      "correct": 14,
+      "total": 20,
+      "accuracy": 0.7
+    },
+    "cassette player": {
+      "correct": 15,
+      "total": 20,
+      "accuracy": 0.75
+    },
+    "chain saw": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "church": {
+      "correct": 19,
+      "total": 20,
+      "accuracy": 0.95
+    },
+    "French horn": {
+      "correct": 18,
+      "total": 20,
+      "accuracy": 0.9
+    },
+    "garbage truck": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "gas pump": {
+      "correct": 18,
+      "total": 20,
+      "accuracy": 0.9
+    },
+    "golf ball": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "parachute": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    }
+  },
+  "parameters_m": 5574.46,
+  "checkpoint_size_mb": 10632.732,
+  "processor_load_time_s": 0.837,
+  "model_load_time_s": 9.873,
+  "warmup_runs": 5,
+  "input_tokens": {
+    "mean": 610.625,
+    "min": 532,
+    "max": 856
+  },
+  "output_tokens": {
+    "total": 667,
+    "mean": 3.335,
+    "min": 2,
+    "max": 4
+  },
+  "model_latency": {
+    "mean_ms": 189.645,
+    "p50_ms": 195.386,
+    "p95_ms": 233.044,
+    "p99_ms": 237.511,
+    "min_ms": 132.937,
+    "max_ms": 252.353
+  },
+  "e2e_latency": {
+    "mean_ms": 201.265,
+    "p50_ms": 205.815,
+    "p95_ms": 247.31,
+    "p99_ms": 251.418,
+    "min_ms": 143.152,
+    "max_ms": 262.93
+  },
+  "model_request_throughput_qps": 5.273,
+  "e2e_request_throughput_qps": 4.969,
+  "effective_output_tokens_per_s": 17.585,
+  "torch_idle_allocated_mb": 10666.682,
+  "torch_peak_allocated_mb": 11382.083,
+  "memory_note": "Torch allocator memory is auxiliary only; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "multimodal model.generate only after image decoding, multimodal preprocessing and H2D; includes vision encoding and autoregressive language generation",
+    "e2e_latency": "local image read/decode + multimodal processor + H2D + vision encoding + autoregressive generation + text decoding + closed-label normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.48.2",
+  "timestamp": "2026-09-17T22:02:01.284337+08:00"
+}

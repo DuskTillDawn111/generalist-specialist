@@ -1,0 +1,74 @@
+{
+  "policy": "pure_generalist_phi4",
+  "tasks": 800,
+  "results": 800,
+  "errors": 0,
+  "models": [
+    "phi4"
+  ],
+  "routing": {
+    "phi4": 800
+  },
+  "routing_by_task": {
+    "text": {
+      "phi4": 200
+    },
+    "image": {
+      "phi4": 200
+    },
+    "ocr": {
+      "phi4": 200
+    },
+    "asr": {
+      "phi4": 200
+    }
+  },
+  "wall_time_s": 321.456641057,
+  "throughput_tasks_per_s": 2.48867155884375,
+  "per_task": {
+    "text": {
+      "count": 200,
+      "routing": {
+        "phi4": 200
+      },
+      "worker_latency_mean_ms": 70.20360759000002,
+      "worker_latency_p95_ms": 74.0625813,
+      "queue_wait_mean_ms": 46780.087286444985,
+      "queue_wait_p95_ms": 58104.78833295001,
+      "accuracy": 0.905
+    },
+    "image": {
+      "count": 200,
+      "routing": {
+        "phi4": 200
+      },
+      "worker_latency_mean_ms": 231.60242587999994,
+      "worker_latency_p95_ms": 286.85119975000003,
+      "queue_wait_mean_ms": 46362.23803242998,
+      "queue_wait_p95_ms": 57581.07562434999,
+      "accuracy": 0.92
+    },
+    "ocr": {
+      "count": 200,
+      "routing": {
+        "phi4": 200
+      },
+      "worker_latency_mean_ms": 197.51987904499998,
+      "worker_latency_p95_ms": 283.43952085,
+      "queue_wait_mean_ms": 46073.807667765,
+      "queue_wait_p95_ms": 57521.130233350006,
+      "accuracy": 0.93
+    },
+    "asr": {
+      "count": 200,
+      "routing": {
+        "phi4": 200
+      },
+      "worker_latency_mean_ms": 1107.5627628549998,
+      "worker_latency_p95_ms": 2536.7314418000005,
+      "queue_wait_mean_ms": 46271.69380088499,
+      "queue_wait_p95_ms": 57008.11358335001,
+      "corpus_wer": 0.019519856405654026
+    }
+  }
+}

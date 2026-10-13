@@ -1,0 +1,1882 @@
+{
+  "schema_version": 1,
+  "frozen": true,
+  "status": "complete",
+  "unit": "milliseconds",
+  "protocol": "active_single_profile_v1",
+  "aggregation": "sample-count-weighted mean",
+  "completeness": {
+    "required_paths": 25,
+    "available_paths": 25,
+    "still_pending_paths": 0,
+    "pending_paths": [],
+    "completeness_ratio": 1.0,
+    "required_path_list": [
+      {
+        "model_id": "convnext_tiny",
+        "task": "image"
+      },
+      {
+        "model_id": "distil_whisper",
+        "task": "asr"
+      },
+      {
+        "model_id": "distilbert",
+        "task": "text"
+      },
+      {
+        "model_id": "minicpm",
+        "task": "asr"
+      },
+      {
+        "model_id": "minicpm",
+        "task": "image"
+      },
+      {
+        "model_id": "minicpm",
+        "task": "ocr"
+      },
+      {
+        "model_id": "minicpm",
+        "task": "text"
+      },
+      {
+        "model_id": "paddleocr",
+        "task": "ocr"
+      },
+      {
+        "model_id": "paddleocr_vl",
+        "task": "ocr"
+      },
+      {
+        "model_id": "phi4mm",
+        "task": "asr"
+      },
+      {
+        "model_id": "phi4mm",
+        "task": "image"
+      },
+      {
+        "model_id": "phi4mm",
+        "task": "ocr"
+      },
+      {
+        "model_id": "phi4mm",
+        "task": "text"
+      },
+      {
+        "model_id": "qwen",
+        "task": "asr"
+      },
+      {
+        "model_id": "qwen",
+        "task": "image"
+      },
+      {
+        "model_id": "qwen",
+        "task": "lid"
+      },
+      {
+        "model_id": "qwen",
+        "task": "ocr"
+      },
+      {
+        "model_id": "qwen",
+        "task": "text"
+      },
+      {
+        "model_id": "qwen",
+        "task": "visual_qa"
+      },
+      {
+        "model_id": "resnet50",
+        "task": "image"
+      },
+      {
+        "model_id": "roberta_sst2",
+        "task": "text"
+      },
+      {
+        "model_id": "whisper-small",
+        "task": "asr"
+      },
+      {
+        "model_id": "whisper-small",
+        "task": "lid"
+      },
+      {
+        "model_id": "whisper_turbo",
+        "task": "asr"
+      },
+      {
+        "model_id": "whisper_turbo",
+        "task": "lid"
+      }
+    ],
+    "measured_paths": 25,
+    "new_measured_paths": 14,
+    "existing_paths": 11
+  },
+  "gpu_capacity_mib": 49140,
+  "candidate_pool": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/candidate_models.json",
+    "sha256": "e59a0d0164696a5778bc9d6a9881f32b5117c710f50762b43977eadde7ffca0a",
+    "bytes": 28391
+  },
+  "memory_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2/measured_vram.json",
+    "sha256": "f837f7c068084310691fbee188a807fd961b30a1a1c051b00e7c7d2535554ef9",
+    "bytes": 3325
+  },
+  "models": {
+    "qwen": {
+      "role": "generalist",
+      "capabilities_verified": [
+        "asr",
+        "image",
+        "lid",
+        "ocr",
+        "text",
+        "visual_qa"
+      ],
+      "measured_idle_vram_mib": 17978.0,
+      "service_time_ms": {
+        "asr": 654.0784572333333,
+        "image": 139.61318952222226,
+        "lid": 139.90943443333333,
+        "ocr": 94.64819853333334,
+        "text": 44.63871411111111,
+        "visual_qa": 144.5074479
+      },
+      "service_time_sources": {
+        "asr": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 654.0784572333333,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_asr_n30.jsonl.summary.json",
+                "sha256": "bfcce158a38bad099090b42155f7a6735d1b413f56d307d71ef7d63621da4592",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 652.2948964333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_asr_n30.jsonl.summary.json",
+                "sha256": "620249988e31b8e8ab23504bbe60498429f5221a123f539603a76923fa338094",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 656.7569879666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_asr_n30.jsonl.summary.json",
+                "sha256": "f7be1cb3bed6b1db681c1a86ef33d55b0216f9660c6bdf77177c47288e9c83bc",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 653.1834873,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        },
+        "image": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 139.61318952222226,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_image_n30.jsonl.summary.json",
+                "sha256": "528cd3a7410999b3b44a6a33322c3df85afb4ee851c0396f620b5f0d07d0893e",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 141.82340440000002,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_image_n30.jsonl.summary.json",
+                "sha256": "44a78b55921b38778664dd38493a2a2d44fe26067eafece580189866c96d8650",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 139.42471123333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_image_n30.jsonl.summary.json",
+                "sha256": "ee96da13ee9b73adb689d8d8612c6ec496d919b44a776bcb45bbc6cc4c0bcb30",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 137.59145293333333,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        },
+        "lid": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 139.90943443333333,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_lid_n30.jsonl.summary.json",
+                "sha256": "6e5ec4092dcb7e3460a687ad8f6f8bbde20ccdef3930e1d2716933af6b2ba8b1",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 127.6954586,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_lid_n30.jsonl.summary.json",
+                "sha256": "a272bfc5f196ad6b5a0bddd91022c2325411d4bec64a7fe570edd86b795f84af",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 129.82686876666668,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_lid_n30.jsonl.summary.json",
+                "sha256": "9e33d54423b0bcff8df492ae11646850bbae474b361b640cca548d7ee6158b5f",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 162.20597593333332,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        },
+        "ocr": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 94.64819853333334,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_ocr_n30.jsonl.summary.json",
+                "sha256": "7d3c09b2e46f9a357c5b7434b81a86af8ab4c54387a6cd63768e296515635101",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 96.9419628,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_ocr_n30.jsonl.summary.json",
+                "sha256": "eb3a523d17438efff6de2920be8c982f6e6212848300c3e6ceabf046e62bf6a5",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 94.78574203333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_ocr_n30.jsonl.summary.json",
+                "sha256": "cef76bf238fd29aaf8b9f6f88d017a07e9bab11ee396e9b6f05f459d2bcfb5f9",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 92.21689076666667,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        },
+        "text": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 44.63871411111111,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_text_n30.jsonl.summary.json",
+                "sha256": "81b3a54c9a0e0b87ac9e1dd8db5c69a842f9c1fbcd3c4b88bb41f0a2e1da5162",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 44.71088126666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_text_n30.jsonl.summary.json",
+                "sha256": "201a84ed169e1db57d939c266f3b4d91c9d6841c973c78e0571db00c6a140c19",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 44.03728446666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_text_n30.jsonl.summary.json",
+                "sha256": "c0ed8f7f028813c9996a98c4967ef5521bea4bef02bb06467cd62e6e2833d525",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 45.1679766,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        },
+        "visual_qa": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 144.5074479,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_qwen_visual_qa_n30.jsonl.summary.json",
+                "sha256": "08c78777bb99bad7fab179f85f9cf58b59565d96b1cd1702078c58e4436d0ba2",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 143.12989866666666,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_qwen_visual_qa_n30.jsonl.summary.json",
+                "sha256": "5f1d036b0c07c480b3cc509c3111a6aad481a3eb32550ac5f881c289b6818a07",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 147.2274014,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_qwen_visual_qa_n30.jsonl.summary.json",
+                "sha256": "97f1008b434a4859f17561095f4066f2133cd0f71b5d3d93257f6ccaad34e9c5",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 143.16504363333334,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "phi4mm": {
+      "role": "generalist",
+      "capabilities_verified": [
+        "asr",
+        "image",
+        "ocr",
+        "text"
+      ],
+      "measured_idle_vram_mib": 11772.0,
+      "service_time_ms": {
+        "asr": 1129.588914977778,
+        "image": 230.1151579,
+        "ocr": 204.71066856666664,
+        "text": 68.12265686666666
+      },
+      "service_time_sources": {
+        "asr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 1129.588914977778,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 649.2811004081101,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_asr_n30.jsonl",
+                "sha256": "81c05c8fb0db7c1be6ac409dbbd02e70ca43278bb5eb3214c86ea7572de1a0c9",
+                "bytes": 19987
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_asr_n30.jsonl.summary.json",
+                "sha256": "3c2125fcc961d0ef990f5fec4c9b891d0f37b1fdbc11f1d85fa14236700d1b83",
+                "bytes": 395
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_asr_n30.jsonl.validation.json",
+                "sha256": "e1901525c77056dd121101317108ec13ec2a93ff23f6d64375be3c8a9de8a966",
+                "bytes": 76304
+              },
+              "mean_worker_latency_ms": 1107.5488889333333,
+              "sample_std_ms": 643.0623524239473,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_asr_n30.jsonl",
+                "sha256": "b348a5804c1dec74c47b0d4c2e102eb151b56418d2f40f52116bc634060573b8",
+                "bytes": 19989
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_asr_n30.jsonl.summary.json",
+                "sha256": "39f71274bd467c28e6af6d304751f9cec5d5a3b41375130a6521cd41cbcd8c76",
+                "bytes": 396
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_asr_n30.jsonl.validation.json",
+                "sha256": "3ee0eac51a8188735ad1c8bb7eb8f109c17811907f215871036a18073a5f0ea7",
+                "bytes": 76303
+              },
+              "mean_worker_latency_ms": 1151.8026252333334,
+              "sample_std_ms": 667.4628717008782,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_asr_n30.jsonl",
+                "sha256": "bd015e897bb94c86131b2e89f6ca90b4066228ac4bddc4538a62f79c637a6e0b",
+                "bytes": 19990
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_asr_n30.jsonl.summary.json",
+                "sha256": "9b5847a83bd39cb35500ec299985d99678fb33407da94a5dbb1de3f9e8ca2fe7",
+                "bytes": 396
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_asr_n30.jsonl.validation.json",
+                "sha256": "b3c2467558772b218c3c427622c84fd319c5939c8e93c1f672ecd34fb1343070",
+                "bytes": 76302
+              },
+              "mean_worker_latency_ms": 1129.4152307666666,
+              "sample_std_ms": 658.5760948060337,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/phi_env/bin/python",
+            "package_manifest_sha256": "1957d9f1ea937821f99044d480e441426dbad92fbf0f89754e80659f155b6fd5",
+            "executable_sha256": "9e6db9ff90049280ef53e19c2fc80cd1d39b0ce58939fb594664c34f7495893d"
+          },
+          "source_revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+          "model_manifest_sha256": "1dc75fa2c65e1c1c4415ea72947cb1259d4eea0aac7be25148ff440080ddf972",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/phi_worker.py",
+            "sha256": "8fea2e4455b190cd2d324d4ef1b393f0678dac0cc6700608787592835bbbb8ad",
+            "bytes": 7038
+          }
+        },
+        "image": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 230.1151579,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 39.406863359971425,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_image_n30.jsonl",
+                "sha256": "d6de0bc4998aeca33832b2600076a56465036bb0beb8a830bf59800b6b69cbe4",
+                "bytes": 11869
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_image_n30.jsonl.summary.json",
+                "sha256": "a2a218f81c94b33b409371bfd5bd432cd654b89de2da4fc505f2e6afc901e901",
+                "bytes": 392
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_image_n30.jsonl.validation.json",
+                "sha256": "513575ba8f50ac92b831faa3dedbf021ff1080bc4a68b625fa7f409426bb9514",
+                "bytes": 46263
+              },
+              "mean_worker_latency_ms": 232.6665963,
+              "sample_std_ms": 43.77675887234855,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_image_n30.jsonl",
+                "sha256": "129ac3874c10e2bc484c3d28c6b826ba5a1291d0f82719e57905f5139921835c",
+                "bytes": 11872
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_image_n30.jsonl.summary.json",
+                "sha256": "a5ac54e37260183a17202a49046c408171a2e2e22101a6cc50d0ed559defa8c2",
+                "bytes": 392
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_image_n30.jsonl.validation.json",
+                "sha256": "3a40f8ca3a32c164f3e778bdec4b28862054a488ff75ac701aa4fb87f9ecb117",
+                "bytes": 46262
+              },
+              "mean_worker_latency_ms": 231.5129617,
+              "sample_std_ms": 38.68957106370933,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_image_n30.jsonl",
+                "sha256": "fc9529eb8c37e603d91086c9c5f08e13b70b5a088f0a8ea78103bb9039ac821e",
+                "bytes": 11872
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_image_n30.jsonl.summary.json",
+                "sha256": "f65ed606484a842e5a78b1e7cc1baa643a9353bec6c3e837554d72ab028db406",
+                "bytes": 392
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_image_n30.jsonl.validation.json",
+                "sha256": "453d36e2d726c1b41268512ff21c9c87bbfef63947b3951a0e772d3aabf56ef6",
+                "bytes": 46308
+              },
+              "mean_worker_latency_ms": 226.1659157,
+              "sample_std_ms": 36.436545608901866,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/phi_env/bin/python",
+            "package_manifest_sha256": "1957d9f1ea937821f99044d480e441426dbad92fbf0f89754e80659f155b6fd5",
+            "executable_sha256": "9e6db9ff90049280ef53e19c2fc80cd1d39b0ce58939fb594664c34f7495893d"
+          },
+          "source_revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+          "model_manifest_sha256": "1dc75fa2c65e1c1c4415ea72947cb1259d4eea0aac7be25148ff440080ddf972",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/phi_worker.py",
+            "sha256": "8fea2e4455b190cd2d324d4ef1b393f0678dac0cc6700608787592835bbbb8ad",
+            "bytes": 7038
+          }
+        },
+        "ocr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 204.71066856666664,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 51.38649566517012,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_ocr_n30.jsonl",
+                "sha256": "8c7d89b864d2b1a4d86c1b5098a04c0f3bcb337ee0293ef434878fcf8b4c72b4",
+                "bytes": 11423
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_ocr_n30.jsonl.summary.json",
+                "sha256": "a021a826cfbea54bc67e51cb3d08c152b2ce297e134eeb2bd606eac32cd0d0d9",
+                "bytes": 395
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_ocr_n30.jsonl.validation.json",
+                "sha256": "4409eab40c001887dde8df34dbcecc8e53208dfbef714b0d662237167a880419",
+                "bytes": 44013
+              },
+              "mean_worker_latency_ms": 204.15127843333335,
+              "sample_std_ms": 51.61541946164645,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_ocr_n30.jsonl",
+                "sha256": "372f0f3add2e25b312c3e5db1f5f04d20edb453ac243d5a39d57a071c0402ad6",
+                "bytes": 11427
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_ocr_n30.jsonl.summary.json",
+                "sha256": "3493c80b35cf6445b0c8eccb6338c7eadd7d04478d6293f0ebe898803fd1e6b8",
+                "bytes": 395
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_ocr_n30.jsonl.validation.json",
+                "sha256": "ed29e13183755ad48581bb2e8a38185e1ddc7022c0109b0959a9fc96c093ff98",
+                "bytes": 43613
+              },
+              "mean_worker_latency_ms": 204.36492486666666,
+              "sample_std_ms": 51.73315974648095,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_ocr_n30.jsonl",
+                "sha256": "e5be7f03c5e14c5ce58b581b6f76fbdaab8299ad55ca83e90bb772ba18eb963f",
+                "bytes": 11421
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_ocr_n30.jsonl.summary.json",
+                "sha256": "1b9de58b56d30f6d1aa938e7a5c9d265d561ee537aef4136b9cbf489b425308b",
+                "bytes": 388
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_ocr_n30.jsonl.validation.json",
+                "sha256": "913ef979bffd537b54a0f71ec20a158fa32030efa90e9d7d3462541a8a3e73aa",
+                "bytes": 44011
+              },
+              "mean_worker_latency_ms": 205.6158024,
+              "sample_std_ms": 52.55528508112537,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/phi_env/bin/python",
+            "package_manifest_sha256": "1957d9f1ea937821f99044d480e441426dbad92fbf0f89754e80659f155b6fd5",
+            "executable_sha256": "9e6db9ff90049280ef53e19c2fc80cd1d39b0ce58939fb594664c34f7495893d"
+          },
+          "source_revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+          "model_manifest_sha256": "1dc75fa2c65e1c1c4415ea72947cb1259d4eea0aac7be25148ff440080ddf972",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/phi_worker.py",
+            "sha256": "8fea2e4455b190cd2d324d4ef1b393f0678dac0cc6700608787592835bbbb8ad",
+            "bytes": 7038
+          }
+        },
+        "text": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 68.12265686666666,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 1.1292463683557028,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_text_n30.jsonl",
+                "sha256": "e737299d4aa1c76ad72409b53e604a6568f66a64bd835206a35fa7ee583c3823",
+                "bytes": 11614
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_text_n30.jsonl.summary.json",
+                "sha256": "25100f28e677b330f1c452aeb5b5ad3093238a442e032588d5c100b7c12bf622",
+                "bytes": 387
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_phi4mm_text_n30.jsonl.validation.json",
+                "sha256": "6b6c224680b39f94c01453ea98ea10fa7e2617cd11dfe9f0d58dba319e8d7e07",
+                "bytes": 42819
+              },
+              "mean_worker_latency_ms": 67.1996664,
+              "sample_std_ms": 0.8472247840909178,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_text_n30.jsonl",
+                "sha256": "80f41915d094abcc8bfdedadf63426406276c155674909f6c7db42a7135e43ce",
+                "bytes": 11620
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_text_n30.jsonl.summary.json",
+                "sha256": "de9ad1cf6d682c62d46ddec034496917f0ce86a984df9c5ef2cb89c2239ac6d2",
+                "bytes": 394
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_phi4mm_text_n30.jsonl.validation.json",
+                "sha256": "4ff99d395ce7dc7003daed009c76cf506bd35b5b6cba775e25642faa2e7cbb44",
+                "bytes": 42826
+              },
+              "mean_worker_latency_ms": 68.16139616666666,
+              "sample_std_ms": 0.849160783080041,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_text_n30.jsonl",
+                "sha256": "e0f2fcf603025ec6d81e65aafc1b3485dc0dc7d4c4eb36afc32b844177acd7c0",
+                "bytes": 11625
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_text_n30.jsonl.summary.json",
+                "sha256": "fa2901e33637f95cb5172c4a2eef7ee31c9697504d7f1f961aad53bd7285199d",
+                "bytes": 394
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_phi4mm_text_n30.jsonl.validation.json",
+                "sha256": "4021386135c88b00926cbe923d375048b81be3ff11ea394bf09187b9ec33e889",
+                "bytes": 42433
+              },
+              "mean_worker_latency_ms": 69.00690803333333,
+              "sample_std_ms": 0.8848562131526571,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/phi_env/bin/python",
+            "package_manifest_sha256": "1957d9f1ea937821f99044d480e441426dbad92fbf0f89754e80659f155b6fd5",
+            "executable_sha256": "9e6db9ff90049280ef53e19c2fc80cd1d39b0ce58939fb594664c34f7495893d"
+          },
+          "source_revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+          "model_manifest_sha256": "1dc75fa2c65e1c1c4415ea72947cb1259d4eea0aac7be25148ff440080ddf972",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/phi_worker.py",
+            "sha256": "8fea2e4455b190cd2d324d4ef1b393f0678dac0cc6700608787592835bbbb8ad",
+            "bytes": 7038
+          }
+        }
+      }
+    },
+    "minicpm": {
+      "role": "generalist",
+      "capabilities_verified": [
+        "asr",
+        "image",
+        "ocr",
+        "text"
+      ],
+      "measured_idle_vram_mib": 18392.0,
+      "service_time_ms": {
+        "asr": 777.2589822555556,
+        "image": 221.70457001111112,
+        "ocr": 160.37148515555555,
+        "text": 59.0354357888889
+      },
+      "service_time_sources": {
+        "asr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 777.2589822555556,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 452.8157028106734,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_asr_n30.jsonl",
+                "sha256": "0b89a265615057ab33aebeda10507d0798a12a61f768f9da76522d9836b70203",
+                "bytes": 20127
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_asr_n30.jsonl.summary.json",
+                "sha256": "35d3b18c19354162d636ba76d0c4473d099d5241558b48c3b0f5508fabffc65b",
+                "bytes": 396
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_asr_n30.jsonl.validation.json",
+                "sha256": "c0f3061cb73a5d27aa814d2b1c7df552e3c4e4148b3e2dfd43f26af74408fad5",
+                "bytes": 70197
+              },
+              "mean_worker_latency_ms": 780.5865415666667,
+              "sample_std_ms": 460.8825958480814,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_asr_n30.jsonl",
+                "sha256": "054233bb93e79e9d558ce5cff87f5e5df308e5c80f1ca1f8d1ad8c4cab590547",
+                "bytes": 20131
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_asr_n30.jsonl.summary.json",
+                "sha256": "7944637275a156ea0b35609ca8ca16a955eec02b84663b3a504136e4e6d6263a",
+                "bytes": 397
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_asr_n30.jsonl.validation.json",
+                "sha256": "f95c42f2d70d83c241fb3f71b8d6942b228fbe5fcb965a3cdc2776ac72f6c768",
+                "bytes": 70197
+              },
+              "mean_worker_latency_ms": 775.2993206333333,
+              "sample_std_ms": 456.0635844534218,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_asr_n30.jsonl",
+                "sha256": "91a6c289a144920a6cf5112ebd71f8f76fe934adf07b47dde25aff868e8891a8",
+                "bytes": 20127
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_asr_n30.jsonl.summary.json",
+                "sha256": "46484c1a3ad7c8241bdeb12dac14be791ec929576bf63bf49132a1ecad74baa5",
+                "bytes": 397
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_asr_n30.jsonl.validation.json",
+                "sha256": "de91924d720a63d11a95c331b32c2fc726d3dbc31f6d5953177422d2ef0753c7",
+                "bytes": 70190
+              },
+              "mean_worker_latency_ms": 775.8910845666667,
+              "sample_std_ms": 456.99331598954325,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/minicpm_env/bin/python",
+            "package_manifest_sha256": "9d1fc7297930c0d980bfb36efe85258cfebb388e45fad0c0c3cca877f2e3193a",
+            "executable_sha256": "efcde1208eda4eecb5865ec48c19ae26bd577a7288dce43889549d2573d8d4c9"
+          },
+          "source_revision": "503e754207c94da6bb26850b4469f367c9ea3582",
+          "model_manifest_sha256": "8ae1be4ff75b5232221375dc9e2549153adeb2e3904433f2d76553f24ca3d8ac",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/minicpm_worker.py",
+            "sha256": "2992eef61d51689dfc55bdab8c8059cd9b66605e67e3583d471c13e42d21b0e6",
+            "bytes": 6933
+          }
+        },
+        "image": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 221.70457001111112,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 118.62581631563235,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_image_n30.jsonl",
+                "sha256": "ce0f86ba59564bfb0afa90ab523b303823f2f6aa1274e94a64a78853a1a8b4a3",
+                "bytes": 12048
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_image_n30.jsonl.summary.json",
+                "sha256": "328889c0edfb22d667a36309d1b96fd69352ae31bef2584c19e0d9e6e0d76996",
+                "bytes": 401
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_image_n30.jsonl.validation.json",
+                "sha256": "d1336bcb67f051ab47410f1d4feec941ef78a7b6850f0aa840ed713965d3a3f7",
+                "bytes": 44193
+              },
+              "mean_worker_latency_ms": 221.90216973333332,
+              "sample_std_ms": 119.74083230700982,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_image_n30.jsonl",
+                "sha256": "10573b69f177d654b59cf744ca30db6ba495a57609717798cd30e74c5247225b",
+                "bytes": 12043
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_image_n30.jsonl.summary.json",
+                "sha256": "4dc0d951b3c67bdc9cff6279717d005be91cd034d3eaabdd00bc5acc856fe324",
+                "bytes": 400
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_image_n30.jsonl.validation.json",
+                "sha256": "548458c55688f59a5fbe339929c7ad6f3135db671a419e741611bd4eabdf1005",
+                "bytes": 44188
+              },
+              "mean_worker_latency_ms": 221.25126206666667,
+              "sample_std_ms": 120.21858002235071,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_image_n30.jsonl",
+                "sha256": "db396c0791d7bc1f2132fdb62071439211a1e445540c2159528969c690d7560a",
+                "bytes": 12050
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_image_n30.jsonl.summary.json",
+                "sha256": "56b64343ee659e886120e690149da210a2241fd339a2f2bb9a99bfb186623710",
+                "bytes": 401
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_image_n30.jsonl.validation.json",
+                "sha256": "b4d389b4cf8defda7d2cca16ea258a763be0260de2639c9c32424a7431e1e94c",
+                "bytes": 44193
+              },
+              "mean_worker_latency_ms": 221.96027823333333,
+              "sample_std_ms": 119.98352782907848,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/minicpm_env/bin/python",
+            "package_manifest_sha256": "9d1fc7297930c0d980bfb36efe85258cfebb388e45fad0c0c3cca877f2e3193a",
+            "executable_sha256": "efcde1208eda4eecb5865ec48c19ae26bd577a7288dce43889549d2573d8d4c9"
+          },
+          "source_revision": "503e754207c94da6bb26850b4469f367c9ea3582",
+          "model_manifest_sha256": "8ae1be4ff75b5232221375dc9e2549153adeb2e3904433f2d76553f24ca3d8ac",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/minicpm_worker.py",
+            "sha256": "2992eef61d51689dfc55bdab8c8059cd9b66605e67e3583d471c13e42d21b0e6",
+            "bytes": 6933
+          }
+        },
+        "ocr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 160.37148515555555,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 52.400486497278166,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_ocr_n30.jsonl",
+                "sha256": "6257d20f1cad3053580096c90db6f7c72cddb532678e4b495ba813fe302ad924",
+                "bytes": 11617
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_ocr_n30.jsonl.summary.json",
+                "sha256": "575c037381440c5ee446481a812fecfcc1780c619cc008d6a38a5a21c2d9c115",
+                "bytes": 390
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_ocr_n30.jsonl.validation.json",
+                "sha256": "ac1c49157a58923265c3f93d805bc2d5cb88e4b4c94250cc6624d0b6c187ef30",
+                "bytes": 41117
+              },
+              "mean_worker_latency_ms": 160.1938398,
+              "sample_std_ms": 51.948461885598775,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_ocr_n30.jsonl",
+                "sha256": "93c3720ad79c1f517b0630b9fd93164619fd7628cc723244ef64aa8bc787667f",
+                "bytes": 11615
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_ocr_n30.jsonl.summary.json",
+                "sha256": "7134cf4746b339ac329be0ea133e48e0d45e3c0bf1c337aea33ae756946b6847",
+                "bytes": 397
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_ocr_n30.jsonl.validation.json",
+                "sha256": "41cb0c2da05b0865b7e173c83578b76aba76b64d088664fd0d22c65f9d48bd22",
+                "bytes": 41114
+              },
+              "mean_worker_latency_ms": 159.79688723333334,
+              "sample_std_ms": 53.36861076935959,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_ocr_n30.jsonl",
+                "sha256": "363e5585c0ae11e4ccf66f89558b8a9083ad8c6520f212c334c1cde47c310ade",
+                "bytes": 11616
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_ocr_n30.jsonl.summary.json",
+                "sha256": "d9f575cebe63f6e67471e4246b1d8e293b82dc4e4690e7a7275bec4f3685680b",
+                "bytes": 397
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_ocr_n30.jsonl.validation.json",
+                "sha256": "c0654cf2bf52037383bb8ae823d751e09f58b4e7263cefba16962a0f59cdbac9",
+                "bytes": 41116
+              },
+              "mean_worker_latency_ms": 161.12372843333333,
+              "sample_std_ms": 53.65620510328083,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/minicpm_env/bin/python",
+            "package_manifest_sha256": "9d1fc7297930c0d980bfb36efe85258cfebb388e45fad0c0c3cca877f2e3193a",
+            "executable_sha256": "efcde1208eda4eecb5865ec48c19ae26bd577a7288dce43889549d2573d8d4c9"
+          },
+          "source_revision": "503e754207c94da6bb26850b4469f367c9ea3582",
+          "model_manifest_sha256": "8ae1be4ff75b5232221375dc9e2549153adeb2e3904433f2d76553f24ca3d8ac",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/minicpm_worker.py",
+            "sha256": "2992eef61d51689dfc55bdab8c8059cd9b66605e67e3583d471c13e42d21b0e6",
+            "bytes": 6933
+          }
+        },
+        "text": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 59.0354357888889,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 3.4381131999362364,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_text_n30.jsonl",
+                "sha256": "ec19222711d563d320aab76e1532dfe599fb102da09ae0ceb4d3d09010739eaf",
+                "bytes": 11797
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_text_n30.jsonl.summary.json",
+                "sha256": "89cd049a2763aea68fd0054c22abc129846649471bf3e5297d9a0bfbba9d6bab",
+                "bytes": 396
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_minicpm_text_n30.jsonl.validation.json",
+                "sha256": "4d5753dbfeb610f238045c637d66289e3266a18a47014a693de48fd65c3ea87e",
+                "bytes": 40321
+              },
+              "mean_worker_latency_ms": 59.11766766666667,
+              "sample_std_ms": 3.4967860328474076,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_text_n30.jsonl",
+                "sha256": "04f031eb3fa5e0d6a0076ac0ba12f86076eea4a367d26651145860c0bf68d751",
+                "bytes": 11799
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_text_n30.jsonl.summary.json",
+                "sha256": "2700d6538a480c9de8a530a475fe777ea9512c40b96a2943f66f7fa4564ea759",
+                "bytes": 396
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_minicpm_text_n30.jsonl.validation.json",
+                "sha256": "61a82ffcf7c39185c33fc71996fda71722b07407fd54d3075dad21f0c1ca2e78",
+                "bytes": 40322
+              },
+              "mean_worker_latency_ms": 58.88741503333333,
+              "sample_std_ms": 3.420027830392294,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_text_n30.jsonl",
+                "sha256": "c2b6ff75efb6e5850df19c69a124da88ec36fe4ad59239a11c8cce978d129684",
+                "bytes": 11793
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_text_n30.jsonl.summary.json",
+                "sha256": "4941c5498c38542cc87c666d91c8206e798fdc516694270463fee89ce4e427bd",
+                "bytes": 396
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_minicpm_text_n30.jsonl.validation.json",
+                "sha256": "45b6f9f6f60170a43f4e00458d1abf258a1f94a4c76b8c6eb3edbb025908876e",
+                "bytes": 40315
+              },
+              "mean_worker_latency_ms": 59.10122466666667,
+              "sample_std_ms": 3.5098206785614185,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/minicpm_env/bin/python",
+            "package_manifest_sha256": "9d1fc7297930c0d980bfb36efe85258cfebb388e45fad0c0c3cca877f2e3193a",
+            "executable_sha256": "efcde1208eda4eecb5865ec48c19ae26bd577a7288dce43889549d2573d8d4c9"
+          },
+          "source_revision": "503e754207c94da6bb26850b4469f367c9ea3582",
+          "model_manifest_sha256": "8ae1be4ff75b5232221375dc9e2549153adeb2e3904433f2d76553f24ca3d8ac",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/joint_deploy/minicpm_worker.py",
+            "sha256": "2992eef61d51689dfc55bdab8c8059cd9b66605e67e3583d471c13e42d21b0e6",
+            "bytes": 6933
+          }
+        }
+      }
+    },
+    "distilbert": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "text"
+      ],
+      "measured_idle_vram_mib": 750.0,
+      "service_time_ms": {
+        "text": 3.7693092222222226
+      },
+      "service_time_sources": {
+        "text": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 3.7693092222222226,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_distilbert_text_n30.jsonl.summary.json",
+                "sha256": "40d31dbbf243a0c5237b30fd1c745b24d38a32be72c3ba2718830090ff7642cb",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 3.882281633333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_distilbert_text_n30.jsonl.summary.json",
+                "sha256": "ee018d421ec2aad4aee46d9f755602bab32b41c3863351e31671346c5f1f9db0",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 3.7786146,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_distilbert_text_n30.jsonl.summary.json",
+                "sha256": "83461b5a27eb12a61cf5041209dcfd901b2ac213fd9c92941c8cf833ae7068ee",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 3.6470314333333334,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "resnet50": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "image"
+      ],
+      "measured_idle_vram_mib": 604.0,
+      "service_time_ms": {
+        "image": 5.4978217888888885
+      },
+      "service_time_sources": {
+        "image": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 5.4978217888888885,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_resnet50_image_n30.jsonl.summary.json",
+                "sha256": "fffd76adf33e2dbee1d7c9538a613b24fd3e16f8a93cb191fbb38fba1a702fac",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.5884934,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_resnet50_image_n30.jsonl.summary.json",
+                "sha256": "e925ebbdba417725772c81dc796190be9696a5857af54b1a2c6c729a36c9f30c",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.626752633333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_resnet50_image_n30.jsonl.summary.json",
+                "sha256": "19ea81d71a78570aee3b5cc291d7cd03d4bf0a7c3776f5e88fc39f6e36e0327f",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.278219333333333,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "convnext_tiny": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "image"
+      ],
+      "measured_idle_vram_mib": 610.0,
+      "service_time_ms": {
+        "image": 5.847736
+      },
+      "service_time_sources": {
+        "image": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 5.847736,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 1.52739933187434,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_convnext_tiny_image_n30.jsonl",
+                "sha256": "fe78d0dcbc4c76b6f163a76b0b10a01f61e806e9f7cfaee214837ab4ff9a5a19",
+                "bytes": 14161
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_convnext_tiny_image_n30.jsonl.summary.json",
+                "sha256": "1aa005cb0d1b3e1d258af9387cabc414c6048f98531df80bf5330bdf201c8e92",
+                "bytes": 408
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_convnext_tiny_image_n30.jsonl.validation.json",
+                "sha256": "862b80197b0649b9d6c559509788043a05653a0b995bb4f645b5b802f67bfc6e",
+                "bytes": 42719
+              },
+              "mean_worker_latency_ms": 5.420581133333333,
+              "sample_std_ms": 1.0364765401357832,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_convnext_tiny_image_n30.jsonl",
+                "sha256": "f5e6a637a6ebe13b39bc4926de49fbf3f1f28d1f4e5ad8d95960c3b7648962e7",
+                "bytes": 14164
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_convnext_tiny_image_n30.jsonl.summary.json",
+                "sha256": "a1b15442b304f2914ff2363cb0d011d7a98ae200da02d02c15c417815ed6fce2",
+                "bytes": 401
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_convnext_tiny_image_n30.jsonl.validation.json",
+                "sha256": "7022dcf0af4be0cfa01cc266c59d781132bdb47d3901d7c7dbf174d33011800b",
+                "bytes": 42722
+              },
+              "mean_worker_latency_ms": 7.5370569,
+              "sample_std_ms": 1.0367952206651816,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_convnext_tiny_image_n30.jsonl",
+                "sha256": "f5d9d9e0d6970bd72c415d7497072c948ba53f3e5b8264b3a082fb0e42c90535",
+                "bytes": 14151
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_convnext_tiny_image_n30.jsonl.summary.json",
+                "sha256": "1a1b119cff9fcdaca2591e79161e8f4935503ead239495889a1aeefd9028dabf",
+                "bytes": 408
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_convnext_tiny_image_n30.jsonl.validation.json",
+                "sha256": "74540d371d9100e54185e0ed6ee5c839fe1cfd6113698200ec4cddb821a24dec",
+                "bytes": 42710
+              },
+              "mean_worker_latency_ms": 4.585569966666666,
+              "sample_std_ms": 0.47069065668935267,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+            "package_manifest_sha256": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+            "executable_sha256": "20164e987a70608b2a59678025d4fb6578ce6a1e687bf95fc533f54029af1230"
+          },
+          "source_revision": "sha256:983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+          "model_manifest_sha256": "fe90886a8dcaea73a92aa9a9c072aac653cee9f0700e8ec659a54b9260647d40",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_convnext_tiny.py",
+            "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79",
+            "bytes": 25
+          }
+        }
+      }
+    },
+    "paddleocr": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "ocr"
+      ],
+      "measured_idle_vram_mib": 568.0,
+      "service_time_ms": {
+        "ocr": 6.0675248999999996
+      },
+      "service_time_sources": {
+        "ocr": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 6.0675248999999996,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_paddleocr_ocr_n30.jsonl.summary.json",
+                "sha256": "dd280180768a6e687623a3e6855b00aad526585c9e705e98136bf69d0fbd2f04",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 6.050120266666666,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_paddleocr_ocr_n30.jsonl.summary.json",
+                "sha256": "dec5548ad7ee583a5252b064b2dd17935fbaea4ac2503d4d30510710a62fdeb6",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 5.972571233333333,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_paddleocr_ocr_n30.jsonl.summary.json",
+                "sha256": "f0fe368fefdc0918f783a3b81ed4311d3205a53d5b128f902c7810c185df7265",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 6.1798832,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "paddleocr_vl": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "ocr"
+      ],
+      "measured_idle_vram_mib": 2308.0,
+      "service_time_ms": {
+        "ocr": 85.5324064
+      },
+      "service_time_sources": {
+        "ocr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 85.5324064,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 31.030276518634604,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_paddleocr_vl_ocr_n30.jsonl",
+                "sha256": "b60a6d9042cbf22242169f480988dfabf5a849a31466f8b4ce1da25e33961166",
+                "bytes": 13849
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_paddleocr_vl_ocr_n30.jsonl.summary.json",
+                "sha256": "ee7cd88b9ce0bf996b7c6cc3586167b2f184f5c9357b5e667afcbe8ea40bb323",
+                "bytes": 405
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_paddleocr_vl_ocr_n30.jsonl.validation.json",
+                "sha256": "83cc9fdd9a606a6737687cd3b58429dd6ef7a2ed547fb2bf6899e482a2ea7562",
+                "bytes": 41808
+              },
+              "mean_worker_latency_ms": 84.48619996666666,
+              "sample_std_ms": 30.95940235410619,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_paddleocr_vl_ocr_n30.jsonl",
+                "sha256": "dcdce5d83c73706587a58369c8f4dc3f787884ea9f5cb621aa4295cb876d8fca",
+                "bytes": 13845
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_paddleocr_vl_ocr_n30.jsonl.summary.json",
+                "sha256": "159cf5327c269095a7075b268d69516219dc177ea4406abff0c7734076b25186",
+                "bytes": 398
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_paddleocr_vl_ocr_n30.jsonl.validation.json",
+                "sha256": "901086c7dcd1a7010480e174e824e4a98d2e8f4140e7d614f486cb189053de80",
+                "bytes": 41803
+              },
+              "mean_worker_latency_ms": 84.9587156,
+              "sample_std_ms": 31.14910870485248,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_paddleocr_vl_ocr_n30.jsonl",
+                "sha256": "9984673d0e54a5546a8d057b2103cfa360b47bd5f551485808711a4c66be6ef0",
+                "bytes": 13850
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_paddleocr_vl_ocr_n30.jsonl.summary.json",
+                "sha256": "0564a49c0d4a39a98183b4a612e417a3389b7a862d0b51e9356d7f6c076a2858",
+                "bytes": 405
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_paddleocr_vl_ocr_n30.jsonl.validation.json",
+                "sha256": "4bfb9f55b7103ec006ed458d52df5536134f00d97f251aa26edff9b3abcdea0f",
+                "bytes": 41813
+              },
+              "mean_worker_latency_ms": 87.15230363333333,
+              "sample_std_ms": 31.970309437909346,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+            "package_manifest_sha256": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+            "executable_sha256": "20164e987a70608b2a59678025d4fb6578ce6a1e687bf95fc533f54029af1230"
+          },
+          "source_revision": "2a4195faa5e7914c12f2fc601d72c81caf8d2da5",
+          "model_manifest_sha256": "7d2e1159ebc7d0530ac726fa6c89ec77e317ddaa918894d31f8a0b8b0486740d",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_paddleocr_vl.py",
+            "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79",
+            "bytes": 25
+          }
+        }
+      }
+    },
+    "whisper-small": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "asr",
+        "lid"
+      ],
+      "measured_idle_vram_mib": 1616.0,
+      "service_time_ms": {
+        "asr": 190.16587112222223,
+        "lid": 27.084134877777778
+      },
+      "service_time_sources": {
+        "asr": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 190.16587112222223,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "ef34fd21a601c01e2a1944e074566a64cf56e408a661069186d7d52b38ed565d",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 188.41047593333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "a90ae49b29e84da6acfa3bf383108cd113bd110d6bb30d2efe4a66da47014444",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 189.05162276666667,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "f14f2c5519d0cb00f5a028bce47661e402fd5e1814170d60fd146f8f9640b700",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 193.03551466666667,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        },
+        "lid": {
+          "kind": "existing_frozen_stage1",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 27.084134877777778,
+          "source": {
+            "aggregation": "sample-count-weighted mean",
+            "total_samples": 90,
+            "summaries": [
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_current/active_single_whisper_lid_n30.jsonl.summary.json",
+                "sha256": "df2aea0b3f3fb6678aa0015aa5059f2af45ba02ec0491475a035619b6ac68dc2",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 26.350642733333334,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r2/active_single_whisper_lid_n30.jsonl.summary.json",
+                "sha256": "abd79a4796e2e25488b8d94e26c682a2298579dfbbaa502dcd8443ed4b0279bc",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 27.670926566666665,
+                "protocol": "active_single_profile_v1"
+              },
+              {
+                "path": "/root/autodl-tmp/generalist-specialist/benchmark/results/placement/active_single_v3_r3/active_single_whisper_lid_n30.jsonl.summary.json",
+                "sha256": "de190bdfd25f1fe442b27663d4ffb5780dfef2711ddeeaabd8fa05680b8ee354",
+                "field": "mean_worker_latency_ms",
+                "target_count": 30,
+                "mean_worker_latency_ms": 27.23083533333333,
+                "protocol": "active_single_profile_v1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "whisper_turbo": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "asr",
+        "lid"
+      ],
+      "measured_idle_vram_mib": 3882.0,
+      "service_time_ms": {
+        "asr": 170.52229172222223,
+        "lid": 83.17856548888889
+      },
+      "service_time_sources": {
+        "asr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 170.52229172222223,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 49.061079058399926,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_whisper_turbo_asr_n30.jsonl",
+                "sha256": "cf6c398f94c455851e0fcc9dcdcc24fdda53da0c15dca00c986b6cc5bcea6db6",
+                "bytes": 21085
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_whisper_turbo_asr_n30.jsonl.summary.json",
+                "sha256": "af80b6f4e5360a5ba212358207abaa733f825c0aa634b43a4b1925510c1b5628",
+                "bytes": 409
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_whisper_turbo_asr_n30.jsonl.validation.json",
+                "sha256": "3031691f80db3205c36baecb8e1dc9f497d4e4b7246a76a89dced72c7a1a8ce8",
+                "bytes": 63359
+              },
+              "mean_worker_latency_ms": 169.34670013333334,
+              "sample_std_ms": 48.67621875506271,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_whisper_turbo_asr_n30.jsonl",
+                "sha256": "8a32e0c2d051f067cbfc139cd9a98106d7e67327fc90185fb2d243e1468c2b34",
+                "bytes": 21090
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_whisper_turbo_asr_n30.jsonl.summary.json",
+                "sha256": "75dd8a6de3adb7acf343f85721932674242264782b7ea10a8c67e9d920d0e372",
+                "bytes": 409
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_whisper_turbo_asr_n30.jsonl.validation.json",
+                "sha256": "20a48841e98fed88d751c2dcc3cdddcac963517d16d21c883f692d89d0ee8a55",
+                "bytes": 63362
+              },
+              "mean_worker_latency_ms": 170.02390986666666,
+              "sample_std_ms": 50.07483901837423,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_whisper_turbo_asr_n30.jsonl",
+                "sha256": "ac378470aa951519e027d617fb3cd1b4692e85ecf08b1d5f2633e5cff1a71485",
+                "bytes": 21086
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_whisper_turbo_asr_n30.jsonl.summary.json",
+                "sha256": "871294dcafe4506c3ef0e3cce6c71c618bcee1a5d2266c4f47fa54ff2cee10a1",
+                "bytes": 408
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_whisper_turbo_asr_n30.jsonl.validation.json",
+                "sha256": "9764fd96a4db3098a1d45de12b93c5082c6025a9aba27918fcdf158a952ab4e9",
+                "bytes": 63271
+              },
+              "mean_worker_latency_ms": 172.19626516666668,
+              "sample_std_ms": 50.05515457477137,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+            "package_manifest_sha256": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+            "executable_sha256": "20164e987a70608b2a59678025d4fb6578ce6a1e687bf95fc533f54029af1230"
+          },
+          "source_revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+          "model_manifest_sha256": "d25db1ff721e912354dbe3eb5d32efba0acdea59b66a2ec4cdc127b2ff8a4dbe",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_whisper_turbo.py",
+            "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79",
+            "bytes": 25
+          }
+        },
+        "lid": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 83.17856548888889,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 0.9776321795135713,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_whisper_turbo_lid_n30.jsonl",
+                "sha256": "5c9c523635d05c3c6a3c2bc595c669c91d049d37e07dcab1de3bc2c84069604e",
+                "bytes": 66435
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_whisper_turbo_lid_n30.jsonl.summary.json",
+                "sha256": "be19b388a45d5453eb7dbc9174852b503c20e62a855f2a13a77aacc777f5e885",
+                "bytes": 406
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_whisper_turbo_lid_n30.jsonl.validation.json",
+                "sha256": "0cdb983c62b5ab7496a6af2cf5d77484c3b6f521ab0640bafc3b6d0b85bc9f32",
+                "bytes": 132787
+              },
+              "mean_worker_latency_ms": 82.95587683333333,
+              "sample_std_ms": 0.7491623224347296,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_whisper_turbo_lid_n30.jsonl",
+                "sha256": "c1b817c55a425221291ca7ea7770e3fb31fad6c32caf16c9acca1a524b619f02",
+                "bytes": 66436
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_whisper_turbo_lid_n30.jsonl.summary.json",
+                "sha256": "e324d4f2e713d712dd91e4aa08e30508c5fbb1a467cbe02cc97518b20a6e407d",
+                "bytes": 406
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_whisper_turbo_lid_n30.jsonl.validation.json",
+                "sha256": "99341483db95e4de54129e8b5f24cd7ca008a3d2769fee6c067479c87b4d2b73",
+                "bytes": 132876
+              },
+              "mean_worker_latency_ms": 83.59245393333333,
+              "sample_std_ms": 1.2038985547572887,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_whisper_turbo_lid_n30.jsonl",
+                "sha256": "74df346fc47dc1cdd65acb0551edfc9115357052d970bcd27ef58daccb72c83f",
+                "bytes": 66438
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_whisper_turbo_lid_n30.jsonl.summary.json",
+                "sha256": "86bc52eed9423ac26c121628df273eaaf12b17155ce7ba06259763e823d7612f",
+                "bytes": 398
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_whisper_turbo_lid_n30.jsonl.validation.json",
+                "sha256": "42681fefc2accb362b8e218cf5d4d174d4fbdfcd733af2ac5030147c7c063657",
+                "bytes": 132879
+              },
+              "mean_worker_latency_ms": 82.9873657,
+              "sample_std_ms": 0.8101012622735817,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+            "package_manifest_sha256": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+            "executable_sha256": "20164e987a70608b2a59678025d4fb6578ce6a1e687bf95fc533f54029af1230"
+          },
+          "source_revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+          "model_manifest_sha256": "d25db1ff721e912354dbe3eb5d32efba0acdea59b66a2ec4cdc127b2ff8a4dbe",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_whisper_turbo.py",
+            "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79",
+            "bytes": 25
+          }
+        }
+      }
+    },
+    "distil_whisper": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "asr"
+      ],
+      "measured_idle_vram_mib": 3672.0,
+      "service_time_ms": {
+        "asr": 146.22366614444445
+      },
+      "service_time_sources": {
+        "asr": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 146.22366614444445,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 34.575424423834924,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_distil_whisper_asr_n30.jsonl",
+                "sha256": "0dcbe4b338f6b5c00c97fa794045fd53b1e66c0b6eb579fc106467b871240dd2",
+                "bytes": 21159
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_distil_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "304e323287eca0b3905d086f905b51d77a959ee0d9b57c0bb8258b3c6b4a475e",
+                "bytes": 411
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_distil_whisper_asr_n30.jsonl.validation.json",
+                "sha256": "a82a223d145ecb1f726322a86ec4336fdb8580d6730f19a74593ed8986038767",
+                "bytes": 63397
+              },
+              "mean_worker_latency_ms": 145.12656393333333,
+              "sample_std_ms": 34.36716115858991,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_distil_whisper_asr_n30.jsonl",
+                "sha256": "d8c10fbef7ece6872a7df4235a59e73c3472285cfe915cad82a665977a9a716d",
+                "bytes": 21161
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_distil_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "a14bc057aa24f749b8db55a3e4c7bf5daef338570bc73bdb0dbc303929259974",
+                "bytes": 404
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_distil_whisper_asr_n30.jsonl.validation.json",
+                "sha256": "6452698dc37b820562c071d20344067226e0ecd3493c34e1ce5ed4bb3ace2acb",
+                "bytes": 63306
+              },
+              "mean_worker_latency_ms": 144.7317558,
+              "sample_std_ms": 33.97909350518005,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_distil_whisper_asr_n30.jsonl",
+                "sha256": "e8c1689c5a5b77ce92925dcbf84bab66c2464dd1072495eadb24e30e4d438a53",
+                "bytes": 21156
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_distil_whisper_asr_n30.jsonl.summary.json",
+                "sha256": "5f35789ce2e07d9984d18a3b3b0e66e67a0749ed85f5d77c21cdb622d730427e",
+                "bytes": 402
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_distil_whisper_asr_n30.jsonl.validation.json",
+                "sha256": "a33ad5b9797ff23af5b04f4982108c6ce340165974ff0a16b5a2e69e4d0aa7bb",
+                "bytes": 63303
+              },
+              "mean_worker_latency_ms": 148.8126787,
+              "sample_std_ms": 36.36843503353142,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+            "package_manifest_sha256": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+            "executable_sha256": "20164e987a70608b2a59678025d4fb6578ce6a1e687bf95fc533f54029af1230"
+          },
+          "source_revision": "8031d2e6ce6631b7fc45629dddfc00271116d981",
+          "model_manifest_sha256": "43e217389760fcd1dc5a31cdb35cf775ca436d9aef6a5a9dde59e5c6fc920d9a",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_distil_whisper.py",
+            "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79",
+            "bytes": 25
+          }
+        }
+      }
+    },
+    "roberta_sst2": {
+      "role": "specialist",
+      "capabilities_verified": [
+        "text"
+      ],
+      "measured_idle_vram_mib": 988.0,
+      "service_time_ms": {
+        "text": 5.506413722222223
+      },
+      "service_time_sources": {
+        "text": {
+          "kind": "new_real_standalone_measurement",
+          "protocol": "active_single_profile_v1",
+          "value_ms": 5.506413722222223,
+          "measurement_count": 90,
+          "aggregation": "sample-count-weighted mean",
+          "sample_std_ms": 8.56035461006011,
+          "repetitions": [
+            {
+              "repetition": 1,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_roberta_sst2_text_n30.jsonl",
+                "sha256": "b402a607886b032dbc0bd160d622b3b2583f0d5d48a1a79f74199b3d1ae2a4d8",
+                "bytes": 12645
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_roberta_sst2_text_n30.jsonl.summary.json",
+                "sha256": "e5f1fad97a8979d06b65e0876f0482f8a7e6fca4287639f3e9bab8da603bef7e",
+                "bytes": 397
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r1/active_single_roberta_sst2_text_n30.jsonl.validation.json",
+                "sha256": "0c4cb7017c131d4e341f60ff2a2bac58c352d93f3b97ccf43dbeea875d9bfe12",
+                "bytes": 39048
+              },
+              "mean_worker_latency_ms": 5.6306297,
+              "sample_std_ms": 8.719603567917286,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 2,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_roberta_sst2_text_n30.jsonl",
+                "sha256": "dd26c574834a8a3ef4329f4246eb83349870b897f5da6e5b904fd146a6866233",
+                "bytes": 12647
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_roberta_sst2_text_n30.jsonl.summary.json",
+                "sha256": "2cff6eb8346b6afc397dbf1cd5e8eaec3b8d46014490ccaf9f5c1b80ea99b378",
+                "bytes": 397
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r2/active_single_roberta_sst2_text_n30.jsonl.validation.json",
+                "sha256": "7ad67b0086b59eaaab1f52b6afb7a5e8a6b507dbab1c9873894f8348624f68f7",
+                "bytes": 39051
+              },
+              "mean_worker_latency_ms": 5.4653113,
+              "sample_std_ms": 8.672191475904267,
+              "measurement_count": 30
+            },
+            {
+              "repetition": 3,
+              "raw": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_roberta_sst2_text_n30.jsonl",
+                "sha256": "423713b437d1aa3c03bff0aa8568af3eb96ef8fef15da576370d0b5c25690bed",
+                "bytes": 12643
+              },
+              "summary": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_roberta_sst2_text_n30.jsonl.summary.json",
+                "sha256": "b01ab74945b34bd103b6e924d1d41297fe33b3e8fde37af0a5936951e0fab3fe",
+                "bytes": 406
+              },
+              "validation": {
+                "path": "/root/autodl-tmp/generalist-specialist/results/candidate_pool_v2_service_demand/raw_measurements/r3/active_single_roberta_sst2_text_n30.jsonl.validation.json",
+                "sha256": "ca68a065657013be92e6cb54b41bfc436a681ac3d58177e3af4a52be20990189",
+                "bytes": 39045
+              },
+              "mean_worker_latency_ms": 5.4233001666666665,
+              "sample_std_ms": 8.580765513418601,
+              "measurement_count": 30
+            }
+          ],
+          "environment": {
+            "python": "/root/autodl-tmp/generalist-specialist/envs/specialist_env/bin/python",
+            "package_manifest_sha256": "e7a5f16d5a9463a978ba7007981085b0abd8d553e74b4d21e329a542e43d0c86",
+            "executable_sha256": "20164e987a70608b2a59678025d4fb6578ce6a1e687bf95fc533f54029af1230"
+          },
+          "source_revision": "84ee248b91053ef5d0c748bbac4edfba1cf89584",
+          "model_manifest_sha256": "c644823a975f07b450e78383f4a87402d804c1c5c3a278da0be25d9f3713d539",
+          "adapter": {
+            "path": "/root/autodl-tmp/generalist-specialist/candidate_pool_audit/worker_roberta_sst2.py",
+            "sha256": "c32bc1fdabebb67600d67495232b6f783b45b4c658ded2cf3672b89ed6db3d79",
+            "bytes": 25
+          }
+        }
+      }
+    }
+  },
+  "existing_service_demands_modified": 0,
+  "new_paths_measured": 14,
+  "no_synthetic_fallback": true,
+  "real_multi_replica_workers_started": 0
+}

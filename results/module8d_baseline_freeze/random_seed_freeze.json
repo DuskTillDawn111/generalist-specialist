@@ -1,0 +1,24 @@
+{
+  "random_seeds": [
+    1103,
+    2207,
+    47
+  ],
+  "source": {
+    "path": "/root/autodl-tmp/generalist-specialist/deployment_search/multiworkload.py",
+    "sha256": "d7151b7680178322f44445839d1b27820e9b6cb6be64dea14b65e13151d7a153"
+  },
+  "historical_random_policy": {
+    "B1_seed_1103": 1103,
+    "B1_seed_2207": 2207
+  },
+  "third_seed_origin": "47 from user example; frozen before any new real baseline results",
+  "project_has_historical_two_seed_campaign_not_three_seed_global_policy": true,
+  "RNG": "Python random.Random; new RNG initialized to this seed for each workload/run",
+  "measurement_random_seeds_are_separate": [
+    7101,
+    7202,
+    7303
+  ],
+  "additional_random_seeds_allowed": false
+}

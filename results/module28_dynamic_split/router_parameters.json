@@ -1,0 +1,25 @@
+{
+  "G_worker": "qwen#0",
+  "S_worker": "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e#0",
+  "target": "lid",
+  "S_lower_by_task_ms": {
+    "lid": 65.31921059999999,
+    "asr": 169.22661
+  },
+  "G_upper_by_task_ms": {
+    "lid": 505.6366968,
+    "visual_qa": 691.1807333999999
+  },
+  "G_service_ms": 505.6366968,
+  "S_inflation_per_pending_ms": 9.574873183869613,
+  "background_cost_ms": 99.68604101585545,
+  "G_max_target_inflight": 1,
+  "G_token_rate_rps": 0.5750000000000001,
+  "cooldown_seconds": 0.5056366968,
+  "entry_margin_ms": 65.31921059999999,
+  "exit_margin_ms": 32.659605299999996,
+  "ewma_alpha": 0.1,
+  "prediction_error_ratio": 1.5,
+  "fallback_seconds": 30.0,
+  "S_service_alarm_ms": 118.06190725244267
+}

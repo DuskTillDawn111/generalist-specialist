@@ -1,0 +1,20 @@
+{
+  "at_unix_ns": 1791625423343666757,
+  "failed_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/pressure_capacity_failure/experiment_manifest.json",
+    "sha256": "bd3bd7a46c1f215a227daadebea9860fcc8d90341e7d29c20aaac8b27ac7899a",
+    "bytes": 471982
+  },
+  "failed_raw": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32_heavy_specialist/raw_runs/B_G.json",
+    "sha256": "ae81390db5cb27afc9f0ffe787cf1f461ebe10bb2d58f1e06ff58a2d0b6fc816",
+    "bytes": 1770457
+  },
+  "reason": "One pre-frozen pressure-load adjustment after S-only service expansion and incomplete drain at 1.68QPS; keep all failed evidence, never use U",
+  "old_G_probe_qps": 0.6,
+  "new_G_probe_qps": 0.2,
+  "G_probe_seconds": 120,
+  "formal_windows_started": 0,
+  "U_used_for_selection": false,
+  "settings_models_backgrounds_unchanged": true
+}

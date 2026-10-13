@@ -1,0 +1,8 @@
+{
+  "at_unix_ns": 1791632368674813737,
+  "before_GPU": true,
+  "previous": "p95 duration squared used as expected mean queue cost (upper-risk feasibility diagnostic, no candidate states)",
+  "current": "mean risk uses empirical second moment E[D\u00b2] with 1.5 guard; p95 remains execution risk and exposure admission guard",
+  "reason": "Expected future Poisson arrivals accumulate lambda*E[D\u00b2]/2 wait; do not substitute p95\u00b2 as the mean moment. This is a CPU pre-freeze model definition choice, not an executed counterfactual or a post-GPU threshold adjustment.",
+  "prior_draft_retained": "results/module32b_vqa_aware_routing/cpu_draft_variants/v1_tail_squared_upper_risk"
+}

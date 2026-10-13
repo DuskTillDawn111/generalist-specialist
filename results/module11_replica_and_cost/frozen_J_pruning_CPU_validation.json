@@ -1,0 +1,271 @@
+{
+  "passed": true,
+  "new_GPU_runs": 0,
+  "case": {
+    "status": "FROZEN_ROUTER_GLOBAL_BEST_CERTIFIED",
+    "best": {
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "frozen_solver": {
+        "status": "SOLVED",
+        "converged": true,
+        "evaluation": {
+          "D": {
+            "distilbert": 0.004064790066415002,
+            "paddleocr": 0.08504228360111765,
+            "phi4mm": 0.11628889697424673,
+            "resnet50": 0.03561053102066462,
+            "whisper-small": 0.1577689358808227
+          },
+          "rho": {
+            "distilbert": 0.004064790066415002,
+            "paddleocr": 0.08504228360111765,
+            "phi4mm": 0.11628889697424673,
+            "resnet50": 0.03561053102066462,
+            "whisper-small": 0.1577689358808227
+          },
+          "z": 0.1577689358808227,
+          "J_seconds": 0.017469800124778355,
+          "domain_valid": true,
+          "Lambda": 25.9228888358584
+        },
+        "operational_certificate": {
+          "status": "PASS",
+          "passed": true,
+          "capacity_residual_decimal": {
+            "distilbert": "-0.79593520993358499730329031840794482",
+            "paddleocr": "-0.714957716398882351661890414722",
+            "phi4mm": "-0.683711103025753277398125755979176",
+            "resnet50": "-0.764389468979335387018102499170702",
+            "whisper-small": "-0.6422310641191772991634665062985948"
+          },
+          "fixed_tolerance_seconds": 1e-08
+        },
+        "routing": {
+          "asr::phi4mm": 0.0,
+          "asr::whisper-small": 0.36538693266205724,
+          "image::resnet50": 6.477207226438948,
+          "lid::whisper-small": 3.25965041648432,
+          "ocr::paddleocr": 14.015976036805,
+          "text::distilbert": 1.0783912453907343,
+          "visual_qa::phi4mm": 0.7262769780773427
+        },
+        "reference_route_is_not_a_GPU_route_replacement": true
+      },
+      "accepted": true,
+      "mathematical_J_seconds": 0.017469800124778355,
+      "J_seconds": 0.017469800124778355
+    },
+    "mathematical_reference": {
+      "deployment": {
+        "convnext_tiny": 0,
+        "distil_whisper": 0,
+        "distilbert": 1,
+        "minicpm": 0,
+        "paddleocr": 1,
+        "phi4mm": 1,
+        "qwen": 0,
+        "resnet50": 1,
+        "roberta_sst2": 0,
+        "whisper-small": 1,
+        "whisper_turbo": 0
+      },
+      "routing": {
+        "asr::phi4mm": 0.0,
+        "asr::whisper-small": 0.36538693266205724,
+        "image::resnet50": 6.477207226438942,
+        "lid::whisper-small": 3.25965041648432,
+        "ocr::paddleocr": 14.015976036805,
+        "text::distilbert": 1.0783912453907343,
+        "visual_qa::phi4mm": 0.7262769780773427
+      },
+      "J_seconds": 0.017469800124778355,
+      "rho": {
+        "distilbert": 0.004064790066415002,
+        "paddleocr": 0.08504228360111765,
+        "phi4mm": 0.11628889697424673,
+        "resnet50": 0.03561053102066458,
+        "whisper-small": 0.1577689358808227
+      },
+      "max_rho": 0.1577689358808227,
+      "D": {
+        "distilbert": 0.004064790066415002,
+        "paddleocr": 0.08504228360111765,
+        "phi4mm": 0.11628889697424673,
+        "resnet50": 0.03561053102066458,
+        "whisper-small": 0.1577689358808227
+      },
+      "safe_memory_mib": 17007.17405495223,
+      "N_G": 1,
+      "certificate": {
+        "status": "PASS",
+        "passed": true,
+        "capacity_residual_decimal": {
+          "distilbert": "-0.79593520993358499730329031840794482",
+          "paddleocr": "-0.714957716398882351661890414722",
+          "phi4mm": "-0.683711103025753277398125755979176",
+          "resnet50": "-0.764389468979335420005033232504033",
+          "whisper-small": "-0.6422310641191772991634665062985948"
+        },
+        "fixed_tolerance_seconds": 1e-08
+      },
+      "upper_bound_source": "MILP_epigraph_feasible_route",
+      "status": "GLOBAL_J_CERTIFIED_CPU_REFERENCE",
+      "global_lower_bound_seconds": 0.017469800124778355,
+      "global_gap_seconds": 0.0,
+      "iterations": 2,
+      "seconds": 0.02280712965875864,
+      "history": [
+        {
+          "iteration": 1,
+          "MILP_lower_bound_seconds": 0.01538314036171971,
+          "best_upper_bound_seconds": 0.017469800124778355,
+          "MILP_primal_epigraph_seconds": 0.01538314036171971,
+          "candidate_deployment": {
+            "convnext_tiny": 0,
+            "distil_whisper": 0,
+            "distilbert": 1,
+            "minicpm": 0,
+            "paddleocr": 1,
+            "phi4mm": 1,
+            "qwen": 0,
+            "resnet50": 1,
+            "roberta_sst2": 0,
+            "whisper-small": 1,
+            "whisper_turbo": 0
+          },
+          "tangent_cuts": 27,
+          "MILP_mip_gap": 0.0
+        }
+      ],
+      "mathematical_scope": "same J objective, rho<=.8, all measured integer counts; CPU only",
+      "frozen_Module9_solver": {
+        "status": "SOLVED",
+        "converged": true,
+        "evaluation": {
+          "D": {
+            "distilbert": 0.004064790066415002,
+            "paddleocr": 0.08504228360111765,
+            "phi4mm": 0.11628889697424673,
+            "resnet50": 0.03561053102066462,
+            "whisper-small": 0.1577689358808227
+          },
+          "rho": {
+            "distilbert": 0.004064790066415002,
+            "paddleocr": 0.08504228360111765,
+            "phi4mm": 0.11628889697424673,
+            "resnet50": 0.03561053102066462,
+            "whisper-small": 0.1577689358808227
+          },
+          "z": 0.1577689358808227,
+          "J_seconds": 0.017469800124778355,
+          "domain_valid": true,
+          "Lambda": 25.9228888358584
+        },
+        "operational_certificate": {
+          "status": "PASS",
+          "passed": true,
+          "capacity_residual_decimal": {
+            "distilbert": "-0.79593520993358499730329031840794482",
+            "paddleocr": "-0.714957716398882351661890414722",
+            "phi4mm": "-0.683711103025753277398125755979176",
+            "resnet50": "-0.764389468979335387018102499170702",
+            "whisper-small": "-0.6422310641191772991634665062985948"
+          },
+          "fixed_tolerance_seconds": 1e-08
+        },
+        "routing": {
+          "asr::phi4mm": 0.0,
+          "asr::whisper-small": 0.36538693266205724,
+          "image::resnet50": 6.477207226438948,
+          "lid::whisper-small": 3.25965041648432,
+          "ocr::paddleocr": 14.015976036805,
+          "text::distilbert": 1.0783912453907343,
+          "visual_qa::phi4mm": 0.7262769780773427
+        },
+        "reference_route_is_not_a_GPU_route_replacement": true
+      }
+    },
+    "visited": [
+      {
+        "deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "frozen_solver": {
+          "status": "SOLVED",
+          "converged": true,
+          "evaluation": {
+            "D": {
+              "distilbert": 0.004064790066415002,
+              "paddleocr": 0.08504228360111765,
+              "phi4mm": 0.11628889697424673,
+              "resnet50": 0.03561053102066462,
+              "whisper-small": 0.1577689358808227
+            },
+            "rho": {
+              "distilbert": 0.004064790066415002,
+              "paddleocr": 0.08504228360111765,
+              "phi4mm": 0.11628889697424673,
+              "resnet50": 0.03561053102066462,
+              "whisper-small": 0.1577689358808227
+            },
+            "z": 0.1577689358808227,
+            "J_seconds": 0.017469800124778355,
+            "domain_valid": true,
+            "Lambda": 25.9228888358584
+          },
+          "operational_certificate": {
+            "status": "PASS",
+            "passed": true,
+            "capacity_residual_decimal": {
+              "distilbert": "-0.79593520993358499730329031840794482",
+              "paddleocr": "-0.714957716398882351661890414722",
+              "phi4mm": "-0.683711103025753277398125755979176",
+              "resnet50": "-0.764389468979335387018102499170702",
+              "whisper-small": "-0.6422310641191772991634665062985948"
+            },
+            "fixed_tolerance_seconds": 1e-08
+          },
+          "routing": {
+            "asr::phi4mm": 0.0,
+            "asr::whisper-small": 0.36538693266205724,
+            "image::resnet50": 6.477207226438948,
+            "lid::whisper-small": 3.25965041648432,
+            "ocr::paddleocr": 14.015976036805,
+            "text::distilbert": 1.0783912453907343,
+            "visual_qa::phi4mm": 0.7262769780773427
+          },
+          "reference_route_is_not_a_GPU_route_replacement": true
+        },
+        "accepted": true,
+        "mathematical_J_seconds": 0.017469800124778355,
+        "J_seconds": 0.017469800124778355
+      }
+    ],
+    "remaining_global_lower_bound_seconds": 0.017469800124778355,
+    "remaining_gap_seconds": 0.0,
+    "seconds": 0.02680665347725153
+  },
+  "semantics": "Only original frozen solver routes counted. Mathematical bounds prune unvisited deployment identities; rejected routes never repaired."
+}

@@ -1,0 +1,9 @@
+{
+  "reason": "Paddle native environment has no torch; initial copied profiling wrapper assumed torch",
+  "repair": "existing Paddle synchronize/CUDA13 profiler controls and installed NVTX library; no packages/stack/worker source changes",
+  "failed_model_handler_measurements": 0,
+  "failed_profile_capture_measurements": 0,
+  "completed_seven_path_profiles_reused_unchanged": true,
+  "added_read_only_current_context_and_default_stream_priority_probe": true,
+  "new_pair_runs": 0
+}

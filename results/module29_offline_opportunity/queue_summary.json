@@ -1,0 +1,109 @@
+{
+  "definition": "S host-enqueued requests without successful reader response, not waiting queue",
+  "formal_seconds": 600.0,
+  "peak_S_unfinished": 39,
+  "S_unfinished_at_600": 32,
+  "time_weighted_ranges": [
+    {
+      "range": "0",
+      "seconds": 63.307828046999894,
+      "fraction": 0.10551304674499982
+    },
+    {
+      "range": "1-4",
+      "seconds": 235.47980474600107,
+      "fraction": 0.3924663412433351
+    },
+    {
+      "range": "5-9",
+      "seconds": 120.08956362900011,
+      "fraction": 0.2001492727150002
+    },
+    {
+      "range": "10-19",
+      "seconds": 136.06545115400033,
+      "fraction": 0.22677575192333388
+    },
+    {
+      "range": "20-29",
+      "seconds": 42.29917818800005,
+      "fraction": 0.07049863031333342
+    },
+    {
+      "range": ">=30",
+      "seconds": 2.758174236,
+      "fraction": 0.00459695706
+    }
+  ],
+  "time_weighted_quantiles": {
+    "P50": 5,
+    "P90": 18,
+    "P95": 22,
+    "P99": 28
+  },
+  "arrival_event_weighted_quantiles": {
+    "P50": 5.0,
+    "P90": 18.0,
+    "P95": 22.0,
+    "P99": 27.9399999999996
+  },
+  "event_sampling": "7607 planned arrival events across6tasks, before current enqueue; distinct from dwell-time-weighted distribution",
+  "high_queue_display_thresholds_only": {
+    "ge10_seconds": 181.12280357800006,
+    "ge10_intervals": 237,
+    "ge10_longest_s": 22.959610076999997,
+    "ge20_seconds": 45.05735242400001,
+    "ge20_intervals": 82,
+    "ge20_longest_s": 14.182579173999999
+  },
+  "original_system_tail": {
+    "slope_rps": 0.12014641560411113,
+    "growth_requests": 12.7758639712,
+    "increasing_fraction": 0.75,
+    "bins": [
+      {
+        "offset_seconds": 480.0,
+        "mean_backlog_requests": 2.6307469979,
+        "end_backlog_requests": 1,
+        "mean_service_demand_backlog": 0.21236147381439535,
+        "end_service_demand_backlog": 0.06933321589999977
+      },
+      {
+        "offset_seconds": 510.0,
+        "mean_backlog_requests": 3.2885872806,
+        "end_backlog_requests": 4,
+        "mean_service_demand_backlog": 0.2723982108728699,
+        "end_service_demand_backlog": 0.27733286359999965
+      },
+      {
+        "offset_seconds": 540.0,
+        "mean_backlog_requests": 2.5434649517,
+        "end_backlog_requests": 5,
+        "mean_service_demand_backlog": 0.20908974054380539,
+        "end_service_demand_backlog": 0.3466660794999994
+      },
+      {
+        "offset_seconds": 570.0,
+        "mean_backlog_requests": 13.780784019433334,
+        "end_backlog_requests": 0,
+        "mean_service_demand_backlog": 1.0706615286852754,
+        "end_service_demand_backlog": 0.0
+      },
+      {
+        "offset_seconds": 600.0,
+        "mean_backlog_requests": 15.4066109691,
+        "end_backlog_requests": 32,
+        "mean_service_demand_backlog": 1.191003858529997,
+        "end_service_demand_backlog": 2.5045329726111096
+      }
+    ],
+    "method": "OLS on exact30s mean submitted unfinished counts over final150s; unchanged original classifier"
+  },
+  "S_only_submitted_tail": {
+    "slope_rps": 0.119282399714,
+    "growth_requests": 12.7336667537,
+    "increasing_fraction": 0.75
+  },
+  "original_state_reproduced": "unstable",
+  "display_bins_are_not_routing_thresholds": true
+}

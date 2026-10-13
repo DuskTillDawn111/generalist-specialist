@@ -1,0 +1,34 @@
+{
+  "predictions": "Saved Module 2D primary LODO predictions only; no fitting, recalibration, or use of Module 2E predictions.",
+  "variants": {
+    "A": "A_standalone",
+    "B": "B_gbt_log_ratio",
+    "C_GBT": "C_gbt_log_ratio"
+  },
+  "workload": "Exact per-task target rates, with absent/zero tasks normalized to zero. Never group on total rate or own-model u alone.",
+  "protocol": "Exact source metadata except deployed worker membership; exact durations, limits, arrival law, clocks, cohort, and priming policy. Shared worker implementations must match.",
+  "worker_membership_exception": "Workers added/removed by deployment are the treatment, not a protocol change; only allowed when every shared worker definition is identical. No exception for harness, task-pool, device, environment or duration changes.",
+  "stability": "Configuration-level within a protocol: strict requires ALL observed repetitions steady; extended requires ALL steady/recoverable. Any unstable repetition excludes the configuration, without deleting that repetition.",
+  "repetitions": "Pair candidates on the exact seed AND initial-arrival-phase block; require >=2 common blocks. Aggregate per-run objectives equally, retaining sample std and per-block diagnostics.",
+  "minimum_common_repetition_blocks": 2,
+  "true_mean": "For each run sum(lambda_k * measured task-aggregate mean E2E_k)/sum(lambda), then mean across common blocks.",
+  "true_tail": "For each run sum(lambda_k * measured task-aggregate P95 E2E_k)/sum(lambda), then mean across common blocks. This is neither system P95 nor P95 pooled across repetitions.",
+  "predicted_mean": "Lhat_k=sum_m (routing_rps[k,m]/lambda_k)*OOF_path_mean[k,m]; use the identical workload weighting for Jhat_mean.",
+  "predicted_tail": null,
+  "tail_analysis": "Available-data baseline only: evaluate saved MEAN-score ordering against observed tail objectives, explicitly a mean-score proxy, never a P95 prediction.",
+  "ties": "Exact numeric score order, configuration-ID secondary ordering independent of labels. Report ties and their regret range. Kendall tau-b handles tied ranks.",
+  "top2_recall": "Overlap of deterministic predicted Top-2 and true Top-2 divided by 2.",
+  "shortlist_coverage": "Whether a true minimum lies in predicted Top-K; saturated K>=candidate count is marked trivial and excluded from nontrivial macro coverage.",
+  "sufficiency": {
+    "min_cross_deployment_groups": 3,
+    "min_distinct_deployments": 3,
+    "min_nontrivial_top2_cross_deployment_groups": 2,
+    "rationale": "Minimum breadth heuristic, not a statistical power claim. Repetitions, strict/extended views and multiple variants never count as independent workload groups."
+  },
+  "sufficient_gate": {
+    "PASS": "C mean Kendall/Spearman >=.6, every tau positive, mean regret<=.05, worst<=.15, nontrivial Top-2 coverage>=.9, no available nontrivial Top-3 coverage below .9.",
+    "PARTIAL": "Not PASS, but C nontrivial Top-2 coverage>=.8 or nontrivial Top-3 coverage>=.9, with positive macro Kendall and worst regret<=.5.",
+    "FAIL": "Neither ranking nor shortlist thresholds met on sufficient comparable cross-deployment groups."
+  },
+  "insufficient": "INSUFFICIENT COMPARABLE GROUPS; leave PASS/PARTIAL/FAIL gate unassessed, do not turn missing evidence into predictor failure or success."
+}

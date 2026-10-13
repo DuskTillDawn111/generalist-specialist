@@ -1,0 +1,67 @@
+[
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/u_aligned_optimizer.py",
+    "sha256": "c6727f4f4a4b18bdfd4e8767b9914f19f65fdf8e0ef8a1a5179c54aab53fb1a3",
+    "bytes": 12706
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/run_cpu.py",
+    "sha256": "c4f1e38c4fe824080901b7fa731f700461dfdc25b878e85e900cd53c93568aaa",
+    "bytes": 12251
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/cpu_oracle_comparison.csv",
+    "sha256": "8a1a997dbea4457a6bdb5ea015e0a8be85ee4d3e2c936322403f34a3ecda8dc0",
+    "bytes": 34356
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/holdout_results.csv",
+    "sha256": "3229276b8e1fed89476d5651201434a659540f06ca0ae7d74fc3d411c38881e2",
+    "bytes": 12165
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/solver_runtime_comparison.csv",
+    "sha256": "45872a8be7f79dbac3e911df17e08df921274fcab09961aab1e76ac2c6e47162",
+    "bytes": 6442
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/solver_runtime_summary.csv",
+    "sha256": "18b0608d38decab2434bed3b5b69ef89d733cc7c3be574456072f96c79d5bffc",
+    "bytes": 2982
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/routing_gap_attribution.json",
+    "sha256": "cfa749da05e2e965e77b74c3a44ad556e21e31a311a5d04044a4465f7ff772f8",
+    "bytes": 20522
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/optimizer_source_freeze.json",
+    "sha256": "f8a920fd5d28aab783770018ef28df11a12d081aa7995792cf3eb9232e432855",
+    "bytes": 779
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/module20a_gate.json",
+    "sha256": "e10051179a576558688041619fcb4ae6bf3c8ce41d841d879469685592636490",
+    "bytes": 2952
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/frozen_problem_manifest.json",
+    "sha256": "a021b08ba266c7c17ecec9c1387ae8a7ac459ee045bb878ad6252b7bf9da08a0",
+    "bytes": 4381
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module33_mixed_oracle/module33_gate.json",
+    "sha256": "078a7b060ad09be905632179609b9dd3148ff54e7e633f3220e8709f3bbd5ea7",
+    "bytes": 15781
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/frozen_problem_manifest.json",
+    "sha256": "1c858d3c1eceaeb528d79797baf2ab5cba24a24814914a264e0fd39addfad062",
+    "bytes": 6480
+  },
+  {
+    "path": "/root/autodl-tmp/generalist-specialist/results/paper_extra_g_only_retention/final_gate.json",
+    "sha256": "92ef5a497305bfd15e682e556081d32312973d4992e26007ddaf61dce1f21790",
+    "bytes": 2574
+  }
+]

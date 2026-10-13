@@ -1,0 +1,7 @@
+{
+  "n": 105,
+  "G_target_executing_at_submit_n": 4,
+  "queue_mean_at_ms": 287.24110375,
+  "queue_mean_not_at_ms": 19.11096124752475,
+  "scope": "Retrospective serial-order association; not causal added background delay"
+}

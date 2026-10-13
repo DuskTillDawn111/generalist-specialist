@@ -1,0 +1,32 @@
+{
+  "models": [
+    "qwen",
+    "resnet50"
+  ],
+  "routing": {
+    "text": "qwen",
+    "image": "resnet50",
+    "ocr": "qwen",
+    "asr": "qwen"
+  },
+  "num_results": 800,
+  "wall_time_s": 150.610479823,
+  "paths": {
+    "qwen:asr": {
+      "count": 200,
+      "mean_worker_latency_ms": 615.925574425
+    },
+    "qwen:ocr": {
+      "count": 200,
+      "mean_worker_latency_ms": 93.01428622
+    },
+    "qwen:text": {
+      "count": 200,
+      "mean_worker_latency_ms": 43.849022205
+    },
+    "resnet50:image": {
+      "count": 200,
+      "mean_worker_latency_ms": 8.492184715
+    }
+  }
+}

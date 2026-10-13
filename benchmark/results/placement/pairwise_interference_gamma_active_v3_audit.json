@@ -1,0 +1,109 @@
+{
+  "rows": 44,
+  "negative_gamma_count": 2,
+  "severe_negative_count": 0,
+  "gamma_ge_0_50": 10,
+  "gamma_ge_1_00": 2,
+  "overlap_fail_count": 0,
+  "baseline_fail_count": 0,
+  "negative_rows": [
+    {
+      "worker": "qwen",
+      "task": "lid",
+      "co_resident": "paddleocr",
+      "single_ms": 264.21900903333335,
+      "pair_ms": 254.5532371,
+      "gamma": -0.036582424439090766
+    },
+    {
+      "worker": "qwen",
+      "task": "lid",
+      "co_resident": "resnet50",
+      "single_ms": 264.21900903333335,
+      "pair_ms": 256.7438926666667,
+      "gamma": -0.028291364781114714
+    }
+  ],
+  "high_rows": [
+    {
+      "worker": "qwen",
+      "task": "visual_qa",
+      "co_resident": "whisper",
+      "single_ms": 141.82562843333332,
+      "pair_ms": 365.31780146666665,
+      "gamma": 1.575823604676557
+    },
+    {
+      "worker": "qwen",
+      "task": "image",
+      "co_resident": "whisper",
+      "single_ms": 142.08208936666668,
+      "pair_ms": 292.45088573333334,
+      "gamma": 1.0583233751483956
+    },
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "qwen",
+      "single_ms": 3.654489933333333,
+      "pair_ms": 6.9176763,
+      "gamma": 0.8929252580236962
+    },
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "whisper",
+      "single_ms": 3.654489933333333,
+      "pair_ms": 6.863981666666667,
+      "gamma": 0.8782324734455875
+    },
+    {
+      "worker": "qwen",
+      "task": "ocr",
+      "co_resident": "whisper",
+      "single_ms": 95.88861183333333,
+      "pair_ms": 168.9245962,
+      "gamma": 0.7616752706109935
+    },
+    {
+      "worker": "whisper",
+      "task": "asr",
+      "co_resident": "qwen",
+      "single_ms": 192.7349739,
+      "pair_ms": 309.77549016666666,
+      "gamma": 0.6072614321020575
+    },
+    {
+      "worker": "whisper",
+      "task": "lid",
+      "co_resident": "qwen",
+      "single_ms": 32.11306846666667,
+      "pair_ms": 50.90647676666667,
+      "gamma": 0.5852261772962475
+    },
+    {
+      "worker": "qwen",
+      "task": "visual_qa",
+      "co_resident": "distilbert",
+      "single_ms": 141.82562843333332,
+      "pair_ms": 223.92218813333332,
+      "gamma": 0.5788556032282302
+    },
+    {
+      "worker": "distilbert",
+      "task": "text",
+      "co_resident": "resnet50",
+      "single_ms": 3.654489933333333,
+      "pair_ms": 5.750576733333333,
+      "gamma": 0.573564803361797
+    },
+    {
+      "worker": "qwen",
+      "task": "text",
+      "co_resident": "whisper",
+      "single_ms": 44.626450133333336,
+      "pair_ms": 67.51969136666666,
+      "gamma": 0.5129971388029679
+    }
+  ]
+}

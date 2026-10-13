@@ -1,0 +1,18 @@
+{
+  "gate": "CURRENT_POOL_OPERATIONAL_OVERFLOW_NOT_VALIDATED",
+  "CURRENT_POOL_OVERFLOW_SUPPORTED": false,
+  "CURRENT_POOL_NO_OVERFLOW_WINDOW": false,
+  "scope": "frozen operational capacity rho<=.8",
+  "certified_operational_window_exists": true,
+  "primary_replica_audit": "PASS",
+  "steady_joint_overflow_states": [],
+  "physical_rho1_Specialist_exhaustion_demonstrated": false,
+  "physical_C_Sonly_rho1": 4.79431552615223,
+  "C_S_op": 3.742602099238433,
+  "C_A_op": 4.347876366682182,
+  "W_op": 0.605274267443749,
+  "S_only_real_runtime_control_measured": false,
+  "no_task_rich_started": true,
+  "Task_Rich_required": false,
+  "decision": "Stop after Module10B; distinguish operational exhaustion from physical saturation; no Module9 change or new benchmark."
+}

@@ -1,0 +1,36 @@
+{
+  "models": [
+    "qwen",
+    "paddleocr"
+  ],
+  "routing": {
+    "text": "qwen",
+    "image": "qwen",
+    "ocr": "paddleocr",
+    "asr": "qwen"
+  },
+  "num_results": 800,
+  "wall_time_s": 170.436133985,
+  "paths": {
+    "paddleocr:ocr": {
+      "count": 170,
+      "mean_worker_latency_ms": 8.998745347058824
+    },
+    "qwen:asr": {
+      "count": 200,
+      "mean_worker_latency_ms": 653.32176446
+    },
+    "qwen:image": {
+      "count": 200,
+      "mean_worker_latency_ms": 136.71694362
+    },
+    "qwen:ocr": {
+      "count": 30,
+      "mean_worker_latency_ms": 117.83373846666667
+    },
+    "qwen:text": {
+      "count": 200,
+      "mean_worker_latency_ms": 44.197917385
+    }
+  }
+}

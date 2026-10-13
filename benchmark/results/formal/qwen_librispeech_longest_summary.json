@@ -1,0 +1,120 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "task": "asr",
+  "dataset": "LibriSpeech",
+  "split": "test-clean",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "batch_size": 1,
+  "audio_output_enabled": false,
+  "generation": {
+    "do_sample": false,
+    "return_audio": false,
+    "max_new_tokens": 256,
+    "max_new_tokens_hits": 0
+  },
+  "multimodal_processing": {
+    "qwen_omni_utils": true,
+    "qwen_omni_utils_version": "0.0.9",
+    "use_audio_in_video": false,
+    "required_audio_inputs": [
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  "prompt_version": "v1",
+  "prompt": "Transcribe the English speech in this audio. Output only the transcription. Do not provide any explanation.",
+  "normalization": "lowercase + remove punctuation except apostrophe + normalize spaces",
+  "reference_source": "raw manifest label; normalized_label field is not used for WER",
+  "generated_token_extraction": "output[:, input_length:] before batch_decode",
+  "num_samples": 1,
+  "total_audio_duration_s": 33.91,
+  "long_utterances_gt_30s": 1,
+  "corpus_word_errors": 8,
+  "corpus_reference_words": 96,
+  "wer": 0.083333,
+  "mean_utterance_wer": 0.083333,
+  "input_tokens": {
+    "mean": 889.0,
+    "min": 889,
+    "max": 889
+  },
+  "output_tokens": {
+    "total": 113,
+    "mean": 113.0,
+    "min": 113,
+    "max": 113
+  },
+  "parameters_m": 8931.814,
+  "checkpoint_safetensors_total_mb": 21326.886,
+  "checkpoint_note": "Checkpoint disk size includes components not necessarily loaded when enable_audio_output=False.",
+  "model_load_time_s": 3.595,
+  "warmup_runs": 2,
+  "all_samples": {
+    "model_latency": {
+      "mean_ms": 2308.427,
+      "p50_ms": 2308.427,
+      "p95_ms": 2308.427,
+      "p99_ms": 2308.427,
+      "min_ms": 2308.427,
+      "max_ms": 2308.427
+    },
+    "e2e_latency": {
+      "mean_ms": 2358.751,
+      "p50_ms": 2358.751,
+      "p95_ms": 2358.751,
+      "p99_ms": 2358.751,
+      "min_ms": 2358.751,
+      "max_ms": 2358.751
+    },
+    "model_rtf": {
+      "mean": 0.068075,
+      "p50": 0.068075,
+      "p95": 0.068075,
+      "p99": 0.068075,
+      "min": 0.068075,
+      "max": 0.068075
+    },
+    "e2e_rtf": {
+      "mean": 0.069559,
+      "p50": 0.069559,
+      "p95": 0.069559,
+      "p99": 0.069559,
+      "min": 0.069559,
+      "max": 0.069559
+    },
+    "aggregate_model_rtf": 0.068075,
+    "aggregate_e2e_rtf": 0.069559,
+    "model_request_service_rate_proxy_qps": 0.433,
+    "e2e_request_service_rate_proxy_qps": 0.424
+  },
+  "fixed_latency_subset": {
+    "duration_range_s": [
+      4.0,
+      6.0
+    ],
+    "interval": "[min, max)",
+    "num_samples": 0,
+    "model_latency": null,
+    "e2e_latency": null,
+    "model_rtf": null,
+    "e2e_rtf": null,
+    "aggregate_model_rtf": null,
+    "aggregate_e2e_rtf": null,
+    "model_request_service_rate_proxy_qps": null,
+    "e2e_request_service_rate_proxy_qps": null
+  },
+  "throughput_note": "Request QPS values are sequential batch-1 service-rate proxies (1000 / mean latency), not load-tested concurrent throughput.",
+  "torch_idle_allocated_mb": 17043.442,
+  "torch_peak_allocated_mb": 17392.352,
+  "memory_note": "Torch allocator memory is framework-specific auxiliary data; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "synchronized model.generate() after local audio loading, process_mm_info, processor execution and H2D; includes audio encoder and autoregressive text generation",
+    "e2e_latency": "message construction + local FLAC read/decode in process_mm_info + chat template + audio processor + H2D + model.generate() + generated token slicing + decode + ASR normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.52.3",
+  "timestamp": "2026-09-18T01:23:03.891640+08:00"
+}

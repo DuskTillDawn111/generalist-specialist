@@ -1,0 +1,8 @@
+{
+  "source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module29_dynamic_replication/finalize_replication.py",
+    "sha256": "2200053196e6bbe3daf8230876d0c9074a764d5dda2c3b36df2c12287d384d1e",
+    "bytes": 14867
+  },
+  "scope": "CPU diagnostics only after final GPU campaign; frozen gate and U unchanged"
+}

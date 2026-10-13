@@ -1,0 +1,1596 @@
+{
+  "alpha_units": "frozen Qwen-reference total demand L; lambda_base L=1",
+  "rho_max": 0.8,
+  "alpha_max_reference_by_mixture": {
+    "mix_01": 23.141751299663483,
+    "mix_02": 10.903532880259297,
+    "mix_03": 29.668595474019675
+  },
+  "reference_budget_mib": 49140,
+  "budgets": [
+    17007.17405495223,
+    27980.189424959943,
+    32019.254406266693,
+    32652.441160761973,
+    34567.553379621386,
+    43736.54192629518,
+    49140
+  ],
+  "mixtures": {
+    "mix_01": {
+      "17007.17405495223": {
+        "alpha_max": 6.5743381679478485,
+        "boundary_state_id": 2282,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 17007.17405495223,
+        "bottleneck_model": [
+          "phi4mm",
+          "whisper-small"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "phi4mm",
+            "task": "asr",
+            "effective_demand": 0.631514297178963
+          },
+          {
+            "model": "whisper-small",
+            "task": "asr",
+            "effective_demand": 0.5746554241020954
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 3.590754563243767,
+          "image::resnet50": 6.167943634700841,
+          "ocr::paddleocr": 20.017130013590993,
+          "asr::phi4mm": 0.5590655935140676,
+          "asr::whisper-small": 3.0218641268850837,
+          "visual_qa::phi4mm": 1.052269737507265,
+          "lid::whisper-small": 8.32016887062534
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "distilbert": 0.01353466428997126,
+          "resnet50": 0.033910254907496815,
+          "paddleocr": 0.12145443478400068,
+          "whisper-small": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 1
+      },
+      "27980.189424959943": {
+        "alpha_max": 21.505756392583162,
+        "boundary_state_id": 5741,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 27202.59165628153,
+        "bottleneck_model": [
+          "distil_whisper",
+          "phi4mm",
+          "whisper-small",
+          "whisper_turbo"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "distil_whisper",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.5511448282608522
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.59552086777997
+          },
+          {
+            "model": "whisper_turbo",
+            "task": "asr",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 11.745956920676822,
+          "image::resnet50": 20.176372109630194,
+          "ocr::paddleocr": 65.47937005274652,
+          "asr::phi4mm": 0.22030596125674926,
+          "asr::whisper-small": 1.3309729325311996,
+          "asr::whisper_turbo": 4.6914687336198,
+          "asr::distil_whisper": 5.471070594070143,
+          "visual_qa::phi4mm": 3.4421497732573254,
+          "lid::whisper-small": 27.216659731495827,
+          "lid::whisper_turbo": 0.0
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "distilbert": 0.04427414374493208,
+          "resnet50": 0.11092609820505495,
+          "paddleocr": 0.3972977082313538,
+          "whisper-small": 0.8,
+          "whisper_turbo": 0.8,
+          "distil_whisper": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 6
+      },
+      "32019.254406266693": {
+        "alpha_max": 21.505756392583162,
+        "boundary_state_id": 5741,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 27202.59165628153,
+        "bottleneck_model": [
+          "distil_whisper",
+          "phi4mm",
+          "whisper-small",
+          "whisper_turbo"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "distil_whisper",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.5511448282608522
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.59552086777997
+          },
+          {
+            "model": "whisper_turbo",
+            "task": "asr",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 11.745956920676822,
+          "image::resnet50": 20.176372109630194,
+          "ocr::paddleocr": 65.47937005274652,
+          "asr::phi4mm": 0.22030596125674926,
+          "asr::whisper-small": 1.3309729325311996,
+          "asr::whisper_turbo": 4.6914687336198,
+          "asr::distil_whisper": 5.471070594070143,
+          "visual_qa::phi4mm": 3.4421497732573254,
+          "lid::whisper-small": 27.216659731495827,
+          "lid::whisper_turbo": 0.0
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "distilbert": 0.04427414374493208,
+          "resnet50": 0.11092609820505495,
+          "paddleocr": 0.3972977082313538,
+          "whisper-small": 0.8,
+          "whisper_turbo": 0.8,
+          "distil_whisper": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 15
+      },
+      "32652.441160761973": {
+        "alpha_max": 21.505756392583162,
+        "boundary_state_id": 5741,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 27202.59165628153,
+        "bottleneck_model": [
+          "distil_whisper",
+          "phi4mm",
+          "whisper-small",
+          "whisper_turbo"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "distil_whisper",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.5511448282608522
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.59552086777997
+          },
+          {
+            "model": "whisper_turbo",
+            "task": "asr",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 11.745956920676822,
+          "image::resnet50": 20.176372109630194,
+          "ocr::paddleocr": 65.47937005274652,
+          "asr::phi4mm": 0.22030596125674926,
+          "asr::whisper-small": 1.3309729325311996,
+          "asr::whisper_turbo": 4.6914687336198,
+          "asr::distil_whisper": 5.471070594070143,
+          "visual_qa::phi4mm": 3.4421497732573254,
+          "lid::whisper-small": 27.216659731495827,
+          "lid::whisper_turbo": 0.0
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "distilbert": 0.04427414374493208,
+          "resnet50": 0.11092609820505495,
+          "paddleocr": 0.3972977082313538,
+          "whisper-small": 0.8,
+          "whisper_turbo": 0.8,
+          "distil_whisper": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 15
+      },
+      "34567.553379621386": {
+        "alpha_max": 21.824457072329068,
+        "boundary_state_id": 5669,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 34096.55130259332,
+        "bottleneck_model": [
+          "distil_whisper",
+          "qwen",
+          "whisper-small",
+          "whisper_turbo"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "distil_whisper",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.5047876498944536
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.6043460819179765
+          },
+          {
+            "model": "whisper_turbo",
+            "task": "asr",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 11.920024011670973,
+          "image::qwen": 0.0,
+          "image::resnet50": 20.475372218659754,
+          "ocr::paddleocr": 66.44972977245119,
+          "asr::qwen": 0.4513408855479759,
+          "asr::whisper-small": 1.2735288255753918,
+          "asr::whisper_turbo": 4.6914687336198,
+          "asr::distil_whisper": 5.471070594070143,
+          "visual_qa::qwen": 3.493160091262352,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 27.619992113696163,
+          "lid::whisper_turbo": 0.0
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8,
+          "distilbert": 0.04493025643630173,
+          "resnet50": 0.11256994751935781,
+          "paddleocr": 0.40318538999261894,
+          "whisper-small": 0.8,
+          "whisper_turbo": 0.8,
+          "distil_whisper": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 4
+      },
+      "43736.54192629518": {
+        "alpha_max": 21.824457072329068,
+        "boundary_state_id": 5669,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 34096.55130259332,
+        "bottleneck_model": [
+          "distil_whisper",
+          "qwen",
+          "whisper-small",
+          "whisper_turbo"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "distil_whisper",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.5047876498944536
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.6043460819179765
+          },
+          {
+            "model": "whisper_turbo",
+            "task": "asr",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 11.920024011670973,
+          "image::qwen": 0.0,
+          "image::resnet50": 20.475372218659754,
+          "ocr::paddleocr": 66.44972977245119,
+          "asr::qwen": 0.4513408855479759,
+          "asr::whisper-small": 1.2735288255753918,
+          "asr::whisper_turbo": 4.6914687336198,
+          "asr::distil_whisper": 5.471070594070143,
+          "visual_qa::qwen": 3.493160091262352,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 27.619992113696163,
+          "lid::whisper_turbo": 0.0
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8,
+          "distilbert": 0.04493025643630173,
+          "resnet50": 0.11256994751935781,
+          "paddleocr": 0.40318538999261894,
+          "whisper-small": 0.8,
+          "whisper_turbo": 0.8,
+          "distil_whisper": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 15
+      },
+      "49140": {
+        "alpha_max": 23.141751299663483,
+        "boundary_state_id": 5777,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 2,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 47173.52406385378,
+        "bottleneck_model": [
+          "distil_whisper",
+          "phi4mm",
+          "qwen",
+          "whisper-small",
+          "whisper_turbo"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "distil_whisper",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.5930717484601984
+          },
+          {
+            "model": "qwen",
+            "task": "asr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.6408235806426568
+          },
+          {
+            "model": "whisper_turbo",
+            "task": "asr",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 12.639500274847771,
+          "image::qwen": 0.0,
+          "image::resnet50": 21.71123753878089,
+          "ocr::paddleocr": 70.46054411468583,
+          "asr::qwen": 1.2230948614083634,
+          "asr::phi4mm": 0.18318898919424378,
+          "asr::whisper-small": 1.0360935287708852,
+          "asr::whisper_turbo": 4.6914687336198,
+          "asr::distil_whisper": 5.471070594070143,
+          "visual_qa::qwen": 0.0,
+          "visual_qa::phi4mm": 3.7040024324085645,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 29.287096869146158,
+          "lid::whisper_turbo": 0.0
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8,
+          "phi4mm": 0.8,
+          "distilbert": 0.047642184950264024,
+          "resnet50": 0.11936451480445193,
+          "paddleocr": 0.4275211058834047,
+          "whisper-small": 0.8,
+          "whisper_turbo": 0.8,
+          "distil_whisper": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 14
+      }
+    },
+    "mix_02": {
+      "17007.17405495223": {
+        "alpha_max": 5.172416481813295,
+        "boundary_state_id": 2282,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 17007.17405495223,
+        "bottleneck_model": [
+          "phi4mm"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.8
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 8.057387828207785,
+          "image::resnet50": 25.256706934006317,
+          "ocr::paddleocr": 0.5943780989804701,
+          "asr::phi4mm": 0.0,
+          "asr::whisper-small": 0.14715635116048884,
+          "visual_qa::phi4mm": 4.996363346627554,
+          "lid::whisper-small": 2.9451574041042794
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "distilbert": 0.030370786247884692,
+          "resnet50": 0.13885687369736102,
+          "paddleocr": 0.003606403915578667,
+          "whisper-small": 0.10775115607864816
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 1
+      },
+      "27980.189424959943": {
+        "alpha_max": 5.731116398446002,
+        "boundary_state_id": 2210,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 23901.13370126402,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.92770867799344,
+          "image::qwen": 0.0,
+          "image::resnet50": 27.984816727187386,
+          "ocr::paddleocr": 0.6585800045146274,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.16305148284882418,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 3.263279349993372
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.033651294653274044,
+          "resnet50": 0.15385553516079303,
+          "paddleocr": 0.003995950576034614,
+          "whisper-small": 0.11938992533280422
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 41
+      },
+      "32019.254406266693": {
+        "alpha_max": 5.731116398446002,
+        "boundary_state_id": 2210,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 23901.13370126402,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.92770867799344,
+          "image::qwen": 0.0,
+          "image::resnet50": 27.984816727187386,
+          "ocr::paddleocr": 0.6585800045146274,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.16305148284882418,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 3.263279349993372
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.033651294653274044,
+          "resnet50": 0.15385553516079303,
+          "paddleocr": 0.003995950576034614,
+          "whisper-small": 0.11938992533280422
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 114
+      },
+      "32652.441160761973": {
+        "alpha_max": 5.731116398446002,
+        "boundary_state_id": 2210,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 23901.13370126402,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.92770867799344,
+          "image::qwen": 0.0,
+          "image::resnet50": 27.984816727187386,
+          "ocr::paddleocr": 0.6585800045146274,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.16305148284882418,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 3.263279349993372
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.033651294653274044,
+          "resnet50": 0.15385553516079303,
+          "paddleocr": 0.003995950576034614,
+          "whisper-small": 0.11938992533280422
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 123
+      },
+      "34567.553379621386": {
+        "alpha_max": 5.731116398446002,
+        "boundary_state_id": 2210,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 23901.13370126402,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.92770867799344,
+          "image::qwen": 0.0,
+          "image::resnet50": 27.984816727187386,
+          "ocr::paddleocr": 0.6585800045146274,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.16305148284882418,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 3.263279349993372
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.033651294653274044,
+          "resnet50": 0.15385553516079303,
+          "paddleocr": 0.003995950576034614,
+          "whisper-small": 0.11938992533280422
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 138
+      },
+      "43736.54192629518": {
+        "alpha_max": 10.903532880259297,
+        "boundary_state_id": 2318,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 36978.10646252448,
+        "bottleneck_model": [
+          "phi4mm",
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 16.985096506201224,
+          "image::qwen": 0.0,
+          "image::resnet50": 53.2415236611937,
+          "ocr::paddleocr": 1.2529581034950976,
+          "asr::qwen": 0.0,
+          "asr::phi4mm": 0.0,
+          "asr::whisper-small": 0.310207834009313,
+          "visual_qa::qwen": 5.536046837901427,
+          "visual_qa::phi4mm": 4.996363346627554,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 6.208436754097652
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "phi4mm": 0.8,
+          "distilbert": 0.06402208090115873,
+          "resnet50": 0.292712408858154,
+          "paddleocr": 0.007602354491613282,
+          "whisper-small": 0.2271410814114524
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 87
+      },
+      "49140": {
+        "alpha_max": 10.903532880259297,
+        "boundary_state_id": 2318,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 36978.10646252448,
+        "bottleneck_model": [
+          "phi4mm",
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 16.985096506201224,
+          "image::qwen": 0.0,
+          "image::resnet50": 53.2415236611937,
+          "ocr::paddleocr": 1.2529581034950976,
+          "asr::qwen": 0.0,
+          "asr::phi4mm": 0.0,
+          "asr::whisper-small": 0.310207834009313,
+          "visual_qa::qwen": 5.536046837901427,
+          "visual_qa::phi4mm": 4.996363346627554,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 6.208436754097652
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "phi4mm": 0.8,
+          "distilbert": 0.06402208090115873,
+          "resnet50": 0.292712408858154,
+          "paddleocr": 0.007602354491613282,
+          "whisper-small": 0.2271410814114524
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 149
+      }
+    },
+    "mix_03": {
+      "17007.17405495223": {
+        "alpha_max": 16.22761890155302,
+        "boundary_state_id": 2282,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 17007.17405495223,
+        "bottleneck_model": [
+          "phi4mm",
+          "whisper-small"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.6128855054920314
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.4652936157486527
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 5.683520789571602,
+          "image::resnet50": 34.13727817911817,
+          "ocr::paddleocr": 73.86937860614337,
+          "asr::phi4mm": 0.16564830977617176,
+          "asr::whisper-small": 1.7600759919545552,
+          "visual_qa::phi4mm": 3.827748344149607,
+          "lid::whisper-small": 17.17956352855194
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "distilbert": 0.021422947326823965,
+          "resnet50": 0.1876806717865171,
+          "paddleocr": 0.44820429404030215,
+          "whisper-small": 0.8
+        },
+        "z": 0.8,
+        "maximizing_state_count_numerical_ties": 1
+      },
+      "27980.189424959943": {
+        "alpha_max": 23.469896719809213,
+        "boundary_state_id": 5666,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 27980.189424959943,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.220038118061064,
+          "image::qwen": 0.0,
+          "image::resnet50": 49.372517189359414,
+          "ocr::paddleocr": 106.83678838900694,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.0,
+          "asr::distil_whisper": 2.785162182242367,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 24.84668786915669
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.030983865485425772,
+          "resnet50": 0.2714413007759514,
+          "paddleocr": 0.6482348737863305,
+          "whisper-small": 0.6729510455142848,
+          "distil_whisper": 0.40725662509434024
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 1
+      },
+      "32019.254406266693": {
+        "alpha_max": 23.469896719809213,
+        "boundary_state_id": 5666,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 27980.189424959943,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.220038118061064,
+          "image::qwen": 0.0,
+          "image::resnet50": 49.372517189359414,
+          "ocr::paddleocr": 106.83678838900694,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.0,
+          "asr::distil_whisper": 2.785162182242367,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 24.84668786915669
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.030983865485425772,
+          "resnet50": 0.2714413007759514,
+          "paddleocr": 0.6482348737863305,
+          "whisper-small": 0.6729510455142848,
+          "distil_whisper": 0.40725662509434024
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 58
+      },
+      "32652.441160761973": {
+        "alpha_max": 23.469896719809213,
+        "boundary_state_id": 5666,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 27980.189424959943,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.220038118061064,
+          "image::qwen": 0.0,
+          "image::resnet50": 49.372517189359414,
+          "ocr::paddleocr": 106.83678838900694,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.0,
+          "asr::distil_whisper": 2.785162182242367,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 24.84668786915669
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.030983865485425772,
+          "resnet50": 0.2714413007759514,
+          "paddleocr": 0.6482348737863305,
+          "whisper-small": 0.6729510455142848,
+          "distil_whisper": 0.40725662509434024
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 64
+      },
+      "34567.553379621386": {
+        "alpha_max": 23.469896719809213,
+        "boundary_state_id": 5666,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 1,
+          "distilbert": 1,
+          "minicpm": 0,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 0
+        },
+        "boundary_M_safe_mib": 27980.189424959943,
+        "bottleneck_model": [
+          "qwen"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 8.220038118061064,
+          "image::qwen": 0.0,
+          "image::resnet50": 49.372517189359414,
+          "ocr::paddleocr": 106.83678838900694,
+          "asr::qwen": 0.0,
+          "asr::whisper-small": 0.0,
+          "asr::distil_whisper": 2.785162182242367,
+          "visual_qa::qwen": 5.536046837901427,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 24.84668786915669
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "distilbert": 0.030983865485425772,
+          "resnet50": 0.2714413007759514,
+          "paddleocr": 0.6482348737863305,
+          "whisper-small": 0.6729510455142848,
+          "distil_whisper": 0.40725662509434024
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 78
+      },
+      "43736.54192629518": {
+        "alpha_max": 29.532530884310425,
+        "boundary_state_id": 3147,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 1,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 1,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 1,
+          "qwen": 0,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 41750.33505429945,
+        "bottleneck_model": [
+          "minicpm",
+          "paddleocr",
+          "phi4mm",
+          "whisper-small"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "minicpm",
+            "task": "ocr",
+            "effective_demand": 0.4145425430696203
+          },
+          {
+            "model": "paddleocr",
+            "task": "ocr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "phi4mm",
+            "task": "visual_qa",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::distilbert": 10.343399994042269,
+          "image::minicpm": 0.0,
+          "image::resnet50": 62.12619536157708,
+          "ocr::minicpm": 2.5848893440596776,
+          "ocr::paddleocr": 131.84947951346686,
+          "asr::phi4mm": 0.0,
+          "asr::minicpm": 0.0,
+          "asr::whisper-small": 0.0,
+          "asr::whisper_turbo": 3.504612276178553,
+          "visual_qa::phi4mm": 4.996363346627554,
+          "visual_qa::minicpm": 1.9697292684848131,
+          "lid::whisper-small": 29.53758735917354,
+          "lid::whisper_turbo": 1.727380937400028
+        },
+        "boundary_model_pressure": {
+          "phi4mm": 0.8,
+          "minicpm": 0.8,
+          "distilbert": 0.038987472986676805,
+          "resnet50": 0.34155875051964624,
+          "paddleocr": 0.8,
+          "whisper-small": 0.8000000000000002,
+          "whisper_turbo": 0.741295585357587
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 20
+      },
+      "49140": {
+        "alpha_max": 29.668595474019675,
+        "boundary_state_id": 3075,
+        "boundary_deployment": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 1,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 1
+        },
+        "replica_vector": {
+          "convnext_tiny": 0,
+          "distil_whisper": 0,
+          "distilbert": 1,
+          "minicpm": 1,
+          "paddleocr": 1,
+          "paddleocr_vl": 0,
+          "phi4mm": 0,
+          "qwen": 1,
+          "resnet50": 1,
+          "roberta_sst2": 0,
+          "whisper-small": 1,
+          "whisper_turbo": 1
+        },
+        "boundary_M_safe_mib": 48644.294700611244,
+        "bottleneck_model": [
+          "minicpm",
+          "paddleocr",
+          "qwen",
+          "whisper-small"
+        ],
+        "bottleneck_task": [
+          {
+            "model": "minicpm",
+            "task": "ocr",
+            "effective_demand": 0.5138728810756347
+          },
+          {
+            "model": "paddleocr",
+            "task": "ocr",
+            "effective_demand": 0.8
+          },
+          {
+            "model": "qwen",
+            "task": "visual_qa",
+            "effective_demand": 0.8000000000000002
+          },
+          {
+            "model": "whisper-small",
+            "task": "lid",
+            "effective_demand": 0.8000000000000002
+          }
+        ],
+        "boundary_routing_rps": {
+          "text::qwen": 0.0,
+          "text::distilbert": 10.391054916740943,
+          "image::qwen": 0.0,
+          "image::minicpm": 0.0,
+          "image::resnet50": 62.41242803547773,
+          "ocr::minicpm": 3.2042658991228605,
+          "ocr::paddleocr": 131.84947951346686,
+          "asr::qwen": 0.0,
+          "asr::minicpm": 0.0,
+          "asr::whisper-small": 0.0,
+          "asr::whisper_turbo": 3.520759000389771,
+          "visual_qa::qwen": 5.536046837901427,
+          "visual_qa::minicpm": 1.4621405047933782,
+          "lid::qwen": 0.0,
+          "lid::whisper-small": 29.53758735917354,
+          "lid::whisper_turbo": 1.8714273484648523
+        },
+        "boundary_model_pressure": {
+          "qwen": 0.8000000000000002,
+          "minicpm": 0.8,
+          "distilbert": 0.03916709912628921,
+          "resnet50": 0.34313240675090917,
+          "paddleocr": 0.8,
+          "whisper-small": 0.8000000000000002,
+          "whisper_turbo": 0.7560305356100854
+        },
+        "z": 0.8000000000000002,
+        "maximizing_state_count_numerical_ties": 4
+      }
+    }
+  },
+  "offline_design_enumeration_only": true,
+  "Proposed_search_calls": 0,
+  "capacity_LP_calls": 5772,
+  "numerical_tolerance": 1e-09,
+  "per_state_limits_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/deployment_capacity_limits.csv",
+    "sha256": "069c77b9303ddc6c458462562272d1c95ebba68b7d743ec48a7eab80607a3e5e",
+    "bytes": 2609235
+  }
+}

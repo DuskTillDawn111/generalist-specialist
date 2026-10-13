@@ -1,0 +1,5209 @@
+{
+  "profile": "benchmark/profiles/model_placement_profile.json",
+  "scenario": "benchmark/profiles/placement_scenario.json",
+  "quality_preset": "specialist_baseline",
+  "workload": {
+    "text": 200,
+    "image": 200,
+    "ocr": 200,
+    "asr": 200
+  },
+  "results": [
+    {
+      "budget_gib": 12.0,
+      "budget_mib": 12288.0,
+      "max_models": 1,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 12.0,
+      "budget_mib": 12288.0,
+      "max_models": 2,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 12.0,
+      "budget_mib": 12288.0,
+      "max_models": 3,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 12.0,
+      "budget_mib": 12288.0,
+      "max_models": 4,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 1,
+      "best": {
+        "models": [
+          "distilbert",
+          "resnet50",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 4,
+        "generalist_count": 0,
+        "specialist_count": 4,
+        "memory_mib": 3562.0,
+        "predicted_makespan_ms": 24549.600000000002,
+        "predicted_throughput_qps": 32.587088995340046,
+        "routing": {
+          "text": {
+            "distilbert": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "resnet50": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "whisper": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.925,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.042181
+        },
+        "model_load_ms": {
+          "distilbert": 346.20000000000005,
+          "resnet50": 921.0000000000001,
+          "paddleocr": 969.8000000000001,
+          "whisper": 24549.600000000002
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "distilbert",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 0,
+          "specialist_count": 4,
+          "memory_mib": 3562.0,
+          "predicted_makespan_ms": 24549.600000000002,
+          "predicted_throughput_qps": 32.587088995340046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 16.0,
+      "budget_mib": 16384.0,
+      "max_models": 1,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 16.0,
+      "budget_mib": 16384.0,
+      "max_models": 2,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 16.0,
+      "budget_mib": 16384.0,
+      "max_models": 3,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 16.0,
+      "budget_mib": 16384.0,
+      "max_models": 4,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 2,
+      "best": {
+        "models": [
+          "distilbert",
+          "resnet50",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 4,
+        "generalist_count": 0,
+        "specialist_count": 4,
+        "memory_mib": 3562.0,
+        "predicted_makespan_ms": 24549.600000000002,
+        "predicted_throughput_qps": 32.587088995340046,
+        "routing": {
+          "text": {
+            "distilbert": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "resnet50": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "whisper": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.925,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.042181
+        },
+        "model_load_ms": {
+          "distilbert": 346.20000000000005,
+          "resnet50": 921.0000000000001,
+          "paddleocr": 969.8000000000001,
+          "whisper": 24549.600000000002
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "distilbert",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 0,
+          "specialist_count": 4,
+          "memory_mib": 3562.0,
+          "predicted_makespan_ms": 24549.600000000002,
+          "predicted_throughput_qps": 32.587088995340046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "phi4",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 13154.0,
+          "predicted_makespan_ms": 113977.4,
+          "predicted_throughput_qps": 7.018935332794046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "phi4": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.01952
+          },
+          "model_load_ms": {
+            "phi4": 113977.4,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 24.0,
+      "budget_mib": 24576.0,
+      "max_models": 1,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 24.0,
+      "budget_mib": 24576.0,
+      "max_models": 2,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 2,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr"
+        ],
+        "model_count": 2,
+        "generalist_count": 1,
+        "specialist_count": 1,
+        "memory_mib": 18156.0,
+        "predicted_makespan_ms": 117704.80000000002,
+        "predicted_throughput_qps": 6.796664197212007,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.041732
+        },
+        "model_load_ms": {
+          "qwen": 117704.80000000002,
+          "paddleocr": 969.8000000000001
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 24.0,
+      "budget_mib": 24576.0,
+      "max_models": 3,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 8,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 3,
+        "generalist_count": 1,
+        "specialist_count": 2,
+        "memory_mib": 19782.0,
+        "predicted_makespan_ms": 32777.6,
+        "predicted_throughput_qps": 24.40691203748902,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "whisper": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.042181
+        },
+        "model_load_ms": {
+          "qwen": 32777.6,
+          "paddleocr": 969.8000000000001,
+          "whisper": 24549.600000000002
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18906.0,
+          "predicted_makespan_ms": 109424.80000000002,
+          "predicted_throughput_qps": 7.310956931152718,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 109424.80000000002,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19384.0,
+          "predicted_makespan_ms": 131693.8,
+          "predicted_throughput_qps": 6.0746975180304625,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 131693.8,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19362.0,
+          "predicted_makespan_ms": 149683.8,
+          "predicted_throughput_qps": 5.344599749605502,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 149683.8,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 24.0,
+      "budget_mib": 24576.0,
+      "max_models": 4,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 16,
+      "best": {
+        "models": [
+          "qwen",
+          "resnet50",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 4,
+        "generalist_count": 1,
+        "specialist_count": 3,
+        "memory_mib": 20386.0,
+        "predicted_makespan_ms": 20901.227265685517,
+        "predicted_throughput_qps": 38.275264405808166,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "resnet50": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 0.14861230872659778,
+              "requests": 29.722461745319556
+            },
+            "whisper": {
+              "fraction": 0.8513876912734022,
+              "requests": 170.27753825468045
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.04211427307338176
+        },
+        "model_load_ms": {
+          "qwen": 20901.227265685517,
+          "resnet50": 921.0000000000001,
+          "paddleocr": 969.8000000000001,
+          "whisper": 20901.227265685517
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20386.0,
+          "predicted_makespan_ms": 20901.227265685517,
+          "predicted_throughput_qps": 38.275264405808166,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.14861230872659778,
+                "requests": 29.722461745319556
+              },
+              "whisper": {
+                "fraction": 0.8513876912734022,
+                "requests": 170.27753825468045
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04211427307338176
+          },
+          "model_load_ms": {
+            "qwen": 20901.227265685517,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 20901.227265685517
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20532.0,
+          "predicted_makespan_ms": 24537.939271882264,
+          "predicted_throughput_qps": 32.60257477761022,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.0004749864811540392,
+                "requests": 0.09499729623080784
+              },
+              "whisper": {
+                "fraction": 0.999525013518846,
+                "requests": 199.9050027037692
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04218078673106997
+          },
+          "model_load_ms": {
+            "qwen": 24537.939271882264,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24537.939271882264
+          }
+        },
+        {
+          "models": [
+            "distilbert",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 0,
+          "specialist_count": 4,
+          "memory_mib": 3562.0,
+          "predicted_makespan_ms": 24549.600000000002,
+          "predicted_throughput_qps": 32.587088995340046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 21010.0,
+          "predicted_makespan_ms": 28979.399999999998,
+          "predicted_throughput_qps": 27.605816545546148,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 28979.399999999998,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20988.0,
+          "predicted_makespan_ms": 46969.4,
+          "predicted_throughput_qps": 17.03236575302218,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 46969.4,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19510.0,
+          "predicted_makespan_ms": 84927.20000000001,
+          "predicted_throughput_qps": 9.419832515377875,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 84927.20000000001,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19966.0,
+          "predicted_makespan_ms": 102714.4,
+          "predicted_throughput_qps": 7.7885866051887565,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 102714.4,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 32.0,
+      "budget_mib": 32768.0,
+      "max_models": 1,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 32.0,
+      "budget_mib": 32768.0,
+      "max_models": 2,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 2,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr"
+        ],
+        "model_count": 2,
+        "generalist_count": 1,
+        "specialist_count": 1,
+        "memory_mib": 18156.0,
+        "predicted_makespan_ms": 117704.80000000002,
+        "predicted_throughput_qps": 6.796664197212007,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.041732
+        },
+        "model_load_ms": {
+          "qwen": 117704.80000000002,
+          "paddleocr": 969.8000000000001
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 32.0,
+      "budget_mib": 32768.0,
+      "max_models": 3,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 8,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 3,
+        "generalist_count": 1,
+        "specialist_count": 2,
+        "memory_mib": 19782.0,
+        "predicted_makespan_ms": 32777.6,
+        "predicted_throughput_qps": 24.40691203748902,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "whisper": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.042181
+        },
+        "model_load_ms": {
+          "qwen": 32777.6,
+          "paddleocr": 969.8000000000001,
+          "whisper": 24549.600000000002
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18906.0,
+          "predicted_makespan_ms": 109424.80000000002,
+          "predicted_throughput_qps": 7.310956931152718,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 109424.80000000002,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19384.0,
+          "predicted_makespan_ms": 131693.8,
+          "predicted_throughput_qps": 6.0746975180304625,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 131693.8,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19362.0,
+          "predicted_makespan_ms": 149683.8,
+          "predicted_throughput_qps": 5.344599749605502,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 149683.8,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 32.0,
+      "budget_mib": 32768.0,
+      "max_models": 4,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 16,
+      "best": {
+        "models": [
+          "qwen",
+          "resnet50",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 4,
+        "generalist_count": 1,
+        "specialist_count": 3,
+        "memory_mib": 20386.0,
+        "predicted_makespan_ms": 20901.227265685517,
+        "predicted_throughput_qps": 38.275264405808166,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "resnet50": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 0.14861230872659778,
+              "requests": 29.722461745319556
+            },
+            "whisper": {
+              "fraction": 0.8513876912734022,
+              "requests": 170.27753825468045
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.04211427307338176
+        },
+        "model_load_ms": {
+          "qwen": 20901.227265685517,
+          "resnet50": 921.0000000000001,
+          "paddleocr": 969.8000000000001,
+          "whisper": 20901.227265685517
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20386.0,
+          "predicted_makespan_ms": 20901.227265685517,
+          "predicted_throughput_qps": 38.275264405808166,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.14861230872659778,
+                "requests": 29.722461745319556
+              },
+              "whisper": {
+                "fraction": 0.8513876912734022,
+                "requests": 170.27753825468045
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04211427307338176
+          },
+          "model_load_ms": {
+            "qwen": 20901.227265685517,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 20901.227265685517
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20532.0,
+          "predicted_makespan_ms": 24537.939271882264,
+          "predicted_throughput_qps": 32.60257477761022,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.0004749864811540392,
+                "requests": 0.09499729623080784
+              },
+              "whisper": {
+                "fraction": 0.999525013518846,
+                "requests": 199.9050027037692
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04218078673106997
+          },
+          "model_load_ms": {
+            "qwen": 24537.939271882264,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24537.939271882264
+          }
+        },
+        {
+          "models": [
+            "distilbert",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 0,
+          "specialist_count": 4,
+          "memory_mib": 3562.0,
+          "predicted_makespan_ms": 24549.600000000002,
+          "predicted_throughput_qps": 32.587088995340046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 21010.0,
+          "predicted_makespan_ms": 28979.399999999998,
+          "predicted_throughput_qps": 27.605816545546148,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 28979.399999999998,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20988.0,
+          "predicted_makespan_ms": 46969.4,
+          "predicted_throughput_qps": 17.03236575302218,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 46969.4,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19510.0,
+          "predicted_makespan_ms": 84927.20000000001,
+          "predicted_throughput_qps": 9.419832515377875,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 84927.20000000001,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19966.0,
+          "predicted_makespan_ms": 102714.4,
+          "predicted_throughput_qps": 7.7885866051887565,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 102714.4,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 40.0,
+      "budget_mib": 40960.0,
+      "max_models": 1,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 40.0,
+      "budget_mib": 40960.0,
+      "max_models": 2,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 2,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr"
+        ],
+        "model_count": 2,
+        "generalist_count": 1,
+        "specialist_count": 1,
+        "memory_mib": 18156.0,
+        "predicted_makespan_ms": 117704.80000000002,
+        "predicted_throughput_qps": 6.796664197212007,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.041732
+        },
+        "model_load_ms": {
+          "qwen": 117704.80000000002,
+          "paddleocr": 969.8000000000001
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 40.0,
+      "budget_mib": 40960.0,
+      "max_models": 3,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 8,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 3,
+        "generalist_count": 1,
+        "specialist_count": 2,
+        "memory_mib": 19782.0,
+        "predicted_makespan_ms": 32777.6,
+        "predicted_throughput_qps": 24.40691203748902,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "whisper": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.042181
+        },
+        "model_load_ms": {
+          "qwen": 32777.6,
+          "paddleocr": 969.8000000000001,
+          "whisper": 24549.600000000002
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18906.0,
+          "predicted_makespan_ms": 109424.80000000002,
+          "predicted_throughput_qps": 7.310956931152718,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 109424.80000000002,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19384.0,
+          "predicted_makespan_ms": 131693.8,
+          "predicted_throughput_qps": 6.0746975180304625,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 131693.8,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19362.0,
+          "predicted_makespan_ms": 149683.8,
+          "predicted_throughput_qps": 5.344599749605502,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 149683.8,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 40.0,
+      "budget_mib": 40960.0,
+      "max_models": 4,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 16,
+      "best": {
+        "models": [
+          "qwen",
+          "resnet50",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 4,
+        "generalist_count": 1,
+        "specialist_count": 3,
+        "memory_mib": 20386.0,
+        "predicted_makespan_ms": 20901.227265685517,
+        "predicted_throughput_qps": 38.275264405808166,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "resnet50": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 0.14861230872659778,
+              "requests": 29.722461745319556
+            },
+            "whisper": {
+              "fraction": 0.8513876912734022,
+              "requests": 170.27753825468045
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.04211427307338176
+        },
+        "model_load_ms": {
+          "qwen": 20901.227265685517,
+          "resnet50": 921.0000000000001,
+          "paddleocr": 969.8000000000001,
+          "whisper": 20901.227265685517
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20386.0,
+          "predicted_makespan_ms": 20901.227265685517,
+          "predicted_throughput_qps": 38.275264405808166,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.14861230872659778,
+                "requests": 29.722461745319556
+              },
+              "whisper": {
+                "fraction": 0.8513876912734022,
+                "requests": 170.27753825468045
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04211427307338176
+          },
+          "model_load_ms": {
+            "qwen": 20901.227265685517,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 20901.227265685517
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20532.0,
+          "predicted_makespan_ms": 24537.939271882264,
+          "predicted_throughput_qps": 32.60257477761022,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.0004749864811540392,
+                "requests": 0.09499729623080784
+              },
+              "whisper": {
+                "fraction": 0.999525013518846,
+                "requests": 199.9050027037692
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04218078673106997
+          },
+          "model_load_ms": {
+            "qwen": 24537.939271882264,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24537.939271882264
+          }
+        },
+        {
+          "models": [
+            "distilbert",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 0,
+          "specialist_count": 4,
+          "memory_mib": 3562.0,
+          "predicted_makespan_ms": 24549.600000000002,
+          "predicted_throughput_qps": 32.587088995340046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 21010.0,
+          "predicted_makespan_ms": 28979.399999999998,
+          "predicted_throughput_qps": 27.605816545546148,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 28979.399999999998,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20988.0,
+          "predicted_makespan_ms": 46969.4,
+          "predicted_throughput_qps": 17.03236575302218,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 46969.4,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19510.0,
+          "predicted_makespan_ms": 84927.20000000001,
+          "predicted_throughput_qps": 9.419832515377875,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 84927.20000000001,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19966.0,
+          "predicted_makespan_ms": 102714.4,
+          "predicted_throughput_qps": 7.7885866051887565,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 102714.4,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 48.0,
+      "budget_mib": 49152.0,
+      "max_models": 1,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 0,
+      "best": null,
+      "top10": []
+    },
+    {
+      "budget_gib": 48.0,
+      "budget_mib": 49152.0,
+      "max_models": 2,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 2,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr"
+        ],
+        "model_count": 2,
+        "generalist_count": 1,
+        "specialist_count": 1,
+        "memory_mib": 18156.0,
+        "predicted_makespan_ms": 117704.80000000002,
+        "predicted_throughput_qps": 6.796664197212007,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.041732
+        },
+        "model_load_ms": {
+          "qwen": 117704.80000000002,
+          "paddleocr": 969.8000000000001
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 48.0,
+      "budget_mib": 49152.0,
+      "max_models": 3,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 8,
+      "best": {
+        "models": [
+          "qwen",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 3,
+        "generalist_count": 1,
+        "specialist_count": 2,
+        "memory_mib": 19782.0,
+        "predicted_makespan_ms": 32777.6,
+        "predicted_throughput_qps": 24.40691203748902,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "whisper": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.042181
+        },
+        "model_load_ms": {
+          "qwen": 32777.6,
+          "paddleocr": 969.8000000000001,
+          "whisper": 24549.600000000002
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18906.0,
+          "predicted_makespan_ms": 109424.80000000002,
+          "predicted_throughput_qps": 7.310956931152718,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 109424.80000000002,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18156.0,
+          "predicted_makespan_ms": 117704.80000000002,
+          "predicted_throughput_qps": 6.796664197212007,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 117704.80000000002,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19384.0,
+          "predicted_makespan_ms": 131693.8,
+          "predicted_throughput_qps": 6.0746975180304625,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 131693.8,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19362.0,
+          "predicted_makespan_ms": 149683.8,
+          "predicted_throughput_qps": 5.344599749605502,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 149683.8,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert"
+          ],
+          "model_count": 2,
+          "generalist_count": 1,
+          "specialist_count": 1,
+          "memory_mib": 18780.0,
+          "predicted_makespan_ms": 178663.2,
+          "predicted_throughput_qps": 4.4776988210219,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 178663.2,
+            "distilbert": 346.20000000000005
+          }
+        }
+      ]
+    },
+    {
+      "budget_gib": 48.0,
+      "budget_mib": 49152.0,
+      "max_models": 4,
+      "max_generalists": 1,
+      "quality_preset": "specialist_baseline",
+      "subsets_enumerated": 128,
+      "feasible_count": 16,
+      "best": {
+        "models": [
+          "qwen",
+          "resnet50",
+          "paddleocr",
+          "whisper"
+        ],
+        "model_count": 4,
+        "generalist_count": 1,
+        "specialist_count": 3,
+        "memory_mib": 20386.0,
+        "predicted_makespan_ms": 20901.227265685517,
+        "predicted_throughput_qps": 38.275264405808166,
+        "routing": {
+          "text": {
+            "qwen": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "image": {
+            "resnet50": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "ocr": {
+            "paddleocr": {
+              "fraction": 1.0,
+              "requests": 200.0
+            }
+          },
+          "asr": {
+            "qwen": {
+              "fraction": 0.14861230872659778,
+              "requests": 29.722461745319556
+            },
+            "whisper": {
+              "fraction": 0.8513876912734022,
+              "requests": 170.27753825468045
+            }
+          }
+        },
+        "predicted_quality": {
+          "text": 0.945,
+          "image": 1.0,
+          "ocr": 0.96,
+          "asr": 0.04211427307338176
+        },
+        "model_load_ms": {
+          "qwen": 20901.227265685517,
+          "resnet50": 921.0000000000001,
+          "paddleocr": 969.8000000000001,
+          "whisper": 20901.227265685517
+        }
+      },
+      "top10": [
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20386.0,
+          "predicted_makespan_ms": 20901.227265685517,
+          "predicted_throughput_qps": 38.275264405808166,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.14861230872659778,
+                "requests": 29.722461745319556
+              },
+              "whisper": {
+                "fraction": 0.8513876912734022,
+                "requests": 170.27753825468045
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04211427307338176
+          },
+          "model_load_ms": {
+            "qwen": 20901.227265685517,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 20901.227265685517
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20532.0,
+          "predicted_makespan_ms": 24537.939271882264,
+          "predicted_throughput_qps": 32.60257477761022,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 0.0004749864811540392,
+                "requests": 0.09499729623080784
+              },
+              "whisper": {
+                "fraction": 0.999525013518846,
+                "requests": 199.9050027037692
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.04218078673106997
+          },
+          "model_load_ms": {
+            "qwen": 24537.939271882264,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24537.939271882264
+          }
+        },
+        {
+          "models": [
+            "distilbert",
+            "resnet50",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 0,
+          "specialist_count": 4,
+          "memory_mib": 3562.0,
+          "predicted_makespan_ms": 24549.600000000002,
+          "predicted_throughput_qps": 32.587088995340046,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 21010.0,
+          "predicted_makespan_ms": 28979.399999999998,
+          "predicted_throughput_qps": 27.605816545546148,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 28979.399999999998,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 19782.0,
+          "predicted_makespan_ms": 32777.6,
+          "predicted_throughput_qps": 24.40691203748902,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "qwen": 32777.6,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "paddleocr",
+            "whisper"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 20988.0,
+          "predicted_makespan_ms": 46969.4,
+          "predicted_throughput_qps": 17.03236575302218,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 46969.4,
+            "distilbert": 346.20000000000005,
+            "paddleocr": 969.8000000000001,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "whisper"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 20406.0,
+          "predicted_makespan_ms": 75948.8,
+          "predicted_throughput_qps": 10.53341198280947,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "whisper": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.97,
+            "asr": 0.042181
+          },
+          "model_load_ms": {
+            "minicpm": 75948.8,
+            "distilbert": 346.20000000000005,
+            "whisper": 24549.600000000002
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19510.0,
+          "predicted_makespan_ms": 84927.20000000001,
+          "predicted_throughput_qps": 9.419832515377875,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 84927.20000000001,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "qwen",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 3,
+          "generalist_count": 1,
+          "specialist_count": 2,
+          "memory_mib": 18760.0,
+          "predicted_makespan_ms": 93207.20000000001,
+          "predicted_throughput_qps": 8.583027920589824,
+          "routing": {
+            "text": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "qwen": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.945,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.041732
+          },
+          "model_load_ms": {
+            "qwen": 93207.20000000001,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        },
+        {
+          "models": [
+            "minicpm",
+            "distilbert",
+            "resnet50",
+            "paddleocr"
+          ],
+          "model_count": 4,
+          "generalist_count": 1,
+          "specialist_count": 3,
+          "memory_mib": 19966.0,
+          "predicted_makespan_ms": 102714.4,
+          "predicted_throughput_qps": 7.7885866051887565,
+          "routing": {
+            "text": {
+              "distilbert": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "image": {
+              "resnet50": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "ocr": {
+              "paddleocr": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            },
+            "asr": {
+              "minicpm": {
+                "fraction": 1.0,
+                "requests": 200.0
+              }
+            }
+          },
+          "predicted_quality": {
+            "text": 0.925,
+            "image": 1.0,
+            "ocr": 0.96,
+            "asr": 0.019295
+          },
+          "model_load_ms": {
+            "minicpm": 102714.4,
+            "distilbert": 346.20000000000005,
+            "resnet50": 921.0000000000001,
+            "paddleocr": 969.8000000000001
+          }
+        }
+      ]
+    }
+  ]
+}

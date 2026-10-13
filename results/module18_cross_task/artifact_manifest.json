@@ -1,0 +1,430 @@
+{
+  "at_utc": "2026-10-08T10:26:29.252292+00:00",
+  "gate": "CROSS_TASK_THREE_PHASE_REAL_VALIDATED",
+  "artifacts": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/campaign.log",
+      "sha256": "c4e519ddc5776fdaec596e58cf8337c2c64db1691a114abedb274b19a577a582",
+      "bytes": 1341971,
+      "mtime_ns": 1791454858383667582
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/campaign_status.json",
+      "sha256": "8d80d1c4d8d72bfde94b4a79e9c7af54933df5c90d777b20da5174a38d0a2b12",
+      "bytes": 1790,
+      "mtime_ns": 1791454858383667582
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/completion_audit.json",
+      "sha256": "b74e3572adc6a434c478ddaa7f7256b2d3cbd6b3ad375672d53418824c4b447c",
+      "bytes": 1154,
+      "mtime_ns": 1791455189247696177
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/controlled_common_G_pool.json",
+      "sha256": "a01dfd51334ec225b75d0feb08c7cff4eb7ef28c5287a877c946dbbb813c79a6",
+      "bytes": 107223,
+      "mtime_ns": 1791450009168387756
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu/controlled_common_g_image.json",
+      "sha256": "fa937ec37eb08478901b56ab2a6804cd19d5b5c0f79ab53874be2a52388c88c0",
+      "bytes": 138854,
+      "mtime_ns": 1791450010067937411
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu/controlled_common_g_lid.json",
+      "sha256": "c22cc57cdb894b847234096b20b92c041e806e3bf5096dcd2012cbf99603cc73",
+      "bytes": 100543,
+      "mtime_ns": 1791450010171885374
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu/controlled_common_g_text.json",
+      "sha256": "1beab4ed48e30494ec724d1a69e7f95aced610b34744171e14f6cff4ba95c845",
+      "bytes": 100114,
+      "mtime_ns": 1791450009940001458
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu/full_heavy_image.json",
+      "sha256": "7747121657ef31d2988a097f82cbf77511dbaf31a35deccb10c4b0e0c4a03244",
+      "bytes": 67992,
+      "mtime_ns": 1791450009748097532
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu/full_heavy_lid.json",
+      "sha256": "8263a8598a3a30f210dd765248972067e7103680af7081b3e7809fea1512eaa8",
+      "bytes": 68420,
+      "mtime_ns": 1791450009860041489
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu/full_heavy_text.json",
+      "sha256": "cc7973c59423ddfe825e2f187ec47ec923270ca67c647c76f27e81827216723e",
+      "bytes": 68058,
+      "mtime_ns": 1791450009640151573
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu_capacity_margin.csv",
+      "sha256": "4bb381df6f15e7d37887dabafab3df88f79e252d7fdae240aa0afd98a9d61643",
+      "bytes": 3910,
+      "mtime_ns": 1791450650616653743
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu_pool_comparison.csv",
+      "sha256": "a1e83ac3c1e2844b6b336646bcaa3242053bc5623d330f2ba80d4114133ad600",
+      "bytes": 6370,
+      "mtime_ns": 1791450012066936740
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu_protocol_freeze.json",
+      "sha256": "9b2ab288ab5ebeb1f8444eda9fb57a53fce0534ac292d0d7171181a1e9196818",
+      "bytes": 6762,
+      "mtime_ns": 1791450009172385754
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/cpu_search_results.json",
+      "sha256": "e88d2d5da1d529d39308a1aec27c3acd8035c6a2fa9c2817a8ed7ab8a16313fc",
+      "bytes": 16111292,
+      "mtime_ns": 1791450012058940741
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/e2e_summary.csv",
+      "sha256": "89f866577189489a56da1b8fdd70a9cb85a1e38b2a1df3a8309016eb863de880",
+      "bytes": 70883,
+      "mtime_ns": 1791454902772213620
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/frozen_task_manifests.json",
+      "sha256": "fb1463b82db31f5de06a606b5a25960b4f394e723680948b40524ddb8380aa51",
+      "bytes": 5181050,
+      "mtime_ns": 1791450567563750387
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/gpu_validation.csv",
+      "sha256": "dd7f189137162b3dad6cdebd5f2318a38e27784ab9cd54b53326a810d6e795c4",
+      "bytes": 41878,
+      "mtime_ns": 1791454902764213522
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/gpu_validation_rows.json",
+      "sha256": "07fbab027ca6d5331c355c0acc4795a4bfef14bd70d86f2223a63c11a153e485",
+      "bytes": 70167,
+      "mtime_ns": 1791454902688212589
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/memory_summary.csv",
+      "sha256": "fa92645818f099db5ce058b044599c144651d86b392964c361a6052e362d913d",
+      "bytes": 3428,
+      "mtime_ns": 1791454902772213620
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/module18_gate.json",
+      "sha256": "395b9f3acc79e23f46508839fb80bf218afbd9e34c4b991267287b4eef0a7cf8",
+      "bytes": 12674,
+      "mtime_ns": 1791455059525004757
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/module18_summary.md",
+      "sha256": "a95bce3d3af1afd90ad0f95b6e8c14b9b1ec1dd5d49c94eb137e661567a437a3",
+      "bytes": 6962,
+      "mtime_ns": 1791455059529005117
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/paper_experiment_scope.json",
+      "sha256": "2b4d6d377253501e8e1924c2d44091912c0a9525b52e7b3601a58c213aaf1e07",
+      "bytes": 1612,
+      "mtime_ns": 1791455059529005117
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/per_model_metrics.csv",
+      "sha256": "d1fb04cc6a7b3d75d2a3cd7fda2c77995f01c1e6e7f0364ab4cba327ec52ec96",
+      "bytes": 18392,
+      "mtime_ns": 1791454902772213620
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/per_task_routing.csv",
+      "sha256": "288243d82d98ae52938ee5086ba35fe2f4febe71aee39a5dba87837639ce81e7",
+      "bytes": 43023,
+      "mtime_ns": 1791454902768213570
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/phase_mechanism_comparison.json",
+      "sha256": "61c6ab7c0191a92fb03dee4ef2167865ca41517e11ed624425e95628863c48ee",
+      "bytes": 3574,
+      "mtime_ns": 1791455059525004757
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/pool_admission_definition.json",
+      "sha256": "b2335ee15b923e57f24902122311310fd3e119c96690f5e446170699f287efe4",
+      "bytes": 2913,
+      "mtime_ns": 1791450009168387756
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/protected_before.json",
+      "sha256": "784372232c2c8cf0f4ab5882e8909902100fc225d414897025c3f2709de93531",
+      "bytes": 2617107,
+      "mtime_ns": 1791450008888471222
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/quality_and_empirical_path_audit.json",
+      "sha256": "4ec657e25cb85637a30f90802feb73f35d37861048e6bc6a6db8ba6f92454575",
+      "bytes": 38870,
+      "mtime_ns": 1791450009172385754
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_high_rep1.json",
+      "sha256": "9982b1533060d1b9f2172c8771e7778e0276396bf5f01e272e929492c9f46b8d",
+      "bytes": 29361993,
+      "mtime_ns": 1791453107603687497
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_high_rep2.json",
+      "sha256": "6eb94dd9130799c29fc80d47dfb1c28e64da1d4867101dcfaddc491be925548b",
+      "bytes": 29374269,
+      "mtime_ns": 1791453268176637045
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_high_rep3.json",
+      "sha256": "bd6e0980dbd34b9ff57524a35cefe87dfc4425ab19cc445fc8294369a8c59d83",
+      "bytes": 29372904,
+      "mtime_ns": 1791453429040761836
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_low_rep1.json",
+      "sha256": "2c10fc71257e7f3abcaa87757f23e87b2ce59e8e24c19e7ec52c95ce92e53a03",
+      "bytes": 688528,
+      "mtime_ns": 1791452159940368851
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_low_rep2.json",
+      "sha256": "b6542e13f2ffd5b1f0ffb38a95c73a50c9945b7d4997deda01cbcd7b312cb4df",
+      "bytes": 690832,
+      "mtime_ns": 1791452314341062355
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_low_rep3.json",
+      "sha256": "55dd5042fe69b1a4bcfc87ef75075e7ad60f7eb70153940f84d8e995797e6d90",
+      "bytes": 693422,
+      "mtime_ns": 1791452469333885373
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_mid_rep1.json",
+      "sha256": "7929c129ed42fb21ccc0bf71cadac05593c079106f4a62a68becc35c25661666",
+      "bytes": 2870562,
+      "mtime_ns": 1791452629218832481
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_mid_rep2.json",
+      "sha256": "03d35fd5e512e450da651b04a07bea992efa73c3076e4e39b285a064b0e03d2d",
+      "bytes": 2862372,
+      "mtime_ns": 1791452788655849793
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/image_mid_rep3.json",
+      "sha256": "9d79eb6efb1975f7b7d83f0eaede455887bbfa5162735c70df07454afcdef295",
+      "bytes": 2857504,
+      "mtime_ns": 1791452948005640828
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_high_rep1.json",
+      "sha256": "16683856d7b382a5318bb992bfc8ac9f7770b9901e278e85501f2f9d4f3b42a9",
+      "bytes": 3235095,
+      "mtime_ns": 1791454535339590709
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_high_rep2.json",
+      "sha256": "97b6d7e178fff9a3e448d3833fd1e8600876ae5a5e524178d98a2d9a64819ed5",
+      "bytes": 3227557,
+      "mtime_ns": 1791454695377636203
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_high_rep3.json",
+      "sha256": "c2e26f061f88e3f638a9660b208db773d1d6abf9cd3a04868121b17152563eeb",
+      "bytes": 3229158,
+      "mtime_ns": 1791454858355667236
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_low_rep1.json",
+      "sha256": "51cbefaadc2d28a08bb09748643dd49389ddd75968a62c8c193597bec68a801c",
+      "bytes": 687474,
+      "mtime_ns": 1791453583364143876
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_low_rep2.json",
+      "sha256": "45e565aebeaed37706ac2903f0d3ecd2c50545641d90aae3cc90791cd29c26d7",
+      "bytes": 692949,
+      "mtime_ns": 1791453738435710553
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_low_rep3.json",
+      "sha256": "eb8707a1bd83383522a4b38ed9d3fa5d82f7a566dd291d0291763e6e826e9f99",
+      "bytes": 687432,
+      "mtime_ns": 1791453893234378017
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_mid_rep1.json",
+      "sha256": "20f6070837a9b43383795f1c0ee62f304653e7a62868343e63eb43765b5fc23c",
+      "bytes": 2296113,
+      "mtime_ns": 1791454052860891018
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_mid_rep2.json",
+      "sha256": "d3221a18a45ec0ace050e70f8080d4cf2e2883eb23e9e27cf2e9bdb90911ed64",
+      "bytes": 2298664,
+      "mtime_ns": 1791454213087235305
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/lid_mid_rep3.json",
+      "sha256": "e4210f576a45bc90cecd694944ba65a1133e57d8a836d637eadcd1d633bd5a63",
+      "bytes": 2305694,
+      "mtime_ns": 1791454374985471592
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_high_rep1.json",
+      "sha256": "b985fd401e9e67b61629191d1a919af4e848ab7b8e8cc99cf4c009c100096150",
+      "bytes": 13435425,
+      "mtime_ns": 1791451684931591140
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_high_rep2.json",
+      "sha256": "28dc6fa8398da1bcec604cc97ad07576ecb6b3077c93179b5d3939e2da1a7ad0",
+      "bytes": 13434110,
+      "mtime_ns": 1791451844791547909
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_high_rep3.json",
+      "sha256": "1a60f63f38ef48cf77e93d7c930933032c071d6eb7eb740e2e6facb4bb1f925c",
+      "bytes": 13443780,
+      "mtime_ns": 1791452005195845052
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_low_rep1.json",
+      "sha256": "ae86f4ddf04a66f7ab6a80574c91f49915d56f0d2f3e081f53c209a83b64cd24",
+      "bytes": 694011,
+      "mtime_ns": 1791450737933671221
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_low_rep2.json",
+      "sha256": "67f82ce21beb8f710141fac23bb790ba831ff2ec63bbe0d91712db490a405c9c",
+      "bytes": 708463,
+      "mtime_ns": 1791450892758979794
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_low_rep3.json",
+      "sha256": "8e9280f3e135e54e5740bd45780c204fd598874bf6781fe6f9bb5260bfda009b",
+      "bytes": 698183,
+      "mtime_ns": 1791451048330361430
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_mid_rep1.json",
+      "sha256": "752b74e2179f10483d5321251c666c7817ed1435bd52416f1bedc0791ce364e1",
+      "bytes": 5019375,
+      "mtime_ns": 1791451206475224642
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_mid_rep2.json",
+      "sha256": "c1ac34440f94b62cd8a82f4611e2d0553a47daedbfd586b66aebef2ff0431903",
+      "bytes": 5019820,
+      "mtime_ns": 1791451365817231478
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/raw_runs/text_mid_rep3.json",
+      "sha256": "5d83c3d5e2a7d5b4631ff1ffa5b8ba3ace33cbb134c351486d20ca467f0652d3",
+      "bytes": 5026530,
+      "mtime_ns": 1791451525952093266
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/speech_colocation_review.json",
+      "sha256": "803987ef98969dedc788b26fe64ef9df40b905c3d919bcd86b63129f71345104",
+      "bytes": 46788,
+      "mtime_ns": 1791455059525004757
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/task_phase_summary.csv",
+      "sha256": "d5658c65d9440668ffc17ba6b63c3a3b47829b1d4dbd9400125432fcb5fb87d9",
+      "bytes": 800,
+      "mtime_ns": 1791454902836214405
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/worker_queue_evidence.json",
+      "sha256": "cc175ed4991ae2a4a69debac84ba0f09f09f7e2534046bbafdfc173b8c64c009",
+      "bytes": 2626735,
+      "mtime_ns": 1791454902760213472
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/worker_stability_summary.csv",
+      "sha256": "c1a4a73285c52e990baaba0fafb9cfe7a03e00bbf6498a3bab74ad12838de78c",
+      "bytes": 10003,
+      "mtime_ns": 1791455059517004038
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/worker_task_service.csv",
+      "sha256": "79f2d8965211c594eb5976b6ecd2552a316e927a428dff789e9ecb3f64672915",
+      "bytes": 31649,
+      "mtime_ns": 1791454902776213669
+    }
+  ],
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1791449994684480229
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/common.py",
+      "sha256": "dd8e49705895b1236ece34af854da958ad867a033b9aadad74f02da5f9ecc00e",
+      "bytes": 618,
+      "mtime_ns": 1791449994684480229
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/finalize.py",
+      "sha256": "ba610861a3cf851d1f2d85d043f41cffa02fe9e09a1c4394ff0644fcd1783cde",
+      "bytes": 17731,
+      "mtime_ns": 1791450532963395204
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/freeze_gpu.py",
+      "sha256": "25d56b233ec5f192d335ac3fe2cd1d4df26b93d9874d5dc0d7132882e2d7e6fb",
+      "bytes": 3996,
+      "mtime_ns": 1791450394706122971
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/gpu.py",
+      "sha256": "38321e436ea6ae4a10f31e06a88e902b02e77994bbcaafc2d4c0b420a94d06c8",
+      "bytes": 5452,
+      "mtime_ns": 1791450394726123137
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/prepare.py",
+      "sha256": "d0119d1dd88f5b97e401bb667e0287faece5596dfe7676ff9f54f4f8ee4c34a5",
+      "bytes": 6413,
+      "mtime_ns": 1791449994688480226
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/report_runtime_limits.py",
+      "sha256": "57f6f9927c6c05517068ae2ca38aa7be3ab69e3ac89983be4ddb3a9925fe026e",
+      "bytes": 9677,
+      "mtime_ns": 1791455059444997563
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/search.py",
+      "sha256": "4bdc28239cbcd16f8d023f92cdf9f8b7057ee59ca4509af73e37cf9795658acd",
+      "bytes": 6750,
+      "mtime_ns": 1791449994688480226
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module18/solver.py",
+      "sha256": "50b774484e10d1d5b5b2497056af7167ec20ea80336b6fa5b6c15cae7c2ed934",
+      "bytes": 182,
+      "mtime_ns": 1791449994688480226
+    }
+  ],
+  "post_GPU_reporting_implementation": {
+    "path": "/root/autodl-tmp/generalist-specialist/module18/report_runtime_limits.py",
+    "sha256": "57f6f9927c6c05517068ae2ca38aa7be3ab69e3ac89983be4ddb3a9925fe026e",
+    "bytes": 9677,
+    "mtime_ns": 1791455059444997563
+  },
+  "status": "COMPLETE_AND_STOPPED",
+  "frozen_system_gate_retained_with_worker_limitations": true
+}

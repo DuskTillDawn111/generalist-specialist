@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-09-30T20:16:40.677204+00:00",
+  "finalizer_path": "/root/autodl-tmp/generalist-specialist/module3c_finalize.py",
+  "finalizer_sha256": "9d53be055a82fcb0c2bceb6b285b90f242a4b9a1cdd36c0ab395cd369dcb492f",
+  "files": {
+    "benchmark_workloads.json": "4b2cc94257870199d36fca03cea0b39028e05f20a5c37eabe55c5a7df9a6fbed",
+    "benchmark_config.json": "6e934bc8618a32bd7a2ec055385c184fa5564cec618c9db57b9073aff5ba7516",
+    "execution_order.json": "8d25d2a39a50390ccadb6c7779083dc957217877793051fa55415a77929d1c08",
+    "source_model_hashes.json": "915477d6b43aa071cdbe1d1fa3428f72fedd1b426a9739726add48f72f2d83b3",
+    "shared_runtime_cache_manifest.json": "819c1289fa3b3bb9f9a1b51cde58336d761e8c3a01609f38f685bed7f990c1b8",
+    "cache_access_audit.jsonl": "9af2b7d777a5b7e4b8d4ec63c82730347386688c84e32bbe9bbf5f67f77e9065",
+    "confirmation_attempts.jsonl": "9f72b6f35976a067e438b80fc69986234f1c9356c6801c04c2f329f71d1d6863",
+    "confirmation_outcomes.jsonl": "306ae247677a3607c3b4edf28f0617a30c4e30dc9f0e91e6073251c7d6892d1d",
+    "per_workload_metrics.json": "867778a424911cef0c463b795e24e5a6c43747096c3a7e1f207f9d6fd8a2fa26",
+    "search_efficiency.json": "c32b151e985e70388747a0cb9254f78f12d18c5833dae6e05353bab36ff3683d",
+    "lp_runtime_correlation.json": "9fff591f6d96efe775c3af5d13b0facd645856a49b05b1adc43463a861f038d8",
+    "lp_runtime_correlation_unique_sensitivity.json": "97b692c77353b2e64fe96006214cd6dd66b26550d5a98718c70a7d9a1150ac8b",
+    "ablation_results.json": "ecfc7142953f68561e936383f62f07310a80a4727323b0a0fc4d7ef7fbf92191",
+    "proposed_vs_random.json": "428a295310e919209f8e1fb8795ccc2d7207e5b2cca71af1a7f913348a71c4ac",
+    "macro_summary.json": "29fd2055d49b4520b560ce558d7c76e839350f08bf366a48b2ba9d246d0fed20",
+    "module3c_summary.md": "0c76dc4a82681720bd972f54ffbd073b0db5f31fc7cbdb8b45e73d3f84f94c0f"
+  },
+  "search_decisions_unchanged_after_freeze": true,
+  "confirmation_not_used_for_search": true
+}

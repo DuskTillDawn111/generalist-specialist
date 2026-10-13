@@ -1,0 +1,45 @@
+{
+  "module": 23,
+  "gate": "THREE_PHASE_CPU_NOT_REPRODUCED",
+  "Stage_A_passed": false,
+  "Stage_B_passed": null,
+  "Stage_C_passed": null,
+  "GPU_started": false,
+  "formal_GPU_runs": 0,
+  "stage_checks": {
+    "LOW": {
+      "all_six_tasks_covered": true,
+      "quality_admission": true,
+      "safe_memory_budget": true,
+      "legal_counts": true,
+      "flow_conservation": true,
+      "nominal_capacity": true,
+      "expected_structure": true,
+      "predicted_gain_gt_001": true
+    },
+    "MID": {
+      "all_six_tasks_covered": true,
+      "quality_admission": true,
+      "safe_memory_budget": true,
+      "legal_counts": true,
+      "flow_conservation": true,
+      "nominal_capacity": true,
+      "expected_structure": true,
+      "predicted_gain_gt_001": true
+    },
+    "HIGH": {
+      "all_six_tasks_covered": true,
+      "quality_admission": true,
+      "safe_memory_budget": true,
+      "legal_counts": true,
+      "flow_conservation": true,
+      "nominal_capacity": true,
+      "expected_structure": false,
+      "predicted_gain_gt_001": false
+    }
+  },
+  "positive_utility_three_phase_established": false,
+  "reason": "Stage A autonomous phase/gain requirements failed; user requires stopping before Stage B/C.",
+  "no_Module24": true,
+  "historical_experiments_modified": false
+}

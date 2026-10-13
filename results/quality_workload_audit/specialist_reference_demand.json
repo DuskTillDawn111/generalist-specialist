@@ -1,0 +1,57 @@
+{
+  "tasks": {
+    "text": {
+      "status": "VERIFIED",
+      "model": "distilbert",
+      "s0_ms": 3.7693092222222226,
+      "all_verified_specialists_s0_ms": {
+        "distilbert": 3.7693092222222226,
+        "roberta_sst2": 5.506413722222223
+      }
+    },
+    "image": {
+      "status": "VERIFIED",
+      "model": "resnet50",
+      "s0_ms": 5.4978217888888885,
+      "all_verified_specialists_s0_ms": {
+        "resnet50": 5.4978217888888885,
+        "convnext_tiny": 5.847736
+      }
+    },
+    "ocr": {
+      "status": "VERIFIED",
+      "model": "paddleocr",
+      "s0_ms": 6.0675248999999996,
+      "all_verified_specialists_s0_ms": {
+        "paddleocr": 6.0675248999999996,
+        "paddleocr_vl": 85.5324064
+      }
+    },
+    "asr": {
+      "status": "VERIFIED",
+      "model": "distil_whisper",
+      "s0_ms": 146.22366614444445,
+      "all_verified_specialists_s0_ms": {
+        "whisper-small": 190.16587112222223,
+        "whisper_turbo": 170.52229172222223,
+        "distil_whisper": 146.22366614444445
+      }
+    },
+    "visual_qa": {
+      "status": "NO_SPECIALIST",
+      "model": null,
+      "s0_ms": null,
+      "all_verified_specialists_s0_ms": {}
+    },
+    "lid": {
+      "status": "VERIFIED",
+      "model": "whisper-small",
+      "s0_ms": 27.084134877777778,
+      "all_verified_specialists_s0_ms": {
+        "whisper-small": 27.084134877777778,
+        "whisper_turbo": 83.17856548888889
+      }
+    }
+  },
+  "note": "Exploratory cheapest verified specialist reference; quality not constrained; VQA excluded rather than treated as zero cost"
+}

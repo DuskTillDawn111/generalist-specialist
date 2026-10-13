@@ -1,0 +1,58 @@
+{
+  "scope": "CPU-only release after failedv1 engineering; no GPU run with this version",
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/router_optimized.py",
+      "sha256": "c11086bf9660ef72c26f11574e51971bec513f2489f48a625cd379f463fff23f",
+      "bytes": 11927
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/vqa_aware_dynamic_router.py",
+      "sha256": "d85aef6d99d3c79dec6b0ca430e847224b6df42dc2c358bca0b21544d5f2f3f2",
+      "bytes": 2982
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/m32d/monitor_cpu_revision.py",
+      "sha256": "58a4ad307d4a089af5e1762da8db81797b3ba66a8bffcc50e0722e72be2f4b9c",
+      "bytes": 1357
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2.py",
+      "sha256": "ad5a9b572c04ad56e49292616fc7843b8441ff76200a899c68226499e9070fa0",
+      "bytes": 12492
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/test_monitor_phase_transition.py",
+      "sha256": "41f01ce3c657ddba18dce21aa1d72372459830c315642f4e5247be1d5f33381e",
+      "bytes": 2062
+    }
+  ],
+  "original_GPU_frozen_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_validation_manifest.json",
+    "sha256": "3b9d5d52a7d6ae95c091fdc86ce9783babec849ebb25a6512d5e9462532eb452",
+    "bytes": 547183
+  },
+  "parameters": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/frozen_routing_parameters.json",
+    "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+    "bytes": 1992
+  },
+  "metadata": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/audio_metadata_cache.json",
+    "sha256": "7e335a83ac40fc2b53c656821360f3ffaa2b425fb0b1b2cf05e6a92438e7dbc7",
+    "bytes": 3928
+  },
+  "dependencies": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/final_environment_identity.json",
+    "sha256": "36107ba661b3a560fe2e68ba5d906cde7902bbe747472df58aebcbeada6ca524",
+    "bytes": 10472
+  },
+  "CPU_acceptance": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32d_router_repair/cpu_repaired_v2/CPU_runtime_acceptance.json",
+    "sha256": "20eeb60b0ca01694056f865ccd032c7743f43366cf7df602442f0a9f2b1ce1ce",
+    "bytes": 4014
+  },
+  "same_state_policy_semantics": "exact original32B",
+  "GPU_validation": false,
+  "formal_optimizer_changed": false
+}

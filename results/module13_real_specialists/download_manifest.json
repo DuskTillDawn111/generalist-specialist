@@ -1,0 +1,721 @@
+{
+  "at_utc": "2026-10-07T15:14:25.635282+00:00",
+  "scope": "Module13B pinned download; one copy per unique checkpoint",
+  "order": [
+    "facebook/wav2vec2-large-960h-lv60-self",
+    "openai/whisper-large-v3",
+    "openai/whisper-medium",
+    "facebook/mms-lid-256",
+    "speechbrain/lang-id-voxlingua107-ecapa",
+    "philschmid/roberta-large-sst2",
+    "textattack/facebook-bart-large-SST-2",
+    "textattack/xlnet-base-cased-SST-2"
+  ],
+  "models": [
+    {
+      "model_id": "facebook/wav2vec2-large-960h-lv60-self",
+      "frozen_revision": "54074b1c16f4de6a5ad59affb4caa8f2ea03a119",
+      "resolved_revision": "54074b1c16f4de6a5ad59affb4caa8f2ea03a119",
+      "task_paths": [
+        "asr"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self",
+      "files": [
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/config.json",
+          "bytes": 1606,
+          "sha256": "bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "feature_extractor_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/feature_extractor_config.json",
+          "bytes": 157,
+          "sha256": "5415d0e5f57a6893552b1f916d6e9b9ce312a147fff3e65b260fefadd2f77dbf",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "preprocessor_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/preprocessor_config.json",
+          "bytes": 158,
+          "sha256": "c403ce09975b90dff0dd8302c42d422e9de1f166cd7772df23490069893cb0cf",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "pytorch_model.bin",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/pytorch_model.bin",
+          "bytes": 1262055246,
+          "sha256": "00b604cf4d28e86559e8adaeb3a186daa89dc37f5ab216771a0a15a26db0de9f",
+          "reused": true,
+          "lfs_sha_verified": true
+        },
+        {
+          "file": "special_tokens_map.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/special_tokens_map.json",
+          "bytes": 85,
+          "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "tokenizer_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/tokenizer_config.json",
+          "bytes": 162,
+          "sha256": "c9a86ca4c3d72d4cda976512cd786cc65d87fe22afcd4164c8470f1dde7c9758",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "vocab.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--wav2vec2-large-960h-lv60-self/vocab.json",
+          "bytes": 291,
+          "sha256": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+          "reused": true,
+          "lfs_sha_verified": false
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 1262057705,
+      "at_utc": "2026-10-07T15:14:27.189072+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "asr",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/asr__facebook--wav2vec2-large-960h-lv60-self__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "openai/whisper-large-v3",
+      "frozen_revision": "06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "resolved_revision": "06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "task_paths": [
+        "asr"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3",
+      "files": [
+        {
+          "file": "added_tokens.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/added_tokens.json",
+          "bytes": 34648,
+          "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/config.json",
+          "bytes": 1272,
+          "sha256": "ad0e8d1e46f4d01f7861a21509e5d0f977d6cc1f367a370603c92541d819807b",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "generation_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/generation_config.json",
+          "bytes": 3903,
+          "sha256": "fbdfa70135de9b1d31553393f14e80aaeb1936ea36576b2ba864055943c09d23",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "merges.txt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/merges.txt",
+          "bytes": 493869,
+          "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "model.safetensors",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/model.safetensors",
+          "bytes": 3087130976,
+          "sha256": "a8e94b85976e5864ba3e9525c7e6c83b2a1eca42d4b797a0c7c24d778e40fd95",
+          "source_url": "https://hf-mirror.com/openai/whisper-large-v3/resolve/06f233fe06e710322aca913c1bc4249a0d71fce1/model.safetensors",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "normalizer.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/normalizer.json",
+          "bytes": 52666,
+          "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "preprocessor_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/preprocessor_config.json",
+          "bytes": 340,
+          "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "special_tokens_map.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/special_tokens_map.json",
+          "bytes": 2072,
+          "sha256": "1c70773c078cb2ca96e0fcff113102f1d3e2b1504272c3bb63b035d4a6700d87",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "tokenizer.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/tokenizer.json",
+          "bytes": 2480617,
+          "sha256": "6d8cbd7cd0d8d5815e478dac67b85a26bbe77c1f5e0c6d76d1ce2abc0e5f21ca",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "tokenizer_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/tokenizer_config.json",
+          "bytes": 282843,
+          "sha256": "844b642c73a91359722f47b35705f7174686df33d252695d8572cf9ac03a6389",
+          "reused": true,
+          "lfs_sha_verified": false
+        },
+        {
+          "file": "vocab.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-large-v3/vocab.json",
+          "bytes": 1036558,
+          "sha256": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387",
+          "reused": true,
+          "lfs_sha_verified": false
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 3091519764,
+      "at_utc": "2026-10-07T15:20:18.517950+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "asr",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/asr__openai--whisper-large-v3__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "openai/whisper-medium",
+      "frozen_revision": "abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "resolved_revision": "abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "task_paths": [
+        "asr",
+        "lid"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium",
+      "files": [
+        {
+          "file": "added_tokens.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/added_tokens.json",
+          "bytes": 34604,
+          "sha256": "9715fd2243b6f06a5858b5e32950d2853f73dd5bc201aafcf76f5082a2d8acd1",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/added_tokens.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/config.json",
+          "bytes": 1991,
+          "sha256": "18706810eb740d1dc54d1db181358d5f8578600d0f449e51dfd4798c0223a1f5",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "generation_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/generation_config.json",
+          "bytes": 3755,
+          "sha256": "503290bc2da3923915d96a96ab96ddaa76e7ea18fbd4c5c1822a2947c82c86db",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/generation_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "merges.txt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/merges.txt",
+          "bytes": 493869,
+          "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/merges.txt",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "model.safetensors",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/model.safetensors",
+          "bytes": 3055544304,
+          "sha256": "62f73550fa6db24b0c6f6c5962bd0dae80fa644e93cde9cd9c3792971b47fd28",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/model.safetensors",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "normalizer.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/normalizer.json",
+          "bytes": 52666,
+          "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/normalizer.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "preprocessor_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/preprocessor_config.json",
+          "bytes": 184990,
+          "sha256": "9b5cd03a36fbb8a627c64d98a5b5b126ead95a77720723944487311f0110b666",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/preprocessor_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "special_tokens_map.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/special_tokens_map.json",
+          "bytes": 2194,
+          "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/special_tokens_map.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "tokenizer.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/tokenizer.json",
+          "bytes": 2480466,
+          "sha256": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/tokenizer.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "tokenizer_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/tokenizer_config.json",
+          "bytes": 282683,
+          "sha256": "2a4c4281cf9f51ac6ccc406fdc711a087afe6530f671fa7b80953edc498275ce",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/tokenizer_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "vocab.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/openai--whisper-medium/vocab.json",
+          "bytes": 835550,
+          "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9",
+          "source_url": "https://hf-mirror.com/openai/whisper-medium/resolve/abdf7c39ab9d0397620ccaea8974cc764cd0953e/vocab.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 3059917072,
+      "at_utc": "2026-10-07T15:31:53.748977+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "asr",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/asr__openai--whisper-medium__quality__r0.summary.json"
+        },
+        {
+          "task": "lid",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/lid__openai--whisper-medium__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "facebook/mms-lid-256",
+      "frozen_revision": "edc73fd00996e671dfc59d16436a29b12b10588a",
+      "resolved_revision": "edc73fd00996e671dfc59d16436a29b12b10588a",
+      "task_paths": [
+        "lid"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--mms-lid-256",
+      "files": [
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--mms-lid-256/config.json",
+          "bytes": 6607,
+          "sha256": "546fb378ff30795019d86647aa97b2914372a18bca14eec52cda507b1943f1ec",
+          "source_url": "https://hf-mirror.com/facebook/mms-lid-256/resolve/edc73fd00996e671dfc59d16436a29b12b10588a/config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "langs.txt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--mms-lid-256/langs.txt",
+          "bytes": 1536,
+          "sha256": "f3838ddbb972f190664375781d1afabfdc6f5f9d4e9256534d9af666290583bc",
+          "source_url": "https://hf-mirror.com/facebook/mms-lid-256/resolve/edc73fd00996e671dfc59d16436a29b12b10588a/langs.txt",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "model.safetensors",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--mms-lid-256/model.safetensors",
+          "bytes": 3865028816,
+          "sha256": "a946279c9911273085f522d9e4edf2a5f60336a78ee3bf8fa931e5e2283d59df",
+          "source_url": "https://hf-mirror.com/facebook/mms-lid-256/resolve/edc73fd00996e671dfc59d16436a29b12b10588a/model.safetensors",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "preprocessor_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/facebook--mms-lid-256/preprocessor_config.json",
+          "bytes": 212,
+          "sha256": "a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335",
+          "source_url": "https://hf-mirror.com/facebook/mms-lid-256/resolve/edc73fd00996e671dfc59d16436a29b12b10588a/preprocessor_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 3865037171,
+      "at_utc": "2026-10-07T15:39:12.048192+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "lid",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/lid__facebook--mms-lid-256__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "speechbrain/lang-id-voxlingua107-ecapa",
+      "frozen_revision": "0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9",
+      "resolved_revision": "0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9",
+      "task_paths": [
+        "lid"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa",
+      "files": [
+        {
+          "file": "classifier.ckpt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa/classifier.ckpt",
+          "bytes": 762555,
+          "sha256": "a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc",
+          "source_url": "https://hf-mirror.com/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/classifier.ckpt",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa/config.json",
+          "bytes": 51,
+          "sha256": "a861f8fbc2e23c0fc0823b3c0fd2b3d1e839563c2d4e3f9663a1237cce62bc89",
+          "source_url": "https://hf-mirror.com/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "embedding_model.ckpt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa/embedding_model.ckpt",
+          "bytes": 84474355,
+          "sha256": "ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a",
+          "source_url": "https://hf-mirror.com/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/embedding_model.ckpt",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "hyperparams.yaml",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa/hyperparams.yaml",
+          "bytes": 1519,
+          "sha256": "88fec9791a8416a152fb10834327e18d38e5bf7a351e9b714e08cdc4af05de6f",
+          "source_url": "https://hf-mirror.com/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/hyperparams.yaml",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "label_encoder.txt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa/label_encoder.txt",
+          "bytes": 2204,
+          "sha256": "9f566d83c4f19168be4a0bf86c0c7dac7d3264a95105bcbf33a7c32b83ccc17f",
+          "source_url": "https://hf-mirror.com/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/label_encoder.txt",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "normalizer.ckpt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/speechbrain--lang-id-voxlingua107-ecapa/normalizer.ckpt",
+          "bytes": 1063,
+          "sha256": "c369e01dfa2e0d84c6b116f33c7b94f1fe28c061642086538e93cde3d97c26ef",
+          "source_url": "https://hf-mirror.com/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/normalizer.ckpt",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 85241747,
+      "at_utc": "2026-10-07T15:42:10.923539+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "lid",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/lid__speechbrain--lang-id-voxlingua107-ecapa__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "philschmid/roberta-large-sst2",
+      "frozen_revision": "7d2599d698b7a805b6831e15e830e60a0b07bdb4",
+      "resolved_revision": "7d2599d698b7a805b6831e15e830e60a0b07bdb4",
+      "task_paths": [
+        "text"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2",
+      "files": [
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/config.json",
+          "bytes": 861,
+          "sha256": "9354a8028b3b30501add52029bf5f28e1d0328d94088f7752ca2a62fe39a11b7",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "merges.txt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/merges.txt",
+          "bytes": 456356,
+          "sha256": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/merges.txt",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "pytorch_model.bin",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/pytorch_model.bin",
+          "bytes": 1421613229,
+          "sha256": "26b88613113fabd49aa922c4759d2c50e837073e8356e4e3609e8f7c1b5036f3",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/pytorch_model.bin",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "special_tokens_map.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/special_tokens_map.json",
+          "bytes": 239,
+          "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/special_tokens_map.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "tokenizer.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/tokenizer.json",
+          "bytes": 2108643,
+          "sha256": "3fe32a3f7f6e08235896038e1f53897879bd10438dd20bd4c9a5f3cad0ad27be",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/tokenizer.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "tokenizer_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/tokenizer_config.json",
+          "bytes": 350,
+          "sha256": "735eee031d055cec66ccb7bcea429cb557a363530a6d33bc5108876830457f6a",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/tokenizer_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "vocab.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/philschmid--roberta-large-sst2/vocab.json",
+          "bytes": 798293,
+          "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+          "source_url": "https://hf-mirror.com/philschmid/roberta-large-sst2/resolve/7d2599d698b7a805b6831e15e830e60a0b07bdb4/vocab.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 1424977971,
+      "at_utc": "2026-10-07T15:50:19.074188+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "text",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/text__philschmid--roberta-large-sst2__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "textattack/facebook-bart-large-SST-2",
+      "frozen_revision": "8a4baa9662afa056a97a2e9441ae665a06504979",
+      "resolved_revision": "8a4baa9662afa056a97a2e9441ae665a06504979",
+      "task_paths": [
+        "text"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2",
+      "files": [
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2/config.json",
+          "bytes": 1198,
+          "sha256": "de00574bf6006fa46b4d8c0c5cdc22d97838f52fe2d2248b5175711de97b8de7",
+          "source_url": "https://hf-mirror.com/textattack/facebook-bart-large-SST-2/resolve/8a4baa9662afa056a97a2e9441ae665a06504979/config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "merges.txt",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2/merges.txt",
+          "bytes": 456318,
+          "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+          "source_url": "https://hf-mirror.com/textattack/facebook-bart-large-SST-2/resolve/8a4baa9662afa056a97a2e9441ae665a06504979/merges.txt",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "pytorch_model.bin",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2/pytorch_model.bin",
+          "bytes": 1629488512,
+          "sha256": "2866760420c317bbce009c22c0befd49c47501278b26cdeb40482bc288e3c674",
+          "source_url": "https://hf-mirror.com/textattack/facebook-bart-large-SST-2/resolve/8a4baa9662afa056a97a2e9441ae665a06504979/pytorch_model.bin",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "special_tokens_map.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2/special_tokens_map.json",
+          "bytes": 150,
+          "sha256": "7638f5bbbe86ef6d604ef28ad3647dc690d6d117c81c0d63e885416be8da1150",
+          "source_url": "https://hf-mirror.com/textattack/facebook-bart-large-SST-2/resolve/8a4baa9662afa056a97a2e9441ae665a06504979/special_tokens_map.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "tokenizer_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2/tokenizer_config.json",
+          "bytes": 26,
+          "sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f",
+          "source_url": "https://hf-mirror.com/textattack/facebook-bart-large-SST-2/resolve/8a4baa9662afa056a97a2e9441ae665a06504979/tokenizer_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "vocab.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--facebook-bart-large-SST-2/vocab.json",
+          "bytes": 898822,
+          "sha256": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab",
+          "source_url": "https://hf-mirror.com/textattack/facebook-bart-large-SST-2/resolve/8a4baa9662afa056a97a2e9441ae665a06504979/vocab.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 1630845026,
+      "at_utc": "2026-10-07T15:56:24.646735+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "text",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/text__textattack--facebook-bart-large-SST-2__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    },
+    {
+      "model_id": "textattack/xlnet-base-cased-SST-2",
+      "frozen_revision": "9ceeb077dcd5cf5ae790572b2bd6aec755a263be",
+      "resolved_revision": "9ceeb077dcd5cf5ae790572b2bd6aec755a263be",
+      "task_paths": [
+        "text"
+      ],
+      "local_directory": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--xlnet-base-cased-SST-2",
+      "files": [
+        {
+          "file": "config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--xlnet-base-cased-SST-2/config.json",
+          "bytes": 805,
+          "sha256": "1f85db41d7fd7dc5732b2b02064f211fab80b86bac9d8632e9e242d998ec207c",
+          "source_url": "https://hf-mirror.com/textattack/xlnet-base-cased-SST-2/resolve/9ceeb077dcd5cf5ae790572b2bd6aec755a263be/config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "pytorch_model.bin",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--xlnet-base-cased-SST-2/pytorch_model.bin",
+          "bytes": 469286046,
+          "sha256": "b8502a9f58944e31280d9bd28e29d904d6a9a961f03f6a106b10fc33d5bdc5b7",
+          "source_url": "https://hf-mirror.com/textattack/xlnet-base-cased-SST-2/resolve/9ceeb077dcd5cf5ae790572b2bd6aec755a263be/pytorch_model.bin",
+          "lfs_sha_verified": true,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "special_tokens_map.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--xlnet-base-cased-SST-2/special_tokens_map.json",
+          "bytes": 202,
+          "sha256": "cecce990288b7f79d3a47f3a8206c741a8f04c3d53fa583fd8dfd1cdbbea8254",
+          "source_url": "https://hf-mirror.com/textattack/xlnet-base-cased-SST-2/resolve/9ceeb077dcd5cf5ae790572b2bd6aec755a263be/special_tokens_map.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "spiece.model",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--xlnet-base-cased-SST-2/spiece.model",
+          "bytes": 798011,
+          "sha256": "1f8c1c0bc2854d1af911a8550288c1258af5ba50277f3a5c829b98eb86fc5646",
+          "source_url": "https://hf-mirror.com/textattack/xlnet-base-cased-SST-2/resolve/9ceeb077dcd5cf5ae790572b2bd6aec755a263be/spiece.model",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        },
+        {
+          "file": "tokenizer_config.json",
+          "path": "/root/autodl-tmp/generalist-specialist/models/module13b/textattack--xlnet-base-cased-SST-2/tokenizer_config.json",
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "source_url": "https://hf-mirror.com/textattack/xlnet-base-cased-SST-2/resolve/9ceeb077dcd5cf5ae790572b2bd6aec755a263be/tokenizer_config.json",
+          "lfs_sha_verified": false,
+          "earlier_transport_errors": []
+        }
+      ],
+      "success": true,
+      "download_bytes_observable": 470085066,
+      "at_utc": "2026-10-07T15:59:49.223793+00:00",
+      "local_load_CPU_success": true,
+      "local_GPU_paths": [
+        {
+          "task": "text",
+          "CUDA_model_load_success": true,
+          "full_quality_evaluation_success": true,
+          "quality_summary": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/raw13b/text__textattack--xlnet-base-cased-SST-2__quality__r0.summary.json"
+        }
+      ],
+      "local_load_GPU_success": true,
+      "local_execution_GPU_success": true
+    }
+  ],
+  "completed": true,
+  "all_success": true
+}

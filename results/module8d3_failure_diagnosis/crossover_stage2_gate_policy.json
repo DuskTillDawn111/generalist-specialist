@@ -1,0 +1,22 @@
+{
+  "gate": "Part G: only if A/B/C cannot distinguish worker-presence changes from routing changes, measure fixed Proposed deployment with deterministic greedy-compatible routing.",
+  "reasoning_condition": "C and B change whether Phi is deployed AND receives VQA traffic; D is missing. D is needed to isolate routing at fixed Proposed deployment, avoiding attribution of a route-mediated gain solely to deleting a model.",
+  "speech_condition": "If A-B and B-C point differences have opposite signs, the two conditional effects compensate; D is needed to check canonical versus greedy routing on Proposed deployment as well.",
+  "scope": [
+    "reasoning_vqa_heavy",
+    "speech_heavy"
+  ],
+  "maximum_new_states": 2,
+  "repetitions": 3,
+  "maximum_new_runs": 6,
+  "existing_plan_unchanged": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8d3_failure_diagnosis/crossover_plan.json",
+    "sha256": "22a5d1968ac62fc477b123ee645c12da8a07bd15bb8c79eb887e656293e565ad"
+  },
+  "no_method_or_workload_patch": true,
+  "implementation": {
+    "path": "/root/autodl-tmp/generalist-specialist/module8d3_stage2.py",
+    "sha256": "6c1c4d8d031649d5e77bbf63713a63e6188e5c5dfc7e5d8cef5ce10471277223"
+  },
+  "threshold": "No new numeric gate; structural ambiguity and opposite contrast signs only"
+}

@@ -1,0 +1,206 @@
+{
+  "at_utc": "2026-10-08T04:34:56.202502+00:00",
+  "source_contexts": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14_heavy_structural/screen_protocol_freeze.json",
+    "sha256": "13ded5c49c7bf9f9ab807a3fed1c9b534ae76fbbb5268b79d05f53a17eab9ae6",
+    "bytes": 30895,
+    "mtime_ns": 1791396980531790914
+  },
+  "E_table": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/regime_e_reconciled.json",
+    "sha256": "06749c1afe9459b861a9794422dfc3e1e86196770f007ddd6925bba581bfef38",
+    "bytes": 78866,
+    "mtime_ns": 1791434095788708679
+  },
+  "H_table": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/heavy_empirical_x3_reconciled.json",
+    "sha256": "47e5c731b6c3c23fc4bbd73d47c93fda5d23f3ee2db997ecf64a2497328dcea2",
+    "bytes": 117041,
+    "mtime_ns": 1791434095792708784
+  },
+  "workloads": [
+    {
+      "id": "demand_balanced",
+      "rates": {
+        "text": 1.1663737955946414,
+        "image": 0.3729262728429643,
+        "ocr": 0.5500942143120058,
+        "asr": 0.0796011943711932,
+        "visual_qa": 0.36029579903916326,
+        "lid": 0.37213663695459975
+      },
+      "regime": "low_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+        "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+      }
+    },
+    {
+      "id": "speech_heavy",
+      "rates": {
+        "text": 0.5248682080175886,
+        "image": 0.16781682277933394,
+        "ocr": 0.2475423964404026,
+        "asr": 0.21492322480222165,
+        "visual_qa": 0.16213310956762345,
+        "lid": 0.5582049554318997
+      },
+      "regime": "low_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+        "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+      }
+    },
+    {
+      "id": "vision_heavy",
+      "rates": {
+        "text": 0.5598594218854279,
+        "image": 1.3425345822346715,
+        "ocr": 0.26404522286976284,
+        "asr": 0.03820857329817274,
+        "visual_qa": 0.17294198353879836,
+        "lid": 0.17862558573820791
+      },
+      "regime": "low_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+        "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+      }
+    },
+    {
+      "id": "text_ocr_heavy",
+      "rates": {
+        "text": 2.4493849707487465,
+        "image": 0.16781682277933394,
+        "ocr": 1.1551978500552122,
+        "asr": 0.03582053746703694,
+        "visual_qa": 0.16213310956762345,
+        "lid": 0.1674614866295699
+      },
+      "regime": "low_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+        "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+      }
+    },
+    {
+      "id": "reasoning_vqa_heavy",
+      "rates": {
+        "text": 0.5598594218854279,
+        "image": 0.1790046109646229,
+        "ocr": 0.26404522286976284,
+        "asr": 0.03820857329817274,
+        "visual_qa": 1.2970648765409876,
+        "lid": 0.17862558573820791
+      },
+      "regime": "low_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+        "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+      }
+    },
+    {
+      "id": "no_vqa_phase",
+      "rates": {
+        "text": 1.3996485547135697,
+        "image": 0.44751152741155725,
+        "ocr": 0.660113057174407,
+        "asr": 0.09552143324543186,
+        "visual_qa": 0.0,
+        "lid": 0.4465639643455198
+      },
+      "regime": "low_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8e1_method_revision/development_workload_designation.json",
+        "sha256": "d318b079a83db607d49b1a6aead5f2df78af1c6ae7f5ff714088d2747a3e80f3"
+      }
+    },
+    {
+      "id": "mix_03_I1",
+      "rates": {
+        "text": 1.0783912453907343,
+        "image": 6.477207226438948,
+        "ocr": 14.015976036805,
+        "asr": 0.36538693266205724,
+        "visual_qa": 0.7262769780773427,
+        "lid": 3.25965041648432
+      },
+      "regime": "moderate_load",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/campaign_cells.json",
+        "sha256": "8a85d99c0bc0df4069a8ea4570a5a83035b8c3010f7ac7f71c6ccfbe812b4fe9"
+      },
+      "intensity": "I1"
+    },
+    {
+      "id": "mix_03_I2",
+      "rates": {
+        "text": 4.171016847157144,
+        "image": 25.052633336443613,
+        "ocr": 54.21118951840369,
+        "asr": 1.4132487243183331,
+        "visual_qa": 2.8091043248087226,
+        "lid": 12.607721790316122
+      },
+      "regime": "pressured",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/campaign_cells.json",
+        "sha256": "8a85d99c0bc0df4069a8ea4570a5a83035b8c3010f7ac7f71c6ccfbe812b4fe9"
+      },
+      "intensity": "I2"
+    },
+    {
+      "id": "mix_03_I3",
+      "rates": {
+        "text": 5.461747663301471,
+        "image": 32.805228700557755,
+        "ocr": 70.98696757332455,
+        "asr": 1.8505818126748586,
+        "visual_qa": 3.6783881591011136,
+        "lid": 16.50921047579739
+      },
+      "regime": "high_pressure_development",
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module8f1b_intensity_grid_freeze/campaign_cells.json",
+        "sha256": "8a85d99c0bc0df4069a8ea4570a5a83035b8c3010f7ac7f71c6ccfbe812b4fe9"
+      },
+      "intensity": "I3"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "B1",
+      "safe_memory_budget_mib": 17007.17405495223
+    },
+    {
+      "id": "B3",
+      "safe_memory_budget_mib": 32019.254406266693
+    },
+    {
+      "id": "B6",
+      "safe_memory_budget_mib": 49140
+    }
+  ],
+  "rho_max": 0.8,
+  "objective_and_Module9_unchanged": true,
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module12/solver.py",
+      "sha256": "f4739a74a47d6696844de0fcabf790b8e4219ade6951c3e5ca9e99195de6e883",
+      "bytes": 4215,
+      "mtime_ns": 1791378115199691305
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module11b/convex_audit.py",
+      "sha256": "276e78cd5d54fa4a2c23c5a153d83b2b564e77b9812123e27e35ed9f65de99a9",
+      "bytes": 11360,
+      "mtime_ns": 1791364921289631581
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module14f/replay.py",
+      "sha256": "3e3ef50e6d24c382d801a385d307910e26e0bb9988369cdbc68eb62c6fdc6a96",
+      "bytes": 2895,
+      "mtime_ns": 1791432108841491021
+    }
+  ]
+}

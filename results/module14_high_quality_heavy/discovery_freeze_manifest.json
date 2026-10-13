@@ -1,0 +1,76 @@
+{
+  "at_utc": "2026-10-07T16:51:47.293467+00:00",
+  "files": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/baseline_references.json",
+      "sha256": "125d1f90d3bf91e36d5c7810041db58538c8fe9b9bced4ee2d6cba251410481e",
+      "bytes": 2876
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/existing_heavy_candidate_audit.csv",
+      "sha256": "269830b87db55eb5a01f9cf46706e3e129c73391714600e35e2244870881732d",
+      "bytes": 7925
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/image_candidate_universe.csv",
+      "sha256": "3a35500e862f5f8e84a11d2c0f0b23ac4a283b88c72317d6c1546dc6882a5839",
+      "bytes": 4516
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/ocr_candidate_universe.csv",
+      "sha256": "a3724ca6acfa9035720fa77ac6022aa9917800189d60b03dd115a05d9ea6f4af",
+      "bytes": 4857
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/image_measurement_shortlist.json",
+      "sha256": "41a57656542c0bdac685391bc9a57adfbfc2b3b02e0037c71bf776b514023994",
+      "bytes": 6952
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/ocr_measurement_shortlist.json",
+      "sha256": "d44239944d99b78eacd59d7519be6bc48dbec0de79c1eb2a206bd440b3090985",
+      "bytes": 6285
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/measurement_protocol_freeze.json",
+      "sha256": "6c2ddc1e90c1b7818e5ebe72a5e87a9b0a8389bdba361038c26edd2e711a8d41",
+      "bytes": 46241
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/gap_filling_freeze.json",
+      "sha256": "5dcc1e0c7df3c45cbf3d038bc077c7d026b5eb0f5ab38234ddf6015e32111ee4",
+      "bytes": 872
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/dataset_input_hashes.json",
+      "sha256": "4d64e5ba15c96e2eae83e9796ce7b52e5f547e377f5c073aa2409b6e10833359",
+      "bytes": 193486
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/latency_samples_image.jsonl",
+      "sha256": "7a1b988a6ffdddcddbfcf705f6f2ed7a8f2e492d6bf74ce456468c3a58192b97",
+      "bytes": 13441
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/latency_samples_ocr.jsonl",
+      "sha256": "9bfa5d9ee3fb052287e9a35e753a6066987fa52a07f7fec54c8f3b786eff69d8",
+      "bytes": 11148
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/latency_samples_asr.jsonl",
+      "sha256": "41eef9e16e969fc73388c08944dd45e88e90cae7243c8ba0e45885682f639745",
+      "bytes": 22978
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/latency_samples_lid.jsonl",
+      "sha256": "b4831e17910c072822c71c609360871d28f50748101ad1e1d2183fafc7ea65c9",
+      "bytes": 15413
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14_high_quality_heavy/latency_samples_text.jsonl",
+      "sha256": "19f4d9791cd61a3b9132c8fac27ff116a197ae47420a9f3e0092aca7dcf85821",
+      "bytes": 11998
+    }
+  ],
+  "before_any_new_GPU_measurement": true
+}

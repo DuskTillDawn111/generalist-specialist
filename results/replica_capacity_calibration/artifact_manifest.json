@@ -1,0 +1,70 @@
+{
+  "module": "7C-2",
+  "frozen": true,
+  "status": "complete",
+  "artifacts": {
+    "before_hashes.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/before_hashes.json",
+      "sha256": "61dcf4f1c0a1cb46754ce6da39d1a4dd9c426ea46ca2f45366633601a6a554cb"
+    },
+    "calibration_summary.md": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/calibration_summary.md",
+      "sha256": "692e09cc0a967752330d9b21d0be00d20a4446cc85910dbfa238814c2ec6b5a2"
+    },
+    "calibration_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/calibration_validation.json",
+      "sha256": "a88a5e06ac81dde8e94a2d66a41d407e7f555e8e61594df651dfc8486c65a185"
+    },
+    "cpu_regression.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/cpu_regression.log",
+      "sha256": "d5b5589082989f2df26a38c5c5d93ca6e79bc115df988ff9ebd6dbcd87695fa0"
+    },
+    "cpu_regression_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/cpu_regression_validation.json",
+      "sha256": "72f643c00d7e3f71b42d1141799323b9e920dee7c008aa1ad8831f1927998961"
+    },
+    "empirical_milp_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/empirical_milp_validation.json",
+      "sha256": "9847103f536bcc55ba1639d5bed9cb2245781e60b6d610b3ed8d29396f5313ba"
+    },
+    "evidence_replica_bounds.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/evidence_replica_bounds.json",
+      "sha256": "6c2855bd2e61d745d13813f29cef9d51f6e2b5bfa2b7057856421e22f7fd4b51"
+    },
+    "linear_vs_empirical_validation.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/linear_vs_empirical_validation.json",
+      "sha256": "4001c5a7d8aadf1d7e7612756023e5a1388c8f568378969215dce5cc0035a16e"
+    },
+    "new_tests.log": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/new_tests.log",
+      "sha256": "94628e955d6626735b7e27adb854a5669a06422037fb952b7cc3061e323d240f"
+    },
+    "replica_capacity_factors.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_capacity_factors.json",
+      "sha256": "62d6c25ba30111bb812a00d42df1e3a1f113d66c654f139b68413009d838b28a"
+    },
+    "replica_memory_table.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/replica_memory_table.json",
+      "sha256": "aeb0bf61fa5969b4364e58f0308c9e04bb0a32a9bee08fd9d18166a056350531"
+    },
+    "source_hashes.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/source_hashes.json",
+      "sha256": "8de43070c7b820c7c70e03ef1074bacac3b121ea1d8b30a823d97aa1c372b33c"
+    },
+    "w1_calibrated_dry_run.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/w1_calibrated_dry_run.json",
+      "sha256": "aaa74bc3f7a5027152753fce643d7be7be20395540ae0880ac4534a76d598f96"
+    },
+    "w2_calibrated_dry_run.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/w2_calibrated_dry_run.json",
+      "sha256": "595dc14b727274b8dd4c4c3a2a288f47509e2b60549d4b97230a8d1d712e0573"
+    },
+    "w3_calibrated_dry_run.json": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/replica_capacity_calibration/w3_calibrated_dry_run.json",
+      "sha256": "60f35db2251cfaa0bc31adeed69c368f75a769156bebd43f46b2875b23c63cbc"
+    }
+  },
+  "GPU_measurements": 0,
+  "real_searches": 0,
+  "frozen_input_changes": 0
+}

@@ -1,0 +1,9 @@
+{
+  "task": "ocr",
+  "worker": "paddleocr",
+  "num_results": 200,
+  "wall_time_s": 1.171667686,
+  "throughput_tasks_per_s": 170.69686429843216,
+  "mean_worker_latency_ms": 5.80345425,
+  "p95_worker_latency_ms": 8.07509025
+}

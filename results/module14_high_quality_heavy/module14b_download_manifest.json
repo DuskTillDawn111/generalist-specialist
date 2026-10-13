@@ -1,0 +1,70 @@
+{
+  "at_utc": "2026-10-07T17:46:19.964445+00:00",
+  "models": [
+    {
+      "model_id": "baudm/parseq:parseq",
+      "revision": "v1.0.0:parseq-bb5792a6.pt",
+      "success": true,
+      "file": {
+        "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq/parseq-bb5792a6.pt",
+        "sha256": "bb5792a68e367476abca029cbf8699abc805f3d3dc7e57aae45c8ec4f7b7cd00",
+        "bytes": 95392675
+      },
+      "publisher_hash_verified": true,
+      "release_asset_id": 70529868,
+      "transport": "Exact publisher GitHub release asset REST ID and official redirect; no weight substitution",
+      "earlier_transport_errors": []
+    },
+    {
+      "model_id": "baudm/parseq:abinet",
+      "revision": "v1.0.0:abinet-1d1e373e.pt",
+      "success": true,
+      "file": {
+        "path": "/root/autodl-tmp/generalist-specialist/models/module14b/abinet/abinet-1d1e373e.pt",
+        "sha256": "1d1e373e6d08bde09500a015436b87ae0f4c9bbd844c8c4fc7a8d9e3628325a7",
+        "bytes": 148362867
+      },
+      "publisher_hash_verified": true,
+      "release_asset_id": 70500456,
+      "transport": "Exact publisher GitHub release asset REST ID and official redirect; no weight substitution",
+      "earlier_transport_errors": []
+    },
+    {
+      "model_id": "baudm/parseq:parseq-patch16-224",
+      "revision": "v1.0.0:parseq_small_patch16_224-fcf06f5a.pt",
+      "success": true,
+      "file": {
+        "path": "/root/autodl-tmp/generalist-specialist/models/module14b/parseq-patch16-224/parseq_small_patch16_224-fcf06f5a.pt",
+        "sha256": "fcf06f5a56b4874fb2586ba4ac1c4867339759bee1dc99c223cf64af5e5b403b",
+        "bytes": 96531747
+      },
+      "publisher_hash_verified": true,
+      "release_asset_id": 74235742,
+      "transport": "Exact publisher GitHub release asset REST ID and official redirect; no weight substitution",
+      "earlier_transport_errors": []
+    },
+    {
+      "model_id": "baudm/parseq:trba",
+      "revision": "v1.0.0:trba-cfaed284.pt",
+      "success": true,
+      "file": {
+        "path": "/root/autodl-tmp/generalist-specialist/models/module14b/trba/trba-cfaed284.pt",
+        "sha256": "cfaed2844cbb0f1547b8789f4d75c3220225f62fcfa556752582c65634bbc9bd",
+        "bytes": 199854755
+      },
+      "publisher_hash_verified": true,
+      "release_asset_id": 70499656,
+      "transport": "Exact publisher GitHub release asset REST ID and official redirect; no weight substitution",
+      "earlier_transport_errors": []
+    }
+  ],
+  "completed": true,
+  "order": [
+    "baudm/parseq:parseq",
+    "baudm/parseq:abinet",
+    "baudm/parseq:parseq-patch16-224",
+    "baudm/parseq:trba"
+  ],
+  "checkpoint_substitution": false,
+  "all_success": true
+}

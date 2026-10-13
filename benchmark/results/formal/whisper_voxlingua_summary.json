@@ -1,0 +1,133 @@
+{
+  "model": "Whisper-small",
+  "task": "lid",
+  "dataset": "VoxLingua107",
+  "split": "dev",
+  "model_role": "specialist",
+  "inference_method": "Whisper.detect_language",
+  "num_samples": 200,
+  "num_languages": 10,
+  "benchmark_languages": [
+    "ar",
+    "de",
+    "en",
+    "es",
+    "fa",
+    "fr",
+    "ja",
+    "ru",
+    "tr",
+    "zh"
+  ],
+  "whisper_supported_languages": 99,
+  "correct": 196,
+  "accuracy": 0.98,
+  "per_language": {
+    "ar": {
+      "total": 20,
+      "correct": 19,
+      "accuracy": 0.95
+    },
+    "de": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "en": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "es": {
+      "total": 20,
+      "correct": 18,
+      "accuracy": 0.9
+    },
+    "fa": {
+      "total": 20,
+      "correct": 19,
+      "accuracy": 0.95
+    },
+    "fr": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "ja": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "ru": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "tr": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "zh": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    }
+  },
+  "predicted_language_counts": {
+    "zh": 20,
+    "tr": 20,
+    "fr": 20,
+    "en": 20,
+    "ja": 20,
+    "es": 18,
+    "ru": 20,
+    "de": 20,
+    "fa": 19,
+    "ar": 19,
+    "ca": 1,
+    "sv": 1,
+    "ko": 1,
+    "ur": 1
+  },
+  "model_load_time_s": 1.03,
+  "parameters_m": 241.735,
+  "processor_latency": {
+    "mean_ms": 47.012,
+    "p50_ms": 43.847,
+    "p95_ms": 78.66,
+    "p99_ms": 90.031,
+    "min_ms": 18.53,
+    "max_ms": 96.814
+  },
+  "model_latency": {
+    "mean_ms": 42.367,
+    "p50_ms": 37.467,
+    "p95_ms": 66.552,
+    "p99_ms": 76.303,
+    "min_ms": 25.237,
+    "max_ms": 78.912
+  },
+  "e2e_latency": {
+    "mean_ms": 92.396,
+    "p50_ms": 87.84,
+    "p95_ms": 138.755,
+    "p99_ms": 159.689,
+    "min_ms": 51.235,
+    "max_ms": 183.15
+  },
+  "model_request_service_rate_proxy_qps": 23.603276,
+  "e2e_request_service_rate_proxy_qps": 10.822979,
+  "torch_idle_allocated_mb": 922.885,
+  "torch_peak_allocated_mb": 985.719,
+  "memory_note": "Final deployment VRAM comparison uses process-level NVML rather than this Torch allocator statistic.",
+  "latency_definition": {
+    "model_latency": "synchronized Whisper.detect_language() after feature extraction and H2D",
+    "e2e_latency": "local audio read/decode + feature extraction + H2D + detect_language + language-token mapping"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.14.0+cu130",
+  "transformers_version": "5.17.0",
+  "timestamp": "2026-09-25T22:43:07.443561+08:00"
+}

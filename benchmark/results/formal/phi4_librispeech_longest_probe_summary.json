@@ -1,0 +1,100 @@
+{
+  "model": "Phi-4-multimodal-instruct",
+  "task": "automatic_speech_recognition",
+  "dataset": "LibriSpeech",
+  "split": "test-clean",
+  "language": "en",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "attention_backend": "sdpa",
+  "batch_size": 1,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 256
+  },
+  "prompt_version": "v1",
+  "prompt": "Transcribe the English speech in this audio. Output only the transcription. Do not provide any explanation.",
+  "prompt_composition": "<|audio_1|>\\n<ASR prompt>",
+  "normalization": "lowercase; remove punctuation except apostrophes; normalize whitespace",
+  "num_samples": 1,
+  "total_audio_duration_s": 33.91,
+  "samples_over_30s": 1,
+  "hit_max_new_tokens": 0,
+  "corpus_word_errors": 8,
+  "corpus_reference_words": 96,
+  "wer": 0.083333,
+  "mean_utterance_wer": 0.083333,
+  "parameters_m": 5574.46,
+  "checkpoint_size_mb": 10632.732,
+  "processor_load_time_s": 0.832,
+  "model_load_time_s": 9.496,
+  "warmup_runs": 2,
+  "input_tokens": {
+    "mean": 448.0,
+    "min": 448,
+    "max": 448
+  },
+  "output_tokens": {
+    "total": 112,
+    "mean": 112.0,
+    "min": 112,
+    "max": 112
+  },
+  "audio_frames": {
+    "mean": 3389.0,
+    "min": 3389,
+    "max": 3389
+  },
+  "all_samples": {
+    "model_latency": {
+      "mean_ms": 3575.783,
+      "p50_ms": 3575.783,
+      "p95_ms": 3575.783,
+      "p99_ms": 3575.783,
+      "min_ms": 3575.783,
+      "max_ms": 3575.783
+    },
+    "e2e_latency": {
+      "mean_ms": 3602.582,
+      "p50_ms": 3602.582,
+      "p95_ms": 3602.582,
+      "p99_ms": 3602.582,
+      "min_ms": 3602.582,
+      "max_ms": 3602.582
+    },
+    "model_rtf_distribution": {
+      "mean": 0.105449,
+      "p50": 0.105449,
+      "p95": 0.105449,
+      "p99": 0.105449
+    },
+    "e2e_rtf_distribution": {
+      "mean": 0.10624,
+      "p50": 0.10624,
+      "p95": 0.10624,
+      "p99": 0.10624
+    },
+    "aggregate_model_rtf": 0.105449,
+    "aggregate_e2e_rtf": 0.10624
+  },
+  "fixed_duration_latency": {
+    "range": "[4.0, 6.0) seconds",
+    "num_samples": 0,
+    "model_latency": null,
+    "e2e_latency": null,
+    "model_rtf_distribution": null,
+    "e2e_rtf_distribution": null
+  },
+  "torch_idle_allocated_mb": 10666.682,
+  "torch_peak_allocated_mb": 11032.609,
+  "memory_note": "Torch allocator memory is auxiliary only; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "multimodal model.generate only after FLAC decoding, audio preprocessing and H2D; includes audio encoding and autoregressive generation",
+    "e2e_latency": "local FLAC read/decode + audio preprocessing + H2D + audio encoding + autoregressive generation + text decoding + ASR normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.48.2",
+  "timestamp": "2026-09-18T00:21:35.320557+08:00"
+}

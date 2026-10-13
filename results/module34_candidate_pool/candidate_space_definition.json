@@ -1,0 +1,116 @@
+{
+  "pools": {
+    "A": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/pools/A.json",
+      "sha256": "490892ec08c3846a279e20d031b62da863033cf175bd9d1adc1cb78f86527d36",
+      "bytes": 39093
+    },
+    "B": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/pools/B.json",
+      "sha256": "5ecc79e2e3efa1d7fc9dab4c87bf93a0489797d90aa2e6cd10c302f5517fe013",
+      "bytes": 49851
+    },
+    "C": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module34_candidate_pool/pools/C.json",
+      "sha256": "4c0b9c8760a2dff5310e920ebba4c7e9d02528a0cf516e540be11d9726583b6e",
+      "bytes": 80650
+    }
+  },
+  "members": {
+    "A": [
+      "qwen",
+      "minicpm",
+      "phi4mm"
+    ],
+    "B": [
+      "qwen",
+      "minicpm",
+      "phi4mm",
+      "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e"
+    ],
+    "C": [
+      "qwen",
+      "minicpm",
+      "phi4mm",
+      "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e",
+      "roberta_sst2",
+      "convnext_tiny",
+      "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt",
+      "whisper-small",
+      "textattack/facebook-bart-large-SST-2@8a4baa9662afa056a97a2e9441ae665a06504979"
+    ]
+  },
+  "scenarios": {
+    "LOW18": {
+      "rates": {
+        "text": 0.1,
+        "image": 0.1,
+        "ocr": 0.1,
+        "asr": 0.1,
+        "lid": 0.1,
+        "visual_qa": 0.2
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/frozen_task_manifests.json",
+        "sha256": "fb1463b82db31f5de06a606b5a25960b4f394e723680948b40524ddb8380aa51",
+        "bytes": 5181050
+      },
+      "derivation": "Original text_low_rep1"
+    },
+    "ASR32B": {
+      "rates": {
+        "text": 0.2,
+        "image": 0.2,
+        "ocr": 0.2,
+        "asr": 0.46,
+        "lid": 0.2,
+        "visual_qa": 0.2
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_gpu_manifest.json",
+        "sha256": "d76206bee721440eeab8c25416c8eebf493be33b2e147c8b766a4d6f69289ee9",
+        "bytes": 516945
+      },
+      "derivation": "Original A0; directly comparable to Module33 input/arrival distribution"
+    },
+    "TEXT_HALF_MID18": {
+      "rates": {
+        "text": 10.0,
+        "image": 0.1,
+        "ocr": 0.1,
+        "asr": 0.1,
+        "lid": 0.1,
+        "visual_qa": 0.2
+      },
+      "source": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/frozen_task_manifests.json",
+        "sha256": "fb1463b82db31f5de06a606b5a25960b4f394e723680948b40524ddb8380aa51",
+        "bytes": 5181050
+      },
+      "derivation": "text_mid_rep1 target20QPS divided by2; other5 tasks unchanged. Predeclared moderate text demand avoids trivial single-replica G infeasibility at original20QPS."
+    }
+  },
+  "budget_mib": 49140.0,
+  "budget_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_reference_manifest.json",
+    "sha256": "b66286b7192862556e8c8a2563a2b3c10b0b5b1d96b06ef0f21a59318de89f83",
+    "bytes": 5933
+  },
+  "budget_reason": "Original20A full-GPU budget49140MiB; measured physical total identical. Same budget in all3 pools; minimum pureG cover safe~42059MiB exceeds old33 budget.",
+  "route_grid_denominator": 1,
+  "route_rule": "All endpoint task routes; one resident admitted model per task. No continuous splitting. Enumerate every task-path assignment.",
+  "replica_rule": "Controlled binary0/1 residency for every model across all pools; original measured one-replica g/M/s0 unchanged. Does not certify optimality over higher counts.",
+  "constraints": [
+    "original task quality admission",
+    "six positive tasks covered",
+    "route linkage/conservation",
+    "same endpoint routing domain",
+    "safe memory<=49140MiB",
+    "rho<=.8",
+    "nominal complete120s cohort+60s drain"
+  ],
+  "benchmark_scope": "Nested candidate-set expansion with fixed inputs, budget, load per scenario, weights, normalization, counts and route domain. PureS infeasible without VQA path; no synthetic Specialist VQA.",
+  "supported_paths_policy": "Use all original admitted catalog paths. Whisper-small ASR restored from original8B admission score0.042180839129459274<=0.042181; Module33 LID-only restriction was a benchmark restriction, never a failed quality path."
+}

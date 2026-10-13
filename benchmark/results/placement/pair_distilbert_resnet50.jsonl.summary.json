@@ -1,0 +1,22 @@
+{
+  "models": [
+    "distilbert",
+    "resnet50"
+  ],
+  "routing": {
+    "text": "distilbert",
+    "image": "resnet50"
+  },
+  "num_results": 400,
+  "wall_time_s": 1.081562019,
+  "paths": {
+    "distilbert:text": {
+      "count": 200,
+      "mean_worker_latency_ms": 2.805104915
+    },
+    "resnet50:image": {
+      "count": 200,
+      "mean_worker_latency_ms": 5.34693084
+    }
+  }
+}

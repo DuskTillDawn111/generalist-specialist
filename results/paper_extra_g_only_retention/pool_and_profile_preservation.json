@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "nesting_strict": true,
+  "projection_checks": [
+    {
+      "pool": "P0",
+      "exact_members": true,
+      "unchanged_model_values": true,
+      "pool_is_subset_of_P2": true
+    },
+    {
+      "pool": "P1",
+      "exact_members": true,
+      "unchanged_model_values": true,
+      "pool_is_subset_of_P2": true
+    },
+    {
+      "pool": "P2",
+      "exact_members": true,
+      "unchanged_model_values": true,
+      "pool_is_subset_of_P2": true
+    }
+  ],
+  "original_35_source": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module35_utility_routing/u_aligned_optimizer.py",
+    "sha256": "c6727f4f4a4b18bdfd4e8767b9914f19f65fdf8e0ef8a1a5179c54aab53fb1a3",
+    "bytes": 12706
+  },
+  "no_algorithm_copy_or_change": true
+}

@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_SUPPLEMENT_NEGATIVE_RESULT_COMPLETE",
+  "schema_version": 2,
+  "frozen_unix_ns": 1791724507115333741,
+  "artifact_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/paper_extra_g_only_retention/scientific_artifact_SHA256.json",
+    "sha256": "87eb52f2dc0f2f1dbc4ecfa6934a23c334986b2efdc2088901395ce0795a52a1",
+    "bytes": 33673
+  },
+  "final_gate": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/paper_extra_g_only_retention/final_gate.json",
+    "sha256": "92ef5a497305bfd15e682e556081d32312973d4992e26007ddaf61dce1f21790",
+    "bytes": 2574
+  },
+  "stop_now": true,
+  "no_next_experiment": true,
+  "preserved_history": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/paper_extra_g_only_retention/history_integrity_after.json",
+    "sha256": "c889e10c88906054dc425461b27eec564447e14466d19b2eca1b2c8be0d7a1cc",
+    "bytes": 145
+  },
+  "sealing_correction": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/paper_extra_g_only_retention/sealing_correction.json",
+    "sha256": "610bcd31a544ecc28647121dac9a45823150ad0b60c13749488e495d47979a85",
+    "bytes": 883
+  }
+}

@@ -1,0 +1,339 @@
+[
+  {
+    "scenario": "P2",
+    "resident_models": [
+      "qwen",
+      "paddleocr"
+    ],
+    "resident_count": 2,
+    "worker": "paddleocr",
+    "task": "ocr",
+    "requests": 200,
+    "single_resident_ms": 5.80345425,
+    "co_resident_ms": 8.661113445,
+    "slowdown": 1.492406603360404,
+    "extra_ms_per_request": 2.857659195
+  },
+  {
+    "scenario": "P2",
+    "resident_models": [
+      "qwen",
+      "paddleocr"
+    ],
+    "resident_count": 2,
+    "worker": "qwen",
+    "task": "asr",
+    "requests": 200,
+    "single_resident_ms": 621.703561445,
+    "co_resident_ms": 624.991252795,
+    "slowdown": 1.005288197710109,
+    "extra_ms_per_request": 3.2876913500000455
+  },
+  {
+    "scenario": "P2",
+    "resident_models": [
+      "qwen",
+      "paddleocr"
+    ],
+    "resident_count": 2,
+    "worker": "qwen",
+    "task": "image",
+    "requests": 200,
+    "single_resident_ms": 137.328372035,
+    "co_resident_ms": 135.1775285,
+    "slowdown": 0.9843379521425344,
+    "extra_ms_per_request": -2.150843535000007
+  },
+  {
+    "scenario": "P2",
+    "resident_models": [
+      "qwen",
+      "paddleocr"
+    ],
+    "resident_count": 2,
+    "worker": "qwen",
+    "task": "text",
+    "requests": 200,
+    "single_resident_ms": 43.760553445,
+    "co_resident_ms": 43.94155872,
+    "slowdown": 1.0041362656719481,
+    "extra_ms_per_request": 0.18100527500000396
+  },
+  {
+    "scenario": "P3",
+    "resident_models": [
+      "qwen",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 3,
+    "worker": "paddleocr",
+    "task": "ocr",
+    "requests": 200,
+    "single_resident_ms": 5.80345425,
+    "co_resident_ms": 7.3392362349999996,
+    "slowdown": 1.2646323928546521,
+    "extra_ms_per_request": 1.5357819849999998
+  },
+  {
+    "scenario": "P3",
+    "resident_models": [
+      "qwen",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 3,
+    "worker": "qwen",
+    "task": "image",
+    "requests": 200,
+    "single_resident_ms": 137.328372035,
+    "co_resident_ms": 269.59932117,
+    "slowdown": 1.963172774678265,
+    "extra_ms_per_request": 132.270949135
+  },
+  {
+    "scenario": "P3",
+    "resident_models": [
+      "qwen",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 3,
+    "worker": "qwen",
+    "task": "text",
+    "requests": 200,
+    "single_resident_ms": 43.760553445,
+    "co_resident_ms": 62.41720916,
+    "slowdown": 1.4263350037025566,
+    "extra_ms_per_request": 18.656655715
+  },
+  {
+    "scenario": "P3",
+    "resident_models": [
+      "qwen",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 3,
+    "worker": "whisper",
+    "task": "asr",
+    "requests": 200,
+    "single_resident_ms": 195.270631865,
+    "co_resident_ms": 293.976622015,
+    "slowdown": 1.5054830273619444,
+    "extra_ms_per_request": 98.70599014999996
+  },
+  {
+    "scenario": "P4",
+    "resident_models": [
+      "qwen",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "paddleocr",
+    "task": "ocr",
+    "requests": 200,
+    "single_resident_ms": 5.80345425,
+    "co_resident_ms": 7.75461268,
+    "slowdown": 1.3362063946657288,
+    "extra_ms_per_request": 1.9511584300000004
+  },
+  {
+    "scenario": "P4",
+    "resident_models": [
+      "qwen",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "qwen",
+    "task": "asr",
+    "requests": 30,
+    "single_resident_ms": 621.703561445,
+    "co_resident_ms": 804.9094619666666,
+    "slowdown": 1.29468369152631,
+    "extra_ms_per_request": 183.20590052166665
+  },
+  {
+    "scenario": "P4",
+    "resident_models": [
+      "qwen",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "qwen",
+    "task": "text",
+    "requests": 200,
+    "single_resident_ms": 43.760553445,
+    "co_resident_ms": 69.990991815,
+    "slowdown": 1.5994082868025756,
+    "extra_ms_per_request": 26.23043837
+  },
+  {
+    "scenario": "P4",
+    "resident_models": [
+      "qwen",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "resnet50",
+    "task": "image",
+    "requests": 200,
+    "single_resident_ms": 5.58187836,
+    "co_resident_ms": 7.040262015,
+    "slowdown": 1.2612711279147257,
+    "extra_ms_per_request": 1.4583836549999996
+  },
+  {
+    "scenario": "P4",
+    "resident_models": [
+      "qwen",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "whisper",
+    "task": "asr",
+    "requests": 170,
+    "single_resident_ms": 195.270631865,
+    "co_resident_ms": 309.13930233529413,
+    "slowdown": 1.5831325959400644,
+    "extra_ms_per_request": 113.86867047029412
+  },
+  {
+    "scenario": "QwenWhisper",
+    "resident_models": [
+      "qwen",
+      "whisper"
+    ],
+    "resident_count": 2,
+    "worker": "qwen",
+    "task": "image",
+    "requests": 200,
+    "single_resident_ms": 137.328372035,
+    "co_resident_ms": 227.005282855,
+    "slowdown": 1.6530108053501473,
+    "extra_ms_per_request": 89.67691081999999
+  },
+  {
+    "scenario": "QwenWhisper",
+    "resident_models": [
+      "qwen",
+      "whisper"
+    ],
+    "resident_count": 2,
+    "worker": "qwen",
+    "task": "ocr",
+    "requests": 200,
+    "single_resident_ms": 94.207280995,
+    "co_resident_ms": 133.79594704,
+    "slowdown": 1.4202293668479948,
+    "extra_ms_per_request": 39.58866604499998
+  },
+  {
+    "scenario": "QwenWhisper",
+    "resident_models": [
+      "qwen",
+      "whisper"
+    ],
+    "resident_count": 2,
+    "worker": "qwen",
+    "task": "text",
+    "requests": 200,
+    "single_resident_ms": 43.760553445,
+    "co_resident_ms": 58.14716878,
+    "slowdown": 1.3287576185041095,
+    "extra_ms_per_request": 14.386615335000002
+  },
+  {
+    "scenario": "QwenWhisper",
+    "resident_models": [
+      "qwen",
+      "whisper"
+    ],
+    "resident_count": 2,
+    "worker": "whisper",
+    "task": "asr",
+    "requests": 200,
+    "single_resident_ms": 195.270631865,
+    "co_resident_ms": 299.689130285,
+    "slowdown": 1.5347373408008917,
+    "extra_ms_per_request": 104.41849841999996
+  },
+  {
+    "scenario": "PureSpecialists",
+    "resident_models": [
+      "distilbert",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "distilbert",
+    "task": "text",
+    "requests": 200,
+    "single_resident_ms": 2.51614193,
+    "co_resident_ms": 7.36098605,
+    "slowdown": 2.9255051005807133,
+    "extra_ms_per_request": 4.84484412
+  },
+  {
+    "scenario": "PureSpecialists",
+    "resident_models": [
+      "distilbert",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "paddleocr",
+    "task": "ocr",
+    "requests": 200,
+    "single_resident_ms": 5.80345425,
+    "co_resident_ms": 7.1319199,
+    "slowdown": 1.2289094723198688,
+    "extra_ms_per_request": 1.32846565
+  },
+  {
+    "scenario": "PureSpecialists",
+    "resident_models": [
+      "distilbert",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "resnet50",
+    "task": "image",
+    "requests": 200,
+    "single_resident_ms": 5.58187836,
+    "co_resident_ms": 7.08738214,
+    "slowdown": 1.2697127531098689,
+    "extra_ms_per_request": 1.5055037799999997
+  },
+  {
+    "scenario": "PureSpecialists",
+    "resident_models": [
+      "distilbert",
+      "resnet50",
+      "paddleocr",
+      "whisper"
+    ],
+    "resident_count": 4,
+    "worker": "whisper",
+    "task": "asr",
+    "requests": 200,
+    "single_resident_ms": 195.270631865,
+    "co_resident_ms": 189.99509672,
+    "slowdown": 0.9729834686628799,
+    "extra_ms_per_request": -5.2755351450000205
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "case": "A",
+  "module2_role": "optional scorer; Module 3 mainline predictor=None",
+  "module2d_decision": "PARTIAL",
+  "module2e_decision": "FAIL",
+  "module2f_decision": "INSUFFICIENT COMPARABLE GROUPS",
+  "module2g_decision": {
+    "strict": "INSUFFICIENT COMPARABLE GROUPS",
+    "extended": "INSUFFICIENT COMPARABLE GROUPS"
+  },
+  "external_reclassified_from_unstable": 1,
+  "module2g_unstable_reclassified_external": 0,
+  "original_files_modified": 0,
+  "gpu_profiling_runs_added": 0,
+  "deployment_enumeration_calls": 0
+}

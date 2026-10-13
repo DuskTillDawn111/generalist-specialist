@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "distilbert",
+  "target_task": "text",
+  "target_count": 30,
+  "mean_worker_latency_ms": 3.998400033333333,
+  "min_worker_latency_ms": 2.12551,
+  "max_worker_latency_ms": 50.990207,
+  "output": "benchmark/results/characterization/specialist_nvml_v1/distilbert_text_nvml_profiled_n30.jsonl"
+}

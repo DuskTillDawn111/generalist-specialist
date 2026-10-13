@@ -1,0 +1,21 @@
+{
+  "files": {
+    "dynamic_sequence.json": "4ecab3fa3aa5129669e766f957550fc7078cc0ddfa8a44398b5bb53d8d30a754",
+    "pilot_config.json": "0158adae87b37b2d8283d4af9624be5d3d80c33989eadc9aa0317eca5787097a",
+    "source_model_hashes.json": "7c187edf342376af439a462716c1191ca1c7d96130df28a22a0147a3ed8aa77f",
+    "implementation_hashes.json": "f112db43056a4b0233c124812f76208d1f0ae7600d9694af86f3d90593d68a33",
+    "dynamic_search_trace.json": "a5cd0b0415724d2ae853c10276cde218761d37a61ad7d2bdf740550461dde6bf",
+    "dynamic_runtime_evaluations.json": "d78eb7c7c37364c1ccf267e6c9fdcc79935e858437da8d1dd2f080ce29e8d4e9",
+    "reconfiguration_events.json": "aa670d0de72c2eb27d3d70308c9e613929b206690027c1c17a4dd034253f3dbd",
+    "reconfiguration_costs.json": "637e5669dfa10dceeb43a4498c6263a446bdaaa1ab1c8e3e93385b5a68bcf19b",
+    "cold_vs_warm_metrics.json": "5badda7640fd340fad29f365c227a4e0e6de2d0ba8da407834867839fd95d8de",
+    "dynamic_cache_access_audit.json": "69e5b1ac0dd626f4435ed354963c35d52518b25b2bc5325ac5f21c4f1ba4c2bf",
+    "module5b_summary.md": "22ae6d937a4b52fdb440cd84dbcc19c26a6d89ce3970b83de80b611cf61d933d",
+    "README.md": "e056954253db408cd4ab006d66fa461cf6e1b0d696786f2121753185eb2ea0b4",
+    "decision_audit.json": "19d58eeaf0572df169c6735524ab3f8fa76ffc1680445b416946372ca744975b",
+    "derived_metric_audit.json": "1bb4e7f7f79861d168744b36781f62c1cbdddc3efa768921db16b23abbe1327b",
+    "cache_compatibility_audit.json": "99975147f7945f4804c02bad95361f1f99f925257fadffdacb766c7d47d02ef0",
+    "final_validation.json": "799cd5cd9241b2d4db99010008f5b9760b88c0582b926d1eccdb33119f935517"
+  },
+  "postprocessor_sha256": "91f5135b1338b9ff2d7941f69a74ad2832c096554b9600f3f7359330487f0cd8"
+}

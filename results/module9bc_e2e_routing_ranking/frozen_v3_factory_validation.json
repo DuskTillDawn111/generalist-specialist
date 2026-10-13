@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "selected_components": {
+    "routing": "J_ROUTING",
+    "ranking": "DELTA_J"
+  },
+  "actual_J_routing_identity_verified": true,
+  "canonical_planning_and_serving_routes_separated": true,
+  "J_score_trace_serialization": true,
+  "no_GPU_calls": true
+}

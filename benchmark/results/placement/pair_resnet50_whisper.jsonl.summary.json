@@ -1,0 +1,22 @@
+{
+  "models": [
+    "resnet50",
+    "whisper"
+  ],
+  "routing": {
+    "image": "resnet50",
+    "asr": "whisper"
+  },
+  "num_results": 400,
+  "wall_time_s": 39.810074385,
+  "paths": {
+    "resnet50:image": {
+      "count": 200,
+      "mean_worker_latency_ms": 6.87788667
+    },
+    "whisper:asr": {
+      "count": 200,
+      "mean_worker_latency_ms": 198.955750595
+    }
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "status": "FROZEN_BEFORE_GPU",
+  "at_unix_ns": 1791637195205615939,
+  "source_Module32B": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32b_vqa_aware_routing/frozen_routing_manifest.json",
+    "sha256": "3e6cb453aea51ac99b323c8e6bf14162c0888a45137456b850edfe81583ecf4b",
+    "bytes": 10315
+  },
+  "router": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/vqa_aware_dynamic_router.py",
+    "sha256": "d85aef6d99d3c79dec6b0ca430e847224b6df42dc2c358bca0b21544d5f2f3f2",
+    "bytes": 2982
+  },
+  "parameters": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/frozen_routing_parameters.json",
+    "sha256": "baa43675f5d6d0a1be93ce54bca228d79d6d20b585d3cae0c3ee4f2319f995cf",
+    "bytes": 1992
+  },
+  "metadata": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/audio_metadata_cache.json",
+    "sha256": "7e335a83ac40fc2b53c656821360f3ffaa2b425fb0b1b2cf05e6a92438e7dbc7",
+    "bytes": 3928
+  },
+  "pool": {
+    "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": 1,
+    "roberta_sst2": 1,
+    "convnext_tiny": 1,
+    "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+    "phi4mm": 1,
+    "whisper-small": 1
+  },
+  "rates": {
+    "text": 0.2,
+    "image": 0.2,
+    "ocr": 0.2,
+    "asr": 0.46,
+    "lid": 0.2,
+    "visual_qa": 0.2
+  },
+  "quality_policy": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+    "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+    "bytes": 10083
+  },
+  "budget_mib": 34567.5534,
+  "utility": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module20_utility_optimizer/utility_definition.json",
+    "sha256": "3d00c2193b94e20c8b17e78fbcef68d80724be042f4b45644916f5686b60403b",
+    "bytes": 5831
+  },
+  "utility_reference": {
+    "at_utc": "2026-10-08T14:49:39.649912+00:00",
+    "frozen_before_new_predictions": true,
+    "latency_reference_ms": {
+      "text": 10.026380266666667,
+      "image": 27.71673651111111,
+      "ocr": 11.880106522222222,
+      "asr": 574.4954926166666,
+      "lid": 76.25589069444445,
+      "visual_qa": 160.11645761111112
+    },
+    "reference_rule": "Median admitted standalone service ms across full reconciled Heavy pool; same physical reference for mean and P95, not a tail SLO or measured P95 reference. Independent of Module19 outcome and Proposed labels.",
+    "reference_source": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/heavy_empirical_x3_reconciled.json",
+      "sha256": "47e5c731b6c3c23fc4bbd73d47c93fda5d23f3ee2db997ecf64a2497328dcea2",
+      "bytes": 117041
+    },
+    "development_groups": [
+      "Module14F: profiles (g/M measured here cannot independently validate same profiles)",
+      "Module15: ASR two-task history",
+      "Module17: diagnostic/scoped capacity evidence only",
+      "Module18: cross-task histories",
+      "Module19: ALL cases including all negative and failed results"
+    ],
+    "retrospective_holdout_groups": [
+      "Module16: entire full-pool six-task deployment combination and LOW/MID workloads, all repetitions together"
+    ],
+    "holdout_limits": "Retrospective archival holdout, already reported publicly within project; no fitting to these observations, no blind/prospective claim. Only one deployment per offered workload exists: independent matched deployment-ranking sample count is zero. Module17 own holdout supports only its original scope.",
+    "task_pool": [
+      "text",
+      "image",
+      "ocr",
+      "asr",
+      "lid",
+      "visual_qa"
+    ],
+    "quality_policy": {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module8b_quality_pool_finalization/quality_policy.json",
+      "sha256": "380800f8f2d2b1ac89a6a47e7651817a4bb674c0bdc06a4b42316732fdb4d48e",
+      "bytes": 10083
+    },
+    "model_pools": {
+      "FULL_HEAVY_19": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module14f_memory_ocr_x3/heavy_empirical_x3_reconciled.json",
+        "sha256": "47e5c731b6c3c23fc4bbd73d47c93fda5d23f3ee2db997ecf64a2497328dcea2",
+        "bytes": 117041
+      },
+      "COMMON_G_17": {
+        "path": "/root/autodl-tmp/generalist-specialist/results/module18_cross_task/controlled_common_G_pool.json",
+        "sha256": "a01dfd51334ec225b75d0feb08c7cff4eb7ef28c5287a877c946dbbb813c79a6",
+        "bytes": 107223
+      }
+    },
+    "budgets_mib": [
+      17007.17405495223,
+      27980.1894,
+      49140.0
+    ],
+    "background_QPS": {
+      "text": 0.1,
+      "image": 0.1,
+      "ocr": 0.1,
+      "asr": 0.1,
+      "lid": 0.1,
+      "visual_qa": 0.2
+    },
+    "target_QPS_grid": {
+      "text": [
+        0.1,
+        1,
+        5,
+        20,
+        40,
+        60,
+        100
+      ],
+      "image": [
+        0.1,
+        1,
+        10,
+        40,
+        100,
+        137.2973242711638,
+        200
+      ],
+      "lid": [
+        0.1,
+        1,
+        3,
+        6,
+        10,
+        12,
+        16
+      ],
+      "asr": [
+        0.1,
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "ocr": [
+        0.1,
+        1,
+        10,
+        40,
+        80,
+        120,
+        200
+      ]
+    },
+    "generator": {
+      "method": "MILP linear normalized-service + safe-memory seeds; target G fractions [free,0,.01,.05,.2,.5,1], rho caps [.8,.95]; retain frozen historical candidates; generation weights main plus low/high memory; no phase restrictions",
+      "target_G_fractions": [
+        null,
+        0.0,
+        0.01,
+        0.05,
+        0.2,
+        0.5,
+        1.0
+      ],
+      "capacity_caps": [
+        0.8,
+        0.95
+      ],
+      "generation_memory_weights": [
+        0.05,
+        0.15,
+        0.3
+      ],
+      "milp_time_limit_seconds": 2.0,
+      "MILP_mip_gap": 0.001,
+      "completeness": "Heuristic candidate set; not an exhaustive utility optimum. Same deployment may host multiple Specialists; measured counts unmodified."
+    },
+    "predictor": {
+      "method": "120-second deterministic-periodic FIFO fluid-service replay with family round robin; path s0 * replicas/g(count). Constant service captures queue collisions; does not claim sample-tail model or transferable interference calibration.",
+      "phase_offsets": [
+        0.0,
+        0.37
+      ],
+      "warmup_seconds": 10.0,
+      "service_stress_multipliers": [
+        1.0,
+        1.25,
+        2.0
+      ],
+      "stress_interpretation": "Engineering scenarios, NOT fitted corrections, confidence intervals or measured bounds; no global Module17 transfer.",
+      "calibration": "No parameter fit to Module19 or holdout. Frozen independent standalone s0/g/M only. Relative ranking hypothesis tested separately.",
+      "structural_limit": "Constant service omits sample variability and cross-process interference; P95 and capacity carry high uncertainty."
+    },
+    "three_phase_test": "For each pool/budget/target evaluate every QPS. Natural LOW reuses G with no target S; MID deploys target S with G fraction zero; HIGH mixed. Require LOW beats feasible S-only, MID beats feasible G-only, HIGH beats best feasible pure route by >0.01; all nominal constraints pass. Strict increasing LOW<MID<HIGH; optional stress robustness separate.",
+    "implementation": [
+      {
+        "path": "/root/autodl-tmp/generalist-specialist/module20/__init__.py",
+        "sha256": "ffa5fb22dbc9d684e4f203a9244a23bc2272f60af053a796455732549103b428",
+        "bytes": 69
+      },
+      {
+        "path": "/root/autodl-tmp/generalist-specialist/module20/common.py",
+        "sha256": "5f4008f7bb06c16f22fe4858a0c9d5f8e2cefde93ee4d7faef84a9007322aed5",
+        "bytes": 1010
+      },
+      {
+        "path": "/root/autodl-tmp/generalist-specialist/module20/freeze.py",
+        "sha256": "f7baafcb0abc163f6f20d7874747d30f1d0ffdcce52b9291ac08b8a1aef6c419",
+        "bytes": 6983
+      },
+      {
+        "path": "/root/autodl-tmp/generalist-specialist/module20/optimizer.py",
+        "sha256": "01acea047902e18399aa515b88750d1019ae6252d94c9bf3a52cc260e3d6e00f",
+        "bytes": 6832
+      }
+    ]
+  },
+  "order": [
+    "P1_S",
+    "P1_D",
+    "P2_D",
+    "P2_S",
+    "P3_S",
+    "P3_D"
+  ],
+  "seeds": [
+    320301,
+    320302,
+    320303
+  ],
+  "trajectories": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/trajectories/independent_pair_1_warmup_320301.json",
+      "sha256": "8d5802aaa72e8e70e91bb9978f2ad27cb2755390ec8c5623436d690f9966ecd5",
+      "bytes": 46492
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/trajectories/independent_pair_1_measurement_320301.json",
+      "sha256": "fe1f026302fdfcd9a8d4578529ed3c4505bf1aadd0f76fbe2aecc77dc0aa6e0a",
+      "bytes": 3242287
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/trajectories/independent_pair_2_warmup_320302.json",
+      "sha256": "f204ef706ed944aedf9dea84c9c990b834fd29173f3314e8841b53fb40c17a7d",
+      "bytes": 44175
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/trajectories/independent_pair_2_measurement_320302.json",
+      "sha256": "51351ab234a6845029d76f59ead7b4ab00e7543332f7502e776a805511cfb540",
+      "bytes": 3304808
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/trajectories/independent_pair_3_warmup_320303.json",
+      "sha256": "d38cdb6a20a9fd36fcd226349db145423366de9e0671796b908e39ad04e049d7",
+      "bytes": 36794
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/trajectories/independent_pair_3_measurement_320303.json",
+      "sha256": "de76b16c55c6f8fabbafb6933dc4950d59a604387f9741ec428f4b6affe0a822",
+      "bytes": 3346856
+    }
+  ],
+  "measurement_seconds": 2400.0,
+  "warmup_seconds": 30.0,
+  "drain_seconds": 60.0,
+  "max_GPU_runs": 6,
+  "positive_gate": {
+    "all_three_pairs_legal_stable": true,
+    "real_G_and_S_in_each_dynamic": true,
+    "each_delta_U_gt": 0.01,
+    "independent_pair_count": 3,
+    "mean_delta_95_percent_CI_lower_gt": 0,
+    "CI_method": "Two-sided Student t, df=2, t critical=4.302652729911275; three pair-level contrasts, not requests as independent replicas",
+    "if_all_positive_but_CI_crosses_zero": "POSITIVE_TREND_EVIDENCE_INSUFFICIENT"
+  },
+  "no_adjustments": true,
+  "backpressure_pending_max": 300,
+  "backpressure_oldest_seconds": 120,
+  "optimizer_modified": false,
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/campaign.py",
+      "sha256": "bd526e3fdb2a7ccf79759419e7aeddf82457f512977f65941a771daeaee49d01",
+      "bytes": 3409
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/common.py",
+      "sha256": "0995e4b3fb2a0fcee8c42a029dfbb5bc1ff26de38bc270cd32aa5d8eccc724f1",
+      "bytes": 1955
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/harness.py",
+      "sha256": "741021a947cdd858f7afdb0436bc192724337226219e25192a214a4a732145c0",
+      "bytes": 4893
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/observation.py",
+      "sha256": "ad85341c51a73e0b45179c3a2dd494ce878cc25026e002370c08ab7a733ce78b",
+      "bytes": 9776
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/report.py",
+      "sha256": "0b7ee872260240675dad5b67df16b00155b1e818b85cfd4d9a77b9f8260029cd",
+      "bytes": 13570
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/runtime.py",
+      "sha256": "362bb0809a33f0d7b4974e152e55bf2cad2fa9a386536adb78653c4c08955db5",
+      "bytes": 4731
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/m32c/validation.py",
+      "sha256": "b7e99b571b926703fa1f3ee10f1e63d647eb144d8dfe751b0c0d4ccca26b886a",
+      "bytes": 2269
+    }
+  ],
+  "CPU_duration_adapter_acceptance": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module32c_dynamic_replication/CPU_duration_adapter_acceptance.json",
+    "sha256": "52b564c9652bc231abd72c681b0b1290a3c3774a822d928b742f22fab8dc9b3f",
+    "bytes": 902
+  }
+}

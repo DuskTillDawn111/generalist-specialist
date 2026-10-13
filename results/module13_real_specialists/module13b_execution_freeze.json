@@ -1,0 +1,102 @@
+{
+  "at_utc": "2026-10-07T16:08:20.369931+00:00",
+  "frozen": true,
+  "before_any_new_GPU_result": true,
+  "13A_immutable_manifest": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/freeze_manifest.json",
+    "sha256": "022d38186fe4e8666c7089b39d193c2bb0cccb986308cf54eb17375a1fee2dc0",
+    "bytes": 24184
+  },
+  "implementation": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/analyze.py",
+      "sha256": "8ed79fde87aed92a8e2a6a7b0254916b94b5906c316290449c71fa0417d99472",
+      "bytes": 10839
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/campaign.py",
+      "sha256": "0fdade114caea0decb6addd966f6c046c1b7d9fcf4be4bcd5aeb39f9cc9dfe7a",
+      "bytes": 10930
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/download.py",
+      "sha256": "881c204eceec2d467197f576ae53650be788601dca46483326d442041df8d751",
+      "bytes": 6670
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/finalize.py",
+      "sha256": "5e7872de84957f80694627e0fb49930d0c5235ba6ee9c4d4f3986526f55cdf84",
+      "bytes": 11712
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/lock.py",
+      "sha256": "7b64112fb0b91a89e558f08fa882151142067219eeb039c87883ed357359afc4",
+      "bytes": 6180
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/replay.py",
+      "sha256": "94f7f7592f875fa2296b5e4c7380d1cc7b65f765791a5c576c91ee7573b7763d",
+      "bytes": 14101
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist/module13b/worker.py",
+      "sha256": "25a6b2b473bb707b893ce9da5b9520f3233224eccf928ab52552bcb3d983e3d5",
+      "bytes": 10325
+    }
+  ],
+  "environment": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/local_environment.json",
+    "sha256": "452061f3c026193653d79f90eba738959d827a4a4ff43ba7f9a1cbd26a00cb49",
+    "bytes": 21401
+  },
+  "cpu_preflight": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/cpu_preflight_results.json",
+    "sha256": "5c9cf2b5b5b8bda488431ed2b40bbf94b071d2aa6b6806c1e0e63d9825d4ee0e",
+    "bytes": 13238
+  },
+  "checkpoint_list": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/measurement_shortlist.json",
+    "sha256": "96acd718a945e2cabebac8c6a277b5c658654580ed1e61aa42fe3d6dc740633d",
+    "bytes": 98967
+  },
+  "measurement_protocol": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/measurement_protocol_freeze.json",
+    "sha256": "33e7f4a851a6a35d1840268e81cca06cc53c380f925405559586b50dd84a8958",
+    "bytes": 38231
+  },
+  "selection_rule": {
+    "path": "/root/autodl-tmp/generalist-specialist/results/module13_real_specialists/specialist_selection_rule.json",
+    "sha256": "7b0bc9fbca345ceae08211d84140c5cba4f95a34e52bce62e39981c0373eb6e7",
+    "bytes": 26829
+  },
+  "safe_factor": 1.110853955254881,
+  "latest_user_measurement_scope": "All nine frozen candidate paths measured for quality and descriptive standalone s0/M, including numeric quality failures; selection still only admitted paths. No 13A file changed.",
+  "regime_catalog_policy": {
+    "primary": "REPLACE_TASK_EXCLUSIVE_OLD_IDENTITIES_WITH_SELECTED_NEW_WINNERS_PRESERVE_SHARED_CAPABILITIES",
+    "reason": "Keep the complete original EFFICIENCY regime unchanged as comparator. In BALANCED, remove an old Specialist identity only when all its admitted tasks have selected new winners. BASELINE_RETAINED tasks preserve their entire original pool. A shared retained old checkpoint keeps every frozen capability, including ASR if retained for LID. A selected new checkpoint keeps all quality-admitted frozen measured paths, never an unmeasured path. Generalists and OCR/Image remain unchanged. All old models participated in selection; no dominating baseline may be bypassed.",
+    "new_replica_counts": [
+      0,
+      1
+    ],
+    "unknown_new_g_gt1": "NOT_AVAILABLE; no extrapolation or transfer of old-family replica curves",
+    "old_measured_replica_evidence": "unchanged for retained identities",
+    "shared_checkpoint_residency": "one identity; if admitted for multiple measured paths use maximum observed per-path mean idle as measured resident envelope, never sum duplicate weights",
+    "matched_count_diagnostic": "Also replay both regimes with all searched-task Specialist identities restricted to observed0/1. Keep Generalist and OCR/Image bounds unchanged. Report separately; transitions caused only by unequal evidence bounds cannot establish SUPPORTED gate."
+  },
+  "prediction_validation_policy": "Compare global and task-local sensitivity guidance with actual joint gamma/mu; no exact breakpoint equivalence claimed. All baseline retained means no new transition test, not evidence that sensitivity mathematics is false.",
+  "gate_proximity_policy": {
+    "near_log_distance_max": 0.04879016416943205,
+    "scale_source": "5% relative width of frozen Module12 first memory transition bracket mu=(1.00,1.05]",
+    "meaning": "13B gate reporting only; exact13A target segments and selection-distance formula are unchanged. Within5% multiplicative L-infinity distance is operationally NEAR, literal membership reported separately. No measured values adjusted. SUPPORTED additionally requires real structural change persisting in matched-count diagnostic."
+  },
+  "prohibitions": [
+    "No full replica frontier",
+    "No low-QPS or multi-hotspot campaign",
+    "No Task-Rich",
+    "No Module9 mutation",
+    "No baseline mutation",
+    "No artificial delays or allocation",
+    "No new shortlist model",
+    "No selection after replay outcomes"
+  ]
+}

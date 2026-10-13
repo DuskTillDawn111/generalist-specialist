@@ -1,0 +1,110 @@
+{
+  "A0": {
+    "U": -2.2201052231044724,
+    "delta_U": 0.0,
+    "VQA_n": 133,
+    "Phi_ASR_n": 0,
+    "VQA_ASR_blocked_n": 0,
+    "VQA_total_wait_ms": 1555.761772000001,
+    "VQA_wait_covered_by_ASR_ms": 0,
+    "VQA_wait_ASR_coverage": 0.0,
+    "Phi_native_serial_verified": true,
+    "ASR_to_busy_Phi": 0,
+    "ASR_to_Phi_with_VQA_pending": 0,
+    "ASR_to_idle_Phi_with_future_VQA": 0,
+    "VQA_top_tail_ASR_blocked": 0,
+    "VQA_stats": {
+      "service_ms": {
+        "n": 133,
+        "mean": 283.9570281654136,
+        "p95": 396.40179119999993,
+        "max": 434.898471
+      },
+      "queue_ms": {
+        "n": 133,
+        "mean": 11.697456932330828,
+        "p95": 36.67760079999964,
+        "max": 402.893576
+      },
+      "e2e_ms": {
+        "n": 133,
+        "mean": 297.01147469172935,
+        "p95": 435.15044059999997,
+        "max": 689.830181
+      }
+    },
+    "T_M_U_delta": 0.0
+  },
+  "A1": {
+    "U": -3.092861788800474,
+    "delta_U": -0.8727565656960015,
+    "VQA_n": 133,
+    "Phi_ASR_n": 17,
+    "VQA_ASR_blocked_n": 16,
+    "VQA_total_wait_ms": 63175.04478999999,
+    "VQA_wait_covered_by_ASR_ms": 57589.522205,
+    "VQA_wait_ASR_coverage": 0.9115865670761799,
+    "Phi_native_serial_verified": true,
+    "ASR_to_busy_Phi": 2,
+    "ASR_to_Phi_with_VQA_pending": 2,
+    "ASR_to_idle_Phi_with_future_VQA": 7,
+    "VQA_top_tail_ASR_blocked": 7,
+    "VQA_stats": {
+      "service_ms": {
+        "n": 133,
+        "mean": 292.43114247368425,
+        "p95": 373.2316252,
+        "max": 403.619709
+      },
+      "queue_ms": {
+        "n": 133,
+        "mean": 475.0003367669173,
+        "p95": 3509.4069703999994,
+        "max": 10987.571985
+      },
+      "e2e_ms": {
+        "n": 133,
+        "mean": 768.9556659999998,
+        "p95": 3735.2711465999996,
+        "max": 11365.049325
+      }
+    },
+    "T_M_U_delta": -9.640722405782065e-05
+  },
+  "A2": {
+    "U": -2.5465509908313138,
+    "delta_U": -0.3264457677268413,
+    "VQA_n": 133,
+    "Phi_ASR_n": 34,
+    "VQA_ASR_blocked_n": 17,
+    "VQA_total_wait_ms": 37192.63334700001,
+    "VQA_wait_covered_by_ASR_ms": 35488.910351000006,
+    "VQA_wait_ASR_coverage": 0.9541919234353587,
+    "Phi_native_serial_verified": true,
+    "ASR_to_busy_Phi": 6,
+    "ASR_to_Phi_with_VQA_pending": 4,
+    "ASR_to_idle_Phi_with_future_VQA": 12,
+    "VQA_top_tail_ASR_blocked": 7,
+    "VQA_stats": {
+      "service_ms": {
+        "n": 133,
+        "mean": 232.01245834586467,
+        "p95": 332.0809994,
+        "max": 408.235412
+      },
+      "queue_ms": {
+        "n": 133,
+        "mean": 279.6438597518797,
+        "p95": 1943.948615199999,
+        "max": 8657.592726
+      },
+      "e2e_ms": {
+        "n": 133,
+        "mean": 512.926402218045,
+        "p95": 2155.0807511999988,
+        "max": 8986.595019
+      }
+    },
+    "T_M_U_delta": -0.00010604794646359994
+  }
+}

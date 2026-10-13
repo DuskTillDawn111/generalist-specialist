@@ -1,0 +1,254 @@
+[
+  {
+    "worker": "distilbert",
+    "task": "text",
+    "co_resident": "qwen",
+    "single_ms": 2.51614193,
+    "pair_ms": 4.70574618,
+    "gamma": 0.8702228693434637,
+    "slowdown": 1.8702228693434637
+  },
+  {
+    "worker": "qwen",
+    "task": "image",
+    "co_resident": "distilbert",
+    "single_ms": 137.328372035,
+    "pair_ms": 137.728170445,
+    "gamma": 0.002911258642883219,
+    "slowdown": 1.0029112586428832
+  },
+  {
+    "worker": "qwen",
+    "task": "ocr",
+    "co_resident": "distilbert",
+    "single_ms": 94.207280995,
+    "pair_ms": 94.682701335,
+    "gamma": 0.0050465349915493896,
+    "slowdown": 1.0050465349915494
+  },
+  {
+    "worker": "qwen",
+    "task": "asr",
+    "co_resident": "distilbert",
+    "single_ms": 621.703561445,
+    "pair_ms": 656.6471393,
+    "gamma": 0.05620617288049967,
+    "slowdown": 1.0562061728804997
+  },
+  {
+    "worker": "qwen",
+    "task": "text",
+    "co_resident": "resnet50",
+    "single_ms": 43.760553445,
+    "pair_ms": 43.849022205,
+    "gamma": 0.002021655418759538,
+    "slowdown": 1.0020216554187595
+  },
+  {
+    "worker": "resnet50",
+    "task": "image",
+    "co_resident": "qwen",
+    "single_ms": 5.58187836,
+    "pair_ms": 8.492184715,
+    "gamma": 0.5213847682270167,
+    "slowdown": 1.5213847682270167
+  },
+  {
+    "worker": "qwen",
+    "task": "ocr",
+    "co_resident": "resnet50",
+    "single_ms": 94.207280995,
+    "pair_ms": 93.01428622,
+    "gamma": -0.012663509257456629,
+    "slowdown": 0.9873364907425434
+  },
+  {
+    "worker": "qwen",
+    "task": "asr",
+    "co_resident": "resnet50",
+    "single_ms": 621.703561445,
+    "pair_ms": 615.925574425,
+    "gamma": -0.009293797523968528,
+    "slowdown": 0.9907062024760315
+  },
+  {
+    "worker": "qwen",
+    "task": "text",
+    "co_resident": "paddleocr",
+    "single_ms": 43.760553445,
+    "pair_ms": 43.94155872,
+    "gamma": 0.004136265671948136,
+    "slowdown": 1.0041362656719481
+  },
+  {
+    "worker": "qwen",
+    "task": "image",
+    "co_resident": "paddleocr",
+    "single_ms": 137.328372035,
+    "pair_ms": 135.1775285,
+    "gamma": -0.01566204785746561,
+    "slowdown": 0.9843379521425344
+  },
+  {
+    "worker": "paddleocr",
+    "task": "ocr",
+    "co_resident": "qwen",
+    "single_ms": 5.80345425,
+    "pair_ms": 8.661113445,
+    "gamma": 0.492406603360404,
+    "slowdown": 1.492406603360404
+  },
+  {
+    "worker": "qwen",
+    "task": "asr",
+    "co_resident": "paddleocr",
+    "single_ms": 621.703561445,
+    "pair_ms": 624.991252795,
+    "gamma": 0.005288197710108911,
+    "slowdown": 1.005288197710109
+  },
+  {
+    "worker": "qwen",
+    "task": "text",
+    "co_resident": "whisper",
+    "single_ms": 43.760553445,
+    "pair_ms": 58.14716878,
+    "gamma": 0.32875761850410945,
+    "slowdown": 1.3287576185041095
+  },
+  {
+    "worker": "qwen",
+    "task": "image",
+    "co_resident": "whisper",
+    "single_ms": 137.328372035,
+    "pair_ms": 227.005282855,
+    "gamma": 0.6530108053501473,
+    "slowdown": 1.6530108053501473
+  },
+  {
+    "worker": "qwen",
+    "task": "ocr",
+    "co_resident": "whisper",
+    "single_ms": 94.207280995,
+    "pair_ms": 133.79594704,
+    "gamma": 0.42022936684799483,
+    "slowdown": 1.4202293668479948
+  },
+  {
+    "worker": "whisper",
+    "task": "asr",
+    "co_resident": "qwen",
+    "single_ms": 195.270631865,
+    "pair_ms": 299.689130285,
+    "gamma": 0.5347373408008917,
+    "slowdown": 1.5347373408008917
+  },
+  {
+    "worker": "distilbert",
+    "task": "text",
+    "co_resident": "resnet50",
+    "single_ms": 2.51614193,
+    "pair_ms": 2.805104915,
+    "gamma": 0.11484367457761024,
+    "slowdown": 1.1148436745776102
+  },
+  {
+    "worker": "resnet50",
+    "task": "image",
+    "co_resident": "distilbert",
+    "single_ms": 5.58187836,
+    "pair_ms": 5.34693084,
+    "gamma": -0.04209112145539484,
+    "slowdown": 0.9579088785446052
+  },
+  {
+    "worker": "distilbert",
+    "task": "text",
+    "co_resident": "paddleocr",
+    "single_ms": 2.51614193,
+    "pair_ms": 2.78175108,
+    "gamma": 0.10556206978355953,
+    "slowdown": 1.1055620697835595
+  },
+  {
+    "worker": "paddleocr",
+    "task": "ocr",
+    "co_resident": "distilbert",
+    "single_ms": 5.80345425,
+    "pair_ms": 6.12943715,
+    "gamma": 0.056170495356278716,
+    "slowdown": 1.0561704953562787
+  },
+  {
+    "worker": "distilbert",
+    "task": "text",
+    "co_resident": "whisper",
+    "single_ms": 2.51614193,
+    "pair_ms": 5.385592655,
+    "gamma": 1.1404168782323025,
+    "slowdown": 2.1404168782323025
+  },
+  {
+    "worker": "whisper",
+    "task": "asr",
+    "co_resident": "distilbert",
+    "single_ms": 195.270631865,
+    "pair_ms": 201.228328335,
+    "gamma": 0.03050994618647418,
+    "slowdown": 1.0305099461864742
+  },
+  {
+    "worker": "resnet50",
+    "task": "image",
+    "co_resident": "paddleocr",
+    "single_ms": 5.58187836,
+    "pair_ms": 5.47514666,
+    "gamma": -0.019121108185524816,
+    "slowdown": 0.9808788918144752
+  },
+  {
+    "worker": "paddleocr",
+    "task": "ocr",
+    "co_resident": "resnet50",
+    "single_ms": 5.80345425,
+    "pair_ms": 5.958376655,
+    "gamma": 0.02669486108208763,
+    "slowdown": 1.0266948610820876
+  },
+  {
+    "worker": "resnet50",
+    "task": "image",
+    "co_resident": "whisper",
+    "single_ms": 5.58187836,
+    "pair_ms": 6.87788667,
+    "gamma": 0.23218139601307963,
+    "slowdown": 1.2321813960130796
+  },
+  {
+    "worker": "whisper",
+    "task": "asr",
+    "co_resident": "resnet50",
+    "single_ms": 195.270631865,
+    "pair_ms": 198.955750595,
+    "gamma": 0.01887185335963726,
+    "slowdown": 1.0188718533596373
+  },
+  {
+    "worker": "paddleocr",
+    "task": "ocr",
+    "co_resident": "whisper",
+    "single_ms": 5.80345425,
+    "pair_ms": 7.062346115,
+    "gamma": 0.216921131927593,
+    "slowdown": 1.216921131927593
+  },
+  {
+    "worker": "whisper",
+    "task": "asr",
+    "co_resident": "paddleocr",
+    "single_ms": 195.270631865,
+    "pair_ms": 184.986304365,
+    "gamma": -0.052667046763642755,
+    "slowdown": 0.9473329532363572
+  }
+]

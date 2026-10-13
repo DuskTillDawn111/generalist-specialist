@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "qwen",
+  "target_task": "text",
+  "target_count": 30,
+  "mean_worker_latency_ms": 55.3173773,
+  "min_worker_latency_ms": 54.032995,
+  "max_worker_latency_ms": 58.116487,
+  "output": "benchmark/results/characterization/qwen_nsys_v1/qwen_text_profiled_n30.jsonl"
+}

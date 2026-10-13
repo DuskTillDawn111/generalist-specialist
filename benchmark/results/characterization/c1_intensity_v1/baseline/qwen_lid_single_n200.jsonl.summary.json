@@ -1,0 +1,10 @@
+{
+  "protocol": "active_single_profile_v1",
+  "target_worker": "qwen",
+  "target_task": "lid",
+  "target_count": 200,
+  "mean_worker_latency_ms": 136.29069093,
+  "min_worker_latency_ms": 86.119761,
+  "max_worker_latency_ms": 438.677135,
+  "output": "benchmark/results/characterization/c1_intensity_v1/baseline/qwen_lid_single_n200.jsonl"
+}

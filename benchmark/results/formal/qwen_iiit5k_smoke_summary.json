@@ -1,0 +1,81 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "task": "ocr",
+  "dataset": "IIIT5K",
+  "split": "test",
+  "model_role": "generalist",
+  "precision": "bfloat16",
+  "batch_size": 1,
+  "audio_output_enabled": false,
+  "generation": {
+    "do_sample": false,
+    "return_audio": false,
+    "max_new_tokens": 32
+  },
+  "multimodal_processing": {
+    "qwen_omni_utils": true,
+    "qwen_omni_utils_version": "0.0.9",
+    "use_audio_in_video": false,
+    "required_vision_inputs": [
+      "pixel_values",
+      "image_grid_thw"
+    ]
+  },
+  "prompt_version": "v1",
+  "prompt": "Read the single word shown in this image. Output only the recognized word. Do not provide any explanation.",
+  "normalization": "lowercase + remove all non-alphanumeric characters",
+  "generated_token_extraction": "output[:, input_length:] before batch_decode",
+  "num_samples": 5,
+  "exact_correct": 4,
+  "exact_match": 0.8,
+  "corpus_char_errors": 1,
+  "corpus_reference_chars": 30,
+  "cer": 0.033333,
+  "input_tokens": {
+    "mean": 49.4,
+    "min": 46,
+    "max": 56
+  },
+  "output_tokens": {
+    "total": 13,
+    "mean": 2.6,
+    "min": 2,
+    "max": 4
+  },
+  "parameters_m": 8931.814,
+  "checkpoint_safetensors_total_mb": 21326.886,
+  "checkpoint_note": "Checkpoint disk size includes components not necessarily loaded when enable_audio_output=False.",
+  "model_load_time_s": 3.186,
+  "warmup_runs": 2,
+  "model_latency": {
+    "mean_ms": 73.075,
+    "p50_ms": 63.72,
+    "p95_ms": 93.755,
+    "p99_ms": 96.09,
+    "min_ms": 60.905,
+    "max_ms": 96.674
+  },
+  "e2e_latency": {
+    "mean_ms": 74.727,
+    "p50_ms": 65.961,
+    "p95_ms": 95.218,
+    "p99_ms": 97.494,
+    "min_ms": 62.274,
+    "max_ms": 98.064
+  },
+  "model_request_service_rate_proxy_qps": 13.685,
+  "e2e_request_service_rate_proxy_qps": 13.382,
+  "throughput_note": "Request QPS values are sequential batch-1 service-rate proxies (1000 / mean latency), not load-tested concurrent throughput.",
+  "torch_idle_allocated_mb": 17043.442,
+  "torch_peak_allocated_mb": 17072.992,
+  "memory_note": "Torch allocator memory is framework-specific auxiliary data; final deployment VRAM comparison will use process-level NVML.",
+  "latency_definition": {
+    "model_latency": "synchronized model.generate() after image preprocessing and H2D; includes vision encoding and autoregressive text generation",
+    "e2e_latency": "message construction + local image read/decode inside process_mm_info + chat template + multimodal processor + H2D + model.generate() + new-token slicing + decode + OCR normalization"
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "4.52.3",
+  "timestamp": "2026-09-18T01:12:56.491573+08:00"
+}

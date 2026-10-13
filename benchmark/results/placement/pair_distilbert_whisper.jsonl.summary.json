@@ -1,0 +1,22 @@
+{
+  "models": [
+    "distilbert",
+    "whisper"
+  ],
+  "routing": {
+    "text": "distilbert",
+    "asr": "whisper"
+  },
+  "num_results": 400,
+  "wall_time_s": 40.262477307,
+  "paths": {
+    "distilbert:text": {
+      "count": 200,
+      "mean_worker_latency_ms": 5.385592655
+    },
+    "whisper:asr": {
+      "count": 200,
+      "mean_worker_latency_ms": 201.228328335
+    }
+  }
+}

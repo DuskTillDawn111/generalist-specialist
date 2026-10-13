@@ -1,0 +1,22 @@
+{
+  "status": "EVIDENCE_INCOMPLETE",
+  "window_reconciliation": "VERIFIED",
+  "recorded_cost_formula_checks": "MATCH_ALL7005",
+  "first_recorded_decision_single_step_supported": true,
+  "first_exact_planned_arrival_all_guards_known": false,
+  "exact_multi_diversion_count": null,
+  "Module28_gate_unchanged": true,
+  "original_classifier": "unstable",
+  "legal_U": null,
+  "GPU_inferences_started": 0,
+  "optimizer_modified": false,
+  "next_Module_started": false,
+  "input_integrity": {
+    "status": "UNCHANGED",
+    "checked_input_files": 83,
+    "checked_module28_files": 76,
+    "sha256_changes": [],
+    "module28_file_set_changes": []
+  },
+  "completed_and_stopped": true
+}
