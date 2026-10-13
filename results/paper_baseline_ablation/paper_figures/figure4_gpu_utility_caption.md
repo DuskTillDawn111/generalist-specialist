@@ -1,1 +1,0 @@
-Historical34 within-pool paired configuration measurements reattributed by exact fullconfiguration match. Only A supports a difference after original Holm correction; B/C inconclusive. n=3. No full-GPU-Oracle claim.

@@ -1,8 +1,0 @@
-{
-  "created_at_utc": "2026-10-08T17:08:42.748181+00:00",
-  "CPU_only": true,
-  "script_sha256": "039fedded872528c3171f77cfe354bea74551e339ad5ce542f753973f1f6ded8",
-  "python": "envs/data_env/bin/python",
-  "protected_input_files": 782,
-  "input_hashes_verified_unchanged": true
-}

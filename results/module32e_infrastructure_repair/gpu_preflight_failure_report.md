@@ -1,9 +1,0 @@
-# GPU预检启动失败（不重试）
-
-2026-10-10，单次冻结E0_DYNAMIC启动首个PARSeq worker。native model.eval().float().to(cuda:0)触发cudaGetDeviceCount返回CUDA Error304（OS call failed/operation not supported），worker未READY，尚未启动其余五worker。运行5.61秒后清洁退出、GPU NVML回到1MiB、无存留CUDA进程。原错误和完整堆栈在gpu_preflight.log/raw_runs/E0_DYNAMIC.json保留。所有请求轨迹在frozen_validation_manifest.json保持，未发生warmup、conditioning或600秒测量，因此没有实际路由、控制probe、queue或service样本。
-
-错误发生在新Landlock/seccomp写入限制下；普通依赖和CPU保护测试可用不能证明CUDA驱动兼容。没有记录每个native syscall，也没有隔离开关对照；不能断言具体由哪个被禁metadata syscall或设备访问造成。GPU适配问题仍需后续工程诊断，本轮不继续启动GPU。
-
-原gpu_preflight.assess在未创建journal的启动失败上又触发FileNotFoundError。这是报告器的次级错误，不是主要CUDA故障。冻执行源码不改，新增post_failure_acceptance.py对0个probe、0个请求和不存在journal做失败记账，保存gpu_preflight_acceptance.json并仍判失败；不计算U，不把空样本最大值0当成10ms控制通过。
-
-CPU状态保持：1381次决策一致，2400秒规模并发回放P95≤1ms，短控制锁测试通过，18项保护测试通过。GPU工程Gate为GPU_PREFLIGHT_FAILED，不能宣称INFRASTRUCTURE_READY_FOR_VALIDATION。本轮停止，无新的长窗口、模型搜索、路由阈值调整、门槛放宽或正式优化器改动。

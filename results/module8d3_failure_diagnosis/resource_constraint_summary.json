@@ -1,8 +1,0 @@
-{
-  "GPU_capacity_mib": 49140,
-  "formal_12_model_idle_sum_mib": 63140.0,
-  "effective_admitted_11_model_single_replica_memory_mib": 60832.0,
-  "B2_five_VQA_workloads_memory_mib": 25188,
-  "B2_noVQA_memory_mib": 7210,
-  "all_pool_exceeds_GPU_does_not_imply_useful_subset_is_resource_bound": true
-}

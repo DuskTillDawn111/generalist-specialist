@@ -1,9 +1,0 @@
-{
-  "frozen_during_first_seed_measurement_before_any_algorithm_finished": true,
-  "strong_support": "B2 improves its seed in at least 2 of 3 workloads, is better or more sample-efficient than equal-budget B1 in at least 2 of 3 workloads, and runtime feedback avoids at least one LP-positive real-runtime-worse transition",
-  "partial_support": "Some workloads show benefit, but workload sensitivity, random-policy overlap, or runtime noise limits the evidence",
-  "no_support": "B2 consistently fails to improve seed or does not outperform the equal-budget B1 random baseline",
-  "comparison_priority": ["stability", "weighted mean E2E", "weighted task P95", "memory per frozen RuntimeObjective"],
-  "same_deployment_improvement": 0,
-  "interpretation": "Descriptive Module 3C decision, not a statistical significance test or final paper benchmark"
-}

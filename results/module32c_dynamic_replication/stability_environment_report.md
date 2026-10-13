@@ -1,6 +1,0 @@
-# 稳定性与环境
-
-- P1_S: legal=True, technical=True, stability=steady, offered/completed=3419/3419, U=-1.3852584985619942, VRAM safe/peak=25802.915672660376/23228.0, drain=0.00120708s, checks={'valid_session': True, 'durable_journal': True, 'nonblocking_control': True, 'exact_frozen_window': True, 'trace_matched': True, 'native_timestamps': True, 'full_cohort': True, 'sensor_values': True, 'monotonic_timestamps': True, 'no_external_GPU': True, 'telemetry_coverage': True, 'bounded_drain': True, 'unix_perf_alignment': True, 'utility_recomputed': True}, journal=True
-- P1_D: legal=False, technical=False, stability=steady, offered/completed=3419/3419, U=None, VRAM safe/peak=25802.915672660376/23228.0, drain=0.001318054s, checks={'valid_session': True, 'durable_journal': True, 'nonblocking_control': True, 'exact_frozen_window': True, 'trace_matched': True, 'native_timestamps': True, 'full_cohort': True, 'sensor_values': True, 'monotonic_timestamps': True, 'no_external_GPU': True, 'telemetry_coverage': True, 'bounded_drain': True, 'unix_perf_alignment': True, 'utility_recomputed': True}, journal=True
-
-原判据、完整request cohort、worker/sys/task backlog、原热控制不变。环境逐样本与组内温差/SM时钟诊断见GPU CSV；最终审计见final_data_acceptance.json。

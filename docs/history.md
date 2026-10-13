@@ -1,0 +1,29 @@
+# 历史保留与迁移
+
+## 保存位置
+
+编号阶段、旧求解器、冻结基线、快照和精选结果完整保存在 `archive/research-history` 分支，基准提交为 `4cdc88d611520207e66bf71212f4f8ccb417ce3a`。Git 历史中也保留完整导入版本。
+
+原本地研究工作区保留原文件和路径。新项目使用独立工作区构建，未移动、覆盖或删除旧权重、数据、原始观测和冻结源码。归档分支供历史复现使用，后续项目开发无需切换它。
+
+## 当前开发入口
+
+默认开发系统采用已存在的 U 对齐优化器和 FIFO predictor，并统一连接运行时与评估。冻结 V3、Poisson/路由回归预测原型及在线动态路由研究仍可从归档查阅，未在此迁移中自动变成新的默认策略。
+
+如果以后需要把其中某种方法加入项目，应通过公开策略接口和明确配置集成；不恢复对历史目录的 import。项目统一不要求把每个研究阶段的变体都包装成当前算法。
+
+## 复现边界
+
+`tests/reference_plans.json` 只保存冻结决策与 U 的回归数据。可移植模型池保留原能力、单副本服务时间、容量和显存；移除了固定服务器路径与旧实验引用。源码转移与适配位置记录在 `source_provenance.json`。
+
+回归结果验证重构的 CPU 语义。当前整理没有重跑原生 GPU 实验，也不会把已有 GPU 微差不确定或预测器不足的 Gate 改为通过。原生加载代码迁移、分类器/PARSeq 配置化需要各模型环境和真实检查点进行后续验证。
+
+## 参考仓库的组织方式
+
+参考的是功能组织与入口：核心包、配置、测试、示例和实验材料各有明确位置。
+
+- [DistServe](https://github.com/LLMServe/DistServe)：`distserve` 核心、`examples`、`evaluation` 和模拟器。
+- [Llumnix](https://github.com/llumnix-project/llumnix-ray)：`llumnix` 核心与独立的 configs/tests/docs；论文 artifact 与后续版本区分。
+- [Alpa](https://github.com/alpa-projects/alpa)：`alpa` 核心与独立的 benchmark/examples/tests。
+
+这些仓库用于结构参考，未引入其实现或许可证作为本项目代码。

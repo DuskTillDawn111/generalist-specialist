@@ -1,9 +1,0 @@
-{
-  "task": "asr",
-  "worker": "whisper",
-  "num_results": 200,
-  "wall_time_s": 39.072265236,
-  "throughput_tasks_per_s": 5.118720370881545,
-  "mean_worker_latency_ms": 195.270631865,
-  "p95_worker_latency_ms": 404.5147853500001
-}

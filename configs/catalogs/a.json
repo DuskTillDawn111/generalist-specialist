@@ -1,0 +1,76 @@
+{
+  "safe_factor": 1.110853955254881,
+  "capacity_factors": {
+    "qwen": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "minicpm": {
+      "0": 0.0,
+      "1": 1.0
+    },
+    "phi4mm": {
+      "0": 0.0,
+      "1": 1.0
+    }
+  },
+  "memory_table_mib": {
+    "qwen": {
+      "0": 0.0,
+      "1": 18320.0
+    },
+    "minicpm": {
+      "0": 0.0,
+      "1": 19542.0
+    },
+    "phi4mm": {
+      "0": 0.0,
+      "1": 12096.666666666666
+    }
+  },
+  "models": {
+    "qwen": {
+      "role": "generalist",
+      "supported_tasks": [
+        "asr",
+        "image",
+        "lid",
+        "text",
+        "visual_qa"
+      ],
+      "service_time_ms": {
+        "asr": 654.0784572333333,
+        "image": 139.61318952222226,
+        "lid": 139.90943443333333,
+        "text": 44.63871411111111,
+        "visual_qa": 144.5074479
+      }
+    },
+    "minicpm": {
+      "role": "generalist",
+      "supported_tasks": [
+        "asr",
+        "image",
+        "ocr",
+        "visual_qa"
+      ],
+      "service_time_ms": {
+        "asr": 777.2589822555556,
+        "image": 221.70457001111112,
+        "ocr": 160.37148515555555,
+        "visual_qa": 195.6905769222222
+      }
+    },
+    "phi4mm": {
+      "role": "generalist",
+      "supported_tasks": [
+        "asr",
+        "visual_qa"
+      ],
+      "service_time_ms": {
+        "asr": 1129.588914977778,
+        "visual_qa": 160.11645761111112
+      }
+    }
+  }
+}

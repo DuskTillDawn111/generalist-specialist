@@ -1,0 +1,80 @@
+{
+  "catalog": {
+    "safe_factor": 1.0,
+    "models": {
+      "generalist": {
+        "role": "generalist",
+        "supported_tasks": [
+          "text",
+          "image",
+          "ocr",
+          "asr",
+          "lid",
+          "visual_qa"
+        ],
+        "service_time_ms": {
+          "text": 2.0,
+          "image": 2.0,
+          "ocr": 2.0,
+          "asr": 2.0,
+          "lid": 2.0,
+          "visual_qa": 2.0
+        }
+      },
+      "text_specialist": {
+        "role": "specialist",
+        "supported_tasks": [
+          "text"
+        ],
+        "service_time_ms": {
+          "text": 0.2
+        }
+      }
+    },
+    "capacity_factors": {
+      "generalist": {
+        "0": 0.0,
+        "1": 1.0
+      },
+      "text_specialist": {
+        "0": 0.0,
+        "1": 1.0
+      }
+    },
+    "memory_table_mib": {
+      "generalist": {
+        "0": 0.0,
+        "1": 64.0
+      },
+      "text_specialist": {
+        "0": 0.0,
+        "1": 8.0
+      }
+    }
+  },
+  "workload": {
+    "text": 50.0,
+    "image": 50.0,
+    "ocr": 50.0,
+    "asr": 50.0,
+    "lid": 50.0,
+    "visual_qa": 50.0
+  },
+  "gpu_memory_mib": 128.0,
+  "latency_reference_ms": {
+    "text": 10.0,
+    "image": 10.0,
+    "ocr": 10.0,
+    "asr": 10.0,
+    "lid": 10.0,
+    "visual_qa": 10.0
+  },
+  "weights": {
+    "Q": 0.0,
+    "T": 0.25,
+    "L": 0.3,
+    "P": 0.3,
+    "M": 0.15
+  },
+  "route_grid": 1
+}

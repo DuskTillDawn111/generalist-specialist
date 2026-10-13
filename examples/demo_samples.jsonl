@@ -1,0 +1,6 @@
+{"pool_id": "text:0", "task_type": "text", "sample": {"id": "text:0", "input": "synthetic text", "label": "mock"}}
+{"pool_id": "image:0", "task_type": "image", "sample": {"id": "image:0", "input": "synthetic image", "label": "mock"}}
+{"pool_id": "ocr:0", "task_type": "ocr", "sample": {"id": "ocr:0", "input": "synthetic ocr", "label": "mock"}}
+{"pool_id": "asr:0", "task_type": "asr", "sample": {"id": "asr:0", "input": "synthetic asr", "label": "mock"}}
+{"pool_id": "lid:0", "task_type": "lid", "sample": {"id": "lid:0", "input": "synthetic lid", "label": "mock"}}
+{"pool_id": "visual_qa:0", "task_type": "visual_qa", "sample": {"id": "visual_qa:0", "input": "synthetic visual_qa", "label": "mock"}}

@@ -1,9 +1,0 @@
-{
-  "task": "text",
-  "worker": "distilbert",
-  "num_results": 200,
-  "wall_time_s": 0.514550468,
-  "throughput_tasks_per_s": 388.6887923304736,
-  "mean_worker_latency_ms": 2.51614193,
-  "p95_worker_latency_ms": 2.69698825
-}

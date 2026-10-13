@@ -1,0 +1,115 @@
+{
+  "qwen": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.qwen"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "minicpm": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.minicpm"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "phi4mm": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.phi"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "openai/whisper-large-v3@06f233fe06e710322aca913c1bc4249a0d71fce1": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.whisper"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.whisper"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "roberta_sst2": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.classifier"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json",
+      "GS_CLASSIFIER": "roberta"
+    }
+  },
+  "convnext_tiny": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.classifier"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json",
+      "GS_CLASSIFIER": "convnext"
+    }
+  },
+  "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.parseq"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "whisper-small": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.whisper"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json"
+    }
+  },
+  "textattack/facebook-bart-large-SST-2@8a4baa9662afa056a97a2e9441ae665a06504979": {
+    "command": [
+      "/path/to/model/env/bin/python",
+      "-m",
+      "gsdeploy.backends.classifier"
+    ],
+    "env": {
+      "GS_MODEL_PATH": "/path/to/checkpoint",
+      "GS_PROMPT_FILE": "configs/prompts.json",
+      "GS_CLASSIFIER": "bart"
+    }
+  }
+}
