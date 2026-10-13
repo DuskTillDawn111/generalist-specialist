@@ -1,0 +1,28 @@
+{
+  "catalog": "catalogs/c.json",
+  "workload": {
+    "text": 10.0,
+    "image": 0.1,
+    "ocr": 0.1,
+    "asr": 0.1,
+    "lid": 0.1,
+    "visual_qa": 0.2
+  },
+  "gpu_memory_mib": 49140.0,
+  "latency_reference_ms": {
+    "text": 10.026380266666667,
+    "image": 27.71673651111111,
+    "ocr": 11.880106522222222,
+    "asr": 574.4954926166666,
+    "lid": 76.25589069444445,
+    "visual_qa": 160.11645761111112
+  },
+  "weights": {
+    "Q": 0.0,
+    "T": 0.25,
+    "L": 0.3,
+    "P": 0.3,
+    "M": 0.15
+  },
+  "route_grid": 1
+}

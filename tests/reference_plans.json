@@ -1,0 +1,366 @@
+[
+  {
+    "scenario": "LOW18",
+    "pool": "A",
+    "U": -2.5083906701669654,
+    "deployment": {
+      "minicpm": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "qwen": 0.1
+      },
+      "image": {
+        "qwen": 0.1
+      },
+      "lid": {
+        "qwen": 0.1
+      },
+      "ocr": {
+        "minicpm": 0.1
+      },
+      "text": {
+        "qwen": 0.1
+      },
+      "visual_qa": {
+        "qwen": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "LOW18",
+    "pool": "B",
+    "U": -2.3971663221354658,
+    "deployment": {
+      "minicpm": 1,
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.1
+      },
+      "image": {
+        "qwen": 0.1
+      },
+      "lid": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.1
+      },
+      "ocr": {
+        "minicpm": 0.1
+      },
+      "text": {
+        "qwen": 0.1
+      },
+      "visual_qa": {
+        "qwen": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "LOW18",
+    "pool": "C",
+    "U": -0.4245589392998279,
+    "deployment": {
+      "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+      "convnext_tiny": 1,
+      "phi4mm": 1,
+      "roberta_sst2": 1,
+      "whisper-small": 1
+    },
+    "routing": {
+      "asr": {
+        "whisper-small": 0.1
+      },
+      "image": {
+        "convnext_tiny": 0.1
+      },
+      "lid": {
+        "whisper-small": 0.1
+      },
+      "ocr": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.1
+      },
+      "text": {
+        "roberta_sst2": 0.1
+      },
+      "visual_qa": {
+        "phi4mm": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "ASR32B",
+    "pool": "A",
+    "U": -4.906600340103467,
+    "deployment": {
+      "minicpm": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "minicpm": 0.46
+      },
+      "image": {
+        "qwen": 0.2
+      },
+      "lid": {
+        "qwen": 0.2
+      },
+      "ocr": {
+        "minicpm": 0.2
+      },
+      "text": {
+        "qwen": 0.2
+      },
+      "visual_qa": {
+        "qwen": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "ASR32B",
+    "pool": "B",
+    "U": -2.372690258963669,
+    "deployment": {
+      "minicpm": 1,
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.46
+      },
+      "image": {
+        "qwen": 0.2
+      },
+      "lid": {
+        "qwen": 0.2
+      },
+      "ocr": {
+        "minicpm": 0.2
+      },
+      "text": {
+        "qwen": 0.2
+      },
+      "visual_qa": {
+        "qwen": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "ASR32B",
+    "pool": "C",
+    "U": -0.3792309821776662,
+    "deployment": {
+      "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+      "convnext_tiny": 1,
+      "phi4mm": 1,
+      "roberta_sst2": 1,
+      "whisper-small": 1
+    },
+    "routing": {
+      "asr": {
+        "whisper-small": 0.46
+      },
+      "image": {
+        "convnext_tiny": 0.2
+      },
+      "lid": {
+        "whisper-small": 0.2
+      },
+      "ocr": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.2
+      },
+      "text": {
+        "roberta_sst2": 0.2
+      },
+      "visual_qa": {
+        "phi4mm": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "TEXT_HALF_MID18",
+    "pool": "A",
+    "U": -2.8529985317062123,
+    "deployment": {
+      "minicpm": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "minicpm": 0.1
+      },
+      "image": {
+        "minicpm": 0.1
+      },
+      "lid": {
+        "qwen": 0.1
+      },
+      "ocr": {
+        "minicpm": 0.1
+      },
+      "text": {
+        "qwen": 10.0
+      },
+      "visual_qa": {
+        "minicpm": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "TEXT_HALF_MID18",
+    "pool": "B",
+    "U": -2.8138287647584073,
+    "deployment": {
+      "minicpm": 1,
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.1
+      },
+      "image": {
+        "minicpm": 0.1
+      },
+      "lid": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.1
+      },
+      "ocr": {
+        "minicpm": 0.1
+      },
+      "text": {
+        "qwen": 10.0
+      },
+      "visual_qa": {
+        "minicpm": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "TEXT_HALF_MID18",
+    "pool": "C",
+    "U": -0.38609808613186253,
+    "deployment": {
+      "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+      "convnext_tiny": 1,
+      "phi4mm": 1,
+      "roberta_sst2": 1,
+      "whisper-small": 1
+    },
+    "routing": {
+      "asr": {
+        "whisper-small": 0.1
+      },
+      "image": {
+        "convnext_tiny": 0.1
+      },
+      "lid": {
+        "whisper-small": 0.1
+      },
+      "ocr": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.1
+      },
+      "text": {
+        "roberta_sst2": 10.0
+      },
+      "visual_qa": {
+        "phi4mm": 0.2
+      }
+    }
+  },
+  {
+    "scenario": "HOLDOUT_TEXT3",
+    "pool": "A",
+    "U": -3.3679067944360455,
+    "deployment": {
+      "minicpm": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "minicpm": 0.31
+      },
+      "image": {
+        "qwen": 0.17
+      },
+      "lid": {
+        "qwen": 0.19
+      },
+      "ocr": {
+        "minicpm": 0.13
+      },
+      "text": {
+        "qwen": 3.0
+      },
+      "visual_qa": {
+        "minicpm": 0.23
+      }
+    }
+  },
+  {
+    "scenario": "HOLDOUT_TEXT3",
+    "pool": "B",
+    "U": -2.693018135670072,
+    "deployment": {
+      "minicpm": 1,
+      "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 1,
+      "qwen": 1
+    },
+    "routing": {
+      "asr": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.31
+      },
+      "image": {
+        "qwen": 0.17
+      },
+      "lid": {
+        "openai/whisper-medium@abdf7c39ab9d0397620ccaea8974cc764cd0953e": 0.19
+      },
+      "ocr": {
+        "minicpm": 0.13
+      },
+      "text": {
+        "qwen": 3.0
+      },
+      "visual_qa": {
+        "minicpm": 0.23
+      }
+    }
+  },
+  {
+    "scenario": "HOLDOUT_TEXT3",
+    "pool": "C",
+    "U": -0.3831707574350568,
+    "deployment": {
+      "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 1,
+      "convnext_tiny": 1,
+      "phi4mm": 1,
+      "roberta_sst2": 1,
+      "whisper-small": 1
+    },
+    "routing": {
+      "asr": {
+        "whisper-small": 0.31
+      },
+      "image": {
+        "convnext_tiny": 0.17
+      },
+      "lid": {
+        "whisper-small": 0.19
+      },
+      "ocr": {
+        "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": 0.13
+      },
+      "text": {
+        "roberta_sst2": 3.0
+      },
+      "visual_qa": {
+        "phi4mm": 0.23
+      }
+    }
+  }
+]

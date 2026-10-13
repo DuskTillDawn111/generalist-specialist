@@ -1,0 +1,176 @@
+{
+  "archive_branch": "archive/research-history",
+  "archive_commit": "4cdc88d611520207e66bf71212f4f8ccb417ce3a",
+  "sources": [
+    {
+      "source": "module20/optimizer.py",
+      "source_sha256": "01acea047902e18399aa515b88750d1019ae6252d94c9bf3a52cc260e3d6e00f",
+      "destination": "gsdeploy/prediction.py"
+    },
+    {
+      "source": "results/module35_utility_routing/u_aligned_optimizer.py",
+      "source_sha256": "c6727f4f4a4b18bdfd4e8767b9914f19f65fdf8e0ef8a1a5179c54aab53fb1a3",
+      "destination": "gsdeploy/optimizer.py"
+    },
+    {
+      "source": "performance_model/local_calibration/stability_v2.py",
+      "source_sha256": "8c34fb398a585fcb8568e2050f93ff2316b5d5012b7cb326904174e7b0ce3334",
+      "destination": "gsdeploy/stability.py"
+    },
+    {
+      "source": "joint_deploy/measurement/metrics.py",
+      "source_sha256": "9792f8c2444a466e00401e2178cd342bb904cc13c88b911a1bf962cfd6d47b96",
+      "destination": "gsdeploy/metrics.py"
+    },
+    {
+      "source": "joint_deploy/measurement/schema.py",
+      "source_sha256": "41b7ae114e67e566cb4f94aa720140d109f06e6e6b2400a370c59fc1ae7ca7c2",
+      "destination": "gsdeploy/runtime/schema.py"
+    },
+    {
+      "source": "joint_deploy/worker_protocol.py",
+      "source_sha256": "cf38ea57d07fe3f0d98bfb2979da0a0b12c6ab0591826e20c55b9ddc7b36a642",
+      "destination": "gsdeploy/runtime/protocol.py"
+    },
+    {
+      "source": "joint_deploy/measurement/router.py",
+      "source_sha256": "586447b990505564b79d120c8e541fc8498b9342e2af7182979edea46b94ab5c",
+      "destination": "gsdeploy/routing.py"
+    },
+    {
+      "source": "joint_deploy/measurement/deployment_runtime.py",
+      "source_sha256": "993fa6ef03eaa6f71837d878e8ad42fa81a46de0432f49d2a3688c7915a1d392",
+      "destination": "gsdeploy/runtime/deployment.py"
+    },
+    {
+      "source": "joint_deploy/measurement/load_generator.py",
+      "source_sha256": "dbd4f8281e5b016b692129b4ade44bf110edc95a63dd2afae53dd8597ba5ffba",
+      "destination": "gsdeploy/runtime/workload.py"
+    },
+    {
+      "source": "results/module34_candidate_pool/pools/A.json",
+      "source_sha256": "490892ec08c3846a279e20d031b62da863033cf175bd9d1adc1cb78f86527d36",
+      "destination": "configs/catalogs/a.json"
+    },
+    {
+      "source": "results/module34_candidate_pool/pools/B.json",
+      "source_sha256": "5ecc79e2e3efa1d7fc9dab4c87bf93a0489797d90aa2e6cd10c302f5517fe013",
+      "destination": "configs/catalogs/b.json"
+    },
+    {
+      "source": "results/module34_candidate_pool/pools/C.json",
+      "source_sha256": "4c0b9c8760a2dff5310e920ebba4c7e9d02528a0cf516e540be11d9726583b6e",
+      "destination": "configs/catalogs/c.json"
+    },
+    {
+      "source": "benchmark/prompts/task_prompts.json",
+      "source_sha256": "30f0c0274ffc40b37a28e3174a488bf779f9ea59cb4f06f150b6c9bf327a0e67",
+      "destination": "configs/prompts.json"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_sst2.py",
+      "source_sha256": "5baeff01a76fed5bc52d7572bc85b420cbed5902cafc0e2cca2e494a26b2023b",
+      "destination": "gsdeploy/backends/tasks/qwen_sst2.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_imagenette.py",
+      "source_sha256": "f9fb8c2b231e0d73f1967ca855aacb0bb5b67d815860077a26d01019636f5af4",
+      "destination": "gsdeploy/backends/tasks/qwen_imagenette.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_iiit5k.py",
+      "source_sha256": "0e4eb6342ae45defecf7dae8eb927ad54301f981fc6b020b85135748b88aaf83",
+      "destination": "gsdeploy/backends/tasks/qwen_iiit5k.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_librispeech.py",
+      "source_sha256": "2641bce1d2cfd6cba6123a18fa18c9d9aaca02992621d8f0bfd79f7cd9997cab",
+      "destination": "gsdeploy/backends/tasks/qwen_librispeech.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_boolq.py",
+      "source_sha256": "7f1c5075668698d7b2e79f8cb92b287637c8526a2c9f6191cebfa2c927a3df3f",
+      "destination": "gsdeploy/backends/tasks/qwen_boolq.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_scienceqa.py",
+      "source_sha256": "fbb4501e1b1f368f989351726edbaa26ce150d51071f15072ed171a12bb1050d",
+      "destination": "gsdeploy/backends/tasks/qwen_scienceqa.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_qwen_voxlingua.py",
+      "source_sha256": "4160cdd05f573a58ce732b3e48d947b96c7d9d75a60b058f5b30efaf26ce43f9",
+      "destination": "gsdeploy/backends/tasks/qwen_voxlingua.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_phi4_sst2.py",
+      "source_sha256": "e6bb97de2e63e8fc450c49884c1905070bc23cb954c2fecdfabe02a798bf6653",
+      "destination": "gsdeploy/backends/tasks/phi4_sst2.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_phi4_imagenette.py",
+      "source_sha256": "82268a7e8fa2a5b9482dbd41564e6cac5a0536a8105760d89ea9cd5018d4207a",
+      "destination": "gsdeploy/backends/tasks/phi4_imagenette.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_phi4_iiit5k.py",
+      "source_sha256": "94e2070fd06947df13d2fbe365dfd81e52ff1d4ef9822b69ef9df2d716d13b23",
+      "destination": "gsdeploy/backends/tasks/phi4_iiit5k.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_phi4_librispeech.py",
+      "source_sha256": "63ab4aa8e3b748376eb546bfd738cfa05168a86dfde6e78b2917584ee558a4e7",
+      "destination": "gsdeploy/backends/tasks/phi4_librispeech.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_minicpm_sst2.py",
+      "source_sha256": "3c2390f1c5ea6729fa06020a6fbee6ae63b4f4ea6d4996b9d8ed4ae674cacb9b",
+      "destination": "gsdeploy/backends/tasks/minicpm_sst2.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_minicpm_imagenette.py",
+      "source_sha256": "cdd3fa8b0cf34d88226b4b487df0f9bce32725e08b8622392cd2309b0e753dd3",
+      "destination": "gsdeploy/backends/tasks/minicpm_imagenette.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_minicpm_iiit5k.py",
+      "source_sha256": "7a919ee6dd677e0df602da88e3eab9ab7250d4973c513626ecdf2258d6cd6084",
+      "destination": "gsdeploy/backends/tasks/minicpm_iiit5k.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_minicpm_librispeech.py",
+      "source_sha256": "d32d2403c8840eb89773b733ac8b7157ee244ade66847f9c836f67d33206f54f",
+      "destination": "gsdeploy/backends/tasks/minicpm_librispeech.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_whisper_librispeech.py",
+      "source_sha256": "693e0a715df3c9b144bfadb7698ee738d4cb83592172c6f3cfdb5a658bdf86ea",
+      "destination": "gsdeploy/backends/tasks/whisper_librispeech.py"
+    },
+    {
+      "source": "benchmark/scripts/eval_whisper_voxlingua.py",
+      "source_sha256": "77a6b28c3997077d64397f54d42f77ed23bf912fb142119acce7f34b362f906f",
+      "destination": "gsdeploy/backends/tasks/whisper_voxlingua.py"
+    },
+    {
+      "source": "joint_deploy/qwen_worker.py",
+      "source_sha256": "9b45b5ba9ced32e232b608a99cb339b6825082cffa1a850f034fc59c3172da78",
+      "destination": "gsdeploy/backends/qwen.py"
+    },
+    {
+      "source": "joint_deploy/phi_worker.py",
+      "source_sha256": "8fea2e4455b190cd2d324d4ef1b393f0678dac0cc6700608787592835bbbb8ad",
+      "destination": "gsdeploy/backends/phi.py"
+    },
+    {
+      "source": "joint_deploy/minicpm_worker.py",
+      "source_sha256": "2992eef61d51689dfc55bdab8c8059cd9b66605e67e3583d471c13e42d21b0e6",
+      "destination": "gsdeploy/backends/minicpm.py"
+    },
+    {
+      "source": "joint_deploy/whisper_worker.py",
+      "source_sha256": "84ef368f46c55907f06921bd4ce119259e5e61209995ceb00c93b739ecec0932",
+      "destination": "gsdeploy/backends/whisper.py"
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "status": "FROZEN_STOP",
-  "artifacts": 288,
-  "next_experiment": false,
-  "strict_global_ablation_A_B": false,
-  "scope": "FiniteK1 baseline; legal fixeddeploymentdiagnostics; rawGPUreuse; U-onlyefficiency",
-  "final_validation": "final_validation.json",
-  "final_35_optimizer_SHA256": "c6727f4f4a4b18bdfd4e8767b9914f19f65fdf8e0ef8a1a5179c54aab53fb1a3"
-}
