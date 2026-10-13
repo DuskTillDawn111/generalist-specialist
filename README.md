@@ -65,6 +65,8 @@ prediction = system.predict(winner["deployment"], winner["routing"])
 
 原生 Qwen、Phi、MiniCPM、Whisper、分类器和 PARSeq 适配器在 `gsdeploy/backends/`，模型依赖及检查点由独立环境配置。见[原生后端与执行](docs/runtime.md)。
 
+`experiments/native_acceptance.py` 提供六任务验收入口，默认只准备计划和预检报告。原生运行自动检查 GPU，正式效用还需通过检查点和质量记录核验；未提供证据时保留诊断结果。
+
 ## 验证与历史
 
 ```bash

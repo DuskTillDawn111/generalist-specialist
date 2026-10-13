@@ -12,6 +12,7 @@ from .deployment import DeploymentRuntime
 from .schema import MeasurementConfig
 from .telemetry import MemoryMonitor
 from .workload import SamplePool, periodic_arrivals
+from .preflight import preflight
 from ..evaluation import evaluate_run
 from ..metrics import annotate_records, summarize
 from ..routing import Router
@@ -121,7 +122,9 @@ def registry_for(system, aliases, backend, workers):
             raise ValueError(f"Invalid worker command for {family}")
         entry["env"] = {
             **entry.get("env", {}),
-            "PYTHONPATH": project + os.pathsep + os.environ.get("PYTHONPATH", ""),
+            "PYTHONPATH": project
+            + os.pathsep
+            + entry["env"].get("PYTHONPATH", os.environ.get("PYTHONPATH", "")),
         }
         entry.setdefault("cwd", project)
         if backend != "mock":
@@ -142,7 +145,7 @@ def run(
     arrival_process="deterministic_periodic",
     startup_timeout=300.0,
     drain_timeout=60.0,
-    quality_admission_confirmed=False,
+    admission=None,
 ):
     if backend not in {"mock", "native"}:
         raise ValueError("backend must be mock or native")
@@ -173,10 +176,23 @@ def run(
         {a: system.catalog["models"][m]["supported_tasks"] for a, m in aliases.items()}
     )
     pool = SamplePool(samples, list(system.workload), seed)
-    runtime = DeploymentRuntime(
-        config, registry_for(system, aliases, backend, workers or {})
+    registry = registry_for(system, aliases, backend, workers or {})
+    checks = None
+    if backend == "native":
+        checks = preflight(
+            system, winner, samples, workers or {}, admission, require_gpu=True
+        )
+        if not checks["ready"]:
+            raise ValueError("Native preflight failed: " + "; ".join(checks["issues"]))
+    elif admission is not None:
+        raise ValueError("Admission evidence applies to native runs only")
+    runtime = DeploymentRuntime(config, registry)
+    monitor = MemoryMonitor(
+        runtime,
+        system.gpu_memory_mib,
+        enabled=backend == "native",
+        device=checks["device"] if checks else "0",
     )
-    monitor = MemoryMonitor(runtime, system.gpu_memory_mib, enabled=backend == "native")
     raw = {
         "schema_version": 1,
         "backend": backend,
@@ -190,7 +206,13 @@ def run(
         "warmup_request_records": [],
         "priming_request_records": [],
         "measurement_window": None,
-        "quality_admission_confirmed": bool(quality_admission_confirmed),
+        "preflight": checks,
+        "worker_registry": registry,
+        "admission_evidence": (
+            checks["admission_evidence"]
+            if checks
+            else {"verified": False, "reason": "MOCK_BACKEND", "pairs": []}
+        ),
         "memory_evidence": {},
         "per_task_metrics": {},
         "system_metrics": None,

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "models": {
+    "baudm/parseq:parseq@v1.0.0:parseq-bb5792a6.pt": {
+      "checkpoint": {
+        "files": {},
+        "sha256": null
+      },
+      "quality_report": "quality/parseq_parseq@v1.0.0_parseq-bb5792a6.pt.json",
+      "quality_report_sha256": null,
+      "admission_rules": {
+        "ocr": {
+          "metric": null,
+          "threshold": null,
+          "direction": null
+        }
+      }
+    },
+    "convnext_tiny": {
+      "checkpoint": {
+        "files": {},
+        "sha256": null
+      },
+      "quality_report": "quality/convnext_tiny.json",
+      "quality_report_sha256": null,
+      "admission_rules": {
+        "image": {
+          "metric": null,
+          "threshold": null,
+          "direction": null
+        }
+      }
+    },
+    "phi4mm": {
+      "checkpoint": {
+        "files": {},
+        "sha256": null
+      },
+      "quality_report": "quality/phi4mm.json",
+      "quality_report_sha256": null,
+      "admission_rules": {
+        "visual_qa": {
+          "metric": null,
+          "threshold": null,
+          "direction": null
+        }
+      }
+    },
+    "roberta_sst2": {
+      "checkpoint": {
+        "files": {},
+        "sha256": null
+      },
+      "quality_report": "quality/roberta_sst2.json",
+      "quality_report_sha256": null,
+      "admission_rules": {
+        "text": {
+          "metric": null,
+          "threshold": null,
+          "direction": null
+        }
+      }
+    },
+    "whisper-small": {
+      "checkpoint": {
+        "files": {},
+        "sha256": null
+      },
+      "quality_report": "quality/whisper-small.json",
+      "quality_report_sha256": null,
+      "admission_rules": {
+        "asr": {
+          "metric": null,
+          "threshold": null,
+          "direction": null
+        },
+        "lid": {
+          "metric": null,
+          "threshold": null,
+          "direction": null
+        }
+      }
+    }
+  }
+}
