@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generalist-specialist"
+version = "0.1.0"
+description = "Research code for joint generalist/specialist deployment and routing"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+planning = ["numpy", "scipy>=1.11"]
+
+[project.scripts]
+gs-repo-inventory = "tools.repository_inventory:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+  "deployment_core*", "deployment_search*", "performance_model*",
+  "joint_deploy*", "placement*", "benchmark*", "method_v1*", "method_v2*",
+  "candidate_pool_*", "replica_*", "integer_replica_*", "quality_workload_audit*",
+  "data_quality_audit*", "module*", "tools*",
+]
+exclude = ["results*", "models*", "datasets*", "envs*"]
+namespaces = true
