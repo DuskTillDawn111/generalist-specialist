@@ -13,7 +13,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config",
-        default=str(Path(__file__).resolve().parents[1] / "configs/low18.json"),
+        default=str(Path(__file__).resolve().parents[1] / "configs/static_replicas.json"),
     )
     parser.add_argument("--workers", required=True)
     parser.add_argument("--samples", required=True)
