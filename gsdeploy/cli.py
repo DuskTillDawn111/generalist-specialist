@@ -1,6 +1,7 @@
 """Unified command line for planning, prediction, execution and evaluation."""
 
 import argparse
+from dataclasses import replace
 import json
 import sys
 from pathlib import Path
@@ -28,6 +29,13 @@ def main(argv=None):
                 "--deployment", help="JSON model -> count for fixed-deployment routing"
             )
             command.add_argument("--route-grid", type=int)
+            command.add_argument("--duration", type=float)
+            command.add_argument("--seed", type=int)
+            command.add_argument(
+                "--arrivals", choices=("deterministic_periodic", "poisson")
+            )
+            command.add_argument("--search-policy", choices=("nominal", "robust"))
+            command.add_argument("--max-states", type=int)
         else:
             command.add_argument("--plan", required=True)
         if name in {"run", "preflight"}:
@@ -42,13 +50,13 @@ def main(argv=None):
             command.add_argument(
                 "--backend", choices=("mock", "native"), default="mock"
             )
-            command.add_argument("--duration", type=float, default=30.0)
+            command.add_argument("--duration", type=float, default=None)
             command.add_argument("--warmup", type=float, default=1.0)
-            command.add_argument("--seed", type=int, default=42)
+            command.add_argument("--seed", type=int, default=None)
             command.add_argument(
                 "--arrivals",
                 choices=("deterministic_periodic", "poisson"),
-                default="deterministic_periodic",
+                default=None,
             )
     evaluate = commands.add_parser("evaluate")
     evaluate.add_argument("--run", required=True)
@@ -68,6 +76,19 @@ def main(argv=None):
         else:
             system = DeploymentSystem(SystemConfig.load(args.config))
             if args.command == "plan":
+                fields = {
+                    "duration": "horizon_seconds",
+                    "seed": "random_seed",
+                    "arrivals": "arrival_process",
+                    "search_policy": "search_policy",
+                    "max_states": "search_max_states",
+                }
+                overrides = {
+                    field: getattr(args, option)
+                    for option, field in fields.items()
+                    if getattr(args, option) is not None
+                }
+                system = DeploymentSystem(replace(system.config, **overrides))
                 result = system.plan(
                     read(args.deployment) if args.deployment else None, args.route_grid
                 )

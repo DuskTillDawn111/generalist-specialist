@@ -72,3 +72,55 @@ class MemoryMonitor:
         self.stop.set()
         if self.thread:
             self.thread.join(timeout=3)
+
+
+class PowerMonitor:
+    """Whole-board power; disabled entirely for CPU/mock execution."""
+
+    def __init__(self, enabled=True, device="0"):
+        self.enabled, self.device = enabled, device
+        self.samples, self.errors = [], []
+        self.failed = False
+        self.stop = threading.Event()
+        self.thread = None
+
+    def sample(self):
+        if not self.enabled:
+            return
+        try:
+            start = time.perf_counter_ns()
+            result = subprocess.run(
+                [
+                    "nvidia-smi",
+                    "-i",
+                    self.device,
+                    "--query-gpu=power.draw",
+                    "--format=csv,noheader,nounits",
+                ],
+                capture_output=True,
+                text=True,
+                check=True,
+                timeout=2,
+            )
+            end = time.perf_counter_ns()
+            watts = float(result.stdout.strip())
+            self.samples.append({"time_ns": (start + end) // 2, "watts": watts})
+        except (OSError, ValueError, subprocess.SubprocessError) as exc:
+            self.failed = True
+            self.errors.append(str(exc))
+
+    def start(self):
+        if self.enabled:
+
+            def loop():
+                while not self.stop.wait(0.25):
+                    self.sample()
+
+            self.thread = threading.Thread(target=loop, daemon=True)
+            self.thread.start()
+
+    def close(self):
+        self.stop.set()
+        if self.thread:
+            self.thread.join(timeout=3)
+        self.sample()

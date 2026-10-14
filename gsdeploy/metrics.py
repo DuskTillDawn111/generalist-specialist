@@ -50,7 +50,7 @@ def summarize(records, config, window):
         rows = [r for r in records if r["task"] == task]
         completed = [r for r in rows if r["status"] == "completed"]
         failures = sum((r["status"] == "error" for r in rows))
-        in_window = sum((r["completion_time_ns"] < end for r in completed))
+        in_window = sum((r["completion_time_ns"] <= end for r in completed))
         counts = Counter((r["model"] for r in rows))
         models = sorted(set(config.routing_rps.get(task, {})) | set(counts))
         metrics = {
@@ -88,8 +88,10 @@ def summarize(records, config, window):
                 metrics[f"p99_{metric}"] = percentile(values, 99)
         per_task[task] = metrics
     completed = [r for r in records if r["status"] == "completed"]
-    in_window = sum((r["completion_time_ns"] < end for r in completed))
-    elapsed = (window["drain_end_time_ns"] - window["start_time_ns"]) / 1000000000.0
+    in_window = sum((r["completion_time_ns"] <= end for r in completed))
+    elapsed = (
+        window.get("drain_end_time_ns", window["end_time_ns"]) - window["start_time_ns"]
+    ) / 1000000000.0
     system = {
         "offered_requests": len(records),
         "completed_requests": len(completed),

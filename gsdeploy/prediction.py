@@ -1,28 +1,38 @@
-"""Periodic FIFO predictor and shared normalized utility, in milliseconds."""
+"""Finite-cohort FIFO surrogate using exactly the runtime router and arrivals."""
 
 import math
 import numpy as np
+from .routing import Router
+from .trace import expand_routes, make_trace, trace_digest
+from .energy import energy_key, energy_norm
 
 
-def components(task_stats, rates, refs, T, M, weights):
-    total = sum(rates.values())
-    L = sum((rates[t] / total * task_stats[t]["mean_ms"] / refs[t] for t in rates))
-    P = sum((rates[t] / total * task_stats[t]["p95_ms"] / refs[t] for t in rates))
-    c = {
-        "Q_contribution": 0.0,
-        "T_contribution": -weights["T"] * T,
-        "L_contribution": -weights["L"] * L,
-        "P_contribution": -weights["P"] * P,
-        "M_contribution": -weights["M"] * M,
+def components(task_stats, rates, refs, T, M, weights, E=None):
+    total = math.fsum(rates.values())
+    L = math.fsum(
+        rates[t] / total * task_stats[t]["mean_ms"] / refs[t] for t in sorted(rates)
+    )
+    P = math.fsum(
+        rates[t] / total * task_stats[t]["p95_ms"] / refs[t] for t in sorted(rates)
+    )
+    terms = {"T": T, "L": L, "P": P, "M": M}
+    if "E" in weights:
+        terms["E"] = E
+    complete = all(v is not None for v in terms.values())
+    contributions = {
+        f"{k}_contribution": -weights[k] * v if v is not None else None
+        for k, v in terms.items()
     }
+    diagnostic = math.fsum(v for v in contributions.values() if v is not None)
     return {
         "Q_norm": None,
-        "T_norm": T,
-        "L_norm": L,
-        "P_norm": P,
-        "M_norm": M,
-        **c,
-        "U": sum(c.values()),
+        "Q_contribution": 0.0,
+        **{f"{k}_norm": v for k, v in terms.items()},
+        **contributions,
+        "U": diagnostic if complete else None,
+        "diagnostic_partial_U": diagnostic,
+        "utility_complete": complete,
+        "utility_schema": "five_term" if "E" in weights else "legacy_four_term",
     }
 
 
@@ -35,153 +45,155 @@ def predict(
     refs,
     weights,
     multiplier=1.0,
-    phase=0.0,
+    phase=None,
     horizon=120.0,
+    seed=42,
+    arrival_process="deterministic_periodic",
+    drain_seconds=60.0,
+    energy_reference_watts=300.0,
+    startup_amortization_seconds=None,
+    trace=None,
 ):
-    rho = {
-        m: sum(
-            (
-                routing.get(t, {}).get(m, 0)
-                * data["models"][m]["service_time_ms"][t]
-                / 1000
-                * multiplier
-                for t in rates
-                if t in data["models"][m]["supported_tasks"]
-            )
-        )
-        / data["capacity_factors"][m][str(n)]
-        for (m, n) in x.items()
-    }
-    mem = data["safe_factor"] * sum(
-        (data["memory_table_mib"][m][str(n)] for (m, n) in x.items())
+    # Historical phase arguments cannot change task identity or generate per-route arrivals.
+    trace = (
+        make_trace(rates, horizon, seed, arrival_process) if trace is None else trace
     )
-    admissible = all(
-        (
-            t in data["models"][m]["supported_tasks"] and m in x
-            for (t, rr) in routing.items()
-            for (m, q) in rr.items()
-            if q > 1e-09
-        )
-    )
-    conservation = all(
-        (abs(sum(routing.get(t, {}).values()) - q) < 1e-06 for (t, q) in rates.items())
-    )
+    aliases, routes = expand_routes(x, routing)
+    router = Router(routes)
+    clocks = {a: 0.0 for a in aliases}  # runtime drains warmup before the formal window
     stats = {t: [] for t in rates}
-    inwindow = 0
-    offered = 0
-    backlog = 0
-    late = 0
-    for m, n in x.items():
-        arrival = []
-        tasks = []
-        svc = []
-        replica = []
-        for ti, t in enumerate(rates):
-            q = routing.get(t, {}).get(m, 0)
-            if q <= 1e-09:
-                continue
-            a = np.arange(-10 * q + phase * (ti + 1), horizon * q, 1.0) / q
-            a = a[(a >= -10) & (a < horizon)]
-            arrival.extend(a)
-            tasks.extend([t] * len(a))
-            svc.extend(
-                [
-                    data["models"][m]["service_time_ms"][t]
-                    / 1000
-                    * n
-                    / data["capacity_factors"][m][str(n)]
-                    * multiplier
-                ]
-                * len(a)
-            )
-            replica.extend(np.arange(len(a)) % n)
-        if not arrival:
-            continue
-        arrival = np.array(arrival)
-        tasks = np.array(tasks)
-        svc = np.array(svc)
-        replica = np.array(replica)
-        for ri in range(n):
-            ix = np.flatnonzero(replica == ri)
-            ix = ix[np.argsort(arrival[ix], kind="stable")]
-            a = arrival[ix]
-            s = svc[ix]
-            tt = tasks[ix]
-            c = np.cumsum(s)
-            finish = c + np.maximum.accumulate(a - (c - s))
-            use = a >= 0
-            lat = (finish - a)[use] * 1000
-            tt = tt[use]
-            f = finish[use]
-            offered += len(f)
-            inwindow += int(sum(f <= horizon))
-            backlog += int(sum(f > horizon))
-            late += int(sum(f > horizon + 60))
-            for t in set(tt):
-                stats[t].extend(lat[tt == t])
+    inwindow = late = 0
+    for offset, task in trace:
+        alias = router.choose(task)
+        m = aliases[alias]
+        svc = (
+            data["models"][m]["service_time_ms"][task]
+            / 1000
+            * x[m]
+            / data["capacity_factors"][m][str(x[m])]
+            * multiplier
+        )
+        finish = max(offset, clocks[alias]) + svc
+        clocks[alias] = finish
+        stats[task].append((finish - offset) * 1000)
+        inwindow += finish <= horizon
+        late += finish > horizon + drain_seconds
     taskstats = {
         t: {
             "mean_ms": float(np.mean(v)),
             "p95_ms": float(np.percentile(v, 95)),
             "request_count": len(v),
         }
-        for (t, v) in stats.items()
+        for t, v in sorted(stats.items())
         if v
     }
-    if len(taskstats) != len(rates):
-        return {"U": None, "eligible": False, "reason": "MISSING_TASK", "rho": rho}
-    merged = [v for vs in stats.values() for v in vs]
-    T = 1 - min(
-        1.0,
-        (offered - late) / max(1, offered),
-        inwindow / (sum(rates.values()) * horizon),
+    rho = {
+        m: math.fsum(
+            routing[t].get(m, 0)
+            * data["models"][m]["service_time_ms"].get(t, 0)
+            / 1000
+            * multiplier
+            for t in rates
+        )
+        / data["capacity_factors"][m][str(n)]
+        for m, n in x.items()
+    }
+    mem = data["safe_factor"] * math.fsum(
+        data["memory_table_mib"][m][str(n)] for m, n in x.items()
     )
-    norms = components(taskstats, rates, refs, T, mem / budget, weights)
-    eligible = (
-        admissible
-        and conservation
-        and (mem <= budget + 1e-06)
-        and (max(rho.values(), default=0) < 1)
-        and (late == 0)
-    )
-    return {
-        **norms,
-        "U": norms["U"] if eligible else None,
-        "completed_subset_diagnostic_U_NOT_sortable": (
-            norms["U"] if not eligible else None
-        ),
-        "eligible": eligible,
+    base = {
         "rho": rho,
         "max_rho": max(rho.values(), default=0),
-        "operational_rho_08": max(rho.values(), default=0) <= 0.8 + 1e-08,
         "safe_memory_mib": mem,
         "per_task": taskstats,
-        "pooled_request_P95_ms": float(np.percentile(merged, 95)),
-        "pooled_request_mean_ms": float(np.mean(merged)),
+        "offered_requests": len(trace),
+        "trace_sha256": trace_digest(trace),
+        "within_window_requests": int(inwindow),
+        "end_backlog_requests": len(trace) - int(inwindow),
+        "incomplete_after_drain": int(late),
         "predicted_within_window_QPS": inwindow / horizon,
-        "end_backlog_requests": backlog,
-        "incomplete_after_60s_drain": late,
+        "operational_rho_08": max(rho.values(), default=0) <= 0.8 + 1e-8,
+        "prediction_scope": "constant-service independent FIFO replicas; colocated interference and service tails unmeasured",
+    }
+    if len(taskstats) != len(rates):
+        return {
+            **base,
+            "U": None,
+            "diagnostic_partial_U": None,
+            "eligible": False,
+            "constraints_eligible": False,
+            "reason": "MISSING_TASK_OBSERVATIONS",
+        }
+    admissible = all(
+        t in data["models"][m]["supported_tasks"] and m in x
+        for t, row in routing.items()
+        for m, q in row.items()
+        if q > 0
+    )
+    conservation = set(routing) == set(rates) and all(
+        math.isclose(math.fsum(routing[t].values()), q, rel_tol=1e-7, abs_tol=1e-9)
+        for t, q in rates.items()
+    )
+    valid = (
+        admissible
+        and conservation
+        and mem <= budget + 1e-6
+        and base["operational_rho_08"]
+        and not late
+    )
+    key = energy_key(
+        x, routing, rates, horizon, seed, arrival_process, multiplier, catalog=data
+    )
+    evidence = data.get("energy_profiles", {}).get(key)
+    E = energy_norm(
+        evidence, horizon, energy_reference_watts, startup_amortization_seconds
+    )
+    arithmetic = components(
+        taskstats, rates, refs, 1 - inwindow / len(trace), mem / budget, weights, E
+    )
+    complete = arithmetic["utility_complete"]
+    merged = [v for vs in stats.values() for v in vs]
+    return {
+        **base,
+        **arithmetic,
+        "U": arithmetic["U"] if valid else None,
+        "constraints_eligible": bool(valid),
+        "eligible": bool(valid and complete),
+        "reason": (
+            "OK"
+            if valid and complete
+            else ("MISSING_ENERGY" if valid else "CONSTRAINT_OR_DRAIN_FAILURE")
+        ),
         "quality_capability": admissible,
         "route_conservation": conservation,
-        "stability_scope": "nominal long-run demand<1 plus finite-window drain; sample/interference stability unverified",
+        "energy_profile_key": key,
+        "energy_evidence": evidence,
+        "pooled_request_P95_ms": float(np.percentile(merged, 95)),
+        "pooled_request_mean_ms": float(np.mean(merged)),
     }
 
 
-def predict_scenarios(d, x, r, rates, budget, refs, weights):
-    preds = [
-        predict(d, x, r, rates, budget, refs, weights, 1.0, ph) for ph in [0.0, 0.37]
+def predict_scenarios(d, x, r, rates, budget, refs, weights, **context):
+    context.pop("multiplier", None)
+    scenarios = [
+        predict(d, x, r, rates, budget, refs, weights, multiplier=s, **context)
+        for s in (1.0, 1.25, 2.0)
     ]
-    nominal = preds[1]
-    stress = preds + [
-        predict(d, x, r, rates, budget, refs, weights, s, 0.37) for s in [1.25, 2.0]
-    ]
-    vals = [p["U"] for p in stress if p["U"] is not None]
+    nominal = scenarios[0]
+    values = [p["U"] for p in scenarios]
     return {
         **nominal,
-        "scenario_U_values": [p["U"] for p in stress],
-        "stress_all_eligible": all((p["eligible"] for p in stress)),
-        "scenario_U_low": min(vals) if len(vals) == len(stress) else None,
-        "scenario_U_high": max(vals) if vals else None,
+        "scenario_U_values": values,
+        "scenario_constraint_valid": [p["constraints_eligible"] for p in scenarios],
+        "stress_all_eligible": all(p["eligible"] for p in scenarios),
+        "stress_constraints_valid": all(p["constraints_eligible"] for p in scenarios),
+        "scenario_U_low": min(values) if all(v is not None for v in values) else None,
+        "scenario_U_high": (
+            max(v for v in values if v is not None)
+            if any(v is not None for v in values)
+            else None
+        ),
+        "scenario_definition": "same cohort; service multipliers 1/1.25/2, not arrival-rate stress",
         "uncertainty": "HIGH_UNMEASURED_COLOCATION_AND_SERVICE_TAIL",
         "scenario_bounds_are_statistical": False,
     }

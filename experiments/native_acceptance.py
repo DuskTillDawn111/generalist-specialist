@@ -1,6 +1,7 @@
 """Prepare a six-task smoke run; execution requires an explicit --execute flag."""
 
 import argparse
+from dataclasses import replace
 from pathlib import Path
 
 from gsdeploy import DeploymentSystem, SystemConfig
@@ -13,7 +14,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config",
-        default=str(Path(__file__).resolve().parents[1] / "configs/low18.json"),
+        default=str(
+            Path(__file__).resolve().parents[1] / "configs/static_replicas.json"
+        ),
     )
     parser.add_argument("--workers", required=True)
     parser.add_argument("--samples", required=True)
@@ -27,7 +30,13 @@ def main(argv=None):
     output = Path(args.output_dir)
     # Reserve a fresh directory before writing any experiment files.
     output.mkdir(parents=True, exist_ok=False)
-    system = DeploymentSystem(SystemConfig.load(args.config))
+    system = DeploymentSystem(
+        replace(
+            SystemConfig.load(args.config),
+            horizon_seconds=args.duration,
+            random_seed=args.seed,
+        )
+    )
     plan = system.plan()
     save(output / "plan.json", plan)
     if not plan["winner"]:

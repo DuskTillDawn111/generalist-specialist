@@ -1,0 +1,36 @@
+{
+  "catalog": "catalogs/c_replicas.json",
+  "workload": {
+    "text": 0.1,
+    "image": 0.1,
+    "ocr": 0.1,
+    "asr": 0.1,
+    "lid": 0.1,
+    "visual_qa": 0.2
+  },
+  "gpu_memory_mib": 49140.0,
+  "latency_reference_ms": {
+    "text": 10.026380266666667,
+    "image": 27.71673651111111,
+    "ocr": 11.880106522222222,
+    "asr": 574.4954926166666,
+    "lid": 76.25589069444445,
+    "visual_qa": 160.11645761111112
+  },
+  "weights": {
+    "Q": 0.0,
+    "T": 0.2,
+    "L": 0.2,
+    "P": 0.2,
+    "M": 0.2,
+    "E": 0.2
+  },
+  "route_grid": 4,
+  "horizon_seconds": 120.0,
+  "random_seed": 42,
+  "arrival_process": "deterministic_periodic",
+  "search_policy": "nominal",
+  "search_max_states": 100000,
+  "energy_reference_watts": 300.0,
+  "startup_amortization_seconds": 120.0
+}

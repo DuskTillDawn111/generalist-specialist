@@ -6,28 +6,8 @@ def read_jsonl(path):
         return [json.loads(line) for line in stream if line.strip()]
 
 
-import heapq
 import random
-
-
-def phases_for(rates, seed):
-    return {
-        task: (random.Random(f"{seed}:phase:{task}").random() + 1e-12) % 1 / rate
-        for (task, rate) in sorted(rates.items())
-        if rate > 0
-    }
-
-
-def periodic_arrivals(rates, duration, seed):
-    phases = phases_for(rates, seed)
-    heap = [(offset, task, 0) for (task, offset) in phases.items() if offset < duration]
-    heapq.heapify(heap)
-    while heap:
-        offset, task, index = heapq.heappop(heap)
-        yield (offset, task)
-        next_offset = phases[task] + (index + 1) / rates[task]
-        if next_offset < duration:
-            heapq.heappush(heap, (next_offset, task, index + 1))
+from ..trace import phases_for, periodic_arrivals, poisson_arrivals
 
 
 class SamplePool:

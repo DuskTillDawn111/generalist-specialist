@@ -50,6 +50,32 @@
         "0": 0.0,
         "1": 8.0
       }
+    },
+    "energy_profiles": {
+      "102ee6bdb547209ad8a5af8ae240ae7befeb83e26ccf9ef3063e52caa3db0119": {
+        "kind": "synthetic_fixture",
+        "scope": "whole_gpu_board",
+        "coverage_valid": true,
+        "run_joules": 80.0,
+        "startup_joules": 8.0,
+        "provenance": "CPU-only invented whole-plan fixture; not GPU measurement"
+      },
+      "84a582090abae5e77c6824f4c49eeb17859b7db48642d71e78561a2052ec9389": {
+        "kind": "synthetic_fixture",
+        "scope": "whole_gpu_board",
+        "coverage_valid": true,
+        "run_joules": 90.0,
+        "startup_joules": 10.0,
+        "provenance": "CPU-only invented whole-plan fixture; not GPU measurement"
+      },
+      "5a15cd46f1980066fb1b1ec81be1eef3bbe10e82b23234d75341eec2eb2ed752": {
+        "kind": "synthetic_fixture",
+        "scope": "whole_gpu_board",
+        "coverage_valid": true,
+        "run_joules": 90.0,
+        "startup_joules": 10.0,
+        "provenance": "CPU-only invented whole-plan fixture; not GPU measurement"
+      }
     }
   },
   "workload": {
@@ -71,10 +97,13 @@
   },
   "weights": {
     "Q": 0.0,
-    "T": 0.25,
-    "L": 0.3,
-    "P": 0.3,
-    "M": 0.15
+    "T": 0.2,
+    "L": 0.2,
+    "P": 0.2,
+    "M": 0.2,
+    "E": 0.2
   },
-  "route_grid": 1
+  "route_grid": 1,
+  "horizon_seconds": 1.0,
+  "search_max_states": 100000
 }
