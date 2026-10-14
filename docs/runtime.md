@@ -78,7 +78,7 @@ gsdeploy checkpoint --path /absolute/path/to/checkpoint \
 
 ## 六任务验收入口
 
-先复制 worker 示例、补充模型环境路径，准备每个任务 5 条真实样本。默认 `configs/static_replicas.json` 在原六任务低负载下选择 RoBERTa、ConvNeXt、PARSeq、Whisper Small 和 Phi；更高负载时允许选择已有实测的副本数。模型池只开放记录过的数量，容量转移的不确定性见 `docs/architecture.md`。
+先复制 worker 示例、补充模型环境路径，准备每个任务 5 条真实样本。默认 `configs/low18.json` 选择 RoBERTa、ConvNeXt、PARSeq、Whisper Small 和 Phi，覆盖六个任务。
 
 ```bash
 python experiments/native_acceptance.py \

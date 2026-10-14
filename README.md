@@ -45,13 +45,12 @@ docs/           架构、真实后端与历史版本说明
 
 ```bash
 gsdeploy plan --config configs/low18.json --output artifacts/low18.json
-gsdeploy plan --config configs/static_replicas.json --output artifacts/static-replicas.json
 gsdeploy plan --config configs/asr32b.json --output artifacts/asr.json
 python experiments/candidate_pool.py --config configs/holdout.json \
   --output artifacts/pool-comparison.json
 ```
 
-`configs/catalogs/a.json`、`b.json`、`c.json` 保存三个嵌套候选池的单副本冻结参数。`c_replicas.json` 接入同模型已有双/三副本实测参数，供当前静态实验使用；代表任务容量转移仍是规划代理。K=1 的结果只覆盖声明的预测器和有限域，不代表任意连续路由或真实 GPU 上的全局最优。
+`configs/catalogs/a.json`、`b.json`、`c.json` 保存三个嵌套候选池的已测单副本参数。K=1 的结果只覆盖声明的预测器和有限域，不代表任意连续路由或真实 GPU 上的全局最优。
 
 ## Python API
 
@@ -67,8 +66,6 @@ prediction = system.predict(winner["deployment"], winner["routing"])
 原生 Qwen、Phi、MiniCPM、Whisper、分类器和 PARSeq 适配器在 `gsdeploy/backends/`，模型依赖及检查点由独立环境配置。见[原生后端与执行](docs/runtime.md)。
 
 `experiments/native_acceptance.py` 提供六任务验收入口，默认只准备计划和预检报告。原生运行自动检查 GPU，正式效用还需通过检查点和质量记录核验；未提供证据时保留诊断结果。
-
-五项等权评价的完整定义见[效用规范草案](docs/utility_specification.md)，包含能耗、归一化和启动成本摊销。该草案尚未接入评分代码，当前仍使用原四项效用。
 
 ## 验证与历史
 
