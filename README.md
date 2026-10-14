@@ -68,6 +68,8 @@ prediction = system.predict(winner["deployment"], winner["routing"])
 
 `experiments/native_acceptance.py` 提供六任务验收入口，默认只准备计划和预检报告。原生运行自动检查 GPU，正式效用还需通过检查点和质量记录核验；未提供证据时保留诊断结果。
 
+五项等权评价的完整定义见[效用规范草案](docs/utility_specification.md)，包含能耗、归一化和启动成本摊销。该草案尚未接入评分代码，当前仍使用原四项效用。
+
 ## 验证与历史
 
 ```bash
