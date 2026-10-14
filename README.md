@@ -45,12 +45,13 @@ docs/           架构、真实后端与历史版本说明
 
 ```bash
 gsdeploy plan --config configs/low18.json --output artifacts/low18.json
+gsdeploy plan --config configs/static_replicas.json --output artifacts/static-replicas.json
 gsdeploy plan --config configs/asr32b.json --output artifacts/asr.json
 python experiments/candidate_pool.py --config configs/holdout.json \
   --output artifacts/pool-comparison.json
 ```
 
-`configs/catalogs/a.json`、`b.json`、`c.json` 保存三个嵌套候选池的已测单副本参数。K=1 的结果只覆盖声明的预测器和有限域，不代表任意连续路由或真实 GPU 上的全局最优。
+`configs/catalogs/a.json`、`b.json`、`c.json` 保存三个嵌套候选池的单副本冻结参数。`c_replicas.json` 接入同模型已有双/三副本实测参数，供当前静态实验使用；代表任务容量转移仍是规划代理。K=1 的结果只覆盖声明的预测器和有限域，不代表任意连续路由或真实 GPU 上的全局最优。
 
 ## Python API
 
