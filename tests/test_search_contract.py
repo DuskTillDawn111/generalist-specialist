@@ -34,6 +34,8 @@ def config(rates=None, services=None, weights=None, horizon=10):
         {t: 10.0 for t in rates},
         weights or {"Q": 0.0, "T": 0.25, "L": 0.3, "P": 0.3, "M": 0.15},
         horizon_seconds=horizon,
+        solver="dfs",  # Explicitly exercise the historical DFS reference contract.
+        milp_capacity_witness=False,  # Independent grid-only oracles opt out of extra rows.
     )
 
 

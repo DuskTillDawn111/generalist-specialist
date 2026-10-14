@@ -38,6 +38,12 @@ class SystemConfig:
     search_policy: str = "nominal"
     energy_reference_watts: float = 300.0
     startup_amortization_seconds: float | None = None
+    solver: str = "milp"
+    milp_max_iterations: int = 1000
+    milp_time_limit_seconds: float = 30.0
+    milp_max_columns: int = 50000
+    milp_absolute_gap: float = 1e-8
+    milp_capacity_witness: bool = True
 
     def __post_init__(self):
         if not self.workload or set(self.workload) - set(TASKS):
@@ -73,7 +79,27 @@ class SystemConfig:
             raise ValueError("Unknown arrival process")
         if self.search_policy not in {"nominal", "robust"}:
             raise ValueError("search_policy must be nominal or robust")
+        if self.solver not in {"milp", "dfs"}:
+            raise ValueError("solver must be milp or dfs")
+        for name in ("milp_max_iterations", "milp_max_columns"):
+            if type(getattr(self, name)) is not int or getattr(self, name) < 1:
+                raise ValueError(f"{name} must be a positive integer")
+        positive(self.milp_time_limit_seconds, "milp_time_limit_seconds")
+        positive(self.milp_absolute_gap, "milp_absolute_gap", zero=True)
+        if type(self.milp_capacity_witness) is not bool:
+            raise ValueError("milp_capacity_witness must be a boolean")
         data = self.catalog
+        from .performance import valid_profile
+
+        if data.get("performance_mode", "independent") not in {
+            "independent",
+            "profiled",
+        }:
+            raise ValueError("performance_mode must be independent or profiled")
+        if not isinstance(data.get("colocation_profiles", {}), dict) or any(
+            not valid_profile(p) for p in data.get("colocation_profiles", {}).values()
+        ):
+            raise ValueError("Invalid frozen colocation service profile")
         positive(data.get("safe_factor"), "safe_factor")
         if not data.get("models"):
             raise ValueError("Empty model catalog")
@@ -133,6 +159,17 @@ class SystemConfig:
                 raise ValueError(f"Unmeasured or invalid deployment: {model}/{count}")
         if set(routing) != set(self.workload):
             raise ValueError("Routing task set does not match workload")
+        from .performance import resolve_service
+
+        service, evidence = resolve_service(
+            self.catalog,
+            deployment,
+            routing,
+            self.workload,
+            self.horizon_seconds,
+            self.random_seed,
+            self.arrival_process,
+        )
         demand = {m: 0.0 for m in deployment}
         for task, offered in self.workload.items():
             for model, rate in routing[task].items():
@@ -142,12 +179,8 @@ class SystemConfig:
                     or task not in self.catalog["models"][model]["supported_tasks"]
                 ):
                     raise ValueError(f"Unadmitted route: {task}/{model}")
-                if rate:
-                    demand[model] += (
-                        rate
-                        * self.catalog["models"][model]["service_time_ms"][task]
-                        / 1000
-                    )
+                if rate and service is not None:
+                    demand[model] += rate * service[model][task] / 1000
             if not math.isclose(
                 math.fsum(routing[task].values()), offered, rel_tol=1e-7, abs_tol=1e-9
             ):
@@ -166,7 +199,9 @@ class SystemConfig:
             raise ValueError("Plan exceeds memory or frozen rho<=0.8 constraints")
         return {
             "safe_memory_mib": memory,
-            "rho": rho,
-            "max_rho": max(rho.values(), default=0),
-            "constraints_valid": True,
+            "rho": rho if service is not None else None,
+            "max_rho": max(rho.values(), default=0) if service is not None else None,
+            "constraints_valid": service is not None,
+            "capacity_verified": service is not None,
+            "performance_evidence": evidence,
         }

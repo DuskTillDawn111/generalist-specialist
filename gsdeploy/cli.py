@@ -36,6 +36,16 @@ def main(argv=None):
             )
             command.add_argument("--search-policy", choices=("nominal", "robust"))
             command.add_argument("--max-states", type=int)
+            command.add_argument("--solver", choices=("milp", "dfs"))
+            command.add_argument("--milp-iterations", type=int)
+            command.add_argument("--milp-seconds", type=float)
+            command.add_argument("--milp-columns", type=int)
+            command.add_argument("--milp-gap", type=float)
+            command.add_argument(
+                "--capacity-witness",
+                action=argparse.BooleanOptionalAction,
+                default=None,
+            )
         else:
             command.add_argument("--plan", required=True)
         if name in {"run", "preflight"}:
@@ -82,6 +92,12 @@ def main(argv=None):
                     "arrivals": "arrival_process",
                     "search_policy": "search_policy",
                     "max_states": "search_max_states",
+                    "solver": "solver",
+                    "milp_iterations": "milp_max_iterations",
+                    "milp_seconds": "milp_time_limit_seconds",
+                    "milp_columns": "milp_max_columns",
+                    "milp_gap": "milp_absolute_gap",
+                    "capacity_witness": "milp_capacity_witness",
                 }
                 overrides = {
                     field: getattr(args, option)
