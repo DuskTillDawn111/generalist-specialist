@@ -1,416 +1,434 @@
-"""Joint utility optimization using task bundles and Pareto dominance.
+"""Joint measured-replica / nested-grid routing search with safe bounds.
 
-K=1: exact model/task-bundle dynamic programming with Pareto dominance.
-For a fixed deployment, K>1 uses bounded discrete routing search. Both preserve
-the frozen FIFO predictor, utility weights, measured replicas and rho<=.8.
-The bundle simulator is independently checked against the original predictor.
+All leaves use the same cohort and whole-plan predictor. Certificates cover
+only the explicitly enumerated finite domain, never continuous routing or GPU
+performance. A state budget yields an incumbent and an optimistic gap.
 """
 
-import itertools, json, time
+import itertools
+import math
+import time
 import numpy as np
-from .prediction import predict_scenarios
+from .prediction import predict, predict_scenarios
+from .routing import Router
+from .trace import expand_routes, make_trace, trace_digest
 
 
-def identity(x, r):
-    return json.dumps([x, r], sort_keys=True)
+def compositions(total, size):
+    if size == 1:
+        yield (total,)
+    else:
+        for first in range(total + 1):
+            for rest in compositions(total - first, size - 1):
+                yield (first,) + rest
 
 
 class UtilityOptimizer:
-
-    def __init__(self, data, rates, budget, refs, weights):
-        self.d, self.rates, self.budget = (data, dict(rates), budget)
-        self.refs, self.w = (refs, weights)
-        self.tasks = list(rates)
-        self.cache = {}
+    def __init__(self, data, rates, budget, refs, weights, **context):
+        self.d, self.rates, self.budget, self.refs, self.w = (
+            data,
+            dict(sorted(rates.items())),
+            budget,
+            refs,
+            weights,
+        )
+        self.max_states = context.pop("search_max_states", 100000)
+        self.policy = context.pop("search_policy", "nominal")
+        self.context = context
+        self.trace = make_trace(
+            self.rates,
+            context.get("horizon", 120),
+            context.get("seed", 42),
+            context.get("arrival_process", "deterministic_periodic"),
+        )
+        self.task_offsets = {
+            t: [a for a, task in self.trace if task == t] for t in self.rates
+        }
         self.metrics = dict(
-            worker_prediction_calls=0,
-            full_prediction_calls=0,
-            cache_hits=0,
             search_states=0,
-            transitions=0,
-            dominance_pruned=0,
+            full_prediction_calls=0,
             capacity_pruned=0,
             memory_pruned=0,
             bound_pruned=0,
         )
-        self.rejections = []
+        self.limited = False
+        self.best = self.diagnostic = None
+        self.unknown = False
+        self.floor_cache = {}
 
-    def bundle(self, m, n, mask):
-        key = (m, n, mask)
-        if key in self.cache:
-            self.metrics["cache_hits"] += 1
-            return self.cache[key]
-        self.metrics["worker_prediction_calls"] += 1
-        d = self.d
-        selected = [t for (i, t) in enumerate(self.tasks) if mask >> i & 1]
-        rho = (
-            sum(
-                (
-                    self.rates[t] * d["models"][m]["service_time_ms"][t] / 1000
-                    for t in selected
-                )
-            )
-            / d["capacity_factors"][m][str(n)]
-        )
-        if rho > 0.8 + 1e-08:
-            self.metrics["capacity_pruned"] += 1
-            self.cache[key] = None
-            self.rejections.append(
-                dict(model=m, replicas=n, mask=mask, reason="RHO08", rho=rho)
-            )
-            return None
-        arrival, tasks, svc, replica = ([], [], [], [])
-        for ti, t in enumerate(self.tasks):
-            if t not in selected:
-                continue
-            q = self.rates[t]
-            a = np.arange(-10 * q + 0.37 * (ti + 1), 120 * q, 1.0) / q
-            a = a[(a >= -10) & (a < 120)]
-            arrival.extend(a)
-            tasks.extend([t] * len(a))
-            svc.extend(
-                [
-                    d["models"][m]["service_time_ms"][t]
-                    / 1000
-                    * n
-                    / d["capacity_factors"][m][str(n)]
-                ]
-                * len(a)
-            )
-            replica.extend(np.arange(len(a)) % n)
-        arrival, tasks, svc, replica = map(np.array, (arrival, tasks, svc, replica))
-        stats = {t: [] for t in selected}
-        within = offered = late = 0
-        for ri in range(n):
-            ix = np.flatnonzero(replica == ri)
-            ix = ix[np.argsort(arrival[ix], kind="stable")]
-            a, s, tt = (arrival[ix], svc[ix], tasks[ix])
-            if not len(a):
-                continue
-            c = np.cumsum(s)
-            finish = c + np.maximum.accumulate(a - (c - s))
-            use = a >= 0
-            lat, tt, f = ((finish - a)[use] * 1000, tt[use], finish[use])
-            offered += len(f)
-            within += int(sum(f <= 120))
-            late += int(sum(f > 180))
-            for t in set(tt):
-                stats[t].extend(lat[tt == t])
-        if late or any((not v for v in stats.values())):
-            self.rejections.append(
-                dict(model=m, replicas=n, mask=mask, reason="DRAIN_OR_MISSING_TASK")
-            )
-            self.cache[key] = None
-            return None
-        cost = sum(
-            (
-                self.rates[t]
-                / sum(self.rates.values())
-                / self.refs[t]
-                * (
-                    self.w["L"] * float(np.mean(v))
-                    + self.w["P"] * float(np.percentile(v, 95))
-                )
-                for (t, v) in stats.items()
-            )
-        )
-        mem = d["safe_factor"] * d["memory_table_mib"][m][str(n)]
-        result = dict(
-            mask=mask,
-            memory=mem,
-            cost=cost + self.w["M"] * mem / self.budget,
-            within=within,
-            offered=offered,
-            rho=rho,
-            model=m,
-            replicas=n,
-        )
-        self.cache[key] = result
-        return result
+    def tick(self):
+        if self.metrics["search_states"] >= self.max_states:
+            self.limited = True
+            return False
+        self.metrics["search_states"] += 1
+        return True
 
-    @staticmethod
-    def dominates(a, b):
+    def service(self, model, count, task):
         return (
-            a["memory"] <= b["memory"]
-            and a["cost"] <= b["cost"]
-            and (a["within"] >= b["within"])
+            self.d["models"][model]["service_time_ms"][task]
+            * count
+            / self.d["capacity_factors"][model][str(count)]
         )
+
+    def service_floor(self, x, task, row=None):
+        if row is None:
+            values = [
+                self.service(m, n, task)
+                for m, n in x.items()
+                if task in self.d["models"][m]["supported_tasks"]
+            ]
+            return min(values) if values else math.inf
+        key = (tuple(sorted(x.items())), task, tuple(sorted(row.items())))
+        if key in self.floor_cache:
+            return self.floor_cache[key]
+        aliases, routes = expand_routes(x, {task: row})
+        router = Router(routes)
+        values = []
+        for _ in self.task_offsets[task]:
+            alias = router.choose(task)
+            values.append(self.service(aliases[alias], x[aliases[alias]], task))
+        # Queue waiting is nonnegative; both mean and order statistics are monotone.
+        alpha = self.rates[task] / math.fsum(self.rates.values()) / self.refs[task]
+        value = alpha * (
+            self.w["L"] * float(np.mean(values))
+            + self.w["P"] * float(np.percentile(values, 95))
+        )
+        self.floor_cache[key] = value
+        return value
+
+    def upper(self, x, rows, memory):
+        total = math.fsum(self.rates.values())
+        cost = self.w["M"] * memory / self.budget
+        for t in self.rates:
+            if t in rows:
+                cost += self.service_floor(x, t, rows[t])
+            else:
+                cost += (
+                    self.rates[t]
+                    / total
+                    / self.refs[t]
+                    * (self.w["L"] + self.w["P"])
+                    * self.service_floor(x, t)
+                )
+        # T loss and whole-plan energy are nonnegative, including nonadditive energy.
+        return -cost
+
+    def rows(self, task, models, caps, K):
+        q = self.rates[task]
+        seen = set()
+        for denominator in range(1, K + 1):
+            for units in compositions(denominator, len(models)):
+                if not self.tick():
+                    return
+                row = {m: q * u / denominator for m, u in zip(models, units) if u}
+                key = tuple(round(row.get(m, 0) / q, 12) for m in models)
+                if key not in seen:
+                    seen.add(key)
+                    if all(row.get(m, 0) <= caps[m] + 1e-9 for m in models):
+                        yield row
+                    else:
+                        self.metrics["capacity_pruned"] += 1
+        if K == 1:
+            return
+        # Capacity-boundary witnesses avoid falsely declaring grid-infeasible loads
+        # physically infeasible. Grid points remain nested; these are extra points.
+        orders = (
+            itertools.permutations(models)
+            if len(models) <= 4
+            else (tuple(models[i:] + models[:i]) for i in range(len(models)))
+        )
+        for order in orders:
+            if not self.tick():
+                return
+            left, row = q, {}
+            for m in order:
+                amount = min(left, max(0.0, caps[m]))
+                if amount > 1e-12:
+                    row[m] = amount
+                    left -= amount
+            if left <= 1e-8:
+                # Correct roundoff without changing the offered cohort.
+                last = next(reversed(row))
+                row[last] += left
+                key = tuple(round(row.get(m, 0) / q, 12) for m in models)
+                if key not in seen:
+                    seen.add(key)
+                    yield row
 
     def solve(self, replica_options=None, deployment=None, K=1):
-        if K != 1:
-            if deployment is None:
-                raise ValueError(
-                    "K>1 requires a fixed legal deployment; joint deployment search supports K=1"
-                )
-            return self.solve_routing(deployment, K)
         start = time.perf_counter()
-        if deployment is not None:
-            if any(
-                (
-                    m not in self.d["models"]
-                    or str(n) not in self.d["capacity_factors"][m]
-                    or str(n) not in self.d["memory_table_mib"][m]
-                    or (n <= 0)
-                    for (m, n) in deployment.items()
-                )
-            ):
-                return self.result(None, start, "UNMEASURED_DEPLOYMENT")
-            fixed_mem = self.d["safe_factor"] * sum(
-                (self.d["memory_table_mib"][m][str(n)] for (m, n) in deployment.items())
+        if type(K) is not int or not 1 <= K <= 16:
+            raise ValueError(
+                "route_grid must be an integer in [1,16]; denominators 1..K are included"
             )
-            if fixed_mem > self.budget + 1e-06:
-                return self.result(None, start, "MEMORY_INFEASIBLE")
-            models = sorted(deployment)
-        else:
-            models = sorted(self.d["models"])
-        labels = {0: [dict(memory=0.0, cost=0.0, within=0, plan=[])]}
-        for m in models:
-            counts = (
+        if any(not offsets for offsets in self.task_offsets.values()):
+            return self.result(start, K, "INSUFFICIENT_COHORT")
+        models = sorted(deployment if deployment is not None else self.d["models"])
+        choices = [
+            (
                 [deployment[m]]
                 if deployment is not None
-                else (replica_options or {}).get(
-                    m,
-                    [
-                        int(n)
-                        for n in self.d["capacity_factors"][m]
-                        if int(n) > 0 and n in self.d["memory_table_mib"][m]
-                    ],
-                )
-            )
-            support = [
-                i
-                for (i, t) in enumerate(self.tasks)
-                if t in self.d["models"][m]["supported_tasks"]
-            ]
-            options = [None]
-            for n in counts:
-                for bits in itertools.product((0, 1), repeat=len(support)):
-                    mask = sum((b << i for (b, i) in zip(bits, support)))
-                    if not mask:
-                        continue
-                    b = self.bundle(m, n, mask)
-                    if b is not None:
-                        options.append(b)
-            new = {}
-            for mask, group in labels.items():
-                for label in group:
-                    self.metrics["search_states"] += 1
-                    for b in options:
-                        self.metrics["transitions"] += 1
-                        if b and mask & b["mask"]:
-                            continue
-                        idle_mem = (
-                            self.d["safe_factor"]
-                            * self.d["memory_table_mib"][m][str(deployment[m])]
-                            if deployment is not None and b is None
-                            else 0.0
-                        )
-                        nm = label["memory"] + (b["memory"] if b else idle_mem)
-                        if nm > self.budget + 1e-06:
-                            self.metrics["memory_pruned"] += 1
-                            continue
-                        item = dict(
-                            memory=nm,
-                            cost=label["cost"]
-                            + (
-                                b["cost"] if b else self.w["M"] * idle_mem / self.budget
-                            ),
-                            within=label["within"] + (b["within"] if b else 0),
-                            plan=label["plan"] + ([b] if b else []),
-                        )
-                        target = mask | (b["mask"] if b else 0)
-                        frontier = new.setdefault(target, [])
-                        if any((self.dominates(z, item) for z in frontier)):
-                            self.metrics["dominance_pruned"] += 1
-                            continue
-                        survivors = [z for z in frontier if not self.dominates(item, z)]
-                        self.metrics["dominance_pruned"] += len(frontier) - len(
-                            survivors
-                        )
-                        new[target] = survivors + [item]
-            labels = new
-        finalists = labels.get((1 << len(self.tasks)) - 1, [])
-        if not finalists:
-            return self.result(None, start, "NO_LEGAL_COMPLETE_ROUTE")
-        winner = min(
-            finalists,
-            key=lambda z: (
-                z["cost"]
-                + self.w["T"]
-                * max(0.0, 1 - z["within"] / (sum(self.rates.values()) * 120)),
-                z["memory"],
-            ),
-        )
-        x = (
-            dict(deployment)
-            if deployment is not None
-            else {b["model"]: b["replicas"] for b in winner["plan"]}
-        )
-        r = {
-            t: {b["model"]: self.rates[t]}
-            for (i, t) in enumerate(self.tasks)
-            for b in winner["plan"]
-            if b["mask"] >> i & 1
-        }
-        p = predict_scenarios(self.d, x, r, self.rates, self.budget, self.refs, self.w)
-        self.metrics["full_prediction_calls"] += 4
-        bundle_U = -(
-            winner["cost"]
-            + self.w["T"]
-            * max(0.0, 1 - winner["within"] / (sum(self.rates.values()) * 120))
-        )
-        if (
-            not p["eligible"]
-            or p["max_rho"] > 0.8 + 1e-08
-            or abs(p["U"] - bundle_U) > 1e-08
-        ):
-            return self.result(
-                None,
-                start,
-                "PREDICTOR_VALIDATION_FAILED",
-                dict(prediction=p, bundle_U=bundle_U),
-            )
-        return self.result(
-            dict(deployment=x, routing=r, prediction=p, bundle_U=bundle_U),
-            start,
-            "OPTIMAL_K1_DP",
-        )
-
-    def result(self, winner, start, status, diagnostics=None):
-        return dict(
-            winner=winner,
-            status=status,
-            seconds=time.perf_counter() - start,
-            metrics=dict(self.metrics),
-            rejected_bundles=self.rejections,
-            diagnostics=diagnostics,
-            uncertainty="HIGH_UNMEASURED_COLOCATION_AND_SERVICE_TAIL",
-            scope="Exact frozen predictor/domain decision; no real GPU optimality claim",
-        )
-
-    def solve_routing(self, x, K):
-        """Exact branch/bound for optional discrete G/S splits, fixed replicas.
-
-        Bound: mean and P95 latency cannot be less than minimum effective
-        service time among allowed paths; throughput cost is nonnegative.
-        Partial rho only increases. Bound never substitutes J for U.
-        """
-        start = time.perf_counter()
-        if (
-            K < 1
-            or int(K) != K
-            or any(
-                (
-                    m not in self.d["models"]
-                    or n <= 0
-                    or str(n) not in self.d["capacity_factors"][m]
-                    or (str(n) not in self.d["memory_table_mib"][m])
-                    for (m, n) in x.items()
-                )
-            )
-        ):
-            return self.result(None, start, "INVALID_DOMAIN_OR_UNMEASURED_REPLICA")
-        mem = self.d["safe_factor"] * sum(
-            (self.d["memory_table_mib"][m][str(n)] for (m, n) in x.items())
-        )
-        if mem > self.budget + 1e-06:
-            return self.result(None, start, "MEMORY_INFEASIBLE")
-
-        def compositions(k, total):
-            if k == 1:
-                yield (total,)
-                return
-            for first in range(total + 1):
-                for tail in compositions(k - 1, total - first):
-                    yield (first, *tail)
-
-        opts = {}
-        floor = {}
-        for t, q in self.rates.items():
-            models = [
-                m for m in sorted(x) if t in self.d["models"][m]["supported_tasks"]
-            ]
-            if not models:
-                return self.result(None, start, "COVERAGE_INFEASIBLE")
-            opts[t] = [
-                {m: q * u / K for (m, u) in zip(models, units) if u}
-                for units in compositions(len(models), K)
-            ]
-            floor[t] = (
-                (self.w["L"] + self.w["P"])
-                * q
-                / sum(self.rates.values())
-                / self.refs[t]
-                * min(
-                    (
-                        self.d["models"][m]["service_time_ms"][t]
-                        * x[m]
-                        / self.d["capacity_factors"][m][str(x[m])]
-                        for m in models
+                else [0]
+                + sorted(
+                    (replica_options or {}).get(
+                        m, [int(n) for n in self.d["capacity_factors"][m] if int(n) > 0]
                     )
                 )
             )
-        tasks = sorted(self.rates, key=lambda t: (len(opts[t]), t))
-        best = None
-        bound = -self.w["M"] * mem / self.budget - sum(floor.values())
+            for m in models
+        ]
+        deployments = []
+        stress = 2.0 if self.policy == "robust" else 1.0
 
-        def visit(i, r, rho):
-            nonlocal best
-            self.metrics["search_states"] += 1
-            if best is not None and bound < best["prediction"]["U"] - 1e-12:
-                self.metrics["bound_pruned"] += 1
+        def enumerate_deployments(index, x, memory):
+            if not self.tick():
                 return
-            if i == len(tasks):
-                key = identity(x, r)
-                if key in self.cache:
-                    self.metrics["cache_hits"] += 1
-                    p = self.cache[key]
-                else:
-                    p = predict_scenarios(
-                        self.d, x, r, self.rates, self.budget, self.refs, self.w
-                    )
-                    self.metrics["full_prediction_calls"] += 4
-                    self.cache[key] = p
-                if (
-                    p["eligible"]
-                    and p["max_rho"] <= 0.8 + 1e-08
-                    and (
-                        best is None
-                        or (p["U"], -p["safe_memory_mib"])
-                        > (
-                            best["prediction"]["U"],
-                            -best["prediction"]["safe_memory_mib"],
-                        )
-                    )
-                ):
-                    best = dict(deployment=dict(x), routing=dict(r), prediction=p)
-                elif not p["eligible"]:
-                    self.rejections.append(
-                        dict(
-                            routing=dict(r), reason="PREDICTED_INELIGIBLE", prediction=p
-                        )
-                    )
+            if memory > self.budget + 1e-6:
+                self.metrics["memory_pruned"] += 1
                 return
-            t = tasks[i]
-            for row in opts[t]:
-                self.metrics["transitions"] += 1
-                nr = dict(rho)
-                for m, q in row.items():
-                    nr[m] = (
-                        nr.get(m, 0)
-                        + q
-                        * self.d["models"][m]["service_time_ms"][t]
-                        / 1000
-                        / self.d["capacity_factors"][m][str(x[m])]
+            if index == len(models):
+                # Necessary capacity coverage before any route combinations.
+                for t, q in self.rates.items():
+                    capacity = math.fsum(
+                        0.8
+                        * self.d["capacity_factors"][m][str(n)]
+                        * 1000
+                        / (stress * self.d["models"][m]["service_time_ms"][t])
+                        for m, n in x.items()
+                        if t in self.d["models"][m]["supported_tasks"]
                     )
-                if max(nr.values(), default=0) > 0.8 + 1e-08:
+                    if capacity < q - 1e-8:
+                        self.metrics["capacity_pruned"] += 1
+                        return
+                deployments.append(
+                    (self.upper(x, {}, memory), tuple(sorted(x.items())), memory)
+                )
+                return
+            m = models[index]
+            for n in choices[index]:
+                if self.limited:
+                    return
+                updated = {**x, m: n} if n else x
+                added = self.d["safe_factor"] * self.d["memory_table_mib"][m][str(n)]
+                enumerate_deployments(index + 1, updated, memory + added)
+
+        enumerate_deployments(0, {}, 0.0)
+        deployments.sort(key=lambda item: (-item[0], item[1]))
+        # Enumeration consumes the same budget as routing; incomplete domains are
+        # reported explicitly, including when no incumbent was found.
+        generation_limited = self.limited
+        self.limited = False
+        stress = 2.0 if self.policy == "robust" else 1.0
+        for bound, items, memory in deployments:
+            if self.limited:
+                break
+            x = dict(items)
+            tasks = sorted(
+                self.rates,
+                key=lambda t: (
+                    math.fsum(
+                        0.8
+                        * self.d["capacity_factors"][m][str(n)]
+                        * 1000
+                        / (stress * self.d["models"][m]["service_time_ms"][t])
+                        for m, n in x.items()
+                        if t in self.d["models"][m]["supported_tasks"]
+                    )
+                    / self.rates[t],
+                    t,
+                ),
+            )
+
+            def visit(rows, demand):
+                if not self.tick():
+                    return
+                ub = self.upper(x, rows, memory)
+                incumbent = self.best
+                # If there are no energy records at all, only certify the explicitly
+                # labelled partial diagnostic objective, never five-term utility.
+                if incumbent is None and not self.d.get("energy_profiles"):
+                    incumbent = self.diagnostic
+                if incumbent and ub < incumbent["score"] - 1e-10:
+                    self.metrics["bound_pruned"] += 1
+                    return
+                if len(rows) == len(tasks):
+                    self.metrics["full_prediction_calls"] += 1
+                    fn = predict_scenarios if self.policy == "robust" else predict
+                    p = fn(
+                        self.d,
+                        x,
+                        rows,
+                        self.rates,
+                        self.budget,
+                        self.refs,
+                        self.w,
+                        trace=self.trace,
+                        **self.context,
+                    )
+                    if not p["constraints_eligible"] or (
+                        self.policy == "robust" and not p["stress_constraints_valid"]
+                    ):
+                        return
+                    if p["U"] is None or (
+                        self.policy == "robust" and p["scenario_U_low"] is None
+                    ):
+                        self.unknown = True
+                        score = p["diagnostic_partial_U"]
+                        if self.policy == "robust":
+                            # Explicitly diagnostic: missing energy cannot become robust U.
+                            score = min(
+                                predict(
+                                    self.d,
+                                    x,
+                                    rows,
+                                    self.rates,
+                                    self.budget,
+                                    self.refs,
+                                    self.w,
+                                    multiplier=s,
+                                    trace=self.trace,
+                                    **self.context,
+                                )["diagnostic_partial_U"]
+                                for s in (1, 1.25, 2)
+                            )
+                        if (
+                            self.diagnostic is None
+                            or score > self.diagnostic["score"] + 1e-10
+                        ):
+                            self.diagnostic = dict(
+                                deployment=dict(x),
+                                routing={t: dict(rows[t]) for t in sorted(rows)},
+                                prediction=p,
+                                score=score,
+                                objective="partial_diagnostic_missing_energy",
+                            )
+                    else:
+                        score = (
+                            p["scenario_U_low"] if self.policy == "robust" else p["U"]
+                        )
+                        if self.best is None or score > self.best["score"] + 1e-10:
+                            self.best = dict(
+                                deployment=dict(x),
+                                routing={t: dict(rows[t]) for t in sorted(rows)},
+                                prediction=p,
+                                score=score,
+                                objective=self.policy,
+                            )
+                    return
+                t = tasks[len(rows)]
+                supported = [
+                    m for m in x if t in self.d["models"][m]["supported_tasks"]
+                ]
+                caps = {
+                    m: max(
+                        0,
+                        0.8 * self.d["capacity_factors"][m][str(x[m])] / stress
+                        - demand[m],
+                    )
+                    * 1000
+                    / self.d["models"][m]["service_time_ms"][t]
+                    for m in supported
+                }
+                if sum(caps.values()) < self.rates[t] - 1e-8:
                     self.metrics["capacity_pruned"] += 1
-                    continue
-                visit(i + 1, {**r, t: row}, nr)
+                    return
+                options = list(self.rows(t, supported, caps, K))
+                options.sort(
+                    key=lambda row: (
+                        self.service_floor(x, t, row),
+                        tuple(sorted(row.items())),
+                    )
+                )
+                for row in options:
+                    if self.limited:
+                        return
+                    updated = dict(demand)
+                    for m, q in row.items():
+                        updated[m] += (
+                            q * self.d["models"][m]["service_time_ms"][t] / 1000
+                        )
+                    visit({**rows, t: row}, updated)
 
-        visit(0, {}, {})
-        return self.result(
-            best,
-            start,
-            "OPTIMAL_FIXED_SPLIT_GRID" if best else "NO_LEGAL_COMPLETE_ROUTE",
+            visit({}, {m: 0.0 for m in x})
+        self.limited |= generation_limited
+        status = "BUDGET_LIMIT" if self.limited else "OPTIMAL_ENUMERATED_DOMAIN"
+        if self.best is None:
+            status = (
+                "DIAGNOSTIC_ONLY_NO_ENERGY"
+                if self.diagnostic
+                else (
+                    "BUDGET_LIMIT_NO_INCUMBENT"
+                    if self.limited
+                    else "NO_FEASIBLE_ENUMERATED_PLAN"
+                )
+            )
+        elif self.unknown:
+            status = "FEASIBLE_INCOMPLETE_ENERGY_DOMAIN"
+        return self.result(start, K, status)
+
+    def result(self, start, K, status):
+        winner = self.best or self.diagnostic
+        total = math.fsum(self.rates.values())
+        global_upper = (
+            -math.fsum(
+                self.rates[t]
+                / total
+                / self.refs[t]
+                * (self.w["L"] + self.w["P"])
+                * min(
+                    self.service(m, int(n), t)
+                    for m in self.d["models"]
+                    if t in self.d["models"][m]["supported_tasks"]
+                    for n in self.d["capacity_factors"][m]
+                    if int(n) > 0
+                )
+                for t in self.rates
+            )
+            if all(
+                any(t in s["supported_tasks"] for s in self.d["models"].values())
+                for t in self.rates
+            )
+            else None
         )
+        exact = status == "OPTIMAL_ENUMERATED_DOMAIN"
+        if winner:
+            # Stress diagnostics are computed once for the final nominal incumbent.
+            winner["prediction"] = predict_scenarios(
+                self.d,
+                winner["deployment"],
+                winner["routing"],
+                self.rates,
+                self.budget,
+                self.refs,
+                self.w,
+                trace=self.trace,
+                **self.context,
+            )
+        return {
+            "winner": winner,
+            "diagnostic_candidate": self.diagnostic if self.best else None,
+            "status": status,
+            "search_completed": not self.limited,
+            "optimality_certified": exact,
+            "objective_policy": self.policy,
+            "domain": {
+                "replicas": "measured catalog counts only",
+                "routing": "union of grids with denominators 1..K plus conditional capacity-boundary witnesses",
+                "K": K,
+                "continuous_optimality": False,
+            },
+            "utility_upper_bound": winner["score"] if exact else global_upper,
+            "optimality_gap": (
+                0.0
+                if exact
+                else (
+                    max(0.0, global_upper - self.best["score"])
+                    if self.best and global_upper is not None
+                    else None
+                )
+            ),
+            "trace_sha256": trace_digest(self.trace),
+            "offered_requests": len(self.trace),
+            "metrics": self.metrics,
+            "elapsed_seconds": time.perf_counter() - start,
+        }

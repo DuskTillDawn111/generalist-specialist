@@ -16,20 +16,9 @@ from .preflight import preflight
 from ..evaluation import evaluate_run
 from ..metrics import annotate_records, summarize
 from ..routing import Router
-
-
-def poisson_arrivals(rates, duration, seed):
-    import heapq
-
-    rng = {task: random.Random(f"{seed}:arrival:{task}") for task in rates}
-    events = [(rng[t].expovariate(q), t) for t, q in rates.items()]
-    heapq.heapify(events)
-    while events:
-        offset, task = heapq.heappop(events)
-        if offset >= duration:
-            break
-        yield offset, task
-        heapq.heappush(events, (offset + rng[task].expovariate(rates[task]), task))
+from ..trace import expand_routes, make_trace, trace_digest
+from .telemetry import PowerMonitor
+from ..energy import integrate_power, energy_key
 
 
 def record(phase, index, task, worker, item, scheduled):
@@ -59,40 +48,44 @@ def wait_until(deadline, monitor):
         time.sleep(min(remaining, 0.01))
 
 
-def window(runtime, config, pool_path, phase, duration, records, monitor):
+def window(
+    runtime, config, pool_path, phase, duration, records, monitor, metadata=None
+):
     pool = SamplePool(pool_path, list(config.workload_rps), config.random_seed)
     router = Router(config.routing_rps)
+    trace = make_trace(
+        config.workload_rps, duration, config.random_seed, config.arrival_process
+    )
+    payloads = []
+    for index, (offset, task) in enumerate(trace):
+        item = pool.next(task)
+        row = record(phase, index, task, router.choose(task), item, 0)
+        row["scheduled_offset_seconds"] = offset
+        records.append(row)
+        payloads.append(item["sample"])
     start, unix = time.perf_counter_ns(), time.time_ns()
     end = start + round(duration * 1e9)
-    arrivals = (
-        periodic_arrivals
-        if config.arrival_process == "deterministic_periodic"
-        else poisson_arrivals
+    metadata = {} if metadata is None else metadata
+    metadata.update(
+        start_time_ns=start,
+        start_unix_ns=unix,
+        end_time_ns=end,
+        duration_seconds=duration,
+        offered_requests=len(trace),
+        trace_sha256=trace_digest(trace),
+        cohort="all requests scheduled in [start,end), registered before dispatch",
     )
-    for index, (offset, task) in enumerate(
-        arrivals(config.workload_rps, duration, config.random_seed)
-    ):
-        item = pool.next(task)
-        row = record(
-            phase, index, task, router.choose(task), item, start + round(offset * 1e9)
-        )
-        records.append(row)
+    for row in records:
+        row["scheduled_time_ns"] = start + round(row["scheduled_offset_seconds"] * 1e9)
+    for row, sample in zip(records, payloads):
         wait_until(row["scheduled_time_ns"], monitor)
-        runtime.enqueue(row, item["sample"])
+        runtime.enqueue(row, sample)
     wait_until(end, monitor)
-    arrival_end = time.perf_counter_ns()
+    metadata["arrival_loop_end_time_ns"] = time.perf_counter_ns()
     runtime.drain(records, config.drain_timeout_seconds)
-    drain_end = time.perf_counter_ns()
-    return {
-        "start_time_ns": start,
-        "start_unix_ns": unix,
-        "end_time_ns": end,
-        "duration_seconds": duration,
-        "arrival_loop_end_time_ns": arrival_end,
-        "drain_end_time_ns": drain_end,
-        "drain_seconds": (drain_end - end) / 1e9,
-        "cohort": "requests scheduled in [start,end); completed up to bounded drain",
-    }
+    metadata["drain_end_time_ns"] = time.perf_counter_ns()
+    metadata["drain_seconds"] = (metadata["drain_end_time_ns"] - end) / 1e9
+    return metadata
 
 
 def registry_for(system, aliases, backend, workers):
@@ -151,16 +144,7 @@ def run(
         raise ValueError("backend must be mock or native")
     if arrival_process not in {"deterministic_periodic", "poisson"}:
         raise ValueError("Unknown arrival process")
-    aliases = {f"{m}#{i}": m for m, n in winner["deployment"].items() for i in range(n)}
-    routes = {
-        t: {
-            f"{m}#{i}": q / winner["deployment"][m]
-            for m, q in row.items()
-            if q > 0
-            for i in range(winner["deployment"][m])
-        }
-        for t, row in winner["routing"].items()
-    }
+    aliases, routes = expand_routes(winner["deployment"], winner["routing"])
     config = MeasurementConfig(
         deployment={a: 1 for a in aliases},
         workload_rps=dict(system.workload),
@@ -218,6 +202,12 @@ def run(
         "system_metrics": None,
     }
     before = after = None
+    power = PowerMonitor(
+        enabled=backend == "native", device=checks["device"] if checks else "0"
+    )
+    power.sample()
+    startup_begin = time.perf_counter_ns()
+    power.start()
     try:
         runtime.start()
         for task, route in routes.items():
@@ -251,7 +241,8 @@ def run(
         before = monitor.sample()
         monitor.start()
         monitor.check()
-        raw["measurement_window"] = window(
+        raw["measurement_window"] = {}
+        window(
             runtime,
             config,
             samples,
@@ -259,6 +250,7 @@ def run(
             duration,
             raw["request_records"],
             monitor,
+            raw["measurement_window"],
         )
         after = monitor.sample()
         monitor.check()
@@ -271,7 +263,15 @@ def run(
         raw["status"] = "failed"
         raw["errors"].append(f"{type(exc).__name__}: {exc}")
     finally:
+        if (
+            raw["measurement_window"]
+            and "drain_end_time_ns" not in raw["measurement_window"]
+        ):
+            raw["measurement_window"].update(
+                aborted=True, drain_end_time_ns=time.perf_counter_ns()
+            )
         monitor.close()
+        power.close()
         try:
             raw["shutdown"] = runtime.close()
         except Exception as exc:
@@ -321,6 +321,38 @@ def run(
         "samples": monitor.samples,
         "before": before,
         "after": after,
+    }
+    w = raw["measurement_window"]
+    run_j = (
+        integrate_power(power.samples, w["start_time_ns"], w["end_time_ns"])
+        if w
+        else None
+    )
+    once_j = (
+        integrate_power(power.samples, startup_begin, w["start_time_ns"]) if w else None
+    )
+    raw["energy_evidence"] = {
+        "kind": "measured" if backend == "native" else "unmeasured",
+        "scope": "whole_gpu_board",
+        "coverage_valid": backend == "native"
+        and not power.failed
+        and run_j is not None
+        and once_j is not None,
+        "run_joules": run_j,
+        "startup_joules": once_j,
+        "samples": power.samples,
+        "sampling_errors": power.errors,
+        "startup_begin_time_ns": startup_begin,
+        "scope_note": "total GPU board energy including load/prime/warmup; excludes CPU and bounded post-window drain",
+        "profile_key": energy_key(
+            winner["deployment"],
+            winner["routing"],
+            system.workload,
+            duration,
+            seed,
+            arrival_process,
+            catalog=system.catalog,
+        ),
     }
     if raw["measurement_window"]:
         raw["per_task_metrics"], raw["system_metrics"], raw["model_metrics"] = (

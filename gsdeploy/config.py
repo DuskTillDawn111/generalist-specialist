@@ -30,6 +30,14 @@ class SystemConfig:
     latency_reference_ms: dict
     weights: dict
     route_grid: int = 1
+    horizon_seconds: float = 120.0
+    random_seed: int = 42
+    arrival_process: str = "deterministic_periodic"
+    drain_seconds: float = 60.0
+    search_max_states: int = 100000
+    search_policy: str = "nominal"
+    energy_reference_watts: float = 300.0
+    startup_amortization_seconds: float | None = None
 
     def __post_init__(self):
         if not self.workload or set(self.workload) - set(TASKS):
@@ -40,14 +48,31 @@ class SystemConfig:
         positive(self.gpu_memory_mib, "gpu_memory_mib")
         if type(self.route_grid) is not int or self.route_grid < 1:
             raise ValueError("route_grid must be a positive integer")
-        if set(self.weights) != {"Q", "T", "L", "P", "M"} or self.weights["Q"] != 0:
+        if (
+            set(self.weights)
+            not in ({"Q", "T", "L", "P", "M"}, {"Q", "T", "L", "P", "M", "E"})
+            or self.weights["Q"] != 0
+        ):
             raise ValueError(
-                "Weights must specify Q=0 and T/L/P/M; quality is an admission constraint"
+                "Weights must specify Q=0 and T/L/P/M[/E]; quality is an admission constraint"
             )
         for name, value in self.weights.items():
             positive(value, f"weights.{name}", zero=True)
         if not math.isclose(sum(self.weights.values()), 1.0, abs_tol=1e-9):
             raise ValueError("Utility weights must sum to one")
+        for name in ("horizon_seconds", "energy_reference_watts"):
+            positive(getattr(self, name), name)
+        positive(self.drain_seconds, "drain_seconds", zero=True)
+        if self.startup_amortization_seconds is not None:
+            positive(self.startup_amortization_seconds, "startup_amortization_seconds")
+        if type(self.random_seed) is not int:
+            raise ValueError("random_seed must be an integer")
+        if type(self.search_max_states) is not int or self.search_max_states < 1:
+            raise ValueError("search_max_states must be a positive integer")
+        if self.arrival_process not in {"deterministic_periodic", "poisson"}:
+            raise ValueError("Unknown arrival process")
+        if self.search_policy not in {"nominal", "robust"}:
+            raise ValueError("search_policy must be nominal or robust")
         data = self.catalog
         positive(data.get("safe_factor"), "safe_factor")
         if not data.get("models"):

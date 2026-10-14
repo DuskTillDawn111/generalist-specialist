@@ -13,6 +13,8 @@ from gsdeploy.evidence import admission_covers, checkpoint, digest, verify_admis
 from gsdeploy.evaluation import evaluate_run
 from gsdeploy.runtime.preflight import preflight
 from gsdeploy.runtime.runner import registry_for
+from gsdeploy.energy import energy_key
+from gsdeploy.trace import make_trace, trace_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -134,6 +136,50 @@ class EvidenceTests(unittest.TestCase):
                 self.system.config, self.winner, self.workers, self.manifest
             ),
         }
+        trace = make_trace(self.system.config.workload, 1, 42)
+        raw["measurement_window"].update(
+            start_time_ns=0,
+            end_time_ns=10**9,
+            drain_end_time_ns=10**9,
+            offered_requests=len(trace),
+            trace_sha256=trace_digest(trace),
+        )
+        raw["transport_config"] = {
+            "random_seed": 42,
+            "arrival_process": "deterministic_periodic",
+        }
+        raw["request_records"] = [
+            {
+                "request_id": f"measurement:{i}",
+                "task": t,
+                "model": "generalist#0",
+                "scheduled_time_ns": round(a * 1e9),
+            }
+            for i, (a, t) in enumerate(trace)
+        ]
+        for record in raw["request_records"]:
+            record.update(
+                status="completed",
+                actual_submit_time_ns=record["scheduled_time_ns"],
+                completion_time_ns=record["scheduled_time_ns"] + 1000000,
+            )
+        raw["system_metrics"]["completed_within_window"] = len(trace)
+        raw["energy_evidence"] = {
+            "kind": "measured",
+            "scope": "whole_gpu_board",
+            "coverage_valid": True,
+            "run_joules": 80.0,
+            "startup_joules": 8.0,
+            "profile_key": energy_key(
+                self.winner["deployment"],
+                self.winner["routing"],
+                self.system.config.workload,
+                1,
+                42,
+                "deterministic_periodic",
+                catalog=self.system.config.catalog,
+            ),
+        }
         with (
             patch("gsdeploy.evaluation.reconstruct", return_value={}),
             patch(
@@ -144,6 +190,18 @@ class EvidenceTests(unittest.TestCase):
             self.assertTrue(
                 evaluate_run(self.system.config, raw)["utility"]["eligible"]
             )
+            self.assertAlmostEqual(
+                evaluate_run(self.system.config, raw)["utility"]["T_norm"], 0
+            )
+            saved = raw.pop("energy_evidence")
+            self.assertIsNone(evaluate_run(self.system.config, raw)["utility"]["U"])
+            raw["energy_evidence"] = saved
+            saved["kind"] = "synthetic_fixture"
+            self.assertIsNone(evaluate_run(self.system.config, raw)["utility"]["U"])
+            saved["kind"] = "measured"
+            raw["request_records"][0]["scheduled_time_ns"] += 1
+            self.assertIsNone(evaluate_run(self.system.config, raw)["utility"]["U"])
+            raw["request_records"][0]["scheduled_time_ns"] -= 1
             raw["status"] = "failed"
             self.assertIsNone(evaluate_run(self.system.config, raw)["utility"]["U"])
             raw["status"] = "completed"
