@@ -10,7 +10,7 @@ samples + workers → runtime → request records → evaluation
 
 ## 快速开始
 
-Python 3.10+，CPU 规划只需要 NumPy：
+Python 3.10+，CPU 规划使用 NumPy 和 SciPy/HiGHS：
 
 ```bash
 python -m pip install -e .
@@ -41,7 +41,9 @@ docs/           架构、真实后端与历史版本说明
 
 ## 规划与路由
 
-联合搜索同时选择模型、副本数和任务分流，无须预先固定部署。K=1 为单路径，K>=2 使用包含旧网格点的分流域，并补充容量边界见证。搜索、预测与运行使用同一请求轨迹和路由器，保留质量、实测副本域、显存及 `rho<=0.8` 约束。搜索预算耗尽会明确报告，有限域最优不代表真机或连续路由最优。
+默认联合 MILP 同时选择模型、副本数和任务分流，无须预先固定部署。K=1 为单路径，K>=2 使用分母 1..K 的嵌套分流网格。MILP 以有效成本下界选择候选，统一预测器计算完整效用并反馈；不会把服务时间代理最优当作完整效用最优。搜索、预测与运行共用请求轨迹和路由器，保留质量、实测副本域、显存及 `rho<=0.8` 约束。时间、迭代或列预算耗尽明确报告当前方案和界；有限域最优不代表真机或连续路由最优。
+
+K>=2 默认补充由容量 MILP 求出的可行流量见证，具体点保存到计划；`--no-capacity-witness` 选择纯网格域。`--solver dfs` 保留原小规模参考及其条件容量边界，候选域不同。共驻画像可通过 `performance_mode=profiled` 按完整部署和路由接入；缺画像保持未知。详见[联合 MILP 与反馈](docs/joint_milp.md)。
 
 ```bash
 gsdeploy plan --config configs/low18.json --output artifacts/low18.json
@@ -70,7 +72,7 @@ prediction = system.predict(winner["deployment"], winner["routing"])
 
 当前静态配置使用 T/L/P/M/E 各 0.2，详见[效用规范](docs/utility_specification.md)。缺少整方案能耗时完整 U 为空，搜索只提供明确标记的诊断候选；不补零、不重新分配权重。demo 的能耗是 CPU synthetic fixture，历史配置显式保留四项权重。
 
-计划保存时长、种子与到达过程。运行默认继承，显式改变时重新预测并标明原最优结论不再适用。可通过 `plan --duration 120 --seed 42 --route-grid 4 --max-states 100000 --search-policy nominal` 冻结搜索条件。`robust` 则比较同一请求轨迹的 1/1.25/2 倍服务时间。
+计划保存时长、种子与到达过程。运行默认继承，显式改变时重新预测并标明原最优结论不再适用。可通过 `plan --solver milp --duration 120 --seed 42 --route-grid 4 --milp-seconds 30 --milp-iterations 1000 --search-policy nominal` 冻结搜索条件。`robust` 则比较同一请求轨迹的 1/1.25/2 倍服务时间。
 
 ## 验证与历史
 

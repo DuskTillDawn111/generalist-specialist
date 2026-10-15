@@ -105,5 +105,11 @@
   },
   "route_grid": 1,
   "horizon_seconds": 1.0,
-  "search_max_states": 100000
+  "search_max_states": 100000,
+  "solver": "milp",
+  "milp_max_iterations": 1000,
+  "milp_time_limit_seconds": 30.0,
+  "milp_max_columns": 50000,
+  "milp_absolute_gap": 1e-08,
+  "milp_capacity_witness": true
 }

@@ -25,7 +25,17 @@ class DeploymentSystem:
                 ):
                     raise ValueError(f"Invalid fixed deployment: {model}/{count}")
         c = replace(c, route_grid=grid)
-        solver = UtilityOptimizer(
+        if c.solver == "milp":
+            from .milp import JointMilpOptimizer
+
+            optimizer = JointMilpOptimizer
+        else:
+            if c.catalog.get("performance_mode", "independent") != "independent":
+                raise ValueError(
+                    "DFS reference supports only independent service; use MILP for profiled colocation"
+                )
+            optimizer = UtilityOptimizer
+        solver = optimizer(
             c.catalog,
             c.workload,
             c.gpu_memory_mib,
@@ -33,6 +43,17 @@ class DeploymentSystem:
             c.weights,
             search_max_states=c.search_max_states,
             search_policy=c.search_policy,
+            **(
+                dict(
+                    milp_max_iterations=c.milp_max_iterations,
+                    milp_time_limit_seconds=c.milp_time_limit_seconds,
+                    milp_max_columns=c.milp_max_columns,
+                    milp_absolute_gap=c.milp_absolute_gap,
+                    milp_capacity_witness=c.milp_capacity_witness,
+                )
+                if c.solver == "milp"
+                else {}
+            ),
             **self.context(),
         )
         result = solver.solve(deployment=deployment, K=grid)
@@ -74,7 +95,6 @@ class DeploymentSystem:
         winner = plan.get("winner")
         if winner is None:
             raise ValueError("Cannot execute a plan without a winner")
-        self.config.validate_plan(winner["deployment"], winner["routing"])
         changes = {}
         for option, field in {
             "duration": "horizon_seconds",
@@ -96,10 +116,19 @@ class DeploymentSystem:
                 "route_grid",
                 "search_policy",
                 "search_max_states",
+                "solver",
+                "milp_max_iterations",
+                "milp_time_limit_seconds",
+                "milp_max_columns",
+                "milp_absolute_gap",
+                "milp_capacity_witness",
             )
             if source_problem and field in source_problem
         }
         effective = replace(self.config, **{**inherited, **changes})
+        validation = effective.validate_plan(winner["deployment"], winner["routing"])
+        if not validation["constraints_valid"]:
+            raise ValueError("Cannot execute a plan with unknown colocation capacity")
         matched = DeploymentSystem(effective).predict(
             winner["deployment"], winner["routing"]
         )

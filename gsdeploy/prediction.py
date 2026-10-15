@@ -5,6 +5,7 @@ import numpy as np
 from .routing import Router
 from .trace import expand_routes, make_trace, trace_digest
 from .energy import energy_key, energy_norm
+from .performance import resolve_service
 
 
 def components(task_stats, rates, refs, T, M, weights, E=None):
@@ -58,6 +59,21 @@ def predict(
     trace = (
         make_trace(rates, horizon, seed, arrival_process) if trace is None else trace
     )
+    service, performance_evidence = resolve_service(
+        data, x, routing, rates, horizon, seed, arrival_process
+    )
+    if service is None:
+        return dict(
+            U=None,
+            diagnostic_partial_U=None,
+            eligible=False,
+            constraints_eligible=False,
+            performance_unknown=True,
+            reason=performance_evidence["reason"],
+            performance_evidence=performance_evidence,
+            offered_requests=len(trace),
+            trace_sha256=trace_digest(trace),
+        )
     aliases, routes = expand_routes(x, routing)
     router = Router(routes)
     clocks = {a: 0.0 for a in aliases}  # runtime drains warmup before the formal window
@@ -67,7 +83,7 @@ def predict(
         alias = router.choose(task)
         m = aliases[alias]
         svc = (
-            data["models"][m]["service_time_ms"][task]
+            service[m][task]
             / 1000
             * x[m]
             / data["capacity_factors"][m][str(x[m])]
@@ -89,10 +105,7 @@ def predict(
     }
     rho = {
         m: math.fsum(
-            routing[t].get(m, 0)
-            * data["models"][m]["service_time_ms"].get(t, 0)
-            / 1000
-            * multiplier
+            routing[t].get(m, 0) * service.get(m, {}).get(t, 0) / 1000 * multiplier
             for t in rates
         )
         / data["capacity_factors"][m][str(n)]
@@ -113,7 +126,8 @@ def predict(
         "incomplete_after_drain": int(late),
         "predicted_within_window_QPS": inwindow / horizon,
         "operational_rho_08": max(rho.values(), default=0) <= 0.8 + 1e-8,
-        "prediction_scope": "constant-service independent FIFO replicas; colocated interference and service tails unmeasured",
+        "prediction_scope": performance_evidence["scope"],
+        "performance_evidence": performance_evidence,
     }
     if len(taskstats) != len(rates):
         return {
@@ -184,6 +198,15 @@ def predict_scenarios(d, x, r, rates, budget, refs, weights, **context):
     return {
         **nominal,
         "scenario_U_values": values,
+        "scenario_diagnostic_partial_U": [p["diagnostic_partial_U"] for p in scenarios],
+        "scenario_delay_costs": [
+            (
+                -math.fsum(p[f"{k}_contribution"] for k in "TLP")
+                if all(p.get(f"{k}_contribution") is not None for k in "TLP")
+                else None
+            )
+            for p in scenarios
+        ],
         "scenario_constraint_valid": [p["constraints_eligible"] for p in scenarios],
         "stress_all_eligible": all(p["eligible"] for p in scenarios),
         "stress_constraints_valid": all(p["constraints_eligible"] for p in scenarios),

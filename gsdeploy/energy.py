@@ -39,9 +39,24 @@ def energy_key(
         float(multiplier),
         fingerprint,
     ]
-    return hashlib.sha256(
+    key = hashlib.sha256(
         json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
     ).hexdigest()
+    if catalog is not None and catalog.get("performance_mode") == "profiled":
+        # Stress scales the nominal service profile; bind that same evidence
+        # into every scenario's energy identity, including non-unit stress.
+        service_contract = list(payload)
+        service_contract[6] = 1.0
+        service_key = hashlib.sha256(
+            json.dumps(service_contract, sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()
+        payload.extend(
+            ["profiled", catalog.get("colocation_profiles", {}).get(service_key)]
+        )
+        key = hashlib.sha256(
+            json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()
+    return key
 
 
 def energy_norm(evidence, horizon, reference_watts, amortization=None):

@@ -10,9 +10,11 @@ from ..evidence import digest, verify_admission
 
 
 def preflight(config, winner, samples, registry, admission=None, require_gpu=False):
-    config.validate_plan(winner["deployment"], winner["routing"])
+    validation = config.validate_plan(winner["deployment"], winner["routing"])
     pool = SamplePool(samples, list(config.workload), 42)
     issues = []
+    if not validation["constraints_valid"]:
+        issues.append("Colocation capacity profile unavailable for this plan")
     devices = set()
     for model in winner["deployment"]:
         if model not in registry:
