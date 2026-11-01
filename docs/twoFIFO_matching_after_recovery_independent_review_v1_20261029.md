@@ -1,0 +1,13 @@
+matching-after-recovery driver 通过独立 CPU 控制流审查，未发现尚未解决的阻断。冻结源码 SHA `7d78f55dc17ad539f8975d9ce8f770714ae5abd786404e272c920cd749ff1059`。证据目录 `artifacts/predictor-twoFIFO-matching-after-recovery-v1-20261029-cpu01-independent/`。独审没有修改作者源码，没有用真实 prepared 输入执行 driver.run，没有启动 driver/native/GPU/fit，也没有触碰运行中的 recovery controller 或 CPU downstream driver。
+
+作者预声明 `artifacts/predictor-twoFIFO-matching-after-recovery-v1-20261029-cpu01-predeclared/plan.json` SHA `2e6891dedb11a25faaedccdd2ba4fea4ccfc468855857a92c3fc3a04a3b2843d` 已独立核验。真实只读 matching.audit、baseline.audit 和 checked_review 均通过；fit manifest SHA `add44b2bd0c82f3155dfa4ead70578f181459fa83232c464e11c8c7ca87b1a56`，matching cpu02 manifest SHA `a7b5853c8469fb888d0fab3a7142aa114226423a0f88e32a19eb4fe7c47fad06`，producer独审 SHA `7a6958ceef74c321653c97c05a4bcb3ba59871313fd55b369521fa0a590da4b8`。driver实际构造的356份guard refs与预声明sources逐项相等，包含全部15个generated plans、matching evidence/source闭包、fit/review身份及driver自身闭包。matching.sources本身为290份；早期任务描述中的308是旧版引用总数，不是当前manifest.sources数。audit时15个attempt均无claim/collection，native01 driver output与cpu02-prepared/run-v1均不存在；baseline final尚不存在，controller640208的实际cmdline/manifest/start_ticks身份只读检查通过。
+
+driver在重复audit前建立真实SourceChangeGuard；等待不占GPU lease，不创建capture claim或collection。它复用已审wait_for_final，逐poll复核guard，partial JSON/UTF8只能等待同一live writer完成；controller身份变更或退出阻止继续。完整final还必须通过真实complete_final的exact12 metadata门禁，包含原policy、4个prefix、8个tail、原manifest与角色标记。此门禁只确认完成状态，native evidence资格仍由后续原producer/intake负责。
+
+启动前再次audit matching/review，并检查所有attempt仍未开始且matching output未出现；任何竞争claim、collection或output均停止。baseline final receipt在launch前和child后均核验。命令只调用已独审matching run一次，保留原GPU环境；等待期间不调用subprocess。非零退出或零退出但HOLD/不完整status均不能成为成功。matching supervisor原有lease和durable no-retry claim仍控制实际GPU启动，driver不实现重试。源码guard覆盖等待至child结束，future plan或自身闭包变更即使恢复原bytes仍被拒绝。
+
+作者6项、新增独审10项、共享partial-publication10项和exact12 metadata3项共29项测试通过（3.94s）。363份完整source/input/test receipts在验证前后无变化，原始transcript已封存。独审实际运行driver控制流、真实等待、metadata gate与inotify guard，native auditors和run_command为显式CPU替身。测试覆盖partial发布期间无capture claim、claim/collection/output竞争、foreign/stopped/missing/reordered final、future plan/自身闭包/review change-and-restore、重复audit前guard顺序、final在gate后或child期间漂移、writer死亡/PID身份改变、输出禁止复用和非法poll。
+
+该结果支持按预声明从完整baseline转交matching采集的控制流合同；它不是native、kernel响应、资源模型或预测准确率资格。尚无本次matching实测产出，没有新fit或收益结论。
+
+复现：`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /root/miniconda3/bin/python -m unittest tests.test_twoFIFO_matching_after_recovery_v1 tests.test_twoFIFO_matching_after_recovery_independent_v1 tests.test_twoFIFO_recovery_downstream_driver_publication_independent_v1 tests.test_twoFIFO_recovery_phase12_independent_v1`。

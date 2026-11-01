@@ -1,0 +1,83 @@
+{
+  "schema": "gsdeploy.compact_execution.v1",
+  "state": "IMPLEMENTED_CPU_TESTED_PENDING_GPU_COMPATIBILITY",
+  "cpu_offload": false,
+  "models": {
+    "generalist_1": {
+      "family": "qwen",
+      "dtype": "bfloat16",
+      "quantization": null,
+      "disable_talker": true,
+      "attention_implementation": "sdpa"
+    },
+    "generalist_2": {
+      "family": "minicpm",
+      "dtype": "float16",
+      "quantization": {
+        "method": "gptq",
+        "bits": 4,
+        "checkpoint_quantized": true,
+        "activation_dtype": "float16",
+        "kernel": "exllama_v1 (official fork default with disable_exllamav2=True)"
+      },
+      "audio_output": false,
+      "tts_residency": "retain if official loader requires it; measure actual bytes",
+      "max_input_length": 16384,
+      "max_input_length_basis": "Complete frozen quality/calibration tokenizer audit; maximum observed prefill <=16384; enforce before generation"
+    },
+    "generalist_3": {
+      "family": "phi",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 4,
+        "skip_modules": [
+          "lm_head",
+          "embed_tokens_extend",
+          "image_embed",
+          "audio_embed",
+          "lora_A",
+          "lora_B"
+        ]
+      },
+      "audio_output": false
+    },
+    "text": {
+      "family": "unifiedqa",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 8,
+        "skip_modules": [
+          "lm_head"
+        ]
+      }
+    },
+    "image": {
+      "family": "siglip",
+      "dtype": "bfloat16",
+      "quantization": null
+    },
+    "ocr": {
+      "family": "deepseek",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 8,
+        "skip_modules": [
+          "lm_head",
+          "sam_model",
+          "vision_model",
+          "projector",
+          "image_newline",
+          "view_seperator"
+        ]
+      }
+    },
+    "asr": {
+      "family": "whisper",
+      "dtype": "float16",
+      "quantization": null
+    }
+  }
+}

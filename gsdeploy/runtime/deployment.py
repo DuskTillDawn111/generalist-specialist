@@ -1,10 +1,13 @@
 """Manage worker lifecycles, send queues and timestamped request completion."""
 
+import os
 import queue
 import subprocess
 import threading
 import time
 from .transport import Worker
+from ..resources import worker_environment
+from .admission import admission_for_registry
 
 
 class TimestampedEvents(queue.Queue):
@@ -43,6 +46,7 @@ class DeploymentRuntime:
         self.stopping = threading.Event()
         self.collect_stop = threading.Event()
         self.collector = None
+        self.admission = None
 
     def start(self):
         for name, count in self.config.deployment.items():
@@ -52,6 +56,11 @@ class DeploymentRuntime:
                 )
             if count and name not in self.registry:
                 raise ValueError(f"No worker launcher registered for {name}")
+            if count:
+                # Validate every binding before starting even the first worker.
+                worker_environment(self.registry[name], os.environ)
+        self.admission = admission_for_registry(
+            {name: self.registry[name] for name, count in self.config.deployment.items() if count})
         for name, count in sorted(self.config.deployment.items()):
             if not count:
                 continue
@@ -106,6 +115,25 @@ class DeploymentRuntime:
                     status="error", error="host send queue full; request not submitted"
                 )
 
+    def _sync_admission_record(self, record):
+        """Copy exact gate transitions; record-copy time is not an event time."""
+        with self.lock:
+            events = self.admission.request_events(record["request_id"])
+            record["admission_events"] = events
+            for event in events:
+                field = {"enqueue": "admission_wait_start_time_ns",
+                         "grant": "admission_granted_time_ns",
+                         "release": "admission_released_time_ns",
+                         "cancel": "admission_cancelled_time_ns"}.get(event["kind"])
+                if field is not None:
+                    record[field] = event["time_ns"]
+                if event["kind"] == "release":
+                    record["admission_release_reason"] = event["reason"]
+
+    def _release_admission(self, record, reason):
+        self.admission.release(record["request_id"], reason=reason)
+        self._sync_admission_record(record)
+
     def _send(self, model):
         while not self.stopping.is_set():
             try:
@@ -116,9 +144,16 @@ class DeploymentRuntime:
                 if record["status"] != "queued":
                     continue
             try:
+                if self.admission is not None:
+                    granted = self.admission.acquire(model, record["request_id"])
+                    self._sync_admission_record(record)
+                    if not granted:
+                        continue
                 with self.send_locks[model]:
                     with self.lock:
                         if record["status"] != "queued" or self.stopping.is_set():
+                            if self.admission is not None:
+                                self._release_admission(record, "submission_cancelled")
                             continue
                         record.update(
                             actual_submit_time_ns=time.perf_counter_ns(),
@@ -140,6 +175,8 @@ class DeploymentRuntime:
                             time.perf_counter_ns()
                         )
             except Exception as exc:
+                if self.admission is not None:
+                    self._release_admission(record, "send_failure")
                 with self.lock:
                     if record["status"] not in ("completed", "incomplete"):
                         record.update(status="error", error=f"send failed: {exc}")
@@ -152,11 +189,19 @@ class DeploymentRuntime:
                 )
             except queue.Empty:
                 continue
+            collector_dequeued_ns = time.perf_counter_ns()
             with self.lock:
+                collector_processing_ns = time.perf_counter_ns()
                 if kind == "BYE":
                     self.byes.add(model)
                     continue
                 if kind == "EXIT":
+                    if self.admission is not None:
+                        releases = self.admission.release_alias(model, reason="worker_exit")
+                        for event in releases:
+                            released_record = self.pending.get(event["request_id"])
+                            if released_record is not None:
+                                self._sync_admission_record(released_record)
                     for record in self.pending.values():
                         if record["model"] == model and record["status"] in (
                             "queued",
@@ -166,6 +211,44 @@ class DeploymentRuntime:
                                 status="error",
                                 error="worker stdout closed before response",
                             )
+                    continue
+                if kind == "WORKER_READY":
+                    record = self.pending.get(payload.get("request_id"))
+                    ready_ns = payload.get("perf_ns")
+                    expected_pid = self.ready.get(model, {}).get("pid")
+                    if (record is None or record["model"] != model
+                            or payload.get("pid") != expected_pid or expected_pid is None
+                            or payload.get("clock") != "host_perf_counter_ns"
+                            or payload.get("boundary") != "previous_handler_next_request_ready"
+                            or type(ready_ns) is not int or ready_ns < 0 or ready_ns > received_ns
+                            or "previous_handler_next_request_ready" in record):
+                        self.errors.append({"model": model, "kind": kind,
+                                            "error": "unmatched or invalid worker readiness observation"})
+                        continue
+                    end_ns = record.get("worker_response", {}).get("end_perf_ns")
+                    if end_ns is not None and ready_ns < end_ns:
+                        self.errors.append({"model": model, "kind": kind,
+                                            "error": "worker readiness precedes handler end"})
+                        continue
+                    record["previous_handler_next_request_ready"] = {
+                        **payload, "received_time_ns": received_ns,
+                        "collector_dequeued_time_ns": collector_dequeued_ns,
+                        "collector_processing_time_ns": collector_processing_ns,
+                    }
+                    continue
+                if kind in ("START", "PHASE"):
+                    record = self.pending.get(payload.get("request_id"))
+                    if (record is None or record["model"] != model
+                            or record["status"] not in ("submitted", "incomplete")):
+                        self.errors.append({"model": model, "kind": kind,
+                                            "error": "unmatched execution observation"})
+                        continue
+                    event = {**payload, "received_time_ns": received_ns,
+                             "collector_dequeued_time_ns": collector_dequeued_ns,
+                             "collector_processing_time_ns": collector_processing_ns}
+                    record.setdefault("execution_events", []).append(event)
+                    if kind == "START":
+                        record["observed_worker_start_time_ns"] = payload.get("perf_ns")
                     continue
                 if kind not in ("RESULT", "ERROR"):
                     continue
@@ -184,17 +267,26 @@ class DeploymentRuntime:
                         }
                     )
                     continue
+                record["response_reader_event_enqueue_time_ns"] = received_ns
+                record["response_collector_dequeued_time_ns"] = collector_dequeued_ns
+                record["response_collector_processing_time_ns"] = collector_processing_ns
                 if record["status"] == "incomplete":
+                    if self.admission is not None:
+                        self._release_admission(record, "late_worker_" + kind.lower())
                     record["late_response_after_drain"] = payload
                     record["late_response_time_ns"] = received_ns
                     continue
                 record["completion_time_ns"] = received_ns
                 record["completion_unix_ns"] = unix_ns
                 record["worker_response"] = payload
+                if self.admission is not None:
+                    self._release_admission(record, "worker_" + kind.lower())
                 if kind == "ERROR":
                     record.update(
                         status="error", error=payload.get("error", "worker ERROR")
                     )
+                elif payload.get("success") is False:
+                    record.update(status="error", error=payload.get("failure_reason", "worker reported unsuccessful inference"))
                 elif payload.get("task_type") != record["task"]:
                     record.update(status="error", error="worker task_type mismatch")
                 else:
@@ -218,6 +310,8 @@ class DeploymentRuntime:
 
     def close(self):
         self.stopping.set()
+        if self.admission is not None:
+            self.admission.close()
 
         def graceful(name, worker):
             lock = self.send_locks.get(name, threading.Lock())

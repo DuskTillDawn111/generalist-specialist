@@ -29,6 +29,7 @@ class MeasurementConfig:
     drain_timeout_seconds: float = 60
     shutdown_timeout_seconds: float = 10
     max_pending_per_model: int = 10000
+    idle_residency: bool = False
 
     def validate(self, capabilities):
         if not self.deployment or not any(self.deployment.values()):
@@ -58,7 +59,12 @@ class MeasurementConfig:
                 math.fsum(route.values()), offered, rel_tol=1e-07, abs_tol=0
             ):
                 raise ValueError(f"Routing conservation failed for {task}")
-        if not any((rate > 0 for rate in self.workload_rps.values())):
+        if type(self.idle_residency) is not bool:
+            raise ValueError("idle_residency must be an explicit boolean")
+        positive_workload = any(rate > 0 for rate in self.workload_rps.values())
+        if self.idle_residency and positive_workload:
+            raise ValueError("Idle residency cannot contain positive demand")
+        if not self.idle_residency and not positive_workload:
             raise ValueError("Measurement requires a nonzero workload")
         for key in (
             "warmup_seconds",

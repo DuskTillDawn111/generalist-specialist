@@ -1,0 +1,230 @@
+{
+  "schema": "gsdeploy.four_task_study.v1",
+  "study_id": "four_task_memory_qwen_int8_20261017",
+  "state": "CPU_MEMORY_OPTIMIZATIONS_PENDING_GPU_VALIDATION",
+  "active_tasks": [
+    "text",
+    "image",
+    "ocr",
+    "asr"
+  ],
+  "excluded_tasks": [
+    "lid",
+    "visual_qa"
+  ],
+  "tasks": {
+    "text": {
+      "name": "contextual_question_answering",
+      "dataset": "SQuAD2-dev",
+      "protocol": "squad2_official_normalization_em_f1_frozen_v1",
+      "quality_primary": "EM",
+      "quality_secondary": [
+        "F1",
+        "answerable_EM",
+        "unanswerable_EM"
+      ]
+    },
+    "image": {
+      "name": "1000_label_image_classification",
+      "dataset": "ImageNet-A",
+      "protocol": "imagenet_a_1000_labels_calibration",
+      "quality_primary": "top1_accuracy",
+      "limitation": "Calibration contains 200 source classes; full ImageNet1K coverage remains a separate data requirement."
+    },
+    "ocr": {
+      "name": "whole_page_printed_receipt_ocr",
+      "dataset": "SROIE-test-pages",
+      "protocol": "page_ocr_text_v4_cpu_frozen",
+      "quality_primary": "CER",
+      "limitation": "Native annotation line order is the fixed evaluation order; no prediction-dependent reading-order alignment."
+    },
+    "asr": {
+      "name": "speech_transcription",
+      "dataset": "LibriSpeech-test-other",
+      "protocol": "asr_duration_stratified_v2",
+      "quality_primary": "WER",
+      "quality_dataset": "LibriSpeech-dev-other",
+      "quality_protocol": "speaker_disjoint_4_to_30_seconds_quotas_200_150_120_30_frozen_v1"
+    }
+  },
+  "initial_task_proportions": {
+    "text": 0.25,
+    "image": 0.25,
+    "ocr": 0.25,
+    "asr": 0.25
+  },
+  "gpu_memory_mib": 49140,
+  "safe_factor": 1.110854,
+  "memory_targets_gib": {
+    "generalist_each": [
+      4,
+      8
+    ],
+    "specialist_each_preferred": [
+      4.5,
+      5
+    ],
+    "all_four_specialists_single_copy_sum": 20,
+    "replicas_per_specialist_target": 2,
+    "targets_are_not_measurements": true
+  },
+  "admission_requirements": {
+    "compare_against": "all_three_generalists",
+    "specialist_generalist_memory_ratio": [
+      0.5,
+      2
+    ],
+    "specialist_generalist_mean_latency_ratio": [
+      0.5,
+      2
+    ],
+    "specialist_quality": "strictly_better_on_identical_independent_samples",
+    "specialist_energy": "strictly_greater_on_matched_whole_board_energy_contract",
+    "unknown_is_not_pass": true
+  },
+  "utility": {
+    "weights": {
+      "Q": 0,
+      "T": 0.2,
+      "L": 0.2,
+      "P": 0.2,
+      "M": 0.2,
+      "E": 0.2
+    },
+    "latency_references_ms": {
+      "text": 1000.0,
+      "image": 250.0,
+      "ocr": 10000.0,
+      "asr": 3000.0
+    },
+    "energy_method": "nvml_board_power_integral",
+    "startup_amortization_seconds": 3600,
+    "references_must_be_frozen_before_comparison": true,
+    "energy_reference_watts": 450,
+    "reference_kind": "fixed_research_scales_not_measured_baselines_or_SLOs"
+  },
+  "generalists": [
+    {
+      "slot": "generalist_1",
+      "model": "Qwen/Qwen2.5-Omni-3B",
+      "revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e",
+      "precision": "INT8 language linear layers; BF16 visual/audio towers and lm_head",
+      "configuration": {
+        "audio_output": false,
+        "disable_talker": true
+      },
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "Separate unvalidated INT8 candidate; independent smoke, complete-calibration memory and quality evidence required."
+    },
+    {
+      "slot": "generalist_2",
+      "model": "openbmb/MiniCPM-o-2_6-int4",
+      "revision": "2b72b5775e2c4dd617bcfd088a146cfbd698ce71",
+      "precision": "official GPTQ W4A16",
+      "configuration": {
+        "audio_output": false
+      },
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "Official GPTQ weights unchanged; native language SDPA, last-position output projection and vision crop microbatching require complete GPU revalidation."
+    },
+    {
+      "slot": "generalist_3",
+      "model": "microsoft/Phi-4-multimodal-instruct",
+      "revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+      "precision": "INT4 language layers; native vision/audio modules",
+      "configuration": {
+        "quantization": "load-time candidate; compatibility unverified",
+        "audio_output": false
+      },
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "Language INT4 unchanged; native last-logit option and complete crop microbatching require complete GPU revalidation."
+    }
+  ],
+  "specialists": [
+    {
+      "slot": "text",
+      "model": "allenai/unifiedqa-v2-t5-3b-1251000",
+      "revision": "bbd009107d81ac360670828f404b2659658857cd",
+      "precision": "INT8; BF16 reference",
+      "configuration": {},
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "3B QA-trained checkpoint, not the previous 11B model; no-answer and window policy must be frozen."
+    },
+    {
+      "slot": "image",
+      "model": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "precision": "BF16",
+      "configuration": {
+        "image_resolution": 384,
+        "cache_class_features": true
+      },
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "1.87B total parameters in Hub metadata; keep normal class feature caching."
+    },
+    {
+      "slot": "ocr",
+      "model": "deepseek-ai/DeepSeek-OCR",
+      "revision": "9f30c71f441d010e5429c532364a86705536c53a",
+      "precision": "INT8 candidate; BF16 reference",
+      "configuration": {},
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "3.34B total parameters in Hub metadata; native implementation and quantization compatibility require a smoke check; fix OCR scoring before admission."
+    },
+    {
+      "slot": "asr",
+      "model": "openai/whisper-large-v3",
+      "revision": "06f233fe06e710322aca913c1bc4249a0d71fce1",
+      "precision": "FP16; INT8 candidate if required",
+      "configuration": {},
+      "state": "NEW_EXECUTION_IDENTITY_PENDING_GPU_REVALIDATION",
+      "notes": "Native multilingual ASR; reuse local weights after hash verification. Existing BF16 residence around 7.14 GiB is historical evidence, not a compact-config measurement."
+    }
+  ],
+  "execution_catalog": null,
+  "validation_targets": [
+    "one generalist at low fixed rates",
+    "generalist plus specialist under task skew",
+    "measured G/S routing benefit",
+    "all four specialists with feasible measured replicas at high fixed rates"
+  ],
+  "notes": [
+    "The current large candidates are not automatically substituted into this study.",
+    "No min-generalist deployment constraint; do not force the expected regimes.",
+    "All candidate quality, energy, memory, and colocation evidence remains to be measured.",
+    "Memory repair retains complete inputs, all four generalist tasks, original G/S ratio range, quality gates and utility weights.",
+    "A 4-8 GiB generalist residence is a planning target, not an achieved measurement."
+  ],
+  "quality_preparation": {
+    "status": "FOUR_TASK_INPUTS_AND_PROTOCOL_FROZEN_NOT_ADMITTED",
+    "manifest": "artifacts/four-task-small-pool-20261015/evaluation-v6/evaluation-status.json",
+    "manifest_sha256": "c5d2f01e3a70b55a29908372bb82031c3275ac9ac27bd6197fe8416b1bc90a7a",
+    "sample_counts": {
+      "text": 500,
+      "image": 400,
+      "ocr": 200,
+      "asr": 500
+    },
+    "gpu_started": false,
+    "native_execution_ready": false
+  },
+  "task_adapter_protocol": {
+    "path": "configs/compact_protocol.json",
+    "sha256": "0d29ae46698fe064869a7143113eee2ec7118e90581bd58d2ae4fca12b67d04e",
+    "environment_plan": "configs/compact_environments.json",
+    "environment_plan_sha256": "6b102f95a7e4e30208a85c143576107560f7e5a6942859b0129b65196bfca170",
+    "state": "CPU_PROTOCOL_FROZEN_GPU_UNVALIDATED"
+  },
+  "calibration_preparation": {
+    "manifest": "artifacts/four-task-small-pool-20261015/calibration-v6/sample-manifests.json",
+    "manifest_sha256": "1edc7a7e84de95906dd79f4b16c231d8fd94d92a28ea30a9e83c33209d54e88d"
+  },
+  "memory_validation": {
+    "required": true,
+    "cohort": "complete frozen calibration pool for all supported tasks",
+    "rounds": 1,
+    "scope": "early rejection before independent quality; final admission still requires matched-cost evidence",
+    "required_pairwise_resident_comparisons": 12
+  },
+  "execution_configuration": "configs/compact_execution_memory.json"
+}

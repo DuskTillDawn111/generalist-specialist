@@ -187,6 +187,7 @@ class SearchContractTests(unittest.TestCase):
         c = config(
             {"text": 1.6}, {"g": {"text": 1000.0}, "s": {"text": 1000.0}}, horizon=20
         )
+        c = replace(c, milp_capacity_witness=True)  # Explicit historical augmented domain.
         for K in (2, 3, 4, 5, 6):
             result = DeploymentSystem(c).plan(route_grid=K)
             self.assertEqual(result["winner"]["deployment"], {"g": 1, "s": 1})

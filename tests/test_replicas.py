@@ -33,6 +33,11 @@ class ReplicaDomainTests(unittest.TestCase):
     def test_high_load_requires_available_replicas(self):
         old = SystemConfig.load(ROOT / "configs/low18.json").as_dict()
         new = SystemConfig.load(ROOT / "configs/static_replicas.json").as_dict()
+        # Hold the historical six-task demand fixed to isolate replica-domain
+        # feasibility. The active study now removes LID/VQA; comparing different
+        # task sets here would no longer test the effect of enabling replicas.
+        new["workload"] = dict(old["workload"])
+        new["latency_reference_ms"] = dict(old["latency_reference_ms"])
         for data in [old, new]:
             data["workload"] = {
                 task: rate * 30 for task, rate in data["workload"].items()

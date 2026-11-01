@@ -5,6 +5,7 @@ import os
 import subprocess
 import sys
 import threading
+from ..resources import worker_environment
 
 
 class Worker:
@@ -13,7 +14,7 @@ class Worker:
         self.process = None
 
     def start(self):
-        env = {**os.environ, **self.config.get("env", {}), "PYTHONUNBUFFERED": "1"}
+        env = worker_environment(self.config, os.environ)
         self.process = subprocess.Popen(
             self.config["command"],
             cwd=self.config.get("cwd"),
@@ -30,7 +31,7 @@ class Worker:
         for line in self.process.stdout:
             line = line.rstrip()
             kind, separator, data = line.partition("|")
-            if separator and kind in {"READY", "RESULT", "ERROR", "BYE"}:
+            if separator and kind in {"READY", "START", "PHASE", "WORKER_READY", "RESULT", "ERROR", "BYE"}:
                 try:
                     self.event_queue.put((self.name, kind, json.loads(data)))
                 except (ValueError, TypeError) as exc:

@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -e .
-      - run: python -m unittest discover -s tests -v
+      - run: python scripts/run_cpu_tests.py
       - run: python -m gsdeploy plan --config configs/demo.json --output artifacts/plan.json
       - run: python -m gsdeploy run --config configs/demo.json --plan artifacts/plan.json --samples examples/demo_samples.jsonl --duration 1 --warmup 0 --output artifacts/run.json
       - run: python -m gsdeploy evaluate --run artifacts/run.json

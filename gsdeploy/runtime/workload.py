@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 
 def read_jsonl(path):
@@ -27,3 +28,23 @@ class SamplePool:
         index = self.indices[task]
         self.indices[task] += 1
         return self.samples[task][index % len(self.samples[task])]
+
+
+def largest_inputs(pool, task, count=3):
+    """Select priming inputs without consuming the measured sample sequence.
+
+    Size is the stored media file byte count or the UTF-8 byte count of the
+    context/question (plain text falls back to input/text). This deliberately
+    avoids model tokenizers and does not claim a worst-case activation bound.
+    Pool IDs resolve equal-size ties independently of the random replay seed.
+    """
+    def size(item):
+        sample = item["sample"]
+        if task in {"image", "ocr", "asr"}:
+            return Path(sample["input"]).stat().st_size
+        text = "\n".join(str(sample[key]) for key in ("context", "question") if key in sample)
+        if not text:
+            text = str(sample.get("input", sample.get("text", "")))
+        return len(text.encode("utf-8"))
+
+    return sorted(pool.samples[task], key=lambda item: (-size(item), item["pool_id"]))[:count]

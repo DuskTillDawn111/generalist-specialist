@@ -2,13 +2,19 @@
 
 `DeploymentSystem` 贯通配置、联合搜索、逐请求预测、运行和离线评价。核心代码只在 `gsdeploy/` 开发，历史模块不进入依赖。
 
+2026-10-21 新研究使用 `verified_executable_v1` 能力契约和
+`six_term_quality_v1` 效用：`supported_tasks` 表示已验证可执行路径，质量进入 Q 项，
+不再作为绝对准入门槛。`quality.py` 统一离线回放和当次输出评分；
+`static_study.py` 准备去重校准与独立确认作业。MILP/DFS 同域比较和本轮状态见
+[CPU 交付](static_joint_cpu_delivery_20261021.md)。下文涉及质量准入和旧池的说明仅适用于历史契约。
+
 | 文件 | 职责 |
 | --- | --- |
 | `config.py` | 质量已准入路径、经验副本域、负载、资源约束和实验条件 |
 | `trace.py` | 固定种子周期/Poisson 请求轨迹、轨迹哈希、副本路由展开 |
 | `routing.py` | 搜索、预测、执行共用的加权轮询 |
 | `milp.py` | 默认联合 MILP、完整预测反馈、界与预算报告 |
-| `optimizer.py` | 独立服务模式下的小规模 DFS 参考及容量边界见证 |
+| `optimizer.py` | 同域 DFS 枚举/有效界剪枝、六项评分与预算状态 |
 | `performance.py` | 独立服务代理与完整部署/路由的冻结共驻服务画像 |
 | `prediction.py` | 同一请求轨迹上的副本 FIFO 仿真与统一效用算术 |
 | `energy.py` | 完整方案能耗画像身份、功率积分和启动成本摊销 |
@@ -40,7 +46,7 @@
 
 计划保存完整 `problem`，包括 H、seed、到达过程、排空、预算、权重和参考值。运行默认继承这些条件。显式改变时长/种子时重新预测该部署，并记录 `optimality_transferred=false`，原计划的最优结论不会转移到新问题。验收入口先按运行条件规划，再启动。
 
-当前静态入口是 `configs/static_replicas.json`：五项等权、K=4、H=120 秒、seed=42，默认 MILP 的时间/列/迭代预算见配置定义。`c_replicas.json` 保留原单副本参数并使用历史双/三副本测量；代表任务的吞吐比转移到其他任务和同卡组合仍是代理，不是新的容量认证。A/B/C 单副本配置保留显式四项历史权重，输出 `legacy_four_term`。
+当前四任务候选筛选入口为 `configs/study.json` 与 `gsdeploy.profiling.study`，未完成准入前不能转成运行画像。LID/VQA 不进入当前主实验。历史静态回归入口 `configs/static_replicas.json` 已仅保留四任务负载，仍使用旧任务参数：五项等权、K=4、H=120 秒、seed=42，默认 MILP 的时间/列/迭代预算见配置定义。`c_replicas.json` 保留原单副本参数并使用历史双/三副本测量；代表任务的吞吐比转移到其他任务和同卡组合仍是代理，不是新的容量认证。A/B/C 单副本配置保留显式四项历史权重，输出 `legacy_four_term`。
 
 `supported_tasks` 是质量准入路径，`capabilities_verified` 是已验证的推理能力。Qwen 能执行 OCR 并不表示其旧质量记录通过 OCR 门槛。没有新质量证据时不放宽门槛。常数服务时间没有输入大小、真实服务时间分布或同卡干扰模型，输出持续标注这种不确定性。
 

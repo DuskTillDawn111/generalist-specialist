@@ -1,0 +1,25 @@
+{
+  "schema": "gsdeploy.confirmation_statistics_audit_validation.v1",
+  "tested_utc": "2026-10-21T22:09:03.391624+00:00",
+  "self_test_command": "CUDA_VISIBLE_DEVICES='' python tools/confirmation_statistics_audit_20261022/self_test.py",
+  "tests_passed": 5,
+  "tests": [
+    "analytic t(df2) known critical value and Holm known values",
+    "temporary full fifteen-job CPU fixture agrees with frozen upstream all statistics",
+    "all fifteen per-comparison fields individually altered and rejected",
+    "duplicate and missing plan/seed blocks rejected",
+    "existing real four-job partial rejected"
+  ],
+  "cli_partial_rejection": {
+    "returncode": 1,
+    "message": "ValueError: FINAL_AUDIT_REFUSED_INCOMPLETE: strict 15/15 report with no missing jobs required",
+    "output_not_created": true,
+    "input": {
+      "path": "/root/autodl-tmp/generalist-specialist-project/artifacts/static-study-gpu-20261022/confirmation-audit-seed43-four/report.json",
+      "sha256": "3612333d5ab3abe839a2803a00bb921496a4707a41922777c6bfcf72644ab847"
+    }
+  },
+  "real_final_audit_executed": false,
+  "gpu_started": false,
+  "evidence_kind": "CPU_FIXTURE_AND_PARTIAL_REJECTION_ONLY"
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "gsdeploy.confirmation_statistics_audit_preparation.v1",
+  "status": "READY_PENDING_REAL_15_OF_15_REPORT",
+  "real_final_audit_executed": false,
+  "full_confirmation_complete": false,
+  "fixture_tests_are_measured_evidence": false,
+  "gpu_started": false,
+  "pending_action": "Run audit_statistics.py on the final strict report after all fifteen jobs pass the frozen native importer."
+}

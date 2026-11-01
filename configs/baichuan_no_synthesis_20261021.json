@@ -1,0 +1,83 @@
+{
+  "schema": "gsdeploy.retained_baichuan_execution.v1",
+  "state": "VERIFIED_FOUR_TASK_EQUIVALENCE",
+  "model": "baichuan-inc/Baichuan-Omni-1d5",
+  "revision": "0b86202f48ec5e273e1aef3b67caf0f4e7cca1b0",
+  "execution": {
+    "family": "baichuan",
+    "dtype": "bfloat16",
+    "native_interface": "baichuan_official_role_prefix_complete_inputs_v1",
+    "quantization": {
+      "method": "bitsandbytes",
+      "bits": 4,
+      "skip_modules": [
+        "lm_head",
+        "visual_model",
+        "visual_bridge_model",
+        "audio_embed_layers",
+        "audio_tokenizer",
+        "audio_head"
+      ]
+    },
+    "allocator_conf": "expandable_segments:True",
+    "cache_release_threshold_mib": 512,
+    "memory_optimizations": {
+      "last_position_logits": true,
+      "linear_no_repeat": true,
+      "last_position_logits_tasks": [
+        "text",
+        "ocr",
+        "asr"
+      ],
+      "retire_audio_output": true
+    }
+  },
+  "source_root": "/root/autodl-tmp/generalist-specialist-project/artifacts/qa-development-revision-20261020/tydiqa-new-native-confirmation80-v2/source",
+  "verification_release": "/root/autodl-tmp/generalist-specialist-project/artifacts/baichuan-no-synthesis-20261021/release.json",
+  "verification_state": "/root/autodl-tmp/generalist-specialist-project/artifacts/baichuan-no-synthesis-20261021/state.json",
+  "task_protocols": {
+    "text": "/root/autodl-tmp/generalist-specialist-project/artifacts/qa-development-revision-20261020/tydiqa-new-native-confirmation80-v2/qa80-generalist_1/protocol.json",
+    "image": "/root/autodl-tmp/generalist-specialist-project/artifacts/confirmation-release-stage-20261020/retirement-packets/calibration/baichuan-retired-synthesis-image-calibration/protocol.json",
+    "ocr": "/root/autodl-tmp/generalist-specialist-project/artifacts/confirmation-release-stage-20261020/retirement-packets/calibration/baichuan-retired-synthesis-ocr-calibration/protocol.json",
+    "asr": "/root/autodl-tmp/generalist-specialist-project/artifacts/confirmation-release-stage-20261020/retirement-packets/calibration/baichuan-retired-synthesis-asr-calibration/protocol.json"
+  },
+  "scope": "Retained Baichuan input-only service; QA/image/OCR/ASR emit text; audio synthesis unavailable",
+  "original_checkpoint_preserved": true,
+  "full_pool_admission": false,
+  "verification_assessment": "/root/autodl-tmp/generalist-specialist-project/artifacts/baichuan-no-synthesis-20261021/assessment.json",
+  "verification_assessment_sha256": "3738b2f28e420d4853fcf00a2c8d74aade7656a385c08a0c3f63cb98b062a844",
+  "observed_memory_by_task": {
+    "text": {
+      "warm_board_used_GiB": 9.91314697265625,
+      "warm_process_used_GiB": 9.2890625,
+      "peak_board_used_GiB": 18.89752197265625,
+      "peak_process_used_GiB": 18.2734375,
+      "board_baseline_before_load_GiB": 0.6160888671875,
+      "scope": "Warm residency is post-warmup; peak includes loading and complete measured requests; NVML sampled."
+    },
+    "image": {
+      "warm_board_used_GiB": 9.89361572265625,
+      "warm_process_used_GiB": 9.26953125,
+      "peak_board_used_GiB": 12.99517822265625,
+      "peak_process_used_GiB": 12.37109375,
+      "board_baseline_before_load_GiB": 0.6160888671875,
+      "scope": "Warm residency is post-warmup; peak includes loading and complete measured requests; NVML sampled."
+    },
+    "ocr": {
+      "warm_board_used_GiB": 9.89361572265625,
+      "warm_process_used_GiB": 9.26953125,
+      "peak_board_used_GiB": 14.91314697265625,
+      "peak_process_used_GiB": 14.2890625,
+      "board_baseline_before_load_GiB": 0.6160888671875,
+      "scope": "Warm residency is post-warmup; peak includes loading and complete measured requests; NVML sampled."
+    },
+    "asr": {
+      "warm_board_used_GiB": 9.89361572265625,
+      "warm_process_used_GiB": 9.26953125,
+      "peak_board_used_GiB": 12.99517822265625,
+      "peak_process_used_GiB": 12.37109375,
+      "board_baseline_before_load_GiB": 0.6160888671875,
+      "scope": "Warm residency is post-warmup; peak includes loading and complete measured requests; NVML sampled."
+    }
+  }
+}

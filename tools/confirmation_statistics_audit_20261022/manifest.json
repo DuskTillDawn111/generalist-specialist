@@ -1,0 +1,17 @@
+{
+  "schema": "gsdeploy.confirmation_statistics_audit_source.v1",
+  "files": {
+    "README.md": "cc248ace930783d6dad56247b8c5ac7713e217d3fd4010971f5e3fbcd2e1fde3",
+    "audit_statistics.py": "d5743976d216a87269b1316d31310bd195f1eb2102b0a7c38882ae11084df3b3",
+    "self_test.py": "d21006dafe11e2758ac454a68702a8874ad3aa6fa29b7a93ab3d7a509d63ea55",
+    "status.json": "2d8e411cfd5d908b124fef85a791d5f2bc24358bda3a629ce4d3276c71e0eaad",
+    "validation.json": "be00ba07dfa4a11a9c22fdf373c492dce57877eab5f695d05f8bd7eeb7dde6c0"
+  },
+  "frozen_verifier": {
+    "path": "/root/autodl-tmp/generalist-specialist-project/artifacts/static-study-gpu-20261022/confirmation-plot-source-v1/scripts/plot_static_confirmation.py",
+    "sha256": "877abdc15d47373595cf88dcf0979ce22ef60bf39beb74e108a76fe304fce9ed"
+  },
+  "status": "READY_PENDING_REAL_15_OF_15_REPORT",
+  "real_final_audit_executed": false,
+  "gpu_started": false
+}

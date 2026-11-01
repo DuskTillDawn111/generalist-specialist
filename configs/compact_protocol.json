@@ -1,0 +1,150 @@
+{
+  "schema": "gsdeploy.compact_task_protocol.v1",
+  "state": "CPU_PROTOCOL_FROZEN_GPU_UNVALIDATED",
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1
+  },
+  "tasks": {
+    "text": {
+      "dataset": "SQuAD2-dev",
+      "max_new_tokens": 128,
+      "t5_max_input_tokens": 512,
+      "context_policy": "full_paragraph_reject_overflow_no_truncation",
+      "no_answer_marker": "<No Answer>",
+      "instruction": "Answer the question using only the context. Return only the shortest answer span. If the context does not contain an answer, return exactly <No Answer>."
+    },
+    "image": {
+      "dataset": "ImageNet-A",
+      "max_new_tokens": 32,
+      "candidate_labels": 1000,
+      "instruction": "Classify the image using the complete label catalog below. Return exactly one WordNet ID from the catalog, with no explanation.",
+      "class_prompt": "a photo of a {name}.",
+      "siglip_text_max_tokens": 64,
+      "image_resolution": 384,
+      "generative_decoding": "complete_label_token_trie_greedy_v1"
+    },
+    "ocr": {
+      "dataset": "SROIE-test-pages",
+      "max_new_tokens": 8192,
+      "instruction": "Transcribe all visible printed text on the entire receipt in reading order. Preserve words, numbers, punctuation and prices. Return plain text only, without explanations or extra metadata.",
+      "deepseek_prompt": "<image>\nFree OCR.",
+      "base_size": 1024,
+      "image_size": 640,
+      "crop_mode": true,
+      "scoring": "page_ocr_text_v4_cpu_frozen",
+      "reference_reading_order": "native_annotation_line_order; no model-prediction-based reordering",
+      "format_policy": "plain visible text with declared HTML/Markdown normalization; no guessed YAML removal",
+      "common_input_preparation": {
+        "max_image_side": 2048,
+        "resampling": "Pillow LANCZOS",
+        "output": "lossless PNG after RGB/EXIF normalization",
+        "full_page": true,
+        "crop": false,
+        "gold": "unchanged verified native line order",
+        "reason": "fixed CPU and visual input budget before model output comparison"
+      }
+    },
+    "asr": {
+      "datasets": [
+        "LibriSpeech-test-other",
+        "LibriSpeech-dev-other"
+      ],
+      "max_new_tokens": 440,
+      "instruction": "Transcribe the English speech verbatim. Return the transcription only, without timestamps, speaker labels, translation or explanations.",
+      "sampling_rate": 16000,
+      "duration_range_seconds": [
+        4,
+        30
+      ],
+      "scoring": "english_lexical_wer_v1_no_number_expansion"
+    }
+  },
+  "quality_gate": {
+    "state": "FROZEN_RESEARCH_MINIMUM_V1",
+    "scope": "Research service minima chosen before new-model outputs; not business SLOs",
+    "minimum_quality_thresholds": {
+      "text": {
+        "EM": 0.5,
+        "F1": 0.6,
+        "answerable_EM": 0.5,
+        "unanswerable_EM": 0.5
+      },
+      "image": {
+        "top1_accuracy": 0.25
+      },
+      "ocr": {
+        "CER_max": 0.2
+      },
+      "asr": {
+        "WER_max": 0.15
+      }
+    },
+    "specialist_comparison": {
+      "against": "all_three_generalists",
+      "primary_metrics": {
+        "text": "EM",
+        "image": "top1_accuracy",
+        "ocr": "CER",
+        "asr": "WER"
+      },
+      "paired_cluster_bootstrap": {
+        "resamples": 10000,
+        "seed": 20261015,
+        "one_sided_confidence": 0.95,
+        "familywise_comparisons": 12,
+        "multiplicity": "bonferroni",
+        "clusters": {
+          "text": "article",
+          "image": "source_class_index",
+          "ocr": "id",
+          "asr": "speaker_id"
+        }
+      },
+      "require_strict_positive_lower_bound": true,
+      "point_estimate_alone_is_not_pass": true
+    }
+  },
+  "normalization_references": {
+    "kind": "fixed_research_scales_not_measured_baselines_or_SLOs",
+    "latency_ms": {
+      "text": 1000.0,
+      "image": 250.0,
+      "ocr": 10000.0,
+      "asr": 3000.0
+    },
+    "energy_reference_watts": 450.0,
+    "memory_budget_mib": 49140,
+    "memory_safe_factor": 1.110854,
+    "weights": {
+      "T": 0.2,
+      "L": 0.2,
+      "P": 0.2,
+      "M": 0.2,
+      "E": 0.2
+    },
+    "clipping": false,
+    "candidate_specific_denominators": false
+  },
+  "startup_amortization_seconds": 3600.0,
+  "completion": {
+    "require_eos_or_feature_classification": true,
+    "unknown_completion_is_not_success": true,
+    "failed_requests_remain_in_quality_denominator": true
+  },
+  "notes": [
+    "Inputs, decoding, scoring, quality gates and utility reference scales frozen before compact model outputs; GPU validation pending.",
+    "Native input formatting may differ; all models receive the same underlying task input and label catalog.",
+    "No artificial work, skipped input modalities, or hidden text/audio truncation.",
+    "GPU smoke revision: all three generative classifiers use the same complete 1000-label token trie; no reference labels enter decoding; incorrect legal classes remain incorrect. Frozen before independent quality evaluation."
+  ],
+  "native_input_limits": {
+    "qwen_image_min_pixels": 3136,
+    "qwen_image_max_pixels": 1003520,
+    "qwen_max_visual_tokens": 1280,
+    "all_models_receive_identical_prepared_page_bytes": true,
+    "qwen_audio_max_samples": 480000,
+    "qwen_audio_padding_seconds": 30,
+    "qwen_audio_truncation": false
+  }
+}

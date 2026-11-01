@@ -180,7 +180,7 @@ class JointMilpTests(unittest.TestCase):
         result = DeploymentSystem(c).plan(route_grid=2)
         self.assertEqual(result["status"], "NO_FEASIBLE_GRID_PLAN")
         self.assertFalse(result["domain"]["continuous_optimality"])
-        self.assertIsNotNone(
+        self.assertIsNone(
             DeploymentSystem(replace(c, solver="dfs")).plan(route_grid=2)["winner"]
         )
         augmented = DeploymentSystem(replace(c, milp_capacity_witness=True)).plan(
@@ -389,8 +389,12 @@ class JointMilpTests(unittest.TestCase):
         )
         p = DeploymentSystem(replace(c, random_seed=43)).predict(x, r)
         self.assertEqual(p["reason"], "MISSING_COLOCATION_PROFILE")
-        with self.assertRaisesRegex(ValueError, "DFS reference"):
-            DeploymentSystem(replace(c, solver="dfs")).plan()
+        dfs = DeploymentSystem(replace(c, solver="dfs")).plan(route_grid=2)
+        self.assertTrue(dfs["optimality_certified"])
+        self.assertAlmostEqual(dfs["winner"]["score"], result["winner"]["score"], places=10)
+        unknown = DeploymentSystem(replace(c, solver="dfs", random_seed=43)).plan()
+        self.assertFalse(unknown["optimality_certified"])
+        self.assertGreater(unknown["metrics"]["unknown_candidates"], 0)
 
     def test_invalid_limits_sparse_cohorts_and_stable_order(self):
         c = replace(config(), solver="milp")

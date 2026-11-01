@@ -11,7 +11,7 @@ import time
 from .deployment import DeploymentRuntime
 from .schema import MeasurementConfig
 from .telemetry import MemoryMonitor
-from .workload import SamplePool, periodic_arrivals
+from .workload import SamplePool, periodic_arrivals, largest_inputs
 from .preflight import preflight
 from ..evaluation import evaluate_run
 from ..metrics import annotate_records, summarize
@@ -19,6 +19,7 @@ from ..routing import Router
 from ..trace import expand_routes, make_trace, trace_digest
 from .telemetry import PowerMonitor
 from ..energy import integrate_power, energy_key
+from ..resources import prepare_registry, validate_resources
 
 
 def record(phase, index, task, worker, item, scheduled):
@@ -88,7 +89,7 @@ def window(
     return metadata
 
 
-def registry_for(system, aliases, backend, workers):
+def registry_for(system, aliases, backend, workers, resource_configuration=None):
     project = str(Path(__file__).resolve().parents[2])
     registry = {}
     for alias, family in aliases.items():
@@ -123,7 +124,8 @@ def registry_for(system, aliases, backend, workers):
         if backend != "mock":
             entry["env"].setdefault("CUDA_VISIBLE_DEVICES", "0")
         registry[alias] = entry
-    return registry
+    return (prepare_registry(registry, resource_configuration)
+            if resource_configuration is not None else registry)
 
 
 def run(
@@ -139,11 +141,15 @@ def run(
     startup_timeout=300.0,
     drain_timeout=60.0,
     admission=None,
+    priming_policy="one_per_routed_task",
+    resource_configuration=None,
 ):
     if backend not in {"mock", "native"}:
         raise ValueError("backend must be mock or native")
     if arrival_process not in {"deterministic_periodic", "poisson"}:
         raise ValueError("Unknown arrival process")
+    if priming_policy not in {"one_per_routed_task", "largest_three_per_task"}:
+        raise ValueError("Unknown priming policy")
     aliases, routes = expand_routes(winner["deployment"], winner["routing"])
     config = MeasurementConfig(
         deployment={a: 1 for a in aliases},
@@ -159,8 +165,13 @@ def run(
     config.validate(
         {a: system.catalog["models"][m]["supported_tasks"] for a, m in aliases.items()}
     )
+    if resource_configuration is not None:
+        resource_configuration = validate_resources(resource_configuration, aliases)
+        if backend == "native":
+            raise ValueError("Resource-study native execution is not enabled: platform control "
+                             "and resource-specific performance evidence must be verified first")
     pool = SamplePool(samples, list(system.workload), seed)
-    registry = registry_for(system, aliases, backend, workers or {})
+    registry = registry_for(system, aliases, backend, workers or {}, resource_configuration)
     checks = None
     if backend == "native":
         checks = preflight(
@@ -189,9 +200,12 @@ def run(
         "request_records": [],
         "warmup_request_records": [],
         "priming_request_records": [],
+        "priming_policy": priming_policy,
+        "priming_size_metric": "media_file_bytes_or_text_utf8_bytes_v1",
         "measurement_window": None,
         "preflight": checks,
         "worker_registry": registry,
+        **({"resource_configuration": resource_configuration} if resource_configuration is not None else {}),
         "admission_evidence": (
             checks["admission_evidence"]
             if checks
@@ -210,19 +224,30 @@ def run(
     power.start()
     try:
         runtime.start()
-        for task, route in routes.items():
-            for worker in route:
-                item = pool.next(task)
-                row = record(
-                    "priming",
-                    len(raw["priming_request_records"]),
-                    task,
-                    worker,
-                    item,
-                    time.perf_counter_ns(),
-                )
-                raw["priming_request_records"].append(row)
-                runtime.enqueue(row, item["sample"])
+        monitor.sample()
+        monitor.start()
+        monitor.check()
+        priming = []
+        if priming_policy == "largest_three_per_task":
+            for worker, family in aliases.items():
+                for task in system.catalog["models"][family]["supported_tasks"]:
+                    if system.workload.get(task, 0) > 0:
+                        priming.extend((task, worker, item) for item in largest_inputs(pool, task))
+        else:
+            for task, route in routes.items():
+                for worker in route:
+                    priming.append((task, worker, pool.next(task)))
+        for task, worker, item in priming:
+            row = record(
+                "priming",
+                len(raw["priming_request_records"]),
+                task,
+                worker,
+                item,
+                time.perf_counter_ns(),
+            )
+            raw["priming_request_records"].append(row)
+            runtime.enqueue(row, item["sample"])
         runtime.drain(raw["priming_request_records"], drain_timeout)
         if any(r["status"] != "completed" for r in raw["priming_request_records"]):
             raise RuntimeError("Priming failed")
@@ -239,7 +264,6 @@ def run(
             if any(r["status"] != "completed" for r in raw["warmup_request_records"]):
                 raise RuntimeError("Warmup failed")
         before = monitor.sample()
-        monitor.start()
         monitor.check()
         raw["measurement_window"] = {}
         window(
@@ -278,6 +302,8 @@ def run(
             raw["shutdown"] = {}
             raw["errors"].append(f"shutdown: {exc}")
             raw["status"] = "failed"
+        if runtime.admission is not None:
+            raw["request_admission"] = runtime.admission.snapshot()
         raw["errors"].extend(runtime.errors)
         if runtime.errors or any(
             v["forced"] or v["exit_code"] != 0 or not v["bye_received"]
@@ -300,7 +326,7 @@ def run(
     )
     safe = (
         system.catalog["safe_factor"]
-        * max(before["owned_used_mib"], after["owned_used_mib"])
+        * max(s["owned_used_mib"] for s in [before, after, *monitor.samples])
         if measured
         else nominal
     )
@@ -352,6 +378,7 @@ def run(
             seed,
             arrival_process,
             catalog=system.catalog,
+            resource_configuration=resource_configuration,
         ),
     }
     if raw["measurement_window"]:

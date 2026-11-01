@@ -18,8 +18,13 @@ def read(path):
 
 
 def main(argv=None):
+    argv = sys.argv[1:] if argv is None else list(argv)
+    if argv and argv[0] == "resource-study":
+        from .resource_study import main as resource_study_main
+        return resource_study_main(argv[1:])
     parser = argparse.ArgumentParser(prog="gsdeploy")
     commands = parser.add_subparsers(dest="command", required=True)
+    commands.add_parser("resource-study", help="CPU-only resource-study preparation and validation")
     for name in ("plan", "predict", "run", "preflight"):
         command = commands.add_parser(name)
         command.add_argument("--config", required=True)

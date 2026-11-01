@@ -3,7 +3,8 @@
 from types import SimpleNamespace
 from .prediction import components
 from .stability import DEFAULT_THRESHOLDS, reconstruct, classify
-from .evidence import admission_covers
+from .evidence import admission_covers, quality_covers
+from .quality import measure_quality
 from .energy import energy_norm, energy_key
 from .trace import make_trace, trace_digest, expand_routes
 from .routing import Router
@@ -87,6 +88,7 @@ def evaluate_run(config, raw):
         raw["transport_config"]["random_seed"],
         raw["transport_config"]["arrival_process"],
         catalog=config.catalog,
+        resource_configuration=raw.get("resource_configuration"),
     )
     E = energy_norm(
         energy,
@@ -96,6 +98,11 @@ def evaluate_run(config, raw):
     )
     if energy.get("profile_key") != expected_key:
         E = None
+    six_term = config.weights.get("Q", 0) > 0
+    Q, quality_evidence = (
+        measure_quality(config.catalog, raw, rates) if six_term
+        else (None, {"status": "not_required", "kind": "historical_admission"})
+    )
     arithmetic = components(
         per_task,
         rates,
@@ -104,6 +111,7 @@ def evaluate_run(config, raw):
         memory["safe_memory_mib"] / config.gpu_memory_mib,
         config.weights,
         E,
+        Q,
     )
     diagnostic = arithmetic.pop("U")
     transport = raw["transport_config"]
@@ -127,11 +135,14 @@ def evaluate_run(config, raw):
             == window["start_time_ns"] + round(offset * 1e9)
         )
     try:
-        config.validate_plan(raw["plan"]["deployment"], raw["plan"]["routing"])
-        constraints_valid = True
+        validation = config.validate_plan(raw["plan"]["deployment"], raw["plan"]["routing"])
+        constraints_valid = validation["constraints_valid"]
     except ValueError:
         constraints_valid = False
-    quality_verified = admission_covers(raw)
+    quality_verified = quality_covers(config, raw) if six_term else admission_covers(raw)
+    # The new CPU packet is not a validated native execution protocol. A saved
+    # record must not gain eligibility merely by adding a resource config/key.
+    resource_contract_valid = raw.get("resource_configuration") is None
     eligible = (
         raw.get("status") == "completed"
         and raw["backend"] == "native"
@@ -139,8 +150,10 @@ def evaluate_run(config, raw):
         and memory["resource_valid"]
         and stability["stability_state_v2"] in {"steady", "recoverable_congested"}
         and quality_verified
+        and arithmetic["utility_complete"]
         and cohort_valid
         and constraints_valid
+        and resource_contract_valid
         and system["completion_ratio"] == 1
         and raw["measurement_window"].get("offered_requests") == offered
         and (
@@ -158,8 +171,13 @@ def evaluate_run(config, raw):
             "eligible": bool(eligible),
             "memory_scope": memory["scope"],
             "quality_admission_verified": quality_verified,
+            "quality_identity_verified": quality_verified,
+            "quality_evidence": quality_evidence,
             "cohort_verified": bool(cohort_valid),
             "constraints_verified": constraints_valid,
             "energy_verified": E is not None and energy.get("kind") == "measured",
+            **({"resource_contract_verified": False,
+                "resource_contract_reason": "RESOURCE_NATIVE_PROTOCOL_NOT_VALIDATED"}
+               if not resource_contract_valid else {}),
         },
     }

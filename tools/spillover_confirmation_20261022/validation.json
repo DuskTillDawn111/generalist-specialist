@@ -1,0 +1,45 @@
+{
+  "schema": "gsdeploy.spillover_confirmation_cpu_validation.v1",
+  "status": "CPU_PROTOCOL_READY_NO_GPU_RUN",
+  "created_utc": "2026-10-22T04:50:19.104556+00:00",
+  "new_source_receipts": [
+    {
+      "path": "/root/autodl-tmp/generalist-specialist-project/gsdeploy/spillover_confirmation.py",
+      "sha256": "5a418f1fae59bf4f80fbcc1e847014c425311a0b10f52cdc41b8f11ac317993f"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist-project/scripts/spillover_confirmation.py",
+      "sha256": "164d1d3bcb10fdf2122fda7e5c1a76367b29ea6d30dbe6199734845ad032179d"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist-project/tests/test_spillover_confirmation.py",
+      "sha256": "6218e51b595c1d25990432a3f6dbad1335afcd3968bb1631c1354d5badbb4273"
+    },
+    {
+      "path": "/root/autodl-tmp/generalist-specialist-project/tools/spillover_confirmation_20261022/README.md",
+      "sha256": "0e10d4bff89a12f22b1213476dcd4d93a7d558ce2222e9127d007bf2b71ddcb7"
+    }
+  ],
+  "new_protocol_tests_passed": 6,
+  "joint_old_new_confirmation_regressions_passed": 16,
+  "real_frozen_v5_execute_entry_cpu_mock_passed": true,
+  "mocked_operations": [
+    "checkpoint binding IO",
+    "GPU UUID subprocess",
+    "transport model inference",
+    "positive transfer eligibility fixture and measured-utility fixture"
+  ],
+  "real_unvalidated_transfer_gate_rejected": true,
+  "full_new_workload_validation_claim": false,
+  "formal_packet_prepared": false,
+  "gpu_started": false,
+  "old_confirmation_receipt": {
+    "path": "/root/autodl-tmp/generalist-specialist-project/gsdeploy/confirmation.py",
+    "sha256": "40897adce8019228d12b2b6dfce57fb1630c3a1fad418a009e0c9b1fa4dabb82"
+  },
+  "frozen_execution_entry": {
+    "path": "/root/autodl-tmp/generalist-specialist-project/artifacts/static-study-gpu-20261022/execution-source-v5/gsdeploy/static_study.py",
+    "sha256": "3fdb7717725042de632d4de020d3d99d2f4225d2a5ea15b0e2e4c04ffed54724"
+  },
+  "scope": "Protocol CPU tests only; final prepare remains blocked until real replay_transfer validation passes and source is frozen."
+}

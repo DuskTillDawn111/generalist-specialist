@@ -1,0 +1,9 @@
+# Fresh-ID native collector v11
+
+`tools/predictor_validation_20261027/known_input_native_flow_v11.py` is a minimal copy of frozen v5. Measurement records take the exact `plan.trace[].request_id` after strict plan validation. Priming/warmup keep their existing phase IDs. The public plan schema stays `gsdeploy.native_known_input_flow_plan.v5`, so the frozen v5 observed adapter remains compatible. Existing v5 source is unchanged.
+
+The actual collector closure uses v11's `__file__`: a fresh plan must bind `runner_source` and `collector_sources` to v11/current dependencies. The prospective protocol must include those actual receipts. Preserve the original raw and emit quality only in the receipt-bound scored copy. All original dispatch, parent receipt, bounded drain, startup, queue, resource, telemetry, objective, exclusive output and GPU-lock checks are retained verbatim. The prediction/protocol/context bindings are checked again after acquiring the GPU lock.
+
+A new execution-context snapshot is required when current runtime source differs from the historical snapshot. Bind current original paths and frozen byte-identical copies; recompute `execution_context_sha256`, candidate identities, public/protocol bindings and the model's explicit context transfer contract. Do not replace only the collector receipt or reuse a stale historical context. This file does not construct a new context, freeze predictions, acquire a GPU for collection or establish model qualification.
+
+CPU verification: `python -m unittest tests.test_known_input_native_flow_v11 -v` passes 7 tests. Fake runtime/monitor execute the complete 12-request, four-task control path with fresh IDs and exact static routes; tests also cover duplicate IDs, missing/unsupported routes, stale context, existing output, v5 observed compatibility, actual v11 closure, full drain cohort, and immutable native output. These are CPU fixtures, not physical measurements.
