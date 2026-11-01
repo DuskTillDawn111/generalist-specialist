@@ -1,6 +1,6 @@
 """Portable inputs and one validation contract for the entire system."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import copy
 import json
 import math
@@ -44,6 +44,8 @@ class SystemConfig:
     milp_max_columns: int = 50000
     milp_absolute_gap: float = 1e-8
     milp_capacity_witness: bool = True
+    utility_schema: str | None = None
+    route_pair_denominators_by_task: dict = field(default_factory=dict)
 
     def __post_init__(self):
         if not self.workload or set(self.workload) - set(TASKS):
@@ -54,18 +56,25 @@ class SystemConfig:
         positive(self.gpu_memory_mib, "gpu_memory_mib")
         if type(self.route_grid) is not int or self.route_grid < 1:
             raise ValueError("route_grid must be a positive integer")
+        from .route_domain import validate_pair_denominators
+
+        validate_pair_denominators(self.route_pair_denominators_by_task, TASKS)
         if (
             set(self.weights)
             not in ({"Q", "T", "L", "P", "M"}, {"Q", "T", "L", "P", "M", "E"})
-            or self.weights["Q"] != 0
         ):
-            raise ValueError(
-                "Weights must specify Q=0 and T/L/P/M[/E]; quality is an admission constraint"
-            )
+            raise ValueError("Weights must specify Q/T/L/P/M[/E]")
         for name, value in self.weights.items():
             positive(value, f"weights.{name}", zero=True)
         if not math.isclose(sum(self.weights.values()), 1.0, abs_tol=1e-9):
             raise ValueError("Utility weights must sum to one")
+        if self.weights["Q"] > 0:
+            if self.utility_schema != "six_term_quality_v1" or "E" not in self.weights:
+                raise ValueError("Q>0 requires utility_schema=six_term_quality_v1 and all six terms")
+            if self.catalog.get("capability_contract") != "verified_executable_v1":
+                raise ValueError("Six-term studies require verified executable capabilities")
+        elif self.utility_schema not in {None, "legacy_four_term", "five_term"}:
+            raise ValueError("Q=0 must retain a historical utility schema")
         for name in ("horizon_seconds", "energy_reference_watts"):
             positive(getattr(self, name), name)
         positive(self.drain_seconds, "drain_seconds", zero=True)
@@ -94,8 +103,40 @@ class SystemConfig:
         if data.get("performance_mode", "independent") not in {
             "independent",
             "profiled",
+            "task_replica_proxy",
+            "calibrated_surrogate",
+            "calibrated_replay_v2",
+            "replay_transfer_v1",
+            "route_load_replay_v1",
         }:
-            raise ValueError("performance_mode must be independent or profiled")
+            raise ValueError("Unknown performance_mode")
+        if data.get("memory_mode", "standalone_proxy") not in {"standalone_proxy", "profiled", "calibrated_surrogate", "calibrated_replay_v2", "replay_transfer_v1", "route_load_replay_v1"}:
+            raise ValueError("Unknown memory_mode")
+        from .coupled_mode import is_coupled, validate_placeholder
+
+        if is_coupled(data):
+            validate_placeholder(data)
+        elif data.get("memory_mode") == "route_load_replay_v1":
+            raise ValueError("Coupled memory mode requires coupled performance mode")
+        if data.get("performance_mode") == "calibrated_surrogate":
+            from .calibration import _spec
+
+            _spec(data)
+            if data.get("memory_mode") != "calibrated_surrogate":
+                raise ValueError("Calibrated predictor requires its explicit memory contract")
+        if data.get("performance_mode") == "calibrated_replay_v2":
+            from .calibration_v2 import _spec_v2
+
+            _spec_v2(data)
+            if data.get("memory_mode") != "calibrated_replay_v2":
+                raise ValueError("V2 replay predictor requires its explicit memory contract")
+        if data.get("performance_mode") == "replay_transfer_v1":
+            from .replay_transfer import _spec_transfer, check_scoring
+
+            _spec_transfer(data)
+            if data.get("memory_mode") != "replay_transfer_v1":
+                raise ValueError("Replay transfer requires its explicit memory contract")
+            check_scoring(self)
         if not isinstance(data.get("colocation_profiles", {}), dict) or any(
             not valid_profile(p) for p in data.get("colocation_profiles", {}).values()
         ):
@@ -105,6 +146,8 @@ class SystemConfig:
             raise ValueError("Empty model catalog")
         for model, spec in data["models"].items():
             tasks = spec.get("supported_tasks", [])
+            if self.weights["Q"] > 0 and set(spec.get("executable_tasks", [])) != set(tasks):
+                raise ValueError(f"Capabilities must cover all verified executable paths: {model}")
             if (
                 spec.get("role") not in {"generalist", "specialist"}
                 or not tasks
@@ -178,7 +221,7 @@ class SystemConfig:
                     model not in deployment
                     or task not in self.catalog["models"][model]["supported_tasks"]
                 ):
-                    raise ValueError(f"Unadmitted route: {task}/{model}")
+                    raise ValueError(f"Unsupported executable route: {task}/{model}")
                 if rate and service is not None:
                     demand[model] += rate * service[model][task] / 1000
             if not math.isclose(
@@ -188,20 +231,49 @@ class SystemConfig:
         memory = self.catalog["safe_factor"] * math.fsum(
             self.catalog["memory_table_mib"][m][str(n)] for m, n in deployment.items()
         )
+        profile = self.catalog.get("colocation_profiles", {}).get(evidence.get("key"), {})
+        measured_memory = profile.get("safe_memory_mib")
+        if (self.catalog.get("memory_mode") == "profiled" and self.catalog.get("performance_mode") == "profiled"
+                and type(measured_memory) in (int, float)
+                and math.isfinite(measured_memory) and measured_memory > 0):
+            memory = float(measured_memory)
+        memory_verified = self.catalog.get("memory_mode") != "profiled" or (
+            self.catalog.get("performance_mode") == "profiled"
+            and type(measured_memory) in (int, float) and math.isfinite(measured_memory) and measured_memory > 0)
+        from .coupled_mode import is_coupled
+
+        if is_coupled(self.catalog):
+            # No additive standalone quantity is a proven bound or complete
+            # memory prediction for this context-dependent placeholder.
+            memory_verified = False
+        if self.catalog.get("memory_mode") in {"calibrated_surrogate", "calibrated_replay_v2", "replay_transfer_v1"}:
+            if self.catalog.get("memory_mode") == "replay_transfer_v1":
+                from .replay_transfer import transfer_auxiliary as surrogate_auxiliary
+            elif self.catalog.get("memory_mode") == "calibrated_replay_v2":
+                from .calibration_v2 import replay_auxiliary as surrogate_auxiliary
+            else:
+                from .calibration import surrogate_auxiliary
+
+            auxiliary = surrogate_auxiliary(self.catalog, deployment, routing, self.workload,
+                self.horizon_seconds, self.energy_reference_watts, self.startup_amortization_seconds)
+            memory_verified = auxiliary["safe_memory_mib"] is not None
+            if memory_verified:
+                memory = auxiliary["safe_memory_mib"]
         rho = {
             m: demand[m] / self.catalog["capacity_factors"][m][str(n)]
             for m, n in deployment.items()
         }
         if (
-            memory > self.gpu_memory_mib + 1e-6
+            (memory_verified and memory > self.gpu_memory_mib + 1e-6)
             or max(rho.values(), default=0) > 0.8 + 1e-8
         ):
             raise ValueError("Plan exceeds memory or frozen rho<=0.8 constraints")
         return {
-            "safe_memory_mib": memory,
+            "safe_memory_mib": memory if memory_verified else None,
             "rho": rho if service is not None else None,
             "max_rho": max(rho.values(), default=0) if service is not None else None,
-            "constraints_valid": service is not None,
+            "constraints_valid": service is not None and memory_verified,
+            "memory_verified": memory_verified,
             "capacity_verified": service is not None,
             "performance_evidence": evidence,
         }

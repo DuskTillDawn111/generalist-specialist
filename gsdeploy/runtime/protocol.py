@@ -47,6 +47,8 @@ def run_worker(worker_name, handler, ready_payload=None):
         line = line.strip()
         if not line:
             continue
+        request = None
+        response_flushed = False
         try:
             request = json.loads(line)
             if request.get("op") == "shutdown":
@@ -54,7 +56,9 @@ def run_worker(worker_name, handler, ready_payload=None):
                 break
             if request.get("task_type") == "__profile_start__":
                 start_ns = time.time_ns()
+                start_perf_ns = time.perf_counter_ns()
                 result = _start_cuda_profiler()
+                end_perf_ns = time.perf_counter_ns()
                 end_ns = time.time_ns()
                 output = {
                     "worker": worker_name,
@@ -64,13 +68,18 @@ def run_worker(worker_name, handler, ready_payload=None):
                     "task_type": request["task_type"],
                     "start_ns": start_ns,
                     "end_ns": end_ns,
+                    "start_perf_ns": start_perf_ns,
+                    "end_perf_ns": end_perf_ns,
                     "worker_latency_ms": (end_ns - start_ns) / 1000000.0,
                 }
                 output.update(result)
                 emit("RESULT", output)
+                response_flushed = True
                 continue
             start_ns = time.time_ns()
+            start_perf_ns = time.perf_counter_ns()
             result = handler(request)
+            end_perf_ns = time.perf_counter_ns()
             end_ns = time.time_ns()
             output = {
                 "worker": worker_name,
@@ -81,6 +90,8 @@ def run_worker(worker_name, handler, ready_payload=None):
                 "submit_ns": request.get("submit_ns"),
                 "start_ns": start_ns,
                 "end_ns": end_ns,
+                "start_perf_ns": start_perf_ns,
+                "end_perf_ns": end_perf_ns,
                 "worker_latency_ms": (end_ns - start_ns) / 1000000.0,
             }
             submit_ns = request.get("submit_ns")
@@ -88,18 +99,29 @@ def run_worker(worker_name, handler, ready_payload=None):
                 output["queue_wait_ms"] = (start_ns - submit_ns) / 1000000.0
             output.update(result)
             emit("RESULT", output)
+            response_flushed = True
         except Exception as e:
             emit(
                 "ERROR",
                 {
                     "worker": worker_name,
                     "request_id": (
-                        request.get("request_id") if "request" in locals() else None
+                        request.get("request_id") if isinstance(request, dict) else None
                     ),
                     "error": repr(e),
                     "traceback": traceback.format_exc(),
                 },
             )
+            response_flushed = True
+        finally:
+            if response_flushed and isinstance(request, dict) and request.get("request_id"):
+                emit("WORKER_READY", {
+                    "worker": worker_name, "request_id": request["request_id"],
+                    "pid": os.getpid(), "perf_ns": time.perf_counter_ns(),
+                    "clock": "host_perf_counter_ns",
+                    "boundary": "previous_handler_next_request_ready",
+                    "scope": "after_response_flush_before_next_read",
+                })
 
 
 __all__ = ["emit", "run_worker"]

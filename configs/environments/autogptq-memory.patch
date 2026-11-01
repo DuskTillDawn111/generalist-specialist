@@ -1,0 +1,212 @@
+--- a/autogptq_extension/cuda_64/autogptq_cuda_64.cpp
++++ b/autogptq_extension/cuda_64/autogptq_cuda_64.cpp
+@@ -1,5 +1,6 @@
+-#include <torch/all.h>
+-#include <torch/python.h>
++#include <ATen/ATen.h>
++namespace torch { using namespace at; }
++#include <torch/csrc/utils/pybind.h>
+ #include <c10/cuda/CUDAGuard.h>
+ 
+ void vecquant2matmul_cuda(
+--- a/autogptq_extension/cuda_64/autogptq_cuda_kernel_64.cu
++++ b/autogptq_extension/cuda_64/autogptq_cuda_kernel_64.cu
+@@ -1,5 +1,7 @@
+-#include <torch/all.h>
+-#include <torch/python.h>
++#include <ATen/core/Tensor.h>
++#include <ATen/Dispatch.h>
++namespace torch { using namespace at; }
++
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <cuda_fp16.h>
+@@ -268,7 +270,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant2matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant2matmul_cuda", ([&] {
+       VecQuant2MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(), 
+@@ -357,7 +359,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant3matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant3matmul_cuda", ([&] {
+       VecQuant3MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(), 
+@@ -502,7 +504,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant4matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant4matmul_cuda", ([&] {
+       VecQuant4MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(), 
+@@ -590,7 +592,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant8matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant8matmul_cuda", ([&] {
+       VecQuant8MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(), 
+@@ -679,7 +681,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant2matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant2matmul_cuda_old", ([&] {
+       VecQuant2MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+@@ -774,7 +776,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant3matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant3matmul_cuda_old", ([&] {
+       VecQuant3MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+@@ -933,7 +935,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant4matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant4matmul_cuda_old", ([&] {
+       VecQuant4MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+@@ -1020,7 +1022,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant8matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant8matmul_cuda_old", ([&] {
+       VecQuant8MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+--- a/autogptq_extension/cuda_256/autogptq_cuda_256.cpp
++++ b/autogptq_extension/cuda_256/autogptq_cuda_256.cpp
+@@ -1,5 +1,6 @@
+-#include <torch/all.h>
+-#include <torch/python.h>
++#include <ATen/ATen.h>
++namespace torch { using namespace at; }
++#include <torch/csrc/utils/pybind.h>
+ #include <c10/cuda/CUDAGuard.h>
+ 
+ void vecquant2matmul_cuda(
+--- a/autogptq_extension/cuda_256/autogptq_cuda_kernel_256.cu
++++ b/autogptq_extension/cuda_256/autogptq_cuda_kernel_256.cu
+@@ -1,5 +1,7 @@
+-#include <torch/all.h>
+-#include <torch/python.h>
++#include <ATen/core/Tensor.h>
++#include <ATen/Dispatch.h>
++namespace torch { using namespace at; }
++
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <cuda_fp16.h>
+@@ -267,7 +269,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant2matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant2matmul_cuda", ([&] {
+       VecQuant2MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(),
+@@ -356,7 +358,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant3matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant3matmul_cuda", ([&] {
+       VecQuant3MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(),
+@@ -501,7 +503,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant4matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant4matmul_cuda", ([&] {
+       VecQuant4MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(),
+@@ -589,7 +591,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant8matmul_cuda", ([&] {
++    vec.scalar_type(), "vecquant8matmul_cuda", ([&] {
+       VecQuant8MatMulKernel<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(), g_idx.data<int>(),
+@@ -678,7 +680,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant2matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant2matmul_cuda_old", ([&] {
+       VecQuant2MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+@@ -773,7 +775,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant3matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant3matmul_cuda_old", ([&] {
+       VecQuant3MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+@@ -932,7 +934,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant4matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant4matmul_cuda_old", ([&] {
+       VecQuant4MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+@@ -1019,7 +1021,7 @@
+   dim3 threads(BLOCKWIDTH);
+ 
+   AT_DISPATCH_FLOATING_TYPES(
+-    vec.type(), "vecquant8matmul_cuda_old", ([&] {
++    vec.scalar_type(), "vecquant8matmul_cuda_old", ([&] {
+       VecQuant8MatMulKernel_old<<<blocks, threads>>>(
+         vec.data<scalar_t>(), mat.data<int>(), mul.data<scalar_t>(),
+         scales.data<scalar_t>(), zeros.data<int>(),
+--- a/autogptq_extension/exllama/exllama_ext.cpp
++++ b/autogptq_extension/exllama/exllama_ext.cpp
+@@ -1,6 +1,8 @@
+ // Adapted from turboderp exllama: https://github.com/turboderp/exllama
+ 
+-#include <torch/extension.h>
++#include <ATen/ATen.h>
++#include <torch/csrc/utils/pybind.h>
++namespace torch { using namespace at; }
+ #include <c10/cuda/CUDAGuard.h>
+ #include <ATen/cuda/CUDAContext.h>
+ #include <cuda_runtime.h>
+--- a/autogptq_extension/exllamav2/ext.cpp
++++ b/autogptq_extension/exllamav2/ext.cpp
+@@ -1,4 +1,6 @@
+-#include <torch/extension.h>
++#include <ATen/ATen.h>
++#include <torch/csrc/utils/pybind.h>
++namespace torch { using namespace at; }
+ #include <c10/cuda/CUDAGuard.h>
+ #include <ATen/cuda/CUDAContext.h>
+ #include <cuda_runtime.h>

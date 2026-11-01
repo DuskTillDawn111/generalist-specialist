@@ -15,6 +15,9 @@ def profile_key(data, deployment, routing, rates, horizon, seed, arrival_process
         k: data[k]
         for k in ("models", "capacity_factors", "memory_table_mib", "safe_factor")
     }
+    for field in ("capability_contract", "measurement_context", "task_replica_profiles", "quality"):
+        if field in data:
+            base[field] = data[field]
     return energy_key(
         deployment, routing, rates, horizon, seed, arrival_process, catalog=base
     )
@@ -28,13 +31,70 @@ def resolve_service(
     horizon=120.0,
     seed=42,
     arrival_process="deterministic_periodic",
+    *, _allow_unvalidated_calibration=False,
 ):
     mode = data.get("performance_mode", "independent")
+    if mode == "route_load_replay_v1":
+        from .coupled_mode import unknown_service
+
+        return unknown_service(data)
+    if mode == "replay_transfer_v1":
+        from .replay_transfer import transfer_service
+
+        return transfer_service(data, deployment, routing, rates,
+                                _allow_unvalidated=_allow_unvalidated_calibration)
+    if mode == "calibrated_replay_v2":
+        from .calibration_v2 import replay_service
+
+        return replay_service(data, deployment, routing, rates,
+                              _allow_unvalidated=_allow_unvalidated_calibration)
+    if mode == "calibrated_surrogate":
+        from .calibration import surrogate_service
+
+        return surrogate_service(data, deployment, routing, rates,
+                                 _allow_unvalidated=_allow_unvalidated_calibration)
     if mode == "independent":
         return {m: dict(data["models"][m]["service_time_ms"]) for m in deployment}, {
             "mode": mode,
             "kind": "standalone_replica_surrogate",
             "scope": "constant-service independent FIFO replicas; colocation and service tails unmeasured",
+        }
+    if mode == "task_replica_proxy":
+        # The per-worker mean already includes the observed n-replica slowdown.
+        # Catalog factors must be n, so the predictor's n/g scaling is identity.
+        service = {m: {} for m in deployment}
+        sources = []
+        for task, row in routing.items():
+            for model, rate in row.items():
+                if rate <= 0:
+                    continue
+                n = deployment[model]
+                entry = data.get("task_replica_profiles", {}).get(model, {}).get(
+                    task, {}
+                ).get(str(n))
+                value = entry.get("mean_service_ms") if isinstance(entry, dict) else None
+                if (
+                    isinstance(value, bool)
+                    or not isinstance(value, (int, float))
+                    or not math.isfinite(value)
+                    or value <= 0
+                ):
+                    return None, {
+                        "mode": mode,
+                        "reason": "MISSING_TASK_REPLICA_PROFILE",
+                        "model": model,
+                        "task": task,
+                        "replicas": n,
+                    }
+                if not math.isclose(data["capacity_factors"][model][str(n)], n):
+                    raise ValueError("Task-replica proxy requires capacity factors equal to n")
+                service[model][task] = value
+                sources.append(entry.get("source"))
+        return service, {
+            "mode": mode,
+            "kind": "measured_task_replica_mean_transfer_proxy",
+            "sources": sources,
+            "scope": "closed-loop per-task replica means transferred to FIFO; mixed-task/mixed-model interference, input service tails and open-loop stability unmeasured",
         }
     key = profile_key(data, deployment, routing, rates, horizon, seed, arrival_process)
     profile = data.get("colocation_profiles", {}).get(key)

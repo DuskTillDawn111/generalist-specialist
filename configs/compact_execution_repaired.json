@@ -1,0 +1,130 @@
+{
+  "schema": "gsdeploy.compact_execution.v1",
+  "state": "CPU_REPAIRED_MODEL_POOL_NOT_ADMITTED",
+  "cpu_offload": false,
+  "models": {
+    "generalist_1": {
+      "family": "qwen",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 8,
+        "skip_modules": [
+          "lm_head",
+          "audio_tower",
+          "visual"
+        ]
+      },
+      "disable_talker": true,
+      "attention_implementation": "sdpa",
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512,
+      "memory_optimizations": {
+        "disable_language_hidden_states": true,
+        "last_position_logits": false
+      },
+      "load_audio_output": false
+    },
+    "generalist_2": {
+      "family": "minicpm",
+      "dtype": "float16",
+      "quantization": {
+        "method": "gptq",
+        "bits": 4,
+        "checkpoint_quantized": true,
+        "activation_dtype": "float16",
+        "kernel": "exllama_v1 (official fork default with disable_exllamav2=True)"
+      },
+      "audio_output": false,
+      "tts_residency": "remove only unused native speech-output modules after official GPTQ load; retain audio/image understanding",
+      "max_input_length": 16384,
+      "max_input_length_basis": "Complete frozen quality/calibration tokenizer audit; maximum observed prefill <=16384; enforce before generation",
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512,
+      "memory_optimizations": {
+        "disable_language_hidden_states": true,
+        "last_position_logits": false,
+        "retire_audio_output": true,
+        "language_attention": "sdpa",
+        "vision_microbatch_size": 2,
+        "defer_exllama_scratch": true
+      }
+    },
+    "generalist_3": {
+      "family": "phi",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 4,
+        "skip_modules": [
+          "lm_head",
+          "embed_tokens_extend",
+          "image_embed",
+          "audio_embed",
+          "lora_A",
+          "lora_B"
+        ]
+      },
+      "audio_output": false,
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512,
+      "memory_optimizations": {
+        "disable_language_hidden_states": true,
+        "native_last_logits": true,
+        "vision_microbatch_size": 2
+      }
+    },
+    "text": {
+      "family": "chatqa",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 4,
+        "skip_modules": [
+          "lm_head"
+        ]
+      },
+      "attention_implementation": "sdpa",
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512
+    },
+    "image": {
+      "family": "siglip",
+      "dtype": "bfloat16",
+      "quantization": null,
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512
+    },
+    "ocr": {
+      "family": "deepseek",
+      "dtype": "bfloat16",
+      "quantization": {
+        "method": "bitsandbytes",
+        "bits": 8,
+        "skip_modules": [
+          "lm_head",
+          "sam_model",
+          "vision_model",
+          "projector",
+          "image_newline",
+          "view_seperator"
+        ]
+      },
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512
+    },
+    "asr": {
+      "family": "whisper",
+      "dtype": "float16",
+      "quantization": null,
+      "allocator_conf": "expandable_segments:True",
+      "cache_release_threshold_mib": 512
+    }
+  },
+  "notes": [
+    "New configuration identity; no historical GPU scores are inherited.",
+    "The same real cache release and allocator policy applies to every candidate; timing and energy include cache release.",
+    "R4: native full language projection batches; MiniCPM request scratch grows to 16384 rows and returns to 1 idle row. Timing/energy include synchronization and resizing; active peak remains counted."
+  ],
+  "variant": "native_adapter_repair_20261018"
+}

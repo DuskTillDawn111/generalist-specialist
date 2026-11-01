@@ -6,9 +6,10 @@ from .routing import Router
 from .trace import expand_routes, make_trace, trace_digest
 from .energy import energy_key, energy_norm
 from .performance import resolve_service
+from .quality import predict_quality
 
 
-def components(task_stats, rates, refs, T, M, weights, E=None):
+def components(task_stats, rates, refs, T, M, weights, E=None, Q=None):
     total = math.fsum(rates.values())
     L = math.fsum(
         rates[t] / total * task_stats[t]["mean_ms"] / refs[t] for t in sorted(rates)
@@ -17,6 +18,8 @@ def components(task_stats, rates, refs, T, M, weights, E=None):
         rates[t] / total * task_stats[t]["p95_ms"] / refs[t] for t in sorted(rates)
     )
     terms = {"T": T, "L": L, "P": P, "M": M}
+    if weights.get("Q", 0) > 0:
+        terms = {"Q": Q, **terms}
     if "E" in weights:
         terms["E"] = E
     complete = all(v is not None for v in terms.values())
@@ -33,7 +36,10 @@ def components(task_stats, rates, refs, T, M, weights, E=None):
         "U": diagnostic if complete else None,
         "diagnostic_partial_U": diagnostic,
         "utility_complete": complete,
-        "utility_schema": "five_term" if "E" in weights else "legacy_four_term",
+        "utility_schema": (
+            "six_term_quality_v1" if weights.get("Q", 0) > 0
+            else "five_term" if "E" in weights else "legacy_four_term"
+        ),
     }
 
 
@@ -54,13 +60,24 @@ def predict(
     energy_reference_watts=300.0,
     startup_amortization_seconds=None,
     trace=None,
+    _calibration_validation=False,
 ):
+    if data.get("performance_mode") == "replay_transfer_v1":
+        contract = data.get("replay_transfer_v1", {}).get("scoring_contract", {})
+        supplied = {"weights": weights, "latency_reference_ms": refs, "gpu_memory_mib": budget,
+                    "drain_seconds": drain_seconds, "energy_reference_watts": energy_reference_watts,
+                    "startup_amortization_seconds": startup_amortization_seconds, "arrival_process": arrival_process}
+        if multiplier <= 0 or any(contract.get(k) != v for k, v in supplied.items()):
+            return {"U": None, "diagnostic_partial_U": None, "eligible": False,
+                    "constraints_eligible": False, "performance_unknown": True,
+                    "reason": "TRANSFER_SCORING_CONTRACT_CHANGED"}
     # Historical phase arguments cannot change task identity or generate per-route arrivals.
     trace = (
         make_trace(rates, horizon, seed, arrival_process) if trace is None else trace
     )
     service, performance_evidence = resolve_service(
-        data, x, routing, rates, horizon, seed, arrival_process
+        data, x, routing, rates, horizon, seed, arrival_process,
+        _allow_unvalidated_calibration=_calibration_validation,
     )
     if service is None:
         return dict(
@@ -76,14 +93,21 @@ def predict(
         )
     aliases, routes = expand_routes(x, routing)
     router = Router(routes)
+    input_ids = None
+    if data.get("performance_mode") in {"calibrated_replay_v2", "replay_transfer_v1"}:
+        from .calibration_v2 import input_service_ms, replay_input_ids
+
+        input_ids = replay_input_ids(data, trace, seed)
     clocks = {a: 0.0 for a in aliases}  # runtime drains warmup before the formal window
     stats = {t: [] for t in rates}
     inwindow = late = 0
-    for offset, task in trace:
+    for request_index, (offset, task) in enumerate(trace):
+        sample_id = input_ids[request_index] if input_ids is not None else None
         alias = router.choose(task)
         m = aliases[alias]
         svc = (
-            service[m][task]
+            (input_service_ms(data[data["performance_mode"]], m, task, x[m], sample_id)
+             if input_ids is not None else service[m][task])
             / 1000
             * x[m]
             / data["capacity_factors"][m][str(x[m])]
@@ -114,10 +138,34 @@ def predict(
     mem = data["safe_factor"] * math.fsum(
         data["memory_table_mib"][m][str(n)] for m, n in x.items()
     )
+    profile = data.get("colocation_profiles", {}).get(performance_evidence.get("key"), {})
+    measured_memory = profile.get("safe_memory_mib")
+    memory_scope = "standalone_residency_sum_proxy"
+    if (data.get("memory_mode") == "profiled" and data.get("performance_mode") == "profiled" and type(measured_memory) in (int, float)
+            and math.isfinite(measured_memory) and measured_memory > 0):
+        mem = float(measured_memory)
+        memory_scope = "exact_condition_measured_safe_memory"
+    memory_unknown = data.get("memory_mode") == "profiled" and memory_scope != "exact_condition_measured_safe_memory"
+    auxiliary = None
+    if data.get("performance_mode") in {"calibrated_surrogate", "calibrated_replay_v2", "replay_transfer_v1"}:
+        if data.get("performance_mode") == "replay_transfer_v1":
+            from .replay_transfer import transfer_auxiliary as surrogate_auxiliary
+        elif data.get("performance_mode") == "calibrated_replay_v2":
+            from .calibration_v2 import replay_auxiliary as surrogate_auxiliary
+        else:
+            from .calibration import surrogate_auxiliary
+
+        auxiliary = surrogate_auxiliary(data, x, routing, rates, horizon, energy_reference_watts,
+                                        startup_amortization_seconds,
+                                        _allow_unvalidated=_calibration_validation)
+        mem = auxiliary["safe_memory_mib"]
+        memory_unknown = mem is None
+        memory_scope = "calibrated_memory_transfer_prediction"
     base = {
         "rho": rho,
         "max_rho": max(rho.values(), default=0),
         "safe_memory_mib": mem,
+        "memory_prediction_scope": memory_scope,
         "per_task": taskstats,
         "offered_requests": len(trace),
         "trace_sha256": trace_digest(trace),
@@ -129,6 +177,10 @@ def predict(
         "prediction_scope": performance_evidence["scope"],
         "performance_evidence": performance_evidence,
     }
+    if memory_unknown:
+        return {**base, "safe_memory_mib": None, "U": None, "diagnostic_partial_U": None,
+                "eligible": False, "constraints_eligible": False, "memory_unknown": True,
+                "reason": "MISSING_PLAN_MEMORY"}
     if len(taskstats) != len(rates):
         return {
             **base,
@@ -162,23 +214,38 @@ def predict(
     E = energy_norm(
         evidence, horizon, energy_reference_watts, startup_amortization_seconds
     )
-    arithmetic = components(
-        taskstats, rates, refs, 1 - inwindow / len(trace), mem / budget, weights, E
+    if auxiliary is not None:
+        E = auxiliary["energy_norm"]
+        evidence = auxiliary["evidence"]
+    Q, quality_evidence = (
+        predict_quality(data, x, routing, rates, trace, seed)
+        if weights.get("Q", 0) > 0
+        else (None, {"status": "not_required", "kind": "historical_admission"})
     )
+    arithmetic = components(
+        taskstats, rates, refs, 1 - inwindow / len(trace), mem / budget, weights, E, Q
+    )
+    missing = []
+    if weights.get("Q", 0) > 0 and Q is None:
+        missing.append("QUALITY")
+    if "E" in weights and E is None:
+        missing.append("ENERGY")
     complete = arithmetic["utility_complete"]
     merged = [v for vs in stats.values() for v in vs]
     return {
         **base,
         **arithmetic,
-        "U": arithmetic["U"] if valid else None,
+        "U": arithmetic["U"] if valid and not _calibration_validation else None,
         "constraints_eligible": bool(valid),
-        "eligible": bool(valid and complete),
+        "eligible": bool(valid and complete and not _calibration_validation),
+        "diagnostic_only": bool(_calibration_validation),
         "reason": (
             "OK"
             if valid and complete
-            else ("MISSING_ENERGY" if valid else "CONSTRAINT_OR_DRAIN_FAILURE")
+            else ("MISSING_" + "_AND_".join(missing) if valid else "CONSTRAINT_OR_DRAIN_FAILURE")
         ),
         "quality_capability": admissible,
+        "quality_evidence": quality_evidence,
         "route_conservation": conservation,
         "energy_profile_key": key,
         "energy_evidence": evidence,

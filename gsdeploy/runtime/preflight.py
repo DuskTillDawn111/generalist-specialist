@@ -11,7 +11,7 @@ from ..evidence import digest, verify_admission
 
 def preflight(config, winner, samples, registry, admission=None, require_gpu=False):
     validation = config.validate_plan(winner["deployment"], winner["routing"])
-    pool = SamplePool(samples, list(config.workload), 42)
+    pool = SamplePool(samples, list(config.workload), config.random_seed)
     issues = []
     if not validation["constraints_valid"]:
         issues.append("Colocation capacity profile unavailable for this plan")
@@ -102,8 +102,16 @@ def preflight(config, winner, samples, registry, admission=None, require_gpu=Fal
     if not issues:
         try:
             evidence = verify_admission(config, winner, registry, admission)
+            if config.weights.get("Q", 0) > 0:
+                if evidence.get("verified") is not True:
+                    issues.append("Quality evidence identity is not verified")
+                quality = config.catalog.get("quality", {})
+                if quality.get("identity", {}).get("input_pool_sha256") != digest(samples):
+                    issues.append("Quality evidence input pool fingerprint mismatch")
+                if not quality.get("references"):
+                    issues.append("Frozen quality references unavailable for measured scoring")
         except (OSError, ValueError, KeyError, TypeError) as exc:
-            issues.append(f"Admission evidence invalid: {exc}")
+            issues.append(f"Quality evidence invalid: {exc}")
     return {
         "ready": not issues,
         "scope": "native inputs and optional GPU availability; model imports/inference untested",

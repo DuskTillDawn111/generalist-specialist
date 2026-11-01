@@ -3,6 +3,7 @@
 import hashlib
 import heapq
 import json
+import math
 import random
 
 
@@ -44,7 +45,11 @@ def make_trace(rates, horizon=120.0, seed=42, arrival_process="deterministic_per
     }
     if arrival_process not in generators:
         raise ValueError("Unknown arrival process")
-    return tuple(generators[arrival_process](rates, horizon, seed))
+    for task, rate in rates.items():
+        if type(rate) not in (int, float) or not math.isfinite(rate) or rate < 0:
+            raise ValueError('Invalid nonnegative trace rate: ' + task)
+    active = {task: rate for task, rate in rates.items() if rate > 0}
+    return tuple(generators[arrival_process](active, horizon, seed))
 
 
 def trace_digest(trace):

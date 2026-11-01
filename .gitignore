@@ -1,16 +1,33 @@
+# Python build and tool caches
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 .venv/
 venv/
 *.egg-info/
 build/
 dist/
+
+# Local editor state and notebook autosaves
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+*~
+
+# Local experiment outputs, external assets and environments
 artifacts/
 models/
 datasets/
 envs/
 cache/
+
+# Credentials and model checkpoints
 .env
 .env.*
 *.pem
@@ -18,6 +35,12 @@ cache/
 *.pth
 *.pt
 *.safetensors
+pytorch_model*.bin
+
+# Generated telemetry and profiler data
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
 *.nsys-rep
+*.qdrep
 *.log

@@ -1,0 +1,5 @@
+cpu02 是 unified native DAG/path intake 的当前修正版；cpu01、其作者证据和pre-fix-source-snapshot全部保留。独审指出，原canonical_requests未检查正整数区间，reversed outside kernel可在sweep抵消另一个真实peer重叠。作者修复为：任何native measured/outside kernel在归属、去重、计数或sweep之前，必须IDENTITY_FIELDS全为精确int（拒bool）且0<=nsys_start_ns<nsys_end_ns。新增作者反例覆盖反向、零长、负起点、bool、float，measured与outside均拒绝。未修改冻结producer。
+
+修复后的纯CPU全量重跑位于 `artifacts/predictor-unified-kernel-dag-intake-v1-20261029-cpu02/`。4请求、55891canonical kernels全部exact静态和fullpaths，0rejected；全SQLite371244kernels中315353个outside与measured overlap0ns。6列within-node路径秩6，但55891基线全singleton，所以nuisance-adjusted derivative rank0，未fit、无数值/物理/预测/部署资格。新的exact-source occupancy audit仍为 `artifacts/predictor-occupancy-declaration-unified-training-v1-20261029-cpu01/audit.json`（本轮未更改）。作者10项CPU测试通过，544份source+test receipts前后未变；独审另有7项回归与原生artifact复验，由独审报告记录。
+
+完整入口、已有函数复用、common native ns、sameowner OCR multistream、outside peer分母、独立原schema、exact hardware/source静态join及singleton识别界面见原作者说明 `docs/unified_kernel_dag_intake_v1_20261029.md`；其cpu01路径为保留的修复前证据，当前供后续使用的是本cpu02。没有新GPU、export/profiler或真实fit。后续crosscapture template对齐与3独立capture×11settings补采矩阵另行建立，尚未执行。

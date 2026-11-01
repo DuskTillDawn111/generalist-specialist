@@ -1,0 +1,1 @@
+transformers @ file:///root/autodl-tmp/gsdeploy-assets/envs/wheels/transformers-4.52.0.dev0-py3-none-any.whl

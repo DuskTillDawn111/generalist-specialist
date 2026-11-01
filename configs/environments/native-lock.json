@@ -1,0 +1,70 @@
+{
+  "schema": "gsdeploy.native_dependencies.v1",
+  "state": "CPU_ABI_IMPORTED_GPU_KERNELS_UNVALIDATED",
+  "python_abi": "cp310",
+  "platform": "linux_x86_64",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "cxx11_abi": false,
+  "wheels": {
+    "qwen-transformers": {
+      "path": "/root/autodl-tmp/gsdeploy-assets/envs/wheels/transformers-4.52.0.dev0-py3-none-any.whl",
+      "sha256": "ec0773bb221710d1b1b7c6a62c670f3aa7d4d690d1070c34edb452aa1e535d4b",
+      "bytes": 11252632
+    },
+    "phi-flash": {
+      "path": "/root/autodl-tmp/gsdeploy-assets/envs/wheels/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp310-cp310-linux_x86_64.whl",
+      "sha256": "ffe17686fa1a0f288de9eae7c32af209d32a27b037ef28614f042b377af5b15a",
+      "bytes": 187815087
+    },
+    "deepseek-flash": {
+      "path": "/root/autodl-tmp/gsdeploy-assets/envs/wheels/flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp310-cp310-linux_x86_64.whl",
+      "sha256": "64ba4ed4a8c4c9b79d8a0959ebe3ffd6f7ea707ae222dbebe6a864237ac0e475",
+      "bytes": 191345582
+    },
+    "minicpm-gptq": {
+      "path": "/root/autodl-tmp/gsdeploy-assets/envs/wheels/auto_gptq-0.8.0.dev0+cu124-cp310-cp310-linux_x86_64.whl",
+      "sha256": "fa0d480f841535568a735384ad4766e9053f728e1f0390e6264b180831f11ba6",
+      "bytes": 575114
+    }
+  },
+  "source_pins": {
+    "transformers": "https://github.com/huggingface/transformers/tree/cb39f7dd5ba874ee1859b47283b08cd3a6ab5a0d",
+    "auto-gptq": "https://github.com/RanchiZhao/AutoGPTQ/tree/a9c8109ef450793e3d890c76a36f22177fcbbe28"
+  },
+  "source_archives": {
+    "/root/autodl-tmp/generalist-specialist-project/artifacts/four-task-small-pool-20261015/final-preparation/qwen-source.zip": "d53194e47e3af1b3934d020c40b1741c6c3e1b5b64c9ab6a0185d583a8cbcb46",
+    "/root/autodl-tmp/generalist-specialist-project/artifacts/four-task-small-pool-20261015/final-preparation/gptq-source.zip": "3a60a716674bb768b0fcb1efdef71a73c40de489402870639b0333c2e5e259e8"
+  },
+  "gptq_build": {
+    "architecture": "SM89",
+    "compiler": "Clang14 + NVCC12.4.131 + CCCL12.4.127.post1",
+    "jobs": 1,
+    "modules": [
+      "autogptq_cuda_64",
+      "autogptq_cuda_256",
+      "exllama_kernels"
+    ],
+    "exllamav2": false,
+    "marlin": false,
+    "qigen": false,
+    "kernel_math_patch": false,
+    "header_and_dtype_dispatch_patch_sha256": "ba55fba140793aa29239e2e3fc549491289ade259bc409f71aed4aaa1b31093c",
+    "build_script_sha256": "0ae6f44dfe3ba23fda09f2c5b039701903c15a5f482da436c20921a4eb56a0c0",
+    "source_patch_receipt": "/root/autodl-tmp/generalist-specialist-project/artifacts/four-task-small-pool-20261015/final-preparation/gptq-build-patch.json",
+    "source_patch_receipt_sha256": "f8eccb11161c06265df5b4775752e1e956c6317c4efdd0e1347baf5722a3ac63"
+  },
+  "environment_layers": {
+    "compact-common": [
+      "phi-flash"
+    ],
+    "compact-standard": [],
+    "compact-qwen": [],
+    "compact-minicpm": [
+      "minicpm-gptq"
+    ],
+    "compact-deepseek": [
+      "deepseek-flash"
+    ]
+  }
+}

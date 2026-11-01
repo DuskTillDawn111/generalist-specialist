@@ -1,0 +1,3365 @@
+{
+  "schema": "gsdeploy.seven_pool_recalibration_requirements.v1",
+  "status": "DESIGN_ONLY_NOT_GPU_PACKET",
+  "source_config": {
+    "path": "/root/autodl-tmp/generalist-specialist-project/artifacts/static-spillover-study-20261022/text26-development-v1/system-config.json",
+    "sha256": "8b8fdc494d62cc5fe2a33db4e35c43f6b910da91e31bb8e594f70ff1ab6dd634"
+  },
+  "gpu_started": false,
+  "production_math_modified": false,
+  "old_transfer_status": "FAILED_REMAINS_INACTIVE",
+  "input_results_read": [],
+  "reads_completed_text26_results": false,
+  "reads_incomplete_runs": false,
+  "reads_holdout_results": false,
+  "target_contract": {
+    "workload": {
+      "text": 2.6,
+      "image": 0.01,
+      "ocr": 0.01,
+      "asr": 0.01
+    },
+    "gpu_memory_mib": 49140,
+    "weights": {
+      "Q": 0.16666666666666666,
+      "T": 0.16666666666666666,
+      "L": 0.16666666666666666,
+      "P": 0.16666666666666666,
+      "M": 0.16666666666666666,
+      "E": 0.16666666666666666
+    },
+    "latency_reference_ms": {
+      "text": 1000,
+      "image": 250,
+      "ocr": 10000,
+      "asr": 3000
+    },
+    "arrival_process": "poisson",
+    "drain_seconds": 300,
+    "horizon_seconds": 600,
+    "route_grid": 8,
+    "utility_schema": "six_term_quality_v1",
+    "energy_reference_watts": 450,
+    "startup_amortization_seconds": 3600
+  },
+  "domain": {
+    "model_names": [
+      "asr",
+      "generalist_1",
+      "generalist_2",
+      "generalist_3",
+      "image",
+      "ocr",
+      "text"
+    ],
+    "nonzero_replica_states": {
+      "asr": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "generalist_1": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "generalist_2": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "generalist_3": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "image": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ocr": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "text": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "route_domain": "Union of all denominator1..K simplex routings, all supported paths; idle resident families retained",
+    "counts": {
+      "nonzero_model_states": 31,
+      "model_task_paths": 16,
+      "measured_path_states": 61,
+      "missing_path_states": 9,
+      "raw_residency_proxy_deployments": 1230,
+      "max_families_in_raw_proxy_deployment": 5,
+      "family_pairs": 21,
+      "cross_family_task_path_pairs": 102,
+      "same_generalist_task_pairs": 18
+    },
+    "count_scope": "Raw residency proxy only; neither physical feasibility proof nor automatically valid new-model memory pruning"
+  },
+  "baseline_inventory": [
+    {
+      "model": "asr",
+      "task": "asr",
+      "replicas": 1,
+      "mean_service_ms": 640.1786420780141,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/asr-asr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "asr",
+      "task": "asr",
+      "replicas": 2,
+      "mean_service_ms": 825.0760296318182,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/asr-asr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "asr",
+      "task": "asr",
+      "replicas": 3,
+      "mean_service_ms": 1160.6018108170213,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/asr-asr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "asr",
+      "task": "asr",
+      "replicas": 4,
+      "mean_service_ms": 1534.6177022343097,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/asr-asr-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "text",
+      "replicas": 1,
+      "mean_service_ms": 939.3849655463918,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_1-text-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "image",
+      "replicas": 1,
+      "mean_service_ms": 1003.3902687083333,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-image-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "ocr",
+      "replicas": 1,
+      "mean_service_ms": 30518.43998703125,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-ocr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "asr",
+      "replicas": 1,
+      "mean_service_ms": 4226.0893271875,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-asr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "text",
+      "replicas": 2,
+      "mean_service_ms": 1596.9113148235294,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_1-text-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "image",
+      "replicas": 2,
+      "mean_service_ms": 1225.0307724375,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-image-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "ocr",
+      "replicas": 2,
+      "mean_service_ms": 28405.509555572917,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-ocr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "asr",
+      "replicas": 2,
+      "mean_service_ms": 4604.301453354166,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-asr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "image",
+      "replicas": 3,
+      "mean_service_ms": 1418.8733282385788,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-image-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "ocr",
+      "replicas": 3,
+      "mean_service_ms": 44306.57890073959,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-ocr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "asr",
+      "replicas": 3,
+      "mean_service_ms": 4223.7239247083335,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-asr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_1",
+      "task": "asr",
+      "replicas": 4,
+      "mean_service_ms": 3743.4596357623764,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/protocol-binding-correction-v2/runs/generalist_1-asr-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "text",
+      "replicas": 1,
+      "mean_service_ms": 517.1499044943182,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-text-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "image",
+      "replicas": 1,
+      "mean_service_ms": 201.64246204269662,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-image-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "ocr",
+      "replicas": 1,
+      "mean_service_ms": 7830.977301739584,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-ocr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "asr",
+      "replicas": 1,
+      "mean_service_ms": 804.0067461754386,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-asr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "text",
+      "replicas": 2,
+      "mean_service_ms": 1185.7490755741935,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-text-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "image",
+      "replicas": 2,
+      "mean_service_ms": 357.9370537768924,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-image-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "ocr",
+      "replicas": 2,
+      "mean_service_ms": 9727.861011177083,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-ocr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "asr",
+      "replicas": 2,
+      "mean_service_ms": 1033.9011512272727,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-asr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "text",
+      "replicas": 3,
+      "mean_service_ms": 1843.7836869473683,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-text-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "image",
+      "replicas": 3,
+      "mean_service_ms": 517.0517548587786,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-image-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "ocr",
+      "replicas": 3,
+      "mean_service_ms": 13780.617737916667,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-ocr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "asr",
+      "replicas": 3,
+      "mean_service_ms": 1460.315797172043,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-asr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "image",
+      "replicas": 4,
+      "mean_service_ms": 683.4501964773585,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-image-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "ocr",
+      "replicas": 4,
+      "mean_service_ms": 19494.279050302084,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-ocr-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "asr",
+      "replicas": 4,
+      "mean_service_ms": 1899.7063877,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-asr-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_2",
+      "task": "asr",
+      "replicas": 5,
+      "mean_service_ms": 2349.837404214286,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_2-asr-n5/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "text",
+      "replicas": 1,
+      "mean_service_ms": 620.2146589931507,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-text-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "image",
+      "replicas": 1,
+      "mean_service_ms": 604.3194839635416,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-image-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "ocr",
+      "replicas": 1,
+      "mean_service_ms": 26853.092241333332,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-ocr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "asr",
+      "replicas": 1,
+      "mean_service_ms": 1999.8690964479167,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-asr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "text",
+      "replicas": 2,
+      "mean_service_ms": 852.040260546729,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-text-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "image",
+      "replicas": 2,
+      "mean_service_ms": 664.6941146397058,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-image-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "ocr",
+      "replicas": 2,
+      "mean_service_ms": 28801.783387791667,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-ocr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "asr",
+      "replicas": 2,
+      "mean_service_ms": 2613.665386520833,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-asr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "text",
+      "replicas": 3,
+      "mean_service_ms": 1082.9790350992064,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-text-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "image",
+      "replicas": 3,
+      "mean_service_ms": 718.9655469786667,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-image-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "ocr",
+      "replicas": 3,
+      "mean_service_ms": 25186.409878291666,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-ocr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "asr",
+      "replicas": 3,
+      "mean_service_ms": 1799.5312435605097,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-asr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "text",
+      "replicas": 4,
+      "mean_service_ms": 1409.9603506666667,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-text-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "image",
+      "replicas": 4,
+      "mean_service_ms": 889.0907470272277,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-image-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "generalist_3",
+      "task": "asr",
+      "replicas": 4,
+      "mean_service_ms": 1908.2038844336735,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/generalist_3-asr-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "image",
+      "task": "image",
+      "replicas": 1,
+      "mean_service_ms": 108.30372094348894,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/image-image-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "image",
+      "task": "image",
+      "replicas": 2,
+      "mean_service_ms": 204.3892372638249,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/image-image-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "image",
+      "task": "image",
+      "replicas": 3,
+      "mean_service_ms": 306.52268701845446,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/image-image-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "image",
+      "task": "image",
+      "replicas": 4,
+      "mean_service_ms": 403.56492063594993,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/image-image-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "ocr",
+      "task": "ocr",
+      "replicas": 1,
+      "mean_service_ms": 438.9840743707317,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/ocr-ocr-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "ocr",
+      "task": "ocr",
+      "replicas": 2,
+      "mean_service_ms": 523.6656240906433,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/ocr-ocr-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "ocr",
+      "task": "ocr",
+      "replicas": 3,
+      "mean_service_ms": 646.6408288149039,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/ocr-ocr-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "ocr",
+      "task": "ocr",
+      "replicas": 4,
+      "mean_service_ms": 777.2632616623376,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/ocr-ocr-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "ocr",
+      "task": "ocr",
+      "replicas": 6,
+      "mean_service_ms": 1069.8166955725646,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/ocr-ocr-n6/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "ocr",
+      "task": "ocr",
+      "replicas": 8,
+      "mean_service_ms": 1374.4458777024952,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/ocr-ocr-n8/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "text",
+      "task": "text",
+      "replicas": 1,
+      "mean_service_ms": 570.9742338616352,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/text-text-n1/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "text",
+      "task": "text",
+      "replicas": 2,
+      "mean_service_ms": 843.6663307116279,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/text-text-n2/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "text",
+      "task": "text",
+      "replicas": 3,
+      "mean_service_ms": 1160.3633170213675,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/text-text-n3/profile.json",
+      "identity_reuse_requires_audit": true
+    },
+    {
+      "model": "text",
+      "task": "text",
+      "replicas": 4,
+      "mean_service_ms": 1526.6783059832635,
+      "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/retained-replica-profiles-20261021/runs/text-text-n4/profile.json",
+      "identity_reuse_requires_audit": true
+    }
+  ],
+  "missing_path_states": [
+    {
+      "model": "generalist_1",
+      "task": "text",
+      "replicas": 3,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_1",
+      "task": "text",
+      "replicas": 4,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_1",
+      "task": "image",
+      "replicas": 4,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_1",
+      "task": "ocr",
+      "replicas": 4,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_2",
+      "task": "text",
+      "replicas": 4,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_2",
+      "task": "text",
+      "replicas": 5,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_2",
+      "task": "image",
+      "replicas": 5,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_2",
+      "task": "ocr",
+      "replicas": 5,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    },
+    {
+      "model": "generalist_3",
+      "task": "ocr",
+      "replicas": 4,
+      "status": "UNKNOWN_NOT_INFEASIBLE",
+      "required_resolution": "Exact applicable infeasibility evidence or compatible per-input baseline; otherwise block full-domain certificate"
+    }
+  ],
+  "candidate_model": {
+    "status": "PROPOSED_HYPOTHESIS_NOT_IMPLEMENTED_OR_VALIDATED",
+    "new_mode_required": true,
+    "formula": "logS=log_b+alpha_family+beta_self*A_self+beta_other*A_other+beta_resident*M_resident+beta_mix*H_self+beta_shape*centered_log_b*A_other",
+    "parameter_count": 12,
+    "parameter_names": [
+      "alpha_asr",
+      "alpha_generalist_1",
+      "alpha_generalist_2",
+      "alpha_generalist_3",
+      "alpha_image",
+      "alpha_ocr",
+      "alpha_text",
+      "beta_self",
+      "beta_other",
+      "beta_resident",
+      "beta_mix",
+      "beta_shape"
+    ],
+    "features": {
+      "A_model": "sum route_rps*mean_raw_input_baseline_ms/(1000*capacity_factor)",
+      "A_other": "sum A of other resident model families",
+      "M_resident": "raw standalone residency sum / fixed budget",
+      "H_self": "entropy of task traffic shares at victim model",
+      "centered_log_b": "known per-input historical log-service minus path-state pool mean-log"
+    },
+    "unique_static_context": true,
+    "actual_overlap_or_future_generated_tokens_as_features": false,
+    "interaction_sharing_assumptions": [
+      "One family intercept shared across tasks/n beyond known n-state baseline",
+      "Aggregated other-busy feature sufficient across partner families",
+      "Input response via known baseline shape",
+      "No unmodeled history-dependent service"
+    ],
+    "failure_policy": "Reject structure or add predeclared targeted terms; rerun rank/coverage and reserve fresh validation. Never infer all-pool success from rank alone."
+  },
+  "calibration": {
+    "selection": "Sequential rank increase/condition-number improvement and residual/feature coverage, predeclare each batch before GPU. Candidate counts are not execution commitment.",
+    "roles": "All past/current text26 four conditions are development only, not independent validation",
+    "min_input_observations": 3,
+    "min_independent_execution_blocks": 2,
+    "rare_background_warning": "0.01rps*600s approximately6 requests, cannot validate32 input identities; compute exact trace and plan coverage or preserve unknown",
+    "formal_quality_router_unchanged": true,
+    "balanced_calibration_requires_separate_input_schedule_receipt": true,
+    "B_anchor_candidates": [
+      {
+        "id": "anchor-asr-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "asr": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-asr-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "asr": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.5467223943365295
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-generalist_1-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-generalist_1-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.37258420438571005
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-generalist_2-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-generalist_2-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.6767863572211978
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-generalist_3-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-generalist_3-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.5643207475427716
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-image-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-image-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 3.231652587288521
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-ocr-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-ocr-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.7972954383407023
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-text-rho0.15",
+        "stage": "B",
+        "deployment": {
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "pressure_design_value": 0.15,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      },
+      {
+        "id": "anchor-text-rho0.35",
+        "stage": "B",
+        "deployment": {
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "pressure_design_value": 0.35,
+        "role": "DEVELOPMENT_CANDIDATE_NOT_SCHEDULED",
+        "input_coverage_gate": "all frozen samples >=3 successful observations, >=2 execution blocks",
+        "service_scope": "Raw baseline design pressure only, actual rho must still be <=0.8"
+      }
+    ],
+    "C_fixed_resident_pair_candidates": [
+      {
+        "id": "pair-asr-generalist_1-other0",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_1-other0.15",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_1-other0.35",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.37258420438571005
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_2-other0",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_2-other0.15",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_2-other0.35",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.6767863572211978
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_3-other0",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_3-other0.15",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-generalist_3-other0.35",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.5643207475427716
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-image-other0",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-image-other0.15",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-image-other0.35",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 3.231652587288521
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-ocr-other0",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-ocr-other0.15",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-ocr-other0.35",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.7972954383407023
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-text-other0",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-text-other0.15",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-asr-text-other0.35",
+        "stage": "C",
+        "deployment": {
+          "asr": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "asr",
+            "model": "asr",
+            "rps": 0.23430959757279834
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-generalist_2-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-generalist_2-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-generalist_2-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.6767863572211978
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-generalist_3-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-generalist_3-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-generalist_3-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.5643207475427716
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-image-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-image-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-image-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 3.231652587288521
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-ocr-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-ocr-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-ocr-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.7972954383407023
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-text-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-text-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_1-text-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_1": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.15967894473673286
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-generalist_3-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-generalist_3-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-generalist_3-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.5643207475427716
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-image-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-image-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-image-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 3.231652587288521
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-ocr-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-ocr-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-ocr-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.7972954383407023
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-text-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-text-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_2-text-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_2": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.29005129595194196
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-image-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-image-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-image-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "image": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 3.231652587288521
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-ocr-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-ocr-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-ocr-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.7972954383407023
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-text-other0",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-text-other0.15",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-generalist_3-text-other0.35",
+        "stage": "C",
+        "deployment": {
+          "generalist_3": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.24185174894690215
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-image-ocr-other0",
+        "stage": "C",
+        "deployment": {
+          "image": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-image-ocr-other0.15",
+        "stage": "C",
+        "deployment": {
+          "image": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-image-ocr-other0.35",
+        "stage": "C",
+        "deployment": {
+          "image": 1,
+          "ocr": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          },
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.7972954383407023
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-image-text-other0",
+        "stage": "C",
+        "deployment": {
+          "image": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-image-text-other0.15",
+        "stage": "C",
+        "deployment": {
+          "image": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-image-text-other0.35",
+        "stage": "C",
+        "deployment": {
+          "image": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "image",
+            "rps": 1.3849939659807946
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-ocr-text-other0",
+        "stage": "C",
+        "deployment": {
+          "ocr": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.0
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-ocr-text-other0.15",
+        "stage": "C",
+        "deployment": {
+          "ocr": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.2627088773962954
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      },
+      {
+        "id": "pair-ocr-text-other0.35",
+        "stage": "C",
+        "deployment": {
+          "ocr": 1,
+          "text": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "ocr",
+            "rps": 0.34169804500315815
+          },
+          {
+            "task": "text",
+            "model": "text",
+            "rps": 0.6129873805913558
+          }
+        ],
+        "fixed_resident": true,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED",
+        "prioritization": "G2-involving pairs first; do not execute all63 automatically"
+      }
+    ],
+    "D_same_worker_mixture_candidates": [
+      {
+        "id": "mix-generalist_1-text-image-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.18629210219285502
+          },
+          {
+            "task": "image",
+            "model": "generalist_1",
+            "rps": 0.17440870761610824
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-text-image-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.09314605109642751
+          },
+          {
+            "task": "image",
+            "model": "generalist_1",
+            "rps": 0.2616130614241623
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-text-ocr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.18629210219285502
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_1",
+            "rps": 0.005734238056544367
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-text-ocr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.09314605109642751
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_1",
+            "rps": 0.00860135708481655
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-text-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.18629210219285502
+          },
+          {
+            "task": "asr",
+            "model": "generalist_1",
+            "rps": 0.041409441791535447
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-text-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_1",
+            "rps": 0.09314605109642751
+          },
+          {
+            "task": "asr",
+            "model": "generalist_1",
+            "rps": 0.06211416268730316
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-image-ocr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_1",
+            "rps": 0.17440870761610824
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_1",
+            "rps": 0.005734238056544367
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-image-ocr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_1",
+            "rps": 0.08720435380805412
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_1",
+            "rps": 0.00860135708481655
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-image-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_1",
+            "rps": 0.17440870761610824
+          },
+          {
+            "task": "asr",
+            "model": "generalist_1",
+            "rps": 0.041409441791535447
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-image-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_1",
+            "rps": 0.08720435380805412
+          },
+          {
+            "task": "asr",
+            "model": "generalist_1",
+            "rps": 0.06211416268730316
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-ocr-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "generalist_1",
+            "rps": 0.005734238056544367
+          },
+          {
+            "task": "asr",
+            "model": "generalist_1",
+            "rps": 0.041409441791535447
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_1-ocr-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_1": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "generalist_1",
+            "rps": 0.0028671190282721836
+          },
+          {
+            "task": "asr",
+            "model": "generalist_1",
+            "rps": 0.06211416268730316
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-text-image-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.3383931786105989
+          },
+          {
+            "task": "image",
+            "model": "generalist_2",
+            "rps": 0.8678727596717439
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-text-image-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.16919658930529946
+          },
+          {
+            "task": "image",
+            "model": "generalist_2",
+            "rps": 1.3018091395076157
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-text-ocr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.3383931786105989
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_2",
+            "rps": 0.022347146883074896
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-text-ocr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.16919658930529946
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_2",
+            "rps": 0.033520720324612334
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-text-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.3383931786105989
+          },
+          {
+            "task": "asr",
+            "model": "generalist_2",
+            "rps": 0.21765986520940717
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-text-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_2",
+            "rps": 0.16919658930529946
+          },
+          {
+            "task": "asr",
+            "model": "generalist_2",
+            "rps": 0.3264897978141107
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-image-ocr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_2",
+            "rps": 0.8678727596717439
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_2",
+            "rps": 0.022347146883074896
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-image-ocr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_2",
+            "rps": 0.43393637983587197
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_2",
+            "rps": 0.033520720324612334
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-image-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_2",
+            "rps": 0.8678727596717439
+          },
+          {
+            "task": "asr",
+            "model": "generalist_2",
+            "rps": 0.21765986520940717
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-image-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_2",
+            "rps": 0.43393637983587197
+          },
+          {
+            "task": "asr",
+            "model": "generalist_2",
+            "rps": 0.3264897978141107
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-ocr-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "generalist_2",
+            "rps": 0.022347146883074896
+          },
+          {
+            "task": "asr",
+            "model": "generalist_2",
+            "rps": 0.21765986520940717
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_2-ocr-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_2": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "generalist_2",
+            "rps": 0.011173573441537448
+          },
+          {
+            "task": "asr",
+            "model": "generalist_2",
+            "rps": 0.3264897978141107
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-text-image-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.2821603737713858
+          },
+          {
+            "task": "image",
+            "model": "generalist_3",
+            "rps": 0.2895819258585376
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-text-image-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.1410801868856929
+          },
+          {
+            "task": "image",
+            "model": "generalist_3",
+            "rps": 0.4343728887878063
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-text-ocr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.2821603737713858
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_3",
+            "rps": 0.006516940336972929
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-text-ocr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.1410801868856929
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_3",
+            "rps": 0.009775410505459391
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-text-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.2821603737713858
+          },
+          {
+            "task": "asr",
+            "model": "generalist_3",
+            "rps": 0.08750572740527249
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-text-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "text",
+            "model": "generalist_3",
+            "rps": 0.1410801868856929
+          },
+          {
+            "task": "asr",
+            "model": "generalist_3",
+            "rps": 0.13125859110790872
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-image-ocr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_3",
+            "rps": 0.2895819258585376
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_3",
+            "rps": 0.006516940336972929
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-image-ocr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_3",
+            "rps": 0.1447909629292688
+          },
+          {
+            "task": "ocr",
+            "model": "generalist_3",
+            "rps": 0.009775410505459391
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-image-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_3",
+            "rps": 0.2895819258585376
+          },
+          {
+            "task": "asr",
+            "model": "generalist_3",
+            "rps": 0.08750572740527249
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-image-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "image",
+            "model": "generalist_3",
+            "rps": 0.1447909629292688
+          },
+          {
+            "task": "asr",
+            "model": "generalist_3",
+            "rps": 0.13125859110790872
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-ocr-asr-0.5",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "generalist_3",
+            "rps": 0.006516940336972929
+          },
+          {
+            "task": "asr",
+            "model": "generalist_3",
+            "rps": 0.08750572740527249
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.5,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      },
+      {
+        "id": "mix-generalist_3-ocr-asr-0.25",
+        "stage": "D",
+        "deployment": {
+          "generalist_3": 1
+        },
+        "traffic": [
+          {
+            "task": "ocr",
+            "model": "generalist_3",
+            "rps": 0.0032584701684864647
+          },
+          {
+            "task": "asr",
+            "model": "generalist_3",
+            "rps": 0.13125859110790872
+          }
+        ],
+        "nominal_total_baseline_pressure": 0.35,
+        "pressure_share_a": 0.25,
+        "role": "RANK_AND_RESIDUAL_SELECTED_CANDIDATE_NOT_SCHEDULED"
+      }
+    ],
+    "E_state_and_multifamily_recipe": {
+      "states": "all31",
+      "own_nominal_pressure": [
+        0.15,
+        0.35
+      ],
+      "partner_nominal_pressure": 0.15,
+      "partner_policy": "Choose low-memory compatible family, do not remove state if first partner does not fit",
+      "multifamily": "Cover 3..5 families, feature extremes/interior, hidden idle residency and background assignments; expand when model residual fails"
+    },
+    "F_target_recipe": "Coverage and uncertainty-selected complete plans at exact target workload, all generalists and specialist states; prioritize unexcluded high-U challengers, no target-structure restriction",
+    "actual_constraints": "All conditions obey original actual stability, rho<=0.8 and resource rules; baseline pressure is design value, not verified rho"
+  },
+  "resources": {
+    "quality": "Frozen per-input Q, actual outputs rescored; no absolute accuracy admission",
+    "energy": "New board integration/startup evidence with independent design rank; no old extrapolated coefficients as validation",
+    "memory": "Raw residency and actual peak distinct; new complete predictor may explicitly contain additive lower component but sampled max is not physical domain upper bound"
+  },
+  "validation": {
+    "status": "PROPOSED_NOT_PREPARED",
+    "seed_roles": {
+      "development_candidates": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "validation_candidates": [
+        81,
+        82
+      ],
+      "final_confirmation_reserved": [
+        71,
+        72,
+        73
+      ]
+    },
+    "seed_role_gate": "Before preparing, verify metadata disjoint/unused; do not read reserved result contents",
+    "old61_62_results_used": false,
+    "panels": [
+      {
+        "name": "same_structure",
+        "conditions": "Four text2.6 development plans repeated at both new validation seeds",
+        "base_count": 8
+      },
+      {
+        "name": "structure_holdout",
+        "conditions": "Coverage-selected held-out G1/G3, same-worker task mixtures, all declared n states and >=3-family configurations",
+        "count": "computed by coverage solver, not fixed2"
+      },
+      {
+        "name": "search_challenge",
+        "conditions": "Frozen unvalidated diagnostic incumbent, alternative deployment/route, best n1, feasible best no-split, highest unresolved upper bound; deduplicate",
+        "count": "computed after frozen development model, official validated search gate stays closed"
+      }
+    ],
+    "thresholds_policy": "Keep current base thresholds, never relax on failure; separately declare rank/constraint acceptance before collecting validation",
+    "base_thresholds": {
+      "service_relative_error": 0.3,
+      "energy_relative_error": 0.25,
+      "memory_relative_error": 0.25,
+      "mean_relative_error": 0.35,
+      "p95_relative_error": 0.4,
+      "quality_absolute_error": 0.05,
+      "utility_absolute_error": 0.1
+    },
+    "validation_result_used_to_refit": "then validation becomes development and next version needs fresh independent validation",
+    "H600_to_H1800_transfer": false
+  },
+  "requirements": [
+    {
+      "id": "C0_domain",
+      "gate": "MUST",
+      "criterion": "Full original seven-model/nonzero replica state and denominator1..K route-union inventory preserved; unknown paths retained"
+    },
+    {
+      "id": "C1_baselines",
+      "gate": "MUST",
+      "criterion": "61 identity audits and9 missing path-state resolutions; no unknown may be silently removed"
+    },
+    {
+      "id": "C2_timeline",
+      "gate": "MUST",
+      "criterion": "Actual-service diagnostic FIFO reproduces observed timeline before fitting any new service model"
+    },
+    {
+      "id": "C3_rank",
+      "gate": "MUST",
+      "criterion": "Current selected model full design rank, condition number and singular values reported; family/path/n held-group residuals acceptable; clustered run units preserved"
+    },
+    {
+      "id": "C4_coverage",
+      "gate": "MUST",
+      "criterion": "Every declared active path/n/input and feature context has justified applicability or valid exclusion; remaining unknowns block complete certificate"
+    },
+    {
+      "id": "C5_resources",
+      "gate": "MUST",
+      "criterion": "True whole-board energy/ startup and memory contracts calibrated on identifiable varying deployment/activity conditions; rho<=0.8/stability/drain unchanged"
+    },
+    {
+      "id": "C6_freeze",
+      "gate": "MUST",
+      "criterion": "New model/code/domain/data/threshold/seed-role hashes frozen; failed zero-transfer unchanged and never activated"
+    },
+    {
+      "id": "C7_validation",
+      "gate": "MUST",
+      "criterion": "Same-structure new traces, structural holdouts and search-challenger panels all pass frozen error and constraint rules; validation never refits"
+    },
+    {
+      "id": "C8_ranking",
+      "gate": "MUST_FOR_REAL_RANK_CLAIM",
+      "criterion": "Minimal meaningful paired utility difference delta predeclared, paired error/repeat uncertainty supports ranking; delta currently unset",
+      "delta": null
+    },
+    {
+      "id": "C9_bounds",
+      "gate": "MUST_FOR_SEARCH_CERTIFICATE",
+      "criterion": "Every B(z)<=C_new(z), optimistic partial-bound and capacity/memory pruning proof valid in new mode; zero for unproved lower bounds only"
+    },
+    {
+      "id": "C10_solvers",
+      "gate": "MUST",
+      "criterion": "MILP, bounded DFS and plain DFS same complete domain/model/trace; completed optimal-value certificate, or explicit unresolved gap/budget"
+    },
+    {
+      "id": "C11_horizon",
+      "gate": "MUST",
+      "criterion": "H600 validation does not auto-cover H1800; validate requested final horizon separately"
+    }
+  ],
+  "bounds": {
+    "Q": "Exact columns only under unchanged per-input semantics",
+    "service": "Proven global input lower envelope of new function; else0 for bounds",
+    "rho": "mean(input lower envelope), not service upper bound",
+    "memory": "Only mathematically included lower component of new M; old learned multiplier not inherited",
+    "energy": "Only proven nonnegative decomposable new-model components",
+    "full_identity_residual": "Allowed iff base cost lower<=complete new cost",
+    "unknown": "Never treated as infeasible; retained optimistic bound/gap"
+  },
+  "decisions_pending": [
+    "Minimal meaningful real utility difference delta",
+    "Accepted new-model structural form after completed raw audit",
+    "Exact selected calibration batches and independent held-out coverage roster",
+    "Final requested horizon and full-domain validation budget"
+  ],
+  "no_fixed_gpu_minimum_claim": true,
+  "completion_claim": false
+}

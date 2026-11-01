@@ -1,4 +1,4 @@
-"""Prepare a six-task smoke run; execution requires an explicit --execute flag."""
+"""Prepare the tasks in an explicit admitted config; execute with --execute."""
 
 import argparse
 from dataclasses import replace
@@ -12,12 +12,7 @@ from gsdeploy.runtime.preflight import preflight
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--config",
-        default=str(
-            Path(__file__).resolve().parents[1] / "configs/static_replicas.json"
-        ),
-    )
+    parser.add_argument("--config", required=True)
     parser.add_argument("--workers", required=True)
     parser.add_argument("--samples", required=True)
     parser.add_argument("--admission")

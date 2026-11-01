@@ -74,6 +74,29 @@ def add_energy(c, plans, joules, multipliers=(1.0,)):
 
 
 class JointMilpTests(unittest.TestCase):
+    def test_no_split_uses_only_pure_columns_with_fine_grids_and_tight_budget(self):
+        names = [f"m{i}" for i in range(7)]
+        c = replace(
+            config({"text": 1}, {m: {"text": 1} for m in names}, horizon=1),
+            solver="milp",
+            milp_capacity_witness=True,
+            milp_max_columns=21,
+        )
+        for m in names:
+            c.catalog["capacity_factors"][m].update({"2": 2, "3": 3})
+            c.catalog["memory_table_mib"][m].update({"2": 2, "3": 3})
+        reference = DeploymentSystem(c).plan(no_split=True)
+        fine = DeploymentSystem(replace(
+            c, route_grid=8, route_pair_denominators_by_task={"text": [100]},
+        )).plan(no_split=True)
+        self.assertTrue(reference["optimality_certified"], reference["status"])
+        self.assertTrue(fine["optimality_certified"], fine["status"])
+        self.assertEqual(fine["metrics"]["task_columns"], 21)
+        self.assertEqual(fine["metrics"]["capacity_probe_calls"], 0)
+        self.assertFalse(fine["domain"]["capacity_boundary_witnesses"])
+        self.assertAlmostEqual(fine["winner"]["score"], reference["winner"]["score"])
+        self.assertTrue(all(len(row) == 1 for row in fine["winner"]["routing"].values()))
+
     def test_poisson_burst_fails_drain_and_feedback_finds_legal_alternative(self):
         c = replace(
             config(
@@ -180,7 +203,7 @@ class JointMilpTests(unittest.TestCase):
         result = DeploymentSystem(c).plan(route_grid=2)
         self.assertEqual(result["status"], "NO_FEASIBLE_GRID_PLAN")
         self.assertFalse(result["domain"]["continuous_optimality"])
-        self.assertIsNotNone(
+        self.assertIsNone(
             DeploymentSystem(replace(c, solver="dfs")).plan(route_grid=2)["winner"]
         )
         augmented = DeploymentSystem(replace(c, milp_capacity_witness=True)).plan(
@@ -389,8 +412,12 @@ class JointMilpTests(unittest.TestCase):
         )
         p = DeploymentSystem(replace(c, random_seed=43)).predict(x, r)
         self.assertEqual(p["reason"], "MISSING_COLOCATION_PROFILE")
-        with self.assertRaisesRegex(ValueError, "DFS reference"):
-            DeploymentSystem(replace(c, solver="dfs")).plan()
+        dfs = DeploymentSystem(replace(c, solver="dfs")).plan(route_grid=2)
+        self.assertTrue(dfs["optimality_certified"])
+        self.assertAlmostEqual(dfs["winner"]["score"], result["winner"]["score"], places=10)
+        unknown = DeploymentSystem(replace(c, solver="dfs", random_seed=43)).plan()
+        self.assertFalse(unknown["optimality_certified"])
+        self.assertGreater(unknown["metrics"]["unknown_candidates"], 0)
 
     def test_invalid_limits_sparse_cohorts_and_stable_order(self):
         c = replace(config(), solver="milp")
