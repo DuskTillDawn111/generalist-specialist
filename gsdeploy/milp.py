@@ -384,7 +384,7 @@ class JointMilpOptimizer:
         )
 
     # 构造任务路由和副本候选列
-    def columns(self, choices, K):   
+    def columns(self, choices, K, *, no_split=False):
     # K 控制任务路由的离散网格 可以理解为以1/K为间隔 即分母
         columns = []
         stress = 2.0 if self.policy == "robust" else 1.0
@@ -398,7 +398,11 @@ class JointMilpOptimizer:
             
 
             # 生成所有允许的路由比例 再枚举模型副本数
-            for fractions in fraction_rows(models, K, self.pair_denominators.get(task, ())):
+            # Pure rows are independent of both routing grids. Avoid building
+            # split columns that would consume the restricted domain's budget.
+            grid = 1 if no_split else K
+            pair_denominators = () if no_split else self.pair_denominators.get(task, ())
+            for fractions in fraction_rows(models, grid, pair_denominators):
                 active = tuple(m for m, _ in fractions)
                 row = {m: rate * f.numerator / f.denominator for m, f in fractions}
                 for counts in itertools.product(    # 求笛卡尔积 枚举所有副本数量
@@ -443,7 +447,7 @@ class JointMilpOptimizer:
                             floor=floor,
                         )
                     )
-        if self.witness:
+        if self.witness and not no_split:
             for task, row in self.witness["routing"].items():
                 x = {m: self.witness["deployment"][m] for m in row}
                 if any(
@@ -512,14 +516,11 @@ class JointMilpOptimizer:
                 choices[m] = [0] + sorted(set(supplied))
         states = [(m, n) for m in choices for n in choices[m]]   # 枚举状态
         state_index = {p: i for i, p in enumerate(states)}
-        if K >= 2:
+        if K >= 2 and not self.no_split:
             self.capacity_witness(choices)
-        columns = self.columns(choices, K)
+        columns = self.columns(choices, K, no_split=self.no_split)
         if columns is None:
             return self.result(K, "MASTER_BUILD_BUDGET_LIMIT")
-        if no_split:
-            columns = [c for c in columns if len(c["routing"]) == 1]
-            self.metrics["task_columns"] = len(columns)
         self.metrics["task_columns"] = len(columns)
         if any(not any(c["task"] == t for c in columns) for t in self.rates):
             return self.result(K, "NO_FEASIBLE_GRID_PLAN")

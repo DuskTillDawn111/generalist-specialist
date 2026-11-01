@@ -4,6 +4,7 @@ import copy
 import json
 from pathlib import Path
 import tempfile
+import time
 import unittest
 from dataclasses import replace
 from gsdeploy import DeploymentSystem, SystemConfig
@@ -26,6 +27,20 @@ class RuntimeTests(unittest.TestCase):
         )
         self.assertEqual(raw["status"], "completed", raw["errors"])
         self.assertEqual(raw["system_metrics"]["completion_ratio"], 1.0)
+        from gsdeploy.forecasting.observed_state import (
+            new_observed_state, advance_observed_state, feedback_from_runtime_records,
+        )
+        now = time.perf_counter_ns()
+        observed = advance_observed_state(
+            new_observed_state(raw["replica_to_family"], "runtime-test"), now,
+            feedback=feedback_from_runtime_records(raw["request_records"], "runtime-test", now),
+        )
+        for record in raw["request_records"]:
+            state = observed["requests"][record["request_id"]]
+            self.assertEqual(state["handler_start_ns"], record["worker_response"]["start_perf_ns"])
+            self.assertEqual(state["handler_end_ns"], record["worker_response"]["end_perf_ns"])
+            self.assertEqual(state["worker_next_ready_ns"],
+                record["previous_handler_next_request_ready"]["perf_ns"])
         self.assertEqual(
             {r["task"] for r in raw["request_records"]}, set(system.config.workload)
         )

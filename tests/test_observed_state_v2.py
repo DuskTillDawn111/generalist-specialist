@@ -37,7 +37,7 @@ class ObservedStateTests(unittest.TestCase):
              "event": "start", "kind": "gpu", "segment_id": "g"},
             {"request_id": "one", "perf_ns": 5, "received_time_ns": 6,
              "event": "end", "kind": "gpu", "segment_id": "g"}],
-            "worker_response": {"end_perf_ns": 7, "prediction": "not-a-state-feature"},
+            "worker_response": {"start_perf_ns": 1, "end_perf_ns": 7, "prediction": "not-a-state-feature"},
             "response_reader_event_enqueue_time_ns": 10,
             "previous_handler_next_request_ready": {"request_id": "one", "perf_ns": 8,
                 "received_time_ns": 11, "clock": "host_perf_counter_ns",
@@ -50,6 +50,30 @@ class ObservedStateTests(unittest.TestCase):
         later = advance_observed_state(state, 11, feedback=suffix)
         self.assertEqual(later["requests"]["one"]["worker_next_ready_ns"], 8)
         self.assertNotIn("prediction", str(later))
+
+    def test_standard_worker_start_becomes_visible_only_with_response(self):
+        records = [{"request_id": "one", "model": "s#0",
+            "worker_response": {"start_perf_ns": 1, "end_perf_ns": 7},
+            "response_reader_event_enqueue_time_ns": 10,
+            "previous_handler_next_request_ready": {"request_id": "one", "perf_ns": 8,
+                "received_time_ns": 11, "clock": "host_perf_counter_ns",
+                "boundary": "previous_handler_next_request_ready", "scope": "after_response_flush_before_next_read"}}]
+        self.assertEqual(feedback_from_runtime_records(records, CONTEXT, 9), [])
+        first = feedback_from_runtime_records(records, CONTEXT, 10)
+        self.assertEqual([e["kind"] for e in first], ["START", "HANDLER_END"])
+        self.assertEqual([e["received_time_ns"] for e in first], [10, 10])
+        state = advance_observed_state(initial(), 10, feedback=first)
+        self.assertEqual(state["requests"]["one"]["handler_start_ns"], 1)
+        self.assertEqual(state["requests"]["one"]["handler_end_ns"], 7)
+        self.assertIsNone(state["requests"]["one"]["worker_next_ready_ns"])
+        suffix = feedback_from_runtime_records(records, CONTEXT, 11,
+            since_sequence=state["last_feedback_sequence"])
+        self.assertEqual([e["kind"] for e in suffix], ["WORKER_READY"])
+        later = advance_observed_state(state, 11, feedback=suffix)
+        full = advance_observed_state(initial(), 11,
+            feedback=feedback_from_runtime_records(records, CONTEXT, 11))
+        self.assertEqual(later, full)
+        self.assertEqual(later["requests"]["one"]["worker_next_ready_ns"], 8)
 
     def test_gate_incremental_replay_matches_full_history_and_preserves_previous(self):
         snapshot = raw_fixture()["admission_snapshot_after"]

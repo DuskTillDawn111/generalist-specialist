@@ -84,7 +84,9 @@ def feedback_from_runtime_records(records, execution_context_sha256, now_ns, *, 
     deterministic reader-receipt order, with tied observations ordered by
     request identity and boundary. A later snapshot must retain the earlier
     cohort; use this adapter with one immutable request registry, not a sliding
-    window that removes already consumed observations.
+    window that removes already consumed observations. Standard workers report
+    their start timestamp in RESULT; it becomes visible at response receipt
+    when there was no separate START observation.
     """
     _ns(now_ns, "record visibility cutoff")
     _text(execution_context_sha256, "execution identity")
@@ -93,7 +95,8 @@ def feedback_from_runtime_records(records, execution_context_sha256, now_ns, *, 
     visible = []
     for record in records:
         rid, alias = record["request_id"], record["model"]
-        for index, event in enumerate(record.get("execution_events", [])):
+        execution_events = record.get("execution_events", [])
+        for index, event in enumerate(execution_events):
             received = _ns(event.get("received_time_ns"), "execution event reader receipt")
             if received > now_ns:
                 continue
@@ -110,8 +113,14 @@ def feedback_from_runtime_records(records, execution_context_sha256, now_ns, *, 
             visible.append((received, rid, 0, index, kind, payload))
         receipt = record.get("response_reader_event_enqueue_time_ns")
         if receipt is not None and _ns(receipt, "response reader receipt") <= now_ns:
-            end = record.get("worker_response", {}).get("end_perf_ns")
+            response = record.get("worker_response", {})
+            start, end = response.get("start_perf_ns"), response.get("end_perf_ns")
             if end is not None:
+                if start is not None and not any("event" not in event for event in execution_events):
+                    # This timestamp is observed only once RESULT arrives;
+                    # never backdate its visibility to the handler start.
+                    payload = {"request_id": rid, "alias": alias, "perf_ns": start}
+                    visible.append((receipt, rid, 0, -1, "START", payload))
                 payload = {"request_id": rid, "alias": alias, "perf_ns": end}
                 visible.append((receipt, rid, 1, 0, "HANDLER_END", payload))
         ready = record.get("previous_handler_next_request_ready")

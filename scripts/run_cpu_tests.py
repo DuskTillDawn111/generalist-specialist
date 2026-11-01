@@ -17,6 +17,7 @@ MODULES = (
     "test_milp_witness",
     "test_replicas",
     "test_runtime",
+    "test_observed_state_v2",
     "test_search_contract",
     "test_system",
     "test_quality_utility",
