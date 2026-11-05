@@ -13,6 +13,12 @@ from .contracts import digest
 from .. import normalization as norm
 
 
+def validate_prediction_trace(prediction, trace):
+    if (prediction.get("trace_sha256") is not None
+            and prediction["trace_sha256"] != trace_digest(trace.arrivals)):
+        raise ValueError("PREDICTOR_TRACE_IDENTITY_MISMATCH")
+
+
 def global_cost_floor(oracle, problem):
     c = problem.config
     if norm.is_v2(c.catalog):

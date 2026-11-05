@@ -7,7 +7,7 @@ import time
 from .activation import active_models
 from .contracts import Budget, BudgetExhausted, digest
 from .route_domain import ContinuousRouteDomain
-from .predictor_adapter import assignment_digest, normalize_prediction
+from .predictor_adapter import assignment_digest, normalize_prediction, validate_prediction_trace
 
 
 class ContinuousRoutingEvaluator:
@@ -60,6 +60,7 @@ class ContinuousRoutingEvaluator:
             key = digest([self.identity, deployment, routing, trace.identity])
             if self.cache_enabled and key in self.prediction_cache:
                 p = copy.deepcopy(self.prediction_cache[key])
+                validate_prediction_trace(p, trace)
                 self.budget.counts["cache_hits"] += 1
             else:
                 start = time.perf_counter()
@@ -69,10 +70,7 @@ class ContinuousRoutingEvaluator:
                 finally:
                     self.budget.times["prediction"] += time.perf_counter() - start
                 self.check()
-                if p.get("trace_sha256") is not None:
-                    from ..trace import trace_digest
-                    if p["trace_sha256"] != trace_digest(trace.arrivals):
-                        raise ValueError("PREDICTOR_TRACE_IDENTITY_MISMATCH")
+                validate_prediction_trace(p, trace)
                 if self.cache_enabled:
                     self.prediction_cache[key] = copy.deepcopy(p)
             state, value = normalize_prediction(p, c.search_policy)

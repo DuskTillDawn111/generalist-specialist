@@ -227,5 +227,69 @@ class ReferenceNormalizationTests(unittest.TestCase):
             c.workload,c.latency_reference_ms,{'g':{'text':.8}},**kwargs)
         self.assertIsNone(result['full_U']); self.assertIsNone(result['terms']['E'])
 
+    def test_frozen_online_forecast_requires_matching_external_identities(self):
+        c = fixture()
+        context = {'gpu_uuid': 'CPU fixture device'}
+        identity = c.catalog['quality']['identity']
+        spec = c.catalog[norm.KEY]
+        protocol = dict(warmup_seconds=0, priming_policy='one_per_routed_task',
+                        drain_seconds=2, arrival_process=c.arrival_process)
+        c.catalog['measurement_context'] = context
+        spec.update(status='frozen', measurement_context=context, input_identity=identity,
+                    deadline_multiplier=2, episode_protocol=protocol)
+        for task in spec['tasks'].values():
+            task['reference_mean_e2e_ms'] = task['deadline_ms'] / 2
+        norm.validate(c.catalog, c.workload, c.latency_reference_ms,
+                      c.horizon_seconds, c.gpu_memory_mib)
+        row = dict(request_id='0', task='text', alias='g#0', pool_id='a',
+                   arrival_ns=0, finish_ns=2_000_000)
+        forecast = dict(cohort={'0': row}, finishes={'0': row},
+                        board_energy_joules=5., through_drain_board_energy_joules=8.,
+                        peak_memory_mib=20.)
+        kwargs = dict(phase_start_ns=0, now_ns=0, deadline_ns=1_000_000_000,
+                      memory_budget_mib=c.gpu_memory_mib, energy_reference_watts=300.,
+                      observed_peak_memory_mib=10., observed_board_energy_joules=0.,
+                      observed_episode_energy_joules=2., normalization_reference=spec,
+                      utility_schema=norm.SCHEMA, episode_protocol=protocol,
+                      measurement_context=context, input_identity=identity)
+        def score(options):
+            return score_forecast(forecast, [], {'g#0': dict(family='g', supported_tasks=['text'])},
+                                  c.workload, c.latency_reference_ms, {'g': {'text': .8}}, **options)
+        result = score(kwargs)
+        self.assertIsNotNone(result['full_U'])
+        self.assertEqual(result['terms']['E'], .2)
+        self.assertEqual(result['normalization_sha256'], norm.identity(c.catalog))
+        for field, wrong in [('measurement_context', {'gpu_uuid': 'other device'}),
+                             ('input_identity', {'input_pool_sha256': 'other inputs'})]:
+            for value in (None, wrong):
+                with self.subTest(field=field, value=value):
+                    with self.assertRaisesRegex(ValueError, 'GPU/checkpoints'):
+                        score(dict(kwargs, **{field: value}))
+        mismatched = score(dict(kwargs, episode_protocol={**protocol, 'warmup_seconds': 1}))
+        self.assertIsNone(mismatched['full_U'])
+        self.assertIsNone(mismatched['terms']['E'])
+
+        # Exercise the JSON request entry point as well as the scoring API.
+        from gsdeploy.forecasting.__main__ import forecast_request
+        from tests.test_full_horizon_forecast import profiles, aliases, resources, request
+        payload = dict(schema='gsdeploy.full_horizon_forecast_request.v1',
+            execution_context_sha256='fixture', profiles=profiles(memory=lambda _: 20.),
+            aliases=aliases(), resources=resources(), queues={'s': [request('a')]},
+            now_ns=0, phase_start_ns=0, deadline_ns=1_000_000_000,
+            drain_deadline_ns=2_000_000_000,
+            future_workload=dict(rates=c.workload, input_pools={'text': ['x']},
+                                 process='declared_schedule', declared_arrivals=[]),
+            continuation_routing_rps={'text': {'s': 2.}}, latency_reference_ms=c.latency_reference_ms,
+            quality_loss={'text': {'text': .8}}, memory_budget_mib=c.gpu_memory_mib,
+            memory_safe_factor=1., energy_reference_watts=300., observed_peak_memory_mib=10.,
+            observed_board_energy_joules=0., observed_episode_energy_joules=2.,
+            normalization_reference=spec, utility_schema=norm.SCHEMA, episode_protocol=protocol,
+            measurement_context=context, input_identity=identity)
+        output = forecast_request(payload, allow_cpu_fixture=True)
+        self.assertIsNotNone(output['metrics']['full_U'])
+        self.assertEqual(output['metrics']['normalization_sha256'], norm.identity(c.catalog))
+        with self.assertRaisesRegex(ValueError, 'GPU/checkpoints'):
+            forecast_request({**payload, 'measurement_context': None}, allow_cpu_fixture=True)
+
 
 if __name__=='__main__': unittest.main()

@@ -5,7 +5,8 @@ from dataclasses import replace
 import unittest
 
 from gsdeploy.continuous import Budget, ImmutableContinuousProblem, SessionPredictorOracle
-from gsdeploy.continuous.contracts import digest
+from gsdeploy.continuous.contracts import TraceSpec, digest
+from gsdeploy.trace import trace_digest
 from gsdeploy.continuous.multi_candidate import (JointDeploymentCandidates,
     MultiCandidateContinuousRefinement, select_candidates, deployment_distance)
 from tests.test_calibrated_search_bounds_v6 import search_fixture
@@ -15,6 +16,76 @@ from gsdeploy.continuous.refinement import FixedDeploymentRoutingEvaluator
 
 
 class MultiCandidateTests(unittest.TestCase):
+    def test_custom_trace_joint_seed_matches_fresh_evaluation_and_shared_cache(self):
+        from tests.test_paper_completion import config
+        c = config()
+        trace = TraceSpec('burst', c.random_seed + 7, ((0., 'text'), (.001, 'text')))
+        p = ImmutableContinuousProblem(c, [trace])
+        with SessionPredictorOracle(p) as oracle:
+            budget = Budget(30, 100, 100)
+            extractor = JointDeploymentCandidates(p, oracle, budget)
+            result = extractor.solve_one(K=1, excluded=[], deployment={'g': 1})
+            winner = result['winner']
+            self.assertIsNotNone(winner)
+            self.assertEqual(result['trace_sha256'], trace_digest(trace.arrivals))
+            self.assertEqual(result['offered_requests'], len(trace.arrivals))
+            evaluator = FixedDeploymentRoutingEvaluator(p, oracle, winner['deployment'], budget)
+            fresh = evaluator.candidate(winner['deployment'], winner['routing'])
+            self.assertEqual(winner['prediction'], fresh['traces'][0]['prediction'])
+            evaluator.prediction_cache = extractor.cache
+            before = budget.counts['predictions']
+            cached = evaluator.candidate(winner['deployment'], winner['routing'])
+            self.assertEqual(cached, fresh)
+            self.assertEqual(budget.counts['predictions'], before)
+
+    def test_custom_replay_trace_and_seed_match_exhaustive_fresh_predictions(self):
+        c = replace(fitted_replay_fixture(), horizon_seconds=20.)
+        default = ImmutableContinuousProblem(c).train_traces[0]
+        trace = TraceSpec('compressed', c.random_seed + 7,
+                          tuple((offset / 2, task) for offset, task in default.arrivals))
+        p = ImmutableContinuousProblem(c, [trace],
+            replica_options={m: [1] for m in c.catalog['models']})
+        with SessionPredictorOracle(p) as oracle:
+            budget = Budget(30, 1000, 1000)
+            expected = {}
+            for x, routing in grid_plans(c, 2):
+                if any(n != 1 for n in x.values()):
+                    continue
+                prediction = oracle.predict(p, x, routing, trace, budget)
+                if prediction['constraints_eligible'] and prediction['U'] is not None:
+                    key = digest(x)
+                    expected[key] = max(expected.get(key, -float('inf')), prediction['U'])
+            self.assertTrue(expected)
+            extractor = JointDeploymentCandidates(p, oracle, budget)
+            candidates = extractor.generate(8, K=2)
+            self.assertEqual({digest(row['deployment']) for row in candidates}, set(expected))
+            for row in candidates:
+                self.assertAlmostEqual(row['grid_utility'], expected[digest(row['deployment'])])
+                self.assertTrue(row['restricted_grid_certified'])
+            for event in extractor.events:
+                fresh = oracle.predict(p, event['deployment'], event['routing'], trace, budget)
+                actual = event['prediction']
+                self.assertEqual(actual['trace_sha256'], fresh['trace_sha256'])
+                self.assertEqual(actual['constraints_eligible'], fresh['constraints_eligible'])
+                for field in ('U', 'Q_norm', 'T_norm', 'L_norm', 'P_norm', 'M_norm', 'E_norm'):
+                    self.assertAlmostEqual(actual[field], fresh[field])
+
+    def test_shared_cache_rejects_prediction_from_another_trace(self):
+        from tests.test_paper_completion import config
+        p = ImmutableContinuousProblem(config())
+        with SessionPredictorOracle(p) as oracle:
+            budget = Budget(30, 100, 100)
+            extractor = JointDeploymentCandidates(p, oracle, budget)
+            winner = extractor.solve_one(K=1, excluded=[], deployment={'g': 1})['winner']
+            key = extractor.cache_key(winner['deployment'], winner['routing'])
+            extractor.cache[key]['trace_sha256'] = trace_digest(((.001, 'text'),))
+            evaluator = FixedDeploymentRoutingEvaluator(p, oracle, winner['deployment'], budget)
+            evaluator.prediction_cache = extractor.cache
+            with self.assertRaisesRegex(ValueError, 'PREDICTOR_TRACE_IDENTITY_MISMATCH'):
+                evaluator.candidate(winner['deployment'], winner['routing'])
+            with self.assertRaisesRegex(ValueError, 'PREDICTOR_TRACE_IDENTITY_MISMATCH'):
+                extractor.solve_one(K=1, excluded=[], deployment={'g': 1})
+
     def test_excludes_whole_deployment_and_matches_independent_cartesian_ranking(self):
         c=search_fixture();states={m:[1] for m in c.catalog['models']}
         p=ImmutableContinuousProblem(c,replica_options=states)

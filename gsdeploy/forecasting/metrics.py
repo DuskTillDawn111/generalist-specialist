@@ -48,8 +48,16 @@ def score_forecast(forecast, completed, aliases, rates, refs, quality_loss, *,
                    energy_reference_watts, weights=None, observed_peak_memory_mib=None,
                    observed_board_energy_joules=None, memory_safe_factor=1.,
                    normalization_reference=None, observed_episode_energy_joules=None,
-                   utility_schema=None, episode_protocol=None):
-    data = ({norm.KEY: normalization_reference} if normalization_reference is not None else {})
+                   utility_schema=None, episode_protocol=None,
+                   measurement_context=None, input_identity=None):
+    """Score against references and independently supplied execution identities.
+
+    Frozen references require the current catalog's measurement_context and
+    quality.identity. Never derive these identities from the reference itself.
+    """
+    data = ({norm.KEY: normalization_reference, "measurement_context": measurement_context,
+             "quality": {"identity": input_identity}}
+            if normalization_reference is not None else {})
     v2 = norm.is_v2(data)
     if utility_schema == norm.SCHEMA and not v2:
         raise ValueError("Reference v2 scoring requires explicit references")

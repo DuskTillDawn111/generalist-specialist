@@ -14,7 +14,7 @@ from unittest.mock import patch
 from .contracts import Budget, BudgetExhausted, digest
 from .de_optimizer import DERoutingOptimizer
 from .immutable import ImmutableContinuousProblem, SessionPredictorOracle
-from .predictor_adapter import normalize_prediction
+from .predictor_adapter import normalize_prediction, validate_prediction_trace
 from .refinement import FixedDeploymentRoutingEvaluator, project_shares
 
 
@@ -79,7 +79,20 @@ class JointDeploymentCandidates:
 
     def solve_one(self, *, K, excluded, deployment=None):
         budget=self.budget
-        opt=self.oracle.session.optimizer('milp',milp_time_limit_seconds=max(.001,budget.deadline-time.perf_counter()))
+        self.problem.check()
+        self.oracle.check()
+        if len(self.problem.train_traces) != 1:
+            raise ValueError('CANDIDATE_GENERATION_REQUIRES_ONE_TRACE')
+        trace = self.problem.train_traces[0]
+        opt=self.oracle.session.optimizer('milp', seed=trace.seed,
+            milp_time_limit_seconds=max(.001,budget.deadline-time.perf_counter()))
+        # Joint defaults to make_trace(config). Bind both full predictions and
+        # column/queue relaxations to the continuous problem's exact cohort.
+        opt.trace = trace.arrivals
+        opt.counts = {t: sum(task == t for _, task in opt.trace) for t in opt.rates}
+        opt.task_offsets = {t: [at for at, task in opt.trace if task == t] for t in opt.rates}
+        opt.task_input_ids = (opt.surrogate.task_input_ids(opt.trace, trace.seed)
+                              if opt.surrogate else None)
         opt.start=time.monotonic();opt.no_split=False
         module=self.oracle.session.module('milp')
         predictor,master=module.predict_scenarios,module.solve_master
@@ -103,12 +116,15 @@ class JointDeploymentCandidates:
             x,r=args[1],args[2];key=self.cache_key(x,r)
             hit=key in self.cache
             if hit:
-                budget.counts['cache_hits']+=1;p=copy.deepcopy(self.cache[key])
+                p=copy.deepcopy(self.cache[key])
+                validate_prediction_trace(p, trace)
+                budget.counts['cache_hits']+=1
             else:
                 budget.consume('predictions');budget.counts['predictor_leaves']+=3
                 t=time.perf_counter()
                 try:p=predictor(*args,**kwargs)
                 finally:budget.times['prediction']+=time.perf_counter()-t
+                validate_prediction_trace(p, trace)
                 self.cache[key]=copy.deepcopy(p)
             self.observe(x,r,p,cached=hit)
             return p

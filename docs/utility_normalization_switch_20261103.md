@@ -78,6 +78,8 @@ python -m gsdeploy resource-study prepare \
 
 冻结工具输出新参考路径与哈希。复制当前系统配置到新版本，令 `normalization_reference` 指向该文件；`latency_reference_ms` 保留 null 时由 loader 从冻结参考填入，显式填写且冲突会报错。旧 pending 文件不覆盖，旧版本与凭据不改写。冻结参考还绑定实际 warmup/priming/drain 协议；评分证据协议不一致时 E 未知，原生启动会拒绝该不匹配。
 
+在线 `score_forecast()` 与 `python -m gsdeploy.forecasting forecast` 的 JSON 请求使用 frozen 参考时，还须提供当前执行环境的 `measurement_context` 和 `input_identity`（分别对应当前 catalog 的同名字段与 `quality.identity`）。这两项独立于 `normalization_reference` 传入，并与冻结参考校验；缺失或不匹配会被拒绝。`episode_protocol` 继续传入本次实际协议，协议不匹配时 E 与完整 U 保持未知。
+
 ## 实现和验证边界
 
 公共公式和契约在 `gsdeploy/normalization.py`，参考冻结在 `gsdeploy/reference_freeze.py`。版本与参考 SHA-256 进入评分；连续问题的目标身份也绑定参考 SHA-256。候选和资源控制对比不能各自换分母。
