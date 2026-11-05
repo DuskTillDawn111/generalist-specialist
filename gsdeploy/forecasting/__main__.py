@@ -70,14 +70,19 @@ def forecast_request(request, *, allow_cpu_fixture=False, allow_analytical_hypot
         admission_state=observed["admission"] if observed is not None else request.get("admission_state"),
         drain_deadline_ns=request["drain_deadline_ns"],
         handoff_state=request.get("handoff_state", ()),
-        require_energy=request.get("require_energy", True), require_memory=request.get("require_memory", False))
+        require_energy=request.get("require_energy", True), require_memory=request.get("require_memory", False),
+        require_episode_energy=request.get("utility_schema") == "six_term_reference_v2")
     metric = score_forecast(forecast, request.get("completed", []), aliases, workload.rates,
         request["latency_reference_ms"], request["quality_loss"], phase_start_ns=start,
         now_ns=now, deadline_ns=deadline, memory_budget_mib=request["memory_budget_mib"],
         energy_reference_watts=request["energy_reference_watts"],
         memory_safe_factor=request["memory_safe_factor"],
         observed_peak_memory_mib=request.get("observed_peak_memory_mib"),
-        observed_board_energy_joules=request.get("observed_board_energy_joules"))
+        observed_board_energy_joules=request.get("observed_board_energy_joules"),
+        normalization_reference=request.get("normalization_reference"),
+        utility_schema=request.get("utility_schema"),
+        episode_protocol=request.get("episode_protocol"),
+        observed_episode_energy_joules=request.get("observed_episode_energy_joules"))
     recovery_risk = None
     if "risk_request" in request:
         from .recovery_risk import RecoveryRiskProvider

@@ -1,0 +1,21 @@
+{
+  "sizes": [7, 14],
+  "seeds": [11, 29, 47],
+  "methods": ["BO-MADS", "SciPy-DE", "SciPy-DA", "Random"],
+  "maximum_searches": 24,
+  "budget": {"seconds": 60, "predictions": 64, "routes": 256, "milp": 128},
+  "objective_attempt_cap": 2048,
+  "encoding": "five normalized variables: first model, second model, mode(single1/single2/pair), image share, text share; integer bins and capability-only repair; same seeded model permutation across three generic methods",
+  "initialization": "same four exact charged routes and all cached observations; DE starts with their four best deployments, DA starts at their best, Random retains the same incumbent",
+  "de": {"strategy": "best1bin", "population": 10, "mutation": [0.5, 1.0], "recombination": 0.7, "updating": "immediate", "polish": false, "maxiter": 1000, "tol": 0.0, "atol": 0.0},
+  "da": {"initial_temp": 5230.0, "restart_temp_ratio": 0.00002, "visit": 2.62, "accept": -5.0, "maxiter": 1000, "no_local_search": false},
+  "target_gain": 0.005,
+  "primary_budget": "64 actual uncached complete candidate predictions including initialization; identical objective and deployment/route domain",
+  "schedule": "fixed shuffled order, same process, one BLAS thread; BO-MADS rerun with fixed exit logic for same-batch timing",
+  "stop_rule": "one fixed batch; no performance retries, parameter tuning, extra seeds or workload expansion",
+  "evidence": "existing synthetic convex queue-cost benchmark; not actual FIFO/GPU or a server deployment trace",
+  "reference": "sealed reference intervals and independent formula used only in post-run audit",
+  "new_gpu_runs": 0,
+  "real_predictor_calls": 0,
+  "predictor_refits": 0
+}

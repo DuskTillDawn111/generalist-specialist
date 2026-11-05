@@ -1,0 +1,39 @@
+{
+  "schema": "gsdeploy.bilevel_final_acceptance.v1",
+  "scope": "bounded algorithm acceptance; no GPU or predictor expansion",
+  "outer": {
+    "reuse_combo_seeds": [11, 29, 47],
+    "new_methods": ["BO-only", "MADS-only"],
+    "seeds": [11, 29, 47],
+    "maximum_new_runs": 6,
+    "seconds_per_run": 300,
+    "predictions_per_run": 64,
+    "routes_per_run": 32,
+    "milp_per_run": 128,
+    "initialization": "unchanged seven unique initial candidates; included in every run budget",
+    "acceptance": "same initialization and limits; record zero/negative gains without extending budget"
+  },
+  "inner": {
+    "fixture": "configs/continuous_fixture.json",
+    "workloads": ["low", "text_hot"],
+    "trace_seed": 101,
+    "replica_states": [0, 1, 2],
+    "maximum_cartesian_states": 27,
+    "fixed_routes": ["pure_g", "pure_shared", "task_specialists", "mixed_0314", "mixed_0618", "repeat_mixed_0314"],
+    "policies": ["fresh_exact_milp", "shared_exact", "shared_budget"],
+    "seconds_per_policy": 120,
+    "predictions_per_policy": 512,
+    "routes_per_policy": 12,
+    "milp_per_policy": 512,
+    "outer_runs": 2,
+    "outer_seconds": 60,
+    "outer_predictions": 256,
+    "outer_routes": 32,
+    "acceptance": "all exact fixed-route values agree with independent Cartesian enumeration; partial bounds contain truth; no false certification",
+    "evidence_kind": "existing synthetic FIFO CPU fixture; original fixture objective; not GPU evidence or measured v3 benefit"
+  },
+  "new_gpu_episodes": 0,
+  "predictor_refits": 0,
+  "automatic_retries": 0,
+  "stop_rule": "complete this fixed suite and report all outcomes; no tuning for a positive result"
+}

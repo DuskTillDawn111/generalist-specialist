@@ -34,6 +34,9 @@ def resolve_service(
     *, _allow_unvalidated_calibration=False,
 ):
     mode = data.get("performance_mode", "independent")
+    if mode == "paper_profiled_fifo_v1":
+        return None, {"mode": mode, "reason": "WHOLE_FIFO_EVALUATION_REQUIRED",
+                      "scope": "Nonseparable event forecast; scalar service replay is forbidden"}
     if mode == "route_load_replay_v1":
         from .coupled_mode import unknown_service
 

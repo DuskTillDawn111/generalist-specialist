@@ -1,5 +1,32 @@
 # 静态效用评价规范
 
+## 2026-11-03 当前正式口径：固定参考六项 v2
+
+当前显式使用 `utility_schema=six_term_reference_v2`，六项各 `1/6`。令 `alpha_t=lambda_t/sum(lambda)`：
+
+```text
+Q = sum alpha_t * (native_loss_t-a_t)/(z_t-a_t)
+T = 1 - N_successful_within_task_deadline/N_offered
+L = sum alpha_t * mean_e2e_ms_t/D_t
+P = sum alpha_t * p95_e2e_ms_t/D_t
+M = raw_owned_startup_through_drain_sampled_peak_mib/B
+E = startup_through_drain_GPU_board_joules/fixed_reference_episode_joules
+U = -(Q+T+L+P+M+E)/6
+D_t = 2 * isolated_fixed_reference_path_mean_e2e_ms_t
+```
+
+Q 原生损失继续为 1-EM、1-accuracy、CER、WER；编辑错误先累计再除以参考单位。质量锚点在可信开发路径集合上冻结，不随候选扩充；Q 不裁剪，允许负值。T 的完整 offered 分母保留失败与超时；窗口后在自己 deadline 内成功返回仍为 good。M 的安全系数只用于安全约束。E 覆盖 load/prime/warmup/formal/drain，取消旧 450W/3600s 摊销公式。
+
+六项各自文献与项目适配边界见[重设计依据](utility_normalization_redesign_20261101.md)，实际接线、验证及命令见[正式切换记录](utility_normalization_switch_20261103.md)。新入口 `configs/system_reference_v2_20261103.json` 与资源研究 `configs/resource_spillover_study_reference_v2_20261103.json` 已启用 v2。当前真实独立参考延迟和完整基准能量未测，参考状态为 pending；U 与新排名保持未知。只有固定参考及候选所需的原始证据完整时才能评分，旧平均功率校准不能代替完整 episode 模型。
+
+下文保留历史定义用于旧记录复现；其中“当前”等措辞均属于各节标注日期的历史口径。
+
+## 历史 2026-11-01：四任务共同 1 秒参考
+
+后续真实四任务配置统一 `b_text=b_image=b_ocr=b_asr=1000ms`，平均延迟与 P95 共用分母，六项权重仍各 `1/6`。这是预先指定的研究比较尺度，不是经验证的业务 SLO。六项等权组合及具体归一化是本项目设计；相关论文支持部分指标、需求权重和基线倍数法，并未提出本项目这套完整评价。
+
+新入口见 `configs/utility_objective_20261101.json`、`configs/system_one_second_20261101.json`、`configs/resource_spillover_study_20261101.json`。文献原文、六项来源边界、旧值与新值对比及敏感性分析见[归一化文献核查](utility_normalization_literature_20261101.md)。下文带日期的旧分母和实验结果保留历史身份，旧最优性结论不迁移至新目标。
+
 2026-10-28 口径澄清：当前预测器实验继承上一轮已冻结的 M 定义——启动至排空的 owned 采样峰值除以预算，安全系数只乘一次；下文历史“两次驻留快照”段落保留其历史身份。参见[最终结果的六项口径](predictor_validation_final_results_20261027.md)与[新原生实测适配器](prediction_observed_adapter_v2_20261028.md)。本次没有更换现有实验评分、g(n)、rho 或稳定性规则。
 
 ## 2026-10-24 后续资源控制与分流研究
@@ -8,7 +35,7 @@
 
 在线路由条件评分也包含 P，而非只在结果报告中展示；尚未支持的物理指标仍需显式标为未知。最近的 `tools/queue_five_term_20261023/` 与对应冻结结果保留五项身份，不以更换权重冒称已完成新六项搜索或实测。
 
-## 当前研究：六项质量效用（2026-10-21）
+## 历史研究：六项质量效用（2026-10-21）
 
 新研究配置显式使用 `utility_schema=six_term_quality_v1`，默认
 `T/L/P/M/E/Q` 各 `1/6`：
@@ -104,7 +131,7 @@ L_norm = sum_t alpha_t * mean_t / b_t
 
 归一化含义：任务平均延迟等于参考值时，该任务比值为 1；是参考值一半时为 0.5；两倍时为 2。再按输入流量占比加权，不用完成请求比例重算 alpha。它评价平均请求体验，适合反映常规处理速度和队列等待。
 
-当前四任务紧凑模型研究采用 `configs/compact_protocol.json` 中预先固定的研究尺度：
+2026-11-01 之前的四任务紧凑模型研究采用 `configs/compact_protocol.json` 中预先固定的研究尺度（历史值，后续默认见本文开头）：
 
 |任务|b_t（ms）|
 |---|---:|

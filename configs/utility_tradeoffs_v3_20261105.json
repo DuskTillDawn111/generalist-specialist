@@ -1,0 +1,19 @@
+{
+  "schema": "gsdeploy.utility_tradeoffs_review_config.v1",
+  "evaluation_role": "retrospective_exploratory",
+  "default_profile": "four_groups_v3",
+  "weight_profiles": ["six_equal_v2", "five_groups", "four_groups_v3"],
+  "deadline_multipliers": [1, 2, 4, 8],
+  "energy_scale_factors": [0.5, 1, 2],
+  "quality_span_factors": [0.5, 1, 2],
+  "maximum_scenarios": 108,
+  "default_deadline_multiplier": 2,
+  "latency_scale": "frozen_v2_deadline_ms_independent_of_slo",
+  "energy_scale": "historical_fixed_preference_scale_not_matched_load_baseline",
+  "quality_span_sensitivity": "common_factor_with_best_anchor_fixed_not_empirical_uncertainty",
+  "joint_delivery": "text_image_diagnostic_only; ocr_asr_undefined",
+  "gpu_episodes": 0,
+  "predictor_calls": 0,
+  "new_search_runs": 0,
+  "stop_rule": "one_existing_six_capture_panel_and_fixed_sensitivity_grid; no_expansion"
+}

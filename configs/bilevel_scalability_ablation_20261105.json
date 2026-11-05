@@ -1,0 +1,20 @@
+{
+  "schema": "gsdeploy.bilevel_scalability_ablation.v1",
+  "evidence": "manufactured convex queue-cost CPU benchmark, not FIFO replay or hardware evidence",
+  "sizes": [3, 7, 14],
+  "seeds": [11, 29, 47],
+  "methods_at_seven": ["BO-MADS", "BO-only", "MADS-only", "Grid-K4", "No-activation", "No-pool", "No-progressive"],
+  "maximum_search_runs": 27,
+  "budget": {"seconds": 60, "predictions": 64, "routes": 32, "milp": 128},
+  "inner": {"seconds": 5, "predictions": 4, "milp": 8},
+  "initialization": "four fixed routes, exact common inner policy, charged to every method; ablations enabled after initialization",
+  "workload": {"text": 0.65, "image": 0.35},
+  "memory_budget": 2.4,
+  "memory_per_replica": 1.0,
+  "replica_capacity_factors": [0, 1, 1.65],
+  "reference": {"max_deployments_per_size": 120, "max_iterations_per_deployment": 100, "seconds_per_size": 60, "outward_slack": 1e-9},
+  "improvement_tolerance": 1e-8,
+  "new_gpu_runs": 0,
+  "predictor_refits": 0,
+  "stop_rule": "execute the declared runs once; preserve zero gains, regressions and failures; no parameter tuning or additional seeds"
+}

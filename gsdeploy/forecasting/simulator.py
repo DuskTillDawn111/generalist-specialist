@@ -50,7 +50,7 @@ class FullHorizonModel:
     def forecast(self, queues, now_ns, deadline_ns, scenario="mean", *, future_arrivals=(),
                  route_future=None, admission_state=None, drain_deadline_ns=None,
                  require_energy=True, require_memory=False, trace_request_id=None,
-                 handoff_state=()):
+                 handoff_state=(), require_episode_energy=False, energy_state=None):
         if (type(now_ns) is not int or type(deadline_ns) is not int or now_ns > deadline_ns
                 or (drain_deadline_ns is not None and (type(drain_deadline_ns) is not int or drain_deadline_ns < deadline_ns))):
             raise ValueError("Explicit integer measurement/drain times required")
@@ -66,9 +66,12 @@ class FullHorizonModel:
 
         def check(row, alias=None, *, is_future=False):
             allowed = {"request_id", "task", "pool_id", "arrival_ns", "alias", "head_age_ms",
-                       "forecast_cursor", "observed_pending", "batch_ready_ns", "batch_ready_evidence"}
+                       "forecast_cursor", "observed_pending", "batch_ready_ns", "batch_ready_evidence", "native_order"}
             if set(row) - allowed:
                 raise ValueError("Forecast requests accept timing/input/progress only, no labels or outputs")
+            if 'native_order' in row and (type(row['native_order']) is not int or row['native_order']<0
+                    or getattr(self.service_provider,'native_order_law',None) is None):
+                raise ValueError('Explicit nonnegative request ordinal requires its bound native order provider')
             if (not isinstance(row.get("request_id"), str) or not row["request_id"]
                     or row["request_id"] in seen or type(row.get("arrival_ns")) is not int):
                 raise ValueError("Invalid/duplicate request identity or arrival")
@@ -165,7 +168,10 @@ class FullHorizonModel:
         receipts, releases, ready_times = {}, {}, {}
         lifecycle_events = []
         clock, energy, peak = 0., 0., 0.
+        through_drain_energy = 0.
         energy_known, memory_known = True, True
+        causal_energy = getattr(self.power_provider, 'requires_energy_history', False)
+        energy_carry = energy_state
         arrival_index, events = 0, 0
         diagnostics = QueueDiagnostics(self.aliases, self.service_provider, scenario, self.resources, now_ns)
         if self.batch_configurations:
@@ -230,6 +236,8 @@ class FullHorizonModel:
             row.update(profile_id=plans[alias]["profile_id"], segment_id=segment["id"],
                        segment_kind=segment["kind"], segment_duration_ms=segment["duration_ms"],
                        resource_demand=segment["demand"])
+            if getattr(self.service_provider,'requires_native_call_age',False):
+                row['native_segment_start_ns']=now_ns+round(clock)
             progress[alias] = [index, fraction]
 
         def start_ready():
@@ -348,9 +356,16 @@ class FullHorizonModel:
             events += 1
             if events > self.max_events:
                 raise UnknownEvidence("FULL_HORIZON_EVENT_BUDGET_EXCEEDED_NO_TRUNCATION")
-            rates = {}
+            rates, service_evidence = {}, {}
+            native_event=None
+            native_clock=getattr(self.service_provider,'native_clock_event',None)
+            if native_clock is not None:
+                native_event=native_clock(active,now_ns+round(clock))
+                if native_event is not None and (type(native_event) is not int or native_event<=now_ns+round(clock)):
+                    raise ValueError('Native numerical age event must follow the causal forecast clock')
             for alias, row in active.items():
                 value = self.service_provider.service(row, active, self.aliases, scenario)
+                service_evidence[alias] = value.get('evidence')
                 ms = value.get("service_ms")
                 if (value.get("known") is True and value.get("context_supported") is True
                         and value.get("stalled") is True and ms is None):
@@ -368,26 +383,50 @@ class FullHorizonModel:
                            min(ready_times.values(), default=math.inf),
                            min(batch_wakes.values(), default=math.inf),
                            min((p["at"] for p in preparing.values()), default=math.inf),
+                           native_event-now_ns if native_event is not None else math.inf,
                            window_end if clock < window_end else math.inf, drain_end)
             if not math.isfinite(boundary) or boundary < clock:
                 raise UnknownEvidence("ADMISSION_DEADLOCK_OR_INVALID_EVENT")
             delta = boundary - clock
             diagnostics.observe(now_ns + round(clock), delta, pending, active, plans, progress, permitted, waiting, rates, batch_members)
-            if clock >= window_end:
+            if causal_energy:
+                left_ns, right_ns = now_ns + round(clock), now_ns + round(boundary)
+                try:
+                    if preparing:
+                        raise UnknownEvidence('UNKNOWN_CAUSAL_ENERGY_BATCH_PREPARATION')
+                    if delta > 0:
+                        interval_joules, next_carry = self.power_provider.energy_interval(active,left_ns,right_ns,energy_carry)
+                        window_right = min(right_ns, deadline_ns)
+                        window_joules = (self.power_provider.energy_interval(active,left_ns,window_right,energy_carry)[0]
+                                          if window_right > left_ns else 0.)
+                        energy += window_joules
+                        through_drain_energy += interval_joules
+                        energy_carry = next_carry
+                        power = dict(known=True,watts=interval_joules/(delta/1e9),
+                                     evidence='empirical native activity and carried idle age; interval average')
+                    else:
+                        power = None
+                except UnknownEvidence:
+                    energy_known = False
+                    power = dict(known=False)
+                    if require_energy:
+                        raise
+            elif clock >= window_end and not require_episode_energy:
                 power = None
             elif preparing:
                 method = getattr(self.power_provider, "power_preparing", None)
                 power = method(preparing, active, self.aliases, scenario) if method else {"known": False}
             else:
                 power = self.power_provider.power(active, self.aliases, scenario)
-            if power is not None:
+            if power is not None and not causal_energy:
                 watts = power.get("watts")
                 if power.get("known") is not True or type(watts) not in (int, float) or not math.isfinite(watts) or watts < 0:
                     energy_known = False
                     if require_energy:
                         raise UnknownEvidence("UNKNOWN_WHOLE_BOARD_POWER_CONTEXT")
                 else:
-                    energy += watts * min(delta, window_end - clock) / 1e9
+                    energy += watts * max(0., min(delta, window_end - clock)) / 1e9
+                    through_drain_energy += watts * delta / 1e9
             if preparing:
                 method = getattr(self.memory_provider, "memory_preparing", None)
                 memory = method(preparing, active, self.aliases, scenario) if method else {"known": False}
@@ -408,9 +447,12 @@ class FullHorizonModel:
                           "preparing_requests": {a: p["row"]["request_id"] for a, p in preparing.items()},
                           "segments": {a: r["segment_id"] for a, r in active.items()},
                           "service_ms": {a: ms if math.isfinite(ms) else None for a, ms in rates.items()},
+                          "service_evidence": service_evidence,
                           "stalled_aliases": sorted(a for a, ms in rates.items() if not math.isfinite(ms)),
                           "resource_demands": {a: r["resource_demand"] for a, r in active.items()},
                           "board_watts": power.get("watts") if power and power.get("known") else None,
+                          "power_evidence": power.get('evidence') if power else None,
+                          "memory_evidence": memory.get('evidence'),
                           "peak_memory_mib": memory_mib if memory.get("known") else None,
                           "admission_waiting": list(waiting), "repriced_aliases": sorted(active)}
             if (trace_request_id is None or trace_request_id in transition["active_requests"].values()
@@ -514,6 +556,9 @@ class FullHorizonModel:
                 "lifecycle_scope": ("explicit receipt/release/worker-ready evidence" if self.lifecycle_provider is not None
                                     else "legacy instantaneous handler-to-receipt/release/ready assumption"),
                 "board_energy_joules": energy if energy_known else None, "energy_known": energy_known,
+                "final_energy_state": energy_carry if causal_energy and energy_known else None,
+                "through_drain_board_energy_joules": (through_drain_energy
+                    if require_episode_energy and energy_known and not incomplete else None),
                 "peak_memory_mib": peak if memory_known else None, "memory_known": memory_known,
                 "transitions": transitions, "initial_residual_evidence": evidence,
                 "transition_count": events,

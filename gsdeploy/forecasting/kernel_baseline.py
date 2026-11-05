@@ -13,7 +13,7 @@ import json
 import math
 
 import numpy as np
-from scipy.optimize import linprog
+from ..linear_solver import linprog
 
 
 SCHEMA = 'gsdeploy.kernel_baseline_observations.v2'

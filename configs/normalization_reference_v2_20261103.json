@@ -1,0 +1,134 @@
+{
+  "schema": "six_term_reference_v2",
+  "status": "pending",
+  "provenance": {
+    "design": "docs/utility_normalization_redesign_20261101.md",
+    "evidence": "artifacts/utility-normalization-redesign-20261101/evidence.json",
+    "quality_scope": "Frozen retained-path development pool; not independent confirmation data."
+  },
+  "workload_rps": {
+    "text": 0.0748360842705697,
+    "image": 0.0748360842705697,
+    "ocr": 0.0748360842705697,
+    "asr": 0.0748360842705697
+  },
+  "horizon_seconds": 1800,
+  "memory_budget_mib": 49140,
+  "input_identity": {
+    "input_pool_sha256": "234bd32a8d06a505245aff83a057501312a6fa50e799379cae86cbb73face449",
+    "reference_sha256": "6af4213bbe915b3893616c16acdcfa29e929fc2f09194d7dd35fbaf2d898227f",
+    "protocol_sha256": "823efd61b2fb7eee995bfc680c6437797c968b37ce36d77610ed5c49b6478d5e",
+    "source": "/root/autodl-tmp/generalist-specialist-project/artifacts/static-study-v6-20261021/inputs"
+  },
+  "measurement_context": {
+    "gpu_uuid": "GPU-8a262fe0-598c-46b7-c953-41d9da84a47e",
+    "runtime_checkpoint_sha256": {
+      "generalist_2": "e7c74f9ebf332c14e569cee21caa759cf9a1119bf3a74b65ce7dbc6e90d469f5",
+      "text": "b81e8c95244beeb01cb009b56c6422cbd898cb85d346b702b5e4bdd2da2edac7",
+      "image": "b1a3c565cd7d4b56d098467621f8358e6abb2bca4be71cb10aa779b73bb82115",
+      "ocr": "d1c43e7a2d04423cf9d01e49dc8ea57a58068727650c45ef8e10b671edbb6bc5",
+      "asr": "86078a39dea74ee2ceac968683678d4c1222faf57484d1f2f5d13d8a77f8f85c"
+    },
+    "historical_quality_checkpoint_equivalence": "receipt_scope_only; actual run outputs rescored"
+  },
+  "deadline_multiplier": 2,
+  "deadline_multiplier_sensitivity": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "episode_reference_joules": null,
+  "episode_scope": "startup_load_prime_warmup_formal_drain_whole_gpu_board",
+  "reference_deployment": {
+    "text": 1,
+    "image": 1,
+    "ocr": 1,
+    "asr": 1
+  },
+  "tasks": {
+    "text": {
+      "best_loss": 0.28125,
+      "worst_loss": 0.53125,
+      "best_path": "text",
+      "worst_path": "generalist_1",
+      "reference_path": "text",
+      "deadline_ms": null,
+      "reference_mean_e2e_ms": null,
+      "provenance": {
+        "quality": "Retained executable paths; original native aggregate loss, fixed development pool.",
+        "trusted_path_losses": {
+          "generalist_1": 0.53125,
+          "generalist_2": 0.34375,
+          "generalist_3": 0.3125,
+          "text": 0.28125
+        },
+        "latency": "PENDING independent batch=1 isolated e2e reference run; no handler-time substitution."
+      }
+    },
+    "image": {
+      "best_loss": 0.234375,
+      "worst_loss": 0.46875,
+      "best_path": "image",
+      "worst_path": "generalist_3",
+      "reference_path": "image",
+      "deadline_ms": null,
+      "reference_mean_e2e_ms": null,
+      "provenance": {
+        "quality": "Retained executable paths; original native aggregate loss, fixed development pool.",
+        "trusted_path_losses": {
+          "generalist_1": 0.375,
+          "generalist_2": 0.453125,
+          "generalist_3": 0.46875,
+          "image": 0.234375
+        },
+        "latency": "PENDING independent batch=1 isolated e2e reference run; no handler-time substitution."
+      }
+    },
+    "ocr": {
+      "best_loss": 0.023001205303334674,
+      "worst_loss": 0.10109481719566091,
+      "best_path": "ocr",
+      "worst_path": "generalist_3",
+      "reference_path": "ocr",
+      "deadline_ms": null,
+      "reference_mean_e2e_ms": null,
+      "provenance": {
+        "quality": "Retained executable paths; original native aggregate loss, fixed development pool.",
+        "trusted_path_losses": {
+          "generalist_1": 0.04233627963037365,
+          "generalist_2": 0.03892125351546806,
+          "generalist_3": 0.10109481719566091,
+          "ocr": 0.023001205303334674
+        },
+        "latency": "PENDING independent batch=1 isolated e2e reference run; no handler-time substitution."
+      }
+    },
+    "asr": {
+      "best_loss": 0.017937219730941704,
+      "worst_loss": 0.053811659192825115,
+      "best_path": "asr",
+      "worst_path": "generalist_1",
+      "reference_path": "asr",
+      "deadline_ms": null,
+      "reference_mean_e2e_ms": null,
+      "provenance": {
+        "quality": "Retained executable paths; original native aggregate loss, fixed development pool.",
+        "trusted_path_losses": {
+          "generalist_1": 0.053811659192825115,
+          "generalist_2": 0.020179372197309416,
+          "generalist_3": 0.028026905829596414,
+          "asr": 0.017937219730941704
+        },
+        "latency": "PENDING independent batch=1 isolated e2e reference run; no handler-time substitution."
+      }
+    }
+  },
+  "reference_receipts": [
+    {
+      "path": "artifacts/utility-normalization-audit-20261101/catalog-calibrated-replay-v2.json",
+      "sha256": "c7c34ad2a86b7701a0f2ed7b75dcebef44d37a2e58d230b71e6c4b2ba064619b",
+      "role": "development_quality_anchors_only"
+    }
+  ]
+}

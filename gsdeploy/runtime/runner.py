@@ -20,6 +20,7 @@ from ..trace import expand_routes, make_trace, trace_digest
 from .telemetry import PowerMonitor
 from ..energy import integrate_power, energy_key
 from ..resources import prepare_registry, validate_resources
+from .. import normalization as norm
 
 
 def record(phase, index, task, worker, item, scheduled):
@@ -165,6 +166,8 @@ def run(
     config.validate(
         {a: system.catalog["models"][m]["supported_tasks"] for a, m in aliases.items()}
     )
+    if norm.is_v2(system.catalog) and not norm.protocol_matches(system.catalog, config.as_dict(), priming_policy):
+        raise ValueError("NORMALIZATION_EPISODE_PROTOCOL_MISMATCH: use frozen warmup/priming/drain settings")
     if resource_configuration is not None:
         resource_configuration = validate_resources(resource_configuration, aliases)
         if backend == "native":
@@ -220,12 +223,19 @@ def run(
         enabled=backend == "native", device=checks["device"] if checks else "0"
     )
     power.sample()
+    if norm.is_v2(system.catalog):
+        monitor.sample()
     startup_begin = time.perf_counter_ns()
     power.start()
     try:
+        if norm.is_v2(system.catalog):
+            monitor.allow_uninitialized = True
+            monitor.start()
         runtime.start()
+        monitor.allow_uninitialized = False
         monitor.sample()
-        monitor.start()
+        if not norm.is_v2(system.catalog):
+            monitor.start()
         monitor.check()
         priming = []
         if priming_policy == "largest_three_per_task":
@@ -347,6 +357,7 @@ def run(
         "samples": monitor.samples,
         "before": before,
         "after": after,
+        "episode_coverage_valid": bool(measured and norm.is_v2(system.catalog)),
     }
     w = raw["measurement_window"]
     run_j = (
@@ -369,7 +380,7 @@ def run(
         "samples": power.samples,
         "sampling_errors": power.errors,
         "startup_begin_time_ns": startup_begin,
-        "scope_note": "total GPU board energy including load/prime/warmup; excludes CPU and bounded post-window drain",
+        "scope_note": "run/startup fields retain historical boundaries; episode includes load/prime/warmup/formal/drain; GPU board only",
         "profile_key": energy_key(
             winner["deployment"],
             winner["routing"],
@@ -381,6 +392,9 @@ def run(
             resource_configuration=resource_configuration,
         ),
     }
+    if norm.is_v2(system.catalog) and w:
+        raw["energy_evidence"] = norm.measured_episode(raw["energy_evidence"], w)
+        raw["energy_evidence"]["episode_protocol"] = norm.observed_protocol(config.as_dict(), priming_policy)
     if raw["measurement_window"]:
         raw["per_task_metrics"], raw["system_metrics"], raw["model_metrics"] = (
             summarize(raw["request_records"], config, raw["measurement_window"])

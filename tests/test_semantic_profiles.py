@@ -1,104 +1,56 @@
-"""Semantic progress parser/fit CPU fixtures; never physical measurements."""
+"""Host semantic subdivision preserves coverage and rejects unsupported concurrency."""
 import copy
-import json
-from pathlib import Path
-import tempfile
 import unittest
-from unittest.mock import patch
 
-from tools.predictor_validation_20261027.semantic_profiles import parse_semantic_request,semantic_context,fit_semantic
-
-
-MS=1_000_000
+from gsdeploy.forecast_errors import UnknownEvidence
+from gsdeploy.forecasting.semantic_profiles import split_semantic_native
+from tests.test_native_training import capture
 
 
-def row(rid='r',alias='s',family='text',pool='x',start=0,end=10*MS):
-    return {'request_id':rid,'alias':alias,'family':family,'task':'text','pool_id':pool,'handler_start_ns':start,'handler_end_ns':end}
+def row_with_calls():
+    row=copy.deepcopy(capture('one','solo')['raw']['request_records'][0])
+    left=row['worker_response']['observed_stages'][1]['start_ns']
+    def event(role,start,end):
+        return dict(request_id=row['request_id'],role=role,component=role,
+                    host_start_ns=left+start*1_000_000,host_end_ns=left+end*1_000_000,
+                    device_event_complete=True,device_elapsed_ms=float(end-start),
+                    stream_id=7,end_current_stream_id=7)
+    row['worker_response'].update(semantic_phase_schema='gsdeploy.semantic_native_observation.v1',
+        semantic_phase_events=[event('prepare',1,8),event('vision',2,4),event('language',8,9)])
+    return row
 
 
-def response(count=2):
-    records=[{'forward_index':i,'start_ns':(2+3*i)*MS,'end_ns':(3+3*i)*MS} for i in range(count)]
-    return {'semantic_forward_observations':{'schema':'gsdeploy.semantic_forward_observation.v1','request_id':'r',
-                'clock':'time.perf_counter_ns','records':records,'instrumentation_errors':[],'gpu_synchronization_added':False,
-                'token_scope':'test fixture','classification_scope':'mixed Python call'},
-            'observed_stages':[{'id':'post_sync','start_ns':8*MS,'end_ns':9*MS}]}
+class SemanticProfileTests(unittest.TestCase):
+    def test_nested_calls_and_gaps_cover_the_original_mixed_handler(self):
+        row=row_with_calls();original=copy.deepcopy(row);layout=split_semantic_native(row)
+        self.assertEqual(row,original)
+        self.assertEqual([s['semantic_role'] for s in layout],
+                         ['setup','native_gap','prepare','vision','prepare','language','native_gap','tail'])
+        self.assertEqual(sum(s['end_ns']-s['start_ns'] for s in layout),12_000_000)
+        self.assertTrue(all(s['kind']=='gpu' and s['mixed_host_transfers_CUDA'] for s in layout[1:-1]))
 
+    def test_asynchronous_device_elapsed_does_not_replace_host_boundaries(self):
+        row=row_with_calls();row['worker_response']['semantic_phase_events'][1]['device_elapsed_ms']=1000.
+        layout=split_semantic_native(row)
+        vision=next(s for s in layout if s['semantic_role']=='vision')
+        self.assertEqual(vision['end_ns']-vision['start_ns'],2_000_000)
 
-def trace(index,requests,split='training'):
-    return {'id':str(index),'requests':requests,'split':split,'execution_context_sha256':'CPU-fixture'}
+    def test_crossing_calls_are_unknown_in_the_single_owner_segment_model(self):
+        row=row_with_calls();events=row['worker_response']['semantic_phase_events']
+        events[-1]['host_start_ns']=events[0]['host_end_ns']-1
+        with self.assertRaisesRegex(UnknownEvidence,'CONCURRENT_NONNESTED'):
+            split_semantic_native(row)
 
-
-class SemanticTests(unittest.TestCase):
-    def test_continuous_semantics_include_sampling_and_sync(self):
-        parsed=parse_semantic_request(row(),response())
-        segments=parsed['segments']
-        self.assertEqual([s['phase'] for s in segments],['prepare','prefill','decode','finalize'])
-        self.assertEqual([(s['start_ns']//MS,s['end_ns']//MS) for s in segments],[(0,2),(2,5),(5,9),(9,10)])
-        self.assertTrue(all(s['kind']=='mixed' and s['demand']=={'sm':None,'dram':None,'l2':None} for s in segments))
-        self.assertFalse(parsed['progress_positioning']['known'])
-        self.assertFalse(parsed['progress_positioning']['gpu_progress_known'])
-
-    def test_single_forward_has_no_fictional_decode(self):
-        parsed=parse_semantic_request(row(),response(1))
-        self.assertEqual([s['phase'] for s in parsed['segments']],['prepare','prefill','finalize'])
-        self.assertEqual(parsed['segments'][1]['end_ns'],9*MS)
-
-    def test_ocr_does_not_require_language_forward(self):
-        parsed=parse_semantic_request(row(family='ocr'),{})
-        self.assertEqual([s['phase'] for s in parsed['segments']],['ocr_native'])
-
-    def test_no_forward_or_instrumentation_error_is_unknown(self):
-        for response_value in (response(0),response(1)):
-            if response_value['semantic_forward_observations']['records']:
-                response_value['semantic_forward_observations']['instrumentation_errors']=['hook failed']
-            with self.assertRaises(ValueError):parse_semantic_request(row(),response_value)
-
-    def test_boundary_reference_error_is_reported_without_gpu_claim(self):
-        value=response();value['semantic_boundary_references']=[{'boundary':'first_forward_start','reference_ns':2*MS-100,'basis':'independent CPU fixture reference'}]
-        report=parse_semantic_request(row(),value)['progress_positioning']
-        self.assertTrue(report['known']);self.assertEqual(report['errors'][0]['error_ns'],100)
-        self.assertFalse(report['gpu_progress_known'])
-
-    def test_nonmonotonic_forward_rejected(self):
-        value=response();value['semantic_forward_observations']['records'][1]['start_ns']=1
-        with self.assertRaises(ValueError):parse_semantic_request(row(),value)
-
-    def fit(self,traces):
-        with tempfile.TemporaryDirectory() as directory:
-            source=Path(directory)/'fixture.json';source.write_text(json.dumps(traces))
-            with patch('tools.predictor_validation_20261027.semantic_profiles.semantic_traces',return_value=(traces,{})):
-                return fit_semantic(source)
-
-    def simple(self,rid,alias,duration):
-        value=row(rid=rid,alias=alias,end=duration)
-        value['segments']=[{'phase':'prefill','start_ns':0,'end_ns':duration}]
-        value['progress_positioning']={'known':False,'reason':'CPU fixture no physical progress reference'}
-        return value
-
-    def test_analytical_shared_progress_fit_and_multiway_no_extrapolation(self):
-        # Solo 10ms, two concurrent handlers 20ms -> speed .5 under SS.
-        traces=[trace(0,[self.simple('a','s0',10*MS)]),trace(1,[self.simple('b','s0',10*MS)]),
-                trace(2,[self.simple('c','s0',20*MS),self.simple('d','s1',20*MS)])]
-        fitted=self.fit(traces)
-        self.assertTrue(fitted['known']);self.assertEqual(fitted['coverage']['accepted_groups'],1)
-        contexts=fitted['accepted_target_contexts']
-        two=next(c for c in contexts if c['members'][0]['count']==2)
-        self.assertAlmostEqual(two['progress'],.5)
-        self.assertTrue(all(sum(m['count'] for m in c['members'])<=2 for c in contexts))
-        self.assertFalse(fitted['core_enabled'])
-
-    def test_validation_is_excluded(self):
-        traces=[trace(0,[self.simple('a','s0',10*MS)]),trace(1,[self.simple('b','s0',10*MS)]),
-                trace(2,[self.simple('c','s0',1000*MS)],split='validation')]
-        fitted=self.fit(traces)
-        self.assertEqual(fitted['solo_baselines'][0]['mean_ms'],10)
-        self.assertEqual(fitted['coverage']['validation_batches_excluded'],1)
-
-    def test_context_preserves_phase_and_multiplicity(self):
-        value=row();first={'phase':'prefill'};second={'phase':'decode'}
-        a=semantic_context([(value,first),(value,first)])
-        b=semantic_context([(value,first),(value,second)])
-        self.assertNotEqual(a[0],b[0]);self.assertEqual(a[1][0]['count'],2)
+    def test_missing_incomplete_and_out_of_native_observations_are_rejected(self):
+        row=row_with_calls();row['worker_response'].pop('semantic_phase_events')
+        with self.assertRaisesRegex(UnknownEvidence,'UNKNOWN_SEMANTIC'):
+            split_semantic_native(row)
+        row=row_with_calls();row['worker_response']['semantic_phase_events'][0]['device_event_complete']=False
+        with self.assertRaisesRegex(ValueError,'Complete causal'):
+            split_semantic_native(row)
+        row=row_with_calls();row['worker_response']['semantic_phase_events'][0]['host_start_ns']-=2_000_000
+        with self.assertRaisesRegex(ValueError,'outside'):
+            split_semantic_native(row)
 
 
 if __name__=='__main__':unittest.main()

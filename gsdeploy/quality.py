@@ -12,6 +12,7 @@ import math
 import random
 
 from .routing import Router
+from .normalization import quality_loss
 from .trace import expand_routes
 
 SCHEMA = "six_term_quality_v1"
@@ -75,7 +76,7 @@ def _unknown(exc, **context):
     return None, {"status": "missing", "kind": "unknown", "reason": str(exc), **context}
 
 
-def task_quality(data, task, x, row, trace, seed=42):
+def _native_task_quality(data, task, x, row, trace, seed=42):
     """Return native task loss and provenance for one frozen routing column.
 
     ``input_order`` is the source JSONL order, shuffled exactly as SamplePool.
@@ -137,6 +138,13 @@ def task_quality(data, task, x, row, trace, seed=42):
         }
     except (KeyError, TypeError, ValueError) as exc:
         return _unknown(exc, task=task)
+
+
+def task_quality(data, task, x, row, trace, seed=42):
+    native, evidence = _native_task_quality(data, task, x, row, trace, seed)
+    value = quality_loss(data, task, native)
+    return value, {**evidence, "native_loss": native,
+                   "normalized_loss": value}
 
 
 def predict_quality(data, x, routing, rates, trace, seed=42):
@@ -201,9 +209,11 @@ def measure_quality(data, raw, rates):
         if any(v[1] == 0 for v in totals.values()):
             raise ValueError("MISSING_QUALITY_TASK_OBSERVATIONS")
         total = math.fsum(rates.values())
-        per_task = {t: {"loss": a / b, "error_numerator": a,
+        per_task = {t: {"loss": quality_loss(data, t, a / b), "native_loss": a / b, "error_numerator": a,
                         "reference_denominator": b, "requests": n}
                     for t, (a, b, n) in totals.items()}
+        if any(p["loss"] is None for p in per_task.values()):
+            raise ValueError("MISSING_QUALITY_NORMALIZATION_REFERENCES")
         return math.fsum(rates[t] / total * p["loss"] for t, p in per_task.items()), {
             "status": "available", "kind": "measured_outputs",
             "identity": quality["identity"], "per_task": per_task,

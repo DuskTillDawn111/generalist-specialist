@@ -52,7 +52,9 @@ class SystemConfig:
             raise ValueError("Workload must contain known tasks")
         for task, rate in self.workload.items():
             positive(rate, f"workload.{task}")
-            positive(self.latency_reference_ms.get(task), f"reference.{task}")
+            if not (self.utility_schema == "six_term_reference_v2"
+                    and self.latency_reference_ms.get(task) is None):
+                positive(self.latency_reference_ms.get(task), f"reference.{task}")
         positive(self.gpu_memory_mib, "gpu_memory_mib")
         if type(self.route_grid) is not int or self.route_grid < 1:
             raise ValueError("route_grid must be a positive integer")
@@ -69,8 +71,8 @@ class SystemConfig:
         if not math.isclose(sum(self.weights.values()), 1.0, abs_tol=1e-9):
             raise ValueError("Utility weights must sum to one")
         if self.weights["Q"] > 0:
-            if self.utility_schema != "six_term_quality_v1" or "E" not in self.weights:
-                raise ValueError("Q>0 requires utility_schema=six_term_quality_v1 and all six terms")
+            if self.utility_schema not in {"six_term_quality_v1", "six_term_reference_v2"} or "E" not in self.weights:
+                raise ValueError("Q>0 requires an explicit six-term utility schema and all six terms")
             if self.catalog.get("capability_contract") != "verified_executable_v1":
                 raise ValueError("Six-term studies require verified executable capabilities")
         elif self.utility_schema not in {None, "legacy_four_term", "five_term"}:
@@ -98,6 +100,13 @@ class SystemConfig:
         if type(self.milp_capacity_witness) is not bool:
             raise ValueError("milp_capacity_witness must be a boolean")
         data = self.catalog
+        from .normalization import is_v2, validate as validate_normalization
+
+        if self.utility_schema == "six_term_reference_v2":
+            validate_normalization(data, self.workload, self.latency_reference_ms,
+                                   self.horizon_seconds, self.gpu_memory_mib)
+        elif is_v2(data):
+            raise ValueError("Reference v2 catalog cannot use a historical utility schema")
         from .performance import valid_profile
 
         if data.get("performance_mode", "independent") not in {
@@ -108,15 +117,16 @@ class SystemConfig:
             "calibrated_replay_v2",
             "replay_transfer_v1",
             "route_load_replay_v1",
+            "paper_profiled_fifo_v1",
         }:
             raise ValueError("Unknown performance_mode")
-        if data.get("memory_mode", "standalone_proxy") not in {"standalone_proxy", "profiled", "calibrated_surrogate", "calibrated_replay_v2", "replay_transfer_v1", "route_load_replay_v1"}:
+        if data.get("memory_mode", "standalone_proxy") not in {"standalone_proxy", "profiled", "calibrated_surrogate", "calibrated_replay_v2", "replay_transfer_v1", "route_load_replay_v1", "paper_profiled_fifo_v1"}:
             raise ValueError("Unknown memory_mode")
         from .coupled_mode import is_coupled, validate_placeholder
 
         if is_coupled(data):
             validate_placeholder(data)
-        elif data.get("memory_mode") == "route_load_replay_v1":
+        elif data.get("memory_mode") in {"route_load_replay_v1", "paper_profiled_fifo_v1"}:
             raise ValueError("Coupled memory mode requires coupled performance mode")
         if data.get("performance_mode") == "calibrated_surrogate":
             from .calibration import _spec
@@ -178,6 +188,13 @@ class SystemConfig:
         data = json.loads(path.read_text())
         if isinstance(data["catalog"], str):
             data["catalog"] = json.loads((path.parent / data["catalog"]).read_text())
+        if "normalization_reference" in data:
+            reference = data.pop("normalization_reference")
+            data["catalog"]["utility_normalization"] = json.loads(
+                (path.parent / reference).read_text())
+            for task, row in data["catalog"]["utility_normalization"]["tasks"].items():
+                if data["latency_reference_ms"].get(task) is None:
+                    data["latency_reference_ms"][task] = row.get("deadline_ms")
         # Zero-demand tasks do not introduce predictor paths or references.
         for task, value in data["workload"].items():
             if task not in TASKS:
@@ -202,6 +219,10 @@ class SystemConfig:
                 raise ValueError(f"Unmeasured or invalid deployment: {model}/{count}")
         if set(routing) != set(self.workload):
             raise ValueError("Routing task set does not match workload")
+        if self.catalog.get("performance_mode") == "paper_profiled_fifo_v1":
+            from .paper_forecast import validate_plan
+
+            return validate_plan(self, deployment, routing)
         from .performance import resolve_service
 
         service, evidence = resolve_service(

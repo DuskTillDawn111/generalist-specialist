@@ -1,0 +1,165 @@
+{
+  "schema": "gsdeploy.resource_study_design.v1",
+  "system_config": "../artifacts/static-study-v6-20261021/inputs/system-config.json",
+  "workers": "../artifacts/static-study-v6-20261021/inputs/worker-registry.json",
+  "samples": "../artifacts/static-study-v6-20261021/inputs/runtime-inputs.jsonl",
+  "objective": "utility_objective_20261101.json",
+  "deployment": {
+    "text": 2,
+    "generalist_2": 1,
+    "ocr": 1
+  },
+  "workload_rps": {
+    "text": 1.85,
+    "image": 0.01,
+    "asr": 0.01,
+    "ocr": 0.01
+  },
+  "latency_reference_ms": {
+    "text": 1000,
+    "image": 1000,
+    "ocr": 1000,
+    "asr": 1000
+  },
+  "duration_seconds": 600,
+  "warmup_seconds": 30,
+  "drain_seconds": 300,
+  "arrival_process": "poisson",
+  "seeds": [
+    501,
+    502
+  ],
+  "target_task": "text",
+  "specialist_family": "text",
+  "generalist_family": "generalist_2",
+  "background_routing": {
+    "image": {
+      "generalist_2": 0.01
+    },
+    "asr": {
+      "generalist_2": 0.01
+    },
+    "ocr": {
+      "ocr": 0.01
+    }
+  },
+  "policy_parameters": {
+    "scenarios": [
+      "mean",
+      "p90"
+    ],
+    "utility_margin": 0,
+    "exposure_rate_rps": 0.23125,
+    "exposure_burst": 1,
+    "cooldown_ms": 30000,
+    "drift_ratio_limit": 2,
+    "memory_delta_penalty_upper_norm": null,
+    "maximum_pending_for_forecast": 32
+  },
+  "resource_variants": {
+    "shared": {
+      "schema": "gsdeploy.resource_configuration.v1",
+      "mode": "shared",
+      "device": "0",
+      "allocations": {
+        "text#0": {},
+        "text#1": {},
+        "generalist_2#0": {},
+        "ocr#0": {}
+      }
+    },
+    "admit_two_generates": {
+      "schema": "gsdeploy.resource_configuration.v1",
+      "mode": "request_admission",
+      "device": "0",
+      "allocations": {
+        "text#0": {
+          "max_inflight": 1
+        },
+        "text#1": {
+          "max_inflight": 1
+        },
+        "generalist_2#0": {
+          "max_inflight": 1
+        },
+        "ocr#0": {
+          "max_inflight": 1
+        }
+      },
+      "groups": {
+        "all_resident_workers": {
+          "aliases": [
+            "text#0",
+            "text#1",
+            "generalist_2#0",
+            "ocr#0"
+          ],
+          "max_active": 2
+        }
+      }
+    },
+    "mps_cap_s30_g30_o10": {
+      "schema": "gsdeploy.resource_configuration.v1",
+      "mode": "mps_cap",
+      "device": "0",
+      "mps_session": {
+        "pipe_directory": "/tmp/gsdeploy-resource-study-20261101/pipe",
+        "log_directory": "/tmp/gsdeploy-resource-study-20261101/log"
+      },
+      "allocations": {
+        "text#0": {
+          "active_thread_percentage": 30
+        },
+        "text#1": {
+          "active_thread_percentage": 30
+        },
+        "generalist_2#0": {
+          "active_thread_percentage": 30
+        },
+        "ocr#0": {
+          "active_thread_percentage": 10
+        }
+      }
+    },
+    "mps_cap_s35_g20_o10": {
+      "schema": "gsdeploy.resource_configuration.v1",
+      "mode": "mps_cap",
+      "device": "0",
+      "mps_session": {
+        "pipe_directory": "/tmp/gsdeploy-resource-study-20261101/pipe",
+        "log_directory": "/tmp/gsdeploy-resource-study-20261101/log"
+      },
+      "allocations": {
+        "text#0": {
+          "active_thread_percentage": 35
+        },
+        "text#1": {
+          "active_thread_percentage": 35
+        },
+        "generalist_2#0": {
+          "active_thread_percentage": 20
+        },
+        "ocr#0": {
+          "active_thread_percentage": 10
+        }
+      }
+    }
+  },
+  "unresolved_modes": [
+    "mps_static_sm",
+    "green_context",
+    "shared_weight_batch_backend"
+  ],
+  "notes": [
+    "2026-11-01 prospective revision: all four latency references are 1000 ms; common comparison scale, not a validated SLO. Historical 20261024 design/results remain unchanged.",
+    "CPU-only draft, not an authorized GPU queue or validated resource allocation.",
+    "Two MPS cap points are exploratory hypotheses, not measured capacity or optimal shares.",
+    "The two-request admission point is a whole-generate concurrency hypothesis; it is not kernel scheduling or SM partitioning.",
+    "MPS ceilings do not reserve exclusive SM sets even when their percentages sum to 100.",
+    "Seeds 501/502 are prospective development placeholders; reservation must be checked before a new executable packet.",
+    "Keep the previous text1.85 and three background rates to separate execution-control effects.",
+    "Policy parameters carry forward development defaults; mean/p90 are scenarios, not error bounds.",
+    "Explicit SM layouts remain unresolved until actual hardware granularity and backend compatibility are known.",
+    "No old predictor, capacity conclusion, energy profile or optimality certificate transfers to this resource domain."
+  ]
+}
