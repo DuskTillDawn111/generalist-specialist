@@ -8,6 +8,19 @@ configs → DeploymentSystem → optimizer + predictor → plan
 samples + workers → runtime → request records → evaluation
 ```
 
+## 当前效用口径（2026-11-03）
+
+正式研究入口已切到 `six_term_reference_v2`：Q 使用冻结质量跨度，T 使用 deadline 有效吞吐损失，L/P 共用参考路径实测 e2e 的 2 倍，M 使用原始 owned 峰值/预算，E 使用完整启动至排空 GPU 能量/基准能量。六项仍各 `1/6`。
+
+真实四任务配置为 [`configs/system_reference_v2_20261103.json`](configs/system_reference_v2_20261103.json)。独立延迟与完整基准能量尚待测量，当前返回 `NORMALIZATION_REFERENCES_PENDING`，不生成新排名。完整软件路径可用合成 CPU 样例验证：
+
+```bash
+python -m gsdeploy plan --config configs/paper_fifo_reference_v2_cpu_fixture.json
+python -m gsdeploy.reference_freeze --config configs/system_reference_v2_20261103.json
+```
+
+六项来源、切换边界和参考冻结流程见[正式切换记录](docs/utility_normalization_switch_20261103.md)。历史配置与结果保留原版本身份。
+
 ## 快速开始
 
 Python 3.10+，CPU 规划使用 NumPy 和 SciPy/HiGHS：
@@ -46,17 +59,21 @@ artifacts/      本地实验产物（不进入 Git）
 
 核心包不导入编号实验目录，不从历史 `results/` 动态加载实现，也不依赖固定研究服务器路径。新增算法与功能在 `gsdeploy/` 中开发；实验调用公开接口。
 
+J3O/USHER 适配算法与阶段共驻/FIFO 主搜索接线见[实现与小范围验证](docs/paper_mechanism_integration_20261102.md)。
+进一步的数据转换、共享 FIFO 界、映射缓存、结构化部署搜索和资源配置选择见[CPU 阶段交付](docs/paper_structured_completion_20261103.md)。
+`configs/paper_fifo_cpu_fixture.json` 提供可手算的纯 CPU 样例；其有限域结果不是 GPU 精度或收益证据。
+
 ## 资源控制研究：CPU 准备
 
-2026-10-24 新增逐 worker 资源配置、整请求并发准入及六项等权实验包准备入口。
+逐 worker 资源配置、整请求并发准入及六项等权实验包已接入当前 v2 入口。
 下列命令仅做 CPU 校验，不启动 GPU、MPS 或模型：
 
 ```bash
 python -m gsdeploy resource-study prepare \
-  --design configs/resource_spillover_study_20261024.json \
-  --output artifacts/resource-control-cpu-20261024/experiment-packet.json
+  --design configs/resource_spillover_study_reference_v2_20261103.json \
+  --output artifacts/resource-control-reference-v2/experiment-packet.json
 python -m gsdeploy resource-study validate \
-  --packet artifacts/resource-control-cpu-20261024/experiment-packet.json
+  --packet artifacts/resource-control-reference-v2/experiment-packet.json
 ```
 
 整请求准入已可用 CPU mock 验证；MPS 上限目前准备启动环境，静态 SM／Green Contexts
@@ -107,6 +124,19 @@ python experiments/candidate_pool.py --config configs/holdout.json \
 `configs/catalogs/a.json`、`b.json`、`c.json` 保存三个历史嵌套候选池的单副本冻结参数。`c_replicas.json` 接入同模型已有双/三副本实测参数；`static_replicas.json` 的负载已缩减为四任务，但仍使用旧任务画像，仅作软件与历史基线对照，不能当成新问答/整页 OCR 的小模型池结果。代表任务容量转移仍是规划代理。K=1 的结果只覆盖声明的预测器和有限域，不代表任意连续路由或真实 GPU 上的全局最优。
 
 ## Python API
+
+当前研究目标为[激活感知 BO–MADS 双层连续优化](docs/activation_bilevel_implementation_20261104.md)：外层 BO/网格局部轮询搜索连续路由及激活组合，内层共享候选池与按需 MILP 搜索部署和副本。`ActivationAwareBilevelOptimizer` 与单次求解/对照脚本已提供，旧 Joint MILP、DE 与 C1-Lite 保留基线。当前验证为 CPU 软件证据，真实预测和收益待 GPU 实验。
+见[接口与复现](docs/continuous_routing_usage.md)、[Phase 1 结果](docs/continuous_routing_phase1.md)及[内层改进与消融](docs/continuous_routing_inner_improvement.md)。可选 `inner="bounded"` 默认启用安全界，热启动默认关闭。[已验证回放界与不可变缓存](docs/continuous_routing_validated_improvement.md)新增 `inner="milp_bounds"` 和私有 session 的真实数据校准回放消融；端到端仍落后旧 DFS/Joint，不替换旧默认规划器或宣称真实 GPU 收益。
+
+[Joint 扩展性与连续精修](docs/joint_scalability_and_refinement.md)记录 K1–16、合法副本域与固定部署精修的236次实验。新增显式 `JointMILPContinuousRefinement`，可选DE、独立局部精修及部署邻域；当前未观察到高于Joint初始解的效用，原默认优化器保持不变。
+
+[G/S 路由收益诊断](docs/routing_benefit_diagnosis.md)进一步发现合法固定Text部署中的非网格内部收益；新增驻留成本和轨迹敏感性使其仍未超过原Joint赢家。包含16条曲线、逐请求FIFO核验、完整数据及复现脚本，未更改主优化器或预测器。
+
+[多候选部署与连续精修](docs/multi_candidate_continuous_refinement.md)完成独立候选生成、k=1/3/5/8和两种选择策略的同预算对照。观察到靠后部署升至第二名，但没有超过原Joint第一名；多候选增加成本。本轮未扩展部署邻域，提供51次有效运行、原始数据、对比图及显式API，原默认流程保留。
+
+[候选安全筛选与自适应预算](docs/adaptive_candidate_refinement.md)新增覆盖固定部署整个连续路由域的乐观效用界，以及独立 `AdaptiveCandidateRefinementOptimizer`。区分安全删除、经验性暂停与预算中止，并提供同预测、同时间及同外层预算的消融；原Joint/DFS/DE、目标与预测器保留。
+
+[优化难度诊断](docs/gsdeploy_optimization_difficulty_diagnosis.md)以完整小域枚举和逐轮Master证据解释一次预测认证；[路由与负载干扰审计](docs/route_load_interference_audit.md)区分共享FIFO变化与尚未实现的动态执行干扰。提供独立诊断、原始数据、覆盖表与九类图表，不改变原优化器。
 
 ```python
 from gsdeploy import DeploymentSystem, SystemConfig

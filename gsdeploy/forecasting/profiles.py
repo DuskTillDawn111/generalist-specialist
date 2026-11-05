@@ -55,7 +55,7 @@ class ProfileProvider:
     def __init__(self, document, execution_context_sha256, *, allow_cpu_fixture=False):
         self.document = copy.deepcopy(document)
         required = {"schema", "execution_context_sha256", "provenance", "profiles", "contexts"}
-        if set(document) - required - {"fit_diagnostics", "preparation_contexts"} or required - set(document):
+        if set(document) - required - {"fit_diagnostics", "preparation_contexts", "context_interpolation"} or required - set(document):
             raise ValueError("Invalid segment profile document fields")
         if document["schema"] != PROFILE_SCHEMA or document["execution_context_sha256"] != execution_context_sha256:
             raise ValueError("Resource execution context mismatch")
@@ -157,6 +157,11 @@ class ProfileProvider:
                     if value is not None:
                         number(value, name)
 
+        self.context_law = None
+        if 'context_interpolation' in document:
+            from .context_law import ConvexContextLaw
+            self.context_law = ConvexContextLaw(self.document, self.profiles)
+
     def plan(self, row, aliases, scenario):
         alias = row["alias"]
         profile = self.lookup.get((aliases[alias]["family"], row["task"], row["pool_id"]))
@@ -177,6 +182,10 @@ class ProfileProvider:
                 raise ValueError("Active profile does not match request identity")
         key = context_key(active)
         context = self.document["contexts"].get(key)
+        # Missing fields/scenarios of an observed context remain UNKNOWN.
+        # Interpolation is explicit and only fills entirely unseen contexts.
+        if context is None and self.context_law is not None:
+            return self.context_law.evaluate(active, scenario, key)
         if context is None or scenario not in context["scenarios"]:
             raise UnknownEvidence("UNKNOWN_ALIGNED_SEGMENT_CONTEXT:" + key + ":" + scenario)
         return context["scenarios"][scenario], context["evidence"]

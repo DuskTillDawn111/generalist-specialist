@@ -33,7 +33,7 @@ SOURCES = ["gsdeploy/resource_study.py", "gsdeploy/resources.py", "gsdeploy/conf
            "gsdeploy/runtime/workload.py", "gsdeploy/trace.py", "gsdeploy/routing.py",
            "gsdeploy/energy.py", "gsdeploy/evaluation.py", "gsdeploy/prediction.py",
            "gsdeploy/stability.py", "gsdeploy/quality.py",
-           "gsdeploy/metrics.py", "gsdeploy/runtime/protocol.py",
+           "gsdeploy/metrics.py", "gsdeploy/normalization.py", "gsdeploy/runtime/protocol.py",
            "tools/queue_coupled_utility_20261023/policy.py",
            "tools/queue_coupled_utility_20261023/model.py",
            "tools/resource_control_20261024/policy.py",
@@ -55,8 +55,9 @@ def receipt(path):
 
 def objective_contract(document):
     expected = {k: 1 / 6 for k in "QTLPME"}
-    if (document.get("schema") != "gsdeploy.objective_contract.v1"
-            or document.get("utility_schema") != "six_term_quality_v1"
+    if ((document.get("schema"), document.get("utility_schema")) not in {
+                ("gsdeploy.objective_contract.v1", "six_term_quality_v1"),
+                ("gsdeploy.objective_contract.v2", "six_term_reference_v2")}
             or document.get("weights") != expected
             or set(document.get("active_utility_terms", [])) != set(expected)
             or document.get("P_evaluation_role") != "objective"
@@ -107,6 +108,10 @@ def build_packet(design_path):
                      weights=objective["weights"], utility_schema=objective["utility_schema"],
                      horizon_seconds=design["duration_seconds"], drain_seconds=design["drain_seconds"],
                      arrival_process=design["arrival_process"])
+    if objective['utility_schema'] == 'six_term_reference_v2':
+        expected = read(_path(paths['objective'].parent, objective['normalization_reference']))
+        if expected != system.catalog.get('utility_normalization'):
+            raise ValueError('Objective reference version differs from the effective system')
     number(design["warmup_seconds"], "warmup_seconds")
     if system.drain_seconds <= 0:
         raise ValueError("A positive bounded drain is required for this study")

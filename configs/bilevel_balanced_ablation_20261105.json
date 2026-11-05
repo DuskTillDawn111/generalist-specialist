@@ -1,0 +1,28 @@
+{
+  "schema": "gsdeploy.balanced_component_ablation.v1",
+  "evidence": "manufactured convex queue-cost CPU benchmark; not real GPU, real seven-model deployment or FIFO replay",
+  "sizes": [7, 14],
+  "seeds": [11, 29, 47],
+  "variants": ["BO-only", "MADS-only", "No-activation", "No-pool", "No-progressive", "Grid-K4"],
+  "maximum_new_searches": 36,
+  "reused_balanced_searches": 6,
+  "budget": {"seconds": 60, "predictions": 64, "routes": 32, "milp": 128},
+  "balanced_archive": "artifacts/bilevel-scheduler-improvement-20261105",
+  "legacy_archive": "artifacts/bilevel-scalability-ablation-20261105",
+  "initialization": "same four exact charged initialization routes; component changes only after initialization; verify entire signature against balanced archive",
+  "scheduler": {"global_interval": 4, "activation_period": 3, "refinement_fraction": 0.25, "max_route_refinements": 2, "local_batch_trials": 1},
+  "semantics": {
+    "BO-only": "disable MADS local polling; retain activation exploration and balanced global scheduling",
+    "MADS-only": "disable EI acquisition; retain activation/global exploration and MADS; not pure standalone classical MADS",
+    "No-activation": "replace activation faces/transitions with one full-domain space; keep domain, endpoints, memory filter and shared initialization",
+    "No-pool": "disable cross-route deployment candidate retrieval after initialization; retain route-local cache/bounds and common initialization",
+    "No-progressive": "request exact inner solve after initialization under the same total budget; incomplete exact solve stops search rather than claiming certification",
+    "Grid-K4": "seeded finite quarter-grid baseline; not a one-component ablation; use shared initializer and balanced repeated-observation guard"
+  },
+  "analysis": "paired per-seed utility differences and prediction/MILP cost ratios against reused balanced full; raw points, medians and observed ranges only; no p-values or universal synergy claim",
+  "audit": "enumerate all memory-feasible deployments independently at every evaluated route; reuse continuous reference intervals, never re-solve them",
+  "stop_rule": "execute the fixed 36-search batch once; retain failures, zero gains and regressions; no tuning, extra seeds, workload expansion or performance retries",
+  "new_gpu_runs": 0,
+  "real_predictor_calls": 0,
+  "predictor_refits": 0
+}

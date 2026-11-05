@@ -27,6 +27,13 @@ class DeploymentSystem:
                 ):
                     raise ValueError(f"Invalid fixed deployment: {model}/{count}")
         c = replace(c, route_grid=grid)
+        from . import normalization as norm
+        if not norm.ready(c.catalog):
+            return {"winner": None, "status": "NORMALIZATION_REFERENCES_PENDING",
+                    "search_completed": False, "optimality_certified": False,
+                    "utility_schema": norm.SCHEMA,
+                    "normalization_sha256": norm.identity(c.catalog),
+                    "problem": c.as_dict()}
         if c.solver == "milp":
             from .milp import JointMilpOptimizer
 
@@ -108,6 +115,8 @@ class DeploymentSystem:
         )
 
     def run(self, plan, samples, **options):
+        if self.config.catalog.get("performance_mode") == "paper_profiled_fifo_v1":
+            raise ValueError("Experimental paper FIFO model has no native execution qualification")
         from .runtime.runner import run
 
         winner = plan.get("winner")

@@ -1,0 +1,577 @@
+{
+  "catalog": {
+    "safe_factor": 1.2,
+    "models": {
+      "g": {
+        "role": "generalist",
+        "supported_tasks": [
+          "text"
+        ],
+        "service_time_ms": {
+          "text": 2.0
+        },
+        "executable_tasks": [
+          "text"
+        ]
+      },
+      "s": {
+        "role": "specialist",
+        "supported_tasks": [
+          "text"
+        ],
+        "service_time_ms": {
+          "text": 4.0
+        },
+        "executable_tasks": [
+          "text"
+        ]
+      }
+    },
+    "capacity_factors": {
+      "g": {
+        "0": 0.0,
+        "1": 1.0
+      },
+      "s": {
+        "0": 0.0,
+        "1": 1.0
+      }
+    },
+    "memory_table_mib": {
+      "g": {
+        "0": 0.0,
+        "1": 1.0
+      },
+      "s": {
+        "0": 0.0,
+        "1": 1.0
+      }
+    },
+    "capability_contract": "verified_executable_v1",
+    "quality": {
+      "schema_version": 1,
+      "mode": "aggregate_proxy",
+      "identity": {
+        "input_pool_sha256": "synthetic CPU fixture",
+        "reference_sha256": "synthetic CPU fixture",
+        "protocol_sha256": "synthetic CPU fixture",
+        "source": "synthetic CPU fixture"
+      },
+      "paths": {
+        "g": {
+          "text": {
+            "metric": "em",
+            "unit": "fraction",
+            "value": 0.2,
+            "checkpoint_sha256": "synthetic fixture",
+            "source": "CPU fixture"
+          }
+        },
+        "s": {
+          "text": {
+            "metric": "em",
+            "unit": "fraction",
+            "value": 0.99,
+            "checkpoint_sha256": "synthetic fixture",
+            "source": "CPU fixture"
+          }
+        }
+      }
+    },
+    "energy_profiles": {},
+    "performance_mode": "paper_profiled_fifo_v1",
+    "memory_mode": "paper_profiled_fifo_v1",
+    "paper_profiled_fifo_v1": {
+      "schema": "gsdeploy.paper_profiled_fifo.v1",
+      "allow_cpu_fixture": true,
+      "input_order": {
+        "text": [
+          "x"
+        ]
+      },
+      "scenarios": {
+        "1.0": "mean"
+      },
+      "deployments": [
+        {
+          "deployment": {
+            "g": 1
+          },
+          "profiles": {
+            "schema": "gsdeploy.segment_resource_profiles.v1",
+            "execution_context_sha256": "analytical-only-g",
+            "provenance": {
+              "kind": "cpu_fixture",
+              "split": "training",
+              "sources": [
+                "hand-computable-software-test"
+              ]
+            },
+            "profiles": [
+              {
+                "id": "g",
+                "family": "g",
+                "task": "text",
+                "pool_id": "x",
+                "execution": {
+                  "batch_size": 1,
+                  "backend": "cpu_fixture",
+                  "weight_reuse": false
+                },
+                "segments": [
+                  {
+                    "id": "gpu",
+                    "kind": "gpu",
+                    "duration_ms": {
+                      "mean": 80.0
+                    },
+                    "demand": {
+                      "sm": 0.8,
+                      "dram": 0.1,
+                      "l2": 0.2
+                    }
+                  }
+                ]
+              }
+            ],
+            "contexts": {
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945": {
+                "members": {},
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {},
+                    "board_watts": 20.0,
+                    "peak_memory_mib": 20.0
+                  }
+                }
+              },
+              "15d2e17d7553af94f584728dae3c7e36d0bec1462655b82d40b9c06877b0b834": {
+                "members": {
+                  "g#0": {
+                    "profile_id": "g",
+                    "segment_id": "gpu"
+                  }
+                },
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {
+                      "g#0": 1.0
+                    },
+                    "board_watts": 60.0,
+                    "peak_memory_mib": 20.0
+                  }
+                }
+              }
+            }
+          },
+          "lifecycle": {
+            "schema": "gsdeploy.handler_lifecycle_profiles.v2",
+            "execution_context_sha256": "analytical-only-g",
+            "provenance": {
+              "kind": "cpu_fixture",
+              "split": "training",
+              "sources": [
+                "hand-computable-software-test"
+              ]
+            },
+            "profiles": [
+              {
+                "family": "g",
+                "task": "text",
+                "pool_id": "x",
+                "permit_scope": "not_applicable",
+                "scenarios": {
+                  "mean": {
+                    "parent_receipt_ms": 5.0,
+                    "permit_release_ms": null,
+                    "worker_next_ready_ms": 20.0
+                  }
+                },
+                "evidence": [
+                  "hand-computable-software-test"
+                ]
+              }
+            ]
+          },
+          "capacity_service_ms": {
+            "g": {
+              "text": 80.0
+            }
+          },
+          "capacity_evidence": "analytical-original-rho-service-basis",
+          "startup_joules": 2.0,
+          "startup_peak_memory_mib": 3.0,
+          "startup_energy_scope": "startup_load_prime_warmup"
+        },
+        {
+          "deployment": {
+            "s": 1
+          },
+          "profiles": {
+            "schema": "gsdeploy.segment_resource_profiles.v1",
+            "execution_context_sha256": "analytical-only-s",
+            "provenance": {
+              "kind": "cpu_fixture",
+              "split": "training",
+              "sources": [
+                "hand-computable-software-test"
+              ]
+            },
+            "profiles": [
+              {
+                "id": "s",
+                "family": "s",
+                "task": "text",
+                "pool_id": "x",
+                "execution": {
+                  "batch_size": 1,
+                  "backend": "cpu_fixture",
+                  "weight_reuse": false
+                },
+                "segments": [
+                  {
+                    "id": "gpu",
+                    "kind": "gpu",
+                    "duration_ms": {
+                      "mean": 100.0
+                    },
+                    "demand": {
+                      "sm": 0.1,
+                      "dram": 0.8,
+                      "l2": 0.2
+                    }
+                  }
+                ]
+              }
+            ],
+            "contexts": {
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945": {
+                "members": {},
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {},
+                    "board_watts": 20.0,
+                    "peak_memory_mib": 20.0
+                  }
+                }
+              },
+              "78b03dbe37808dfe4ac205e61b22147872455b92ee56aad2a0d8fb70569a8b15": {
+                "members": {
+                  "s#0": {
+                    "profile_id": "s",
+                    "segment_id": "gpu"
+                  }
+                },
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {
+                      "s#0": 1.0
+                    },
+                    "board_watts": 60.0,
+                    "peak_memory_mib": 20.0
+                  }
+                }
+              }
+            }
+          },
+          "lifecycle": {
+            "schema": "gsdeploy.handler_lifecycle_profiles.v2",
+            "execution_context_sha256": "analytical-only-s",
+            "provenance": {
+              "kind": "cpu_fixture",
+              "split": "training",
+              "sources": [
+                "hand-computable-software-test"
+              ]
+            },
+            "profiles": [
+              {
+                "family": "s",
+                "task": "text",
+                "pool_id": "x",
+                "permit_scope": "not_applicable",
+                "scenarios": {
+                  "mean": {
+                    "parent_receipt_ms": 10.0,
+                    "permit_release_ms": null,
+                    "worker_next_ready_ms": 20.0
+                  }
+                },
+                "evidence": [
+                  "hand-computable-software-test"
+                ]
+              }
+            ]
+          },
+          "capacity_service_ms": {
+            "s": {
+              "text": 100.0
+            }
+          },
+          "capacity_evidence": "analytical-original-rho-service-basis",
+          "startup_joules": 2.0,
+          "startup_peak_memory_mib": 3.0,
+          "startup_energy_scope": "startup_load_prime_warmup"
+        },
+        {
+          "deployment": {
+            "g": 1,
+            "s": 1
+          },
+          "profiles": {
+            "schema": "gsdeploy.segment_resource_profiles.v1",
+            "execution_context_sha256": "analytical-only-g-s",
+            "provenance": {
+              "kind": "cpu_fixture",
+              "split": "training",
+              "sources": [
+                "hand-computable-software-test"
+              ]
+            },
+            "profiles": [
+              {
+                "id": "g",
+                "family": "g",
+                "task": "text",
+                "pool_id": "x",
+                "execution": {
+                  "batch_size": 1,
+                  "backend": "cpu_fixture",
+                  "weight_reuse": false
+                },
+                "segments": [
+                  {
+                    "id": "gpu",
+                    "kind": "gpu",
+                    "duration_ms": {
+                      "mean": 80.0
+                    },
+                    "demand": {
+                      "sm": 0.8,
+                      "dram": 0.1,
+                      "l2": 0.2
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "s",
+                "family": "s",
+                "task": "text",
+                "pool_id": "x",
+                "execution": {
+                  "batch_size": 1,
+                  "backend": "cpu_fixture",
+                  "weight_reuse": false
+                },
+                "segments": [
+                  {
+                    "id": "gpu",
+                    "kind": "gpu",
+                    "duration_ms": {
+                      "mean": 100.0
+                    },
+                    "demand": {
+                      "sm": 0.1,
+                      "dram": 0.8,
+                      "l2": 0.2
+                    }
+                  }
+                ]
+              }
+            ],
+            "contexts": {
+              "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945": {
+                "members": {},
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {},
+                    "board_watts": 20.0,
+                    "peak_memory_mib": 40.0
+                  }
+                }
+              },
+              "78b03dbe37808dfe4ac205e61b22147872455b92ee56aad2a0d8fb70569a8b15": {
+                "members": {
+                  "s#0": {
+                    "profile_id": "s",
+                    "segment_id": "gpu"
+                  }
+                },
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {
+                      "s#0": 1.0
+                    },
+                    "board_watts": 60.0,
+                    "peak_memory_mib": 40.0
+                  }
+                }
+              },
+              "15d2e17d7553af94f584728dae3c7e36d0bec1462655b82d40b9c06877b0b834": {
+                "members": {
+                  "g#0": {
+                    "profile_id": "g",
+                    "segment_id": "gpu"
+                  }
+                },
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {
+                      "g#0": 1.0
+                    },
+                    "board_watts": 60.0,
+                    "peak_memory_mib": 40.0
+                  }
+                }
+              },
+              "91f17d3a2031f0e1eb62af618686da6e7ef4ca9a4d3e095bba52543417ede38a": {
+                "members": {
+                  "g#0": {
+                    "profile_id": "g",
+                    "segment_id": "gpu"
+                  },
+                  "s#0": {
+                    "profile_id": "s",
+                    "segment_id": "gpu"
+                  }
+                },
+                "evidence": "analytical-only",
+                "scenarios": {
+                  "mean": {
+                    "progress": {
+                      "g#0": 0.5,
+                      "s#0": 0.5
+                    },
+                    "board_watts": 100.0,
+                    "peak_memory_mib": 40.0
+                  }
+                }
+              }
+            }
+          },
+          "lifecycle": {
+            "schema": "gsdeploy.handler_lifecycle_profiles.v2",
+            "execution_context_sha256": "analytical-only-g-s",
+            "provenance": {
+              "kind": "cpu_fixture",
+              "split": "training",
+              "sources": [
+                "hand-computable-software-test"
+              ]
+            },
+            "profiles": [
+              {
+                "family": "g",
+                "task": "text",
+                "pool_id": "x",
+                "permit_scope": "not_applicable",
+                "scenarios": {
+                  "mean": {
+                    "parent_receipt_ms": 5.0,
+                    "permit_release_ms": null,
+                    "worker_next_ready_ms": 20.0
+                  }
+                },
+                "evidence": [
+                  "hand-computable-software-test"
+                ]
+              },
+              {
+                "family": "s",
+                "task": "text",
+                "pool_id": "x",
+                "permit_scope": "not_applicable",
+                "scenarios": {
+                  "mean": {
+                    "parent_receipt_ms": 10.0,
+                    "permit_release_ms": null,
+                    "worker_next_ready_ms": 20.0
+                  }
+                },
+                "evidence": [
+                  "hand-computable-software-test"
+                ]
+              }
+            ]
+          },
+          "capacity_service_ms": {
+            "g": {
+              "text": 80.0
+            },
+            "s": {
+              "text": 100.0
+            }
+          },
+          "capacity_evidence": "analytical-original-rho-service-basis",
+          "startup_joules": 4.0,
+          "startup_peak_memory_mib": 3.0,
+          "startup_energy_scope": "startup_load_prime_warmup"
+        }
+      ],
+      "max_requests": 20,
+      "max_events": 1000
+    },
+    "utility_normalization": {
+      "schema": "six_term_reference_v2",
+      "status": "synthetic_fixture",
+      "provenance": "CPU arithmetic fixture only; invented references are not measurements",
+      "workload_rps": {
+        "text": 2.0
+      },
+      "horizon_seconds": 1.0,
+      "memory_budget_mib": 100.0,
+      "episode_reference_joules": 50.0,
+      "reference_receipts": [
+        "explicit synthetic CPU fixture"
+      ],
+      "tasks": {
+        "text": {
+          "best_loss": 0.2,
+          "worst_loss": 0.8,
+          "deadline_ms": 10.0,
+          "provenance": "synthetic CPU quality range and deadline"
+        }
+      }
+    }
+  },
+  "workload": {
+    "text": 2.0
+  },
+  "gpu_memory_mib": 100.0,
+  "latency_reference_ms": {
+    "text": 10.0
+  },
+  "weights": {
+    "Q": 0.16666666666666666,
+    "T": 0.16666666666666666,
+    "L": 0.16666666666666666,
+    "P": 0.16666666666666666,
+    "M": 0.16666666666666666,
+    "E": 0.16666666666666666
+  },
+  "route_grid": 2,
+  "horizon_seconds": 1.0,
+  "random_seed": 42,
+  "arrival_process": "deterministic_periodic",
+  "drain_seconds": 2.0,
+  "search_max_states": 100000,
+  "search_policy": "nominal",
+  "energy_reference_watts": 300.0,
+  "startup_amortization_seconds": null,
+  "solver": "milp",
+  "milp_max_iterations": 32,
+  "milp_time_limit_seconds": 2.0,
+  "milp_max_columns": 50000,
+  "milp_absolute_gap": 1e-08,
+  "milp_capacity_witness": false,
+  "utility_schema": "six_term_reference_v2",
+  "route_pair_denominators_by_task": {}
+}

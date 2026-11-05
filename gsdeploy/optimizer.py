@@ -17,10 +17,17 @@ from .trace import expand_routes, make_trace, trace_digest
 from .route_domain import compositions, fraction_rows, domain_description, validate_pair_denominators
 from .config import TASKS
 from .coupled_mode import is_coupled, bound_contract
+from . import normalization as norm
 
 # dfs + 剪枝
 class UtilityOptimizer:
     def __init__(self, data, rates, budget, refs, weights, **context):
+        norm.require_ready(data, rates, refs, context.get("horizon", 120.0), budget)
+        self.reference_v2 = norm.is_v2(data)
+        if data.get("performance_mode") == "paper_profiled_fifo_v1":
+            from .paper_forecast import session
+
+            data = session(data).data  # Reuse the same immutable profiles at every leaf.
         self.d, self.rates, self.budget, self.refs, self.w = (
             data,
             dict(sorted(rates.items())),
@@ -195,6 +202,10 @@ class UtilityOptimizer:
 
     def upper(self, x, rows, memory):
         self.metrics["utility_bound_evaluations"] += 1
+        if self.reference_v2:
+            # A fixed global bound remains valid for negative normalized Q.
+            # Old calibrated E and safe-memory floors have different units.
+            return -self.w["Q"]*norm.quality_floor(self.d, self.rates)
         total = math.fsum(self.rates.values())
         # A standalone residency sum need not lower-bound measured whole-plan
         # memory. Only zero is established before the full identity is known.
@@ -345,7 +356,7 @@ class UtilityOptimizer:
                         self.metrics["capacity_pruned"] += 1
                         return
                 deployments.append(
-                    (self.upper(x, {}, memory) if self.bound_pruning else 0.0,
+                    (self.upper(x, {}, memory) if self.bound_pruning or self.reference_v2 else 0.0,
                      tuple(sorted(x.items())), memory)
                 )
                 return
@@ -389,7 +400,7 @@ class UtilityOptimizer:
                 # Plain DFS enumerates every constraint-admissible identity.
                 # It neither computes utility bounds for ordering nor prunes
                 # with them. Zero remains a valid upper bound for unknown U.
-                ub = self.upper(x, rows, memory) if self.bound_pruning else 0.0
+                ub = self.upper(x, rows, memory) if self.bound_pruning or self.reference_v2 else 0.0
                 incumbent = self.best
                 if self.bound_pruning and incumbent and ub < incumbent["score"] - 1e-10:
                     self.metrics["bound_pruned"] += 1
@@ -412,7 +423,8 @@ class UtilityOptimizer:
                         trace=self.trace,
                         **self.context,
                     )
-                    if p.get("performance_unknown", False) or p.get("memory_unknown", False):
+                    if (p.get("performance_unknown", False) or p.get("memory_unknown", False)
+                            or (self.policy == "robust" and any(p.get("scenario_performance_unknown", [])))):
                         self.record_unknown(x, rows, p, ub)
                         return
                     if not p["constraints_eligible"] or (
@@ -549,6 +561,8 @@ class UtilityOptimizer:
             )
             else 0.0
         )
+        if self.reference_v2:
+            global_upper = -self.w["Q"]*norm.quality_floor(self.d, self.rates)
         exact = status == "OPTIMAL_ENUMERATED_DOMAIN"
         # Even a fully traversed grid may contain unknown measurements. Their
         # valid bounds survive enumeration, rather than becoming infeasible cuts.
@@ -594,6 +608,8 @@ class UtilityOptimizer:
                     else "zero: whole-plan service unknown until complete evaluation"
                 ),
                 "quality_bound": "exact assigned-task frozen quality; zero for unassigned or missing quality",
+                "reference_v2_bound_policy": ("global transformed native-zero quality floor; historical T/L/P/M/E bounds disabled"
+                                               if self.reference_v2 else None),
                 "memory_bound": ("zero: coupled placeholder has no complete-context memory evidence" if self.coupled
                                  else "zero until exact whole-plan profile evaluation" if self.profiled_memory
                                  else "validated frozen predictor memory multiplier times additive residency"

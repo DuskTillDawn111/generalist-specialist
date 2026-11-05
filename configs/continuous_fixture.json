@@ -1,0 +1,222 @@
+{
+  "schema": "gsdeploy.continuous.experiment.v1",
+  "system": {
+    "catalog": {
+      "safe_factor": 1.0,
+      "capability_contract": "verified_executable_v1",
+      "models": {
+        "g": {
+          "role": "generalist",
+          "supported_tasks": [
+            "text",
+            "image"
+          ],
+          "executable_tasks": [
+            "text",
+            "image"
+          ],
+          "service_time_ms": {
+            "text": 35.0,
+            "image": 28.0
+          }
+        },
+        "s_text": {
+          "role": "specialist",
+          "supported_tasks": [
+            "text"
+          ],
+          "executable_tasks": [
+            "text"
+          ],
+          "service_time_ms": {
+            "text": 7.0
+          }
+        },
+        "s_shared": {
+          "role": "specialist",
+          "supported_tasks": [
+            "text",
+            "image"
+          ],
+          "executable_tasks": [
+            "text",
+            "image"
+          ],
+          "service_time_ms": {
+            "text": 14.0,
+            "image": 10.0
+          }
+        }
+      },
+      "capacity_factors": {
+        "g": {
+          "0": 0.0,
+          "1": 1.0,
+          "2": 1.65
+        },
+        "s_text": {
+          "0": 0.0,
+          "1": 1.0,
+          "2": 1.65
+        },
+        "s_shared": {
+          "0": 0.0,
+          "1": 1.0,
+          "2": 1.65
+        }
+      },
+      "memory_table_mib": {
+        "g": {
+          "0": 0.0,
+          "1": 12.0,
+          "2": 24.0
+        },
+        "s_text": {
+          "0": 0.0,
+          "1": 4.0,
+          "2": 8.0
+        },
+        "s_shared": {
+          "0": 0.0,
+          "1": 8.0,
+          "2": 16.0
+        }
+      },
+      "quality": {
+        "schema_version": 1,
+        "mode": "aggregate_proxy",
+        "identity": {
+          "input_pool_sha256": "synthetic-inputs-v1",
+          "reference_sha256": "synthetic-references-v1",
+          "protocol_sha256": "synthetic-protocol-v1",
+          "source": "CPU invented fixture, not measurements"
+        },
+        "paths": {
+          "g": {
+            "text": {
+              "metric": "em",
+              "unit": "fraction",
+              "source": "synthetic_fixture",
+              "checkpoint_sha256": "synthetic-g",
+              "value": 0.91
+            },
+            "image": {
+              "metric": "accuracy",
+              "unit": "fraction",
+              "source": "synthetic_fixture",
+              "checkpoint_sha256": "synthetic-g",
+              "value": 0.91
+            }
+          },
+          "s_text": {
+            "text": {
+              "metric": "em",
+              "unit": "fraction",
+              "source": "synthetic_fixture",
+              "checkpoint_sha256": "synthetic-s_text",
+              "value": 0.95
+            }
+          },
+          "s_shared": {
+            "text": {
+              "metric": "em",
+              "unit": "fraction",
+              "source": "synthetic_fixture",
+              "checkpoint_sha256": "synthetic-s_shared",
+              "value": 0.87
+            },
+            "image": {
+              "metric": "accuracy",
+              "unit": "fraction",
+              "source": "synthetic_fixture",
+              "checkpoint_sha256": "synthetic-s_shared",
+              "value": 0.87
+            }
+          }
+        }
+      }
+    },
+    "workload": {
+      "text": 8.0,
+      "image": 8.0
+    },
+    "gpu_memory_mib": 24.0,
+    "latency_reference_ms": {
+      "text": 100.0,
+      "image": 100.0
+    },
+    "weights": {
+      "Q": 0.16666666666666666,
+      "T": 0.16666666666666666,
+      "L": 0.16666666666666666,
+      "P": 0.16666666666666666,
+      "M": 0.16666666666666666,
+      "E": 0.16666666666666666
+    },
+    "utility_schema": "six_term_quality_v1",
+    "horizon_seconds": 2.0,
+    "drain_seconds": 3.0,
+    "random_seed": 101,
+    "arrival_process": "poisson",
+    "startup_amortization_seconds": 3600.0,
+    "milp_capacity_witness": false
+  },
+  "oracle": {
+    "kind": "synthetic_fixture",
+    "parameters": {
+      "interference": 0.08,
+      "load_interference": 0.06
+    }
+  },
+  "workloads": {
+    "low": {
+      "text": 4.0,
+      "image": 4.0
+    },
+    "mixed": {
+      "text": 12.0,
+      "image": 10.0
+    },
+    "text_hot": {
+      "text": 36.0,
+      "image": 8.0
+    }
+  },
+  "trace_seeds": {
+    "train": [
+      101
+    ],
+    "validation": [
+      211,
+      223
+    ],
+    "test": [
+      307,
+      311
+    ]
+  },
+  "optimizer_seeds": [
+    11,
+    29,
+    47
+  ],
+  "algorithms": [
+    "de_enumeration",
+    "de_milp",
+    "milp_K2",
+    "milp_K4",
+    "dfs_K2"
+  ],
+  "budget": {
+    "outer": 64,
+    "predictions": 1200,
+    "seconds": 30.0
+  },
+  "de": {
+    "popsize": 5,
+    "maxiter": 100,
+    "face_limit": 128,
+    "init": "sobol"
+  },
+  "cache": true
+}

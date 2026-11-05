@@ -1,0 +1,53 @@
+{
+  "schema": "gsdeploy.objective_contract.v1",
+  "scope": "prospective_four_task_uniform_one_second_comparison",
+  "effective_date": "2026-11-01",
+  "utility_schema": "six_term_quality_v1",
+  "weights": {
+    "Q": 0.16666666666666666,
+    "T": 0.16666666666666666,
+    "L": 0.16666666666666666,
+    "P": 0.16666666666666666,
+    "M": 0.16666666666666666,
+    "E": 0.16666666666666666
+  },
+  "active_utility_terms": [
+    "Q",
+    "T",
+    "L",
+    "P",
+    "M",
+    "E"
+  ],
+  "P_evaluation_role": "objective",
+  "P_definition": "sum_t(workload_rate_t / total_workload_rate * empirical_p95_e2e_latency_ms_t / fixed_latency_reference_ms_t)",
+  "P_percentile_method": "linear_interpolation",
+  "absolute_quality_gate": false,
+  "stability_policy": "existing_thresholds_unchanged",
+  "routing_policy_module": "tools.queue_coupled_utility_20261023.policy",
+  "metric_components": "gsdeploy.prediction.components",
+  "status": "PROSPECTIVE_OBJECTIVE_NO_NEW_SEARCH_OR_GPU_RESULT",
+  "latency_reference_ms": {
+    "text": 1000,
+    "image": 1000,
+    "ocr": 1000,
+    "asr": 1000
+  },
+  "latency_reference_policy": {
+    "id": "uniform_e2e_one_second_v1",
+    "meaning": "Common dimensionless comparison scale, not an empirically validated service-level objective or a hard deadline.",
+    "applies_to": [
+      "L",
+      "P"
+    ],
+    "shared_across_all_candidates": true,
+    "origin": "User-requested uniform research scale. Literature supports baseline-relative alternatives, not a universal 1 second value.",
+    "sensitivity_common_reference_ms": [
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "methodology": "docs/utility_normalization_literature_20261101.md"
+  }
+}

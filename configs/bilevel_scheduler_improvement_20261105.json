@@ -1,0 +1,16 @@
+{
+  "schema": "gsdeploy.bilevel_scheduler_improvement.v1",
+  "sizes": [7, 14],
+  "seeds": [11, 29, 47],
+  "maximum_new_runs": 6,
+  "archive": "artifacts/bilevel-scalability-ablation-20261105",
+  "budget": {"seconds": 60, "predictions": 64, "routes": 32, "milp": 128},
+  "scheduler": {"global_interval": 4, "activation_period": 3, "refinement_fraction": 0.25, "max_route_refinements": 2, "local_batch_trials": 1},
+  "initialization": "exactly reuse the four charged initialization routes and inner policy from the archive",
+  "comparisons": "six archived BO-MADS results, no legacy reruns; descriptive paired results",
+  "acceptance": "budget and interval correctness; EI proposals must execute when certified data and new feasible candidates exist; report every utility regression",
+  "release_rule": "retain legacy default if either size has a lower median utility; otherwise make balanced the generic v3 entry default, with explicit legacy option",
+  "new_gpu_runs": 0,
+  "predictor_refits": 0,
+  "stop_rule": "one fixed batch; no hyperparameter search, extra seeds, reference reruns or retries for performance"
+}

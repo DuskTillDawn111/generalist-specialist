@@ -16,6 +16,7 @@ from scipy.sparse import coo_matrix
 from .prediction import predict_scenarios
 from .performance import service_lower_ms
 from .surrogate_bounds import surrogate_bounds
+from . import normalization as norm
 from .routing import Router
 from .trace import expand_routes, make_trace, trace_digest
 from .route_domain import compositions, fraction_rows, domain_description, validate_pair_denominators
@@ -50,6 +51,12 @@ def residual_identity_cut(base_row, theta, selected, blocks, residual):  # 构�
 
 class JointMilpOptimizer:
     def __init__(self, data, rates, budget, refs, weights, **context):   # 初始化
+        norm.require_ready(data, rates, refs, context.get("horizon", 120.0), budget)
+        self.reference_v2 = norm.is_v2(data)
+        if data.get("performance_mode") == "paper_profiled_fifo_v1":
+            from .paper_forecast import session
+
+            data = session(data).data  # One immutable profile snapshot per search.
         self.data, self.rates, self.budget, self.refs, self.weights = (
             data,
             dict(sorted(rates.items())),
@@ -74,6 +81,7 @@ class JointMilpOptimizer:
         self.separable_service = (not self.coupled and (data.get("performance_mode", "independent") == "independent"
                                   or self.surrogate is not None))
         self.profiled_memory = (self.coupled or data.get("memory_mode") == "profiled"
+                               or (self.reference_v2 and data.get("performance_mode", "independent") != "independent")
                                or (data.get("performance_mode") in {"calibrated_surrogate", "calibrated_replay_v2", "replay_transfer_v1"}
                                    and self.surrogate is None))
         self.trace = make_trace(
@@ -88,7 +96,7 @@ class JointMilpOptimizer:
                                if self.surrogate else None)
         self.best = self.diagnostic = None
         self.unknown_lower = math.inf
-        self.lower = 0.0
+        self.lower = weights.get("Q", 0)*norm.quality_floor(data, rates)
         self.history = []
         self.pattern_cache = {}
         self.witness = None
@@ -110,7 +118,7 @@ class JointMilpOptimizer:
             evaluated_identity_exclusions=0,
         )
         self.diagnostic_mode = (weights.get("E", 0) > 0 and not data.get("energy_profiles")
-                                and self.surrogate is None and not self.coupled)
+                                and self.surrogate is None and not self.coupled and not self.reference_v2)
         self.unknown_candidates = []
         self.first_feasible_seconds = None
         self.best_found_seconds = None
@@ -148,12 +156,14 @@ class JointMilpOptimizer:
                 self.data, task, x, row, self.trace,
                 seed=self.context.get("seed", 42),
             )
+            if loss is None and self.reference_v2:
+                loss = norm.quality_loss(self.data, task, 0.)
             if loss is not None:
                 quality_floor = (
                     self.weights["Q"] * self.rates[task]
                     / math.fsum(self.rates.values()) * loss
                 )
-        if self.surrogate:
+        if self.surrogate and not self.reference_v2:
             quality_floor += self.weights.get("E", 0) * (
                 self.surrogate.route_energy(task, x, row)
                 + self.rates[task] / math.fsum(self.rates.values())
@@ -185,7 +195,8 @@ class JointMilpOptimizer:
                 finish = max(offset, clocks[alias]) + service   # 任务t的完成时间
                 clocks[alias] = finish   # 记录上一次完成的时刻
                 latencies.append((finish - offset) * 1000)
-                late += finish > horizon
+                late += ((finish-offset)*1000 > self.refs[task]
+                         if self.reference_v2 else finish > horizon)
             self.metrics["isolated_queue_bounds"] += 1
             return quality_floor + alpha * (
                 self.weights["L"] * float(np.mean(latencies))
@@ -580,9 +591,9 @@ class JointMilpOptimizer:
             pressure.update({state_index[m, n]: -0.8 for n in choices[m] if n})
             add(pressure, hi=0.0)
         state_cost = {
-            i: self.weights["M"] * value / self.budget
+            i: self.weights["M"] * value / self.budget / (self.data["safe_factor"] if self.reference_v2 else 1.)
                + (self.weights.get("E", 0) * self.surrogate.state_energy(states[i][1])
-                  if self.surrogate else 0.0)
+                  if self.surrogate and not self.reference_v2 else 0.0)
             for i, value in memory.items()
         }
         floor_row = {i: -value for i, value in state_cost.items()}
@@ -592,7 +603,9 @@ class JointMilpOptimizer:
         objective[theta] = 1.0  # 目标函数系数
         integrality = np.ones(N)
         integrality[theta] = 0
-        bounds = Bounds(np.zeros(N), np.r_[np.ones(theta), np.inf])  # 取值范围
+        lower_bounds = np.zeros(N)
+        lower_bounds[theta] = self.lower
+        bounds = Bounds(lower_bounds, np.r_[np.ones(theta), np.inf])  # 取值范围
         blocks = len(choices) + len(self.rates)
         evaluated = set()
         numerically_excluded = set()
@@ -697,7 +710,8 @@ class JointMilpOptimizer:
             valid = p["constraints_eligible"] and (
                 self.policy != "robust" or p["stress_constraints_valid"]
             )
-            unknown_performance = p.get("performance_unknown", False) or p.get("memory_unknown", False)
+            unknown_performance = (p.get("performance_unknown", False) or p.get("memory_unknown", False)
+                                   or (self.policy == "robust" and any(p.get("scenario_performance_unknown", []))))
             score = p["scenario_U_low"] if self.policy == "robust" else p["U"]
             if unknown_performance:
                 self.unknown_lower = min(self.unknown_lower, candidate_floor)
@@ -719,7 +733,7 @@ class JointMilpOptimizer:
                 # Complete identity feedback must use the same memory metric
                 # as the predictor, not the relaxed standalone-state bound.
                 memory_cost = self.weights["M"] * p["M_norm"]
-                if self.data.get("performance_mode", "independent") == "independent":
+                if self.data.get("performance_mode", "independent") == "independent" and not self.reference_v2:
                     # In this predictor, fixed task route/count columns fix all
                     # FIFO queues even if idle residents change. Transfer only
                     # routed Q/T/L/P, never nonadditive energy, across deployments.
@@ -884,12 +898,14 @@ class JointMilpOptimizer:
                     if self.separable_service
                     else "zero service relaxation for unknown colocation"
                 ),
-                quality_bound="exact routed frozen quality when available; otherwise zero relaxation",
+                quality_bound=("exact normalized routed quality; native zero transformed to a possibly negative floor if missing"
+                               if self.reference_v2 else "exact routed frozen quality when available; otherwise zero relaxation"),
                 memory_bound=("zero: coupled placeholder has no complete-context memory evidence" if self.coupled
                               else "zero until exact whole-plan profile evaluation" if self.profiled_memory
                               else "validated frozen predictor memory multiplier times additive residency"
                               if self.surrogate else "additive measured replica residency proxy"),
-                energy_bound=("exact nonnegative frozen resource intercept/state/known-column decomposition; zero busy for missing paths"
+                energy_bound=("zero relaxation: historical energy units disabled" if self.reference_v2 else
+                              "exact nonnegative frozen resource intercept/state/known-column decomposition; zero busy for missing paths"
                               if self.surrogate else "zero relaxation"),
                 surrogate_bounds_version=(self.surrogate.spec["version_sha256"]
                                           if self.surrogate else None),

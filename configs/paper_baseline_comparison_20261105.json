@@ -1,0 +1,18 @@
+{
+  "sizes": [7, 14],
+  "seeds": [11, 29, 47],
+  "methods": ["BO-MADS", "CherryPick-U", "Proteus-Q", "Proteus-U-linear"],
+  "maximum_searches": 24,
+  "budget": {"seconds": 60, "predictions": 64, "routes": 256, "milp": 128},
+  "target_gain": 0.005,
+  "cherrypick": {"kernel": "Matern5/2", "noise": 0.000001, "length_bounds": [0.05, 5.0], "sobol_candidates": 512, "local_candidates": 64, "local_sigma": 0.12, "relative_ei_stop": 0.01, "minimum_observations": 6, "maximum_steps": 128},
+  "proteus": {"ridge": 0.001, "capacity_margin": 0.000001, "milp_gap": 0.0, "maximum_plans": 1},
+  "initialization": "Same four charged exact routes and all associated observations. Overrides native starting policies for controlled comparison.",
+  "cherrypick_mapping": "Section 3.5 GP Matern5/2, EI times feasibility, relative EI stopping. Replace price objective with -U, machine configuration with shared five-variable deployment/route encoding; feasibility is known capability/memory/capacity, so its probability is an exact 0/1 mask. Scalar length scale fitted by bounded marginal likelihood, acquisition maximized over fresh Sobol plus local samples. Not original Spearmint implementation.",
+  "proteus_mapping": "Section 4 joint binary model allocation and continuous query assignment MILP with profiled capacities. One physical GPU represented by memory-constrained model/replica states, shared mixed-task capacity enforced. Q retains quality objective; U-linear substitutes a linear ridge surrogate trained only on common initialization. Both solve one plan, then validate through common oracle; no invented restart or local search.",
+  "comparability": "Common final measured U and upper budgets; Proteus-Q optimizes a different objective, so it is a contextual baseline, not same-objective proof. Proteus-U-linear optimizes a learned approximation, not exact nonlinear U. Native early stops retained, no forced budget spending.",
+  "schedule": "Fixed shuffled same-process batch, one BLAS thread; no tuning, reruns or additional seeds after observing results.",
+  "evidence": "Existing synthetic convex queue-cost benchmark; not actual FIFO/GPU or a reproduction of either paper's full system.",
+  "new_gpu_runs": 0,
+  "predictor_refits": 0
+}

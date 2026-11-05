@@ -1,13 +1,66 @@
 # 完整文档索引
 
+相关论文算法对照：[CherryPick、Proteus 机制适配与 BO–MADS](paper_baseline_comparison_20261105.md)。24 次固定 CPU 搜索完成；14 模型 CherryPick-U 的中位效用更高，7 模型 BO–MADS 较好。Proteus 原质量目标与本项目线性效用适配分别报告，不把弱适配当作优越性证据。
+
+经典优化器对照：[SciPy 差分进化、双重退火、随机搜索与 BO–MADS](classic_optimizer_comparison_20261105.md)。24 次同批 CPU 搜索，真实库算子、统一 64 次预测预算；BO–MADS 效用中位数较高但更慢，保留 DE/DA 个别胜出和历史增删交换优势。
+
+修复后图表与胜者分析：[更新对比、14 模型池分流及效用分解](../artifacts/crossdomain-fixed-figures-20261105/README.md)。增删交换发现 g+x09 的双任务均分方案；BO–MADS 在有限预测预算内未评价 x09 正流量，差距主要来自综合质量成本。附四页矢量图集。
+
+预算退出修复：[BO–MADS 耗尽预测预算后立即停止新搜索](bilevel_prediction_budget_stop_20261105.md)。67 项测试、6 次固定复核通过；64 次预测轨迹和最终方案保持不变，删除耗尽后的无新增预测调度。
+
+跨领域策略对照：[设施增删交换、交替优化、混合差分进化与 BO–MADS](crossdomain_strategy_comparison_20261105.md)。固定 24 次 CPU 搜索、相同 64 次预测预算；7 模型中位数 BO–MADS 最好，14 模型增删交换更好，并记录预测预算耗尽后的退出开销。
+
+预测误差图：[泊松到达下的冻结预测器误差](predictor_poisson_errors_20261105.md)。两次固定 GPU 验证、199 个请求，逐任务与执行路径展示平均/最小/最大误差；附聚合时延、能耗和吞吐误差，训练与验证到达方式分开。
+
+最新消融：[balanced 调度的组件贡献与取舍](bilevel_balanced_ablation_20261105.md)。36 次新增 CPU 搜索、6 次完整结果复用；附 11 张科研图，保留质量退化、无 EI 打平及无激活提案退化。
+
+科研图集：[阶段结果、证据缺口与论文风格图表](research_results_figures_20261105.md)。八张图覆盖真实范围、合成扩展性、连续搜索、预算分配及历史组件证据，附矢量导出和原始绘图数据。
+
+调度改进：[EI 执行机会与精化预算](bilevel_scheduler_improvement_20261105.md)。六次固定对照均改善，通用 v3 入口默认接入 balanced，保留 legacy。
+
+算法验证：[可扩展性、连续搜索与组件消融](bilevel_scalability_ablation_20261105.md)。27 次有限 CPU 搜索完成；记录激活搜索贡献、成本与质量取舍，以及 7/14 模型 EI 未得到执行的调度瓶颈。
+
+最终算法交付：[完整实现与限定验收](bilevel_final_acceptance_20261105.md)。共同初始化对照、非退化部署/副本检查已完成；明确保留组合协同零增益和真实适用范围。
+
+当前范围内的效用搜索：[v3 接线、有限比较与最终选型](utility_v3_search_20261105.md)；六次 CPU 搜索已完成，推荐纯专用路由，未追加 GPU 实验。
+
+历史效用切换：[固定参考六项 v2 正式切换](utility_normalization_switch_20261103.md)。
+
+任务书：[预测与场景资格、C1-Lite 和 Hybrid C1 V2](c1_lite_hybrid_task_v2.md)。
+
+当前目标算法：[激活感知 BO–MADS 双层优化实现](activation_bilevel_implementation_20261104.md)；复用 C1-Lite，保留旧 MILP 对照。真实资格待完成。
+
+最新算法实施：[论文适配与结构化搜索 CPU 阶段交付](paper_structured_completion_20261103.md)。
+
 由 `python scripts/update_docs_index.py` 生成；主题入口见[文档导航](README.md)。
 
 ## 规范与未标日期文档
 
 - [architecture.md](architecture.md)
+- [activation_bilevel_target_20261104.md](activation_bilevel_target_20261104.md)
+- [activation_bilevel_implementation_20261104.md](activation_bilevel_implementation_20261104.md)
 - [calibrated_replay_v2.md](calibrated_replay_v2.md)
+- [c1_lite_hybrid_design.md](c1_lite_hybrid_design.md)
+- [c1_lite_hybrid_experiments.md](c1_lite_hybrid_experiments.md)
+- [c1_lite_hybrid_prediction_qualification.md](c1_lite_hybrid_prediction_qualification.md)
+- [c1_lite_hybrid_scenarios.md](c1_lite_hybrid_scenarios.md)
+- [c1_lite_hybrid_task_v2.md](c1_lite_hybrid_task_v2.md)
 - [compact_memory_optimizations.md](compact_memory_optimizations.md)
 - [compact_protocol.md](compact_protocol.md)
+- [continuous_routing_audit.md](continuous_routing_audit.md)
+- [continuous_routing_design.md](continuous_routing_design.md)
+- [continuous_routing_phase1.md](continuous_routing_phase1.md)
+- [continuous_routing_plan_v3.md](continuous_routing_plan_v3.md)
+- [continuous_routing_usage.md](continuous_routing_usage.md)
+- [continuous_routing_inner_improvement.md](continuous_routing_inner_improvement.md)
+- [continuous_routing_phase1_diagnostics.md](continuous_routing_phase1_diagnostics.md)
+- [continuous_routing_validated_improvement.md](continuous_routing_validated_improvement.md)
+- [joint_scalability_and_refinement.md](joint_scalability_and_refinement.md)
+- [gsdeploy_optimization_difficulty_diagnosis.md](gsdeploy_optimization_difficulty_diagnosis.md)
+- [route_load_interference_audit.md](route_load_interference_audit.md)
+- [paper_mechanism_integration_20261102.md](paper_mechanism_integration_20261102.md)
+- [joint_refinement_current_status.md](joint_refinement_current_status.md)
+- [routing_benefit_diagnosis.md](routing_benefit_diagnosis.md)
 - [cpu_preparation.md](cpu_preparation.md)
 - [gpu_experiments.md](gpu_experiments.md)
 - [history.md](history.md)
@@ -386,6 +439,17 @@
 - [unified_kernel_dag_intake_independent_review_v1_20261029.md](unified_kernel_dag_intake_independent_review_v1_20261029.md)
 - [unified_kernel_dag_intake_v1_20261029.md](unified_kernel_dag_intake_v1_20261029.md)
 - [unified_kernel_dag_intake_v1_cpu02_20261029.md](unified_kernel_dag_intake_v1_cpu02_20261029.md)
+
+## 2026-11-01
+
+- [utility_normalization_literature_20261101.md](utility_normalization_literature_20261101.md)
+- [utility_normalization_redesign_20261101.md](utility_normalization_redesign_20261101.md)
+
+## 2026-11-02
+
+- [paper_milp_completion_20261102.md](paper_milp_completion_20261102.md)
+- [adaptive_candidate_refinement.md](adaptive_candidate_refinement.md)
+- [multi_candidate_continuous_refinement.md](multi_candidate_continuous_refinement.md)
 
 ## 历史源码快照
 

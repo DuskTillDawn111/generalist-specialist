@@ -160,6 +160,10 @@ class SearchSession:
             return self.module("calibration_v2").validated_replay_spec(raw["catalog"], raw["workload"])
         if mode == "replay_transfer_v1":
             return self.module("replay_transfer").validated_transfer_spec(raw["catalog"], raw["workload"])
+        if mode == "paper_profiled_fifo_v1":
+            # Executable experimental evidence contract only. This does not
+            # grant native accuracy or inherit a legacy calibration approval.
+            return self.module("paper_forecast").validate_spec(raw["catalog"])
         raise ValueError("Search sessions require an explicitly validated calibrated predictor")
 
     def context(self):

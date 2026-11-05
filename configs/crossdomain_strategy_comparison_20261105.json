@@ -1,0 +1,23 @@
+{
+  "schema": "gsdeploy.crossdomain_strategy_comparison.v1",
+  "sizes": [7, 14],
+  "seeds": [11, 29, 47],
+  "methods": ["BO-MADS", "Add-drop-swap", "Alternating", "Mixed-DE"],
+  "maximum_searches": 24,
+  "budget": {"seconds": 60, "predictions": 64, "routes": 256, "milp": 128},
+  "primary_budget": "64 uncached complete synthetic oracle calls, including common initialization",
+  "other_caps": "60 seconds and 128 MILP calls; 256 route/candidate evaluations is a loop guard, not an equivalent unit of work across methods",
+  "initialization": "the existing four exact charged routes; identical observations and cache available to all methods",
+  "local": {"initial_step": 0.25, "minimum_step": 0.015625},
+  "de": {"population": 8, "F": 0.8, "CR": 0.7, "strategy": "rand/1/bin", "updating": "deferred", "boundary": "clip"},
+  "target_gain": 0.005,
+  "target_definition": "initial best U + 0.005; fixed before new runs, no success-conditioned mean",
+  "schedule": "seeded shuffle of all 24 runs on the same CPU process, BLAS threads fixed to one",
+  "evidence": "existing manufactured convex queue-cost benchmark; not actual FIFO replay, hardware or a validated server deployment workload",
+  "reference": "reuse sealed continuous reference intervals for reporting/audit only; never available to search",
+  "adaptation": "facility local-search and block-alternation mechanisms, plus continuous DE with explicit mixed-domain decoding; not reproductions of original systems or their approximation/convergence guarantees",
+  "stop_rule": "one fixed batch, retain losses/failures and do not tune, add seeds, expand load or retry for performance",
+  "new_gpu_runs": 0,
+  "predictor_refits": 0,
+  "real_predictor_calls": 0
+}

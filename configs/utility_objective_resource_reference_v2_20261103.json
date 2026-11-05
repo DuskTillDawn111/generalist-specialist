@@ -1,0 +1,65 @@
+{
+  "schema": "gsdeploy.objective_contract.v2",
+  "scope": "prospective_fixed_reference_six_term_comparison",
+  "effective_date": "2026-11-03",
+  "utility_schema": "six_term_reference_v2",
+  "weights": {
+    "Q": 0.16666666666666666,
+    "T": 0.16666666666666666,
+    "L": 0.16666666666666666,
+    "P": 0.16666666666666666,
+    "M": 0.16666666666666666,
+    "E": 0.16666666666666666
+  },
+  "active_utility_terms": [
+    "Q",
+    "T",
+    "L",
+    "P",
+    "M",
+    "E"
+  ],
+  "P_evaluation_role": "objective",
+  "P_definition": "sum_t(workload_rate_t / total_workload_rate * empirical_p95_e2e_latency_ms_t / fixed_latency_reference_ms_t)",
+  "P_percentile_method": "linear_interpolation",
+  "absolute_quality_gate": false,
+  "stability_policy": "existing_thresholds_unchanged",
+  "routing_policy_module": "tools.queue_coupled_utility_20261023.policy",
+  "metric_components": "gsdeploy.prediction.components",
+  "status": "ACTIVE_SCHEMA_REFERENCES_PENDING",
+  "normalization_reference": "normalization_resource_reference_v2_20261103.json",
+  "formulas": {
+    "Q": "sum alpha_t*(native_loss_t-best_loss_t)/(worst_loss_t-best_loss_t)",
+    "T": "1-N_good/N_offered",
+    "L": "sum alpha_t*mean_e2e_ms_t/D_t",
+    "P": "sum alpha_t*p95_e2e_ms_t/D_t",
+    "M": "raw_owned_startup_through_drain_sampled_peak_mib/usable_memory_budget_mib",
+    "E": "startup_through_drain_gpu_board_joules/reference_episode_joules"
+  },
+  "sources": {
+    "Q": [
+      "OECD/JRC 2008 section 5.3",
+      "Cascadia ICLR 2026 section 3.3"
+    ],
+    "T": [
+      "MuxServe ICML 2024 metrics",
+      "USHER OSDI 2024"
+    ],
+    "L": [
+      "OECD/JRC 2008 section 5.4",
+      "Proteus ASPLOS 2024 section 6.1.2",
+      "USHER OSDI 2024"
+    ],
+    "P": [
+      "mu-Serve USENIX ATC 2024 section 4.2; P99 adapted to P95"
+    ],
+    "M": [
+      "DRF NSDI 2011 section 4 algorithm 1; resource share adapted to GPU memory"
+    ],
+    "E": [
+      "Zeus NSDI 2023 Figure 1; training baseline ratio adapted to inference",
+      "MLPerf Power HPCA 2025 section IV; boundary alignment adapted to GPU-board episode"
+    ]
+  },
+  "methodology": "docs/utility_normalization_redesign_20261101.md"
+}

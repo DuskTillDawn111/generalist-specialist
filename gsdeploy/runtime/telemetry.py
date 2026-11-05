@@ -14,6 +14,7 @@ class MemoryMonitor:
         self.failed = False
         self.stop = threading.Event()
         self.thread = None
+        self.allow_uninitialized = False
 
     def sample(self):
         if not self.enabled:
@@ -32,7 +33,7 @@ class MemoryMonitor:
                 timeout=2,
                 check=True,
             )
-            owned = {w.process.pid for w in self.runtime.workers.values() if w.process}
+            owned = {w.process.pid for w in list(self.runtime.workers.values()) if w.process}
             rows = [
                 line.split(",") for line in result.stdout.splitlines() if line.strip()
             ]
@@ -41,8 +42,9 @@ class MemoryMonitor:
                 "owned_used_mib": sum(v for p, v in memory.items() if p in owned),
                 "foreign_pids": sorted(p for p in memory if p not in owned),
                 "unix_ns": time.time_ns(),
+                "time_ns": time.perf_counter_ns(),
             }
-            if owned and not owned.issubset(memory):
+            if owned and not owned.issubset(memory) and not self.allow_uninitialized:
                 self.failed = True
                 return None
             self.latest = value

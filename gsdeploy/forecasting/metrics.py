@@ -7,6 +7,7 @@ import statistics
 
 from ..prediction import components
 from .workload import number
+from .. import normalization as norm
 
 
 def percentile(values, q=.95):
@@ -45,7 +46,23 @@ def _expected_quality_totals(entry, task, pool_id):
 def score_forecast(forecast, completed, aliases, rates, refs, quality_loss, *,
                    phase_start_ns, now_ns, deadline_ns, memory_budget_mib,
                    energy_reference_watts, weights=None, observed_peak_memory_mib=None,
-                   observed_board_energy_joules=None, memory_safe_factor=1.):
+                   observed_board_energy_joules=None, memory_safe_factor=1.,
+                   normalization_reference=None, observed_episode_energy_joules=None,
+                   utility_schema=None, episode_protocol=None,
+                   measurement_context=None, input_identity=None):
+    """Score against references and independently supplied execution identities.
+
+    Frozen references require the current catalog's measurement_context and
+    quality.identity. Never derive these identities from the reference itself.
+    """
+    data = ({norm.KEY: normalization_reference, "measurement_context": measurement_context,
+             "quality": {"identity": input_identity}}
+            if normalization_reference is not None else {})
+    v2 = norm.is_v2(data)
+    if utility_schema == norm.SCHEMA and not v2:
+        raise ValueError("Reference v2 scoring requires explicit references")
+    if v2 and utility_schema not in {None, norm.SCHEMA}:
+        raise ValueError("Normalization schema mismatch")
     weights = {k: 1 / 6 for k in "QTLPME"} if weights is None else weights
     if set(weights) != set("QTLPME"):
         raise ValueError("Six explicit objective terms required")
@@ -61,7 +78,11 @@ def score_forecast(forecast, completed, aliases, rates, refs, quality_loss, *,
     for rate in rates.values():
         number(rate, "offered rate", positive=True)
     for ref in refs.values():
-        number(ref, "latency reference", positive=True)
+        if ref is not None or not v2:
+            number(ref, "latency reference", positive=True)
+    if v2:
+        norm.validate(data, rates, refs, (deadline_ns-phase_start_ns)/1e9, memory_budget_mib)
+        refs = norm.deadlines(data, refs)
     number(memory_budget_mib, "memory budget", positive=True)
     number(memory_safe_factor, "memory safety factor", positive=True)
     if memory_safe_factor < 1:
@@ -131,7 +152,8 @@ def score_forecast(forecast, completed, aliases, rates, refs, quality_loss, *,
             quality_totals[task] = dict(numerator=numerator, denominator=denominator,
                                        requests=len(quality), basis='sum_expected_units_before_division')
             if Q is not None:
-                Q += alpha * numerator / denominator
+                loss = norm.quality_loss(data, task, numerator/denominator)
+                Q = Q+alpha*loss if loss is not None else None
         if len(done) != len(offered):
             L = P = None
             reasons.append("DRAIN_CENSORED_LATENCY:" + task)
@@ -141,18 +163,26 @@ def score_forecast(forecast, completed, aliases, rates, refs, quality_loss, *,
             raise ValueError("Invalid predicted latency")
         mean, tail = statistics.mean(latencies), percentile(latencies)
         per_task[task] = {"request_count": len(offered), "mean_ms": mean, "p95_ms": tail}
+        if refs[task] is None:
+            L = P = None
+            reasons.append("MISSING_DEADLINE_REFERENCE:"+task)
         if L is not None:
             L += alpha * mean / refs[task]
         if P is not None:
             P += alpha * tail / refs[task]
     T = 1 - sum(r["finish_ns"] <= deadline_ns for r in rows) / len(expected) if expected else None
+    if v2:
+        T = norm.deadline_loss([(r['task'],
+             (r['finish_ns']-r['arrival_ns'])/1e6 if 'finish_ns' in r else None,
+             'finish_ns' in r and r.get('status', 'completed') == 'completed')
+             for r in [*history.values(), *[forecast['finishes'].get(k, r) for k,r in cohort.items()]]], refs)
     future_peak = forecast.get("peak_memory_mib")
     M = None
     if future_peak is None or observed_peak_memory_mib is None:
         reasons.append("UNKNOWN_WHOLE_PHASE_PEAK_MEMORY")
     else:
         number(future_peak, "predicted future peak memory")
-        M = memory_safe_factor * max(observed_peak_memory_mib, future_peak) / memory_budget_mib
+        M = (1. if v2 else memory_safe_factor) * max(observed_peak_memory_mib, future_peak) / memory_budget_mib
     horizon = (deadline_ns - phase_start_ns) / 1e9
     remaining_energy = forecast.get("board_energy_joules")
     E = None
@@ -161,22 +191,37 @@ def score_forecast(forecast, completed, aliases, rates, refs, quality_loss, *,
     else:
         number(remaining_energy, "predicted remaining energy")
         E = (remaining_energy + (observed_board_energy_joules or 0.)) / (energy_reference_watts * horizon)
+    if v2:
+        remaining = forecast.get('through_drain_board_energy_joules')
+        if observed_episode_energy_joules is not None:
+            number(observed_episode_energy_joules, 'observed startup-through-now episode energy')
+        E = norm.episode_cost(data, dict(kind='predicted_episode', scope='whole_gpu_board',
+            episode_protocol=episode_protocol,
+            episode_coverage_valid=remaining is not None and observed_episode_energy_joules is not None,
+            episode_joules=remaining+observed_episode_energy_joules
+                if remaining is not None and observed_episode_energy_joules is not None else None))
+        if E is None:
+            reasons.append('MISSING_FULL_EPISODE_ENERGY_OR_REFERENCE')
     terms = dict(Q=Q, T=T, L=L, P=P, M=M, E=E)
-    comparable = all(value is not None for value in terms.values())
+    comparable = all(value is not None for value in terms.values()) and norm.ready(data)
     # Unobserved past energy is identical and additive in both branches, so
     # comparison is valid; an absolute U must still remain unknown.
-    absolute = comparable and observed_board_energy_joules is not None
-    metric = components(per_task, rates, refs, T, M, weights, E=E, Q=Q) if L is not None and P is not None else None
+    absolute = comparable and (observed_episode_energy_joules is not None if v2 else observed_board_energy_joules is not None)
+    metric = components(per_task, rates, refs, T, M, weights, E=E, Q=Q, data=data) if L is not None and P is not None else None
     cost = sum(weights[k] * v for k, v in terms.items()) if comparable else None
+    safe_memory = memory_safe_factor*max(observed_peak_memory_mib, future_peak) if M is not None else None
     return {"terms": terms, "cost": cost, "full_U": -cost if absolute else None,
+            "utility_schema": norm.SCHEMA if v2 else "six_term_quality_v1",
+            "normalization_sha256": norm.identity(data),
             "six_term_comparison_complete": comparable, "absolute_utility_complete": absolute,
             "cohort_size": len(expected), "cohort_ids": sorted(expected),
             "task_counts": {t: sum(r["task"] == t for r in all_rows) for t in rates},
             "per_task": per_task, "unknown_reasons": reasons, "incomplete_ids": incomplete,
-            "safe_memory_mib": memory_safe_factor * max(observed_peak_memory_mib, future_peak) if M is not None else None,
+            "safe_memory_mib": safe_memory,
             "memory_safe_factor": memory_safe_factor,
-            "memory_budget_satisfied": M <= 1 if M is not None else None,
-            "E_scope": "remaining window plus observed past, if available; missing common past omitted from comparison only",
+            "memory_budget_satisfied": safe_memory <= memory_budget_mib if safe_memory is not None else None,
+            "E_scope": ("startup/load/prime/warmup/formal/drain GPU board episode" if v2 else
+                "remaining window plus observed past, if available; missing common past omitted from comparison only"),
             "quality_scope": "frozen training expected numerator/denominator per offered request; summed by task before division; text/image scalar losses use denominator one; no future outputs",
             "quality_totals_by_task": quality_totals,
             "metric_components": metric, "physical_six_term_improvement_certified": False}

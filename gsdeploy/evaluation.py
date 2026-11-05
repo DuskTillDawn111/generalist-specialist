@@ -9,9 +9,19 @@ from .energy import energy_norm, energy_key
 from .trace import make_trace, trace_digest, expand_routes
 from .routing import Router
 from .metrics import summarize
+from . import normalization as norm
 
 
 def evaluate_run(config, raw):
+    result = _evaluate_run(config, raw)
+    if norm.is_v2(config.catalog):
+        result["utility"].update(utility_schema=norm.SCHEMA,
+            normalization_sha256=norm.identity(config.catalog),
+            reference_status=norm.contract(config.catalog)["status"])
+    return result
+
+
+def _evaluate_run(config, raw):
     window = raw.get("measurement_window")
     if window and (
         window.get("aborted")
@@ -98,6 +108,25 @@ def evaluate_run(config, raw):
     )
     if energy.get("profile_key") != expected_key:
         E = None
+    M = memory["safe_memory_mib"] / config.gpu_memory_mib
+    episode = None
+    if norm.is_v2(config.catalog):
+        norm.validate(config.catalog, rates, config.latency_reference_ms,
+                      seconds, config.gpu_memory_mib)
+        throughput_loss = norm.deadline_loss([
+            (r["task"], (r["completion_time_ns"]-r["scheduled_time_ns"])/1e6
+             if r.get("completion_time_ns") is not None else None,
+             r.get("status") == "completed" and r.get("worker_response", {}).get("success") is True)
+            for r in raw["request_records"]
+        ], norm.deadlines(config.catalog, config.latency_reference_ms))
+        peak = norm.raw_peak(memory)
+        M = peak/config.gpu_memory_mib if peak is not None else None
+        episode = norm.measured_episode(energy, window)
+        episode["episode_protocol"] = norm.observed_protocol(raw["transport_config"], raw.get("priming_policy"))
+        E = norm.episode_cost(config.catalog, episode)
+        if (energy.get("profile_key") != expected_key
+                or not norm.protocol_matches(config.catalog, raw["transport_config"], raw.get("priming_policy"))):
+            E = None
     six_term = config.weights.get("Q", 0) > 0
     Q, quality_evidence = (
         measure_quality(config.catalog, raw, rates) if six_term
@@ -108,10 +137,11 @@ def evaluate_run(config, raw):
         rates,
         config.latency_reference_ms,
         throughput_loss,
-        memory["safe_memory_mib"] / config.gpu_memory_mib,
+        M,
         config.weights,
         E,
         Q,
+        data=config.catalog,
     )
     diagnostic = arithmetic.pop("U")
     transport = raw["transport_config"]
@@ -154,6 +184,7 @@ def evaluate_run(config, raw):
         and cohort_valid
         and constraints_valid
         and resource_contract_valid
+        and (not norm.is_v2(config.catalog) or norm.contract(config.catalog)["status"] == "frozen")
         and system["completion_ratio"] == 1
         and raw["measurement_window"].get("offered_requests") == offered
         and (
@@ -176,6 +207,7 @@ def evaluate_run(config, raw):
             "cohort_verified": bool(cohort_valid),
             "constraints_verified": constraints_valid,
             "energy_verified": E is not None and energy.get("kind") == "measured",
+            **({"episode_energy_evidence": episode} if episode is not None else {}),
             **({"resource_contract_verified": False,
                 "resource_contract_reason": "RESOURCE_NATIVE_PROTOCOL_NOT_VALIDATED"}
                if not resource_contract_valid else {}),
