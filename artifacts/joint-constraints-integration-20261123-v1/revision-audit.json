@@ -1,0 +1,28 @@
+{
+  "source": "/root/.codex/attachments/6e724832-b623-41d0-9f4c-1feffd19bc15/GSdeploy改3_任务数量协同与短窗口实机实验版.docx",
+  "source_sha256": "78759ea7fd87f6751362dc312a5fa6d779f9e98d466e58981b70b44dd828f1f8",
+  "result": "/root/autodl-tmp/generalist-specialist-project/artifacts/joint-constraints-integration-20261123-v1/GSdeploy改3_联合优化约束整合版.docx",
+  "result_sha256": "a0720cf59e91d691da20a019ec4717931c7cb61203a6df82078191d0c8a3cede",
+  "replaced_source_paragraph_indices": [
+    98,
+    119
+  ],
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "single_section_title": "联合优化约束",
+  "one_editable_constraint_system_includes_resource_coverage_assignment_and_work": true,
+  "former_separate_shared_coverage_heading_removed": true,
+  "deployment_replica_link": "x_m <= n_m <= N_m_max * x_m",
+  "coverage_routing_identity": "q_t^G + alpha_t = 1; both derived from r",
+  "shared_work_queue_relations_retained": [
+    "7b",
+    "7c"
+  ],
+  "utility_decomposition_kept_as_analysis": "7d",
+  "equation_labels_and_later_references_preserved": true,
+  "all_other_body_blocks_unchanged": true,
+  "all_tables_and_experiment_content_unchanged": true,
+  "all_original_media_and_other_package_parts_unchanged": true,
+  "optimization_code_or_experiments_modified": false
+}

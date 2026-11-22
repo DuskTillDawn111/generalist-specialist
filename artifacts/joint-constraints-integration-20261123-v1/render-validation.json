@@ -1,0 +1,23 @@
+{
+  "source_attachment_unchanged": true,
+  "one_editable_constraint_system": true,
+  "constraint_system_rows": 10,
+  "constraint_group_labels": [
+    "7",
+    "7a",
+    "7b",
+    "7c"
+  ],
+  "utility_decomposition": "7d",
+  "new_section_pages": [
+    7,
+    8
+  ],
+  "pdf_pages": 25,
+  "tables_preserved": 4,
+  "inline_shapes_preserved": 11,
+  "only_word_document_xml_changed": true,
+  "experiments_and_results_preserved": true,
+  "pdf": "/root/autodl-tmp/generalist-specialist-project/artifacts/joint-constraints-integration-20261123-v1/render/GSdeploy改3_联合优化约束整合版.pdf",
+  "pdf_sha256": "0cbe321832f421d815325611545e273a51e0ae9eb52aa84d25707e4871458f7a"
+}
