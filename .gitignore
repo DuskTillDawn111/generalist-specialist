@@ -22,6 +22,20 @@ dist/
 
 # Local experiment outputs, external assets and environments
 artifacts/
+!/artifacts/
+/artifacts/*
+# Versioned manuscript deliverables; all other experiment outputs stay local.
+!/artifacts/joint-constraints-integration-20261123-v1/
+/artifacts/joint-constraints-integration-20261123-v1/*
+!/artifacts/joint-constraints-integration-20261123-v1/GSdeploy改3_联合优化约束整合版.docx
+!/artifacts/joint-constraints-integration-20261123-v1/README.zh.md
+!/artifacts/joint-constraints-integration-20261123-v1/merge_constraints.py
+!/artifacts/joint-constraints-integration-20261123-v1/merged-section.zh.txt
+!/artifacts/joint-constraints-integration-20261123-v1/revision-audit.json
+!/artifacts/joint-constraints-integration-20261123-v1/render-validation.json
+!/artifacts/joint-constraints-integration-20261123-v1/render/
+/artifacts/joint-constraints-integration-20261123-v1/render/*
+!/artifacts/joint-constraints-integration-20261123-v1/render/GSdeploy改3_联合优化约束整合版.pdf
 models/
 datasets/
 envs/
